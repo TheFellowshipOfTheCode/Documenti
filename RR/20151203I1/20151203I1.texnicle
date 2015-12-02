@@ -4,8 +4,8 @@
 <database>
     <databaseInfo>
         <version>134481920</version>
-        <UUID>527C780F-1E45-4677-A2B8-B2E504BBC7D5</UUID>
-        <nextObjectID>107</nextObjectID>
+        <UUID>59107A08-743D-4BF9-BF4C-0BF3CD20C08F</UUID>
+        <nextObjectID>105</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -54,22 +54,21 @@
                     </array>
                     <key>kMDItemKeywords</key>
                     <array>
-                        <string>Analisi dei Requisiti</string>
+                        <string>20151203I1</string>
                     </array>
                 </dict>
             </plist>
         </metadata>
     </databaseInfo>
-    <object type="UISETTINGS" id="z102">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 1127.5923036922138}, {604, 585.40769630778618}}</attribute>
-        <attribute name="showpdfthumbnails" type="bool">0</attribute>
-        <attribute name="selectedcontrolstab" type="int16">0</attribute>
-        <attribute name="maxoutlinedepth" type="int16">7</attribute>
-        <attribute name="logoutputlevel" type="int16">0</attribute>
-        <attribute name="editorwidth" type="float">479.5</attribute>
-        <attribute name="controlswidth" type="float">220</attribute>
-        <attribute name="consoleview" type="int16">0</attribute>
-        <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
+    <object type="PROJECT" id="z102">
+        <attribute name="type" type="string">PDFLaTeX</attribute>
+        <attribute name="name" type="string">20151203I1</attribute>
+        <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/20151203I1</attribute>
+        <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z105"></relationship>
+        <relationship name="selected" type="1/1" destination="FILE" idrefs="z105"></relationship>
+        <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z103"></relationship>
+        <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z104"></relationship>
+        <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z105"></relationship>
     </object>
     <object type="SETTINGS" id="z103">
         <attribute name="stoponerror" type="bool">1</attribute>
@@ -83,33 +82,34 @@
         <attribute name="doliveupdate" type="bool">0</attribute>
         <attribute name="dobibtex" type="bool">1</attribute>
         <attribute name="bibtexcommand" type="string">bibtex</attribute>
-        <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
+        <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
-    <object type="PROJECT" id="z104">
-        <attribute name="type" type="string">PDFLaTeX</attribute>
-        <attribute name="name" type="string">Analisi dei Requisiti</attribute>
-        <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/AnalisiDeiRequisiti</attribute>
-        <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z105"></relationship>
-        <relationship name="selected" type="1/1" destination="FILE" idrefs="z105"></relationship>
-        <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z103"></relationship>
-        <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z102"></relationship>
-        <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z105"></relationship>
+    <object type="UISETTINGS" id="z104">
+        <attribute name="pdfviewscrollrect" type="string">{{0, 1829.1781235488886}, {604, 522.92429168596459}}</attribute>
+        <attribute name="showpdfthumbnails" type="bool">0</attribute>
+        <attribute name="selectedcontrolstab" type="int16">0</attribute>
+        <attribute name="maxoutlinedepth" type="int16">7</attribute>
+        <attribute name="logoutputlevel" type="int16">0</attribute>
+        <attribute name="editorwidth" type="float">400.5</attribute>
+        <attribute name="controlswidth" type="float">184</attribute>
+        <attribute name="consoleview" type="int16">0</attribute>
+        <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="TEXFILE" id="z105">
         <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{0, 0}, {457.5, 332}}</attribute>
-        <attribute name="lasteditdate" type="date">470748989.18940502405166625977</attribute>
+        <attribute name="visiblerect" type="string">{{0, 0}, {378.5, 333}}</attribute>
+        <attribute name="lasteditdate" type="date">470749329.54398298263549804688</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470748991.16742497682571411133</attribute>
+        <attribute name="fileloaddate" type="date">470749329.94373697042465209961</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="cursor" type="string">{177, 0}</attribute>
+        <attribute name="cursor" type="string">{643, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
-        <attribute name="name" type="string">AnalisiDeiRequisiti.tex</attribute>
+        <attribute name="name" type="string">20151203I1.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
-        <attribute name="filepath" type="string">./AnalisiDeiRequisiti.tex</attribute>
+        <attribute name="filepath" type="string">./20151203I1.tex</attribute>
         <relationship name="parent" type="1/1" destination="PROJECTITEM"></relationship>
-        <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
-        <relationship name="mainfileofproject" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
+        <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
+        <relationship name="mainfileofproject" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
         <relationship name="children" type="0/0" destination="PROJECTITEM"></relationship>
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
