@@ -26,3 +26,7 @@
 \newcommand{\ZU}{Zucchetti S.P.A.}
 
 \newcommand{\diaryEntry}[5]{#2 & \emph{#4} & #3 & #5 & #1\\ \hline}
+
+%comando per una nuova riga nella tabella del diario delle modifiche
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
