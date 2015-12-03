@@ -5,7 +5,7 @@
     <databaseInfo>
         <version>134481920</version>
         <UUID>03405189-6A9A-4045-95DD-9DE8BE39F66B</UUID>
-        <nextObjectID>105</nextObjectID>
+        <nextObjectID>106</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -63,9 +63,9 @@
     <object type="PROJECT" id="z102">
         <attribute name="type" type="string">PDFLaTeX</attribute>
         <attribute name="name" type="string">StudioDiFattibilità</attribute>
-        <attribute name="folder" type="string">/Users/Alberto/Desktop/SWE/Studio di Fattibilità</attribute>
+        <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/Studio di Fattibilità</attribute>
         <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z105"></relationship>
-        <relationship name="selected" type="1/1" destination="FILE"></relationship>
+        <relationship name="selected" type="1/1" destination="FILE" idrefs="z105"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z103"></relationship>
         <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z104"></relationship>
         <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z105"></relationship>
@@ -85,24 +85,24 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="UISETTINGS" id="z104">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 0}, {604, 547.16849015317155}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 8481.4927703708236}, {604, 542.86639675908191}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
         <attribute name="logoutputlevel" type="int16">0</attribute>
-        <attribute name="editorwidth" type="float">515.5</attribute>
-        <attribute name="controlswidth" type="float">184</attribute>
+        <attribute name="editorwidth" type="float">367</attribute>
+        <attribute name="controlswidth" type="float">153.5</attribute>
         <attribute name="consoleview" type="int16">0</attribute>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="TEXFILE" id="z105">
-        <attribute name="wasopen" type="bool">-1</attribute>
-        <attribute name="visiblerect" type="string">{{0, 0}, {595, 332.5}}</attribute>
-        <attribute name="lasteditdate" type="date">470675485.43906897306442260742</attribute>
+        <attribute name="wasopen" type="bool">0</attribute>
+        <attribute name="visiblerect" type="string">{{0, 48}, {345, 419}}</attribute>
+        <attribute name="lasteditdate" type="date">470842132.68299299478530883789</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470675488.11964100599288940430</attribute>
+        <attribute name="fileloaddate" type="date">470842133.68167799711227416992</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="cursor" type="string">{118, 0}</attribute>
+        <attribute name="cursor" type="string">{801, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
         <attribute name="name" type="string">StudioDiFattibilità.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>

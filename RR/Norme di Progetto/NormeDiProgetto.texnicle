@@ -61,12 +61,12 @@
         </metadata>
     </databaseInfo>
     <object type="UISETTINGS" id="z102">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 314.99635302711647}, {604, 547.16849015311902}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 1096.9803063457207}, {604, 615.89496717713587}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
         <attribute name="logoutputlevel" type="int16">0</attribute>
-        <attribute name="editorwidth" type="float">515.5</attribute>
+        <attribute name="editorwidth" type="float">699.5</attribute>
         <attribute name="controlswidth" type="float">184</attribute>
         <attribute name="consoleview" type="int16">0</attribute>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
@@ -88,7 +88,7 @@
     <object type="PROJECT" id="z104">
         <attribute name="type" type="string">PDFLaTeX</attribute>
         <attribute name="name" type="string">NormeDiProgetto</attribute>
-        <attribute name="folder" type="string">/Users/Alberto/Desktop/SWE/Norme di Progetto</attribute>
+        <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/Norme di Progetto</attribute>
         <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z105"></relationship>
         <relationship name="selected" type="1/1" destination="FILE"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z103"></relationship>

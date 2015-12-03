@@ -61,13 +61,13 @@
         </metadata>
     </databaseInfo>
     <object type="UISETTINGS" id="z102">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 1127.5923036922138}, {604, 585.40769630778618}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 1127.5923036922063}, {604, 585.40769630779369}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
         <attribute name="logoutputlevel" type="int16">0</attribute>
-        <attribute name="editorwidth" type="float">479.5</attribute>
-        <attribute name="controlswidth" type="float">220</attribute>
+        <attribute name="editorwidth" type="float">699.5</attribute>
+        <attribute name="controlswidth" type="float">184</attribute>
         <attribute name="consoleview" type="int16">0</attribute>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
     </object>
@@ -97,10 +97,10 @@
     </object>
     <object type="TEXFILE" id="z105">
         <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{0, 0}, {457.5, 332}}</attribute>
-        <attribute name="lasteditdate" type="date">470748989.18940502405166625977</attribute>
+        <attribute name="visiblerect" type="string">{{0, 0}, {677.5, 332}}</attribute>
+        <attribute name="lasteditdate" type="date">470768880.16883099079132080078</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470748991.16742497682571411133</attribute>
+        <attribute name="fileloaddate" type="date">470768880.09735697507858276367</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{177, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
