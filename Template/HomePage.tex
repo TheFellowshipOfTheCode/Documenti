@@ -1,16 +1,22 @@
 \begin{center}
 
 \includegraphics[width=1em]{../../Template/icone/logo_fotc.jpg}
-\begin{large} \textbf{\gruppo} \end{large}
+\begin{large} \textbf{\gruppoLink} \end{large}
 \includegraphics[width=1em]{../../Template/icone/logo_fotc.jpg}
 \vspace{0.2em}
 
 \hrule
 \vspace{3em}
 
-\includegraphics[width=15em]{../../Template/icone/logo.jpg}
+\includegraphics[keepaspectratio = true]{../../Template/icone/logo.jpg}
 
+%Prima pagina senza intestazione né piè di pagina	
+\thispagestyle{empty}
 
+%Le informazioni del documento sono ancorate a fine pagina
+\vfill
+
+%Copertina
 \begin{center} 
   \begin{Huge}
   {\fontsize{15mm}{20mm}\selectfont \progetto} 
@@ -33,17 +39,15 @@
 	\textbf{Approvazione}	& \approvazione\\
 	\textbf{Uso}  & \uso\\
 	\textbf{Distribuzione} & \gruppo \\
-	\textbf{Destinato a}  &  \destinateTo
+	\textbf{Destinato a}  &  \destinateTo \\
+	\textbf{Email di riferimento} & \email
 \end{tabular}
 \end{center}
+
 \normalsize
-
-\vspace{4em}
-
+%Sommario
 \textbf{Sommario\\} 
 \input{sommario.tex}
-
-\vfill
-
+%\vfill %cosa fa?
 \end{center}
-
+\clearpage

@@ -11,21 +11,31 @@
 \newcommand{\datamodifica}{01 Dicembre 2015}
 \newcommand{\stato}{Sviluppo}
 
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+%Layout del documento 
 \input{../../Template/layout.tex}
-\input{../../Template/comandi.tex}
 \input{sezioni/diario.tex}
+
+%Comandi generali
+\input{../../Template/comandi.tex}
+
+
 \begin{document}
  
 %inclusione template HomePage
 \input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
 \input{../../Template/diario.tex}
+\input{../../Template/index.tex}
 
-\tableofcontents
-\pagebreak
-
+%sezioni documento
 \input{sezioni/Introduzione.tex} 
 \input{sezioni/CapitolatoScelto.tex}
-\chapter{Capitolati Scartati}
 \input{sezioni/CapitolatoC1.tex}
 \input{sezioni/CapitolatoC2.tex}
 \input{sezioni/CapitolatoC3.tex}

@@ -1,6 +1,8 @@
 %Generali
 \newcommand{\progetto}{QuizziPedia}
 \newcommand{\gruppo}{The Fellowship Of The Code}
+\newcommand{\gruppoLink}{\href{http://thefellowshipofthecode.github.io/}{The Fellowship Of The Code}}
+\newcommand{\email}{\href{mailto:thefellowshipofthecode@gmail.com}{thefellowshipofthecode@gmail.com}}
 
 %Documenti
 \newcommand{\AdR}{Analisi dei Requisiti}
@@ -30,3 +32,6 @@
 %comando per una nuova riga nella tabella del diario delle modifiche
 \newcommand{\specialcell}[2][c]{%
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\renewcommand*\sectionmark[1]{\markboth{#1}{}}
+\renewcommand*\subsectionmark[1]{\markright{#1}}

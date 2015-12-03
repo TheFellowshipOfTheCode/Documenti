@@ -11,6 +11,7 @@
 *.toc
 *.swp
 *.pdf
+*.texnicle
 
 ## Intermediate documents:
 *.dvi
