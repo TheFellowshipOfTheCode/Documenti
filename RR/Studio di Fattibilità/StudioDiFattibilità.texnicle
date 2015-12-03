@@ -85,7 +85,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="UISETTINGS" id="z104">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 8481.4927703708236}, {604, 542.86639675908191}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 13940.849334875649}, {604, 542.86639674658545}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -97,12 +97,12 @@
     </object>
     <object type="TEXFILE" id="z105">
         <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{0, 48}, {345, 419}}</attribute>
-        <attribute name="lasteditdate" type="date">470842132.68299299478530883789</attribute>
+        <attribute name="visiblerect" type="string">{{0, 0}, {345, 419}}</attribute>
+        <attribute name="lasteditdate" type="date">470843484.55294001102447509766</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470842133.68167799711227416992</attribute>
+        <attribute name="fileloaddate" type="date">470843485.89948898553848266602</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="cursor" type="string">{801, 0}</attribute>
+        <attribute name="cursor" type="string">{684, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
         <attribute name="name" type="string">StudioDiFattibilità.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
