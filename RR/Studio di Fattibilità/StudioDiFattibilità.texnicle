@@ -4,8 +4,8 @@
 <database>
     <databaseInfo>
         <version>134481920</version>
-        <UUID>59107A08-743D-4BF9-BF4C-0BF3CD20C08F</UUID>
-        <nextObjectID>105</nextObjectID>
+        <UUID>03405189-6A9A-4045-95DD-9DE8BE39F66B</UUID>
+        <nextObjectID>106</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -54,7 +54,7 @@
                     </array>
                     <key>kMDItemKeywords</key>
                     <array>
-                        <string>20151203I1</string>
+                        <string>StudioDiFattibilità</string>
                     </array>
                 </dict>
             </plist>
@@ -62,8 +62,8 @@
     </databaseInfo>
     <object type="PROJECT" id="z102">
         <attribute name="type" type="string">PDFLaTeX</attribute>
-        <attribute name="name" type="string">20151203I1</attribute>
-        <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/20151203I1</attribute>
+        <attribute name="name" type="string">StudioDiFattibilità</attribute>
+        <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/Studio di Fattibilità</attribute>
         <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z105"></relationship>
         <relationship name="selected" type="1/1" destination="FILE" idrefs="z105"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z103"></relationship>
@@ -85,7 +85,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="UISETTINGS" id="z104">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 382.93051293796475}, {604, 493.58000876807239}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 13940.906882605803}, {604, 542.86639674658545}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -97,16 +97,16 @@
     </object>
     <object type="TEXFILE" id="z105">
         <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{0, 0}, {345, 510}}</attribute>
-        <attribute name="lasteditdate" type="date">470848065.41276198625564575195</attribute>
+        <attribute name="visiblerect" type="string">{{0, 0}, {345, 419}}</attribute>
+        <attribute name="lasteditdate" type="date">470844232.54690599441528320312</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470848066.00456202030181884766</attribute>
+        <attribute name="fileloaddate" type="date">470844232.48519700765609741211</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="cursor" type="string">{761, 0}</attribute>
+        <attribute name="cursor" type="string">{684, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
-        <attribute name="name" type="string">20151203I1.tex</attribute>
+        <attribute name="name" type="string">StudioDiFattibilità.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
-        <attribute name="filepath" type="string">./20151203I1.tex</attribute>
+        <attribute name="filepath" type="string">./StudioDiFattibilità.tex</attribute>
         <relationship name="parent" type="1/1" destination="PROJECTITEM"></relationship>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
         <relationship name="mainfileofproject" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
