@@ -85,7 +85,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="UISETTINGS" id="z104">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 13940.849334875649}, {604, 542.86639674658545}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 13940.906882605803}, {604, 542.86639674658545}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -98,9 +98,9 @@
     <object type="TEXFILE" id="z105">
         <attribute name="wasopen" type="bool">0</attribute>
         <attribute name="visiblerect" type="string">{{0, 0}, {345, 419}}</attribute>
-        <attribute name="lasteditdate" type="date">470843484.55294001102447509766</attribute>
+        <attribute name="lasteditdate" type="date">470844232.54690599441528320312</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470843485.89948898553848266602</attribute>
+        <attribute name="fileloaddate" type="date">470844232.48519700765609741211</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{684, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
