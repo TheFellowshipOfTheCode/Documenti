@@ -85,24 +85,24 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="UISETTINGS" id="z104">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 13940.906882605803}, {604, 542.86639674658545}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 1860.9273743017179}, {604, 405.75977653610562}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
         <attribute name="logoutputlevel" type="int16">0</attribute>
-        <attribute name="editorwidth" type="float">367</attribute>
-        <attribute name="controlswidth" type="float">153.5</attribute>
+        <attribute name="editorwidth" type="float">361</attribute>
+        <attribute name="controlswidth" type="float">108</attribute>
         <attribute name="consoleview" type="int16">0</attribute>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="TEXFILE" id="z105">
         <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{0, 0}, {345, 419}}</attribute>
-        <attribute name="lasteditdate" type="date">470844232.54690599441528320312</attribute>
+        <attribute name="visiblerect" type="string">{{10, 153}, {339, 528}}</attribute>
+        <attribute name="lasteditdate" type="date">470868296.45855098962783813477</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470844232.48519700765609741211</attribute>
+        <attribute name="fileloaddate" type="date">470868295.80343598127365112305</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="cursor" type="string">{684, 0}</attribute>
+        <attribute name="cursor" type="string">{0, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
         <attribute name="name" type="string">StudioDiFattibilità.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
