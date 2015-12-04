@@ -1,14 +1,67 @@
 \section{Capitolato C1}
 \subsection{Descrizione}
-Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+
 
 \subsection{Dominio Applicativo}
-Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+L'obiettivo del progetto è di implementare un modello di database NoSQL di tipo Key‐value utilizzando il modello ad attori(G).
+Tale progetto deve prevedere la definizione di mappe, attori ed operazioni basilari. 
+Ogni mappa deve essere caratterizzata da:
+\begin{itemize}
+\item
+un numero arbitrario di coppie chiave / valore. 
+\item 
+un nome che la contraddistingua. 
+\item
+un parametro di configurazione, che determinerà il numero di attori da utilizzare per l'implementazione della mappa e ogni quante coppie, la mappa debba essere suddivisa fra più attori.
+\end{itemize}
+Ogni attore deve appartenere al seguente insieme di attori:
+\begin{itemize}
+\item
+STOREKEEPER: incaricati di mantenere fisicamente al proprio interno le coppie chiave / valore.
+\item
+STOREFINDER: incaricati di ricevere le richieste dall’esterno e instradarle ai 
+rispettivi STOREKEEPER, in modo da soddisfarle. 
+\item
+WAREHOUSEMEN: incaricati ad interfacciarsi con gli STOREKEEPER e persistere su disco le rispettive mappe.
+\end{itemize}
+
+Le operazioni da implementare sul database devono essere le seguenti: 
+\begin{itemize}
+\item
+Inserimento
+\item
+Cancellazione 
+\item
+Aggiornamento (caso particolare di un inserimento con chiave gi
+à presente) 
+\end{itemize}
+
+L'implementazione del suddetto sistema ad attori deve prendere il nome di ACTORDB. In particolare, per l'implementazione degli attori viene richiesto l'utilizzo della libreria Akka(G).
+Il linguaggio da utilizzare può essere scelto fra Scala(G) o Java(G). 
+Viene richiesto la definizione di un domain specific language (DSL) da utilizzare da riga di comando per poter interagire con il database.
+
 
 \subsection{Dominio Tecnologico}
-Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+\begin{itemize}
+\item
+Scala(G) o Java(G):linguaggi di programmazione consigliati
+\item
+Akka(G): libreria consigliata per l'implementazione degli attori, in quanto fornisce un'implementazione del modello ad attori su JVM.
+\item
+\end{itemize}
 
 \subsection{Criticità}
-Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+\begin{itemize}
+\item
+Definizione di un domain specific language (DSL) da utilizzare da riga di comando per interagire con il database
+\item
+\end{itemize}
 
-\subsection{Valutazione Finale}Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+\subsection{Valutazione Finale}
+Nonostante l'interesse per questo capitolato perché ritenuto semplice e ben strutturato, alla fine è stato scartato perché:
+\begin{itemize}
+\item
+Non presentava alcun stimolo positivo da parte di tutti i componenti del gruppo verso le tecnologie richieste.
+\item
+Il gruppo preferiva sviluppare un progetto presentato da un azienda anziché uno presentato da un membro interno all'università.
+\end{itemize}
