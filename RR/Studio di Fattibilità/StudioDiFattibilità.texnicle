@@ -65,7 +65,7 @@
         <attribute name="name" type="string">StudioDiFattibilità</attribute>
         <attribute name="folder" type="string">/Users/Alberto/GitHub/Documenti/RR/Studio di Fattibilità</attribute>
         <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z105"></relationship>
-        <relationship name="selected" type="1/1" destination="FILE" idrefs="z105"></relationship>
+        <relationship name="selected" type="1/1" destination="FILE"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z103"></relationship>
         <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z104"></relationship>
         <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z105"></relationship>
@@ -85,22 +85,22 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="UISETTINGS" id="z104">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 1860.9273743017179}, {604, 405.75977653610562}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 7894.8765432212549}, {604, 425.03703703496103}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
         <attribute name="logoutputlevel" type="int16">0</attribute>
-        <attribute name="editorwidth" type="float">361</attribute>
-        <attribute name="controlswidth" type="float">108</attribute>
+        <attribute name="editorwidth" type="float">193</attribute>
+        <attribute name="controlswidth" type="float">58</attribute>
         <attribute name="consoleview" type="int16">0</attribute>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z102"></relationship>
     </object>
     <object type="TEXFILE" id="z105">
-        <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{10, 153}, {339, 528}}</attribute>
-        <attribute name="lasteditdate" type="date">470868296.45855098962783813477</attribute>
+        <attribute name="wasopen" type="bool">-1</attribute>
+        <attribute name="visiblerect" type="string">{{0, 153}, {171, 431.5}}</attribute>
+        <attribute name="lasteditdate" type="date">470920287.91848599910736083984</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">470868295.80343598127365112305</attribute>
+        <attribute name="fileloaddate" type="date">470920287.81702297925949096680</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{0, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
