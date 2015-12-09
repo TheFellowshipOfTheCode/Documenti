@@ -2,7 +2,7 @@
 \subsection{Descrizione}
 L'obiettivo del progetto è di implementare un modello di database NoSQL di tipo Key‐value utilizzando il modello ad attori(G).
 Tale progetto richiede la definizione di mappe, attori ed operazioni basilari. 
-Ogni mappa deve essere caratterizzata da:
+\\Ogni mappa deve essere caratterizzata da:
 \begin{itemize}
 \item
 un numero arbitrario di coppie chiave / valore. 
@@ -14,12 +14,12 @@ un parametro di configurazione, che determinerà il numero di attori da utilizza
 Ogni attore deve appartenere al seguente insieme di attori:
 \begin{itemize}
 \item
-STOREKEEPER: incaricati di mantenere fisicamente al proprio interno le coppie chiave / valore.
+\textbf{STOREKEEPER}: incaricati di mantenere fisicamente al proprio interno le coppie chiave / valore.
 \item
-STOREFINDER: incaricati di ricevere le richieste dall’esterno e instradarle ai 
-rispettivi STOREKEEPER, in modo da soddisfarle. 
+\textbf{STOREFINDER}: incaricati di ricevere le richieste dall’esterno e instradarle ai 
+rispettivi \textbf{STOREKEEPER}, in modo da soddisfarle. 
 \item
-WAREHOUSEMEN: incaricati ad interfacciarsi con gli STOREKEEPER e persistere su disco le rispettive mappe.
+\textbf{WAREHOUSEMEN}: incaricati ad interfacciarsi con gli \textbf{STOREKEEPER} e persistere su disco le rispettive mappe.
 \end{itemize}
 
 Le operazioni da implementare sul database devono essere le seguenti: 
@@ -33,8 +33,8 @@ Aggiornamento
 \end{itemize}
 
 L'implementazione del suddetto sistema ad attori deve prendere il nome di ACTORDB. In particolare, per l'implementazione degli attori viene richiesto l'utilizzo della libreria Akka(G).
-Il linguaggio da utilizzare può essere scelto fra Scala(G) o Java(G). 
-Viene richiesto la definizione di un domain specific language (DSL) da utilizzare da riga di comando per poter interagire con il database.
+Il linguaggio da utilizzare può essere scelto fra \textbf{Scala(G)} o \textbf{Java(G)}. 
+Viene richiesto la definizione di un \textbf{domain specific language (DSL)} da utilizzare da riga di comando per poter interagire con il database.
 
 \subsection{Dominio Applicativo}
 Questa tipologia di database da implementare presenta caratteristiche tecniche ottimali, come: la semplicità strutturale, l'affidabilità, le performance elevate e costanti.
@@ -42,31 +42,31 @@ Ciò determina la preferenza nell'utilizzo di questi DB per la gestione di appli
 Quindi,a questa tipologia di DB possiamo attribuire svariati ambiti di utilizzo, come ad esempio:
 \begin{itemize}
 \item
-Big Data 
+\textbf{Big Data} 
 \item
-Social & Mobile Infrastructure
+\textbf{Social & Mobile Infrastructure}
 \item
-Content Management & Delivery
+\textbf{Content Management & Delivery}
 \item
-Data Hub
+\textbf{Data Hub}
 \item
-User Data Management 
+\textbf{User Data Management} 
 \end{itemize}
 
 \subsection{Dominio Tecnologico}
+Il capitolato prevedeva l'utilizzo delle seguenti tecnologie: 
 \begin{itemize}
 \item
-Scala(G) o Java(G):linguaggi di programmazione consigliati
+\textbf{Scala(G)} o \textbf{Java(G)}:linguaggi di programmazione consigliati
 \item
-Akka(G): libreria consigliata per l'implementazione degli attori, in quanto fornisce un'implementazione del modello ad attori su JVM.
-\item
+\textbf{Akka(G)}: libreria consigliata per l'implementazione degli attori, in quanto fornisce un'implementazione del modello ad attori su JVM.
 \end{itemize}
 
 \subsection{Criticità}
+Le criticità trovate sono:
 \begin{itemize}
 \item
-Definizione di un domain specific language (DSL) da utilizzare da riga di comando per interagire con il database
-\item
+Definizione di un \textbf{domain specific language(DSL)} da utilizzare da riga di comando per interagire con il database
 \end{itemize}
 
 \subsection{Valutazione Finale}
