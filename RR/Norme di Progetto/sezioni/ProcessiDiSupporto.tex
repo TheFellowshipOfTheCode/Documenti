@@ -1,32 +1,88 @@
 \section{Processi di supporto}
-
 \subsection{Processo di documentazione}
 \subsubsection{Descrizione}
-
+In questo capitolo verranno trattate tutte le convenzioni adottate dal gruppo 
+\textsl{TheFellowshipOfTheCode} riguardo la stesura, verifica e approvazione dei 
+documenti.
+I documenti sono classificati come:
+\begin{itemize}
+  \item \textsl{Interni}: utilizzo interno al team;
+  \item \textsl{Esterni}: distribuzione esterna al committente e/o proponente.
+\end{itemize}
+Questa classificazione è dovuta dal tipo di distribuzione che andrà effettuata di tali documenti.
+I documenti \textsl{approvati} dal \textsl{\RdP} devono avere un nome strutturato nel seguente modo:
+\begin{itemize}
+  \item La prima lettera del documento deve essere maiuscola;
+  \item Il nome non deve contenere spazi;
+  \item Va indicata la versione del documento nella parte finale del nome, in forma numerica, 
+  corrispondente a quanto indicato nel diario delle modifiche. 
+  \begin{center}
+  \textsl{NomeDelDocumento1.0.0}
+  \end{center}
+\end{itemize}
 \subsubsection{Strumenti}
-
+Per la stesura dell'intera documentazione è stato scelto di utilizzare \LaTeX. 
+La scelta di questo linguaggio di markup è stata effettuata per avere uno 
+standard comune e per evitare possibili conflitti e incompatibilità derivanti 
+dall'utilizzo di software differente.
 \subsubsection{Ciclo di vita di un documento}
-
-\subsubsection{Documenti formali}
-
+ I documenti vengono possono trovare in uno dei seguenti stati:
+\begin{itemize}
+  \item Documenti \textsl{in lavorazione};
+  \item Documenti \textsl{da verificare};
+  \item Documenti \textsl{approvati}.
+\end{itemize}
+I documenti \textsl{in lavorazione} sono quelli in fase di stesura da parte del 
+relativo redattore. Ultimata la loro realizzazione questi documenti vengono 
+segnati come \textsl{da verificare} e passano quindi in mano al relativo 
+\textsl{\Ver}. Infine i documenti verificati vengono consegnati al \textsl{\RdP} 
+che avrà il compito di approvarli in via definitiva.
+\subsubsection{Documenti finali}
 \paragraph{\SdF}
-
+L'intento del suddetto documento è riportare lo studio effettuato dall'intero 
+team che ha portato all'accettazione dello sviluppo del progetto scelto. Questo 
+documento è utilizzato internamente dal team e la lista di distribuzione comprende solo i 
+committenti.
 \paragraph{\NdP}
-
+L'intento del suddetto documento è riportare tutte le convenzioni, strumenti e 
+norme che il team dovrà adottare durante tutto lo sviluppo del progetto. Questo 
+documento è utilizzato internamente al tram e la lista di distribuzione comprende solo i committenti. 
 \paragraph{\PdP}
-
+L'intento del suddetto documento è descrivere come il team gestisce le risorse, 
+temporali e umane. Tratta inoltre la gestione dei rischi. Questo documento è 
+utilizzato anche esternamente e la lista di distribuzione comprende committenti 
+e proponenti.
 \paragraph{\PdQ}
-
+L'intento del suddetto documento è descrivere il modo in cui l'intero team punta 
+a soddisfare gli obiettivi di qualità. Questo documento è 
+utilizzato anche esternamente e la lista di distribuzione comprende committenti 
+e proponenti.
 \paragraph{\AdR}
-
+L'intento di tale documento è dare una visione generale dei requisiti e dei casi 
+d'uso del progetto. Il documento conterrà quindi la lista di tutti i casi d'uso, 
+i diagrammi delle attività di interazione tra utente e sistema sviluppato e 
+infine i servizi offerti dal prodotto finale. Questo documento è 
+utilizzato anche esternamente e la lista di distribuzione comprende committenti 
+e proponenti.
 \paragraph{\ST}
-
+L'intento del suddetto documento è dare una visione generale del prodotto e 
+delle sue richieste. Più nello specifico verrà mostrata una progettazione ad 
+alto livello, basata su diagrammi dei package per la descrizione delle 
+componenti, diagrammi di sequenza per descrivere gli scenari d'uso e diagrammi 
+di attività. Verranno inoltre elencati i software che saranno utilizzati per la realizzazione del progetto. 
 \paragraph{\DDP}
-
+L'intento di tale documento è fornire una progettazione dettagliata del 
+prodotto. In questo documento verranno forniti tutti i dettagli implementativi 
+del prodotto, fondamentali in fase di codifica, che comprenderanno diagrammi UML 
+delle classi con i relativi metodi.
 \paragraph{Glossario}
-
+L'intento di tale documento è fornire una definizione dettagliata di tutti i 
+termini tecnici e acronimi utilizzati nell'intera documentazione. Questo documento è 
+utilizzato anche esternamente e la lista di distribuzione comprende committenti 
+e proponenti.
 \paragraph{\MU}
-
+L'intento di tale documento è fornire all'utente una guida dettagliata di tutte 
+le funzionalità offerte dal prodotto realizzato.
 \paragraph{Verbali}
 
 \subsubsection{Struttura del documento}
