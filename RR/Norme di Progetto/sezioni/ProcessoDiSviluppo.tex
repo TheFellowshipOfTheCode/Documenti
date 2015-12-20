@@ -73,30 +73,92 @@ team, che permette la gestione automatica della tracciabilità degli elementi in
 Inoltre i requisiti verranno inseriti in formato tabellare nel documento di \textsl{\AdR}.
 \subsection{Progettazione}
 
+
 \subsubsection{Descrizione}
-
+L'attività di progettazione definisce come deve essere realizzata la struttura dell'architettura software. I requisiti delineati, all'interno del documento "Analisi dei Requisiti", devono essere utili a realizzare la documentazione specifica e a determinare le linee guida da seguire durante l'attività di codifica. 
+Tale attività deve essere svolta in maniera ottimale e precisa dai progettisti.  
+  
 \subsubsection{Diagrammi}
+La progettazione deve utilizzare le seguenti tipologie di diagrammi UML(G):
+\begin{itemize} 
+\item
+Diagrammi di classi:illustra una collezione di elementi dichiarativi di un modello come classi e tipi, assieme ai loro contenuti e alle loro relazioni.  
+\item
+Diagrammi dei package:raggruppamenti di classi in una unità di livello più alto
+\item
+Diagrammi di attività:illustra il flusso di operazioni relativo ad un'attività. Utilizzati soprattutto per descrivere la logica di un algoritmo.  
+\item
+Diagrammi di sequenza: descrive una determinata sequenza di azioni dove tutte le scelte sono già state effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
+\end{itemize}
 
-\subsubsection{Stili di progettazione}
 
+\subsubsection{Obbiettivi} (al Posto di Stili di Progettazione)
+
+I progettisti sono responsabili delle attività di progettazione. Tali sono tenuti a:
+\begin{itemize} 
+\item
+Produrre una soluzione attuabile, comprensibile, robusta e semplice entro i limiti del possibile;
+\item
+Effettuare scelte su aspetti progettuali applicando design pattern;
+\item
+Effettuare scelte su aspetti progettuali e tecnologici che rendano il prodotto facilmente mantenibile;
+\item
+Effettuare scelte su aspetti progettuali e tecnologici che rendano il prodotto modulare entro i limiti del possibile.
+\item
+Redigere la Specifica Tecnica, la Definizione di Prodotto e le sezioni inerenti le metriche di verifica della programmazione del Piano di Qualifica.
+\end{itemize}
 \subsubsection{Tracciamento}
+Ogni requisito deve essere tracciato all'interno del documentsDB, software
+appositamente creato da alcuni componenti del gruppo che permette la tracciabilità e la classificazione automatica degli elementi inseriti.
 
 \subsection{Codifica}
 
 \subsubsection{Descrizione}
+L'attività di codifica ha come obiettivo passare dalla descrizione della soluzione in termini di architettura alla descrizione della soluzione in formato eseguibile da un calcolatore. I programmatori,responsabili di questa attitvità, sono tenuti a seguire le linee guida, delineate nell'attività di progettazione, con lo scopo di produrre in output il software designato. 
 
 \subsubsection{Intestazione}
 
 \subsubsection{Formattazione}
 
+\subsubsection{Ricorsione}
+La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. Nel caso l'utilizzo di memoria risulti troppo elevato la ricorsione verrà rimossa.
+
 \subsection{Strumenti}
 
+\subsubsection{DocumentsDB}
+Al fine di gestire in maniera veloce e il più possibile automatizzata tutti i dati, e
+per semplificare i tracciamenti, il team ha creato un applicativo web: DocumentsDB.
+DocumentsDB permette la gestione di casi d’uso, attori, fonti, requisiti e termini del Glossario. Ogni membro del teamG può accedervi via browser previa autenticazione, inoltre, più persone possono lavorare simultaneamente sugli stessi dati poiché è stata gestita la concorrenza. L’applicazione si occupa di mantenere ordinata la gerarchia dei requisiti e degli UC in modo automatico durante tutto il suo ciclo di vita (creazione, modifica, eliminazione).
+Vengono eseguiti diversi controlli su ciascun campo dati, e tale approccio garantisce fault-toleranceG del sistema nei confronti di qualsiasi input possibile. I membri del gruppo possono visualizzare, inserire, modificare ed eliminare elementi in modo semplice. PragmaDB consente di esportare l’elenco degli attori, delle fonti, del Glossario, dei casi d’uso, dei requisiti e delle loro relazioni come codice LATEX, quindi facilmente inseribile all’interno dei documenti durante la stesura. Infine consente di visualizzare,
+attraverso un menù laterale, l’insieme dei link utili relativi al gruppo.
+
 \subsubsection{Tracciabilità}
+La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del software DocumentsDB, il quale da la possibilità ad ogni membro del team di inserire, modificare o eliminare requisiti o casi d’uso. Inoltre è utilizzato per tenere traccia dello stato dei requisiti, ovvero se sono stati soddisfatti o meno.
 
 \subsubsection{Sistema operativo}
 
 \subsubsection{Strumenti per il versionamento}
-
+Il controllo di versione è un sistema che registra, nel tempo, i cambiamenti ad un file o ad una serie di file, così da poter richiamare una specifica versione in un secondo momento.A tal fine, il team ha creato un repository, ospitato all'interno di un server, per poter gestire il versionamento del codice e della documentazione.
+Il software di versionamento scelto è Git perchè presenta molti più aspetti positivi rispetto ai repository centralizzati. Git permette di lavorare anche in assenza di connettività con il server centrale. I membri del team possono lavorare sulla propria copia locale del repository e rendere pubbliche le modifiche caricandole nel repository del server. Questo approccio risulta molto semplice e veloce per poter collaborare con i membri del team simultaneamente.
+Inoltre online è possibile reperire moltissima documentazione a riguardo per un rapido apprendimento. La struttura base del repository:
+\begin{itemize}
+  \item
+	RR
+	\begin{itemize}
+		\item
+			Interni
+		\item
+			Esterni
+	\end{itemize}
+  \item
+    RQ
+  \item
+    RP
+  \item
+  	RA
+  \item
+  	Template 
+\end{itemize}  
 \subsubsection{Documentazione sorgenti}
 
 \subsubsection{Framework}
