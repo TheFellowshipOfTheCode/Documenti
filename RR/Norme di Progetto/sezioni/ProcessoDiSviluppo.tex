@@ -125,7 +125,7 @@ La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà nec
 
 \subsection{Strumenti}
 
-\subsubsection{DocumentsDB}
+\subsubsection{DocumentsDB}(Da modificare)
 Al fine di gestire in maniera veloce e il più possibile automatizzata tutti i dati, e
 per semplificare i tracciamenti, il team ha creato un applicativo web: DocumentsDB.
 DocumentsDB permette la gestione di casi d’uso, attori, fonti, requisiti e termini del Glossario. Ogni membro del teamG può accedervi via browser previa autenticazione, inoltre, più persone possono lavorare simultaneamente sugli stessi dati poiché è stata gestita la concorrenza. L’applicazione si occupa di mantenere ordinata la gerarchia dei requisiti e degli UC in modo automatico durante tutto il suo ciclo di vita (creazione, modifica, eliminazione).
@@ -137,9 +137,17 @@ La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del 
 
 \subsubsection{Sistema operativo}
 
+\subsubsection{Strumenti di project management}
+Gli strumenti di project management sono ritenuti centrali per lo sviluppo di un progetto in quanto consentono di monitorare i compiti tra i membri del team e controllare lo stato di avanzamento del progetto.
+Il software di project management utilizzato dal team è Zoho Projects perchè, rispetto agli altri competitor, offre un ricco set di funzionalità riguardanti: la pianificazione, il monitoraggio, il reporting e la collaborazione.
+Inoltre è disponibile l'applicazione mobile, utile ai membri del team per tenere sotto controllo le varie fasi di realizzazione da qualsiasi luogo.
+  
+
+
 \subsubsection{Strumenti per il versionamento}
-Il controllo di versione è un sistema che registra, nel tempo, i cambiamenti ad un file o ad una serie di file, così da poter richiamare una specifica versione in un secondo momento.A tal fine, il team ha creato un repository, ospitato all'interno di un server, per poter gestire il versionamento del codice e della documentazione.
-Il software di versionamento scelto è Git perchè presenta molti più aspetti positivi rispetto ai repository centralizzati. Git permette di lavorare anche in assenza di connettività con il server centrale. I membri del team possono lavorare sulla propria copia locale del repository e rendere pubbliche le modifiche caricandole nel repository del server. Questo approccio risulta molto semplice e veloce per poter collaborare con i membri del team simultaneamente.
+Gli strumenti software per il controllo versione sono ritenuti molto spesso necessari per la maggior parte dei progetti di sviluppo software.
+Per questo motivo, il team ha deciso di creare un repository, ospitato all'interno di un server, per gestire la continua evoluzione dei documenti digitali come il codice sorgente del software, la documentazione testuale e altre informazioni importanti.
+Il software di versionamento scelto è Git perchè presenta molti più aspetti positivi rispetto ai repository centralizzati. Git permette di lavorare anche in assenza di connettività con il server centrale. I membri del team possono lavorare sulla propria copia locale del repository e rendere pubbliche le modifiche caricandole nel repository centrale. Questo approccio risulta molto semplice e veloce per poter collaborare con i membri del team simultaneamente.
 Inoltre online è possibile reperire moltissima documentazione a riguardo per un rapido apprendimento. La struttura base del repository:
 \begin{itemize}
   \item
@@ -162,3 +170,36 @@ Inoltre online è possibile reperire moltissima documentazione a riguardo per un
 \subsubsection{Documentazione sorgenti}
 
 \subsubsection{Framework}
+
+\subsection{Tecnologie utilizzate}
+\subsubsection{Html5}
+Html5 è un linguaggio di markup per la strutturazione delle pagine web, derivato dallo standard che definisce HTML.
+Il termine rappresenta due concetti differenti:
+\begin{itemize}
+		\item
+			Una nuova versione del linguaggio HTML, con nuovi elementi, attributi e comportamenti
+		\item
+			Un più ampio insieme di tecnologie che permettono siti web e applicazioni più diversificate e potenti
+\end{itemize}
+HTML5 si presenta come un linguaggio pronto ad essere plasmato secondo le più recenti necessità, sia dal lato della strutturazione del contenuto che da quello dello sviluppo di vere e proprie applicazioni.
+Questo linguaggio verrà utilizzato per sviluppare la parte client dell'applicativo.
+
+\subsubsection{Css}
+CSS è un linguaggio utilizzato per definire la formattazione di documenti HTML, XHTML e XML.
+Questo linguaggio istruisce un browser su come il documento debba essere presentato all'utente, per esempio definendone la formattazione del testo, il posizionamento degli elementi rispetto a diversi media e device, etc.
+Questa tecnologia verrà utilizzata per arricchire l'aspetto visuale e la presentazione della parte client.
+\subsubsection{Javascript}
+Javascript è un linguaggio di scripting lato-client per la creazione di effetti dinamici interattivi all'interno di una pagina Web. Esso è un linguaggio interpretato, cioè non esiste nessun compilatore, ma è direttamente il browser, tramite un apposito motore di scripting, che interpreta il linguaggio.
+L’enorme diffusione di JavaScript è dovuta principalmente al fiorire di numerose librerie nate allo scopo di semplificare la programmazione sul browser, ma anche alla nascita di framework lato server e nel mondo mobile che lo supportano come linguaggio principale.
+La parte dinamica dell'applicativo verrà sviluppata tramite l'utilizzo di questo linguaggio.
+
+\subsubsection{Node.js}
+Node.js è un framework relativo all'utilizzo server-side di Javascript.
+La piattaforma è basata sul JavaScript Engine V8, che è il runtime di Google utilizzato anche da Chrome e disponibile sulle principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like.
+La caratteristica principale di Node.js risiede nella possibilità di accedere alle risorse del sistema operativo in modalità event-driven e non sfruttando il classico modello basato su processi o thread concorrenti, utilizzato dai classici web server.
+Il modello event-driven, o "programmazione ad eventi", si basa su un concetto piuttosto semplice: si lancia una azione quando accade qualcosa. Ogni azione quindi risulta asincrona a differenza dei pattern di programmazione più comune in cui una azione succede ad un'altra solo dopo che essa è stata completata.
+Tale modello di networking è ritenuto più efficiente nelle situazioni critiche in cui si verifica un elevato traffico di rete.
+Node.js verrà utilizzato per sviluppare la parte server dell'applicativo.
+
+
+
