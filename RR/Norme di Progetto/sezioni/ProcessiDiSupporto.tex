@@ -266,21 +266,111 @@ riferirsi ad una o più persona del team.
 preferibile infatti condividere file all'interno del gruppo tramite strumenti più consoni, come Google 
 Drive. 
 \subsubsection{Componenti grafiche}
-
 \paragraph{Tabelle}
-
+Tutte le tabelle presenti all'interno del documento devono avere una didascalia 
+ed un indice identificativo univoco per la loro tracciabilità all'interno del 
+documento stesso.
 \paragraph{Immagini}
-
+Le immagini inserite nel documento sono nel formato PNG. In alternativa, 
+giustificando il motivo, possono essere inserite in formato PDF.
 \subsubsection{Versionamento}
-
-\subsubsection{Glossario}
+Ogni documento prodotto deve essere identificato, oltre che dal nome, dal numero 
+di versione nel seguente modo:
+\begin{center}
+  vX.Y.Z
+\end{center}
+dove:
+\begin{itemize}
+  \item \textbf{X}: indica il numero di uscite formali del documento e viene 
+  incrementato in seguito all'approvazione finale da parte del \textit{\RdP}. 
+  L'incremento dell'indice \textbf{X} comporta l'azzeramento degli indici 
+  \textbf{Y} e \textbf{Z};
+  \item \textbf{Y}: indica il numero di modifiche e correzioni apportare al 
+  documento. L'incremento di \textbf{Y} comporta l'azzeramento dell'indice 
+  \textbf{Z};
+  \item \textbf{Z}: indica il numero di modifiche minori apportate al documento epuò assumere i seguenti valori:
+  \begin{itemize}
+    \item 0: indica che le ultime modifiche apportate non sono state verificate;
+    \item 1: indica che le ultime modifiche sono state verificate;
+    \item 2: indica che le ultime modifiche verificate sono state approvate dal 
+    \textit{\RdP}.
+  \end{itemize} 
+\end{itemize}
+A ogni modifica del documento anche il nome del file fisico deve essere 
+modificato, seguendo il seguente schema:
+\begin{center}
+  nomeDocumentoX.Y.Z.pdf
+\end{center}
 
 \subsection{Processo di verifica}
-
 \subsubsection{Descrizione}
+Il processo di verifica ha il compito di controllare che ogni documento prodotto 
+rispecchi quanto previsto dai requisiti.
+\subsubsection{Analisi}
+\paragraph{Analisi statica}
+L'analisi statica è una tecnica che permette di trovare eventuali anomalie nella 
+documentazione o nel software prodotto. Ci sono due modi con la quale essa viene 
+impiegata:
+\begin{itemize}
+  \item \textbf{Walkthrough}: questa tecnica di analisi statica consiste nella 
+  lettura a largo spettro del documento o del codice, al fine di trovare anomalie, 
+  senza avere un'idea precisa degli errori da cercare. Questa tecnica risulta 
+  molto utile nella fase iniziale dello sviluppo del prodotto data la scarsa 
+  esperienza dei membri del team. Questa tecnica è utilizzata dai \textit{Verificatori} 
+  che avranno il compito di stilare una lista contenente gli errori rilevati più 
+  spesso. Una volta raggiunta la quasi completezza di questa lista, essa dovrà 
+  essere allegata a questo documento, in questo modo sarà possibile l'utilizzo 
+  della tecnica di \textit{inspection};
+  \item \textbf{Inspection}: questa tecnica di analisi statica consiste in una 
+  lettura molto più dettagliata e più mirata dei documenti o del codice, 
+  utilizzando come supporto fondamentale la lista di controllo contenente fli 
+  errori più frequenti. Questa tecnica diventa sempre più efficace dato che la 
+  lista verrà sempre ampliata con esperienza nella verifica.
+\end{itemize}
+\paragraph{Analisi dinamica}
+L'analisi dinamica viene applicata solamente al software prodotto, in quanto 
+essa consiste nell'esecuzione di test su di essi. Grazie a questi test è 
+possibile verificare la correttezza del software.
+\subsubsection{Test}
+\paragraph{Test di unità}
+I test di unità verificano che ogni singola componente del software funzioni 
+correttamente. Effettuando questi test di riduce al minimo la presenza di errori 
+di tutte le componenti di base. I test di unità sono identificati dalla seguente 
+sintassi:
+\begin{center}
+  TU[Codice Test]
+\end{center}
+\paragraph{Test di integrazione}
+I test di integrazione verificano che più unità, validate singolarmente, funzionino 
+correttamente una volta assemblate. I test di integrazione sono identificati 
+dalla seguente sintassi:
+\begin{center}
+  TI[Codice Test]
+\end{center}
+\paragraph{Test di sistema}
+I test di sistema vengono eseguiti sul prodotto che si ritiene essere giunto ad 
+una versione definitiva, serve a verificare che tutti i requisiti siano 
+soddisfatti. I test di sistema sono identificati dalla seguente sintassi:
+\begin{center}
+  TS[Codice Requisito]
+\end{center}
+\paragraph{Test di regressione}
+Il test di regressione consiste nel re-eseguire tutti i test relativi ad una 
+componente del software prodotto che ha subito delle modifiche. I test di 
+regressione sono identificati dalla seguente sintassi:
+\begin{center}
+  TR[Codice Test]
+\end{center}
+\paragraph{Test di validazione}
+Il test di validazione coincide con il collaudo del software in presenza del 
+\textit{proponente}. In caso di esito positivo si procede col rilascio del 
+software. I test di validazione sono identificati dalla seguente sintassi:
+\begin{center}
+  TV[Codice requisito]
+\end{center}
 
 \subsection{Strumenti}
-
+da decidere insieme23/12
 \subsubsection{Strumenti per l'analisi statica}
 
 \subsubsection{Strumenti per l'analisi dinamica}
