@@ -1,3 +1,5 @@
+
+
 %Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
 \newcommand{\documento}{\NdP}
 \newcommand{\nomedocumentofisico}{NormeDiProgetto.pdf}
@@ -10,18 +12,25 @@
 \newcommand{\datamodifica}{09 Dicembre 2015}
 \newcommand{\stato}{Sviluppo}
 
+
 \input{../../Template/layout.tex}
 \input{../../Template/comandi.tex}
+
+%inclusione classe subsubsubsection
+\input{class_subsubsubsection/class_subsubsubsection.tex}
+
 \input{sezioni/diario.tex}
+%Serve per vedere i paragraph nell'indice
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
 \begin{document}
 
 %inclusione template HomePage
 \input{../../Template/HomePage.tex}
 \input{../../Template/diario.tex}
 
-%Serve per vedere i paragraph nell'indice
-\setcounter{secnumdepth}{5}
-\setcounter{tocdepth}{5}
+
+
 
 \tableofcontents
 \newpage
