@@ -1,17 +1,49 @@
 \section{Resoconto Attività di Verifica}
-In questa sezione del documento verranno descritti e commentati gli esiti delle attività di verifica svolte sui vari documenti prodotti durante le varie fasi del progetto.
+In questa sezione del documento vengono descritti e analizzati gli esiti delle attività di verifica svolte su tutti i documenti che vengono consegnati nelle varie revisioni di avanzamento del progetto.
 
-\subsection{Fase di Analisi}
+\subsection{Revisione dei Requisiti}
 
 
 \subsubsection{Tracciamento Casi d’Uso e Requisiti}
-
+Per il tracciamento delle relazioni fra casi d’uso e requisiti, così come per il tracciamento delle relazioni fra requisiti e fonti, si è deciso di sfruttare il software interno \textit{DocumetsDB}.
 
 \subsubsection{Analisi Statica dei Documenti}
-
+L'analisi dei documenti mediante \textit{walkthrough} ha portato all'individuazione di alcuni errori frequenti a partire dai quali è stata stilata una lista di controllo da usare per le future attività di verifica. \\
+In ordine di frequenza sono stati riscontrati i seguenti errori:
+\begin{itemize}
+\item Mancato utilizzo dei comandi \LaTeX~ personalizzati;
+\item Mancato rispetto delle norme riguardanti gli elenchi puntati:
+\begin{itemize}
+\item La prima parola di una voce dell'elenco non iniziava con una lettera maiuscola;
+\item La voce dell'elenco terminava con un punto anziché con un punto e virgola (o viceversa).
+\end{itemize}
+\item Errori riguardanti la struttura delle frasi: alcune frasi erano scritte in modo più colloquiale che formale o con tempi verbali errati;
+\item Errori di battitura.
+\end{itemize}
 
 \subsubsection{Esiti Verifiche Automatizzate}
-
+Ogni documento è stato sottoposto a delle verifiche automatizzate per il calcolo dell'indice di Gulpease e per il controllo ortografico.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline Documento & Indice Gulpease & Esito\\
+\hline
+\emph{Analisi dei Requisiti} & 71,70 & Superato \\
+\emph{Glossario} & 43,87 & Superato \\
+\emph{Norme di Progetto} & 56,89 & Superato \\
+\emph{Piano di Progetto} & 51,03 & Superato \\
+\emph{Piano di Qualifica} & 52,57  & Superato \\
+\emph{Studio di Fattibilità} & 63,87 & Superato \\
+\emph{Verbale} & 58,40 & Superato \\
+\hline
+\end{tabular}
+\caption{Resoconto verifiche automatizzate - Revisione dei Requisiti}
+\end{center}
+\end{table}
+\\Dal calcolo dell'indice di Gulpease sono state escluse le tabelle e le didascalie.
 
 \subsubsection{Considerazioni Finali}
-
+\begin{itemize}
+\item Lo svolgimento delle attività di verifica è ancora poco automatizzato, questo perché senza una prima lista di errori comuni non è stato possibile predisporre automatismi per rilevarli e correggerli. Per le verifiche successive si cercherà di automatizzare ulteriormente questo processo;
+\item La stesura dei documenti ha raggiunto un buon grado di automatizzazione; per quanto riguarda l'\textit{Analisi dei Requisiti} e il \textit{Glossario}, infatti, la maggior parte del codice \LaTeX~ viene generato in modo automatico a partire dai dati presenti all'interno di \textit{DocumentsDB}. Non è stato possibile raggiungere lo stesso livello di automazione per gli altri documenti a causa della natura del loro contenuto.
+\end{itemize}
