@@ -24,6 +24,7 @@
 \usepackage[bottom]{footmisc}
 \usepackage{listings} 
 \usepackage{textcomp}
+\usepackage{titlesec}
 
 
 %***STILE PAGINA***
@@ -41,4 +42,14 @@
 \rfoot{\thepage} %per le prime pagine: mostra solo il numero romano
 \cfoot{}
 \renewcommand{\footrulewidth}{0.4pt}   %Linea sopra il piè di pagina
+
+%***INSERIMENTO DI NUOVE SOTTOSEZIONI
+\setcounter{secnumdepth}{4}		% mostra nel documento fino al livello 4 (1.2.3.4)
+\setcounter{tocdepth}{4}			% mostra nell'indice fino al livello 4 (1.2.3.4)
+
+%***LA SOTTOSEZIONE PARAGRAPH VIENE VISUALIZZATA COME UNA SECTION
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
 
