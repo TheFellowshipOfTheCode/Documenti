@@ -79,20 +79,20 @@ L'attività di progettazione definisce come deve essere realizzata la struttura 
 Tale attività deve essere svolta in maniera ottimale e precisa dai progettisti.  
   
 \subsubsection{Diagrammi}
-La progettazione deve utilizzare le seguenti tipologie di diagrammi UML(G):
+La progettazione deve utilizzare le seguenti tipologie di diagrammi UML\pad{G}:
 \begin{itemize} 
 \item
-Diagrammi di classi:illustra una collezione di elementi dichiarativi di un modello come classi e tipi, assieme ai loro contenuti e alle loro relazioni.  
+\textbf{Diagrammi di classi}: Illustra una collezione di elementi dichiarativi di un modello come classi e tipi, assieme ai loro contenuti e alle loro relazioni.  
 \item
-Diagrammi dei package:raggruppamenti di classi in una unità di livello più alto
+\textbf{Diagrammi dei package}\pad{G}: Raggruppamenti di classi in una unità di livello più alto
 \item
-Diagrammi di attività:illustra il flusso di operazioni relativo ad un'attività. Utilizzati soprattutto per descrivere la logica di un algoritmo.  
+\textbf{Diagrammi di attività}: Illustra il flusso di operazioni relativo ad un'attività. Utilizzati soprattutto per descrivere la logica di un algoritmo.  
 \item
-Diagrammi di sequenza: descrive una determinata sequenza di azioni dove tutte le scelte sono già state effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
+\textbf{Diagrammi di sequenza}: Descrive una determinata sequenza di azioni dove tutte le scelte sono già state effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
 \end{itemize}
 
 
-\subsubsection{Obbiettivi} (al Posto di Stili di Progettazione)
+\subsubsection{Responsabilità dei Progettisti}
 
 I progettisti sono responsabili delle attività di progettazione. Tali sono tenuti a:
 \begin{itemize} 
@@ -104,8 +104,6 @@ Effettuare scelte su aspetti progettuali applicando design pattern;
 Effettuare scelte su aspetti progettuali e tecnologici che rendano il prodotto facilmente mantenibile;
 \item
 Effettuare scelte su aspetti progettuali e tecnologici che rendano il prodotto modulare entro i limiti del possibile.
-\item
-Redigere la Specifica Tecnica, la Definizione di Prodotto e le sezioni inerenti le metriche di verifica della programmazione del Piano di Qualifica.
 \end{itemize}
 \subsubsection{Tracciamento}
 Ogni requisito deve essere tracciato all'interno del documentsDB, software
@@ -114,11 +112,113 @@ appositamente creato da alcuni componenti del gruppo che permette la tracciabili
 \subsection{Codifica}
 
 \subsubsection{Descrizione}
-L'attività di codifica ha come obiettivo passare dalla descrizione della soluzione in termini di architettura alla descrizione della soluzione in formato eseguibile da un calcolatore. I programmatori,responsabili di questa attitvità, sono tenuti a seguire le linee guida, delineate nell'attività di progettazione, con lo scopo di produrre in output il software designato. 
+L'attività di codifica ha come obiettivo passare dalla descrizione della soluzione in termini di architettura alla descrizione della soluzione in formato eseguibile da un calcolatore. I programmatori,responsabili di questa attività, sono tenuti a seguire le linee guida, delineate nell'attività di progettazione, con lo scopo di produrre in output il software designato. 
 
-\subsubsection{Intestazione}
+\subsubsection{Standard di Codifica}
+\paragraph{Descrizione}
+Affinché questa attività sia svolta al meglio, è opportuno che i programmatori rispettino uno standard di codifica.
+Esso rappresenta uno strumento fondamentale per garantire sintonia tra gli sviluppatori e la creazione di un codice sorgente uniforme e valido.
+All'interno dello standard di codifica è necessario definire le modalità di scrittura e gestione del codice sorgente, al fine di facilitare la modifica del sistema software.
+L'utilizzo di tecniche di scrittura del codice affidabili e di regole di programmazione valide per la creazione di codice di alta qualità è di fondamentale importanza per le prestazioni e la qualità del software. 
 
-\subsubsection{Formattazione}
+
+\paragraph{Tecniche di Scrittura}
+La definizione di tecniche di scrittura è importante per avere una maggiore comprensione del codice sorgente.
+Le tecniche di scrittura del codice sono suddivise in tre categorie:
+\begin{itemize} 
+\item
+\textbf{Nomi}
+\item
+\textbf{Commenti}
+\item
+\textbf{Formattazione}
+\end{itemize}
+
+\subparagraph{Nomi}
+Lo schema di denominazione rappresenta uno dei supporti più determinanti per la comprensione del flusso logico del software. 
+Di seguito sono riportate le tecniche di denominazione raccomandate:
+\begin{itemize} 
+\item
+Assegnare, ad ogni elemento, un nome univoco e consono alla funzione svolta; 
+\item
+Evitare nomi poco chiari e suscettibili di interpretazioni soggettive. Questo tipo di nome può contribuire a creare ambiguità piuttosto che astrazione;
+\item
+Utilizzare la struttura verbo - nome per la denominazione di routine che consentono di eseguire operazioni specifiche su determinati oggetti;
+\item
+Poiché la maggior parte dei nomi viene creata concatenando più parole, utilizzare i una combinazione di caratteri maiuscoli e minuscoli per semplificarne la lettura;
+\item
+Utilizzare un nome significativo anche per le variabili che vengono visualizzate solo in poche righe di codice;
+\item
+Utilizzare nomi di variabili composti da una singola lettera, come i o j, esclusivamente per gli indici a ciclo breve;
+\item
+Ridurre l'utilizzo delle abbreviazioni, ma utilizzare quelle create in maniera coerente. È opportuno che a ogni abbreviazione corrisponda un solo significato e che a ciascuna parola abbreviata sia associata una sola abbreviazione. Se, ad esempio, si utilizza min come abbreviazione di minimum, in altri contesti non è possibile utilizzare la stessa abbreviazione per minute;
+\item
+Nella denominazione di funzioni inserire una descrizione del valore restituito;
+\item
+Evitare di utilizzare gli stessi nomi per elementi diversi, ad esempio una routine e una variabile denominate rispettivamente Getname() e iGetname;
+\item
+Nella denominazione degli elementi non utilizzare omonimi per evitare ambiguità durante le revisioni del codice;
+\item
+Per la denominazione degli elementi, evitare l'uso di parole che, di solito, sono ortograficamente errate.
+\item
+È opportuno che nei nomi di file e cartelle sia contenuta una descrizione precisa della relativa funzione.
+\end{itemize}
+
+
+\subparagraph{Commenti}
+All'interno del codice sorgente, è di fondamentale importanza l'inserimento di commenti, al fine di facilitare la comprensione del flusso logico.
+Di seguito sono suggeriti alcuni metodi di inserimento di commenti:
+\begin{itemize}
+\item
+Quando si modifica il codice, mantenere sempre aggiornati i relativi commenti;
+\item
+All'inizio di ogni routine è utile fornire commenti predefiniti standard, in cui siano indicati le limitazioni, i presupposti e lo scopo della routine. Per commento predefinito si intende una breve introduzione in cui siano illustrate le funzionalità della routine;
+\item
+Evitare l'aggiunta di commenti alla fine di una riga di codice; la presenza di commenti a fine riga può rendere più difficoltosa la lettura del codice. Tuttavia, questo tipo di commento è valido per l'annotazione di dichiarazioni di variabili. In tal caso, è necessario allineare tutti i commenti di fine riga a una tabulazione comune;
+\item
+Evitare commenti confusi, come righe intere di asterischi. Utilizzare, invece, spazi vuoti per separare i commenti dal codice;
+\item
+Evitare di racchiudere blocchi di commenti in cornici grafiche. Si tratta di un espediente interessante ma di difficile gestione;
+\item
+Quando si scrivono commenti, utilizzare frasi di senso compiuto. La funzione dei commenti consiste nel chiarire il significato del codice senza aggiungere alcun tipo di ambiguità;
+\item
+Inserire commenti in fase di scrittura del codice, in quanto ciò potrebbe non essere possibile in un secondo momento. Inoltre, se dovesse presentarsi l'opportunità di rivedere il codice scritto, tenere presente che ciò che può essere evidente al momento della stesura potrebbe non esserlo più in futuro;
+\item
+Evitare commenti superflui o inappropriati, come annotazioni umoristiche;
+\item
+Commentare tutto ciò che non è chiaro nel codice;
+\item
+Per evitare problemi ricorrenti, è opportuno utilizzare sempre i commenti nel caso di codice relativo a correzioni di errori e a potenziali soluzioni;
+\item
+Aggiungere commenti al codice costituito da cicli e diramazioni logiche. Si tratta di aree di fondamentale importanza che facilitano la lettura del codice sorgente;
+\item
+Creare commenti adottando uno stile uniforme e una struttura e una punteggiatura coerenti;
+\item
+Separare i commenti dai delimitatori di commento con spazi vuoti. In questo modo, i commenti saranno chiari e facili da individuare.
+\end{itemize}
+
+\subparagraph{Formattazione}
+La formattazione facilita la comprensione dell'organizzazione logica del codice. Per consentire agli sviluppatori la decifrazione del codice sorgente è fondamentale una formattazione logica e coerente.
+
+Di seguito sono suggeriti alcuni metodi di formattazione:
+\begin{itemize}
+\item
+Definire una dimensione standard per i rientri e utilizzarla in maniera coerente. Allineare le sezioni di codice utilizzando il rientro predefinito;
+\item
+Allineare in verticale le parentesi di apertura e chiusura, in cui esistono coppie di parentesi allineate. È possibile inoltre utilizzare uno stile trasversale, laddove le parentesi di apertura si trovano alla fine della riga mentre quelle di chiusura all'inizio.Qualunque sia lo stile scelto, utilizzarlo in tutto il codice sorgente;
+\item
+Rientrare le righe di codice secondo la relativa costruzione logica. Se non viene utilizzato il rientro, il codice risulterà di difficile comprensione;
+\item
+Utilizzare spazi prima e dopo la maggior parte degli operatori, se ciò non altera la funzione del codice;
+\item
+Utilizzare spazi prima e dopo la maggior parte degli operatori, se ciò non altera la funzione del codice;
+\item
+Utilizzare spazi vuoti per definire la struttura del codice sorgente. In questo modo, sarà possibile creare "paragrafi" di codice, che consentono di semplificare la comprensione della segmentazione logica del software da parte del lettore;
+\item
+Suddividere logicamente il codice sorgente tra diversi file fisici;
+\item
+Suddividere le sezioni complesse ed estese di codice in moduli comprensibili di dimensioni minori.
+\end{itemize}
 
 \subsubsection{Ricorsione}
 La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. Nel caso l'utilizzo di memoria risulti troppo elevato la ricorsione verrà rimossa.
@@ -135,20 +235,20 @@ attraverso un menù laterale, l’insieme dei link utili relativi al gruppo.
 \subsubsection{Tracciabilità}
 La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del software DocumentsDB, il quale da la possibilità ad ogni membro del team di inserire, modificare o eliminare requisiti o casi d’uso. Inoltre è utilizzato per tenere traccia dello stato dei requisiti, ovvero se sono stati soddisfatti o meno.
 
+\subsubsection{TexMaker}
+
 \subsubsection{Sistema operativo}
 
 \subsubsection{Strumenti di project management}
 Gli strumenti di project management sono ritenuti centrali per lo sviluppo di un progetto in quanto consentono di monitorare i compiti tra i membri del team e controllare lo stato di avanzamento del progetto.
-Il software di project management utilizzato dal team è Zoho Projects perchè, rispetto agli altri competitor, offre un ricco set di funzionalità riguardanti: la pianificazione, il monitoraggio, il reporting e la collaborazione.
+Il software di project management utilizzato dal team è \textbf{Zoho Projects}\ped{G} perché, rispetto agli altri competitor\ped{G}, offre un ricco set di funzionalità riguardanti: la pianificazione, il monitoraggio, il reporting\ped{G} e la collaborazione.
 Inoltre è disponibile l'applicazione mobile, utile ai membri del team per tenere sotto controllo le varie fasi di realizzazione da qualsiasi luogo.
-  
-
 
 \subsubsection{Strumenti per il versionamento}
 Gli strumenti software per il controllo versione sono ritenuti molto spesso necessari per la maggior parte dei progetti di sviluppo software.
-Per questo motivo, il team ha deciso di creare un repository, ospitato all'interno di un server, per gestire la continua evoluzione dei documenti digitali come il codice sorgente del software, la documentazione testuale e altre informazioni importanti.
-Il software di versionamento scelto è Git perchè presenta molti più aspetti positivi rispetto ai repository centralizzati. Git permette di lavorare anche in assenza di connettività con il server centrale. I membri del team possono lavorare sulla propria copia locale del repository e rendere pubbliche le modifiche caricandole nel repository centrale. Questo approccio risulta molto semplice e veloce per poter collaborare con i membri del team simultaneamente.
-Inoltre online è possibile reperire moltissima documentazione a riguardo per un rapido apprendimento. La struttura base del repository:
+Per questo motivo, il team ha deciso di creare un repository\ped{G}, ospitato all'interno di un server, per gestire la continua evoluzione dei documenti digitali come il codice sorgente del software, la documentazione testuale e altre informazioni importanti.
+Il software di versionamento scelto è Git\ped{G} perché presenta molti più aspetti positivi rispetto ai repository\ped{G} centralizzati. Git\ped{G} permette di lavorare anche in assenza di connettività con il server centrale. I membri del team possono lavorare sulla propria copia locale del repository\ped{G} e rendere pubbliche le modifiche caricandole nel repository\ped{G} centrale. Questo approccio risulta molto semplice e veloce per poter collaborare con i membri del team simultaneamente.
+Inoltre online è possibile reperire moltissima documentazione a riguardo per un rapido apprendimento. La struttura base del repository\ped{G}:
 \begin{itemize}
   \item
 	RR
@@ -167,39 +267,37 @@ Inoltre online è possibile reperire moltissima documentazione a riguardo per un
   \item
   	Template 
 \end{itemize}  
-\subsubsection{Documentazione sorgenti}
-
-\subsubsection{Framework}
 
 \subsection{Tecnologie utilizzate}
 \subsubsection{Html5}
-Html5 è un linguaggio di markup per la strutturazione delle pagine web, derivato dallo standard che definisce HTML.
+Html5\ped{G} è un linguaggio di markup\ped{G} per la strutturazione delle pagine web, derivato dallo standard che definisce HTML\ped{G}.
 Il termine rappresenta due concetti differenti:
 \begin{itemize}
 		\item
-			Una nuova versione del linguaggio HTML, con nuovi elementi, attributi e comportamenti
+			Una nuova versione del linguaggio HTML\ped{G}, con nuovi elementi, attributi e comportamenti;
 		\item
-			Un più ampio insieme di tecnologie che permettono siti web e applicazioni più diversificate e potenti
+			Un più ampio insieme di tecnologie che permettono siti web e applicazioni più diversificate e potenti.
 \end{itemize}
-HTML5 si presenta come un linguaggio pronto ad essere plasmato secondo le più recenti necessità, sia dal lato della strutturazione del contenuto che da quello dello sviluppo di vere e proprie applicazioni.
-Questo linguaggio verrà utilizzato per sviluppare la parte client dell'applicativo.
+HTML5\ped{G} si presenta come un linguaggio pronto ad essere plasmato secondo le più recenti necessità, sia dal lato della strutturazione del contenuto che da quello dello sviluppo di vere e proprie applicazioni.
+Questo linguaggio verrà utilizzato per sviluppare la parte client\ped{G} dell'applicativo.
 
 \subsubsection{Css}
-CSS è un linguaggio utilizzato per definire la formattazione di documenti HTML, XHTML e XML.
-Questo linguaggio istruisce un browser su come il documento debba essere presentato all'utente, per esempio definendone la formattazione del testo, il posizionamento degli elementi rispetto a diversi media e device, etc.
-Questa tecnologia verrà utilizzata per arricchire l'aspetto visuale e la presentazione della parte client.
-\subsubsection{Javascript}
-Javascript è un linguaggio di scripting lato-client per la creazione di effetti dinamici interattivi all'interno di una pagina Web. Esso è un linguaggio interpretato, cioè non esiste nessun compilatore, ma è direttamente il browser, tramite un apposito motore di scripting, che interpreta il linguaggio.
-L’enorme diffusione di JavaScript è dovuta principalmente al fiorire di numerose librerie nate allo scopo di semplificare la programmazione sul browser, ma anche alla nascita di framework lato server e nel mondo mobile che lo supportano come linguaggio principale.
+CSS\ped{G} è un linguaggio utilizzato per definire la formattazione di documenti HTML\ped{G}, XHTML\ped{G} e XML\ped{G}.
+Questo linguaggio istruisce un browser su come il documento debba essere presentato all'utente, per esempio definendone la formattazione del testo, il posizionamento degli elementi rispetto a diversi media e device\ped{G}, etc.
+Questa tecnologia verrà utilizzata per arricchire l'aspetto visuale e la presentazione della parte client\ped{G}.
+
+\subsubsection{JavaScript}
+JavaScript\ped{G} è un linguaggio di scripting\ped{G} lato-client\ped{G} per la creazione di effetti dinamici interattivi all'interno di una pagina Web. Esso è un linguaggio interpretato, cioè non esiste nessun compilatore, ma è direttamente il browser, tramite un apposito motore di scripting\ped{G}, che interpreta il linguaggio.
+L'enorme diffusione di JavaScript\ped{G} è dovuta principalmente al fiorire di numerose librerie nate allo scopo di semplificare la programmazione sul browser, ma anche alla nascita di framework\ped{G} lato server e nel mondo mobile\ped{G} che lo supportano come linguaggio principale.
 La parte dinamica dell'applicativo verrà sviluppata tramite l'utilizzo di questo linguaggio.
 
 \subsubsection{Node.js}
-Node.js è un framework relativo all'utilizzo server-side di Javascript.
-La piattaforma è basata sul JavaScript Engine V8, che è il runtime di Google utilizzato anche da Chrome e disponibile sulle principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like.
-La caratteristica principale di Node.js risiede nella possibilità di accedere alle risorse del sistema operativo in modalità event-driven e non sfruttando il classico modello basato su processi o thread concorrenti, utilizzato dai classici web server.
-Il modello event-driven, o "programmazione ad eventi", si basa su un concetto piuttosto semplice: si lancia una azione quando accade qualcosa. Ogni azione quindi risulta asincrona a differenza dei pattern di programmazione più comune in cui una azione succede ad un'altra solo dopo che essa è stata completata.
-Tale modello di networking è ritenuto più efficiente nelle situazioni critiche in cui si verifica un elevato traffico di rete.
-Node.js verrà utilizzato per sviluppare la parte server dell'applicativo.
+Node.js\ped{G} è un framework\ped{G} relativo all'utilizzo server-side di Javascript.
+La piattaforma è basata sul JavaScript\ped{G} Engine V8, che è il runtime\ped{G} di Google\ped{G} utilizzato anche da Chrome\ped{G} e disponibile sulle principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-LIKE\ped{G}.
+La caratteristica principale di Node.js\ped{G} risiede nella possibilità di accedere alle risorse del sistema operativo in modalità event-driven\ped{G} e non sfruttando il classico modello basato su processi o thread\ped{G} concorrenti, utilizzato dai classici web server.
+Il modello event-driven\ped{G}, o "programmazione ad eventi", si basa su un concetto piuttosto semplice: si lancia una azione quando accade qualcosa. Ogni azione quindi risulta asincrona a differenza dei pattern di programmazione più comune in cui una azione succede ad un'altra solo dopo che essa è stata completata.
+Tale modello di networking\ped{G} è ritenuto più efficiente nelle situazioni critiche in cui si verifica un elevato traffico di rete.
+Node.js\ped{G} verrà utilizzato per sviluppare la parte server dell'applicativo.
 
 
 
