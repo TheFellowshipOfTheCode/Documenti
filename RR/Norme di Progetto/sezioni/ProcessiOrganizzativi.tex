@@ -248,16 +248,34 @@ Il \textsl{\Progr} redige il \textsl{\MU} e produce la documentazione del codice
 \subsection{Strumenti}
 
 \subsubsection{Google Drive}
-Lo scopo del documento e quello di descrivere le motivazioni che hanno portato il gruppo alla scelta del capitolato C5.
-Verranno inoltre riportate le descrizioni di tutti gli altri capitolati e le motivazioni che hanno spinto il gruppo a scartarli.
-
+\textit{Google Drive\ped{G}} è un servizio di storage online utilizzato dal 
+team per condividere file e documenti che non necessitano di tracciamento. 
+\textit{Google Drive\ped{G}} consente anche il lavoro concorrente su uno stesso 
+file.
 \subsubsection{GitHub}
-Lo scopo del documento e quello di descrivere le motivazioni che hanno portato il gruppo alla scelta del capitolato C5.
-Verranno inoltre riportate le descrizioni di tutti gli altri capitolati e le motivazioni che hanno spinto il gruppo a scartarli.
-
-\subsubsection{Server database requisiti}
-Lo scopo del documento e quello di descrivere le motivazioni che hanno portato il gruppo alla scelta del capitolato C5.
-Verranno inoltre riportate le descrizioni di tutti gli altri capitolati e le motivazioni che hanno spinto il gruppo a scartarli.
+Gli strumenti software per il controllo versione sono ritenuti molto spesso necessari per la maggior parte dei progetti di sviluppo software.
+Per questo motivo, il team ha deciso di creare un repository, ospitato all'interno di un server, per gestire la continua evoluzione dei documenti digitali come il codice sorgente del software, la documentazione testuale e altre informazioni importanti.
+Il software di versionamento scelto è Git perchè presenta molti più aspetti positivi rispetto ai repository centralizzati. Git permette di lavorare anche in assenza di connettività con il server centrale. I membri del team possono lavorare sulla propria copia locale del repository e rendere pubbliche le modifiche caricandole nel repository centrale. Questo approccio risulta molto semplice e veloce per poter collaborare con i membri del team simultaneamente.
+Inoltre online è possibile reperire moltissima documentazione a riguardo per un rapido apprendimento. Il servizio
+scelto per il mantenimento dei dai è \textit{GitHub\ped{G}}. \\La struttura base del repository:
+\begin{itemize}
+  \item
+	RR
+	\begin{itemize}
+		\item
+			Interni
+		\item
+			Esterni
+	\end{itemize}
+  \item
+    RQ
+  \item
+    RP
+  \item
+  	RA
+  \item
+  	Template 
+\end{itemize} 
 
 \subsubsection{Gestione delle attività del progetto}
 Per gestire nella maniera più opportuna la divisione del lavoro, si è scelto di 
@@ -303,7 +321,11 @@ istruzioni:
     \begin{itemize}
       \item \textbf{Nome task:} assegnare un nome identificativo al task seguito dalla milestone corrispondente;
       \item \textbf{Aggiungi descrizione:} inserire una descrizione breve ma 
-      concisa del task;
+      concisa del task, deve avere la seguente forma:
+        \begin{itemize}
+          \item Redattore: nome del redattore;
+          \item Verificatore; nome del verificatore;
+        \end{itemize}
       \item \textbf{Elenco dei compiti:} selezionare uno degli elenchi di 
       task, creati precedentemente, che hanno come fine ultimo la realizzazione di un 
       documento;
