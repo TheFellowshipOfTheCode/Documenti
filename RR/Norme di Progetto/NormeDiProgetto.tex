@@ -12,6 +12,8 @@
 \newcommand{\datamodifica}{09 Dicembre 2015}
 \newcommand{\stato}{Sviluppo}
 
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
 
 \input{../../Template/layout.tex}
 \input{../../Template/comandi.tex}
@@ -27,13 +29,13 @@
 
 %inclusione template HomePage
 \input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
 \input{../../Template/diario.tex}
+\input{../../Template/index.tex}
 
-
-
-
-\tableofcontents
-\newpage
 
 \input{sezioni/introduzione.tex}
 \input{sezioni/ProcessoDiSviluppo.tex}
