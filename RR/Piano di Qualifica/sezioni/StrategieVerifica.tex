@@ -1,260 +1,246 @@
 \newpage
 \section{Strategie di verifica}
-\subsection{Procedure di controllo qualità di processo}
-Al fine di ottenere processi di qualità, si è deciso di utilizzare il modello \textit{CMM\ped{G}}, che affiancato al principio \textit{PDCA\ped{G}} garantisce un miglioramento continuo dei processi.\\
-Il miglioramento sarà garantito da una continua procedura di valutazione della qualità e dei miglioramenti conseguiti durante lo svolgimento delle attività. Verranno utilizzate delle \textit{metriche\ped{G}} che permettono di quantificare in modo preciso la qualità dei processi.\\
-Le metriche impiegate sono riportate nel dettaglio nella sezione 3.9 di questo documento. Oltre a queste, per poter monitorare la qualità dei processi è necessario che:
-\begin{itemize}
-\item L'operato del \textit{team\ped{G}} venga tenuto costantemente sotto controllo tramite verifiche;
-\item L'assegnazione delle risorse venga effettuata in modo coerente e chiaro;
-\item La pianificazione dei processi deve essere dettagliata.
-\end{itemize}
-Procedendo in questo modo sarà più semplice seguire l'operato del team e poterne dare una valutazione.
+\subsection{Definizione degli obiettivi}
+\subsubsection{Standard per la qualità di processo}
+Per garantire la qualità del prodotto è necessario perseguire la qualità dei processi che lo definiscono. Per fare ciò si è deciso di adottare lo standard \textit{ISO}\ped{G}/\textit{IEC}\ped{G} \textit{15504} denominato \textit{SPICE}\ped{G} il quale fornisce gli strumenti necessari a valutare la qualità di questi ultimi.\\
+Per applicare correttamente questo modello si deve utilizzare il ciclo \textit{PDCA}\ped{G} (ciclo di Deming) che definisce una metodologia di controllo dei processi durante il loro ciclo di vita che consente di migliorarne in modo continuativo la qualità. 
 
-\subsection{Procedure di controllo qualità di prodotto}
-Per quanto riguarda la qualità del prodotto, essa verrà garantita da:
+\subsubsection{Standard per la qualità di prodotto}
+Al fine di aumentare il valore commerciale di un prodotto software e di garantirne il corretto funzionamento è necessario fissare degli obiettivi qualitativi e di assicurare che questi vengano effettivamente rispettati.\\
+Lo standard \textit{ISO}\ped{G}/\textit{IEC}\ped{G} \textit{9126} è stato redatto con lo scopo di descrivere questi obiettivi e delineare delle metriche capaci di misurare il raggiungimento di tali obiettivi.
+
+\subsection{Procedure per il controllo della qualità di processo}
+La qualità dei processi sarà garantita dall'applicazione del principio PDCA, descritto nella sezione ???. Così facendo, sarà possibile garantire un miglioramento continuo della qualità di tutti i processi, inclusa la verifica, ottenendo di conseguenza il miglioramento dei prodotti risultanti.\\
+Per avere controllo dei processi e quindi qualità, è necessario che:
 \begin{itemize}
-\item \textbf{Quality Assurance}: insieme di attività per garantire il raggiungimento degli obiettivi di qualità. Il controllo deve essere proattivo e non correttivo. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nella sezione \textbf{???};
-\item \textbf{Verifica}: si occupa di accertare che l'esecuzione delle attività di processi svolti nella fase in esame non abbia introdotto errori nel prodotto;
-\item \textbf{Validazione}: certifica che i prodotti finali realizzati siano conformi alle attese. 
+\item I processi siano pianificati nel dettaglio;
+\item Nella pianificazione siano ripartite in modo chiaro le risorse;
+\item I processi vengano costantemente monitorati.
+\end{itemize}
+L'attuazione di tali punti è descritta dettagliatamente nel \textit{\PdP}.\\
+La qualità dei processi viene inoltre monitorata mediante l'analisi costante della qualità del prodotto e quantificata utilizzando varie metriche, descritte nella sezione 2.9.1. Un prodotto di bassa qualità indica un processo da migliorare.
+
+\subsection{Procedure per il controllo della qualità di prodotto}
+Il controllo di qualità del prodotto verrà garantito da:
+\begin{itemize}
+\item \textbf{Quality Assurance}: insieme di attività realizzate per garantire il raggiungimento degli obiettivi di qualità. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nella sezione 2.8;
+\item \textbf{Verifica}: processo che determina se l'output di una fase è consistente, completo e corretto. La verifica andrà eseguita costantemente durante l'intera durata del progetto;
+\item \textbf{Validazione}: conferma in modo oggettivo che il sistema risponda ai requisiti. 
 \end{itemize}
 
 \subsection{Organizzazione}
-Per ottenere il livello di qualità prefissato saranno necessarie attività di verifica e di validazione che seguiranno tutto lo sviluppo del prodotto. Queste attività saranno legate al tipo di revisione (interna o esterna) che il prodotto deve affrontare lungo il periodo di sviluppo. Il team\ped{G} ha deciso di utilizzare il modello incrementale come modello del ciclo di vita. L’organizzazione della strategia di verifica sarà divisa in base alle revisioni e definita come segue:
-\begin{itemize}
-\item \textbf{Revisione dei Requisiti}: le attività di verifica dovranno essere eseguite su ogni documento destinato alla \textbf{Revisione dei Requisiti} e ogniqualvolta il documento abbia subito un cambio di versione. Le attività che verranno svolte sui documenti sono:
-\begin{itemize}
-\item[-] Verifica della correttezza ortografica;
-\item[-] Verifica della correttezza lessicale;
-\item[-] Verifica della correttezza dei contenuti e la loro conformità alla natura del documento;
-\item[-] Verificare che ogni requisito abbia corrispondenza con una fonte (\textit{caso d’uso, capitolato, ecc.});
-\item[-] Verificare che ogni documento rispetti le \textit{\NdP}.
-\end{itemize}
-Inoltre sarà garantito il completo tracciamento dei requisiti e dei corrispondenti casi d’uso.
-\item \textbf{Revisione di Progettazione}: arrivati a questa fase, sarà verificata e garantita la corrispondenza tra i requisiti definiti nelle fasi di \textbf{Analisi} e \textbf{Analisi di Dettaglio}, la cui consistenza e validità sono date dallo svolgimento delle attività del punto precedente, e i moduli software derivanti dalla progettazione.
-\item \textbf{Revisione di Qualifica}: verranno svolte le attività di codifica e di esecuzione dei test di unicità per la verifica del codice nella maniera più automatizzata possibile, rispettando i vincoli statici. In parallelo i verificatori dovranno controllare la presenza di eventuali anomalie. Arrivati a questa fase verrà garantito che:
-\begin{itemize}
-\item[-] Ogni modulo software sia privo di errori e si comporti in maniera corretta con gli altri moduli;
-\item[-] Ogni modulo sia direttamente riconducibile ad un requisito;
-\item[-] Ogni requisito obbligatorio sia stato soddisfatto.
-\end{itemize}
-\item \textbf{Revisione di Accettazione}: tutte le attività svolte prima di questa fase garantiranno che il prodotto che è stato realizzato dal team \gruppo \hspace{1mm} funzioni in maniera corretta e conforme alle richieste e che tutti i requisiti siano stati adempiti.
-\end{itemize}
-
+L'organizzazione della strategia di verifica si basa sull'attuazione di attività di verifica per ogni processo attuato. Per ogni processo realizzato viene verificata la qualità del processo stesso e la qualità dell'eventuale prodotto ottenuto da esso.\\
+Ognuna delle fasi di progetto descritte nel \textit{\PdP} necessita di diverse attività di verifica a causa della differente natura degli output ottenuti.\\
+Essendo la redazione dei documenti un'attività predominante e costantemente presente nel progredire del progetto, il processo di verifica si suddividerà in due attività per garantirne una maggiore qualità: Analisi e Analisi di Dettaglio. In ogni documento viene inoltre incluso il diario delle modifiche che permette di mantenere uno storico delle attività svolte e delle relative responsabilità.
 
 \subsection{Pianificazione strategica e temporale}
-L’obiettivo di rispettare le scadenze fissate nel \PdP v1.2.0 crea la necessità di avere un processo di verifica sistematico, organizzato e semplice. Per rispettare tali termini è richiesto che ogni membro del team studi a fondo le attività da eseguire, in modo da evitare errori comuni, interpretazioni sbagliate dei contenuti e improvvisazioni riguardo il compito da svolgere. Sarà necessario uno studio, a posteriori, atto a migliorare la qualità dei processi e ad aumentare la velocità di verifica e di svolgimento dei compiti. Questa attività andrà a classificare e quantificare gli errori più comuni e a verificare se sia necessaria l’introduzione di metodi aggiuntivi di verifica. Inoltre, permetterà di vedere quali attività richiedono più risorse così da poter migliorare la parallelizzazione delle attività ed aumentare l’efficienza. Di seguito vengono presentate le scadenze fissate:
-\begin{itemize}
-\item \textbf{Revisioni interne}
-\begin{itemize}
-\item[-] \textbf{Revisione di Progettazione}: 18 Aprile 2016
-\item[-] \textbf{Revisione di Qualifica}: 23 Maggio 2016
-\end{itemize}
-\item \textbf{Revisioni esterne}
-\begin{itemize}
-\item[-] \textbf{Revisione dei Requisiti}: 16 Febbraio 2016
-\item[-] \textbf{Revisione di Accettazione}: 17 Giugno 2016
-\end{itemize}
-\end{itemize}
-
+Avendo l'obiettivo di rispettare le scadenze fissate nel \textit{\PdP}, è necessario che l'attività di verifica della documentazione sia sistematica e ben organizzata. Procedendo in questo modo, l'individuazione e la correzione di eventuali errori avverrà il prima possibile, impedendo una loro rapida diffusione. Ogni attività di redazione dei documenti e di codifica deve essere preceduta da uno studio preliminare sulla struttura e sui contenuti degli stessi con lo scopo di ridurre la possibilità di commettere imprecisioni di natura concettuale e tecnica favorendo quindi l'attività di verifica, dove saranno necessari minori interventi di correzione.
 
 \subsection{Responsabilità}
-Il \textit{Responsabile di Progetto} ha la responsabilità relativa all’assegnazione degli incarichi e quella derivata dai rapporti con gli stakeholders. A carico dell’\textit{Amministratore} è invece la responsabilità di fornire un ambiente di lavoro adeguato per lo svolgimento in modo corretto di tutti i compiti necessari alla realizzazione del progetto. Concluso il processo di verifica, il \textit{Verificatore} si prende la responsabilità sul documento o modulo software preso in esame. Inoltre ogni membro del team è responsabile per tutto il materiale da esso prodotto.
-
+Per garantire che il processo di verifica sia efficace e sistematico vengono attribuite delle responsabilità a degli specifici ruoli di progetto.\\
+I ruoli che detengono le responsabilità del processo di verifica sono il \textit{Responsabile di Progetto} ed i \textit{Verificatori}. La suddivisione dei compiti e le modalità di attuazione degli stessi sono definiti nelle \textit{\NdP}.
 
 \subsection{Risorse}
-Verranno di seguito elencate le risorse che serviranno per il corretto sviluppo del prodotto software.Tali risorse si possono racchiudere in due categorie.
-
-\subsubsection{Necessarie}
-Alcune risorse sono considerate necessarie per lo svolgimento del prodotto, queste sono:
-\begin{itemize}
-\item \textbf{Risorse umane}: sono le figure professionali necessarie nel team.
-\begin{itemize}
-\item[-] \textit{Responsabile di Progetto};
-\item[-] \textit{Amministratore};
-\item[-] \textit{Analista};
-\item[-] \textit{Progettista};
-\item[-] \textit{Programmatore};
-\item[-] \textit{Verificatore}.
-\end{itemize}
-\item \textbf{Risorse software}: sono le applicazioni necessarie per:
-\begin{itemize}
-\item[-] La stesura dei documenti in formato LATEX; 
-\item[-] La creazione di diagrammi UML;
-\item[-] Lo sviluppo di codice nei vari linguaggi scelti;
-\item[-] Effettuare l'analisi statica del codice;
-\item[-] Effettuare i vari test sul codice;
-\item[-] Automatizzare il più possibile i processi di verifica.
-\end{itemize}
-Tutti i software che verranno utilizzati sono descritti nelle \textit{\NdP}.
-\item \textbf{Risorse Hardware}: Sono necessari computer per poter eseguire le applicazioni citate in precedenza, server che conterranno gli applicativi per gestione del ticketing, continuos integration, mail, repository e database.
-\end{itemize}
-
-\subsubsection{Disponibili}
-\begin{itemize}
-\item \textbf{Risorse umane}: tutte le figure professionali descritte in precedenza verranno rappresentate dai membri del team.
-\item \textbf{Risorse software}: sono disponibili per il team tutti i software descritti nelle \textit{\NdP}, gran parte di loro sono free e per altri è stato possibile ottenere una licenza per studenti.
-\item \textbf{Risorse Hardware}: ogni membro del team\ped{G} dispone di un computer proprio, in alternativa sono disponibili quelli presenti nei laboratori dell’Università degli Studi di Padova. Per quanto riguarda i server, ..... 
-\end{itemize}
-
-
-\subsection{Strumenti}
-Gli strumenti software sono descritti in dettaglio nel documento \textit{Norme di Progetto}. Essi vengono impiegati per:
-\begin{itemize}
-\item \textbf{Versionamento};
-\item \textbf{Redazione dei documenti};
-\item \textbf{Verifica dei documenti};
-\item \textbf{Codifica del software};
-\item \textbf{Verifica del codice};
-\item \textbf{Organizzazione del gruppo};
-\item \textbf{Condivisione dei file};
-\end{itemize}
-
+Per assicurare che gli obiettivi qualitativi vengano raggiunti è necessario l'utilizzo di risorse sia umane che tecnologiche. Coloro che detengono la responsabilità maggiore per l'attività di verifica e validazione sono il \textit{Responsabile di Progetto} e il \textit{Verificatore}.\\
+Per risorse tecniche e tecnologiche sono da intendersi tutti gli strumenti software e hardware che il gruppo intende utilizzare per attuare le attività di verifica su processi e prodotti. Per agevolare il lavoro dei \textit{Verificatori} sono stati impiegati numerosi strumenti automatici che eseguono controlli sistematici sui prodotti generati. Tali strumenti sono descritti nelle \textit{\NdP}.
 
 \subsection{Tecniche di analisi}
-
 \subsubsection{Analisi statica}
-L’analisi statica è una tecnica di verifica applicabile ai documenti e al codice. Verrà impiegata durante tutto lo sviluppo del sistema e sarà automatizzata il più possibile mediante gli strumenti descritti nelle \textit{Norme di Progetto}. L’analisi statica applicata al software non necessita che i programmi vengano eseguiti, bensì mira a trovare anomalie ed errori di sintassi e a fare predizioni sulla qualità e la manutenibilità del codice prodotto. In seguito vengono riportate le metodologie di applicazione dell’analisi statica.
+L'analisi statica è una tecnica di analisi che permette di effettuare la verifica di quanto prodotto individuando errori ed anomalie, applicabile sia alla documentazione che al codice. Essa può essere svolta in due modi distinti ma complementari.
 
-\subsubsection{Walkthrough}
-Questo metodo di applicazione dell’analisi statica consiste in una lettura del documento o del codice ricercando anomalie ed errori a largo spettro, ovvero senza una conoscenza precisa dei tipi di errori che è possibile riscontrare. Il walkthrough verrà applicato nelle prime fasi dello sviluppo poiché non si possiede ancora la concezione dei possibili e più frequenti errori. Mediante questa tecnica, verrà stilata una lista di controllo contenente gli errori rilevati più spesso. Quando la lista di controllo dei verificatori sarà sufficientemente completa, verrà allegata in appendice al documento \textit{Norme di Progetto} e dal walkthrough si passerà all’utilizzo della tecnica di inspection.
+\paragraph{Walkthrough}
+Si svolge effettuando una lettura critica a largo spettro. E' una tecnica che viene utilizzata soprattutto nelle prime attività del progetto, quando ancora non è presente una adeguata esperienza da parte dei membri del gruppo, che permetta di attuare una verifica più mirata e precisa.\\
+Con l'utilizzo di questa tecnica, il \textit{Verificatore} sarà in grado di stilare una lista di controllo con gli errori più frequenti in modo da favorire il miglioramento di tale attività nelle fasi future.\\
+Questa è un'attività onerosa e collaborativa che richiede l'intervento di più persone per essere efficacie ed efficiente. Dopo una prima fase di lettura ed individuazione degli errori, segue una fase di discussione con la finalità di esaminare i difetti riscontrati e di proporre le dovute correzioni. L'ultima fase consiste nel correggere gli errori rilevati nello scrivere un rapporto che elenchi le modifiche effettuate.
 
-\subsubsection{Inspection}
-Questa tecnica consiste in una lettura mirata dei documenti o del codice. Viene impiegata una lista di controllo contenente gli errori più probabili o commessi con maggior frequenza, al fine di rilevarli durante l’inspection. Poiché questa lista verrà ampliata con l’acquisizione di esperienza nella verifica, l’inspection diverrà sempre più efficace.
+\paragraph{Inspection}
+Questa tecnica consiste nell'analisi mirata di alcune parti del documento o del codice che sono ritenute fonti maggiori di errore. La \textit{lista di controllo}, che deve essere seguita per svolgere efficacemente questo processo, deve essere redatta anticipatamente ed è frutto dell'esperienza maturata dai verificatori attraverso la tecnica di walkthrough.\\
+L'inspection è una strategia più rapida del walkthrough in quanto consente l'analisi di alcune parti dei prodotti ritenute critiche dalla checklist e non necessita della lettura integrale e dei documenti in oggetto.\\
+Diversamente dal walkthrough tale tecnica viene svolta esclusivamente dai verificatori che dopo aver individuato gli errori procedono alla loro correzione e alla redazione di un rapporto di verifica che tenga traccia del lavoro svolto.
 
 \subsubsection{Analisi dinamica}
-Questa tipologia di analisi è applicata solamente al software prodotto e alle sue componenti. L’analisi dinamica viene svolta mediante test che verificano il funzionamento di componenti software e che ne identificano eventuali errori. Per ogni test è necessario definire:
+L'analisi dinamica si applica solamente al prodotto software e viene svolta durante l'esecuzione del codice mediante l'uso di test predisposti per verificarne il funzionamento e rilevare possibili difetti di implementazione.\\
+Affinché tale attività sia utile e generi risultati attendibili è necessario che i test effettuati siano \textit{ripetibili}: questa caratteristica è fondamentale in quanto solo un test che, dato un certo input, produce sempre lo stesso output su uno specifico ambiente, è capace di riscontrare problemi e verificare la correttezza del prodotto software.\\
+Di conseguenza devono essere definiti a priori:
 \begin{itemize}
-\item \textbf{Ambiente}: è il sistema hardware e software sul quale è pianificata l’esecuzione del test. Inoltre, è necessario specificare uno stato iniziale di partenza per il test;
-\item \textbf{Specifica}: rappresenta l’insieme degli input e dei corrispondenti output attesi;
-\item \textbf{Procedure}: si tratta di una specifica di istruzioni su come eseguire il test e di come i risultati devono essere interpretati e analizzati.
+\item \textbf{Ambiente}: consiste sia del sistema hardware che di quello software sui quali è stato pianificato l'utilizzo del prodotto software sviluppato; di essi deve essere specificato uno stato iniziale dal quale poter iniziare ad eseguire i test;
+\item \textbf{Specifica}: consiste nel definire quali input sono necessari per l'esecuzione del test e quali devono essere gli output attesi;
+\item \textbf{Procedure}: consiste nel definire come devono essere svolti i test, in quale ordine e come devono essere analizzati i risultati ottenuti.
 \end{itemize}
-Affinché si possano ottenere risultati attendibili, è necessario che i test siano ripetibili, ovvero dato un certo input la loro esecuzione nello stesso ambiente deve produrre in output sempre gli stessi risultati. In seguito sono elencati i tipi di test effettuati sui prodotti software.
+Sono definibili 5 diversi tipi di test: \textit{test di unità, test di integrazione, test di sistema, test di regressione e test accettazione}.
 
 \paragraph{Test di unità}
-Per unità di prodotto software si intende la più piccola quantità software che risulta conveniente verificare singolarmente, tipicamente quella prodotta da un singolo programmatore. Ad esempio solitamente un modulo è parte dell’unità ed il componente invece integra più unità. I test di unità verificano che ogni unità funzioni correttamente, evidenziando errori di implementazione. Questi test verranno effettuati sui moduli base che compongono il software.
+Consiste nella verifica di ogni singola unità del prodotto software tramite l'utilizzo di \textit{stub}\ped{G}, \textit{driver}\ped{G} e \textit{logger}\ped{G}.\\
+Per unità si intende la più piccola quantità di software che è utile verificare singolarmente e che viene prodotta da un singolo programmatore.\\
+Attraverso tali test si vuole verificare il corretto funzionamento dei moduli che compongono l'intero sistema in modo da eliminare possibili errori di implementazione da parte dei programmatori.
 
 \paragraph{Test di integrazione}
-Questo tipo di test verifica che due o più unità, tipicamente moduli, precedentemente verificati, una volta assemblati funzionino correttamente. I test di integrazione possono aiutare a rilevare errori residui sui moduli e verificano anche che l’eventuale cooperazione di essi con componenti esterni, quali framework e librerie, non produca anomalie.
-
-\paragraph{Test di regressione}
-Questo test consiste nel rieseguire tutti i test su un componente che ha subito una modifica. In questo modo si vuole verificare che il resto dei moduli continui a funzionare correttamente. Inoltre eseguire dei test di regressione consente di capire quali test sono a rischio di inesattezza in caso di modifiche al codice dei prodotti.
+Consiste nella verifica dei componenti del sistema che vengono aggiunti incrementalmente al prodotto e si prefigge quindi di analizzare che la combinazione di due o più unità software funzionino come previsto.\\
+Questo tipo di test serve ad individuare errori residui nella realizzazione dei singoli moduli, modifiche delle interfacce e comportamenti inaspettati di componenti software preesistenti forniti da terze parti che non si conoscono a fondo.\\
+Per effettuare tali test devono essere aggiunte delle componenti fittizie al posto di quelle che non sono ancora state sviluppate, in modo da non influenzare negativamente l'esito dell'analisi.
 
 \paragraph{Test di sistema}
-Un test di sistema viene eseguito su un prodotto che si ritiene essere giunto ad una versione definitiva. Viene perciò verificato che il prodotto soddisfi tutti i requisiti imposti. Questo test è quindi la validazione dei prodotti software.
+Consiste nella validazione del prodotto software nel momento in cui lo si ritiene giunto ad una versione definitiva.\\
+Tale test deve verificare che la copertura dei requisiti software stabilite in fase di \textbf{Analisi di Dettaglio} sia totale.
+
+\paragraph{Test di regressione}
+Consiste nell'eseguire nuovamente i test riguardanti le componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non pregiudichino il funzionamento di componenti che non sono stati aggiornati e che precedentemente non erano soggetti ad errori.\\
+Tale operazione è aiutata dal tracciamento, che permette di individuare e ripetere facilmente i test di unità, integrazione ed eventualmente sistema che sono stati potenzialmente influenzati dalla modifica.
 
 \paragraph{Test di accettazione}
-Il test di accettazione coincide con il collaudo del software in presenza del Proponente. In caso di esito positivo, questo test determina un grado di maturità del prodotto tale da consentirne il rilascio.
-
+E' il collaudo del prodotto software che viene eseguito in presenza del proponente. Se tale collaudo viene superato positivamente si può procedere al rilascio ufficiale del prodotto sviluppato.
 
 \subsection{Misure e metriche}
-Poichè il processo di verifica deve essere quantificabile, è necessario stabilire delle metriche, applicabili a prodotti e processi, con cui confrontare le misure rilevate da tale processo. Si ha esito positivo dal processo di verifica quando una misura rilevata rientra in uno di questi intervalli:
+Il processo di verifica, per essere informativo, deve essere quantificabile. Le misure rilevate dal processo di verifica devono quindi essere basate su metriche stabilite a priori. Le metriche incerte, qualora ci fossero, si miglioreranno in modo incrementale. Essendo la natura delle metriche molto variabile, vi possono essere due tipologie di range:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: intervallo di valori entro il quale un prodotto viene accettato;
-\item \textbf{Intervallo di ottimalità}: intervallo di valori entro il quale il risultato viene considerato ottimo. Ogni misura rilevata dal processo di verifica dovrebbe collocarsi al suo interno. Per questo se essa si scosta dai valori dell'intervallo ottimale, necessita di una verifica più approfondita.
-\end{itemize} 
-Il modello di ciclo di vita adottato (descritto nel \PdP) consente di migliorare in modo incrementale le metriche utilizzate, qualora alcune di esse risultassero approssimate.
-
+\item \textbf{Accettazione}: valori richiesti affinché il prodotto sia accettato;
+\item \textbf{Ottimale}: valori entro cui dovrebbe collocarsi la misurazione. Tale range non è vincolante, ma fortemente consigliato. Scostamenti da tali valori necessitano una verifica approfondita.
+\end{itemize}
 
 \subsubsection{Metriche per i processi}
+Come metrica per i processi si è scelto di utilizzare indici che ne analizzino i costi e i tempi.\\
+Tali indici vengono utilizzati anche per mantenere il controllo sui processi durante il loro svolgimento.
 
+\paragraph{Schedule Variance (SV)}
+Indica se si è in linea, in anticipo o in ritardo rispetto la pianificazione temporale delle attività nella \textit{baseline}\ped{G}.\\
+E' un indicatore di efficacia.\\
+Se $SV\ped{G} > 0$ significa che il gruppo di lavoro sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo.\\
+\textbf{Parametri utilizzati}:
+\begin{itemize}
+\item Range-accettazione: $[\geq-(\textit{costo preventivo fase}\times5\%)]$;
+\item Range-ottimale: $[\geq0]$.
+\end{itemize}
 
-\paragraph{Valutazione CMM}
-La valutazione dei processi avverrà attraverso il modello CMM\ped{G} (Capability Maturity Model). Tale modello opera secondo due parametri di valutazione:
+\paragraph{Budget Variance (BV)}
+Indica se alla data corrente si è speso di più o di meno rispetto a quanto pianificato.\\
+E' un indicatore che ha un valore contabile e finanziario.\\
+Se $BV\ped{G} > 0$ significa che l'attuazione del progetto sta consumando il proprio budget con minor velocità rispetto a quanto pianificato, viceversa se negativo.\\
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Capability}: è una caratteristica valutata sui processi presi singolarmente. Determina quanto è adeguato un processo, in termini di efficienza ed efficacia, per gli scopi per cui è stato definito;
-\item \textbf{Maturity}: è una caratteristica posseduta da un insieme di processi, risultante dalla combinazione delle capability dei processi coinvolti. Essa indica quanto è governato il sistema di processi di un'azienda.
+\item Range-accettazione: $[\geq-(\textit{costo preventivo fase}\times10\%)]$;
+\item Range-ottimale: $[\geq0]$.
 \end{itemize}
-Per entrambe verrà assegnato un voto da 1 (stato iniziale) a 5 (stato controllato), indicante la valutazione complessiva.\\
-Sono state valutate anche altre alternative, quali il modello CMMI e lo standard [ISO\ped{G}/IEC 15504]. Il gruppo ha però scelto il modello CMM\ped{G} per diversi fattori, quali l’essenzialità della valutazione (CMM\ped{G} valuta secondo due soli parametri, CMMI e [ISO\ped{G}/IEC 15504] dividono invece il processo in più attributi) e l’inesperienza del team\ped{G}, infatti utilizzare modelli più complessi comporta un bagaglio di esperienza che il gruppo non ha ancora acquisito.\\
-Gli intervalli di accettazione stabiliti dal gruppo per la valutazione CMM\ped{G} sono:
-\begin{itemize}
-\item \textbf{Intervallo di accettazione}: 3 - 5;
-\item \textbf{Intervallo di ottimalità}: 4 - 5.
-\end{itemize}
+
 \subsubsection{Metriche per i documenti}
-\paragraph{Indice Gulpease}
-Questa metrica fornisce un indice di leggibilità e complessità di un documento. Il calcolo da effettuare è:\\
+Come metrica per i documenti redatti si è scelto di utilizzare l'\textit{indice di leggibilità}.\\
+Vi sono a disposizione molti indici di leggibilità, ma i più importanti sono per la lingua inglese. Si è deciso quindi di adottare un indice di leggibilità per la lingua italiana.
+
+\paragraph{Gulpease}
+L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana.\\
+Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Permette di misurare la complessità dello stile di un documento.\\
+L'indice Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
+L'indice è calcolato secondo la seguente formula:
 \begin{center}
-${89 + \frac{300(\textit{numero delle frasi}) - 10(\textit{numero delle lettere})}{\textit{numero delle parole}}}$
+$89+\frac{300\times(\textit{numero delle frasi})-10\times(\textit{numero delle lettere})}{\textit{numero delle parole}}$
 \end{center}
-Per semplificarne l’utilizzo, sono stati scritti degli script appositi. I risultati del calcolo sono compresi tra 0 e 100, con 100 a rappresentare la massima leggibilità. Sono state stabilite inoltre delle soglie che rapportano il livello di istruzione del lettore con i gradi dell’indice Gulpease\ped{G}:
+I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità più alta e 0 la leggibilità più bassa. In generale risulta che testi con un indice:
 \begin{itemize}
-\item \textbf{inferiore a 80}: testo difficile da leggere per chi ha la licenza elementare;
-\item \textbf{inferiore a 60}: testo difficile da leggere per chi ha la licenza media;
-\item \textbf{inferiore a 40}: testo difficile da leggere per chi ha la licenza superiore.
+\item Inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+\item Inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+\item Inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
 \end{itemize}
-Va considerato che questo indice non indica se il testo sia comprensibile: pur stravolgendo il significato delle frasi si potrebbe ottenere comunque un valore alto. Per questo motivo il testo dei documenti deve essere controllato anche da un essere umano. L’impiego dell’indice di Gulpease fornisce responsi sulla leggibilità ma per la natura tecnica di questi documenti, difficilmente si raggiungerà il valore 80. Per i documenti del progetto sono stati definiti i seguenti intervalli di valori con cui confrontare i risultati del calcolo dell’indice:
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 40 - 100;
-\item \textbf{Intervallo di ottimalità}: 50 - 100.
+\item Range-accettazione: $[40-100]$;
+\item Range-ottimale: $[50-100]$.
 \end{itemize}
 
-\paragraph{Controllo ortografico}
-Il controllo ortografico sui documenti è automatizzato tramite script e consente di evidenziare errori nella sintassi delle parole. Per superare il processo di verifica un documento deve necessariamente contenere 0 errori ortografici. Il controllo dell’ortografia non evidenza errori riguardanti il significato delle frasi e può segnalare errori su termini tecnici, soprattutto se espressi in inglese. Per questo motivo è richiesta inoltre una lettura approfondita del documento in esame da parte di un essere umano.
+\subsubsection{Metriche per il software}
+Si vorrebbe, per poter perseguire degli obiettivi di qualità software, poter applicare le metriche ora verranno descritte.\\
+Questa sezione è da comprendersi come una \textit{dichiarazione di intenti}, che verrà rivista nelle prossime revisioni.
 
-\paragraph{Controllo dei diagrammi UML}
-Poiché non è possibile utilizzare un sistema automatico per individuare errori di sintassi nelle parti testuali che compongono i diagrammi dei casi d’uso e delle classi. Per questo motivo è necessaria un’attenta lettura da parte di un essere umano.
-
-\subsubsection{Metriche per il codice}
 \paragraph{Complessità ciclomatica}
-La complessità ciclomatica\ped{G} è utilizzata per misurare la complessità di un programma. Essa misura il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso di un metodo, di una funzione o di un programma. In questo grafo i nodi rappresentano unità atomiche di istruzioni, mentre gli archi che collegano i nodi rappresentano la sequenzialità con cui possono essere eseguite le istruzioni.\\
-Un valore di complessità ciclomatica\ped{G} superiore a 10, per un metodo o una funzione, deve essere abbassato con la suddivisione in più metodi o funzioni.
+Utilizzata per misurare la complessità di funzioni, moduli, metodi o classi di un programma.\\
+La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
+Altri valori di complessità ciclomatica implicano una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero però determinare scarsa efficienza dei metodi.\\
+Questo parametro è inoltre un indice del carico di lavoro richiesto per il testing. Un modulo con complessità elevata richiede più testing di un modulo a complessità inferiore.
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 0 - 10;
-\item \textbf{Intervallo di ottimalità}: 0 - 6.
+\item Range-accettazione: $[1-15]$;
+\item Range-ottimale: $[1-10]$.
 \end{itemize}
 
-\paragraph{Rapporto linee di commento su linee di codice}
-Questa metrica aiuta a stimare la manutenibilità del codice: documentare il codice attraverso linee di commento ne permette infatti una comprensione più immediata e approfondita. In tale metrica vengono escluse le linee vuote.\\
-Gli intervalli per le misure rilevate sono:
+\paragraph{Numero di livelli di annidamento}
+Rappresenta il numero di livelli di annidamento dei metodi, cioè l'inserimento di una struttura di controllo all'interno di un'altra.\\
+Un valore elevato di tale indice implica un'alta complessità ed un basso livello di astrazione del codice.
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: almeno 0.25;
-\item \textbf{Intervallo di ottimalità}: almeno 0.30.
+\item Range-accettazione: $[1-6]$;
+\item Range-ottimale: $[1-3]$.
 \end{itemize}
 
-\paragraph{Numero di parametri}
-Indica il numero di parametri formali presenti nella segnatura di un metodo o di una funzione. Un numero di parametri elevato può significare che lo stack\ped{G} del programma venga riempito rapidamente in caso di chiamate multiple o innestate e pregiudica l’usabilità e la comprensione del metodo o della funzione.\\
-Gli intervalli per le misure rilevate sono:
+\paragraph{Attributi per classe}
+Un numero elevato di attributi interni ad una classe potrebbe evidenziare la necessità di suddividere la classe in più classi da mettere in relazione tra di loro, seguendo il principio dell'incapsulamento.\\
+Un alto valore di questo attributo indica un possibile errore di progettazione.
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 0 - 8;
-\item \textbf{Intervallo di ottimalità}: 0 - 5.
+\item Range-accettazione: $[0-16]$;
+\item Range-ottimale: $[3-8]$.
 \end{itemize}
 
-\paragraph{Numero di campi dati per classe}
-Un numero elevato di campi dati interni a una classe è indice di cattiva progettazione: la classe risulterà troppo poco specializzata ed il codice sarà poco mantenibile. Ridurre il numero di campi dati per classe è possibile attraverso l’incapsulamento in classi interne o la suddivisione in sottoclassi.\\
-Gli intervalli per le misure rilevate sono:
+\paragraph{Numero di parametri per metodo}
+Un numero elevato di parametri per un metodo potrebbe evidenziare la necessità di ridurre le funzionalità associate a tale metodo.\\
+Un alto valore di questo attributo indica un possibile errore di progettazione.
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 0 - 8;
-\item \textbf{Intervallo di ottimalità}: 0 - 5.
+\item Range-accettazione: $[0-8]$;
+\item Range-ottimale: $[0-4]$.
 \end{itemize}
 
-\paragraph{Chiamate annidate di metodi e funzioni}
-Avere un numero elevato di chiamate di funzioni e metodi all’interno di altri metodi e funzioni può portare a riempire rapidamente lo stack\ped{G} del programma.\\
-Gli intervalli per le misure rilevate sono:
+\paragraph{Linee di codice per linee di commento}
+Indica il rapporto tra linee di codice e linee di commento.\\
+E' utile per stimare la manutenibilità del codice.
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 0 - 8;
-\item \textbf{Intervallo di ottimalità}: 0 - 5.
+\item Range-accettazione: $[>0.25]$;
+\item Range-ottimale: $[>0.30]$.
 \end{itemize}
 
-\paragraph{Dipendenze}
-Nell’ambito di Javascript\ped{G} è comune l’utilizzo di molte librerie\ped{G} spesso dipendenti tra loro. Risulta quindi necessario quantificare le dipendenze tra gli script e le librerie\ped{G} presenti nel progetto: un numero troppo elevato è sintomo di scarsa progettazione, così come un numero troppo basso può significare librerie\ped{G} troppo grandi e scarsamente mantenibili.\\
-Gli intervalli per le misure rilevate sono:
+\paragraph{Flusso di informazioni}
+Misura il flusso di informazioni come suggerito da S. Henry e D. Kafura.\\
+Definiti:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 0 - 16;
-\item \textbf{Intervallo di ottimalità}: 0 - 8.
+\item Fan-in: numero di moduli che passano informazioni dentro al modulo in esame;
+\item Fan-out: numero di moduli a cui il modulo in esame passa informazioni.
+\end{itemize}
+Il valore è calcolato come:
+\begin{center}
+$(\textit{lunghezza funzione})^2\times\textit{fan-in}\times\textit{fan-out}$
+\end{center}
+
+\paragraph{Accoppiamento}
+\begin{itemize}
+\item \textbf{Accoppiamento afferente}: indica il numero di classi esterne ad un \textit{package}\ped{G} che dipendono da classi interne ad esso.\\
+Un alto valore di tale indice implica un alto grado di dipendenza del resto del software dal \textit{package}\ped{G}.\\
+Alti valori di tale indice non implicano necessariamente una progettazione errata o di bassa qualità, ma possono rappresentare la criticità del \textit{package}\ped{G} in esame. Tale indice può quindi essere utilizzato per evidenziare la robustezza richiesta dal \textit{package}\ped{G}.\\
+Contrariamente, un valore eccessivamente basso potrebbe essere segnale di un \textit{package}\ped{G} che fornisce poche funzionalità. Tale \textit{package}\ped{G} potrebbe essere scarsamente utile;
+\item \textbf{Accoppiamento efferente}: indica il numero di classi interne al \textit{package}\ped{G} che dipendono da classi esterne ad esso.\\
+Mantenendo un basso valore di tale indice, è possibile mantenere il \textit{package}\ped{G} in grado di garantire funzionalità di base indipendentemente dal resto del sistema.
 \end{itemize}
 
-\paragraph{Indice di Manutenibilità}
-L’Indice di Manutenibilità (Maintainability Index, abbreviato in MI) è una metrica che indica quanto il codice prodotto risulta mantenibile. In particolare quando occorre effettuare una modifica indica se è più conveniente riscrivere l’intero codice o effettuare il cambiamento. L’Indice di Manutenibilità è calcolato dal software dedicato all’analisi della complessità sulla base di altre metriche, come la complessità ciclomatica\ped{G} e le linee di codice. I valori sono su una scala logaritmica con intervallo tra infinito negativo e 171. Più il valore è alto, più lo sarà anche il livello di manutenibilità.\\
+\paragraph{Instabilità}
+Metrica proposta da Robert C. Martin che si prefigge di misurare l'instabilità del \textit{package}\ped{G} del sistema.\\
+La stabilità di un \textit{package}\ped{G} indica la possibilità di effettuare modifiche a tale \textit{package}\ped{G} senza influenzarne altri all'interno dell'applicazione. Tale indice è strettamente legato all'accoppiamento efferente ed afferente e viene calcolato dalla seguente formula:
+\begin{center}
+$I = \frac{C_e}{C_a+C_e}$
+\end{center}
+dove:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 65 - 171;
-\item \textbf{Intervallo di ottimalità}: 85 - 171.
+\item \textbf{$C_e$}: accoppiamento efferente;
+\item \textbf{$C_a$}: accoppiamento afferente.
+\end{itemize}
+\textbf{Parametri utilizzati}:
+\begin{itemize}
+\item Range-accettazione: $[0.0-0.8]$;
+\item Range-ottimale: $[0.0-0.3]$.
 \end{itemize}
 
-\paragraph{Validazione W3C}
-Il test di validazione per l’applicazione web\ped{G} messo a disposizione da W3C\ped{G} deve essere superato sia dalle pagine HTML\ped{G} che dai file CSS\ped{G} con 0 errori gravi. Per quanto riguarda le pagine HTML\ped{G}, sono ammesse inesattezze fino ad un totale di 5 che non pregiudichino però la funzionalità dell’applicazione.
+\paragraph{Copertura del codice}
+Indica la percentuale di istruzioni che sono eseguite durante i test.\\
+Maggiore è la percentuale di istruzioni coperte dai test eseguiti, maggiore sarà la probabilità che le componenti testate abbiano una ridotta quantità di errori.\\
+Il valore di tale indice può essere abbassato da metodi molto semplici che non richiedono testing. Esempi di questi metodi sono: get e set.\\
+\textbf{Parametri utilizzati}:
 \begin{itemize}
-\item \textbf{Intervallo di accettazione}: 0 - 5;
-\item \textbf{Intervallo di ottimalità}: 0 - 0.
+\item Range-accettazione: $[42\%-100\%]$;
+\item Range-ottimale: $[65\%-100\%]$.
 \end{itemize}
