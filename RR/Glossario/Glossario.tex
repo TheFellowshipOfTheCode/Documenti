@@ -1,0 +1,34 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{\G}
+\newcommand{\nomedocumentofisico}{Glossario.pdf}
+\newcommand{\redazione}{\SM}
+\newcommand{\verifica}{\FB}
+\newcommand{\approvazione}{Da Approvare}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV \\ & \RC \\ & \proponente \\ & \gruppo}
+\newcommand{\datacreazione}{24 Dicembre 2015}
+\newcommand{\datamodifica}{24 Dicembre 2015}
+\newcommand{\stato}{Sviluppo}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+
+
+\input{sezioni/diario.tex}
+%Serve per vedere i paragraph nell'indice
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{../../Template/diario.tex}
+\input{../../Template/index.tex}
+\end{document}
