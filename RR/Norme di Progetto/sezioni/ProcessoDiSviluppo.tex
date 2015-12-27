@@ -32,8 +32,9 @@ che dovrà obbligatoriamente essere strutturata nel seguente modo:
 Dovrà essere redatto un elenco di requisiti, emersi durante le riunioni interne 
 e/o esterne. Questo compito spetta agli \textsl{Analisti}. I requisiti dovranno 
 essere classificati secondo la seguente codifica:
+\begin{center}
 R[Tipo][Importante][Codice]
-
+\end{center}
 \begin{itemize} 
   \item \textbf{Tipo:} può assumere questi valori:
   \begin{itemize}
@@ -63,16 +64,36 @@ Per ogni requisito si dovrà inoltre indicare:
   \end{itemize}
 \end{itemize} 
 \paragraph{Classificazione dei casi d'uso}
-Lo scopo del documento e quello di descrivere le motivazioni che hanno portato il gruppo alla scelta del capitolato C5.
-Verranno inoltre riportate le descrizioni di tutti gli altri capitolati e le motivazioni che hanno spinto il gruppo a scartarli.
-
-\subsubsection{Tracciamento}
-Gli \textsl{Analisti} hanno il compito di inserire tutti i requisiti e i casi d'uso in \textsl{DocumentsDB},
-software concesso dal gruppo \textsl{PragmaDB}, appositamente modificato da alcuni membri del 
-team, che permette la gestione automatica della tracciabilità degli elementi inseriti. 
-Inoltre i requisiti verranno inseriti in formato tabellare nel documento di \textsl{\AdR}.
+I casi d'uso identificati devono essere descritti nel seguente modo:
+\begin{center}
+  UC[Codice padre].[Codice identificativo]
+\end{center}
+dove:
+\begin{itemize}
+  \item\textbf{Codice padre}: indica il codice del caso d'uso padre di quello in 
+  esame, se non è identificabile è da omettere;
+  \item\textbf{Codice identificativo}: codice univoco e progressivo del caso d'uso in esame. 
+\end{itemize}
+Per ogni caso d'uso devono inoltre essere identificate le seguenti informazioni:
+\begin{itemize}
+  \item\textbf{Nome}: indica il nome del caso d'uso;
+  \item\textbf{Attori}: indica gli attori coinvolti nel caso d'uso;
+  \item\textbf{Descrizione}: chiara, precisa e concisa descrizione del caso 
+  d'uso;
+  \item\textbf{Precondizione}: indica la situazione che deve essere vera prima 
+  dell'esecuzione del caso d'uso;
+  \item\textbf{Postcondizione}: indica la situazione che deve essere vera dopo 
+  l'esecuzione del caso d'uso;
+  \item\textbf{Scenario principale}: descrizione composta dal flusso dei casi d'uso 
+  figli;
+  \item\textbf{Scenari alternativi}: descrizione composta dai casi d'uso che non 
+  appartengono al flusso principale di esecuzione;
+  \item\textbf{Estensioni}: indica quali sono tutte le estensioni, se presenti;
+  \item\textbf{Inclusioni}: indica quali sono tutte le inclusioni, se presenti;
+  \item\textbf{Generalizzazioni}: indica quali sono tutte le generalizzazioni, 
+  se presenti.
+\end{itemize}
 \subsection{Progettazione}
-
 
 \subsubsection{Descrizione}
 L'attività di progettazione definisce come deve essere realizzata la struttura dell'architettura software. I requisiti delineati, all'interno del documento Analisi dei Requisiti, devono essere utili a realizzare la documentazione specifica e a determinare le linee guida da seguire durante l'attività di codifica. 
@@ -116,10 +137,6 @@ Capacità di poter far fronte a modifiche da effettuare senza che l'intera strut
 \item
 Soddisfare i requisiti di qualità fissati dal committente.
 \end{itemize}
-
-\subsubsection{Tracciamento}
-Ogni requisito deve essere tracciato all'interno del documentsDB, software
-appositamente creato da alcuni componenti del gruppo che permette la tracciabilità e la classificazione automatica degli elementi inseriti.
 
 \subsection{Codifica}
 
@@ -237,14 +254,20 @@ La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà nec
 
 \subsection{Strumenti}
 
-\subsubsection{DocumentsDB}(Da modificare)
-Al fine di gestire in maniera veloce e il più possibile automatizzata tutti i dati e per semplificare i tracciamenti, il team ha creato un applicativo web: DocumentsDB.
-DocumentsDB permette la gestione di casi d’uso, attori, fonti, requisiti e termini del Glossario. Ogni membro del team\ped{G} può accedervi via browser previa autenticazione, inoltre più persone possono lavorare simultaneamente sugli stessi dati poiché è stata gestita la concorrenza. L’applicazione si occupa di mantenere ordinata la gerarchia dei requisiti e degli UC in modo automatico durante tutto il suo ciclo di vita (creazione, modifica, eliminazione).
-Vengono eseguiti diversi controlli su ciascun campo dati, e tale approccio garantisce fault-tolerance\ped{G} del sistema nei confronti di qualsiasi input possibile. I membri del gruppo possono visualizzare, inserire, modificare ed eliminare elementi in modo semplice. PragmaDB consente di esportare l’elenco degli attori, delle fonti, del Glossario, dei casi d’uso, dei requisiti e delle loro relazioni come codice \LaTeX\ped{G}, quindi facilmente inseribile all’interno dei documenti durante la stesura. Infine consente di visualizzare,
-attraverso un menù laterale l’insieme dei link utili relativi al gruppo.
+\subsubsection{DocumentsDB}
+Il \textit{team\ped{G}} ha creato un applicativo web, \textbf{DocumentsDB}, al fine di gestire in maniera veloce, automatizzata 
+e sicura tutti i dati e il loro tracciamento. DocumentsDB è stato realizzato sulla base di un software esistente, 
+\textit{PragmaDB}, realizzato da
+studenti di anni passati e disponibile online. Esso permette la gestione di casi d’uso, attori, fonti, requisiti e termini del Glossario. 
+Ogni membro del \textit{team\ped{G}} può accedervi via \textit{browser\ped{G}} previa autenticazione.
+L’applicazione si occupa di mantenere ordinata la gerarchia dei requisiti e dei casi d'uso in modo automatico durante tutto il loro ciclo di vita (creazione, modifica, eliminazione).
+\textbf{DocumentsDB} consente di esportare l’elenco degli attori, delle fonti, del glossario, dei casi d’uso, dei requisiti e delle loro relazioni come codice \LaTeX\ped{G}.
+Questo rende il lavoro più ordinato e automatizzato.
 
 \subsubsection{Tracciabilità}
-La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del software DocumentsDB, il quale da la possibilità ad ogni membro del team di inserire, modificare o eliminare requisiti o casi d'uso. Inoltre è utilizzato per tenere traccia dello stato dei requisiti, ovvero se sono stati soddisfatti o meno.
+La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del software DocumentsDB, 
+il quale da la possibilità ad ogni membro del team di inserire, modificare o eliminare requisiti o casi d'uso. 
+Inoltre è utilizzato per tenere traccia dello stato dei requisiti, se quindi sono stati soddisfatti o meno.
 
 \subsubsection{TexMaker}
 L'editor scelto dal team per sviluppare i documenti in \LaTeX\ped{G} è TexMaker\ped{G}.  
