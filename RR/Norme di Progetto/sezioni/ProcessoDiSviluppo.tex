@@ -32,8 +32,9 @@ che dovrà obbligatoriamente essere strutturata nel seguente modo:
 Dovrà essere redatto un elenco di requisiti, emersi durante le riunioni interne 
 e/o esterne. Questo compito spetta agli \textsl{Analisti}. I requisiti dovranno 
 essere classificati secondo la seguente codifica:
+\begin{center}
 R[Tipo][Importante][Codice]
-
+\end{center}
 \begin{itemize} 
   \item \textbf{Tipo:} può assumere questi valori:
   \begin{itemize}
@@ -63,11 +64,36 @@ Per ogni requisito si dovrà inoltre indicare:
   \end{itemize}
 \end{itemize} 
 \paragraph{Classificazione dei casi d'uso}
-Lo scopo del documento e quello di descrivere le motivazioni che hanno portato il gruppo alla scelta del capitolato C5.
-Verranno inoltre riportate le descrizioni di tutti gli altri capitolati e le motivazioni che hanno spinto il gruppo a scartarli.
-
+I casi d'uso identificati devono essere descritti nel seguente modo:
+\begin{center}
+  UC[Codice padre].[Codice identificativo]
+\end{center}
+dove:
+\begin{itemize}
+  \item\textbf{Codice padre}: indica il codice del caso d'uso padre di quello in 
+  esame, se non è identificabile è da omettere;
+  \item\textbf{Codice identificativo}: codice univoco e progressivo del caso d'uso in esame. 
+\end{itemize}
+Per ogni caso d'uso devono inoltre essere identificate le seguenti informazioni:
+\begin{itemize}
+  \item\textbf{Nome}: indica il nome del caso d'uso;
+  \item\textbf{Attori}: indica gli attori coinvolti nel caso d'uso;
+  \item\textbf{Descrizione}: chiara, precisa e concisa descrizione del caso 
+  d'uso;
+  \item\textbf{Precondizione}: indica la situazione che deve essere vera prima 
+  dell'esecuzione del caso d'uso;
+  \item\textbf{Postcondizione}: indica la situazione che deve essere vera dopo 
+  l'esecuzione del caso d'uso;
+  \item\textbf{Scenario principale}: descrizione composta dal flusso dei casi d'uso 
+  figli;
+  \item\textbf{Scenari alternativi}: descrizione composta dai casi d'uso che non 
+  appartengono al flusso principale di esecuzione;
+  \item\textbf{Estensioni}: indica quali sono tutte le estensioni, se presenti;
+  \item\textbf{Inclusioni}: indica quali sono tutte le inclusioni, se presenti;
+  \item\textbf{Generalizzazioni}: indica quali sono tutte le generalizzazioni, 
+  se presenti.
+\end{itemize}
 \subsection{Progettazione}
-
 
 \subsubsection{Descrizione}
 L'attività di progettazione definisce come deve essere realizzata la struttura dell'architettura software. I requisiti delineati, all'interno del documento Analisi dei Requisiti, devono essere utili a realizzare la documentazione specifica e a determinare le linee guida da seguire durante l'attività di codifica. 
