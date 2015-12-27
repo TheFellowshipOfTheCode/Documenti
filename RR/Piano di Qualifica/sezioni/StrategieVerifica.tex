@@ -2,16 +2,16 @@
 \section{Strategie di verifica}
 \subsection{Definizione degli obiettivi}
 \subsubsection{Standard per la qualità di processo}
-Per garantire la qualità del prodotto è necessario perseguire la qualità dei processi che lo definiscono. Per fare ciò si è deciso di adottare lo standard \textit{ISO}\ped{G}/\textit{IEC}\ped{G} \textit{15504} denominato \textit{SPICE}\ped{G} il quale fornisce gli strumenti necessari a valutare la qualità di questi ultimi.\\
-Per applicare correttamente questo modello si deve utilizzare il ciclo \textit{PDCA}\ped{G} (ciclo di Deming) che definisce una metodologia di controllo dei processi durante il loro ciclo di vita che consente di migliorarne in modo continuativo la qualità. 
+Per garantire la qualità del prodotto è necessario perseguire la qualità dei processi che lo definiscono. Per fare ciò si è deciso di adottare lo standard \textit{ISO/IEC 15504}\ped{G} denominato \textit{SPICE}\ped{G} il quale fornisce gli strumenti necessari a valutare la qualità di questi ultimi.\\
+Per applicare correttamente questo modello si deve utilizzare il ciclo \textit{PDCA}\ped{G} che definisce una metodologia di controllo dei processi durante il loro ciclo di vita e che consente di migliorarne in modo continuativo la qualità. 
 
 \subsubsection{Standard per la qualità di prodotto}
 Al fine di aumentare il valore commerciale di un prodotto software e di garantirne il corretto funzionamento è necessario fissare degli obiettivi qualitativi e di assicurare che questi vengano effettivamente rispettati.\\
-Lo standard \textit{ISO}\ped{G}/\textit{IEC}\ped{G} \textit{9126} è stato redatto con lo scopo di descrivere questi obiettivi e delineare delle metriche capaci di misurare il raggiungimento di tali obiettivi.
+Lo standard \textit{ISO/IEC 9126}\ped{G} è stato redatto con lo scopo di descrivere questi obiettivi e delineare delle metriche capaci di misurare il raggiungimento di tali obiettivi.
 
 \subsection{Procedure per il controllo della qualità di processo}
-La qualità dei processi sarà garantita dall'applicazione del principio PDCA, descritto nella sezione ???. Così facendo, sarà possibile garantire un miglioramento continuo della qualità di tutti i processi, inclusa la verifica, ottenendo di conseguenza il miglioramento dei prodotti risultanti.\\
-Per avere controllo dei processi e quindi qualità, è necessario che:
+La qualità dei processi sarà garantita dall'applicazione del principio \textit{PDCA}\ped, descritto nella sezione ???. Così facendo, sarà possibile garantire un miglioramento continuo della qualità di tutti i processi, inclusa la verifica, ottenendo di conseguenza il miglioramento dei prodotti risultanti.\\
+Per avere controllo sulla qualità è necessario che:
 \begin{itemize}
 \item I processi siano pianificati nel dettaglio;
 \item Nella pianificazione siano ripartite in modo chiaro le risorse;
@@ -23,7 +23,7 @@ La qualità dei processi viene inoltre monitorata mediante l'analisi costante de
 \subsection{Procedure per il controllo della qualità di prodotto}
 Il controllo di qualità del prodotto verrà garantito da:
 \begin{itemize}
-\item \textbf{Quality Assurance}: insieme di attività realizzate per garantire il raggiungimento degli obiettivi di qualità. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nella sezione 2.8;
+\item \textbf{Quality Assurance}\ped{G}: insieme di attività realizzate per garantire il raggiungimento degli obiettivi di qualità. Prevede l'attuazione di tecniche di analisi statica e dinamica, descritte nella sezione 2.8;
 \item \textbf{Verifica}: processo che determina se l'output di una fase è consistente, completo e corretto. La verifica andrà eseguita costantemente durante l'intera durata del progetto;
 \item \textbf{Validazione}: conferma in modo oggettivo che il sistema risponda ai requisiti. 
 \end{itemize}
@@ -54,20 +54,27 @@ Con l'utilizzo di questa tecnica, il \textit{Verificatore} sarà in grado di sti
 Questa è un'attività onerosa e collaborativa che richiede l'intervento di più persone per essere efficacie ed efficiente. Dopo una prima fase di lettura ed individuazione degli errori, segue una fase di discussione con la finalità di esaminare i difetti riscontrati e di proporre le dovute correzioni. L'ultima fase consiste nel correggere gli errori rilevati nello scrivere un rapporto che elenchi le modifiche effettuate.
 
 \paragraph{Inspection}
-Questa tecnica consiste nell'analisi mirata di alcune parti del documento o del codice che sono ritenute fonti maggiori di errore. La \textit{lista di controllo}, che deve essere seguita per svolgere efficacemente questo processo, deve essere redatta anticipatamente ed è frutto dell'esperienza maturata dai verificatori attraverso la tecnica di walkthrough.\\
-L'inspection è una strategia più rapida del walkthrough in quanto consente l'analisi di alcune parti dei prodotti ritenute critiche dalla checklist e non necessita della lettura integrale e dei documenti in oggetto.\\
-Diversamente dal walkthrough tale tecnica viene svolta esclusivamente dai verificatori che dopo aver individuato gli errori procedono alla loro correzione e alla redazione di un rapporto di verifica che tenga traccia del lavoro svolto.
+Questa tecnica consiste nell'analisi mirata di alcune parti del documento o del codice che sono ritenute fonti maggiori di errore. La \textit{lista di controllo}, che deve essere seguita per svolgere efficacemente questo processo, deve essere redatta anticipatamente ed è frutto dell'esperienza maturata dai verificatori attraverso la tecnica di \textit{Walkthrough}\ped{G}.\\
+L'\textit{Inspection}\ped{G} è una strategia più rapida del \textit{Walkthrough}\ped{G} in quanto consente l'analisi di alcune parti dei prodotti ritenute critiche dalla checklist e non necessita della lettura integrale dei documenti in oggetto.\\
+Diversamente dal \textit{Walkthrough}\ped{G} tale tecnica viene svolta esclusivamente dai verificatori che dopo aver individuato gli errori procedono alla loro correzione e alla redazione di un rapporto di verifica che tenga traccia del lavoro svolto.
 
 \subsubsection{Analisi dinamica}
 L'analisi dinamica si applica solamente al prodotto software e viene svolta durante l'esecuzione del codice mediante l'uso di test predisposti per verificarne il funzionamento e rilevare possibili difetti di implementazione.\\
-Affinché tale attività sia utile e generi risultati attendibili è necessario che i test effettuati siano \textit{ripetibili}: questa caratteristica è fondamentale in quanto solo un test che, dato un certo input, produce sempre lo stesso output su uno specifico ambiente, è capace di riscontrare problemi e verificare la correttezza del prodotto software.\\
+Affinché tale attività sia utile e generi risultati attendibili è necessario che i test effettuati siano ripetibili: questa caratteristica è fondamentale in quanto solo un test che, dato un certo input, produce sempre lo stesso output su uno specifico ambiente, è capace di riscontrare problemi e verificare la correttezza del prodotto software.\\
 Di conseguenza devono essere definiti a priori:
 \begin{itemize}
 \item \textbf{Ambiente}: consiste sia del sistema hardware che di quello software sui quali è stato pianificato l'utilizzo del prodotto software sviluppato; di essi deve essere specificato uno stato iniziale dal quale poter iniziare ad eseguire i test;
 \item \textbf{Specifica}: consiste nel definire quali input sono necessari per l'esecuzione del test e quali devono essere gli output attesi;
 \item \textbf{Procedure}: consiste nel definire come devono essere svolti i test, in quale ordine e come devono essere analizzati i risultati ottenuti.
 \end{itemize}
-Sono definibili 5 diversi tipi di test: \textit{test di unità, test di integrazione, test di sistema, test di regressione e test accettazione}.
+Sono definibili 5 diversi tipi di test: 
+\begin{itemize}
+\item Test di unità;
+\item Test di integrazione;
+\item Test di sistema;
+\item Test di regressione;
+\item Test di accettazione.  
+\end{itemize}
 
 \paragraph{Test di unità}
 Consiste nella verifica di ogni singola unità del prodotto software tramite l'utilizzo di \textit{stub}\ped{G}, \textit{driver}\ped{G} e \textit{logger}\ped{G}.\\
@@ -81,7 +88,7 @@ Per effettuare tali test devono essere aggiunte delle componenti fittizie al pos
 
 \paragraph{Test di sistema}
 Consiste nella validazione del prodotto software nel momento in cui lo si ritiene giunto ad una versione definitiva.\\
-Tale test deve verificare che la copertura dei requisiti software stabilite in fase di \textbf{Analisi di Dettaglio} sia totale.
+Tale test deve verificare che la copertura dei requisiti software stabilite in fase di Analisi di Dettaglio sia totale.
 
 \paragraph{Test di regressione}
 Consiste nell'eseguire nuovamente i test riguardanti le componenti software che hanno subito modifiche, in modo da controllare che i cambiamenti apportati non pregiudichino il funzionamento di componenti che non sono stati aggiornati e che precedentemente non erano soggetti ad errori.\\
