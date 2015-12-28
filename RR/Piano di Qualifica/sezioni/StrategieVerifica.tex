@@ -98,7 +98,7 @@ Tale operazione è aiutata dal tracciamento, che permette di individuare e ripet
 E' il collaudo del prodotto software che viene eseguito in presenza del proponente. Se tale collaudo viene superato positivamente si può procedere al rilascio ufficiale del prodotto sviluppato.
 
 \subsection{Misure e metriche}
-Il processo di verifica, per essere informativo, deve essere quantificabile. Le misure rilevate dal processo di verifica devono quindi essere basate su metriche stabilite a priori. Le metriche incerte, qualora ci fossero, si miglioreranno in modo incrementale. Essendo la natura delle metriche molto variabile, vi possono essere due tipologie di range:
+Il processo di verifica, per essere informativo, deve essere quantificabile. Le misure rilevate dal processo di verifica devono quindi essere basate su metriche stabilite a priori. Le metriche incerte, qualora ce ne fossero, si miglioreranno in modo incrementale. Essendo la natura delle metriche molto variabile, vi possono essere due tipologie di range:
 \begin{itemize}
 \item \textbf{Accettazione}: valori richiesti affinché il prodotto sia accettato;
 \item \textbf{Ottimale}: valori entro cui dovrebbe collocarsi la misurazione. Tale range non è vincolante, ma fortemente consigliato. Scostamenti da tali valori necessitano una verifica approfondita.
@@ -111,7 +111,7 @@ Tali indici vengono utilizzati anche per mantenere il controllo sui processi dur
 \paragraph{Schedule Variance (SV)}
 Indica se si è in linea, in anticipo o in ritardo rispetto la pianificazione temporale delle attività nella \textit{baseline}\ped{G}.\\
 E' un indicatore di efficacia.\\
-Se $SV\ped{G} > 0$ significa che il gruppo di lavoro sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo.\\
+Se $SV > 0$ significa che il gruppo di lavoro sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo.\\
 \textbf{Parametri utilizzati}:
 \begin{itemize}
 \item Range-accettazione: $[\geq-(\textit{costo preventivo fase}\times5\%)]$;
@@ -121,7 +121,7 @@ Se $SV\ped{G} > 0$ significa che il gruppo di lavoro sta producendo con maggior 
 \paragraph{Budget Variance (BV)}
 Indica se alla data corrente si è speso di più o di meno rispetto a quanto pianificato.\\
 E' un indicatore che ha un valore contabile e finanziario.\\
-Se $BV\ped{G} > 0$ significa che l'attuazione del progetto sta consumando il proprio budget con minor velocità rispetto a quanto pianificato, viceversa se negativo.\\
+Se $BV > 0$ significa che l'attuazione del progetto sta consumando il proprio budget con minor velocità rispetto a quanto pianificato, viceversa se negativo.\\
 \textbf{Parametri utilizzati}:
 \begin{itemize}
 \item Range-accettazione: $[\geq-(\textit{costo preventivo fase}\times10\%)]$;
@@ -129,13 +129,13 @@ Se $BV\ped{G} > 0$ significa che l'attuazione del progetto sta consumando il pro
 \end{itemize}
 
 \subsubsection{Metriche per i documenti}
-Come metrica per i documenti redatti si è scelto di utilizzare l'\textit{indice di leggibilità}.\\
+Come metrica per i documenti redatti si è scelto di utilizzare l'indice di leggibilità.\\
 Vi sono a disposizione molti indici di leggibilità, ma i più importanti sono per la lingua inglese. Si è deciso quindi di adottare un indice di leggibilità per la lingua italiana.
 
 \paragraph{Gulpease}
-L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana.\\
+L'indice \textit{Gulpease}\ped{G} è un indice di leggibilità di un testo tarato sulla lingua italiana.\\
 Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. Permette di misurare la complessità dello stile di un documento.\\
-L'indice Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
+L'indice \textit{Gulpease}\ped{G} considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.\\
 L'indice è calcolato secondo la seguente formula:
 \begin{center}
 $89+\frac{300\times(\textit{numero delle frasi})-10\times(\textit{numero delle lettere})}{\textit{numero delle parole}}$
@@ -153,15 +153,15 @@ I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità
 \end{itemize}
 
 \subsubsection{Metriche per il software}
-Si vorrebbe, per poter perseguire degli obiettivi di qualità software, poter applicare le metriche ora verranno descritte.\\
-Questa sezione è da comprendersi come una \textit{dichiarazione di intenti}, che verrà rivista nelle prossime revisioni.
+Per poter perseguire gli obiettivi di qualità software, è auspicabile applicare le metriche che ora verranno descritte.\\
+Questa sezione è da comprendersi come una dichiarazione di intenti, che verrà rivista nelle prossime revisioni.
 
 \paragraph{Complessità ciclomatica}
 Utilizzata per misurare la complessità di funzioni, moduli, metodi o classi di un programma.\\
-La complessità ciclomatica è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
-Altri valori di complessità ciclomatica implicano una ridotta manutenibilità del codice. Valori bassi di complessità ciclomatica potrebbero però determinare scarsa efficienza dei metodi.\\
-Questo parametro è inoltre un indice del carico di lavoro richiesto per il testing. Un modulo con complessità elevata richiede più testing di un modulo a complessità inferiore.
-\textbf{Parametri utilizzati}:
+La \textit{complessità ciclomatica}\ped{G} è calcolata utilizzando il grafo di controllo di flusso del programma: i nodi del grafo corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo gruppo.\\
+Altri valori di  \textit{complessità ciclomatica}\ped{G} implicano una ridotta manutenibilità del codice. Valori bassi di  \textit{complessità ciclomatica}\ped{G} potrebbero però determinare scarsa efficienza dei metodi.\\
+Questo parametro è inoltre un indice del carico di lavoro richiesto per il testing. Un modulo con complessità elevata richiede più testing di un modulo a complessità inferiore.\\
+Parametri utilizzati:
 \begin{itemize}
 \item Range-accettazione: $[1-15]$;
 \item Range-ottimale: $[1-10]$.
@@ -169,17 +169,17 @@ Questo parametro è inoltre un indice del carico di lavoro richiesto per il test
 
 \paragraph{Numero di livelli di annidamento}
 Rappresenta il numero di livelli di annidamento dei metodi, cioè l'inserimento di una struttura di controllo all'interno di un'altra.\\
-Un valore elevato di tale indice implica un'alta complessità ed un basso livello di astrazione del codice.
-\textbf{Parametri utilizzati}:
+Un valore elevato di tale indice implica un'alta complessità ed un basso livello di astrazione del codice.\\
+Parametri utilizzati:
 \begin{itemize}
 \item Range-accettazione: $[1-6]$;
 \item Range-ottimale: $[1-3]$.
 \end{itemize}
 
 \paragraph{Attributi per classe}
-Un numero elevato di attributi interni ad una classe potrebbe evidenziare la necessità di suddividere la classe in più classi da mettere in relazione tra di loro, seguendo il principio dell'incapsulamento.\\
-Un alto valore di questo attributo indica un possibile errore di progettazione.
-\textbf{Parametri utilizzati}:
+Un numero elevato di attributi interni ad una classe potrebbe evidenziare la necessità di suddividere la classe in più classi da mettere in relazione tra di loro, seguendo il principio dell'\textit{incapsulamento}\ped{G}.\\
+Un alto valore di questo attributo indica un possibile errore di progettazione.\\
+Parametri utilizzati:
 \begin{itemize}
 \item Range-accettazione: $[0-16]$;
 \item Range-ottimale: $[3-8]$.
@@ -187,8 +187,8 @@ Un alto valore di questo attributo indica un possibile errore di progettazione.
 
 \paragraph{Numero di parametri per metodo}
 Un numero elevato di parametri per un metodo potrebbe evidenziare la necessità di ridurre le funzionalità associate a tale metodo.\\
-Un alto valore di questo attributo indica un possibile errore di progettazione.
-\textbf{Parametri utilizzati}:
+Un alto valore di questo attributo indica un possibile errore di progettazione.\\
+Parametri utilizzati:
 \begin{itemize}
 \item Range-accettazione: $[0-8]$;
 \item Range-ottimale: $[0-4]$.
@@ -196,8 +196,8 @@ Un alto valore di questo attributo indica un possibile errore di progettazione.
 
 \paragraph{Linee di codice per linee di commento}
 Indica il rapporto tra linee di codice e linee di commento.\\
-E' utile per stimare la manutenibilità del codice.
-\textbf{Parametri utilizzati}:
+E' utile per stimare la manutenibilità del codice.\\
+Parametri utilizzati:
 \begin{itemize}
 \item Range-accettazione: $[>0.25]$;
 \item Range-ottimale: $[>0.30]$.
@@ -207,8 +207,8 @@ E' utile per stimare la manutenibilità del codice.
 Misura il flusso di informazioni come suggerito da S. Henry e D. Kafura.\\
 Definiti:
 \begin{itemize}
-\item Fan-in: numero di moduli che passano informazioni dentro al modulo in esame;
-\item Fan-out: numero di moduli a cui il modulo in esame passa informazioni.
+\item \textbf{Fan-in}: numero di moduli che passano informazioni dentro al modulo in esame;
+\item \textbf{Fan-out}: numero di moduli a cui il modulo in esame passa informazioni.
 \end{itemize}
 Il valore è calcolato come:
 \begin{center}
