@@ -1,22 +1,35 @@
 %Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
 \newcommand{\documento}{\AdR}
 \newcommand{\nomedocumentofisico}{AnalisiDeiRequisiti.pdf}
-\newcommand{\redazione}{\AF}
-\newcommand{\verifica}{\GN}
-\newcommand{\approvazione}{\SM}
+\newcommand{\redazione}{\FB, \SM}
+\newcommand{\verifica}{\GN, \MV}
+\newcommand{\approvazione}{Da approvare}
 \newcommand{\uso}{Esterno}
 \newcommand{\datacreazione}{01 Dicembre 2015}
-\newcommand{\datamodifica}{01 Dicembre 2015}
+\newcommand{\datamodifica}{30 Dicembre 2015}
 \newcommand{\stato}{Sviluppo}
 \newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
 
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
 \input{../../Template/layout.tex}
 \input{../../Template/comandi.tex}
+
 \input{sezioni/diario.tex}
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
 \begin{document}
 
 %inclusione template HomePage
 \input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
 \input{../../Template/diario.tex}
+\input{../../Template/index.tex}
+
+\input{sezioni/Introduzione.tex}
 
 \end{document}
