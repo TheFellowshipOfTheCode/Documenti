@@ -195,14 +195,14 @@ l'ortografia e la tipografia di tutti i documenti.
   \item \textbf{Punteggiatura}: ogni simbolo di punteggiatura non può seguire un 
   carattere di spazio;
   \item \textbf{Lettere maiuscole}: le lettere maiuscole vanno utilizzate dopo il punto, il punto interrogativo, 
-  il punto esclamativo e all’inizio di ogni elemento di un elenco puntato.
+  il punto esclamativo e all'inizio di ogni elemento di un elenco puntato.
 \end{itemize}
 \paragraph{Composizione del testo}
 \begin{itemize}
-  \item \textbf{Elenchi puntati}: ogni punto dell’elenco deve terminare con il punto e virgola,
-   tranne l’ultimo che deve terminare con il punto. La prima parola deve avere la lettera 
+  \item \textbf{Elenchi puntati}: ogni punto dell'elenco deve terminare con il punto e virgola,
+   tranne l'ultimo che deve terminare con il punto. La prima parola deve avere la lettera 
    maiuscola.
-   \item \textbf{Glossario}: il pedice \ped{G} verrà utilizzato in corrispondenza di vocaboli presenti nel Glossario.
+   \item \textbf{Glossario}: il pedice \ped{G} verrà utilizzato in corrispondenza di vocaboli presenti nel \textit{\G}.
 \end{itemize}
 \paragraph{Formati}
 \begin{itemize}
@@ -264,8 +264,8 @@ semplice il riconoscimento di una mail tra le altre.
 \paragraph{Corpo}
 Il testo del corpo della mail deve essere chiaro ed esaustivo. All'interno del 
 testo verrà utilizzata la sintassi "@Ruolo" per riferirsi ad uno specifico 
-ruolo del team, mentre verrà utilizzata la sintassi "@Destinatario" per 
-riferirsi ad una o più persona del team.
+ruolo del \textit{team\ped{G}}, mentre verrà utilizzata la sintassi "@Destinatario" per 
+riferirsi ad una o più persona del \textit{team\ped{G}}.
 \paragraph{Allegati}
 È permesso, anche se sconsigliato, l'invio di allegati tramite mail. È 
 preferibile infatti condividere file all'interno del gruppo tramite strumenti più consoni, come \textit{Google 
@@ -291,9 +291,7 @@ dove:
   incrementato in seguito all'approvazione finale da parte del \textit{\RdP}. 
   L'incremento dell'indice \textbf{X} comporta l'azzeramento degli indici 
   \textbf{Y} e \textbf{Z};
-  \item \textbf{Y}: indica il numero crescente delle verifiche. L'incremento viene eseguito 
-  dal \textit{\Ver} e comporta l'azzeramento dell'indice 
-  \textbf{Z};
+  \item \textbf{Y}: indica il numero crescente delle verifiche. L'incremento viene 	eseguito dal \textit{\Ver} e comporta l'azzeramento dell'indice \textbf{Z};
   \item \textbf{Z}: indica il numero di modifiche minori apportate al documento 
   prima della sua verifica. Viene aumentato in modo incrementale. 
   \end{itemize}
@@ -373,20 +371,19 @@ software. I test di validazione sono identificati dalla seguente sintassi:
 \subsection{Strumenti}
 \subsubsection{Strumenti per l'analisi statica}
 \begin{itemize}
-  \item \textbf{JSHint\ped{G}}: è uno strumento che aiuta a rilevare possibili 
-  errori nel codice JavaScript\ped{G}. Verrà installato come modulo per 
-  Node.js\ped{G};
-  \item \textbf{CSSHint\ped{G}}: è uno strumento che aiuta a rilevare possibili 
-  errori nel codice CSS\ped{G}. Verrà installato come modulo per 
-  Node.js\ped{G};
-  \item \textbf{W3C Markup Validator Service\ped{G}}: validatore che segnala 
-  errori di sintassi nel codice \textit{HTML\ped{G}}. L’indirizzo web di riferimento è 
+  \item \textit{\textbf{JSHint\ped{G}}}: è uno strumento che aiuta a rilevare possibili 
+  errori nel codice \textit{JavaScript\ped{G}}. Verrà installato come modulo per 
+  \texit{Node.js\ped{G}};
+  \item \textit{\textbf{CSSHint\ped{G}}}: è uno strumento che aiuta a rilevare possibili 
+  errori nel codice \texit{CSS\ped{G}}. Verrà installato come modulo per 
+  \texit{Node.js\ped{G}};
+  \item \texit{\textbf{W3C Markup Validator Service\ped{G}}}: validatore che segnala 
+  errori di sintassi nel codice \textit{HTML\ped{G}}. L'indirizzo web di riferimento è 
   il seguente: \href{validator.w3.org/}{validator.w3.org};
-  \item \textbf{Complexity-report\ped{G}}: è un'applicazione che verrà installata come modulo per 
-  Node.js\ped{G} e serve a misurare metriche riguardanti codice Javascript\ped{G}, in particolare:
+  \item \texit{\textbf{Complexity-report\ped{G}}}: è un'applicazione che verrà installata come modulo per 
+  \texit{Node.js\ped{G}} e serve a misurare metriche riguardanti codice \texit{Javascript\ped{G}}, in particolare:
   \begin{itemize}
-    \item Complessità ciclomatica\ped{G}: misura la complessità delle classi, dei metodi e delle funzioni
-    del programma;
+    \item \texit{Complessità ciclomatica\ped{G}}: misura la complessità delle classi, dei metodi e delle funzioni del programma;
     \item Rapporto linee di commento su linee di codice: calcola il rapporto tra 
     le righe di codice e le righe di commento scritte;
     \item Dipendenze: restituisce le dipendenze interne o esterne con altre 
@@ -397,11 +394,10 @@ software. I test di validazione sono identificati dalla seguente sintassi:
 \end{itemize}
 \subsubsection{Strumenti per l'analisi dinamica}
 \begin{itemize}
-  \item \textbf{Google Chrome DevTools\ped{G}}: gli strumenti offerti da \textit{Google 
-  Chrome\ped{G}} agli sviluppatori servono a tenere sotto controllo l'utilizzo 
-  di CPU e di memoria da parte degli oggetti e funzioni Javascript\ped{G};
-  \item \textbf{Karma\ped{G}}: è uno strumento per eseguire test di unità e sarà utilizzato per eseguire test
-  sugli script realizzati. Verrà installato come modulo per Node.js\ped{G}.
+  \item \textit{\textbf{Google Chrome DevTools\ped{G}}}: gli strumenti offerti da \textit{Google Chrome\ped{G}} agli sviluppatori servono a tenere sotto controllo l'utilizzo 
+  di CPU e di memoria da parte degli oggetti e funzioni \textit{Javascript\ped{G}};
+  \item \textit{\textbf{Karma\ped{G}}}: è uno strumento per eseguire test di unità e sarà utilizzato per eseguire test
+  sugli script realizzati. Verrà installato come modulo per \texit{Node.js\ped{G}}.
 \end{itemize}
 
 
