@@ -69,3 +69,18 @@
 \newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
 \newcommand{\subsubparagraphmark}[1]{}
 \makeatother
+
+\makeatletter
+\newcounter{subsubsubparagraph}[subsubparagraph]
+\renewcommand\thesubsubsubparagraph{%
+  \thesubsubparagraph.\@arabic\c@subsubsubparagraph}
+\newcommand\subsubsubparagraph{%
+  \@startsection{subsubsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+    {0.75em}                           % afterskip
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubsubparagraphmark}[1]{}
+\makeatother
