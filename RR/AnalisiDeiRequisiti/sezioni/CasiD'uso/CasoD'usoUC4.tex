@@ -1,1 +1,77 @@
 \subsubsection{Caso d'uso UC4: Gestione profilo utente}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può visualizzare e modificare i suoi dati personali;
+	\item \textbf{Precondizione}: il sistema è predisposto per consentire all'utente autenticato di gestire i propri dati personali;
+	\item \textbf{Postcondizione}: il sistema ha attuato le modifiche effettuate dall'utente autenticato ai propri dati personali;
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente autenticato può modificare il proprio nome utente (UC4.1);
+			\item L'utente autenticato può modificare la propria e-mail (UC4.2);
+			\item L'utente autenticato può modificare la propria password (UC4.3);
+			\item L'utente autenticato può eliminare il proprio account (UC4.4).
+		\end{enumerate} 
+	\item \textbf{Scenari alternativi}: se le operazioni di modifica non vengono confermate il sistema non le rende persistenti e visualizza le funzionalità di gestione del profilo utente. 
+\end{itemize}
+
+\paragraph{Caso d'uso UC4.1: Modifica nome utente}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio nome e cognome utente inserendone di nuovo;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare nome e cognome utente;
+	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche al nome e cognome utente;
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente autenticato può inserire un nuovo nome utente (UC4.1.1);
+			\item L'utente autenticato può inserire un nuovo cognome utente (UC4.1.2);
+			\item L'utente autenticato può confermare le modifiche al nome e cognome utente (UC4.1.3);
+		\end{enumerate}
+	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\paragraph{Caso d'uso UC4.2: Modifica e-mail}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio indirizzo di posta elettronica inserendone uno nuovo;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare l'indirizzo di posta elettronica;
+	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche all'indirizzo di posta elettronica;
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente autenticato può inserire un nuovo indirizzo di posta elettronica (UC4.2.1);
+			\item L'utente autenticato può confermare le modifiche al proprio indirizzo di posta elettronica (UC4.2.2).
+		\end{enumerate}
+	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\paragraph{Caso d'uso UC4.3: Modifica password}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può modificare la propria password elettronica inserendone una nuova;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare la propria password;
+	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche alla propria password;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item L'utente autenticato può inserire la propria vecchia password (UC4.3.2);
+		\item L'utente autenticato può inserire una nuova password (UC4.3.2);
+		\item L'utente autenticato può confermare la modifica della password (UC4.3.3).
+	\end{enumerate}
+	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\paragraph{Caso d'uso UC4.4: Eliminazione account}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può eliminare il proprio account dal sistema; l'eliminazione dell'account comporta la cancellazione dei propri dati dal sistema; 
+	\item \textbf{Precondizione}: il sistema visualizza l'opzione dove è possibile eliminare il proprio account;
+	\item \textbf{Postcondizione}: il sistema ha eliminato in maniera persistente il proprio account e tutti i relativi dati;
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC4.4.1).
+		\end{enumerate}
+\end{itemize}
+
