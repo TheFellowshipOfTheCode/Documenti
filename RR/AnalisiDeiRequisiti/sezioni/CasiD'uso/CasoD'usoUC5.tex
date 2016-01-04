@@ -1,1 +1,49 @@
-\subsubsection{Caso d'uso UC5: Ricerca questionari esistenti}
+\subsection{Caso d'uso UC6: Ricerca e selezione questionario esistente}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: nella schermata principale qualsiasi utente che voglia svolgere un questionario potrà ricercarlo attraverso:
+\begin{itemize}
+\item la barra di ricerca;
+\item una suddivisione per argomento dei questionari esistenti.
+\\Per poterlo compilare dovrà poi selezionare il questionario che ha scelto.
+\end{itemize}	
+\item\textbf{Precondizione}: l'utente si trova nella pagina principale dell'applicazione;
+\item\textbf{Postcondizione}: l'utente ha selezionato il questionario che vuole svolgere;
+\item\textbf{Scenario principale}:
+\begin{itemize}
+\item L'utente cerca un questionario tramite barra di ricerca (UC6.1);
+\item L'utente cerca un questionario per argomento (UC6.2);
+\item L'utente seleziona il questionario scelto (UC6.3).
+\end{itemize}
+\end{itemize}
+
+\subsection{Caso d'uso UC6.1: Ricerca questionario tramite barra di ricerca}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: all'interno della pagina principale dell'applicazione è presente una barra di ricerca dove è possibile cercare, attraverso il titolo, un determinato questionario;
+\item\textbf{Precondizione}: l'utente si trova nella pagina principale dell'applicazione;
+\item\textbf{Postcondizione}:
+\begin{itemize}
+\item l'utente visualizza i questionari che contengono nel titolo ciò che è stato scritto nella barra di ricerca;
+\item nel caso non esistano questionari che soddisfino il requisito precedente, l'utente visualizza un messaggio di errore. 
+\end{itemize}
+\item\textbf{Scenario principale}: l'utente utilizza la barra di ricerca per cercare un questionario del quale conosce il titolo o parte di questo.
+\end{itemize}
+
+\subsection{Caso d'uso UC6.2: Ricerca questionario per argomento}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: all'interno della pagina principale dell'applicazione è presente una sezione contenete tutti i questionari esistenti suddivisi per argomento trattato;
+\item\textbf{Precondizione}: l'utente si trova nella pagina principale dell'applicazione;
+\item\textbf{Postcondizione}: l'utente visualizza un insieme di questionari che trattano tutti lo stesso argomento;
+\item\textbf{Scenario principale}: l'utente sceglie, nella sezione dedicata, un questionario appartenente ad un determinato argomento, sul quale vuole mettersi alla prova. 
+\end{itemize}
+
+\subsection{Caso d'uso UC6.3: Selezione questionario}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente dopo aver scelto un questionario, per iniziare a compilarlo, deve selezionarlo;
+\item\textbf{Precondizione}: l'utente ha scelto il questionario che vuole svolgere;
+\item\textbf{Postcondizione}: l'utente può iniziare a compilare il questionario;
+\item\textbf{Scenario principale}: l'utente seleziona il questionario scelto
+\end{itemize}
