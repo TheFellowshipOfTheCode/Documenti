@@ -45,8 +45,8 @@
 \renewcommand{\footrulewidth}{0.4pt}   %Linea sopra il piè di pagina
 
 %***INSERIMENTO DI NUOVE SOTTOSEZIONI
-\setcounter{secnumdepth}{7}		% mostra nel documento fino al livello 4 (1.2.3.4)
-\setcounter{tocdepth}{7}			% mostra nell'indice fino al livello 4 (1.2.3.4)
+\setcounter{secnumdepth}{7}		% mostra nel documento fino al livello 8 (1.2.3.4.5.6.7.8)
+\setcounter{tocdepth}{7}			% mostra nell'indice fino al livello 8 (1.2.3.4.5.6.7.8)
 
 %***LA SOTTOSEZIONE PARAGRAPH VIENE VISUALIZZATA COME UNA SECTION
 \titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -66,7 +66,7 @@
     {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
     {0.75em}                           % afterskip
     {\normalfont\normalsize\bfseries}}
-\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5.5em}} %gestione dell'indice
 \newcommand{\subsubparagraphmark}[1]{}
 \makeatother
 
@@ -76,11 +76,11 @@
   \thesubsubparagraph.\@arabic\c@subsubsubparagraph}
 \newcommand\subsubsubparagraph{%
   \@startsection{subsubsubparagraph}    % counter
-    {6}                              % level
+    {7}                              % level
     {\parindent}                     % indent
     {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
     {0.75em}                           % afterskip
     {\normalfont\normalsize\bfseries}}
-\newcommand\l@subsubsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand\l@subsubsubparagraph{\@dottedtocline{7}{10em}{6.5em}} %gestione dell'indice
 \newcommand{\subsubsubparagraphmark}[1]{}
 \makeatother
