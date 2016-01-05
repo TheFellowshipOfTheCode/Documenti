@@ -1,1 +1,74 @@
-\subsection{Caso d'uso UC1: Registrazione}
+\newpage
+\subsubsection{Caso d'uso UC2: Registrazione}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: per poter usufruire dei servizi forniti dalla piattaforma, l'utente deve registrarsi inserendo email e password;
+\item \textbf{Pre-condizione}: il sistema è avviato e mostra la pagina iniziale;
+\item \textbf{Flusso principale degli eventi}:
+	\begin{enumerate}
+	\item L'utente inserisce il proprio nome utente (nome e cognome) [UCD2.1];
+	\item L'utente inserisce l'email [UCD2.2];
+	\item L'utente inserisce la password [UCD2.3];
+	\item L'utente inserisce una seconda volta la password [UCD2.4];
+	\item L'utente conferma i dati inseriti [UCD2.5].
+	\end{enumerate}
+\item \textbf{Scenario alternativo}: possono verificarsi uno o più dei seguenti scenari:
+	\begin{itemize}
+	\item[-] Il nome utente inserito non è valido oppure è vuoto;
+	\item[-] L'email inserita non è valida oppure è vuota;
+	\item[-] L'email inserita è già presente nel sistema;
+	\item[-] La password inserita è vuota oppure non è di almeno 8 caratteri;
+	\item[-] La password e la conferma password non coincidono.
+	\end{itemize}
+In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visualizzando un messaggio di errore;
+\item \textbf{Estensione}: l'utente visualizza un messaggio di errore [UCD2.6].
+\item \textbf{Post-condizione}: il sistema ha registrato l'utente.
+\end{itemize}
+
+\paragraph{Caso d'uso UC2.1: Inserimento nome utente}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: l'utente inserisce il proprio nome e cognome (nome utente) per potersi registrare;
+\item \textbf{Pre-condizione}: il sistema presenta all'utente lo spazio destinato a questa operazione;
+\item \textbf{Post-condizione}: il nome utente è stato inserito.
+\end{itemize}
+
+\paragraph{Caso d'uso UC2.2: Inserimento email}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: l'utente inserisce il proprio indirizzo email per potersi registrare;
+\item \textbf{Pre-condizione}: il sistema presenta all'utente lo spazio destinato a questa operazione;
+\item \textbf{Post-condizione}: l'email è stata inserita.
+\end{itemize}
+
+\paragraph{Caso d'uso UC2.3: Inserimento password}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: l'utente inserisce una password a sua scelta per potersi registrare;
+\item \textbf{Pre-condizione}: il sistema presenta all'utente lo spazio destinato a questa operazione;
+\item \textbf{Post-condizione}: la password è stata inserita.
+\end{itemize}
+
+\paragraph{Caso d'uso UC2.4: Inserimento conferma password}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: l'utente inserisce nuovamente la password scelta;
+\item \textbf{Pre-condizione}: il sistema presenta all'utente lo spazio destinato a questa operazione;
+\item \textbf{Post-condizione}: la conferma della password è stata inserita.
+\end{itemize}
+
+\paragraph{Caso d'uso UC2.5: Conferma registrazione}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: l'utente conferma i dati inseriti;
+\item \textbf{Pre-condizione}: il sistema presenta all'utente lo spazio destinato a questa operazione;
+\item \textbf{Post-condizione}: il sistema ha ricevuto i dati per la registrazione.
+\end{itemize}
+
+\paragraph{Caso d'uso UC2.6: Visualizzazione errore registrazione}
+\begin{itemize}
+\item \textbf{Attori}: Utente;
+\item \textbf{Scopo e descrizione}: l'utente visualizza un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
+\item \textbf{Pre-condizione}: il sistema ha ricevuto dei dati errati per la registrazione;
+\item \textbf{Post-condizione}: il sistema mostra un messaggio di errore.
+\end{itemize}
