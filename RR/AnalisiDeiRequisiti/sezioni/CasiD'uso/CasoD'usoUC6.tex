@@ -1,9 +1,12 @@
 \subsection{Caso d'uso UC7: Compilazione questionario selezionato}
+\begin{center}
+\includegraphics[scale=0.5]{UML/UC7.png}
+\end{center}
 \begin{itemize}
 \item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
 \item\textbf{Descrizione}: l'utente autenticato/autenticato pro può compilare qualsiasi tipo di questionario e infine visualizzare il risultato ottenuto e il riepilogo delle risposte date. L'utente non autenticato invece può soltanto svolgere i questionari \textit{pubblici}.
 \item\textbf{Precondizione}: l'utente ha selezionato un questionario;
-\item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario e può quindi visualizzare la valutazione che ha ottenuto, se autenticato/autenticato pro;
+\item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario e può quindi visualizzare la valutazione finale che ha ottenuto e il riepilogo delle risposte date, se è un utente autenticato/autenticato pro;
 \item\textbf{Scenario principale}:
 \begin{itemize}
 \item L'utente compila un questionario \textit{pubblico} (UC7.1);
@@ -15,10 +18,10 @@
 \subsection{Caso d'uso UC7.1: Compilazione questionario pubblico}
 \begin{itemize}
 \item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
-\item\textbf{Descrizione}: l'utente risponde alle domande che gli si presentano nell'ordine che preferisce spostandosi alla domanda successiva o a quella precedente ed infine conferma le risposte date;
+\item\textbf{Descrizione}: -IDEA-: l'utente risponde alle domande che gli si presentano nell'ordine che preferisce spostandosi alla domanda successiva o a quella precedente ed infine conferma le risposte date;
 \item\textbf{Precondizione}: l'utente ha selezionato un questionario \textit{pubblico};
 \item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario;
-\item\textbf{Scenario principale}:
+\item\textbf{Scenario principale}: -IDEA-:
 \begin{itemize}
 \item L'utente risponde ad una domanda (UC7.1.1);
 \item L'utente passa alla domanda successiva (UC7.1.2);
@@ -28,18 +31,22 @@
 \end{itemize}
 
 \subsection{Caso d'uso UC7.2: Compilazione questionario privato}
+\begin{center}
+\includegraphics[scale=0.5]{UML/UC7_2.png}
+\end{center}
 \begin{itemize}
 \item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
-\item\textbf{Descrizione}: l'utente deve inserire la password richiesta dall'autore del questionario \textit{privato} e successivamente confermarla per poterlo compilare (come in UC7.1);
+\item\textbf{Descrizione}: l'utente deve inserire la password richiesta dall'autore del questionario \textit{privato} e successivamente confermarla per poterlo compilare;
 \item\textbf{Precondizione}: l'utente ha selezionato un questionario \textit{privato};
 \item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario;
 \item\textbf{Scenario principale}:
 \begin{itemize}
 \item L'utente inserisce la password (UC7.2.1).
 \item L'utente conferma l'inserimento della password (UC7.2.2)
+\item L'utente compila il questionario (come in UC7.1)
 \end{itemize}
 \item\textbf{Scenario alternativo}: L'utente inserisce una password errata;
-\item\textbf{Estensione}: Accesso al questionario negato (UC7.2.3)
+\item\textbf{Estensioni}: Accesso al questionario negato (UC7.2.3)
 \end{itemize}
 
 \subsection{Caso d'uso UC7.2.1: Inserimento password}
@@ -51,7 +58,7 @@
 \item\textbf{Scenario principale}: l'utente inserisce la password che gli consente di accedere al questionario.
 \end{itemize}
 
-\subsection{Caso d'uso UC7.2.1: Conferma password}
+\subsection{Caso d'uso UC7.2.2: Conferma password}
 \begin{itemize}
 \item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
 \item\textbf{Descrizione}: l'utente conferma la password inserita per poter accedere al questionario;
@@ -60,10 +67,10 @@
 \item\textbf{Scenario principale}: l'utente conferma la password.
 \end{itemize}
 
-\subsection{Caso d'uso UC7.2.3: Accesso negato}
+\subsection{Caso d'uso UC7.2.3: Accesso al questionario negato}
 \begin{itemize}
 \item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
-\item\textbf{Descrizione}: l'utente ha inserito una password che non corrisponde a quella richiesta dall'autore del questionario che egli vuole svolgere;
+\item\textbf{Descrizione}: l'utente ha inserito una password che non corrisponde a quella richiesta dall'autore del questionario, generando così un errore che gli impedirà di proseguire con la compilazione del suddetto fino a quando non inserirà la password corretta;
 \item\textbf{Precondizione}: l'utente ha provato a confermare una password errata;
 \item\textbf{Postcondizione}: il sistema avvisa l'utente dell'errore verificatosi tramite un opportuno messaggio;
 \item\textbf{Scenario principale}: l'utente visualizza il messaggio di errore relativo alla password scorretta.
