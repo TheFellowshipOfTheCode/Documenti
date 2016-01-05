@@ -1,0 +1,26 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{\VI}
+\newcommand{\nomedocumentofisico}{20151229I1.pdf}
+\newcommand{\redazione}{\AF}
+\newcommand{\verifica}{\GN}
+\newcommand{\approvazione}{\SM}
+\newcommand{\uso}{Interno}
+\newcommand{\datacreazione}{29 Dicembre 2015}
+\newcommand{\datamodifica}{29 Dicembre 2015}
+\newcommand{\stato}{Sviluppo}
+\newcommand{\destinateTo}{\gruppo}
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+\input{sezioni/diario.tex}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+\input{../../Template/diario.tex}
+\tableofcontents
+
+\input{sezioni/informazioniGenerali.tex}
+\input{sezioni/Riassunto.tex}
+\end{document}
+
