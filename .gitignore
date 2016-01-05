@@ -113,3 +113,6 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+#windows
+*Thumbs.db
