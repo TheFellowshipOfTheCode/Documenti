@@ -26,9 +26,39 @@
 		\begin{enumerate}
 			\item L'utente autenticato può inserire un nuovo nome utente (UC4.1.1);
 			\item L'utente autenticato può inserire un nuovo cognome utente (UC4.1.2);
-			\item L'utente autenticato può confermare le modifiche al nome e cognome utente (UC4.1.3);
+			\item L'utente autenticato può confermare le modifiche al nome e cognome utente (UC4.1.3).
 		\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC4.1.1: Inserimento nuovo nome utente}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire un nuovo nome utente;
+	\item \textbf{Precondizione}: il sistema richiede all'utente autenticato di inserire un nuovo nome utente;
+	\item \textbf{Postcondizione}: l'utente autenticato ha inserito il nuovo nome utente;
+	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo nome utente.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC4.1.2: Inserimento nuovo cognome utente}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire un nuovo cognome utente;
+	\item \textbf{Precondizione}:  il sistema richiede all'utente autenticato di inserire un nuovo cognome utente;
+	\item \textbf{Postcondizione}:  l'utente autenticato ha inserito il nuovo cognome utente;
+	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo cognome utente.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC4.1.3: Conferma modifiche nome e cognome utente}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche al proprio nome e cognome utente;
+	\item \textbf{Precondizione}: l'utente ha inserito nuovi nome e cognome utente;
+	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate al nome e cognome utente;
+	\item \textbf{Scenario principale}: l'utente conferma le modifiche al nome e cognome utente.
 \end{itemize}
 
 \paragraph{Caso d'uso UC4.2: Modifica e-mail}
@@ -46,6 +76,26 @@
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
 \end{itemize}
 
+\subparagraph{Caso d'uso UC4.2.1: Inserimento nuova e-mail}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire un nuovo indirizzo di posta elettronica;
+	\item \textbf{Precondizione}: il sistema richiede all'utente autenticato di inserire un nuovo indirizzo di posta elettronica;
+	\item \textbf{Postcondizione}: l'utente autenticato ha inserito un nuovo indirizzo di posta elettronica;
+	\item \textbf{Scenario principale}: l'utente autenticato inserisce un nuovo indirizzo di posta elettronica.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC4.2.2: Conferma modifiche e-mail}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche al proprio indirizzo di posta elettronica;
+	\item \textbf{Precondizione}: l'utente ha inserito un nuovo indirizzo di posta elettronica;
+	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate all'indirizzo di posta elettronica;
+	\item \textbf{Scenario principale}: l'utente conferma le modifiche all'indirizzo di posta elettronica.
+\end{itemize}
+
 \paragraph{Caso d'uso UC4.3: Modifica password}
 
 \begin{itemize}
@@ -55,11 +105,41 @@
 	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche alla propria password;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item L'utente autenticato può inserire la propria vecchia password (UC4.3.2);
+		\item L'utente autenticato può inserire la propria vecchia password (UC4.3.1);
 		\item L'utente autenticato può inserire una nuova password (UC4.3.2);
 		\item L'utente autenticato può confermare la modifica della password (UC4.3.3).
 	\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC4.3.1: Inserimento vecchia password}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire la vecchia password;
+	\item \textbf{Precondizione}: il sistema richiede all'utente di inserire la vecchia password;
+	\item \textbf{Postcondizione}: l'utente autenticato ha inserito la vecchia password;
+	\item \textbf{Scenario principale}: l'utente autenticato inserisce la vecchia password.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC4.3.2: Inserimento nuova password}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire la nuova password;
+	\item \textbf{Precondizione}: il sistema richiede all'utente di inserire la nuova password;
+	\item \textbf{Postcondizione}: l'utente autenticato inserisce la nuova password;
+	\item \textbf{Scenario principale}: l'utente autenticato inserisce la nuova password.
+\end{itemize}
+
+\subparagraph{Caso d'uso UC2.3.3: Conferma modifica password}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche alla password effettuate;
+	\item \textbf{Precondizione}: l'utente ha inserito una nuova password;
+	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate alla password;
+	\item \textbf{Scenario principale}: l'utente conferma le modifiche alla password effettuate.
 \end{itemize}
 
 \paragraph{Caso d'uso UC4.4: Eliminazione account}
@@ -75,3 +155,12 @@
 		\end{enumerate}
 \end{itemize}
 
+\subparagraph{Caso d'uso UC4.4.1: Conferma eliminazione account}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare la cancellazione del proprio account e dei relativi dati dal sistema;
+	\item \textbf{Precondizione}: l'utente ha richiesto al sistema di eliminare il proprio account;
+	\item \textbf{Postcondizione}: il sistema ha eliminato l'account dell'utente richiedente e tutti i relativi dati;
+	\item \textbf{Scenario principale}: l'utente conferma l'eliminazione del proprio account;
+\end{itemize}
