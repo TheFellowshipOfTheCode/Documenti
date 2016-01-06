@@ -1,5 +1,7 @@
 \subsection{Caso d'uso UC5: Gestione profilo utente}
-
+\begin{center}
+	\includegraphics[scale=0.5]{UML/UC5.png}
+\end{center}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
 	\item \textbf{Descrizione}: l'utente autenticato può visualizzare e modificare i suoi dati personali;
@@ -7,15 +9,18 @@
 	\item \textbf{Postcondizione}: il sistema ha attuato le modifiche effettuate dall'utente autenticato ai propri dati personali;
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente autenticato può modificare il proprio nome utente (UC4.1);
-			\item L'utente autenticato può modificare la propria e-mail (UC4.2);
-			\item L'utente autenticato può modificare la propria password (UC4.3);
-			\item L'utente autenticato può eliminare il proprio account (UC4.4).
+			\item L'utente autenticato può modificare il proprio nome utente (UC5.1);
+			\item L'utente autenticato può modificare la propria e-mail (UC5.2);
+			\item L'utente autenticato può modificare la propria password (UC5.3);
+			\item L'utente autenticato può eliminare il proprio account (UC5.4).
 		\end{enumerate} 
 	\item \textbf{Scenari alternativi}: se le operazioni di modifica non vengono confermate il sistema non le rende persistenti e visualizza le funzionalità di gestione del profilo utente. 
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.1: Modifica nome utente}
+\begin{center}
+	\includegraphics[scale=0.5]{UML/UC5_1.png}
+\end{center}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -24,9 +29,9 @@
 	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche al nome e cognome utente;
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente autenticato può inserire un nuovo nome utente (UC4.1.1);
-			\item L'utente autenticato può inserire un nuovo cognome utente (UC4.1.2);
-			\item L'utente autenticato può confermare le modifiche al nome e cognome utente (UC4.1.3).
+			\item L'utente autenticato può inserire un nuovo nome utente (UC5.1.1);
+			\item L'utente autenticato può inserire un nuovo cognome utente (UC5.1.2);
+			\item L'utente autenticato può confermare le modifiche al nome e cognome utente (UC5.1.3).
 		\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
 \end{itemize}
@@ -62,6 +67,9 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.2: Modifica e-mail}
+\begin{center}
+	\includegraphics[scale=0.5]{UML/UC5_2.png}
+\end{center}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -97,6 +105,9 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.3: Modifica password}
+\begin{center}
+	\includegraphics[scale=0.5]{UML/UC5_3.png}
+\end{center}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -105,9 +116,9 @@
 	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche alla propria password;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item L'utente autenticato può inserire la propria vecchia password (UC4.3.1);
-		\item L'utente autenticato può inserire una nuova password (UC4.3.2);
-		\item L'utente autenticato può confermare la modifica della password (UC4.3.3).
+		\item L'utente autenticato può inserire la propria vecchia password (UC5.3.1);
+		\item L'utente autenticato può inserire una nuova password (UC5.3.2);
+		\item L'utente autenticato può confermare la modifica della password (UC5.3.3).
 	\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema riporta lo alla schermata di gestione del profilo utente.
 \end{itemize}
@@ -143,6 +154,9 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.4: Eliminazione account}
+\begin{center}
+	\includegraphics[scale=0.5]{UML/UC5_4.png}
+\end{center}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -151,7 +165,7 @@
 	\item \textbf{Postcondizione}: il sistema ha eliminato in maniera persistente il proprio account e tutti i relativi dati;
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC4.4.1).
+			\item L'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC5.4.1).
 		\end{enumerate}
 \end{itemize}
 
