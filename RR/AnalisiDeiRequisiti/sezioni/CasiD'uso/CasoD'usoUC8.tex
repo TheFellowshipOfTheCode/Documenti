@@ -1,41 +1,45 @@
 \subsection{Caso d'uso UC8: Gestione delle domande}
 	
 \subsubsection{UC8.1: Creazione nuova domanda}
-	\begin{center}
-		\includegraphics[scale=0.8,keepaspectratio]{UML/UC8.1.png}
-	\end{center}
+	\label{UC8.1}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1.png}
+		\caption{UC8.1: Creazione nuova domanda}
+	\end{figure}
+	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item		
-			\textbf{Scopo e descrizione}: L'utente autenticato crea una nuova domanda nel db, utile all'apprendimento di un certo argomento;
+			\textbf{Scopo e descrizione}: L'utente autenticato crea una nuova domanda, utile all'apprendimento di un certo argomento;
 		\item
 			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
 		\item
-			\textbf{Flusso principale degli eventi}:
+			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta creazione.		
+		\item
+			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 					\item 	
-					L'utente seleziona l'opzione per la creazione della domanda [UC8.1.1];
+					L'utente seleziona l'opzione per la creazione di una nuova domanda [UC8.1.1];
 					\item
 					L'utente compila i campi dati del modulo previsto per compiere questa operazione [UC8.1.2];
 					\item
 					L'utente conferma la creazione della domanda [UC8.1.3];
 	 			\end{enumerate}
 	 	\item
+			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.1.4].
+	 	\item
 	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
 				\begin{itemize}
 					\item[-] 	
 						E' presente un campo obbligatorio vuoto;
 					\item[-] 
-    						E' presente  un dato non valido;
+    						E' presente un dato non valido;
 					\item[-] 
 						L'operazione di conferma non è andata a buon fine.
 				\end{itemize}
 			In tal caso il sistema ripresenta il modulo di creazione della domanda, presentando un messaggio d'errore.
-		\item
-			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.1.4].
-		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta creazione.
 	\end{itemize}
 	\subsubsection{UC8.1.1: Selezione opzione creazione domanda}
 	\begin{itemize}
@@ -82,9 +86,13 @@
 			\textbf{Post-condizione}: il sistema mostra un messaggio d'errore.
 	\end{itemize}	
 	\subsubsection{UC8.2: Modifica domanda esistente}
-	\begin{center}
-		\includegraphics[scale=0.5]{UML/UC8.2.png}
-	\end{center}
+	\label{UC8.2}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_2.png}
+		\caption{UC8.2: Modifica domanda esistente}
+	\end{figure}
+	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -93,7 +101,9 @@
 		\item
 			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
 		\item
-			\textbf{Flusso principale degli eventi}:
+			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta modifica.
+		\item
+			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 					\item 	
 					L'utente seleziona l'opzione per la modifica della domanda [UC8.2.1];
@@ -102,6 +112,8 @@
 					\item
 					L'utente conferma la modifica della domanda [UC8.2.3];
 	 			\end{enumerate}
+	 	\item
+			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.2.4].
 	 	\item
 	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
 				\begin{itemize}
@@ -113,10 +125,6 @@
 						L'operazione di conferma non è andata a buon fine.
 				\end{itemize}
 			In tal caso il sistema ripresenta il modulo di modifica della domanda, presentando un messaggio d'errore.
-		\item
-			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.2.4].
-		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta modifica.
 	\end{itemize}
 	\subsubsection{UC8.2.1: Selezione opzione modifica domanda}
 	\begin{itemize}
@@ -164,9 +172,13 @@
 	\end{itemize}	
 	
 	\subsubsection{UC8.3: Eliminazione domanda}	
-	\begin{center}
-		\includegraphics[scale=0.5]{UML/UC8.3.png}
-	\end{center}
+	\label{UC8.3}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_3.png}
+		\caption{UC8.3: Eliminazione domanda}
+	\end{figure}
+	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -175,7 +187,9 @@
 		\item
 			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema;
 		\item
-			\textbf{Flusso principale degli eventi}:
+			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta eliminazione.
+		\item
+			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 					\item 	
 					L'utente seleziona l'opzione per l'eliminazione di una domanda [UC8.3.1];
@@ -184,8 +198,6 @@
 					\item
 					L'utente conferma l'eliminazione della domanda [UC8.3.3];
 	 			\end{enumerate}
-		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta eliminazione.
 	\end{itemize}
 	\subsubsection{UC8.3.1: Selezione opzione eliminazione domanda}
 	\begin{itemize}

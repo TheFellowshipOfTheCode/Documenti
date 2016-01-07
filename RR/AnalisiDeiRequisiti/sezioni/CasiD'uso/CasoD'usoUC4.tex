@@ -1,30 +1,34 @@
 \subsection{Caso d'uso UC4: Logout}
-	\begin{center}
-		\includegraphics[scale=0.5]{UML/UC3.png}
-	\end{center}
+	\label{UC4}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC4.png}
+		\caption{UC4: Logout}
+	\end{figure}
+	\FloatBarrier
 	\begin{itemize}
 		\item
-			\textbf{Attori}: Utente autenticato;
+			\textbf{Attori}: Utente autenticato, utente autenticato pro;
 		\item		
 			\textbf{Scopo e descrizione}: L'utente autenticato termina la sua sessione, uscendo dalla sua area riservata;
 		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
+			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema.
 		\item
-			\textbf{Flusso principale degli eventi}:
+			\textbf{Post-condizione}: L'utente non è autenticato presso il sistema. 
+		\item
+			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 					\item 	
-					L'Utente seleziona l'opzione logout per scollegarsi dal sistema [UC3.1];
+					L'Utente seleziona l'opzione logout per scollegarsi dal sistema [UC4.1];
 					\item
-					L'Utente riceve la conferma della disconnessione [UC3.2].
+					L'Utente riceve la conferma della disconnessione [UC4.2].
 	 			\end{enumerate}
-		\item
-			\textbf{	Post-condizione}: L'utente non è autenticato presso il sistema.
 	\end{itemize}
 
 \subsubsection{Caso d'uso UC4.1: Selezione opzione logout}
 	\begin{itemize}
 		\item		
-			\textbf{Attori}: Utente Autenticato;
+			\textbf{Attori}: Utente Autenticato, utente autenticato pro;
 		\item
   			\textbf{Scopo e descrizione}: L'utente seleziona l'opzione logout per poter uscire dalla sua area riservata;
 		\item
@@ -35,7 +39,7 @@
 \subsubsection{Caso d'uso UC4.2: Conferma disconnessione}
 	\begin{itemize}
 		\item
-			\textbf{Attori}: Utente Autenticato;
+			\textbf{Attori}: Utente Autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: L'utente una volta selezionato l'opzione logout, attende la conferma della disconnessione da parte del sistema;
  		\item
