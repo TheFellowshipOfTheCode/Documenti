@@ -1,222 +1,87 @@
-\subsection{Caso d'uso UC7: Gestione delle domande}
-	
-\subsubsection{UC7.1: Creazione nuova domanda}
-	\begin{center}
-		\includegraphics[scale=0.7,keepaspectratio]{UML/UC7.1.png}
-	\end{center}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item		
-			\textbf{Scopo e descrizione}: L'utente autenticato crea una nuova domanda nel db, utile all'apprendimento di un certo argomento;
-		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
-		\item
-			\textbf{Flusso principale degli eventi}:
-	       		\begin{enumerate}
-					\item 	
-					L'utente seleziona l'opzione per la creazione della domanda [UC7.1.1];
-					\item
-					L'utente compila i campi dati del modulo previsto per compiere questa operazione [UC7.1.2];
-					\item
-					L'utente conferma la creazione della domanda [UC7.1.3];
-	 			\end{enumerate}
-	 	\item
-	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
-				\begin{itemize}
-					\item[-] 	
-						E' presente un campo obbligatorio vuoto;
-					\item[-] 
-    						E' presente  un dato non valido;
-					\item[-] 
-						L'operazione di conferma non è andata a buon fine.
-				\end{itemize}
-			In tal caso il sistema ripresenta il modulo di creazione della domanda, presentando un messaggio d'errore.
-		\item
-			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC7.1.4].
-		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta creazione.
-	\end{itemize}
-	\subsubsection{UC7.1.1: Selezione opzione creazione domanda}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato seleziona l'opzione per la creazione di una domanda;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
-		\item
-			\textbf{Post-condizione}: il sistema presenta all'utente autenticato il modulo per creare la domanda.
-	\end{itemize}	
-	\subsubsection{UC7.1.2: Compilazione campi dati}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato compila i campi dati del modulo per la creazione della domanda;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato ha selezionato l'opzione per creare la domanda;
-		\item
-			\textbf{Post-condizione}: i campi dati del modulo di creazione sono riempiti.
-	\end{itemize}	
-	\subsubsection{UC7.1.3: Conferma creazione}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato conferma la creazione della domanda per essere inserita nel DB;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
-		\item
-			\textbf{Post-condizione}: il sistema ha ricevuto i dati per la registrazione.
-	\end{itemize}	
-	\subsubsection{UC7.1.4: Visualizzazione errore creazione}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente visualizza un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
-		\item		
-			\textbf{Pre-condizione}: il sistema ha ricevuto dei dati errati per creazione;
-		\item
-			\textbf{Post-condizione}: il sistema mostra un messaggio d'errore.
-	\end{itemize}	
-	\subsubsection{UC7.2: Modifica domanda esistente}
-	\begin{center}
-		\includegraphics[scale=0.5]{UML/UC7.2.png}
-	\end{center}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item		
-			\textbf{Scopo e descrizione}: L'utente autenticato modifica una domanda da lui in precedenza creata per correggere errori ortografici o sintattici;
-		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
-		\item
-			\textbf{Flusso principale degli eventi}:
-	       		\begin{enumerate}
-					\item 	
-					L'utente seleziona l'opzione per la modifica della domanda [UC7.2.1];
-					\item
-					L'utente modifica i campi dati, già precompilati dai dati della domanda selezionata, del modulo previsto per compiere questa operazione [UC7.2.2];
-					\item
-					L'utente conferma la modifica della domanda [UC7.2.3];
-	 			\end{enumerate}
-	 	\item
-	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
-				\begin{itemize}
-					\item[-] 	
-						E' presente un campo obbligatorio vuoto;
-					\item[-] 
-    						E' presente  un dato non valido;
-					\item[-] 
-						L'operazione di conferma non è andata a buon fine.
-				\end{itemize}
-			In tal caso il sistema ripresenta il modulo di modifica della domanda, presentando un messaggio d'errore.
-		\item
-			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC7.2.4].
-		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta modifica.
-	\end{itemize}
-	\subsubsection{UC7.2.1: Selezione opzione modifica domanda}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato seleziona l'opzione per compiere la modifica della domanda;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
-		\item
-			\textbf{Post-condizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda.
-	\end{itemize}
-	\subsubsection{UC7.2.2: Modifica campi dati}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato modifica i dati della domanda selezionata;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda selezionata;
-		\item
-			\textbf{Post-condizione}: i campi dati del modulo di modifica, già precompilati con i dati della domanda selezionata, sono modificati.
-	\end{itemize}		
-	\subsubsection{UC7.2.3: Conferma modifica}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato conferma la modifica dei dati della domanda selezionata;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
-		\item
-			\textbf{Post-condizione}: il sistema ha ricevuto i dati per la registrazione.
-	\end{itemize}		
-	\subsubsection{UC7.2.4: Visualizzazione errore modifica}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente visualizza un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
-		\item		
-			\textbf{Pre-condizione}: il sistema ha ricevuto dei dati errati per la modifica;
-		\item
-			\textbf{Post-condizione}: il sistema mostra un messaggio d'errore.
-	\end{itemize}	
-	
-	\subsubsection{UC7.3: Eliminazione domanda}	
-	\begin{center}
-		\includegraphics[scale=0.5]{UML/UC7.3.png}
-	\end{center}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item		
-			\textbf{Scopo e descrizione}: L'utente autenticato elimina una domanda, da lui in precedenza creata, per motivi validi e giustificati;
-		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema;
-		\item
-			\textbf{Flusso principale degli eventi}:
-	       		\begin{enumerate}
-					\item 	
-					L'utente seleziona l'opzione per l'eliminazione di una domanda [UC7.3.1];
-					\item
-					L'utente seleziona la domanda da eliminare tramite uno strumento di selezione presentato dal sistema [UC7.3.2];
-					\item
-					L'utente conferma l'eliminazione della domanda [UC7.3.3];
-	 			\end{enumerate}
-		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta eliminazione.
-	\end{itemize}
-	\subsubsection{UC7.3.1: Selezione opzione eliminazione domanda}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato seleziona l'opzione per compiere l' eliminazione di una domanda;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
-		\item
-			\textbf{Post-condizione}: il sistema presenta all'utente autenticato lo strumento di selezione della domanda da eliminare.
-	\end{itemize}
-	\subsubsection{UC7.3.2: Selezione domanda da eliminare}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato seleziona, tramite uno specifico strumento presentato dal sistema, una domanda da eliminare;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda selezionata;
-		\item
-			\textbf{Post-condizione}: i campi dati del modulo di modifica, già precompilati con i dati della domanda selezionata, sono modificati.
-	\end{itemize}		
-	\subsubsection{UC7.3.3: Conferma eliminazione}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato conferma l'eliminazione della domanda dal sistema;
-		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
-		\item
-			\textbf{Post-condizione}: il sistema ha eliminato la domanda dal sistema.
-	\end{itemize}	
+\subsection{Caso d'uso UC7: Compilazione questionario selezionato}
+\begin{center}
+\includegraphics[scale=0.5]{UML/UC7.png}
+\end{center}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente autenticato/autenticato pro può compilare qualsiasi tipo di questionario e infine visualizzare il risultato ottenuto e il riepilogo delle risposte date. L'utente non autenticato invece può soltanto svolgere i questionari \textit{pubblici}.
+\item\textbf{Precondizione}: l'utente ha selezionato un questionario;
+\item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario e può quindi visualizzare la valutazione finale che ha ottenuto e il riepilogo delle risposte date, se è un utente autenticato/autenticato pro;
+\item\textbf{Scenario principale}:
+\begin{itemize}
+\item L'utente compila un questionario \textit{pubblico} (UC7.1);
+\item L'utente autenticato/autenticato pro compila un questionario \textit{privato} (UC7.2);
+\item L'utente autenticato/autenticato pro visualizza il risultato del questionario svolto (UC7.3).
+\end{itemize}
+\end{itemize}
+
+\subsection{Caso d'uso UC7.1: Compilazione questionario pubblico}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente non autenticato, Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: -IDEA-: l'utente risponde alle domande che gli si presentano nell'ordine che preferisce spostandosi alla domanda successiva o a quella precedente ed infine conferma le risposte date;
+\item\textbf{Precondizione}: l'utente ha selezionato un questionario \textit{pubblico};
+\item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario;
+\item\textbf{Scenario principale}: -IDEA-:
+\begin{itemize}
+\item L'utente risponde ad una domanda (UC7.1.1);
+\item L'utente passa alla domanda successiva (UC7.1.2);
+\item L'utente passa alla domanda precedente (UC7.1.3);
+\item L'utente conferma le risposte date alle domande (UC7.1.4);
+\end{itemize}
+\end{itemize}
+
+\subsection{Caso d'uso UC7.2: Compilazione questionario privato}
+\begin{center}
+\includegraphics[scale=0.5]{UML/UC7_2.png}
+\end{center}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente deve inserire la password richiesta dall'autore del questionario \textit{privato} e successivamente confermarla per poterlo compilare;
+\item\textbf{Precondizione}: l'utente ha selezionato un questionario \textit{privato};
+\item\textbf{Postcondizione}: l'utente ha finito di compilare il questionario;
+\item\textbf{Scenario principale}:
+\begin{itemize}
+\item L'utente inserisce la password (UC7.2.1).
+\item L'utente conferma l'inserimento della password (UC7.2.2)
+\item L'utente compila il questionario (come in UC7.1)
+\end{itemize}
+\item\textbf{Scenario alternativo}: L'utente inserisce una password errata;
+\item\textbf{Estensioni}: Accesso al questionario negato (UC7.2.3)
+\end{itemize}
+
+\subsection{Caso d'uso UC7.2.1: Inserimento password}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente per poter compilare il questionario deve inserire la password richiesta dal creatore di quest'ultimo;
+\item\textbf{Precondizione}: l'utente ha selezionato un questionario \textit{privato};
+\item\textbf{Postcondizione}: l'utente ha inserito la password;
+\item\textbf{Scenario principale}: l'utente inserisce la password che gli consente di accedere al questionario.
+\end{itemize}
+
+\subsection{Caso d'uso UC7.2.2: Conferma password}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente conferma la password inserita per poter accedere al questionario;
+\item\textbf{Precondizione}: l'utente ha inserito la password;
+\item\textbf{Postcondizione}: l'utente ha confermato la password inserita;
+\item\textbf{Scenario principale}: l'utente conferma la password.
+\end{itemize}
+
+\subsection{Caso d'uso UC7.2.3: Accesso al questionario negato}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente ha inserito una password che non corrisponde a quella richiesta dall'autore del questionario, generando così un errore che gli impedirà di proseguire con la compilazione del suddetto fino a quando non inserirà la password corretta;
+\item\textbf{Precondizione}: l'utente ha provato a confermare una password errata;
+\item\textbf{Postcondizione}: il sistema avvisa l'utente dell'errore verificatosi tramite un opportuno messaggio;
+\item\textbf{Scenario principale}: l'utente visualizza il messaggio di errore relativo alla password scorretta.
+\end{itemize}
+
+\subsection{Caso d'uso UC7.3: Visualizzazione risultato questionario compilato}
+\begin{itemize}
+\item\textbf{Attori Principali}: Utente autenticato, Utente autenticato pro;
+\item\textbf{Descrizione}: l'utente, dopo aver finito di compilare il questionario, visualizzerà una schermata contenente il riepilogo delle risposte date alle domande. Sarà possibile vedere quali di queste sono corrette e quali no e verrà inoltre data una valutazione complessiva;
+\item\textbf{Precondizione}: l'utente ha finito di compilare il questionario che ha scelto di affrontare;
+\item\textbf{Postcondizione}: il sistema visualizza una schermata contenente il riepilogo del questionario svolto e un voto;
+\item\textbf{Scenario principale}: L'utente visualizza che voto gli è stato dato e quali domande ha sbagliato.
+\end{itemize}
+
