@@ -1,7 +1,11 @@
 \subsection{Caso d'uso UC5: Gestione profilo utente}
-\begin{center}
-	\includegraphics[scale=0.5]{UML/UC5.png}
-\end{center}
+\label{UC5}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5.png}
+	\caption{UC5: Gestione profilo utente}
+\end{figure}
+\FloatBarrier
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
 	\item \textbf{Descrizione}: l'utente autenticato può visualizzare e modificare i suoi dati personali;
@@ -18,10 +22,12 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.1: Modifica nome utente}
-\begin{center}
-	\includegraphics[scale=0.5]{UML/UC5_1.png}
-\end{center}
-
+\label{UC5.1}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_1.png}
+	\caption{UC5.1: Modifica nome utente}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
 	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio nome e cognome utente;
@@ -36,7 +42,7 @@
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.1.1: Inserimento nuovo nome utente}
+\subsubsection{Caso d'uso UC5.1.1: Inserimento nuovo nome utente}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -46,7 +52,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo nome utente.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.1.2: Inserimento nuovo cognome utente}
+\subsubsection{Caso d'uso UC5.1.2: Inserimento nuovo cognome utente}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -56,7 +62,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo cognome utente.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.1.3: Conferma modifiche nome e cognome utente}
+\subsubsection{Caso d'uso UC5.1.3: Conferma modifiche nome e cognome utente}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -67,10 +73,12 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.2: Modifica e-mail}
-\begin{center}
-	\includegraphics[scale=0.5]{UML/UC5_2.png}
-\end{center}
-
+\label{UC5.2}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_2.png}
+	\caption{UC5.2: Modifica e-mail}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
 	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio indirizzo di posta elettronica inserendone uno nuovo;
@@ -84,7 +92,7 @@
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.2.1: Inserimento nuova e-mail}
+\subsubsection{Caso d'uso UC5.2.1: Inserimento nuova e-mail}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -94,7 +102,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce un nuovo indirizzo di posta elettronica.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.2.2: Conferma modifiche e-mail}
+\subsubsection{Caso d'uso UC5.2.2: Conferma modifiche e-mail}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -105,10 +113,12 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.3: Modifica password}
-\begin{center}
-	\includegraphics[scale=0.5]{UML/UC5_3.png}
-\end{center}
-
+\label{UC5.3}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_3.png}
+	\caption{UC5: Modifica password}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
 	\item \textbf{Descrizione}: l'utente autenticato può modificare la propria password elettronica inserendone una nuova;
@@ -123,7 +133,7 @@
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.3.1: Inserimento vecchia password}
+\subsubsection{Caso d'uso UC5.3.1: Inserimento vecchia password}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -133,7 +143,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce la vecchia password.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.3.2: Inserimento nuova password}
+\subsubsection{Caso d'uso UC5.3.2: Inserimento nuova password}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -143,7 +153,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce la nuova password.
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.3.3: Conferma modifica password}
+\subsubsection{Caso d'uso UC5.3.3: Conferma modifica password}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -154,9 +164,12 @@
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.4: Eliminazione account}
-\begin{center}
-	\includegraphics[scale=0.5]{UML/UC5_4.png}
-\end{center}
+\label{UC5.4}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_4.png}
+	\caption{UC5.4: Eliminazione account}
+\end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -169,7 +182,7 @@
 		\end{enumerate}
 \end{itemize}
 
-\paragraph{Caso d'uso UC5.4.1: Conferma eliminazione account}
+\subsubsection{Caso d'uso UC5.4.1: Conferma eliminazione account}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
