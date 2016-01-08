@@ -28,62 +28,59 @@
 	\FloatBarrier
 	\begin{itemize}
 		\item \textbf{Attori}: \uau, \uaupro;
-		\item \textbf{Descrizione}: l'utente può visualizzare i propri questionari creati e quelli preferiti; 
+		\item \textbf{Descrizione}: l'utente può visualizzare i propri questionari creati, quelli svolti e quelli salvati per essere eseguiti in un secondo momento; 
 		\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Visualizza questionari" tra le possibilità proposte in UC9;
 		\item \textbf{Postcondizione}: il sistema ha mostrato all'utente i questionari, ed ha permesso ad esso di eseguire delle operazioni su tali; 
 		\item \textbf{Scenario principale}: 
 			\begin{enumerate}
-				\item L'utente può visualizzare i proprio questionari preferiti (UC9.1.1);
+				\item L'utente può visualizzare l'elenco dei questionari da svolgere in un secondo momento (UC9.1.1);
 				\item L'utente può visualizzare i questionari che ha creato (UC9.1.2); 
 			\end{enumerate}
 	\end{itemize}
 	
-		\subsubsection{Caso d'uso UC9.1.1: Visualizza questionari preferiti}
-		\label{UC9.1.1}
-		\begin{figure}[h]
-			\centering
-		\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-			\caption{UC9.1.1: Visualizza questionari preferiti}
-		\end{figure}
-		\FloatBarrier
-		\begin{itemize}
-			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'utente può visualizzare l'elenco dei questionari da sui selezionati come preferiti;
-			\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Visualizza questionari preferiti" tra le possibilità proposte in UC9.1;
-			\item \textbf{Postcondizione}: il sistema ha eseguito le opzioni scelte dall'utente;
-			\item \textbf{Scenario principale}: 
-				\begin{enumerate}
-					\item L'utente può compilare il questionario (UC7);
-					\item L'utente può togliere dai preferiti un questionario (UC9.1.1.1).
-				\end{enumerate}
-		\end{itemize}
-		
-			\subsubsection{Caso d'uso UC9.1.1.1: Togliere questionario dai preferiti}
-			\label{UC9.1.1.1}
+			\subsubsection{Caso d'uso UC9.1.1: Visualizza questionari della lista "Fai più tardi"}
+			\label{UC9.1.4}
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-				\caption{UC9.1.2.1: Modifica questionario}
+				\caption{UC9.1.4: Visualizza questionari da svolgere più tardi}
 			\end{figure}
 			\FloatBarrier
 			\begin{itemize}
 				\item \textbf{Attori}: \uau, \uaupro;
-				\item \textbf{Descrizione}: l'utente ha la possibilità di eliminare dai propri questionari preferiti quello selezionato;
-				\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Togliere questionario dai preferiti" tra le possibilità proposte in UC9.1.1 su un questionario preferito;
-				\item \textbf{Postcondizione}: il sistema ha eliminato dai preferiti il questionario selezionato;
+				\item \textbf{Descrizione}: l'utente può visualizzare l'elenco dei questionari da lui selezionati per essere svolti in un secondo momento;
+				\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Visualizza questionari da svolgere più tardi" tra le possibilità proposte in UC9.1;
+				\item \textbf{Postcondizione}: il sistema ha eseguito le opzioni scelte dall'utente;
 				\item \textbf{Scenario principale}: 
-					\begin{enumerate}
-						\item L'utente può confermare l'eliminazione del questionario dai propri preferiti (UC9.1.1.1.1);
-						\item L'utente può annullare l'eliminazione del questionario dai propri preferiti (UC9.1.1.1.2).
-					\end{enumerate}
+				\begin{enumerate}
+					\item L'utente può compilare il questionario (UC7);
+					\item L'utente può eliminare un questionario dalla lista "Fai più tardi" (UC9.1.4.1).
+				\end{enumerate}
 			\end{itemize}
 				
-					\subsubsection{Caso d'uso UC9.1.1.1.1: Confermare eliminazione questionario dai preferiti}
+				\subsubsection{Caso d'uso UC9.1.1.1: Eliminare questionario dalla lista "Fai più tardi"}
+				\label{UC9.1.4.1}
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
+					\caption{UC9.1.1.1: Eliminare questionario dalla lista "Fai più tardi"}
+				\end{figure}
+				\FloatBarrier
+				\begin{itemize}
+					\item \textbf{Attori}: \uau, \uaupro;
+					\item \textbf{Descrizione}: l'utente ha la possibilità di eliminare dall'elenco dei questionari da svolgere più tardi quello selezionato;
+					\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Eliminare questionario dalla lista "Fai più tardi"" tra le possibilità proposte in UC9.1.1 su un questionario;
+					\item \textbf{Postcondizione}: il sistema ha eliminato, dall'elenco dei questionari da svolgere più tardi, quello selezionato;
+					\item \textbf{Scenario principale}: l'utente può confermare l'eliminazione del questionario dall'elenco dei questionari da svolgere più tardi (UC9.1.1.1.1);
+					
+				\end{itemize}
+				
+					\subsubsection{Caso d'uso UC9.1.1.1.1: Confermare eliminazione questionario dalla lista "Fai più tardi"}
 					\label{UC9.1.1.1.1}
 					\begin{figure}[h]
 						\centering
 						\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-						\caption{UC9.1.2.1.1: Modifica tipologia questionario}
+						\caption{UC9.1.1.1.1: Confermare eliminazione questionario dalla lista "Fai più tardi"}
 					\end{figure}
 					\FloatBarrier
 					\begin{itemize}
@@ -91,25 +88,10 @@
 						\item \textbf{Descrizione}: l'utente dopo aver scelto di eliminare il questionario deve confermare tale operazione;
 						\item \textbf{Precondizione}: l'utente ha scelto di eliminare il questionario;
 						\item \textbf{Postcondizione}: l'utente ha eliminato il questionario;
-						\item \textbf{Scenario principale}: l'utente deve confermare l'eliminazione del questionario dai preferiti. Una volta fatto ciò viene reindirizzato nella pagina dei questionari preferiti (UC9.1.1);
+						\item \textbf{Scenario principale}: l'utente deve confermare l'eliminazione del questionario dalla lista "Fai più tardi". Una volta fatto ciò viene mandato nella pagina che contiene la lista dei questionari "Fai più tardi" (UC9.1.1);
+						\item \textbf{Scenari alternativi}: L'utente non conferma l'eliminazione del questionario dalla lista "Fai più tardi" e viene mandato alla schermata precedente.
 					\end{itemize}
-					
-					\subsubsection{Caso d'uso UC9.1.1.1.2: Annullare eliminazione questionario dai preferiti}
-					\label{UC9.1.1.1.2}
-					\begin{figure}[h]
-						\centering
-						\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-						\caption{UC9.1.2.1.1: Modifica tipologia questionario}
-					\end{figure}
-					\FloatBarrier
-					\begin{itemize}
-						\item \textbf{Attori}: \uau, \uaupro;
-						\item \textbf{Descrizione}: l'utente decide di annullare l'eliminazione del questionario dai preferiti;
-						\item \textbf{Precondizione}: l'utente ha scelto di annullare il questionario;
-						\item \textbf{Postcondizione}: l'utente non ha eliminato il questionario;
-						\item \textbf{Scenario principale}: l'utente deve annullare l'eliminazione del questionario dai preferiti. Una volta fatto ciò viene reindirizzato nella pagina dei questionari preferiti (UC9.1.1);
-					\end{itemize}
-		
+							
 		\subsubsection{Caso d'uso UC9.1.2: Visualizza questionari creati}
 		\label{UC9.1.2}
 		\begin{figure}[h]
@@ -186,6 +168,25 @@
 							\item \textbf{Scenari alternativi}:
 						\end{itemize}
 						
+						\subsubsection{Caso d'uso UC9.1.2.1.1.2: Cambia tipologia utente}
+						\label{UC9.1.2.1.1.2}
+						\begin{figure}[h]
+							\centering
+							\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
+							\caption{UC9.1.2.1.1.2: Cambia tipologia utente}
+						\end{figure}
+						\FloatBarrier
+						\begin{itemize}
+							\item \textbf{Attori}: 
+							\item \textbf{Descrizione}: 
+							\item \textbf{Precondizione}: 
+							\item \textbf{Postcondizione}: 
+							\item \textbf{Scenario principale}:
+							\item \textbf{Inclusioni}:
+							\item \textbf{Estensioni}:
+							\item \textbf{Scenari alternativi}:
+						\end{itemize}
+						
 					\subsubsection{Caso d'uso UC9.1.2.1.2: Modifica nome questionario}
 					\label{UC9.1.2.1.2}
 					\begin{figure}[h]
@@ -205,12 +206,12 @@
 						\item \textbf{Scenari alternativi}:
 					\end{itemize}
 					
-					\subsubsection{Caso d'uso UC9.1.2.1.3: Modifica categorie questionario}
+					\subsubsection{Caso d'uso UC9.1.2.1.3: Modifica argomenti questionario}
 					\label{UC9.1.2.1.3}
 					\begin{figure}[h]
 						\centering
 					\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-						\caption{UC9.1.2.1.3: Modifica categorie questionario}
+						\caption{UC9.1.2.1.3: Modifica argomenti questionario}
 					\end{figure}
 					\FloatBarrier
 					\begin{itemize}
@@ -224,12 +225,12 @@
 						\item \textbf{Scenari alternativi}:
 					\end{itemize}
 					
-						\subsubsection{Caso d'uso UC9.1.2.1.3.1: Crea categoria}
+						\subsubsection{Caso d'uso UC9.1.2.1.3.1: Crea argomento}
 						\label{UC9.1.2.1.3.1}
 						\begin{figure}[h]
 							\centering
 						\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-							\caption{UC9.1.2.1.3.1: Crea categoria}
+							\caption{UC9.1.2.1.3.1: Crea argomento}
 						\end{figure}
 						\FloatBarrier
 						\begin{itemize}
@@ -242,6 +243,44 @@
 							\item \textbf{Estensioni}:
 							\item \textbf{Scenari alternativi}:
 						\end{itemize}
+						
+							\subsubsection{Caso d'uso UC9.1.2.1.3.1.1: Inserisci nome nuovo argomento}
+							\label{UC9.1.2.1.3.1.1}
+							\begin{figure}[h]
+								\centering
+								\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
+								\caption{UC9.1.2.1.3.1.1: Inserisci nome nuovo argomento}
+							\end{figure}
+							\FloatBarrier
+							\begin{itemize}
+								\item \textbf{Attori}: 
+								\item \textbf{Descrizione}: 
+								\item \textbf{Precondizione}: 
+								\item \textbf{Postcondizione}: 
+								\item \textbf{Scenario principale}:
+								\item \textbf{Inclusioni}:
+								\item \textbf{Estensioni}:
+								\item \textbf{Scenari alternativi}:
+							\end{itemize}
+							
+							\subsubsection{Caso d'uso UC9.1.2.1.3.1.2: Conferma creazione nuovo argomento}
+							\label{UC9.1.2.1.3.1.2}
+							\begin{figure}[h]
+								\centering
+								\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
+								\caption{UC9.1.2.1.3.1.2: Conferma creazione nuovo argomento}
+							\end{figure}
+							\FloatBarrier
+							\begin{itemize}
+								\item \textbf{Attori}: 
+								\item \textbf{Descrizione}: 
+								\item \textbf{Precondizione}: 
+								\item \textbf{Postcondizione}: 
+								\item \textbf{Scenario principale}:
+								\item \textbf{Inclusioni}:
+								\item \textbf{Estensioni}:
+								\item \textbf{Scenari alternativi}:
+							\end{itemize}
 						
 					\subsubsection{Caso d'uso UC9.1.2.1.4: Gestione domande}
 					\label{UC9.1.2.1.4}
@@ -262,12 +301,12 @@
 						\item \textbf{Scenari alternativi}:
 					\end{itemize}
 					
-						\subsubsection{Caso d'uso UC9.1.2.1.4.1: Seleziona altre domande}
+						\subsubsection{Caso d'uso UC9.1.2.1.4.1: Aggiungi altre domande}
 						\label{UC9.1.2.1.4.1}
 						\begin{figure}[h]
 							\centering
 						\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-							\caption{UC9.1.2.1.4.1: Seleziona altre domande}
+							\caption{UC9.1.2.1.4.1: Aggiungi altre domande}
 						\end{figure}
 						\FloatBarrier
 						\begin{itemize}
@@ -278,7 +317,7 @@
 							\item \textbf{Scenario principale}:
 							\item \textbf{Inclusioni}:
 							\item \textbf{Estensioni}:
-							\item \textbf{Scenari alternativi}:
+							\item \textbf{Scenari alternativi}: la domanda non è presente tra quelle archiviate nel database, perciò l'utente può creare una nuova domanda (UC8.1)
 						\end{itemize}
 							
 						\subsubsection{Caso d'uso UC9.1.2.1.4.2: Elimina domande}
@@ -300,45 +339,26 @@
 							\item \textbf{Scenari alternativi}:
 						\end{itemize}
 						
-						\subsubsection{Caso d'uso UC9.1.2.1.4.3: Crea domanda}
-						\label{UC9.1.2.1.4.3}
-						\begin{figure}[h]
-							\centering
-						\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-							\caption{UC9.1.2.1.4.3: Crea domanda}
-						\end{figure}
-						\FloatBarrier
-						\begin{itemize}
-							\item \textbf{Attori}: 
-							\item \textbf{Descrizione}: 
-							\item \textbf{Precondizione}: 
-							\item \textbf{Postcondizione}: 
-							\item \textbf{Scenario principale}:
-							\item \textbf{Inclusioni}:
-							\item \textbf{Estensioni}:
-							\item \textbf{Scenari alternativi}:
-						\end{itemize}
-						
-					\subsubsection{Caso d'uso UC9.1.2.1.5: Resoconto modifiche}
-					\label{UC9.1.2.1.5}
-					\begin{figure}[h]
-						\centering
-					\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-						\caption{UC9.1.2.1.5: Resoconto modifiche}
-					\end{figure}
-					\FloatBarrier
-					\begin{itemize}
-						\item \textbf{Attori}: 
-						\item \textbf{Descrizione}: 
-						\item \textbf{Precondizione}: 
-						\item \textbf{Postcondizione}: 
-						\item \textbf{Scenario principale}:
-						\item \textbf{Inclusioni}:
-						\item \textbf{Estensioni}:
-						\item \textbf{Scenari alternativi}:
-					\end{itemize}
-					
-					\subsubsection{Caso d'uso UC9.1.2.1.6: Conferma modifiche}
+							\subsubsection{Caso d'uso UC9.1.2.1.4.2.1: Conferma eliminazione domanda}
+							\label{UC9.1.2.1.4.2.1}
+							\begin{figure}[h]
+								\centering
+								\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
+								\caption{UC9.1.2.1.4.2.1: Conferma eliminazione domanda}
+							\end{figure}
+							\FloatBarrier
+							\begin{itemize}
+								\item \textbf{Attori}: 
+								\item \textbf{Descrizione}: 
+								\item \textbf{Precondizione}: 
+								\item \textbf{Postcondizione}: 
+								\item \textbf{Scenario principale}:
+								\item \textbf{Inclusioni}:
+								\item \textbf{Estensioni}:
+								\item \textbf{Scenari alternativi}:
+							\end{itemize}
+																
+					\subsubsection{Caso d'uso UC9.1.2.1.5: Conferma modifiche}
 					\label{UC9.1.2.1.6}
 					\begin{figure}[h]
 						\centering
@@ -356,26 +376,7 @@
 						\item \textbf{Estensioni}:
 						\item \textbf{Scenari alternativi}:
 					\end{itemize}
-					
-					\subsubsection{Caso d'uso UC9.1.2.1.7: Annulla modifiche}
-					\label{UC9.1.2.1.7}
-					\begin{figure}[h]
-						\centering
-					\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-						\caption{UC9.1.2.1.7: Annulla modifiche}
-					\end{figure}
-					\FloatBarrier
-					\begin{itemize}
-						\item \textbf{Attori}: 
-						\item \textbf{Descrizione}: 
-						\item \textbf{Precondizione}: 
-						\item \textbf{Postcondizione}: 
-						\item \textbf{Scenario principale}:
-						\item \textbf{Inclusioni}:
-						\item \textbf{Estensioni}:
-						\item \textbf{Scenari alternativi}:
-					\end{itemize}
-					
+										
 			\subsubsection{Caso d'uso UC9.1.2.2: Elimina questionario}
 			\label{UC9.1.2.2}
 			\begin{figure}[h]
@@ -413,32 +414,13 @@
 					\item \textbf{Estensioni}:
 					\item \textbf{Scenari alternativi}:
 				\end{itemize}
-				
-				\subsubsection{Caso d'uso UC9.1.2.2.2: Annulla eliminazione}
-				\label{UC9.1.2.2.2}
-				\begin{figure}[h]
-					\centering
-				\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-					\caption{UC9.1.2.2.2: Annulla eliminazione}
-				\end{figure}
-				\FloatBarrier
-				\begin{itemize}
-					\item \textbf{Attori}: 
-					\item \textbf{Descrizione}: 
-					\item \textbf{Precondizione}: 
-					\item \textbf{Postcondizione}: 
-					\item \textbf{Scenario principale}:
-					\item \textbf{Inclusioni}:
-					\item \textbf{Estensioni}:
-					\item \textbf{Scenari alternativi}:
-				\end{itemize}
-				
+								
 		\subsubsection{Caso d'uso UC9.1.3: Visualizza cronologia questionari svolti}
 		\label{UC9.1.3}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-			\caption{UC9.1.1: Visualizza questionari preferiti}
+			\caption{UC9.1.3: Visualizza cronologia questionari svolti}
 		\end{figure}
 		\FloatBarrier
 		\begin{itemize}
@@ -449,18 +431,16 @@
 			\item \textbf{Scenario principale}: 
 			\begin{enumerate}
 				\item L'utente può compilare un questionario di nuovo (UC7);
-				\item L'utente può togliere dai preferiti un questionario (UC9.1.1.1);
-				\item L'utente può aggiungere un questionario ai preferiti (UC9.1.3.1);
-				\item L'utente può visualizzare le statistiche di un questionario (UC9.1.3.2);
+				\item L'utente può visualizzare le statistiche di un questionario (UC9.1.3.1);
 			\end{enumerate}
 		\end{itemize}
 		
-				\subsubsection{Caso d'uso UC9.1.3.1: Aggiungere questionario ai preferiti}
+				\subsubsection{Caso d'uso UC9.1.3.1: Visualizzare le statistiche di un questionario}
 				\label{UC9.1.3.1}
 				\begin{figure}[h]
 					\centering
 					\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-					\caption{UC9.1.3.1: Aggiungere questionario ai preferiti}
+					\caption{UC9.1.3.1: Visualizzare le statistiche di un questionario}
 				\end{figure}
 				\FloatBarrier
 				\begin{itemize}
@@ -473,25 +453,8 @@
 					\item \textbf{Estensioni}:
 					\item \textbf{Scenari alternativi}:
 				\end{itemize}
-				
-				\subsubsection{Caso d'uso UC9.1.3.2: Visualizzare le statistiche di un questionario}
-				\label{UC9.1.3.2}
-				\begin{figure}[h]
-					\centering
-					\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-					\caption{UC9.1.3.2: Visualizzare le statistiche di un questionario}
-				\end{figure}
-				\FloatBarrier
-				\begin{itemize}
-					\item \textbf{Attori}: 
-					\item \textbf{Descrizione}: 
-					\item \textbf{Precondizione}: 
-					\item \textbf{Postcondizione}: 
-					\item \textbf{Scenario principale}:
-					\item \textbf{Inclusioni}:
-					\item \textbf{Estensioni}:
-					\item \textbf{Scenari alternativi}:
-				\end{itemize}
+						
+
 				
 	\subsubsection{Caso d'uso UC9.2: Crea questionari}
 	\label{UC9.2}
@@ -531,8 +494,8 @@
 			\item \textbf{Scenari alternativi}:
 		\end{itemize}
 		
-			\subsubsection{Caso d'uso UC9.2: Cambia tipologia utente}
-			\label{UC9.2}
+			\subsubsection{Caso d'uso UC9.2.1.1: Cambia tipologia utente}
+			\label{UC9.2.1.1}
 			\begin{figure}[h]
 				\centering
 			\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
@@ -569,12 +532,12 @@
 			\item \textbf{Scenari alternativi}:
 		\end{itemize}
 		
-		\subsubsection{Caso d'uso UC9.2.3: Seleziona argomento questionario}
+		\subsubsection{Caso d'uso UC9.2.3: Seleziona argomenti questionario}
 		\label{UC9.2.3}
 		\begin{figure}[h]
 			\centering
 		\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-			\caption{UC9.2.3: Seleziona categorie questionario}
+			\caption{UC9.2.3: Seleziona argomenti questionario}
 		\end{figure}
 		\FloatBarrier
 		\begin{itemize}
@@ -593,7 +556,7 @@
 			\begin{figure}[h]
 				\centering
 			\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-				\caption{UC9.2.3.1: Crea categoria}
+				\caption{UC9.2.3.1: Crea argomento}
 			\end{figure}
 			\FloatBarrier
 			\begin{itemize}
@@ -626,12 +589,12 @@
 			\item \textbf{Scenari alternativi}:
 		\end{itemize}
 		
-			\subsubsection{Caso d'uso UC9.2.4.1: Genera automaticamente domande}
+			\subsubsection{Caso d'uso UC9.2.4.1: Seleziona domande}	
 			\label{UC9.2.4.1}
 			\begin{figure}[h]
 				\centering
 			\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-				\caption{UC9.2.4.1: Genera automaticamente domande}
+				\caption{UC9.2.4.1: Seleziona domande}
 			\end{figure}
 			\FloatBarrier
 			\begin{itemize}
@@ -645,45 +608,26 @@
 				\item \textbf{Scenari alternativi}:
 			\end{itemize}
 			
-			\subsubsection{Caso d'uso UC9.2.4.2: Seleziona domande}	
-			\label{UC9.2.4.2}
-			\begin{figure}[h]
-				\centering
+		\subsubsection{Caso d'uso UC9.2.5: Conclusione questionario}
+		\label{UC9.2.6}
+		\begin{figure}[h]
+			\centering
 			\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-				\caption{UC9.2.4.2: Seleziona domande}
-			\end{figure}
-			\FloatBarrier
-			\begin{itemize}
-				\item \textbf{Attori}: 
-				\item \textbf{Descrizione}: 
-				\item \textbf{Precondizione}: 
-				\item \textbf{Postcondizione}: 
-				\item \textbf{Scenario principale}:
-				\item \textbf{Inclusioni}:
-				\item \textbf{Estensioni}:
-				\item \textbf{Scenari alternativi}:
-			\end{itemize}
-			
-				\subsubsection{Caso d'uso UC9.2.4.2.1: Crea domanda}
-				\label{UC9.2.4.2.1}
-				\begin{figure}[h]
-					\centering
-				\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-					\caption{UC9.2.4.2.1: Crea domanda}
-				\end{figure}
-				\FloatBarrier
-				\begin{itemize}
-					\item \textbf{Attori}: 
-					\item \textbf{Descrizione}: 
-					\item \textbf{Precondizione}: 
-					\item \textbf{Postcondizione}: 
-					\item \textbf{Scenario principale}:
-					\item \textbf{Inclusioni}:
-					\item \textbf{Estensioni}:
-					\item \textbf{Scenari alternativi}:
-				\end{itemize}
+			\caption{UC9.2.6: Conclusione questionario}
+		\end{figure}
+		\FloatBarrier
+		\begin{itemize}
+			\item \textbf{Attori}: 
+			\item \textbf{Descrizione}: 
+			\item \textbf{Precondizione}: 
+			\item \textbf{Postcondizione}: 
+			\item \textbf{Scenario principale}:
+			\item \textbf{Inclusioni}:
+			\item \textbf{Estensioni}:
+			\item \textbf{Scenari alternativi}:
+		\end{itemize}
 				
-		\subsubsection{Caso d'uso UC9.2.5: Resoconto questionario}
+		\subsubsection{Caso d'uso UC9.2.6: Resoconto questionario}
 		\label{UC9.2.5}
 		\begin{figure}[h]
 			\centering
@@ -702,7 +646,7 @@
 			\item \textbf{Scenari alternativi}:
 		\end{itemize}
 		
-		\subsubsection{Caso d'uso UC9.2.6: Conferma questionario}
+		\subsubsection{Caso d'uso UC9.2.7: Approvazione questionario}
 		\label{UC9.2.6}
 		\begin{figure}[h]
 			\centering
@@ -720,24 +664,6 @@
 			\item \textbf{Estensioni}:
 			\item \textbf{Scenari alternativi}:
 		\end{itemize}
-		
-		\subsubsection{Caso d'uso UC9.2.7: Annulla questionario}
-		\label{UC9.2.7}
-		\begin{figure}[h]
-			\centering
-		\includegraphics[scale=0.7,keepaspectratio]{UML/UC9.png}
-			\caption{UC9.2.7: Annulla questionario}
-		\end{figure}
-		\FloatBarrier
-		\begin{itemize}
-			\item \textbf{Attori}: 
-			\item \textbf{Descrizione}: 
-			\item \textbf{Precondizione}: 
-			\item \textbf{Postcondizione}: 
-			\item \textbf{Scenario principale}:
-			\item \textbf{Inclusioni}:
-			\item \textbf{Estensioni}:
-			\item \textbf{Scenari alternativi}:
-		\end{itemize}
-
-		
+	 
+	
+	
