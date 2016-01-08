@@ -1,11 +1,11 @@
 \subsection{Caso d'uso UC8: Gestione delle domande}
 	
-\subsubsection{UC8.1: Creazione nuova domanda}
+\subsubsection{Caso d'uso UC8.1: Creazione nuova domanda}
 	\label{UC8.1}
 	\begin{figure}[h]
 		\centering
 			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1.png}
-		\caption{UC8.1: Creazione nuova domanda}
+		\caption{Caso d'uso UC8.1: Creazione nuova domanda}
 	\end{figure}
 	\FloatBarrier
 	\begin{itemize}
@@ -14,9 +14,9 @@
 		\item		
 			\textbf{Scopo e descrizione}: L'utente autenticato crea una nuova domanda, utile all'apprendimento di un certo argomento;
 		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
+			\textbf{Precondizione}: L'utente è autenticato presso il sistema. 
 		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta creazione.		
+			\textbf{	Postcondizione}: L'utente riceve conferma dell'avvenuta creazione.		
 		\item
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
@@ -41,56 +41,56 @@
 				\end{itemize}
 			In tal caso il sistema ripresenta il modulo di creazione della domanda, presentando un messaggio d'errore.
 	\end{itemize}
-	\subsubsection{UC8.1.1: Selezione opzione creazione domanda}
+	\subsubsection{Caso d'uso UC8.1.1: Selezione opzione creazione domanda}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato seleziona l'opzione per la creazione di una domanda;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
-			\textbf{Post-condizione}: il sistema presenta all'utente autenticato il modulo per creare la domanda.
+			\textbf{Postcondizione}: il sistema presenta all'utente autenticato il modulo per creare la domanda.
 	\end{itemize}	
-	\subsubsection{UC8.1.2: Compilazione campi dati}
+	\subsubsection{Caso d'uso UC8.1.2: Compilazione campi dati}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato compila i campi dati del modulo per la creazione della domanda;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato ha selezionato l'opzione per creare la domanda;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato ha selezionato l'opzione per creare la domanda;
 		\item
-			\textbf{Post-condizione}: i campi dati del modulo di creazione sono riempiti.
+			\textbf{Postcondizione}: i campi dati del modulo di creazione sono riempiti.
 	\end{itemize}	
-	\subsubsection{UC8.1.3: Conferma creazione}
+	\subsubsection{Caso d'uso UC8.1.3: Conferma creazione}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato conferma la creazione della domanda per essere inserita nel DB;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
-			\textbf{Post-condizione}: il sistema ha ricevuto i dati per la registrazione.
+			\textbf{Postcondizione}: il sistema ha ricevuto i dati per la registrazione.
 	\end{itemize}	
-	\subsubsection{UC8.1.4: Visualizzazione errore creazione}
+	\subsubsection{Caso d'uso UC8.1.4: Visualizzazione errore creazione}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente visualizza un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
 		\item		
-			\textbf{Pre-condizione}: il sistema ha ricevuto dei dati errati per creazione;
+			\textbf{Precondizione}: il sistema ha ricevuto dei dati errati per creazione;
 		\item
-			\textbf{Post-condizione}: il sistema mostra un messaggio d'errore.
+			\textbf{Postcondizione}: il sistema mostra un messaggio d'errore.
 	\end{itemize}	
-	\subsubsection{UC8.2: Modifica domanda esistente}
+	\subsubsection{Caso d'uso UC8.2: Modifica domanda esistente}
 	\label{UC8.2}
 	\begin{figure}[h]
 		\centering
 			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_2.png}
-		\caption{UC8.2: Modifica domanda esistente}
+		\caption{Caso d'uso UC8.2: Modifica domanda esistente}
 	\end{figure}
 	\FloatBarrier
 	\begin{itemize}
@@ -99,9 +99,9 @@
 		\item		
 			\textbf{Scopo e descrizione}: L'utente autenticato modifica una domanda da lui in precedenza creata per correggere errori ortografici o sintattici;
 		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema. 
+			\textbf{Precondizione}: L'utente è autenticato presso il sistema. 
 		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta modifica.
+			\textbf{	Postcondizione}: L'utente riceve conferma dell'avvenuta modifica.
 		\item
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
@@ -126,57 +126,57 @@
 				\end{itemize}
 			In tal caso il sistema ripresenta il modulo di modifica della domanda, presentando un messaggio d'errore.
 	\end{itemize}
-	\subsubsection{UC8.2.1: Selezione opzione modifica domanda}
+	\subsubsection{Caso d'uso UC8.2.1: Selezione opzione modifica domanda}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato seleziona l'opzione per compiere la modifica della domanda;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
-			\textbf{Post-condizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda.
+			\textbf{Postcondizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda.
 	\end{itemize}
-	\subsubsection{UC8.2.2: Modifica campi dati}
+	\subsubsection{Caso d'uso UC8.2.2: Modifica campi dati}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato modifica i dati della domanda selezionata;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda selezionata;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda selezionata;
 		\item
-			\textbf{Post-condizione}: i campi dati del modulo di modifica, già precompilati con i dati della domanda selezionata, sono modificati.
+			\textbf{Postcondizione}: i campi dati del modulo di modifica, già precompilati con i dati della domanda selezionata, sono modificati.
 	\end{itemize}		
-	\subsubsection{UC8.2.3: Conferma modifica}
+	\subsubsection{Caso d'uso UC8.2.3: Conferma modifica}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato conferma la modifica dei dati della domanda selezionata;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
-			\textbf{Post-condizione}: il sistema ha ricevuto i dati per la registrazione.
+			\textbf{Postcondizione}: il sistema ha ricevuto i dati per la registrazione.
 	\end{itemize}		
-	\subsubsection{UC8.2.4: Visualizzazione errore modifica}
+	\subsubsection{Caso d'uso UC8.2.4: Visualizzazione errore modifica}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente visualizza un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
 		\item		
-			\textbf{Pre-condizione}: il sistema ha ricevuto dei dati errati per la modifica;
+			\textbf{Precondizione}: il sistema ha ricevuto dei dati errati per la modifica;
 		\item
-			\textbf{Post-condizione}: il sistema mostra un messaggio d'errore.
+			\textbf{Postcondizione}: il sistema mostra un messaggio d'errore.
 	\end{itemize}	
 	
-	\subsubsection{UC8.3: Eliminazione domanda}	
+	\subsubsection{Caso d'uso UC8.3: Eliminazione domanda}	
 	\label{UC8.3}
 	\begin{figure}[h]
 		\centering
 			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_3.png}
-		\caption{UC8.3: Eliminazione domanda}
+		\caption{Caso d'uso UC8.3: Eliminazione domanda}
 	\end{figure}
 	\FloatBarrier
 	\begin{itemize}
@@ -185,9 +185,9 @@
 		\item		
 			\textbf{Scopo e descrizione}: L'utente autenticato elimina una domanda, da lui in precedenza creata, per motivi validi e giustificati;
 		\item
-			\textbf{Pre-condizione}: L'utente è autenticato presso il sistema;
+			\textbf{Precondizione}: L'utente è autenticato presso il sistema;
 		\item
-			\textbf{	Post-condizione}: L'utente riceve conferma dell'avvenuta eliminazione.
+			\textbf{	Postcondizione}: L'utente riceve conferma dell'avvenuta eliminazione.
 		\item
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
@@ -199,36 +199,36 @@
 					L'utente conferma l'eliminazione della domanda [UC8.3.3];
 	 			\end{enumerate}
 	\end{itemize}
-	\subsubsection{UC8.3.1: Selezione opzione eliminazione domanda}
+	\subsubsection{Caso d'uso UC8.3.1: Selezione opzione eliminazione domanda}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato seleziona l'opzione per compiere l' eliminazione di una domanda;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
-			\textbf{Post-condizione}: il sistema presenta all'utente autenticato lo strumento di selezione della domanda da eliminare.
+			\textbf{Postcondizione}: il sistema presenta all'utente autenticato lo strumento di selezione della domanda da eliminare.
 	\end{itemize}
-	\subsubsection{UC8.3.2: Selezione domanda da eliminare}
+	\subsubsection{Caso d'uso UC8.3.2: Selezione domanda da eliminare}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato seleziona, tramite uno specifico strumento presentato dal sistema, una domanda da eliminare;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda selezionata;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato il modulo per modificare la domanda selezionata;
 		\item
-			\textbf{Post-condizione}: i campi dati del modulo di modifica, già precompilati con i dati della domanda selezionata, sono modificati.
+			\textbf{Postcondizione}: i campi dati del modulo di modifica, già precompilati con i dati della domanda selezionata, sono modificati.
 	\end{itemize}		
-	\subsubsection{UC8.3.3: Conferma eliminazione}
+	\subsubsection{Caso d'uso UC8.3.3: Conferma eliminazione}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Scopo e descrizione}: l'utente autenticato conferma l'eliminazione della domanda dal sistema;
 		\item		
-			\textbf{Pre-condizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
-			\textbf{Post-condizione}: il sistema ha eliminato la domanda dal sistema.
+			\textbf{Postcondizione}: il sistema ha eliminato la domanda dal sistema.
 	\end{itemize}	
