@@ -14,9 +14,13 @@
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item L'utente autenticato può modificare il proprio nome utente (UC5.1);
-			\item L'utente autenticato può modificare la propria e-mail (UC5.2);
-			\item L'utente autenticato può modificare la propria password (UC5.3);
-			\item L'utente autenticato può eliminare il proprio account (UC5.4).
+			\item L'utente autenticato può modificare il proprio cognome utente (UC5.2);
+			\item L'utente autenticato può modificare il proprio username(UC5.3);
+			\item L'utente autenticato può inserire una nuova foto/immagine per il proprio profilo utente (UC5.4);
+			\item L'utente autenticato può modificare la propria e-mail (UC5.5);
+			\item L'utente autenticato può modificare la propria password (UC5.6);
+			\item L'utente autenticato può modificare la tipologia del proprio account (UC5.7)
+			\item L'utente autenticato può eliminare il proprio account (UC5.8).
 		\end{enumerate} 
 	\item \textbf{Scenari alternativi}: se le operazioni di modifica non vengono confermate il sistema non le rende persistenti e visualizza le funzionalità di gestione del profilo utente. 
 \end{itemize}
@@ -30,14 +34,13 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
-	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio nome e cognome utente;
-	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare nome e cognome utente;
-	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche al nome e cognome utente;
+	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio nome;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare il nome utente;
+	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche al nome utente;
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item L'utente autenticato può inserire un nuovo nome utente (UC5.1.1);
-			\item L'utente autenticato può inserire un nuovo cognome utente (UC5.1.2);
-			\item L'utente autenticato può confermare le modifiche al nome e cognome utente (UC5.1.3).
+			\item L'utente autenticato può confermare le modifiche al nome utente (UC5.1.2).
 		\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
@@ -52,7 +55,37 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo nome utente.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.1.2: Inserimento nuovo cognome utente}
+\subsubsection{Caso d'uso UC5.1.2: Conferma modifiche nome utente}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche al proprio nome utente;
+	\item \textbf{Precondizione}: l'utente ha inserito un nuovo nome utente;
+	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate al nome utente;
+	\item \textbf{Scenario principale}: l'utente conferma le modifiche al nome utente.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.2: Modifica cognome utente}
+\label{UC5.2}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_2.png}
+	\caption{UC5.2: Modifica cognome utente}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio cognome;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare il cognome utente;
+	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche al cognome utente;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item L'utente autenticato può inserire un nuovo cognome utente (UC5.2.1);
+		\item L'utente autenticato può confermare le modifiche al cognome utente (UC5.2.2).
+	\end{enumerate}
+	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.2.1: Inserimento nuovo cognome utente}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -62,22 +95,103 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo cognome utente.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.1.3: Conferma modifiche nome e cognome utente}
+\subsubsection{Caso d'uso UC5.2.2: Conferma modifiche cognome utente}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
-	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche al proprio nome e cognome utente;
-	\item \textbf{Precondizione}: l'utente ha inserito nuovi nome e cognome utente;
-	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate al nome e cognome utente;
-	\item \textbf{Scenario principale}: l'utente conferma le modifiche al nome e cognome utente.
+	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche al proprio cognome utente;
+	\item \textbf{Precondizione}: l'utente ha inserito un nuovo cognome utente;
+	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate al cognome utente;
+	\item \textbf{Scenario principale}: l'utente conferma le modifiche al nome utente.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.2: Modifica e-mail}
-\label{UC5.2}
+\subsubsection{Caso d'uso UC5.3: Modifica username}
+\label{UC5.3}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_2.png}
-	\caption{UC5.2: Modifica e-mail}
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_3.png}
+	\caption{UC5.3: Modifica username utente}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può modificare il proprio username;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile modificare lo username;
+	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche allo username;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item L'utente autenticato può inserire un nuovo username (UC5.3.1);
+		\item L'utente autenticato può confermare le modifiche allo username (UC5.3.2).
+	\end{enumerate}
+	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.3.1: Inserimento nuovo username}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire un nuovo username;
+	\item \textbf{Precondizione}: il sistema richiede all'utente autenticato di inserire un nuovo username;
+	\item \textbf{Postcondizione}: l'utente autenticato ha inserito il nuovo username;
+	\item \textbf{Scenario principale}: l'utente autenticato inserisce il nuovo username.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.3.2: Conferma modifiche username}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare le modifiche al proprio username;
+	\item \textbf{Precondizione}: l'utente ha inserito un nuovo username;
+	\item \textbf{Postcondizione}: il sistema rende persistenti le modifiche effettuate allo username;
+	\item \textbf{Scenario principale}: l'utente conferma le modifiche allo username.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.4: Inserimento foto/immagine}
+\label{UC5.4}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_4.png}
+	\caption{UC5.4: Inserimento foto/immagine}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può inserire una foto/immagine per il proprio profilo utente;
+	\item \textbf{Precondizione}: il sistema presenta la schermata dove è possibile inserire foto/immagini;
+	\item \textbf{Postcondizione}: il sistema ha allegato la nuova foto/immagine al profilo utente;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item L'utente autenticato può caricare una nuova foto/immagine nel sistema (UC5.4.1);
+		\item L'utente autenticato può confermare l'inserimento della nuova foto/immagine (UC5.4.2).
+	\end{enumerate}
+	\item \textbf{Scenari alternativi}: l'utente autenticato annulla l'inserimento e il sistema lo riporta alla schermata di gestione del profilo utente.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.4.1: Caricamento foto/immagine}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può caricare una nuova foto/immagine;
+	\item \textbf{Precondizione}: il sistema richiede all'utente autenticato di caricare una nuova foto/immagine;
+	\item \textbf{Postcondizione}: l'utente autenticato ha caricato una nuova foto/immagine;
+	\item \textbf{Scenario principale}: l'utente autenticato carica una nuova foto/immagine.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.4.2: Conferma caricamento foto/immagine}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare il caricamento della nuova foto/immagine;
+	\item \textbf{Precondizione}: l'utente ha caricato una nuova foto/immagine;
+	\item \textbf{Postcondizione}: il sistema allega la nuova foto/immagine al profilo utente;
+	\item \textbf{Scenario principale}: l'utente conferma il caricamento della nuova foto/immagine.
+\end{itemize}
+
+
+\subsubsection{Caso d'uso UC5.5: Modifica e-mail}
+\label{UC5.5}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_5.png}
+	\caption{UC5.5: Modifica e-mail}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -86,13 +200,13 @@
 	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche all'indirizzo di posta elettronica;
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente autenticato può inserire un nuovo indirizzo di posta elettronica (UC5.2.1);
-			\item L'utente autenticato può confermare le modifiche al proprio indirizzo di posta elettronica (UC5.2.2).
+			\item L'utente autenticato può inserire un nuovo indirizzo di posta elettronica (UC5.5.1);
+			\item L'utente autenticato può confermare le modifiche al proprio indirizzo di posta elettronica (UC5.5.2).
 		\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.2.1: Inserimento nuova e-mail}
+\subsubsection{Caso d'uso UC5.5.1: Inserimento nuova e-mail}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -102,7 +216,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce un nuovo indirizzo di posta elettronica.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.2.2: Conferma modifiche e-mail}
+\subsubsection{Caso d'uso UC5.5.2: Conferma modifiche e-mail}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -112,12 +226,12 @@
 	\item \textbf{Scenario principale}: l'utente conferma le modifiche all'indirizzo di posta elettronica.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.3: Modifica password}
-\label{UC5.3}
+\subsubsection{Caso d'uso UC5.6: Modifica password}
+\label{UC5.6}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_3.png}
-	\caption{UC5: Modifica password}
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_6.png}
+	\caption{UC6: Modifica password}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -126,14 +240,14 @@
 	\item \textbf{Postcondizione}: il sistema ha reso persistenti le modifiche alla propria password;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
-		\item L'utente autenticato può inserire la propria vecchia password (UC5.3.1);
-		\item L'utente autenticato può inserire una nuova password (UC5.3.2);
-		\item L'utente autenticato può confermare la modifica della password (UC5.3.3).
+		\item L'utente autenticato può inserire la propria vecchia password (UC5.6.1);
+		\item L'utente autenticato può inserire una nuova password (UC5.6.2);
+		\item L'utente autenticato può confermare la modifica della password (UC5.6.3).
 	\end{enumerate}
 	\item \textbf{Scenari alternativi}: l'utente autenticato annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.3.1: Inserimento vecchia password}
+\subsubsection{Caso d'uso UC5.6.1: Inserimento vecchia password}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -143,7 +257,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce la vecchia password.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.3.2: Inserimento nuova password}
+\subsubsection{Caso d'uso UC5.6.2: Inserimento nuova password}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -153,7 +267,7 @@
 	\item \textbf{Scenario principale}: l'utente autenticato inserisce la nuova password.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.3.3: Conferma modifica password}
+\subsubsection{Caso d'uso UC5.6.3: Conferma modifica password}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
@@ -163,12 +277,52 @@
 	\item \textbf{Scenario principale}: l'utente conferma le modifiche alla password effettuate.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.4: Eliminazione account}
-\label{UC5.4}
+\subsubsection{Caso d'uso UC5.7: Cambio tipologia account}
+\label{UC5.7}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_4.png}
-	\caption{UC5.4: Eliminazione account}
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_7.png}
+	\caption{UC5.7: Eliminazione account}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può cambiare la tipologia del proprio account; 
+	\item \textbf{Precondizione}: il sistema visualizza l'opzione dove è possibile cambiare la tipologia del proprio account;
+	\item \textbf{Postcondizione}: il sistema ha cambiato la tipologia dell'account;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item L'utente può selezionare il nuovo tipo di account a cui passare (UC5.7.1)
+		\item L'utente può confermare il cambio di tipologia del proprio account (UC5.7.2).
+	\end{enumerate}
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.7.1: Selezione tipologia account}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può selezionare una nuova tipologia di account a cui passare;
+	\item \textbf{Precondizione}: il sistema offre all'utente la possibilità di cambiare tipologia di account;
+	\item \textbf{Postcondizione}: l'utente autenticato ha selezionato  una nuova tipologia di account;
+	\item \textbf{Scenario principale}: l'utente seleziona una tipologia di account a cui passare.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.7.2: Conferma cambio tipologia account}
+
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato;
+	\item \textbf{Descrizione}: l'utente autenticato può confermare la tipologia di account a cui passare;
+	\item \textbf{Precondizione}: l'utente ha selezionato la nuova tipologia di account;
+	\item \textbf{Postcondizione}: il sistema cambia la tipologia dell'account;
+	\item \textbf{Scenario principale}: l'utente conferma la nuova tipologia di account a cui passare.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC5.8: Eliminazione account}
+\label{UC5.8}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/UC5_8.png}
+	\caption{UC5.8: Eliminazione account}
 \end{figure}
 
 \begin{itemize}
@@ -178,11 +332,11 @@
 	\item \textbf{Postcondizione}: il sistema ha eliminato in maniera persistente il proprio account e tutti i relativi dati;
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC5.4.1).
+			\item L'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC5.8.1).
 		\end{enumerate}
 \end{itemize}
 
-\subsubsection{Caso d'uso UC5.4.1: Conferma eliminazione account}
+\subsubsection{Caso d'uso UC5.8.1: Conferma eliminazione account}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato;
