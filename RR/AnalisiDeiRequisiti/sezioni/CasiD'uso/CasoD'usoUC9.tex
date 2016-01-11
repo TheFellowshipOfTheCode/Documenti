@@ -124,8 +124,8 @@
 					\begin{enumerate}
 						\item L'utente può modificare la tipologia del questionario (UC9.1.2.1.1);
 						\item L'utente può modificare il nome del questionario (UC9.1.2.1.2);
-						\item L'utente può modificare gli argomenti del questionario (UC9.1.2.1.3);
-						\item L'utente può gestire le domande del questionario (UC9.1.2.1.4);
+						\item L'utente può modificare gli argomenti del questionario (UC9.3);
+						\item L'utente può gestire le domande del questionario (UC9.4);
 						\item L'utente può confermare le modifiche fatte (UC9.1.2.1.5).
 					\end{enumerate}
 			\end{itemize}
@@ -150,241 +150,7 @@
 						\item \textbf{Postcondizione}: l'utente ha modificato il nome del questionario; 
 						\item \textbf{Scenario principale}: l'utente modifica il nome del questionario;
 					\end{itemize}
-					
-					\subsubsection{Caso d'uso UC9.1.2.1.3: Modifica argomenti questionario}
-					\label{UC9.1.2.1.3}
-					\begin{figure}[h]
-						\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3.png}
-						\caption{UC9.1.2.1.3: Modifica argomenti questionario}
-					\end{figure}
-					\FloatBarrier
-					\begin{itemize}
-						\item \textbf{Attori}: \uau, \uaupro;
-						\item \textbf{Descrizione}: l'utente può decidere di modificare gli argomenti che riassumono il questionario, aggiungendone oppure togliendone qualcuno; 
-						\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Modifica argomenti questionario" tra le scelte possibili in UC9.1.2.1; 
-						\item \textbf{Postcondizione}: l'utente ha modificato gli argomenti che riassumono il questionario; 
-						\item \textbf{Scenario principale}:
-							\begin{enumerate}
-								\item L'utente può creare un nuovo argomento (UC9.1.2.1.3.1);
-								\item L'utente può aggiungere un nuovo argomento all'elenco di argomenti (UC9.1.2.1.3.2);
-								\item L'utente può eliminare un argomento (UC9.1.2.1.3.3);
-							\end{enumerate}
-						\item \textbf{Scenari alternativi}: l'utente elimina tutti gli argomenti. In questo caso deve inserirne almeno uno e viene mandato al caso d'uso UC9.1.2.1.3.2.
-					\end{itemize}
-					
-						\subsubsection{Caso d'uso UC9.1.2.1.3.1: Crea argomento}
-						\label{UC9.1.2.1.3.1}
-						\begin{figure}[h]
-							\centering
-						\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_1.png}
-							\caption{UC9.1.2.1.3.1: Crea argomento}
-						\end{figure}
-						\FloatBarrier
-						\begin{itemize}
-							\item \textbf{Attori}: \uau, \uaupro;
-							\item \textbf{Descrizione}: l'utente può creare un nuovo argomento non presente tra quelli già esistenti;
-							\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Crea argomento" tra le scelte possibili;
-							\item \textbf{Postcondizione}: l'utente ha creato un nuovo argomento; 
-							\item \textbf{Scenario principale}:
-								\begin{enumerate}
-									\item L'utente deve inserire il nome del nuovo argomento (UC9.1.2.1.3.1.1);
-									\item L'utente deve confermare il nuovo argomento (UC9.1.2.1.3.1.2).
-								\end{enumerate}
-						\end{itemize}
-						
-							\subsubsection{Caso d'uso UC9.1.2.1.3.1.1: Inserisci nome nuovo argomento}
-							\label{UC9.1.2.1.3.1.1}
-							\begin{itemize}
-								\item \textbf{Attori}: \uau, \uaupro;
-								\item \textbf{Descrizione}: l'utente inserisce il nome del nuovo argomento;
-								\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Inserisci nome utente" tra le scelte possibili in UC9.1.2.1.3.1;
-								\item \textbf{Postcondizione}: l'utente ha inserito il nome del nuovo argomento;
-								\item \textbf{Scenario principale}: l'utente inserisce il nome del nuovo argomento;
-							\end{itemize}
-							
-							\subsubsection{Caso d'uso UC9.1.2.1.3.1.2: Conferma creazione nuovo argomento}
-							\label{UC9.1.2.1.3.1.2}
-							\begin{itemize}
-								\item \textbf{Attori}: \uau, \uaupro;
-								\item \textbf{Descrizione}: l'utente conferma il nuovo argomento;
-								\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Conferma creazione nuovo argomento" tra le scelte possibili in UC9.1.2.1.3.1;
-								\item \textbf{Postcondizione}: l'utente ha confermato la creazione di un nuovo argomento;
-								\item \textbf{Scenario principale}: l'utente conferma la creazione di un nuovo argomento;
-								\item \textbf{Scenari alternativi}: 
-									\begin{enumerate}
-										\item L'utente seleziona un nome che già esiste. Viene riportato alla situazione del caso d'uso UC9.1.2.1.3.1.1;
-										\item L'utente annulla l'operazione e viene portato alla situazione del caso d'uso UC9.1.2.1.3;
-									\end{enumerate}
-						
-							\end{itemize}
-						
-						\subsubsection{Caso d'uso UC9.1.2.1.3.2: Aggiungi argomento}
-						\label{UC9.1.2.1.3.2}
-						\begin{figure}[h]
-							\centering
-							\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_2.png}
-							\caption{UC9.1.2.1.3.2: Aggiungi argomento}
-						\end{figure}
-						\FloatBarrier
-						\begin{itemize}
-							\item \textbf{Attori}: \uau, \uaupro;
-							\item \textbf{Descrizione}: l'utente può aggiungere altri argomenti selezionandoli tra quelli archiviati;  
-							\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Aggiungi argomento" tra le scelte possibili;
-							\item \textbf{Postcondizione}: l'utente ha selezionato dei nuovi argomenti;
-							\item \textbf{Scenario principale}: l'utente può ricercare argomenti tra quelli archiviati (UC9.1.2.1.3.2.1);
-						\end{itemize}
-						
-							\subsubsection{Caso d'uso UC9.1.2.1.3.2.1: Ricerca argomenti}
-							\label{UC9.1.2.1.3.2.1}
-							\begin{figure}[h]
-								\centering
-								\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_2_1.png}
-								\caption{UC9.1.2.1.3.2: Aggiungi argomento}
-							\end{figure}
-							\FloatBarrier
-							\begin{itemize}
-								\item \textbf{Attori}: \uau, \uaupro;
-								\item \textbf{Descrizione}: l'utente può eseguire una ricerca tra gli argomenti archiviati; 
-								\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Ricerca argomenti" tra le scelte possibili in UC9.1.2.1.3.2;
-								\item \textbf{Postcondizione}: l'utente ha ricercato tra gli argomenti archiviati;
-								\item \textbf{Scenario principale}: l'utente può selezionare gli argomenti (UC9.1.2.1.3.2.1.1); 
-								\item \textbf{Scenari alternativi}: nel caso in cui non ci sia nessun risultato dalla ricerca all'utente viene proposta la possibilità di creare un nuovo argomento (UC9.1.2.1.3.1);
-							\end{itemize}
-							
-								\subsubsection{Caso d'uso UC9.1.2.1.3.2.1.1: Seleziona argomenti}
-								\label{UC9.1.2.1.3.2.2}
-								\begin{itemize}
-									\item \textbf{Attori}: \uau, \uaupro;
-									\item \textbf{Descrizione}: l'utente può selezionare gli argomenti tra quelli ottenuti dalla ricerca;
-									\item \textbf{Precondizione}: l'utente ha ottenuto una lista di risultati;
-									\item \textbf{Postcondizione}: l'utente ha selezionato degli argomenti; 
-									\item \textbf{Scenario principale}: l'utente seleziona gli argomenti;
-								\end{itemize}
-						
-						\subsubsection{Caso d'uso UC9.1.2.1.3.3: Elimina argomento}
-						\label{UC9.1.2.1.3.3}
-						\begin{figure}[h]
-							\centering
-							\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_3.png}
-							\caption{UC9.1.2.1.3.3: Elimina argomento}
-						\end{figure}
-						\FloatBarrier
-						\begin{itemize}
-							\item \textbf{Attori}: \uau, \uaupro;
-							\item \textbf{Descrizione}: l'utente può eliminare un argomento da un questionario;
-							\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Elimina argomento" tra le scelte possibili;
-							\item \textbf{Postcondizione}: l'utente ha eliminato un argomento;
-							\item \textbf{Scenario principale}: l'utente deve confermare di voler eliminare l'argomento (UC9.1.2.1.3.3.1); 
-							\item \textbf{Scenari alternativi}: l'utente ha cancellato tutti gli argomenti. Deve allora inserirne almeno uno, viene allora rimandato a UC9.1.2.1.3.2.
-						\end{itemize}
-						
-							\subsubsection{Caso d'uso UC9.1.2.1.3.3.1: Conferma elimina argomento}
-							\label{UC9.1.2.1.3.3.1}
-							\begin{itemize}
-								\item \textbf{Attori}: \uau, \uaupro;
-								\item \textbf{Descrizione}: l'utente deve confermare di voler eliminare l'argomento;
-								\item \textbf{Precondizione}: l'utente ha deciso di voler eliminare l'argomento;
-								\item \textbf{Postcondizione}: l'utente ha eliminato un argomento;
-								\item \textbf{Scenario principale}: l'utente conferma di voler eliminare l'argomento. 
-								\item \textbf{Scenari alternativi}: l'utente annulla l'eliminazione dell'argomento, viene allora rimandato a UC9.1.2.1.3.
-							\end{itemize}						
-						
-					\subsubsection{Caso d'uso UC9.1.2.1.4: Gestione domande}
-					\label{UC9.1.2.1.4}
-					\begin{figure}[h]
-						\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4.png}
-						\caption{UC9.1.2.1.4: Gestione domande}
-					\end{figure}
-					\FloatBarrier
-					\begin{itemize}
-						\item \textbf{Attori}: \uau, \uaupro;
-						\item \textbf{Descrizione}: l'utente può gestire le domande di un proprio questionario, aggiungendone oppure togliendone;
-						\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Gestione domande" tra le scelte possibili in UC9.1.2.1.4;
-						\item \textbf{Postcondizione}: l'utente ha gestito le domande di un questionario;
-						\item \textbf{Scenario principale}: 
-							\begin{enumerate}
-								\item L'utente aggiunge altre domande (UC9.1.2.1.4.1);
-								\item L'utente elimina una domanda (UC9.1.2.1.4.2).
-							\end{enumerate}
-					\end{itemize}
-					
-						\subsubsection{Caso d'uso UC9.1.2.1.4.1: Aggiungi altre domande}
-						\label{UC9.1.2.1.4.1}
-						\begin{figure}[h]
-							\centering
-						\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4_1.png}
-							\caption{UC9.1.2.1.4.1: Aggiungi altre domande}
-						\end{figure}
-						\FloatBarrier
-						\begin{itemize}
-							\item \textbf{Attori}: \uau, \uaupro;
-							\item \textbf{Descrizione}: l'utente può aggiungere altre domande cercando tra quelle già memorizzate nell'archivio oppure creandone una nuova; 
-							\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Aggiungi altre domande" tra le scelte possibili in UC9.1.2.1.4;
-							\item \textbf{Postcondizione}: l'utente ha aggiunto nuove domande;
-							\item \textbf{Scenario principale}:
-								\begin{enumerate}
-									\item L'utente può eseguire una ricerca nelle domande archiviate (UC9.1.2.1.4.1.1);
-									\item L'utente può creare una nuova domanda (UC8.1);
-								\end{enumerate}
-						\end{itemize}
-						
-							\subsubsection{Caso d'uso UC9.1.2.1.4.1.1: Ricerca domande}
-							\label{UC9.1.2.1.4.1.1}
-							\begin{figure}[h]
-								\centering
-								\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4_1_1.png}
-								\caption{UC9.1.2.1.4.1.1: Ricerca domande}
-							\end{figure}
-							\FloatBarrier
-							\begin{itemize}
-								\item \textbf{Attori}: \uau, \uaupro;
-								\item \textbf{Descrizione}: l'utente può eseguire una ricerca tra le domande archiviate; 
-								\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Ricerca domande" tra le scelte possibili in UC9.1.2.1.4.1;
-								\item \textbf{Postcondizione}: l'utente ha ricercato tra le domande archiviate;
-								\item \textbf{Scenario principale}: l'utente può selezionare le domande (UC9.1.2.1.4.1.1.1); 
-								\item \textbf{Scenari alternativi}: nel caso in cui non ci sia nessun risultato dalla ricerca all'utente viene proposta la possibilità di creare una nuova domanda (UC8.1);
-							\end{itemize}
-							
-								\subsubsection{Caso d'uso UC9.1.2.1.4.1.1.1: Seleziona domande}
-								\label{UC9.1.2.1.4.1.1.1}
-								\begin{itemize}
-									\item \textbf{Attori}: \uau, \uaupro;
-									\item \textbf{Descrizione}: l'utente può selezionare le domande tra quelle ottenute dalla ricerca;
-									\item \textbf{Precondizione}: l'utente ha ottenuto una lista di risultati;
-									\item \textbf{Postcondizione}: l'utente ha selezionato delle domande; 
-									\item \textbf{Scenario principale}: l'utente seleziona le domande;
-								\end{itemize}
-							
-						\subsubsection{Caso d'uso UC9.1.2.1.4.2: Elimina domanda}
-						\label{UC9.1.2.1.4.2}
-						\begin{figure}[h]
-							\centering
-						\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4_2.png}
-							\caption{UC9.1.2.1.4.2: Elimina domande}
-						\end{figure}
-						\FloatBarrier
-						\begin{itemize}
-							\item \textbf{Attori}: \uau, \uaupro;
-							\item \textbf{Descrizione}: l'utente può eliminare una domanda da un questionario;
-							\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Elimina domanda" tra le scelte possibili in UC9.1.2.1.4;
-							\item \textbf{Postcondizione}: l'utente ha eliminato una domanda;
-							\item \textbf{Scenario principale}: l'utente deve confermare di voler eliminare la domanda (UC9.1.2.1.4.2.1); 
-							\item \textbf{Scenari alternativi}: l'utente ha cancellato tutte le domande. Deve allora inserirne almeno una, viene allora rimandato a UC9.1.2.1.4.1.
-						\end{itemize}
-						
-							\subsubsection{Caso d'uso UC9.1.2.1.4.2.1: Conferma eliminazione domanda}
-							\label{UC9.1.2.1.4.2.1}
-							\begin{itemize}
-								\item \textbf{Attori}: \uau, \uaupro;
-								\item \textbf{Descrizione}: l'utente deve confermare di voler eliminare la domanda;
-								\item \textbf{Precondizione}: l'utente ha deciso di voler eliminare la domanda;
-								\item \textbf{Postcondizione}: l'utente ha eliminato una domanda;
-								\item \textbf{Scenario principale}: l'utente conferma di voler eliminare la domanda;
-								\item \textbf{Scenari alternativi}: l'utente annulla l'eliminazione della domanda, viene allora rimandato a UC9.1.2.1.4.
-							\end{itemize}	
-																
+																					
 					\subsubsection{Caso d'uso UC9.1.2.1.5: Conferma modifiche}
 					\label{UC9.1.2.1.6}
 					\begin{itemize}
@@ -512,11 +278,11 @@
 			\item \textbf{Postcondizione}: l'utente ha selezionato gli argomenti che riassumono il questionario; 
 			\item \textbf{Scenario principale}:
 			\begin{enumerate}
-				\item L'utente può creare un nuovo argomento (UC9.1.2.1.3.1);
-				\item L'utente può aggiungere un nuovo argomento all'elenco di argomenti (UC9.1.2.1.3.2);
-				\item L'utente può eliminare un argomento (UC9.1.2.1.3.3);
+				\item L'utente può creare un nuovo argomento (UC9.3.1);
+				\item L'utente può aggiungere un nuovo argomento all'elenco di argomenti (UC9.3.2);
+				\item L'utente può eliminare un argomento (UC9.3.3);
 			\end{enumerate}
-			\item \textbf{Scenari alternativi}: l'utente elimina tutti gli argomenti. In questo caso deve inserirne almeno uno e viene mandato al caso d'uso UC9.1.2.1.3.1.
+			\item \textbf{Scenari alternativi}: l'utente elimina tutti gli argomenti. In questo caso deve inserirne almeno uno e viene mandato al caso d'uso UC9.3.1.
 		\end{itemize}
 							
 		\subsubsection{Caso d'uso UC9.2.4: Gestione domande}
@@ -534,8 +300,8 @@
 			\item \textbf{Postcondizione}: l'utente ha gestito le domande di un questionario;
 			\item \textbf{Scenario principale}: 
 			\begin{enumerate}
-				\item L'utente aggiunge altre domande (UC9.1.2.1.4.1);
-				\item L'utente elimina una domanda (UC9.1.2.1.4.2).
+				\item L'utente aggiunge altre domande (UC9.4.1);
+				\item L'utente elimina una domanda (UC9.4.2).
 			\end{enumerate}
 		\end{itemize}
 		
@@ -580,5 +346,240 @@
 				\item \textbf{Scenari alternativi}: l'utente non approva il questionario e quest'ultimo non viene archiviato. L'utente viene mandato alla pagina precedente.
 			\end{itemize}
 	 
-	
-	
+	 
+	 
+	 \subsubsection{Caso d'uso UC9.3: Modifica argomenti questionario}
+	 \label{UC9.3}
+	 \begin{figure}[h]
+	 	\centering
+	 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3.png}
+	 	\caption{UC9.3: Modifica argomenti questionario}
+	 \end{figure}
+	 \FloatBarrier
+	 \begin{itemize}
+	 	\item \textbf{Attori}: \uau, \uaupro;
+	 	\item \textbf{Descrizione}: l'utente può decidere di modificare gli argomenti che riassumono il questionario, aggiungendone oppure togliendone qualcuno; 
+	 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Modifica argomenti questionario" tra le scelte possibili in UC9.1.2.1; 
+	 	\item \textbf{Postcondizione}: l'utente ha modificato gli argomenti che riassumono il questionario; 
+	 	\item \textbf{Scenario principale}:
+	 	\begin{enumerate}
+	 		\item L'utente può creare un nuovo argomento (UC9.3.1);
+	 		\item L'utente può aggiungere un nuovo argomento all'elenco di argomenti (UC9.3.2);
+	 		\item L'utente può eliminare un argomento (UC9.3.3);
+	 	\end{enumerate}
+	 	\item \textbf{Scenari alternativi}: l'utente elimina tutti gli argomenti. In questo caso deve inserirne almeno uno e viene mandato al caso d'uso UC9.3.2.
+	 \end{itemize}
+	 
+		 \subsubsection{Caso d'uso UC9.3.1: Crea argomento}
+		 \label{UC9.3.1}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_1.png}
+		 	\caption{UC9.3.1: Crea argomento}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può creare un nuovo argomento non presente tra quelli già esistenti;
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Crea argomento" tra le scelte possibili;
+		 	\item \textbf{Postcondizione}: l'utente ha creato un nuovo argomento; 
+		 	\item \textbf{Scenario principale}:
+		 	\begin{enumerate}
+		 		\item L'utente deve inserire il nome del nuovo argomento (UC9.3.1.1);
+		 		\item L'utente deve confermare il nuovo argomento (UC9.3.1.2).
+		 	\end{enumerate}
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.1.1: Inserisci nome nuovo argomento}
+		 \label{UC9.3.1.1}
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente inserisce il nome del nuovo argomento;
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Inserisci nome utente" tra le scelte possibili in UC9.3.1;
+		 	\item \textbf{Postcondizione}: l'utente ha inserito il nome del nuovo argomento;
+		 	\item \textbf{Scenario principale}: l'utente inserisce il nome del nuovo argomento;
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.1.2: Conferma creazione nuovo argomento}
+		 \label{UC9.3.1.2}
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente conferma il nuovo argomento;
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Conferma creazione nuovo argomento" tra le scelte possibili in UC9.3.1;
+		 	\item \textbf{Postcondizione}: l'utente ha confermato la creazione di un nuovo argomento;
+		 	\item \textbf{Scenario principale}: l'utente conferma la creazione di un nuovo argomento;
+		 	\item \textbf{Scenari alternativi}: 
+		 	\begin{enumerate}
+		 		\item L'utente seleziona un nome che già esiste. Viene riportato alla situazione del caso d'uso UC9.3.1.1;
+		 		\item L'utente annulla l'operazione e viene portato alla situazione del caso d'uso UC9.3;
+		 	\end{enumerate}
+		 	
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.2: Aggiungi argomento}
+		 \label{UC9.3.2}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_2.png}
+		 	\caption{UC9.3.2: Aggiungi argomento}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può aggiungere altri argomenti selezionandoli tra quelli archiviati;  
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Aggiungi argomento" tra le scelte possibili;
+		 	\item \textbf{Postcondizione}: l'utente ha selezionato dei nuovi argomenti;
+		 	\item \textbf{Scenario principale}: l'utente può ricercare argomenti tra quelli archiviati (UC9.3.2.1);
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.2.1: Ricerca argomenti}
+		 \label{UC9.3.2.1}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_2_1.png}
+		 	\caption{UC9.3.2: Aggiungi argomento}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può eseguire una ricerca tra gli argomenti archiviati; 
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Ricerca argomenti" tra le scelte possibili in UC9.3.2;
+		 	\item \textbf{Postcondizione}: l'utente ha ricercato tra gli argomenti archiviati;
+		 	\item \textbf{Scenario principale}: l'utente può selezionare gli argomenti (UC9.3.2.1.1); 
+		 	\item \textbf{Scenari alternativi}: nel caso in cui non ci sia nessun risultato dalla ricerca all'utente viene proposta la possibilità di creare un nuovo argomento (UC9.3.1);
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.2.1.1: Seleziona argomenti}
+		 \label{UC9.3.2.2}
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può selezionare gli argomenti tra quelli ottenuti dalla ricerca;
+		 	\item \textbf{Precondizione}: l'utente ha ottenuto una lista di risultati;
+		 	\item \textbf{Postcondizione}: l'utente ha selezionato degli argomenti; 
+		 	\item \textbf{Scenario principale}: l'utente seleziona gli argomenti;
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.3: Elimina argomento}
+		 \label{UC9.3.3}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_3_3.png}
+		 	\caption{UC9.3.3: Elimina argomento}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può eliminare un argomento da un questionario;
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Elimina argomento" tra le scelte possibili;
+		 	\item \textbf{Postcondizione}: l'utente ha eliminato un argomento;
+		 	\item \textbf{Scenario principale}: l'utente deve confermare di voler eliminare l'argomento (UC9.3.3.1); 
+		 	\item \textbf{Scenari alternativi}: l'utente ha cancellato tutti gli argomenti. Deve allora inserirne almeno uno, viene allora rimandato a UC9.3.2.
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.3.3.1: Conferma elimina argomento}
+		 \label{UC9.3.3.1}
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente deve confermare di voler eliminare l'argomento;
+		 	\item \textbf{Precondizione}: l'utente ha deciso di voler eliminare l'argomento;
+		 	\item \textbf{Postcondizione}: l'utente ha eliminato un argomento;
+		 	\item \textbf{Scenario principale}: l'utente conferma di voler eliminare l'argomento. 
+		 	\item \textbf{Scenari alternativi}: l'utente annulla l'eliminazione dell'argomento, viene allora rimandato a UC9.3.
+		 \end{itemize}						
+	 
+	 \subsubsection{Caso d'uso UC9.5: Gestione domande del questionario}
+	 \label{UC9.4}
+	 \begin{figure}[h]
+	 	\centering
+	 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4.png}
+	 	\caption{UC9.4: Gestione domande}
+	 \end{figure}
+	 \FloatBarrier
+	 \begin{itemize}
+	 	\item \textbf{Attori}: \uau, \uaupro;
+	 	\item \textbf{Descrizione}: l'utente può gestire le domande di un proprio questionario, aggiungendone oppure togliendone;
+	 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Gestione domande" tra le scelte possibili in UC9.4;
+	 	\item \textbf{Postcondizione}: l'utente ha gestito le domande di un questionario;
+	 	\item \textbf{Scenario principale}: 
+	 	\begin{enumerate}
+	 		\item L'utente aggiunge altre domande (UC9.4.1);
+	 		\item L'utente elimina una domanda (UC9.4.2).
+	 	\end{enumerate}
+	 \end{itemize}
+	 
+		 \subsubsection{Caso d'uso UC9.4.1: Aggiungi altre domande}
+		 \label{UC9.4.1}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4_1.png}
+		 	\caption{UC9.4.1: Aggiungi altre domande}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può aggiungere altre domande cercando tra quelle già memorizzate nell'archivio oppure creandone una nuova; 
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Aggiungi altre domande" tra le scelte possibili in UC9.4;
+		 	\item \textbf{Postcondizione}: l'utente ha aggiunto nuove domande;
+		 	\item \textbf{Scenario principale}:
+		 	\begin{enumerate}
+		 		\item L'utente può eseguire una ricerca nelle domande archiviate (UC9.4.1.1);
+		 		\item L'utente può creare una nuova domanda (UC8.1);
+		 	\end{enumerate}
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.4.1.1: Ricerca domande}
+		 \label{UC9.4.1.1}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4_1_1.png}
+		 	\caption{UC9.4.1.1: Ricerca domande}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può eseguire una ricerca tra le domande archiviate; 
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Ricerca domande" tra le scelte possibili in UC9.4.1;
+		 	\item \textbf{Postcondizione}: l'utente ha ricercato tra le domande archiviate;
+		 	\item \textbf{Scenario principale}: l'utente può selezionare le domande (UC9.4.1.1.1); 
+		 	\item \textbf{Scenari alternativi}: nel caso in cui non ci sia nessun risultato dalla ricerca all'utente viene proposta la possibilità di creare una nuova domanda (UC8.1);
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.4.1.1.1: Seleziona domande}
+		 \label{UC9.4.1.1.1}
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può selezionare le domande tra quelle ottenute dalla ricerca;
+		 	\item \textbf{Precondizione}: l'utente ha ottenuto una lista di risultati;
+		 	\item \textbf{Postcondizione}: l'utente ha selezionato delle domande; 
+		 	\item \textbf{Scenario principale}: l'utente seleziona le domande;
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.4.2: Elimina domanda}
+		 \label{UC9.4.2}
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC9_1_2_1_4_2.png}
+		 	\caption{UC9.4.2: Elimina domande}
+		 \end{figure}
+		 \FloatBarrier
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente può eliminare una domanda da un questionario;
+		 	\item \textbf{Precondizione}: l'utente ha selezionato l'opzione "Elimina domanda" tra le scelte possibili in UC9.4;
+		 	\item \textbf{Postcondizione}: l'utente ha eliminato una domanda;
+		 	\item \textbf{Scenario principale}: l'utente deve confermare di voler eliminare la domanda (UC9.4.2.1); 
+		 	\item \textbf{Scenari alternativi}: l'utente ha cancellato tutte le domande. Deve allora inserirne almeno una, viene allora rimandato a UC9.4.1.
+		 \end{itemize}
+		 
+		 \subsubsection{Caso d'uso UC9.4.2.1: Conferma eliminazione domanda}
+		 \label{UC9.4.2.1}
+		 \begin{itemize}
+		 	\item \textbf{Attori}: \uau, \uaupro;
+		 	\item \textbf{Descrizione}: l'utente deve confermare di voler eliminare la domanda;
+		 	\item \textbf{Precondizione}: l'utente ha deciso di voler eliminare la domanda;
+		 	\item \textbf{Postcondizione}: l'utente ha eliminato una domanda;
+		 	\item \textbf{Scenario principale}: l'utente conferma di voler eliminare la domanda;
+		 	\item \textbf{Scenari alternativi}: l'utente annulla l'eliminazione della domanda, viene allora rimandato a UC9.4.
+		 \end{itemize}
+		
+		
