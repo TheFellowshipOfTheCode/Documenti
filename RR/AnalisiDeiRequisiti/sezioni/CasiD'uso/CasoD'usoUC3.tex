@@ -8,14 +8,15 @@
 	\item \textbf{Pre-condizione:} il sistema è avviato e pronto per l'utilizzo e mostra la pagina di login;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item L'utente inserisce il nome utente [UC3.1];
+		\item L'utente inserisce il nome utente oppure la mail utilizzata al momento della registrazione [UC3.1];
 		\item L'utente inserisce la password [UC3.2];
 		\item L'utente conferma il login[UC3.3].
 	\end{enumerate}
 	\item \textbf{Scenatio alternativo:}
 	\begin{itemize}
 		\item L'utente inserisce un nome utente inesistente;
-		\item L'utente non inserisce un nome utente;
+		\item L'utente inserisce una mail non registrata;
+		\item L'utente non inserisce ne un nome utente ne una mail;
 		\item L'utente inserisce una password errata;
 		\item L'utente non inserisce una password.
 	\end{itemize}
@@ -24,10 +25,10 @@
 	\item \textbf{Post-condizione:} il sistema ha autenticato l'utente e quindi mostra all'utente autenticato la sua area riservata.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC3.1: inserimento del nome utente}
+\subsubsection{Caso d'uso UC3.1: inserimento del nome utente o della mail}
 \begin{itemize}
 	\item \textbf{Attori}: utente;
-	\item \textbf{Scopo e descrizione}: l'utente inserisce il proprio nome utente creato al momento della registrazione [UC2];
+	\item \textbf{Scopo e descrizione}: l'utente inserisce il proprio nome utente creato oppure la mail utilizzata al momento della registrazione [UC2];
 	\item \textbf{Precondizione}: il sistema presente all'utente lo spazio destinato a questa operazione;
 	\item \textbf{Postcondizione}: il nome utente è stato inserito.
 \end{itemize}
@@ -42,6 +43,6 @@
 \begin{itemize}
 	\item \textbf{Attori}: utente;
 	\item \textbf{Scopo e descrizione}: l'utente conferma i dati inseriti per tentare una login;
-	\item \textbf{Precondizione}: il nome utente e la password devono essere stati inseriti;
+	\item \textbf{Precondizione}: il nome utente o la mail e la password devono essere stati inseriti;
 	\item \textbf{Postcondizione}: l'utente è autenticato.
 \end{itemize}
