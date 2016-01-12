@@ -8,14 +8,14 @@
 \item\textbf{Precondizione}: l'utente autenticato/autenticato pro ha selezionato l'opzione di allenamento;
 \item\textbf{Postcondizione}: l'utente ha finito di svolgere l'allenamento e può quindi visualizzare la valutazione finale che ha ottenuto e il riepilogo delle risposte date nonchè il proprio livello sugli argomenti;
 \item\textbf{Scenario principale}:
-	\begin{enumerate}
+	\begin{itemize}
 		\item L'utente autenticato/autenticato pro sceglie l'argomento per iniziare l'allenamento (UC10.1);
 		\item L'utente autenticato/autenticato pro sceglie delle parole chiave (UC10.2);
-		\item L'utente autenticato/autenticato pro sceglie il numero di domande che compongono l'allenamento (UC10.3).
-	\end{enumerate}
+		\item L'utente autenticato/autenticato pro sceglie il numero di domande che compongono l'allenamento (UC10.3);
+	\end{itemize}
 \item \textbf{Inclusione}:
 	\begin{itemize}
-		\item L'utente autenticato/autenticato pro inizia l'allenamento (UC12).
+		\item L'utente autenticato/autenticato pro inizia l'allenamento (UC12);
 	\end{itemize}
 \end{itemize}
 
@@ -52,14 +52,14 @@
 		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
 		\item \textbf{Descrizione}: Gli attori possono lasciare un like a una domanda proposta;
 		\item \textbf{Precondizione}: Agli attori è stata proposta una domanda;
-		\item \textbf{Postcondizione}: Gli attori hanno rilasciato un like alla domanda proposta.
+		\item \textbf{Postcondizione}: Gli attori hanno rilasciato un like alla domanda proposta;
 	\end{itemize}
 \subsubsection{Caso d'uso UC10.4.3: commenti alla domanda}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
 		\item \textbf{Descrizione}: Gli attori possono scegliere di commentare una domanda;
 		\item \textbf{Precondizione}: Gli attori hanno risposto ad una domanda e visualizzano una sezione per i commenti;
-		\item \textbf{Postcondizione}: Gli attori hanno scelto di commentare la domanda proposta.
+		\item \textbf{Postcondizione}: Gli attori hanno scelto di commentare la domanda proposta;
 	\end{itemize}
 \subsubsection{Caso d'uso UC10.4.3.1: scrivi commento}
 	\begin{itemize}
@@ -69,52 +69,30 @@
 		\item \textbf{Postcondizione}: Gli attori hanno commentato la domanda proposta.
 	\end{itemize}
 \subsubsection{Caso d'uso UC10.4.4: segnalare la domanda}
-\begin{center}
-	\includegraphics[scale=0.5]{UML/UC10_4_4.png}
-\end{center}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
 		\item \textbf{Descrizione}: Gli attori possono segnalare una domanda se ritengono che sia sbagliata, mal formata oppure contenga contenuti non appropiati;
 		\item \textbf{Precondizione}: Gli attori hanno visualizzato il resoconto dell'allenamento;
 		\item \textbf{Postcondizione}: Gli attori hanno scelto di segnalare una domanda;
-				\item \textbf{Scenario principale}:
-				\begin{enumerate}
-					\item L'utente autenticato/autenticato pro sceglie il tipo di segnalazione tra quelli proposti (UC10.4.4.1);
-					\item L'utente autenticato/autenticato pro scrive il contenuto della segnalazione (UC10.4.4.2);
-				\end{enumerate}
 	\end{itemize}
-\subsubsection{Caso d'uso UC10.4.4.1: tipo di segnalazione}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item \textbf{Descrizione}: Gli attori possono decidere il tipo di segnalazione tra quelli proposti;
-		\item \textbf{Precondizione}: Gli attori hanno scelto di segnakare una domanda;
-		\item \textbf{Postcondizione}: Gli attori hanno scelto il tipo di segnalazione;
-	\end{itemize}
-\subsubsection{Caso d'uso UC10.4.4.2: scrivi segnalazione}
+\subsubsection{Caso d'uso UC10.4.5: scrivi segnalazione}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
 		\item \textbf{Descrizione}: Gli attori posso scrivere un commento sulla segnalazione per approfondire la motivazione;
 		\item \textbf{Precondizione}: Gli attori hanno scelto di segnalare una domanda;
-		\item \textbf{Postcondizione}: Gli attori hanno segnalato una domanda.
+		\item \textbf{Postcondizione}: Gli attori hanno segnalato una domanda;
 	\end{itemize}
-\subsubsection{Caso d'uso UC10.4.5: avanzamento domanda successiva}
+\subsubsection{Caso d'uso UC10.4.6: avanzamento domanda successiva}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
 		\item \textbf{Descrizione}: Gli attori possono avanzare alla domanda successiva dopo aver risposto alla domanda proposta; 
 		\item \textbf{Precondizione}: Gli attori hanno risposto alla domanda proposta;
-		\item \textbf{Postcondizione}: Gli attori visualizzano la domanda sucessiva.
+		\item \textbf{Postcondizione}: Gli attori visualizzano la domanda sucessiva;
 	\end{itemize}
-\subsubsection{Caso d'uso UC10.4.6: conclusione allenamento e visualizzazione del risultato finale}
+\subsubsection{Caso d'uso UC10.4.7: conclusione allenamento e visualizzazione del risultato finale}
 	\begin{itemize}
 		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
 		\item \textbf{Descrizione}: Gli attori possono concludere l'allenamento in qualunque punto dell'allenamento;
 		\item \textbf{Precondizione}: Gli attori stanno eseguendo un allenamento;
-		\item \textbf{Postcondizione}: Gli attori hanno concluso l'allenamento.
-	\end{itemize}
-\subsubsection{Caso d'uso UC10.4.7: visualizzazione del risultato finale}
-	\begin{itemize}
-		\item \textbf{Attori}: Utente autenticato, Utente autenticato pro;
-		\item \textbf{Descrizione}: Gli attori visualizzano i risultati dell'allenamento svolto;
-		\item \textbf{Precondizione}: Gli attori hanno concluso un allenamento;
-		\item \textbf{Postcondizione}: Gli attori visualizzano i rusultati ottenuti.
+		\item \textbf{Postcondizione}: Gli attori hanno concluso l'allenamento;
 	\end{itemize}
