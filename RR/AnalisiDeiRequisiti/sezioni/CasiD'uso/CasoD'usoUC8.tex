@@ -99,7 +99,7 @@
 		\item		
 			\textbf{Precondizione}: il sistema presenta all'utente autenticato il campo dati per l'inserimento delle parole chiave;
 		\item
-			\textbf{Postcondizione}: l'inserimento delle parole chiave è avvenuto.
+			\textbf{Postcondizione}: l'inserimento delle parole chiave è avvenuto;
 		\item
 			\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -107,101 +107,56 @@
 						Gli attori inseriscono le parole chiave relative alla nuova domanda	
 				\end{enumerate}
 	\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.3: Inserimento testo della domanda}
+
+
+	\subsubsection{Caso d'uso UC8.1.3: Seleziona tipologia di domanda}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
-			\textbf{Scopo e descrizione}: gli attori inseriscono il testo della domanda;
+			\textbf{Scopo e descrizione}: gli attori possono scegliere la tipologia di domanda che vogliono inserire;
 		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato il campo dati per l'inserimento del testo della domanda;
+			\textbf{Precondizione}: il sistema mostra all'utente le tipologie di domande possibili;
 		\item
-			\textbf{Postcondizione}: l'inserimento del testo della domanda è avvenuto.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.4: Selezione modalità di risposta}
-	\label{UC8.1.5}
-	\begin{figure}[h]
-		\centering
-			\includegraphics[scale=0.5,keepaspectratio]{UML/UC8_1_5.png}
-		\caption{UC8.1.5: Selezione modalità di risposta}
-	\end{figure}
-	\FloatBarrier
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato seleziona la modalità di risposta preferita;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato le checkbox per selezionare la modalità di risposta preferita;
-		\item
-			\textbf{Scenario principale}:
-	       		\begin{enumerate}
-					\item
-					L'utente seleziona la modalità di risposta vero o falso [UC8.1.5.1];
-					\item
-					L'utente seleziona la modalità di risposta a scelta multipla [UC8.1.5.2]	       		
-	       		\end{enumerate}
-		\item
-			\textbf{Postcondizione}: Una modalità di risposta è stata selezionata.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.4.1: Selezione modalità di risposta vero o falso}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato seleziona la modalità di risposta vero o falso;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato la checkbox per selezionare la modalità di risposta vero o falso;
-		\item
-			\textbf{Postcondizione}: la modalità di risposta vero o falso è stata selezionata.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.4.2: Selezione modalità di risposta a scelta multipla}
-	\label{UC8.1.5.2}
-	\begin{figure}[h]
-		\centering
-			\includegraphics[scale=0.5,keepaspectratio]{UML/UC8_1_5_2.png}
-		\caption{UC8.1.5.2: Selezione modalità di risposta a scelta multipla}
-	\end{figure}
-	\FloatBarrier	
-	\begin{itemize}
-		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: L'utente autenticato seleziona la modalità di risposta a scelta multipla;
-		\item		
-			\textbf{Precondizione}: Il sistema presenta all'utente autenticato la checkbox per selezionare la modalità di risposta a scelta multipla;
+			\textbf{Postcondizione}: l'utente ha selezionato la tipologia di domanda da inserire;
 		\item
 			\textbf{Scenario principale}:
 				\begin{enumerate}
 					\item 	
-						L'utente aggiunge due o più opzioni di risposta [UC8.1.5.2.1];	
+						Gli attori scelgono la tipologia di domanda che vogliono inserire nel sistema.	
 				\end{enumerate}
-		\item
-			\textbf{Postcondizione}: La modalità di risposta a scelta multipla è stata selezionata.
 	\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.4.2.1: Aggiunta opzione di risposta}
-		\begin{itemize}
+
+	%inclusione file latex wizard
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_1.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_2.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_3.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_4.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_5.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_6.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_7.tex}
+
+\subsubsection{Caso d'uso UC8.1.3.8: Descrizione della domanda/esercizio}
+\begin{itemize}
 		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
-			\textbf{Scopo e descrizione}: L'utente autenticato aggiunge due o più opzioni di risposta;
+			\textbf{Scopo e descrizione}: gli attori possono inserire una descrizione alla domanda;
 		\item		
-			\textbf{Precondizione}: Il sistema presenta all'utente autenticato lo spazio per aggiungere una opzione di risposta;
-		\item		
-			\textbf{Postcondizione}: L'utente autenticato ha aggiunto le opzioni di  risposta;
-		\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.5: Indicazione risposta corretta}
-		\begin{itemize}
+			\textbf{Precondizione}: il sistema mostra all'utente un form per l'inserimento della descrizione;
 		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
+			\textbf{Postcondizione}: l'utente ha inserito una descrizione alla domanda;
 		\item
-			\textbf{Scopo e descrizione}: gli attori indicano la risposta corretta;
-		\item		
-			\textbf{Precondizione}: gli attori hanno selezionato la modalità di risposta ed inserito le eventuali opzioni nel caso avesse scelto la modalità a scelta multipla. Il sistema predispone un strumento di selezione per indicare la risposta corretta.
-		\item		
-			\textbf{Postcondizione}: gli attori hanno indicato la risposta corretta.
-		\end{itemize}
-	\subsubsection{Caso d'uso UC8.1.6: Conferma creazione}
+			\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item 	
+						Gli attori possono inserire una descrizione alla domanda.	
+				\end{enumerate}
+	\end{itemize}
+
+
+
+	\subsubsection{Caso d'uso UC8.1.4: Conferma creazione}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -218,7 +173,7 @@
 							Gli attori confermano la creazione della domanda.
 					\end{enumerate}
 	\end{itemize}	
-	\subsubsection{Caso d'uso UC8.1.7: Visualizzazione errore creazione}
+	\subsubsection{Caso d'uso UC8.1.5: Visualizzazione errore creazione domanda}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -229,6 +184,12 @@
 		\item
 			\textbf{Postcondizione}: il sistema mostra un messaggio d'errore;
 	\end{itemize}	
+
+
+
+
+
+
 	\subsubsection{Caso d'uso UC8.2: Modifica domanda esistente}
 	\label{UC8.2}
 	\begin{figure}[h]
@@ -250,22 +211,24 @@
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 					\item
-					L'utente modifica l'argomento relativo alla domanda selezionata[UC8.2.1];
+					L'attore richiama il wizard per modificare una domanda vero/falso[UC8.2.1];
 					\item
-					L'utente modifica il grado di difficoltà relativo alla domanda selezionata [UC8.2.2];
+					L'attore richiama il wizard per modificare una domanda a risposta multipla [UC8.2.2];
 					\item
-					L'utente modifica le parole chiave relative alla domanda selezionata [UC8.2.3];
+					L'attore richiama il wizard per modificare una domanda a riempimento di spazi vuoti [UC8.2.3];
 					\item
-					L'utente modifica il testo relativo alla domanda selezionata [UC8.2.4];
+					L'attore richiama il wizard per modificare una domanda di tipo a collegamento [UC8.2.4];
 					\item
-					L'utente modifica la modalità di risposta ed eventualmente modifica le opzioni di risposta [UC8.2.5];
+					L'attore richiama il wizard per modificare una domanda ad inserimento di immagini [UC8.2.5];
 					\item
-					L'utente modifica la risposta corretta [UC8.2.6];
+					L'attore richiama il wizard per modificare una domanda ad inserimento di stringhe [UC8.2.6];
 					\item
-					L'utente conferma la modifica della domanda [UC8.2.7].
+					L'attore richiama il wizard per modificare una domanda con area cliccabile nell'immagine [UC8.2.7].
+					\item
+					L'attore richiama il wizard per modificare la descrizione della domanda [UC8.2.8].
 	 			\end{enumerate}
 	 	\item
-			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.2.8].
+			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.2.10].
 	 	\item
 	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
 				\begin{itemize}
@@ -282,134 +245,18 @@
 				\end{itemize}
 			In tal caso il sistema ripresenta il modulo di modifica della domanda, presentando un messaggio d'errore.
 	\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.1: Modifica argomento}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato modifica il campo dati argomento;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato il campo dati per modificare l'argomento;
-		\item
-			\textbf{Postcondizione}: il campo dato argomento è stato modificato.
-	\end{itemize}	
-	\subsubsection{Caso d'uso UC8.2.2: Modifica grado di difficoltà della domanda}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato modifica il grado di difficoltà della domanda;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato lo spazio per modificare il grado di difficoltà della domanda;
-		\item
-			\textbf{Postcondizione}: il grado di difficoltà della domanda è stato modificato.
-	\end{itemize}	
-	\subsubsection{Caso d'uso UC8.2.3: Modifica parole chiave}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato modifica le parole chiave relative alla domanda selezionata;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato il campo dati per l'inserimento delle parole chiave;
-		\item
-			\textbf{Postcondizione}: l'inserimento delle parole chiave è avvenuto.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.4: Modifica testo della domanda}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato modifica il testo della domanda;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato il campo dati per la modifica del testo della domanda;
-		\item
-			\textbf{Postcondizione}: la modifica del testo della domanda è avvenuto.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.5: Modifica modalità di risposta}
-	\label{UC8.2.5}
-	\begin{figure}[h]
-		\centering
-			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_2_5.png}
-		\caption{UC8.2.5: Modifica modalità di risposta}
-	\end{figure}
-	\FloatBarrier
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: l'utente autenticato modifica la modalità di risposta preferita;
-		\item		
-			\textbf{Precondizione}: il sistema presenta all'utente autenticato le checkbox per modificare la modalità di risposta;
-		\item
-			\textbf{Scenario principale}:
-	       		\begin{enumerate}
-					\item
-					L'utente seleziona la modalità di risposta vero o falso [UC8.2.5.1];
-					\item
-					L'utente seleziona la modalità di risposta a scelta multipla [UC8.2.5.2].
-	       		\end{enumerate}
-		\item
-			\textbf{Postcondizione}: Una modalità di risposta è stata selezionata.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.5.1: Selezione modalità di risposta vero o falso}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: L'utente autenticato seleziona la modalità di risposta vero o falso;
-		\item		
-			\textbf{Precondizione}: Il sistema presenta all'utente autenticato la checkbox per selezionare la modalità di risposta vero o falso;
-		\item
-			\textbf{Postcondizione}: La modalità di risposta vero o falso è stata selezionata.
-	\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.5.2: Selezione modalità di risposta a scelta multipla}
-	\label{UC8.2.5.2}
-	\begin{figure}[h]
-		\centering
-			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_2_5_2.png}
-		\caption{UC8.2.5.2: Selezione modalità di risposta a scelta multipla}
-	\end{figure}
-	\FloatBarrier	
-	\begin{itemize}
-		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: L'utente autenticato seleziona la modalità di risposta a scelta multipla;
-		\item		
-			\textbf{Precondizione}: Il sistema presenta all'utente autenticato la checkbox per selezionare la modalità di risposta a scelta multipla;
-		\item
-			\textbf{Scenario principale}:
-				\begin{enumerate}
-					\item 	
-						L'utente modifica le opzioni di risposta [UC8.2.5.2.1];	
-				\end{enumerate}
-		\item
-			\textbf{Postcondizione}: La modalità di risposta a scelta multipla è stata selezionata.
-	\end{itemize}
-		\subsubsection{Caso d'uso UC8.2.5.2.1: Modifica opzione di risposta}
-		\begin{itemize}
-		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: L'utente autenticato modifica le opzioni di risposta della domanda selezionata;
-		\item		
-			\textbf{Precondizione}: Il sistema presenta all'utente autenticato lo spazio per modificare le opzione di risposta della domanda selezionata;
-		\item		
-			\textbf{Postcondizione}: L'utente autenticato ha modificato le opzioni di  risposta;
-		\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.6: Modifica risposta corretta}
-		\begin{itemize}
-		\item
-			\textbf{Attori}: Utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Scopo e descrizione}: L'utente autenticato modifica la risposta corretta;
-		\item		
-			\textbf{Precondizione}: Il sistema predispone un strumento per modificare la risposta corretta.
-		\item		
-			\textbf{Postcondizione}: L'utente autenticato ha modificato la risposta corretta.
-		\end{itemize}
-	\subsubsection{Caso d'uso UC8.2.7: Conferma modifica}
+
+	%inclusione file latex wizard
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_1.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_2.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_3.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_4.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_5.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_6.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_7.tex}
+
+
+	\subsubsection{Caso d'uso UC8.2.9: Conferma modifica}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: Utente autenticato, utente autenticato pro;
@@ -420,7 +267,7 @@
 		\item
 			\textbf{Postcondizione}: Il sistema ha ricevuto i dati per la modifica.
 	\end{itemize}		
-	\subsubsection{Caso d'uso UC8.2.8: Visualizzazione errore modifica}
+	\subsubsection{Caso d'uso UC8.2.10: Visualizzazione errore modifica}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: Utente autenticato, utente autenticato pro;
@@ -432,17 +279,3 @@
 			\textbf{Postcondizione}: Il sistema mostra un messaggio d'errore.
 	\end{itemize}	
 	
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_1.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_2.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_3.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_4.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_5.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_6.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_7.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_1.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_2.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_3.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_4.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_5.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_6.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_7.tex}
