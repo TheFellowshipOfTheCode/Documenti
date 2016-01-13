@@ -1,0 +1,110 @@
+\newcommand{\documento}{\LdP}
+
+\input{../../Template/comandi.tex}
+
+\documentclass{letter}
+% specifica con quale codifica bisogna leggere il file
+\usepackage[utf8]{inputenc}
+
+% per scrivere in italiano e in inglese;
+% l'ultima lingua (l'italiano) risulta predefinita
+\usepackage[english, italian]{babel}
+
+% imposta lo stile italiano per i paragrafi
+\usepackage{parskip}
+
+% permetti di calcolare la larghezza facendo sottrazioni
+\usepackage{calc}
+
+% importa il simbolo dell'euro
+\usepackage{eurosym}
+% permetti di includere le immagini
+\usepackage{graphicx}
+
+% configura l'header e il footer
+\usepackage{fancyhdr}
+
+%***VARIABILI GLOBALI***
+\def\CAPITOLATO		{\mbox{\progetto}} 
+\def\EMAIL			{\email}
+\def\PROPONENTE		{\proponente}
+\def\NOMEFILE       {\documento}
+
+\fancypagestyle{firstpage}{
+	% cancella tutti i campi di intestazione e piè di pagina
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.3pt}
+	
+	\fancyhead[L]{
+		\includegraphics[height=4cm, keepaspectratio=true]{../../Template/icone/logo_fotc.jpg}
+	}
+	\fancyhead[R]{
+		\Huge{\textbf{Gruppo \gruppo{}}} \\
+		\vspace{5pt}
+	} 
+	
+	\cfoot{ \small{
+			Gruppo \gruppo{} \textendash{} Email: \email{}
+		}}
+	}
+\setlength{\headheight}{40pt}
+	
+\pagestyle{plain}
+	
+	
+\begin{document}
+	
+	%----------------------------------------------------------------------------------------
+	%	DATE AND FROM ADDRESS
+	%----------------------------------------------------------------------------------------
+	
+	% data
+	\date{}
+	
+	% Secondo parametro: indirizzo del destinatario
+	\begin{letter}{
+			\hfill Prof. Vardanega Tullio \\
+			\hfill Prof. Cardin Riccardo \\
+			\hfill Università degli Studi di Padova \\
+			\hfill Dipartimento di Matematica Pura ed Applicata \\
+			\hfill Via Trieste, 63 \\
+			\hfill 35121 Padova
+		}
+		
+		%----------------------------------------------------------------------------------------
+		%	SEGNATURA
+		%----------------------------------------------------------------------------------------
+		
+		\signature{
+			\begin{center}
+				\textit{\GR{} \\ Responsabile \gruppo{}}
+			\end{center}
+		}
+		
+		%----------------------------------------------------------------------------------------
+		%	CONTENUTO LETTERA DI PRESENTAZIONE
+		%----------------------------------------------------------------------------------------
+		
+		\opening{Egregio professor Vardanega Tullio,}
+			\begin{quotation}			
+				Con la presente il gruppo \gruppo intende comunicarLe ufficialmente la partecipazione alla gara d'appalto del prodotto da Lei commissionato, denominato \textbf{\progetto}.
+				\\
+				Si allegano alla presente lettera i seguenti documenti:
+				\begin{itemize}
+					\item \textit{Analisi dei Requisiti\_v1.0.0};
+					\item \textit{Glossario\_v1.0.0};
+					\item \textit{Norme di Progetto\_v1.0.0};
+					\item \textit{Piano di Progetto\_v1.0.0};
+					\item \textit{Piano di Qualifica\_v1.0.0};
+					\item \textit{Studio di Fattibilità\_v1.0.0};
+					\item \textit{Verbale\_1\_Interno\_aaaa-mm-gg};
+					\item \textit{Verbale\_2\_Interno\_aaaa-mm-gg};
+				\end{itemize}
+				I documenti trattano in maniera approfondita i dettagli di qualifica, di requisiti e di pianificazione.	
+				Il team ha stimato di consegnare il prodotto richiesto entro la data prevista per la partecipazione alla \textit{\RA} che si terrà il 2016-06-17, con un preventivo di costo pari a \euro13.500, come analizzato nel \textit{\PdP}.	
+			\end{quotation}
+		\closing{Cordiali saluti,}
+		%----------------------------------------------------------------------------------------	
+	\end{letter}
+\end{document}
