@@ -117,3 +117,6 @@ sympy-plots-for-*.tex/
 #windows
 *Thumbs.db
 *.lock
+
+#astah
+*.bak
