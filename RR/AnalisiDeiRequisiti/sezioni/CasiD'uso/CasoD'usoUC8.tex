@@ -40,21 +40,25 @@
 		\item
 			\textbf{Precondizione}: gli attori hanno selezionato l'opzione per la creazione della domanda;
 		\item
-			\textbf{Postcondizione}: gli attori ricevono conferma dell'avvenuta creazione;		
+			\textbf{	Postcondizione}: gli attori ricevono conferma dell'avvenuta creazione;		
 		\item
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 					\item
-					L'attore inserisce l'argomento relativo alla nuova domanda[UC8.1.1];
+					L'utente inserisce l'argomento relativo alla nuova domanda[UC8.1.1];
 					\item
-					L'attore inserisce le parole chiave relative alla nuova domanda [UC8.1.2];
+					L'utente inserisce le parole chiave relative alla nuova domanda [UC8.1.2];
 					\item
-					L'attore seleziona la tipologia di domanda [UC8.1.3];
+					L'utente inserisce il testo della domanda [UC8.1.3];
 					\item
-					L'attore conferma la creazione della domanda [UC8.1.4];
+					L'utente deve selezionare la modalità di risposta ed eventualmente inserire le opzioni di risposta [UC8.1.4];
+					\item
+					L'utente deve indicare la risposta corretta [UC8.1.5];
+					\item
+					L'utente conferma la creazione della domanda [UC8.1.6].
 	 			\end{enumerate}
 	 	\item
-			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.1.5];
+			\textbf{Estensione}: L'utente visualizza un messaggio d'errore di conferma [UC8.1.8];
 	 	\item
 	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
 				\begin{itemize}
@@ -62,8 +66,10 @@
 						L'argomento non è stato inserito;
 					\item[-] 
 						Le parole chiave non sono state inserite;
+					\item[-] 
+						La modalità di risposta non è stata selezionata o non è presente alcuna opzione di risposta; 
 					\item[-]
-						La tipologia di domanda non è stata selezionata.	
+						La risposta corretta non è stata indicata.	
 				\end{itemize}
 			In tal caso il sistema ripresenta il modulo di creazione della domanda, presentando un messaggio d'errore.
 	\end{itemize}
@@ -136,22 +142,16 @@
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
-			\textbf{Scopo e descrizione}: l'attore possono confermare la creazione della domanda;
+			\textbf{Scopo e descrizione}: gli attori possono confermare la creazione della domanda;
 		\item		
-			\textbf{Precondizione}: il sistema presenta all'attore l'opzione per compiere questa operazione;
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
 			\textbf{Postcondizione}: il sistema ha ricevuto i dati per la creazione;
 		\item
 			\textbf{Scenario Principale}:  
 					\begin{enumerate}
 						\item
-							L'attore confermano la creazione della domanda.
-					\end{enumerate}
-		\item
-	 		\textbf{Scenario alternativo}:
-	 		\begin{enumerate}
-						\item
-							L'attore annulla la creazione della domanda.
+							Gli attori confermano la creazione della domanda.
 					\end{enumerate}
 	\end{itemize}	
 	\subsubsection{Caso d'uso UC8.1.5: Visualizzazione errore creazione domanda}
@@ -267,13 +267,6 @@
 			\textbf{Precondizione}: Il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
 		\item
 			\textbf{Postcondizione}: Il sistema ha ricevuto i dati per la modifica.
-		\item
-	 		\textbf{Scenario principale}:
-	 	\item
-	 		\textbf{Scenario alternativo}:
-	 		\begin{itemize}
-	 			\item L'attore annulla la modifica alla domanda.
-	 		\end{itemize}
 	\end{itemize}		
 	\subsubsection{Caso d'uso UC8.2.3: Visualizzazione errore modifica}
 	\begin{itemize}
@@ -285,8 +278,5 @@
 			\textbf{Precondizione}: Il sistema ha ricevuto dei dati errati per la modifica;
 		\item
 			\textbf{Postcondizione}: Il sistema mostra un messaggio d'errore.
-		\item
-	 		\textbf{Scenario principale}:
-	 
 	\end{itemize}	
 	
