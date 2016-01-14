@@ -8,30 +8,35 @@
 \end{figure}
 
 \begin{itemize}
-\item\textbf{Attori}: utente, utente autenticato, utente autenticato pro;
-\item\textbf{Descrizione}: nella schermata principale un utente non autenticato può ricercare e compilare questionari pubblici esistenti. Può inoltre autenticarsi tramite l'apposito form di login oppure registrarsi.\\
-L'utente autenticato, oltre a svolgere tutte le operazioni dell'utente non autenticato, è abilitato a:
+\item\textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item\textbf{Descrizione}: nella schermata principale un utente non autenticato può autenticarsi tramite l'apposito form di login oppure registrarsi.\\
+L'utente autenticato è abilitato a:
 \begin{itemize}
 \item Effettuare il logout;
-\item Gestire il proprio profilo: modificare il proprio nome, cognome, indirizzo e-mail e password. Può visualizzare i questionari realizzati, compilati e consultare le relative valutazioni ricevute;
-\item Gestire le domande: inserire nuove domande nel sistema oppure eliminarne una da lui creata;
-\item Gestire i questionari: creare questionari pubblici oppure eliminare un questionario da lui creato.
+\item Gestire il proprio profilo: modificare il proprio nome, cognome, username, foto/immagine profilo, indirizzo e-mail, password, tipologie di account. Può inoltre eliminare il proprio account;
+\item Ricercare e iscriversi a questionari: può cercare tra i questionari esistenti e iscriversi, rimanendo in attesa della conferma da parte del creatore del questionario;
+\item Compilare un questionario;
+\item Gestire le domande: inserire nuove domande nel sistema oppure modificarne una da lui creata;
+\item Usufruire della modalità allenamento: può allenarsi rispondendo a domande, proposte dal sistema, di un argomento scelto;
+\item Visualizzare il profilo utente: visualizza la cronologia dei questionari svolti, visualizzare le statistiche per ogni questionario fatto. Può inoltre visualizzare la lista dei questionari a cui è stato abilitato;
+\item Ricercare un utente: può ricercare un utente tra tutti gli iscritti al sistema e visualizzarne il profilo.
 \end{itemize}
 
-L'utente autenticato pro può, oltre a svolgere tutte le operazioni dell'utente autenticato, gestire questionari privati. E abilitato dunque a creare, modificare e proporre questionari privati destinati ad un numero limitato di utenti;
+L'utente autenticato pro può, oltre a svolgere tutte le operazioni dell'utente autenticato, creare questionari oppure modificare o eliminare un questionario da lui creato. Può gestire la lista di iscrizione e accettare o rifiutare un iscritto;
 \item\textbf{Pre-condizione}: il sistema è avviato e mostra la pagina iniziale dell'applicazione;
 \item\textbf{Post-condizione}: il sistema ha ricevuto tutte le informazioni dall'utente sulle operazioni che vuole eseguire.
 \item\textbf{Scenario principale}:
 \begin{itemize}
-\item L'utente può registrarsi all'applicazione (UC2);
-\item L'utente può eseguire il login all'applicazione (UC3);
-\item L'utente autenticato/autenticato pro può eseguire il logout dall'applicazione (UC4); 
-\item L'utente autenticato/autenticato pro può gestire il proprio profilo utente (UC5);
-\item L'utente autenticato/autenticato pro può ricercare questionari esistenti (UC6);
-\item L'utente autenticato/autenticato pro può compilare un questionario selezionato (UC7);
-\item L'utente autenticato/autenticato pro può gestire le domande (UC8);
-\item L'utente autenticato/autenticato pro può gestire i questionari (UC9).
-\item L'utente autenticato/autenticato pro può compilare questionari generati dinamicamente (UC10);
-\item L'utente autenticato/autenticato pro può visualizzare il proprio profilo personale (UC11);
+\item L'utente non autenticato può registrarsi all'applicazione (UC2);
+\item L'utente non autenticato può eseguire il login all'applicazione (UC3);
+\item L'utente autenticato e l'utente autenticato pro possono eseguire il logout dall'applicazione (UC4); 
+\item L'utente autenticato e l'utente autenticato pro possono gestire il proprio profilo utente (UC5);
+\item L'utente autenticato e l'utente autenticato pro possono ricercare e iscriversi a questionari (UC6);
+\item L'utente autenticato e l'utente autenticato pro possono compilare un questionario selezionato (UC7);
+\item L'utente autenticato e l'utente autenticato pro possono gestire le domande (UC8);
+\item L'utente autenticato pro può gestire i questionari (UC9);
+\item L'attore può fare la modalità allenamento (UC10);
+\item L'utente autenticato e l'utente autenticato pro possono visualizzare il proprio profilo personale (UC11);
+\item L'utente autenticato e l'utente autenticato pro possono ricercare un utente nel sistema.
 \end{itemize}
 \end{itemize}
