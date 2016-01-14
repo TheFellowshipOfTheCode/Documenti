@@ -19,13 +19,13 @@
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 	       			\item
-	       			l'attore può compilare il campo dati destinato alla scrittura del testo della domanda (UC8.1.3.2.1)
+	       			L'attore può compilare il campo dati destinato alla scrittura del testo della domanda (UC8.1.3.2.1)
 	       			\item
-	       			l'attore può inserire un'immagine relativa al testo della domanda (UC8.1.3.2.2)
+	       			L'attore può inserire un'immagine relativa al testo della domanda (UC8.1.3.2.2)
 	       			\item
-	       			l'attore può aggiungere almeno due opzioni di risposta (UC8.1.3.2.3);
+	       			L'attore può aggiungere almeno due opzioni di risposta (UC8.1.3.2.3);
 					\item
-					l'attore può indicare una o più risposte corrette (UC8.1.3.2.4).
+					L'attore può indicare una o più risposte corrette (UC8.1.3.2.4).
 	 			\end{enumerate}
 	\end{itemize}
 
@@ -45,6 +45,13 @@
 	\end{itemize}
 	
 \subsubsection{Caso d'uso UC8.1.3.2.2: Inserimento immagine}
+	\label{UC8.1.3.2.2}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1_3_2_2.png}
+		\caption{UC8.1.3.2.2: Inserimento immagine}
+	\end{figure}
+	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -55,8 +62,26 @@
 		\item
 			\textbf{Postcondizione}: l'attore ha inserito l'immagine;
 		\item
-			\textbf{Scenario principale}: l'attore inserisce l'immagine. 	
+			\textbf{Scenario principale}: 
+				\begin{enumerate}
+					\item
+						L'attore può eliminare l'immagine inserita (UC8.1.3.2.2.1).	
+				\end{enumerate}				
 	\end{itemize}
+
+\subsubsection{Caso d'uso UC8.1.3.2.2.1: Eliminazione immagine inserita}
+		\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item		
+			\textbf{Descrizione}: l'attore può eliminare l'immagine inserita relativa al testo della domanda;
+		\item
+			\textbf{Precondizione}: il sistema presenta all'attore lo strumento per compiere questa operazione;
+		\item
+			\textbf{Postcondizione}: l'immagine inserita è stata eliminata;
+		\item
+			\textbf{Scenario principale}: l'attore elimina l'immagine inserita.				
+		\end{itemize}
 	
 	
 \subsubsection{Caso d'uso UC8.1.3.2.3: Aggiunta opzioni di risposta}
@@ -87,6 +112,13 @@
 	\end{itemize}	
 	
 \subsubsection{Caso d'uso UC8.1.3.2.3.1: Aggiunta opzioni di risposta che includono testo}
+	\label{UC8.1.3.2.3.1}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1_3_2_3_1.png}
+		\caption{UC8.1.3.2.3.1: Aggiunta opzioni di risposta che includono testo}
+	\end{figure}	
+	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -97,10 +129,35 @@
 		\item
 			\textbf{Postcondizione}: l'attore ha aggiunto due o più opzioni di risposta che includono testo;
 		\item
-			\textbf{Scenario principale}: l'attore aggiunge due o più opzioni di risposta che includono testo. 			
+			\textbf{Scenario principale}: 
+				\begin{enumerate}
+					\item
+						L'attore può eliminare un opzione che include testo (UC8.1.3.2.3.1.1); 				
+				\end{enumerate}
 	\end{itemize}	
 	
+\subsubsection{Caso d'uso UC8.1.3.2.3.1.1: Eliminazione opzioni di risposta che includono testo}
+		\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item		
+			\textbf{Descrizione}: l'attore può eliminare un opzione di risposta che include testo;
+		\item
+			\textbf{Precondizione}: il sistema presenta all'attore lo strumento per compiere questa operazione;
+		\item
+			\textbf{Postcondizione}: l'opzione di risposta che include testo è stata eliminata;
+		\item
+			\textbf{Scenario principale}: l'attore elimina un opzione di risposta che include testo.				
+		\end{itemize}
+	
 \subsubsection{Caso d'uso UC8.1.3.2.3.2: Aggiunta opzioni di risposta che includono immagini}
+	\label{UC8.1.3.2.3.2}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1_3_2_3_2.png}
+		\caption{UC8.1.3.2.3.2:  Aggiunta opzioni di risposta che includono immagini}
+	\end{figure}	
+	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
@@ -111,9 +168,26 @@
 		\item
 			\textbf{Postcondizione}: l'attore hanno aggiunto due o più opzioni di risposta che includono immagini;
 		\item
-			\textbf{Scenario principale}: l'attore aggiunge due o più opzioni di risposta che includono immagini. 			
+			\textbf{Scenario principale}: 
+				\begin{enumerate}
+					\item
+						L'attore può eliminare un opzione che include un immagine (UC8.1.3.2.3.2.1); 				
+				\end{enumerate}
 	\end{itemize}
 	
+\subsubsection{Caso d'uso UC8.1.3.2.3.2.1: Eliminazione opzioni di risposta che includono immagini}
+		\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item		
+			\textbf{Descrizione}: l'attore può eliminare un opzione di risposta che include un immagine;
+		\item
+			\textbf{Precondizione}: il sistema presenta all'attore lo strumento per compiere questa operazione;
+		\item
+			\textbf{Postcondizione}: l'opzione di risposta che include un immagine è stata eliminata;
+		\item
+			\textbf{Scenario principale}: l'attore elimina un opzione di risposta che include un immagine.				
+		\end{itemize}
 \subsubsection{Caso d'uso UC8.1.3.2.4: Selezione una o più risposte corrette}
 	\begin{itemize}
 		\item
