@@ -1,0 +1,293 @@
+\subsection{Caso d'uso UC8: Gestione delle domande}
+	\label{UC8}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8.png}
+		\caption{UC8: Gestione delle domande}
+	\end{figure}
+	\FloatBarrier
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item		
+			\textbf{Descrizione}: l'attore può creare e modificare domande;
+		\item
+			\textbf{Precondizione}: l'attore è autenticato presso il sistema; 
+		\item
+			\textbf{Postcondizione}: l'attore ha compiuto una delle operazioni appartenenti a questa funzionalità;
+		\item
+			\textbf{Scenario principale}:
+	       		\begin{enumerate}
+					\item
+					L'attore crea una nuova domanda (UC8.1);
+					\item
+					L'attore modifica una domanda (UC8.2).
+	 			\end{enumerate}
+	\end{itemize}
+\subsubsection{Caso d'uso UC8.1: Creazione nuova domanda}
+	\label{UC8.1}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1.png}
+		\caption{UC8.1: Creazione nuova domanda}
+	\end{figure}
+	\FloatBarrier
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item		
+			\textbf{Scopo e descrizione}: l'attore può creare una nuova domanda, utile all'apprendimento di un determinato argomento;
+		\item
+			\textbf{Precondizione}: l'attore ha selezionato l'opzione per la creazione della domanda;
+		\item
+			\textbf{Postcondizione}: l'attore riceve conferma dell'avvenuta creazione;		
+		\item
+			\textbf{Scenario principale}:
+	       		\begin{enumerate}
+					\item
+					L'attore inserisce l'argomento relativo alla nuova domanda (UC8.1.1);
+					\item
+					L'attore inserisce le parole chiave relative alla nuova domanda (UC8.1.2);
+					\item
+					L'attore seleziona la tipologia di domanda (UC8.1.3);
+					\item
+					L'attore conferma la creazione della domanda (UC8.1.4);
+	 			\end{enumerate}
+	 	\item
+			\textbf{Estensione}: l'attore visualizza un messaggio d'errore di conferma (UC8.1.5);
+	 	\item
+	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
+				\begin{itemize}
+					\item[-] 	
+						L'argomento non è stato inserito;
+					\item[-] 
+						Le parole chiave non sono state inserite;
+					\item[-]
+						La tipologia di domanda non è stata selezionata.	
+				\end{itemize}
+			In tal caso il sistema ripresenta il modulo di creazione della domanda, presentando un messaggio d'errore.
+	\end{itemize}
+	\subsubsection{Caso d'uso UC8.1.1: Selezione argomento}
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore, tramite uno strumento di selezione offerto dal sistema, possono indicare un argomento tra quelli presenti;
+		\item		
+			\textbf{Precondizione}: il sistema presenta all'attore autenticato uno strumento di selezione per assegnare alla nuova domanda un argomento;
+		\item
+			\textbf{Postcondizione}: l'argomento è stato selezionato.
+		\item
+			\textbf{Scenario principale}: l'attore seleziona l'argomento da assegnare alla nuova domanda	
+				
+	\end{itemize}	
+	\subsubsection{Caso d'uso UC8.1.2: Inserimento parole chiave}
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore può inserire le parole chiave relative alla nuova domanda per facilitare la ricerca di una domanda;
+		\item		
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato il campo dati per l'inserimento delle parole chiave;
+		\item
+			\textbf{Postcondizione}: l'inserimento delle parole chiave è avvenuto;
+		\item
+			\textbf{Scenario principale}: l'attore inserisce le parole chiave relative alla nuova domanda	
+	\end{itemize}
+
+
+	\subsubsection{Caso d'uso UC8.1.3: Selezione tipologia di domanda}
+	\label{UC8.1.3}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1_3.png}
+		\caption{UC8.1.3: Selezione tipologia di domanda}
+	\end{figure}
+	\FloatBarrier
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore può scegliere la tipologia di domanda che vogliono inserire;
+		\item		
+			\textbf{Precondizione}: il sistema mostra all'utente le tipologie di domande possibili;
+		\item
+			\textbf{Postcondizione}: l'utente ha selezionato la tipologia di domanda da inserire;
+		\item
+			\textbf{Scenario principale}:
+				\item \textbf{Scenario principale}: 
+					\begin{enumerate}
+					\item
+					L'attore può richiamare il wizard per creare una domanda vero/falso (UC8.1.3.1);
+					\item
+					L'attore può richiamare il wizard per creare una domanda a risposta multipla (UC8.1.3.2);
+					\item
+					L'attore può richiamare il wizard per creare una domanda a riempimento di spazi vuoti (UC8.1.3.3);
+					\item
+					L'attore può richiamare il wizard per creare una domanda di tipo a collegamento (UC8.1.3.4);
+					\item
+					L'attore può richiamare il wizard per creare una domanda ad inserimento di immagini (UC8.1.3.5);
+					\item
+					L'attore può richiamare il wizard per creare una domanda ad inserimento di stringhe (UC8.1.3.6);
+					\item
+					L'attore può richiamare il wizard per creare una domanda con area cliccabile nell'immagine (UC8.1.3.7).
+	 			\end{enumerate}
+	\end{itemize}
+
+	%inclusione file latex wizard
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_1.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_2.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_3.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_4.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_5.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_6.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_7.tex}
+
+
+	\subsubsection{Caso d'uso UC8.1.4: Conferma creazione}
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore possono confermare la creazione della domanda;
+		\item		
+			\textbf{Precondizione}: il sistema presenta all'attore l'opzione per compiere questa operazione;
+		\item
+			\textbf{Postcondizione}: il sistema ha ricevuto i dati per la creazione;
+		\item
+			\textbf{Scenario Principale}: l'attore conferma la creazione della domanda.
+			
+		\item
+	 		\textbf{Scenario alternativo}:l'attore annulla la creazione della domanda.
+					
+	\end{itemize}	
+	\subsubsection{Caso d'uso UC8.1.5: Visualizzazione errore creazione domanda}
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
+		\item		
+			\textbf{Precondizione}: il sistema ha ricevuto dei dati errati per la creazione della domanda;
+		\item
+			\textbf{Postcondizione}: il sistema mostra un messaggio d'errore;
+	\end{itemize}	
+
+
+
+
+
+
+	\subsubsection{Caso d'uso UC8.2: Modifica domanda esistente}
+	\label{UC8.2}
+	\begin{figure}[h]
+		\centering
+			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_2.png}
+		\caption{UC8.2: Modifica domanda esistente}
+	\end{figure}
+	\FloatBarrier
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item		
+			\textbf{Scopo e descrizione}: l'attore autenticato modifica una domanda da lui in precedenza creata per correggere errori ortografici o sintattici;
+		\item
+			\textbf{Precondizione}: l'attore autenticato ha selezionato l'opzione per modificare una domanda;
+		\item
+			\textbf{Postcondizione}: l'attore riceve conferma dell'avvenuta modifica.
+		\item
+			\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item
+						L'attore può selezionare la domanda da modificare(UC8.2.1);
+				\end{enumerate}
+	       		
+	 	\item
+			\textbf{Estensione}: l'attore visualizza un messaggio d'errore di conferma (UC8.2.3).
+	 	\item
+	 		\textbf{Scenario alternativo}: possono verificarsi uno o più di questi scenari:
+				\begin{itemize}
+					\item[-] 	
+						L'argomento non è stato inserito;
+					\item[-] 
+						Le parole chiave non sono state inserite;
+					\item[-] 
+						Non tutti i campi obbligatori sono stati inseriti; 
+					\item[-]
+						Non è stata indicata la risposta corretta.	
+				\end{itemize}
+			In tal caso il sistema ripresenta il modulo di modifica della domanda, presentando un messaggio d'errore.
+	\end{itemize}
+	
+		\subsubsection{Caso d'uso UC8.2.1: Selezione domande da modificare}
+		\label{UC8.2.1}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.5,keepaspectratio]{UML/UC8_2_1.png}
+			\caption{Caso d'uso UC8.2.1: Selezione domande da modificare}
+		\end{figure}
+		\FloatBarrier
+		\begin{itemize}
+			\item \textbf{Attori}: utente autenticato, utente autenticato pro;
+			\item \textbf{Descrizione}: l'attore può selezionare la domanda da modificare;
+			\item \textbf{Precondizione}: l'attore autenticato ha selezionato l'opzione per modificare una domanda;
+			\item \textbf{Postcondizione}: l'attore ha selezionato la domanda da modificare 
+			\item \textbf{Scenario principale}: 
+					\begin{enumerate}
+					\item
+					L'attore può richiamare il wizard per modificare una domanda vero/falso (UC8.2.1.1);
+					\item
+					L'attore può richiamare il wizard per modificare una domanda a risposta multipla (UC8.2.1.2);
+					\item
+					L'attore può richiamare il wizard per modificare una domanda a riempimento di spazi vuoti (UC8.2.1.3);
+					\item
+					L'attore può richiamare il wizard per modificare una domanda di tipo a collegamento (UC8.2.1.4);
+					\item
+					L'attore può richiamare il wizard per modificare una domanda ad inserimento di immagini (UC8.2.1.5);
+					\item
+					L'attore può richiamare il wizard per modificare una domanda ad inserimento di stringhe (UC8.2.1.6);
+					\item
+					L'attore può richiamare il wizard per modificare una domanda con area cliccabile nell'immagine (UC8.2.1.7).
+	 			\end{enumerate}
+			
+		\end{itemize}
+
+	%inclusione file latex wizard
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_1.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_2.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_3.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_4.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_5.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_6.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3_7.tex}
+
+
+	\subsubsection{Caso d'uso UC8.2.2: Conferma modifica}
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore conferma la modifica dei dati della domanda selezionata;
+		\item		
+			\textbf{Precondizione}: il sistema presenta all'utente autenticato l'opzione per compiere questa operazione;
+		\item
+			\textbf{Postcondizione}: il sistema ha ricevuto i dati per la modifica;
+		\item
+	 		\textbf{Scenario principale}: l'attore conferma le modifiche effettuate;
+	 	\item
+	 		\textbf{Scenario alternativo}: l'attore annulla la modifica della domanda.
+	\end{itemize}		
+	\subsubsection{Caso d'uso UC8.2.3: Visualizzazione errore modifica}
+	\begin{itemize}
+		\item
+			\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+			\textbf{Scopo e descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
+		\item		
+			\textbf{Precondizione}: il sistema ha ricevuto dei dati errati per la modifica;
+		\item
+			\textbf{Postcondizione}: il sistema mostra un messaggio d'errore;
+		\item
+	 		\textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
+	\end{itemize}	
+	
