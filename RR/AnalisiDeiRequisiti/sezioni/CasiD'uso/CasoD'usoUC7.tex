@@ -17,8 +17,7 @@
 \item L'attore può passare alla domanda successiva (UC7.1);
 \item L'attore può passare alla domanda precedente (UC7.2);
 \item L'attore può passare ad una domanda a sua scelta (UC7.3);
-\item L'attore può confermare le risposte date alle domande (UC7.4);
-\item L'attore può visualizzare il risultato e il riepilogo del questionario svolto (UC7.5).
+\item L'attore può confermare le risposte date alle domande (UC7.4).
 \end{itemize}
 \item\textbf{Scenari alternativi}: nel caso in cui il questionario non è stato abilitato compare una schermata di attesa e l'attore può annullare l'operazione tornando alla schermata precedente.
 \end{itemize}
@@ -59,17 +58,7 @@
 \item\textbf{Attori}: utente autenticato, utente autenticato pro;
 \item\textbf{Descrizione}: l'attore può confermare le domande a cui ha dato una risposta;
 \item\textbf{Precondizione}: l'attore sta compilando un questionario;
-\item\textbf{Postcondizione}: l'attore ha confermato le risposte date;
+\item\textbf{Postcondizione}: l'attore ha confermato le risposte date e il sistema visualizza una schermata contenente il riepilogo del questionario svolto e un voto;
 \item\textbf{Scenario principale}: l'attore che ha finito di rispondere a tutte le domande conferma le risposte date;
 \item\textbf{Scenari alternativi}: l'attore conferma le risposte date anche se non le ha compilate tutte, accettando il fatto che queste verranno considerate sbagliate.
-\end{itemize}
-
-\subsubsection{Caso d'uso UC7.5: Visualizzazione risultato e riepilogo questionario compilato}
-\label{UC7.5}
-\begin{itemize}
-\item\textbf{Attori}: utente autenticato, utente autenticato pro;
-\item\textbf{Descrizione}: l'attore, dopo aver finito di compilare il questionario, può visualizzare una schermata contenente il riepilogo delle risposte date alle domande. Sarà possibile vedere quali di queste sono corrette e quali no e verrà inoltre data una valutazione complessiva;
-\item\textbf{Precondizione}: l'attore ha finito di compilare il questionario;
-\item\textbf{Postcondizione}: il sistema visualizza una schermata contenente il riepilogo del questionario svolto e un voto;
-\item\textbf{Scenario principale}: l'attore visualizza che voto gli è stato dato e a quali domande ha risposto correttamente o meno.
 \end{itemize}
