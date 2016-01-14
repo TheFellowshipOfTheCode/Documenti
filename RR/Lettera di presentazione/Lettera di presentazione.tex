@@ -2,34 +2,21 @@
 
 \input{../../Template/comandi.tex}
 
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
 \documentclass{letter}
-% specifica con quale codifica bisogna leggere il file
-\usepackage[utf8]{inputenc}
-
-% per scrivere in italiano e in inglese;
-% l'ultima lingua (l'italiano) risulta predefinita
-\usepackage[english, italian]{babel}
-
-% imposta lo stile italiano per i paragrafi
-\usepackage{parskip}
-
-% permetti di calcolare la larghezza facendo sottrazioni
-\usepackage{calc}
-
-% importa il simbolo dell'euro
 \usepackage{eurosym}
-% permetti di includere le immagini
-\usepackage{graphicx}
-
-% configura l'header e il footer
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+% Adjust margins for aesthetics
+\addtolength{\voffset}{-0.5in}
+\addtolength{\hoffset}{-0.3in}
+\addtolength{\textheight}{2cm}
 
-%***VARIABILI GLOBALI***
-\def\CAPITOLATO		{\progetto} 
-\def\EMAIL			{\email}
-\def\PROPONENTE		{\proponente}
-\def\NOMEFILE       {\documento}
-
+%\longindentation=0pt % Un-commenting this line will push the closing "Sincerely," to the left of the page
 \fancypagestyle{firstpage}{
 	% cancella tutti i campi di intestazione e piè di pagina
 	\fancyhf{}
@@ -37,10 +24,10 @@
 	\renewcommand{\footrulewidth}{0.3pt}
 	
 	\fancyhead[L]{
-		\includegraphics[height=4cm, keepaspectratio=true]{../../Template/icone/logo_fotc.jpg}
+		\includegraphics[height=4cm, keepaspectratio=true]{../../Template/icone/LogoGruppo.png}
 	}
 	\fancyhead[R]{
-		\Huge{\textbf{Gruppo \gruppo{}}} \\
+		\Large{\textbf{Gruppo \\ \gruppo{}}} \\
 		\vspace{5pt}
 	} 
 	
@@ -48,63 +35,60 @@
 			Gruppo: \gruppo{} \\ E-mail: TheFellowshipOfTheCode@gmail.com
 		}}
 	}
-\setlength{\headheight}{40pt}
-	
-\pagestyle{plain}
-	
-	
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+	\signature{
+		\begin{center}
+			\textit{\GR{} \\ Responsabile \gruppo{}}
+		\end{center}
+	}
+
+
+%----------------------------------------------------------------------------------------
+
 \begin{document}
-	
-	%----------------------------------------------------------------------------------------
-	%	DATE AND FROM ADDRESS
-	%----------------------------------------------------------------------------------------
-	
-	% data
-	\date{}
-	
-	% Secondo parametro: indirizzo del destinatario
-	\begin{letter}{
-			\hfill Prof. Vardanega Tullio \\
-			\hfill Prof. Cardin Riccardo \\
-			\hfill Università degli Studi di Padova \\
-			\hfill Dipartimento di Matematica Pura ed Applicata \\
-			\hfill Via Trieste, 63 \\
-			\hfill 35121 Padova
-		}
-		
-		%----------------------------------------------------------------------------------------
-		%	SEGNATURA
-		%----------------------------------------------------------------------------------------
-		
-		\signature{
-			\begin{center}
-				\textit{\GR{} \\ Responsabile \gruppo{}}
-			\end{center}
-		}
-		
-		%----------------------------------------------------------------------------------------
-		%	CONTENUTO LETTERA DI PRESENTAZIONE
-		%----------------------------------------------------------------------------------------
-		
-		\opening{Egregio professor Vardanega Tullio,}
-			\begin{quotation}			
-				Con la presente il gruppo \gruppo intende comunicarLe ufficialmente la partecipazione alla gara d'appalto del prodotto da Lei commissionato, denominato \textbf{\progetto}.
-				\\
-				Si allegano alla presente lettera i seguenti documenti:
-				\begin{itemize}
-					\item \textit{Analisi dei Requisiti\_v1.0.0};
-					\item \textit{Glossario\_v1.0.0};
-					\item \textit{Norme di Progetto\_v1.0.0};
-					\item \textit{Piano di Progetto\_v1.0.0};
-					\item \textit{Piano di Qualifica\_v1.0.0};
-					\item \textit{Studio di Fattibilità\_v1.0.0};
-					\item \textit{Verbale\_1\_Interno\_aaaa-mm-gg};
-					\item \textit{Verbale\_2\_Interno\_aaaa-mm-gg};
-				\end{itemize}
-				I documenti trattano in maniera approfondita i dettagli di qualifica, di requisiti e di pianificazione.	
-				Il team ha stimato di consegnare il prodotto richiesto entro la data prevista per la partecipazione alla \textit{\RA} che si terrà il 2016-06-17, con un preventivo di costo pari a \euro13.500, come analizzato nel \textit{\PdP}.	
-			\end{quotation}
-		\closing{Cordiali saluti,}
-		%----------------------------------------------------------------------------------------	
-	\end{letter}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{\hfill Prof. Vardanega Tullio \\
+	\hfill Prof. Cardin Riccardo \\
+	\hfill Università degli Studi di Padova \\
+	\hfill Dipartimento di Matematica Pura ed Applicata \\
+	\hfill Via Trieste, 63 \\
+	\hfill 35121 Padova}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+\date{}
+\opening{Egregio professor Vardanega Tullio,}
+ 
+	\begin{quotation}			
+		Con la presente il gruppo \textit{\gruppo} intende comunicarLe ufficialmente la partecipazione alla gara d'appalto del prodotto da Lei commissionato, denominato \textbf{\progetto}.
+		\\
+		Si allegano alla presente lettera i seguenti documenti:
+		\begin{itemize}
+			\item \textit{Analisi dei Requisiti\_v1.0.0};
+			\item \textit{Glossario\_v1.0.0};
+			\item \textit{Norme di Progetto\_v1.0.0};
+			\item \textit{Piano di Progetto\_v1.0.0};
+			\item \textit{Piano di Qualifica\_v1.0.0};
+			\item \textit{Studio di Fattibilità\_v1.0.0};
+			\item \textit{Verbale\_1\_Interno\_aaaa-mm-gg};
+			\item \textit{Verbale\_2\_Interno\_aaaa-mm-gg};
+		\end{itemize}
+		I documenti trattano in maniera approfondita i dettagli di qualifica, di requisiti e di pianificazione.	
+		Il team ha stimato di consegnare il prodotto richiesto entro la data prevista per la partecipazione alla \textit{\RA} che si terrà il 2016-06-17, con un preventivo di costo pari a \euro13.500, come analizzato nel \textit{\PdP}.	
+	\end{quotation}
+	\closing{Cordiali saluti,}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+ 
 \end{document}
