@@ -9,24 +9,24 @@
 
 \begin{itemize}
 \item\textbf{Attori}: utente autenticato, utente autenticato pro;
-\item\textbf{Descrizione}: l'attore da questa pagina può: 
+\item\textbf{Descrizione}: da questa pagina l'attore può: 
 \begin{itemize}
-	\item Visualizzare tutti i dati del loro profilo;
+	\item Visualizzare tutti i dati del proprio profilo;
 	\item Visualizzare le statistiche dei questionari svolti;
 	\item Visualizzare la cronologia dei questionari svolti;
 	\item Accedere alla parte del sistema che permette di modificare il profilo;
-	\item Accedere alla parte del sistema che permette l'aggiunta di nuove domande;
-	\item Accedere alla parte del sistema che permette la creazione di questionari.
+	\item Accedere alla parte del sistema che permette di aggiungere nuove domande;
+	\item Accedere alla parte del sistema che permette di creare questionari.
 \end{itemize}
-\item\textbf{Precondizione}: l'attore è entrato nella pagina di visualizzazione del profilo e il sistema è pronto per mostrare i dati;
+\item\textbf{Precondizione}: l'attore visualizza la pagina iniziale;
 \item\textbf{Postcondizione}: l'attore ha visualizzato i suoi dati come richiesto al sistema;
-\item\textbf{Scenario principale}:
+\item\textbf{Scenario principale}: si verifica uno dei seguenti scenari:
 \begin{itemize}
-\item L'attore ha scelto di andare alla pagina di gestione del profilo (UC11.1);
-\item L'attore ha scelto di andare alla pagina di gestione delle domande (UC11.2);  
-\item L'attore ha scelto di andare alla pagina di gestione dei questionari (UC11.3);
-\item L'attore ha scelto di andare alla pagina di visualizzazione della cronologia dei questionari svolti (UC11.4);
-\item L'attore ha scelto di andare alla pagina di visualizzazione dei questionari abilitati (UC11.5);
+\item L'attore sceglie di andare alla pagina di gestione del profilo (UC11.1);
+\item L'attore sceglie di andare alla pagina di gestione delle domande (UC11.2);  
+\item L'attore sceglie di andare alla pagina di gestione dei questionari (UC11.3);
+\item L'attore sceglie di andare alla pagina di visualizzazione della cronologia dei questionari svolti (UC11.4);
+\item L'attore sceglie di andare alla pagina di visualizzazione dei questionari abilitati (UC11.5);
 \end{itemize}
 \item\textbf{Inclusioni}: Viene incluso l'UC7 per la compilazione dei questionari.
 \end{itemize}
@@ -70,17 +70,14 @@
 \item\textbf{Descrizione}: l'attore può visualizzare la cronologia dei questionari svolti;
 \item\textbf{Precondizione}: l'attore ha compilato almeno un questionario;
 \item\textbf{Postcondizione}: il sistema ha mostrato all'attore la cronologia dei questionari;
-\item\textbf{Scenario principale}: 
-\begin{itemize}
-\item L'attore ha scelto di visualizzare le statistiche di un questionario (UC11.4.1).
-\end{itemize}
+\item\textbf{Scenario principale}: l'attore ha scelto di visualizzare le statistiche di un questionario (UC11.4.1).
 \end{itemize}
 
 \subsubsection{Caso d'uso UC11.4.1: Selezione e visualizzazione delle statistiche di un questionario scelto}
 \begin{itemize}
 \item\textbf{Attori}: utente autenticato, utente autenticato pro;
-\item\textbf{Descrizione}: l'attore può selezionare e visualizzare le statistiche di un questionario da lui scelto fra quelli presenti nella sua cronologia;
-\item\textbf{Precondizione}: il sistema mostra all'utente tutti i questionari da lui svolti;
+\item\textbf{Descrizione}: l'attore può selezionare un questionario fra quelli presenti e quindi visualizzarne le statistiche;
+\item\textbf{Precondizione}: il sistema mostra all'attore tutti i questionari da lui svolti;
 \item\textbf{Postcondizione}: il sistema ha mostrato all'attore le statistiche del questionario selezionato;
 \item\textbf{Scenario principale}: l'attore si trova nella pagina dedicata alla visualizzazione delle statistiche di un particolare questionario da lui scelto.
 \end{itemize}
@@ -97,10 +94,7 @@
 \item\textbf{Descrizione}: l'attore può visualizzare la lista dei questionari a cui è stato abilitato da parte dell'utente autenticato pro proprietario del questionario.
 \item\textbf{Precondizione}: l'attore deve aver richiesto l'abilitazione ad un questionario e deve essere stato accettato dal proprietario;
 \item\textbf{Postcondizione}: il sistema ha mostrato all'attore tutti i questionari a cui è stato abilitato;
-\item\textbf{Scenario principale}: 
-\begin{itemize}
-\item L'attore ha selezionato un questionario abilitato (UC11.5.1).
-\end{itemize} 
+\item\textbf{Scenario principale}: l'attore ha selezionato un questionario abilitato (UC11.5.1).
 \end{itemize}
 
 \subsubsection{Caso d'uso UC11.5.1: Seleziona questionario abilitato}
