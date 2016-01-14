@@ -8,18 +8,19 @@
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore si può autenticare con un metodo proposto;
+	\item \textbf{Descrizione}: l'attore si può autenticare tramite uno dei metodi proposti;
 	\item \textbf{Precondizione}: il sistema è avviato e pronto per l'utilizzo e mostra la pagina di login;
-	\item \textbf{Postcondizione}: l'attore è autenticato.
+	\item \textbf{Postcondizione}: l'attore è autenticato;
 	\item \textbf{Scenario principale}: l'attore sceglie uno dei seguenti modi per autenticarsi:
 		\begin{itemize}
-			\item Login con \progetto (UC3.1);
-			\item Login con facebook (UC3.2);
-			\item Login con Twitter (UC3.3);
-			\item Login con Google+ (UC3.4);
-			\item Login con linkedin (UC3.5);
+			\item L'attore può effettuare il login con \progetto (UC3.1);
+			\item L'attore può effettuare il login con Facebook (UC3.2);
+			\item L'attore può effettuare il login con Twitter (UC3.3);
+			\item L'attore può effettuare il login con Google+ (UC3.4);
+			\item L'attore può effettuare il login con Linkedin (UC3.5).
 		\end{itemize}
 \end{itemize}
+
 \subsubsection{Caso d'uso UC3.1: Login da \progetto}
 \label{UC3.1}
 \begin{figure}
@@ -30,80 +31,90 @@
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore si può autenticare: inserisce nome utente e password con cui è registrato ed effettua il login;
+	\item \textbf{Descrizione}: l'attore si può autenticare inserendo username/mail e password, con cui è registrato;
 	\item \textbf{Precondizione}: il sistema è avviato e pronto per l'utilizzo e mostra la pagina di login;
-	\item \textbf{Flusso principale degli eventi}:
-	\begin{enumerate}
-		\item L'attore inserisce il nome utente oppure la mail utilizzata al momento della registrazione (UC3.1.1);
-		\item L'attore inserisce la password (UC3.1.2);
-		\item L'attore conferma il login (UC3.1.3).
-	\end{enumerate}
-	\item \textbf{Scenario alternativo:}
+	\item \textbf{Postcondizione}: il sistema ha autenticato l'attore e quindi mostra all'attore autenticato la sua area riservata.
+	\item \textbf{Scenario Principale}:
 	\begin{itemize}
-		\item L'attore inserisce un nome utente inesistente;
-		\item L'attore inserisce una mail non registrata;
-		\item L'attore non inserisce ne un nome utente ne una mail;
-		\item L'attore inserisce una password errata;
-		\item L'attore non inserisce una password.
+		\item L'attore può inserire l'username oppure la mail utilizzata al momento della registrazione (UC3.1.1);
+		\item L'attore può inserire la password (UC3.1.2);
+		\item L'attore può confermare il login (UC3.1.3).
 	\end{itemize}
-	In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati e viene visualizzato un messaggio d' errore.
-	\item \textbf{Estensione:} l'attore visualizza un messaggio d'errore di autenticazione (UC3.1.4).
-	\item \textbf{Postcondizione:} il sistema ha autenticato l'attore e quindi mostra all'attore autenticato la sua area riservata.
+	\item \textbf{Estensioni}: autenticazione fallita (UC3.1.4).
 \end{itemize}
 
-\subsubsection{Caso d'uso UC3.1.1: inserimento del nome utente o della mail}
+\subsubsection{Caso d'uso UC3.1.1: Inserimento username/mail}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore inserisce il proprio nome utente creato oppure la mail utilizzata al momento della registrazione (UC2);
+	\item \textbf{Descrizione}: l'attore può inserire l'username o la mail associata al proprio account;
 	\item \textbf{Precondizione}: il sistema presente all'attore lo spazio destinato a questa operazione;
-	\item \textbf{Postcondizione}: il nome utente è stato inserito.
+	\item \textbf{Postcondizione}: l'attore ha inserito username/mail;
+	\item \textbf{Scenario Principale}: l'attore inserisce l'username o la mail associata al proprio account. 
 \end{itemize}
-\subsubsection{Caso d'uso UC3.1.2: inserimento della password}
+
+\subsubsection{Caso d'uso UC3.1.2: Inserimento password}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore inserisce la propria password associata al proprio nome utente creata al momento della registrazione (UC2);
+	\item \textbf{Descrizione}: l'attore può inserire la password associata al proprio account;
 	\item \textbf{Precondizione}: il sistema presenta all'attore lo spazio destinato a questa operazione;
-	\item \textbf{Postcondizione}: la password associata al nome utente è stata inserita.
+	\item \textbf{Postcondizione}: l'attore inserisce la password;
+	\item \textbf{Scenario Principale}: l'attore inserisce la password associata al proprio account.
 \end{itemize}
-\subsubsection{Caso d'uso UC3.1.3: conferma login}
+
+\subsubsection{Caso d'uso UC3.1.3: Conferma login}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore conferma i dati inseriti per tentare una login;
-	\item \textbf{Precondizione}: il nome utente o la mail e la password devono essere stati inseriti;
-	\item \textbf{Postcondizione}: l'attore è autenticato.
+	\item \textbf{Descrizione}: l'attore può confermare i dati inseriti per effettuare il login;
+	\item \textbf{Precondizione}: l'attore ha inserito l'username/mail e la password;
+	\item \textbf{Postcondizione}: l'attore è autenticato;
+	\item \textbf{Scenario Principale}: l'attore conferma i dati inseriti per effettuare la login con il proprio account.
 \end{itemize}
-\subsubsection{Caso d'uso UC3.1.4: visualizza errore di autenticazione}
+
+\subsubsection{Caso d'uso UC3.1.4: Autenticazione fallita}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore visualizza un errore per fallimento del tentativo di login;
+	\item \textbf{Descrizione}: l'attore ha inserito dei dati non validi per autenticarsi, in particolare:
+		\begin{itemize}
+		\item L'attore inserisce un username inesistente;
+		\item L'attore inserisce una mail non registrata;
+		\item L'attore inserisce una password che non corrisponde a quella associata all'username/mail inserita;
+		\item L'attore non inserisce una password;
+		\item L'attore non inserisce né un username/mail né una password.
+		\end{itemize}
 	\item \textbf{Precondizione}: l'attore ha confermato il login;
-	\item \textbf{Postcondizione}: l'attore visualizza il messaggio d'errore e può procedere con un nuovo inserimento del nome utente o della mail (UC3.1) o della password (UC3.2).
+	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+	\item \textbf{Scenario Principale}: l'attore visualizza un messaggio relativo ai dati errati che erano stati precedentemente inseriti.	
 \end{itemize}
-\subsubsection{Caso d'uso UC3.2: Login con facebook}
+
+\subsubsection{Caso d'uso UC3.2: Login con Facebook}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando il social network facebook in modo da fare una login molto rapida;
-	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con facebook;
-	\item \textbf{Postcondizione}: l'attore è autenticato.
+	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando Facebook;
+	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con Facebook;
+	\item \textbf{Postcondizione}: l'attore è autenticato;
+	\item \textbf{Scenario Principale}: l'attore effettua il login tramite Facebook.
 \end{itemize}
-\subsubsection{Caso d'uso UC3.3: Login con twitter}
+\subsubsection{Caso d'uso UC3.3: Login con Twitter}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Scopo e descrizione}: l'attore può autenticarsi utilizzando il social network twitter in modo da fare una login molto rapida;
-	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con twitter;
-	\item \textbf{Postcondizione}: l'attore è autenticato.
+	\item \textbf{Scopo e descrizione}: l'attore può autenticarsi utilizzando Twitter;
+	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con Twitter;
+	\item \textbf{Postcondizione}: l'attore è autenticato;
+	\item \textbf{Scenario Principale}: l'attore effettua il login tramite Twitter.
 \end{itemize}
-\subsubsection{Caso d'uso UC3.4: Login con google+}
+\subsubsection{Caso d'uso UC3.4: Login con Google+}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando il social network google+ in modo da fare una login molto rapida;
-	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con google+;
-	\item \textbf{Postcondizione}: l'attore è autenticato.
+	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando Google+;
+	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con Google+;
+	\item \textbf{Postcondizione}: l'attore è autenticato;
+	\item \textbf{Scenario Principale}: l'attore effettua il login tramite Google+.
 \end{itemize}
-\subsubsection{Caso d'uso UC3.5: Login con linkedin}
+\subsubsection{Caso d'uso UC3.5: Login con Linkedin}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando il social network linkedin in modo da fare una login molto rapida;
-	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con linkedin;
-	\item \textbf{Postcondizione}: l'attore è autenticato.
+	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando Linkedin;
+	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con Linkedin;
+	\item \textbf{Postcondizione}: l'attore è autenticato;
+	\item \textbf{Scenario Principale}: l'attore effettua il login tramite Linkedin.
 \end{itemize}
