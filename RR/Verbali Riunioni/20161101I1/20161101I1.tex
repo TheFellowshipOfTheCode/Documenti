@@ -1,0 +1,28 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{\VI}
+\newcommand{\nomedocumentofisico}{20161101I1.pdf}
+\newcommand{\redazione}{\SM}
+\newcommand{\verifica}{\GN}
+\newcommand{\approvazione}{\GR}
+\newcommand{\uso}{Interno}
+\newcommand{\datacreazione}{15 Gennaio 2016}
+\newcommand{\datamodifica}{15 Gennaio 2016}
+\newcommand{\stato}{Sviluppo}
+\newcommand{\destinateTo}{\gruppo}
+
+\input{../../../Template/layout.tex}
+\input{../../../Template/comandi.tex}
+\input{sezioni/diario.tex}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../../Template/HomePage.tex}
+\lhead{\Large{\progetto} \\ \footnotesize{\documento}}
+\rhead{\includegraphics[keepaspectratio = true, width = 25px] {../../../Template/icone/LogoGruppo.png}}
+\renewcommand{\headrulewidth}{0.4pt}  %Linea sotto l'intestazione
+
+\input{../../../Template/diario.tex}
+\tableofcontents
+\input{sezioni/informazioniGenerali.tex}
+\input{sezioni/Riassunto.tex}
+\end{document}
