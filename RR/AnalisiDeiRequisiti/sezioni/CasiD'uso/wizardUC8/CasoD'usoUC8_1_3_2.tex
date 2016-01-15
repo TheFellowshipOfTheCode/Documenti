@@ -10,16 +10,16 @@
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item		
-			\textbf{Descrizione}: l'attore può creare domande a risposta multipla;
+			\textbf{Descrizione}: l'attore può utilizzare la procedura guidata per la creazione di una domanda a risposta multipla;
 		\item
-			\textbf{Precondizione}: l'attore ha selezionato la seguente funzionalità; 
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla;
 		\item
 			\textbf{Postcondizione}: l'attore ha creato una domanda a risposta multipla;
 		\item
 			\textbf{Scenario principale}:
 	       		\begin{enumerate}
 	       			\item
-	       			L'attore può compilare il campo dati destinato alla scrittura del testo della domanda (UC8.1.3.2.1)
+	       			L'attore può inserire il testo della domanda (UC8.1.3.2.1);
 	       			\item
 	       			L'attore può inserire un'immagine relativa al testo della domanda (UC8.1.3.2.2);
 	       			\item
@@ -29,7 +29,6 @@
 	 			\end{enumerate}
 	\end{itemize}
 
-\newpage
 \subsubsection{Caso d'uso UC8.1.3.2.1: Inserimento testo della domanda}
 	\begin{itemize}
 		\item
@@ -61,13 +60,13 @@
 		\item
 			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla; 
 		\item
-			\textbf{Postcondizione}: l'attore ha inserito l'immagine;
+			\textbf{Postcondizione}: l'attore ha inserito un'immagine relativa al testo della domanda;
 		\item
 			\textbf{Scenario principale}: 
-				\begin{enumerate}
-					\item
-						L'attore può eliminare l'immagine inserita (UC8.1.3.2.2.1).	
-				\end{enumerate}				
+			\begin{enumerate}
+				\item
+					L'attore può eliminare l'immagine inserita (UC8.1.3.2.2.1).	
+			\end{enumerate}						
 	\end{itemize}
 
 \subsubsection{Caso d'uso UC8.1.3.2.2.1: Eliminazione immagine inserita}
@@ -75,16 +74,15 @@
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item		
-			\textbf{Descrizione}: l'attore può eliminare l'immagine inserita relativa al testo della domanda;
+			\textbf{Descrizione}: l'attore può rimuovere l'immagine relativa al testo della domanda che era stata inserita precedentemente;
 		\item
-			\textbf{Precondizione}: il sistema presenta all'attore lo strumento per compiere questa operazione;
+			\textbf{Precondizione}: l'attore ha inserito un immagine relativa al testo della domanda;
 		\item
-			\textbf{Postcondizione}: l'immagine inserita è stata eliminata;
+			\textbf{Postcondizione}: l'attore ha eliminato l'immagine relativa alla domanda;
 		\item
-			\textbf{Scenario principale}: l'attore elimina l'immagine inserita.				
+			\textbf{Scenario principale}: l'attore rimuove l'immagine relativa alla domanda. 
 		\end{itemize}
 	
-\newpage
 \subsubsection{Caso d'uso UC8.1.3.2.3: Aggiunta opzioni di risposta}
 	\label{UC8.1.3.2.3}
 	\begin{figure}[h]
@@ -99,7 +97,7 @@
 		\item		
 			\textbf{Descrizione}: l'attore può aggiungere almeno due opzioni di risposta;
 		\item
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla; 
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla;
 		\item
 			\textbf{Postcondizione}: l'attore ha aggiunto due o più opzioni di risposta;
 		\item
@@ -112,7 +110,6 @@
 	 			\end{enumerate}
 	\end{itemize}	
 
-\newpage	
 \subsubsection{Caso d'uso UC8.1.3.2.3.1: Aggiunta opzioni di risposta che includono testo}
 	\label{UC8.1.3.2.3.1}
 	\begin{figure}[h]
@@ -127,7 +124,7 @@
 		\item		
 			\textbf{Descrizione}: l'attore può aggiungere almeno due opzioni di risposta che includono testo;
 		\item
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di domande a risposta multipla con opzioni di risposta che includono testo; 
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla;
 		\item
 			\textbf{Postcondizione}: l'attore ha aggiunto due o più opzioni di risposta che includono testo;
 		\item
@@ -143,16 +140,15 @@
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item		
-			\textbf{Descrizione}: l'attore può eliminare un'opzione di risposta che include testo;
+			\textbf{Descrizione}: l'attore può rimuovere un'opzione di risposta che include testo;
 		\item
-			\textbf{Precondizione}: il sistema presenta all'attore lo strumento per compiere questa operazione;
+			\textbf{Precondizione}: l'attore ha inserito almeno un'opzione di risposta che include testo;
 		\item
-			\textbf{Postcondizione}: l'opzione di risposta che include testo è stata eliminata;
+			\textbf{Postcondizione}: l'attore ha eliminato l'opzione di risposta che include testo;
 		\item
-			\textbf{Scenario principale}: l'attore elimina un'opzione di risposta che include testo.				
+			\textbf{Scenario principale}: l'attore rimuove un'opzione di risposta che include testo.				
 		\end{itemize}
 
-\newpage
 \subsubsection{Caso d'uso UC8.1.3.2.3.2: Aggiunta opzioni di risposta che includono immagini}
 	\label{UC8.1.3.2.3.2}
 	\begin{figure}[h]
@@ -167,7 +163,7 @@
 		\item		
 			\textbf{Descrizione}: l'attore può aggiungere almeno due opzioni di risposta che includono immagini;
 		\item
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di domande a risposta multipla con opzioni di risposta che includono immagini; 
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla;
 		\item
 			\textbf{Postcondizione}: l'attore ha aggiunto due o più opzioni di risposta che includono immagini;
 		\item
@@ -183,32 +179,25 @@
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item		
-			\textbf{Descrizione}: l'attore può eliminare un'opzione di risposta che include un'immagine;
+			\textbf{Descrizione}: l'attore può rimuovere un'opzione di risposta che include un'immagine;
 		\item
-			\textbf{Precondizione}: il sistema presenta all'attore lo strumento per compiere questa operazione;
+			\textbf{Precondizione}: l'attore ha inserito almeno un'opzione di risposta che include un'immagine;
 		\item
-			\textbf{Postcondizione}: l'opzione di risposta che include un'immagine è stata eliminata;
+			\textbf{Postcondizione}: l'attore ha eliminato l'opzione di risposta che include un'immagine;
 		\item
-			\textbf{Scenario principale}: l'attore elimina un'opzione di risposta che include un'immagine.				
+			\textbf{Scenario principale}: l'attore rimuove un'opzione di risposta che include un'immagine.				
 		\end{itemize}
+		
 \subsubsection{Caso d'uso UC8.1.3.2.4: Selezione una o più risposte corrette}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item		
-			\textbf{Descrizione}: l'attore può selezionare una o più risposte corrette;
+			\textbf{Descrizione}: l'attore può indicare una o più risposte corrette;
 		\item
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di domande a risposta multipla; 
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione di una domanda a risposta multipla;
 		\item
 			\textbf{Postcondizione}: l'attore ha selezionato una o più risposte corrette;
 		\item
-			\textbf{Scenario principale}: l'attore seleziona una o più risposte corrette. 			
+			\textbf{Scenario principale}: l'attore indica una o più risposte corrette. 			
 	\end{itemize}
-
-	
-	
-	
-	
-	
-	
-	

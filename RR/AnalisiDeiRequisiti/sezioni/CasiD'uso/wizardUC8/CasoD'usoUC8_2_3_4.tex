@@ -8,16 +8,17 @@
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Attori}: \uau, \uaupro;
-	\item \textbf{Descrizione}: l'attore utilizza la procedura guidata per la modifica di una domanda di tipo collegamento; 
-	\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Modifica domanda di collegamento" nelle scelte possibili nel caso d'uso UC8.2.1;
-	\item \textbf{Postcondizione}: l'attore ha modificato tutti i campi necessari per completare la modifica di una domanda di tipo collegamento. L'attore deve inserire almeno due coppie per rispettare la postcondizione;
+	\item \textbf{Descrizione}: l'attore può utilizzare la procedura guidata per la modifica di una domanda di collegamento; 
+	\item \textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda di collegamento; 
+	\item \textbf{Postcondizione}: l'attore ha modificato una domanda di collegamento;
 	\item \textbf{Scenario principale}: 
 	\begin{enumerate}
-		\item L'attore inserisce una coppia di elementi (UC8.2.1.4.1);
-		\item L'attore può eliminare una coppia di elementi appena inserita (UC8.2.1.4.2);
-		\item L'attore può modificare una coppia di elementi (UC8.2.1.4.3).
-	\end{enumerate}
-	\item \textbf{Scenari alternativi}: se non ci sono almeno due coppie presenti nella lista delle coppie l'utente deve inserire una nuova coppia di elementi.
+			\item L'attore può inserire una coppia di elementi (UC8.2.1.4.1);
+			\item L'attore può eliminare una coppia di elementi inserita (UC8.2.1.4.2);
+			\item L'attore può modificare una coppia di elementi inserita (UC8.2.1.4.3);
+			\item L'attore può modificare il testo della domanda (UC8.2.1.4.4).
+		\end{enumerate}
+	\item \textbf{Scenari alternativi}: se non ci sono almeno due coppie presenti nella lista delle coppie l'attore deve inserire una nuova coppia di elementi.
 \end{itemize}
 
 	\subsubsection{Caso d'uso UC8.2.1.4.1: Inserimento coppia di elementi}
@@ -30,8 +31,8 @@
 	\FloatBarrier
 	\begin{itemize}
 		\item \textbf{Attori}: \uau, \uaupro;
-		\item \textbf{Descrizione}: l'attore inserisce una coppia di elementi e questi possono essere sia immagini che testo o combinazioni di questi. Un coppia una volta creata sarà già soluzione di essa stessa: il primo elemento dovrà essere collegato con il secondo o viceversa; 
-		\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Inserimento coppia di elementi" nelle scelte possibili nel caso d'uso UC8.2.1.4;
+		\item \textbf{Descrizione}: l'attore può inserire una coppia di elementi, sia immagini che testo o combinazioni di questi, che siano correlati tra loro in modo da indicare la soluzione della domanda. 
+		\item \textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda di collegamento;
 		\item \textbf{Postcondizione}: l'attore ha inserito una coppia di elementi nella lista di coppie di elementi; 
 		\item \textbf{Scenario principale}: 
 		\begin{enumerate}
@@ -46,44 +47,40 @@
 		\label{UC8.2.1.4.1.1}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di inserire come primo elemento della coppia un'immagine;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Inserimento di un'immagine come primo elemento" nelle scelte possibili nel caso d'uso UC8.2.1.4.1 e non ha già scelto l'opzione presentata dall'use case UC8.2.1.4.1.2;
-			\item \textbf{Postcondizione}: l'utente ha inserito come primo elemento un'immagine;
-			\item \textbf{Scenario principale}: l'attore carica un'immagine come primo elemento della coppia;  
-			\item \textbf{Scenari alternativi}: l'attore non può selezionare il seguente campo se è già stata utilizzata l'opzione proposta dall'use case UC8.2.1.4.1.2. Viene così rimandato all'use case UC8.2.1.4.1.
+			\item \textbf{Descrizione}: l'attore può inserire come primo elemento della coppia un'immagine;
+			\item \textbf{Precondizione}: l'attore sta selezionando una coppia di elementi;
+			\item \textbf{Postcondizione}: l'attore ha inserito come primo elemento un'immagine;
+			\item \textbf{Scenario principale}: l'attore carica un'immagine come primo elemento della coppia.
 		\end{itemize}
 		
 		\subsubsection{Caso d'uso UC8.2.1.4.1.2: Inserimento di un testo come primo elemento}
 		\label{UC8.2.1.4.1.2}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di inserire come primo elemento della coppia un testo;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Inserimento di un testo come primo elemento" nelle scelte possibili nel caso d'uso UC8.2.1.4.1 e non ha già scelto l'opzione presentata dall'use case UC8.2.1.4.1.1;
-			\item \textbf{Postcondizione}: l'utente ha inserito come primo elemento un testo;
-			\item \textbf{Scenario principale}: l'attore inserisce del testo come primo elemento della coppia;  
-			\item \textbf{Scenari alternativi}: l'attore non può selezionare il seguente campo se è già stata utilizzata l'opzione proposta dall'use case UC8.2.1.4.1.1. Viene così rimandato all'use case UC8.2.1.4.1.
+			\item \textbf{Descrizione}: l'attore può inserire come primo elemento della coppia un testo;
+			\item \textbf{Precondizione}: l'attore sta selezionando una coppia di elementi;
+			\item \textbf{Postcondizione}: l'attore ha inserito come primo elemento un testo;
+			\item \textbf{Scenario principale}: l'attore inserisce del testo come primo elemento della coppia.
 		\end{itemize}
 		
-		\subsubsection{Caso d'uso UC8.2.1.4.1.3: Inserimento di un'immagine come secondo elemento}
+			\subsubsection{Caso d'uso UC8.2.1.4.1.3: Inserimento di un'immagine come secondo elemento}
 		\label{UC8.2.1.4.1.3}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di inserire come secondo elemento della coppia un'immagine;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Inserimento di un'immagine come secondo elemento" nelle scelte possibili nel caso d'uso UC8.2.1.4.1 e non ha già scelto l'opzione presentata dall'use case UC8.2.1.4.1.4;
-			\item \textbf{Postcondizione}: l'utente ha inserito come secondo elemento un'immagine;
-			\item \textbf{Scenario principale}: l'attore carica un'immagine come secondo elemento della coppia;  
-			\item \textbf{Scenari alternativi}: l'attore non può selezionare il seguente campo se è già stata utilizzata l'opzione proposta dall'use case UC8.2.1.4.1.4. Viene così rimandato all'use case UC8.2.1.4.1.
+			\item \textbf{Descrizione}: l'attore può inserire come secondo elemento della coppia un'immagine;
+			\item \textbf{Precondizione}: l'attore sta selezionando una coppia di elementi;
+			\item \textbf{Postcondizione}: l'attore ha inserito come secondo elemento un'immagine;
+			\item \textbf{Scenario principale}: l'attore carica un'immagine come secondo elemento della coppia.
 		\end{itemize}
 		
 		\subsubsection{Caso d'uso UC8.2.1.4.1.4: Inserimento di un testo come secondo elemento}
 		\label{UC8.2.1.4.1.4}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di inserire come secondo elemento della coppia un testo;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Inserimento di un testo come secondo elemento" nelle scelte possibili nel caso d'uso UC8.2.1.4.1 e non ha già scelto l'opzione presentata dall'use case UC8.2.1.4.1.3;
-			\item \textbf{Postcondizione}: l'utente ha inserito come secondo elemento un'immagine;
-			\item \textbf{Scenario principale}: l'attore inserisce del testo come secondo elemento della coppia;  
-			\item \textbf{Scenari alternativi}: l'attore non può selezionare il seguente campo se è già stata utilizzata l'opzione proposta dall'use case UC8.2.1.4.1.3. Viene così rimandato all'use case UC8.2.1.4.1.
+			\item \textbf{Descrizione}: l'attore può inserire come secondo elemento della coppia un testo;
+			\item \textbf{Precondizione}: l'attore sta selezionando una coppia di elementi;
+			\item \textbf{Postcondizione}: l'attore ha inserito come secondo elemento un testo;
+			\item \textbf{Scenario principale}: l'attore inserisce del testo come secondo elemento della coppia.
 		\end{itemize}
 	
 	\subsubsection{Caso d'uso UC8.2.1.4.2: Eliminazione coppia di elementi}
@@ -96,23 +93,26 @@
 	\FloatBarrier
 	\begin{itemize}
 		\item \textbf{Attori}: \uau, \uaupro;
-		\item \textbf{Descrizione}: l'utente decide di eliminare una coppia di elementi dalla lista di coppie di elementi;
-		\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Eliminazione coppia di elementi" nelle scelte possibili nel caso d'uso UC8.2.1.4;
-		\item \textbf{Postcondizione}: l'attore ha eliminato, dalla lista delle coppie di elementi, una coppia;
-		\item \textbf{Scenario principale}: l'attore deve confermare di voler eliminare una coppia di elementi (UC8.2.1.4.2.1). 
+		\item \textbf{Descrizione}: l'attore può rimuovere una coppia di elementi dalla lista di coppie di elementi;
+		\item \textbf{Precondizione}: l'attore ha inserito almeno una coppia di elementi;
+		\item \textbf{Postcondizione}: l'attore ha eliminato una coppia di elementi dalla lista delle coppie di elementi;
+		\item \textbf{Scenario principale}: 
+		\begin{enumerate}
+		\item L'attore può confermare l'eliminazione di una coppia di elementi (UC8.2.1.4.2.1).
+		\end{enumerate}	
+		\item \textbf{Scenari alternativi}: l'attore annulla l'operazione tornando alla schermata precedente.
 	\end{itemize}
-	
+
 		\subsubsection{Caso d'uso UC8.2.1.4.2.1: Conferma eliminazione coppia di elementi}
 		\label{UC8.2.1.4.2.1}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore deve confermare di voler eliminare la coppia di elementi;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Conferma eliminazione coppia di elementi" nelle scelte possibili nel caso d'uso UC8.2.1.4.2;
-			\item \textbf{Postcondizione}: l'attore ha confermato di voler eliminare la coppia di elementi;
-			\item \textbf{Scenario principale}: l'attore conferma di voler eliminare la coppia di elementi;
-			\item \textbf{Scenari alternativi}: l'attore non conferma di voler eliminare la coppia di elementi.
+			\item \textbf{Descrizione}: l'attore può confermare la rimozione di una coppia di elementi;
+			\item \textbf{Precondizione}: l'attore ha eliminato una coppia di elementi dalla lista delle coppie di elementi;
+			\item \textbf{Postcondizione}: l'attore ha confermato l'eliminazione della coppia di elementi;
+			\item \textbf{Scenario principale}: l'attore conferma la rimozione della coppia di elementi.
 		\end{itemize}
-	
+
 	\subsubsection{Caso d'uso UC8.2.1.4.3: Modifica coppia di elementi}
 	\label{UC8.2.1.4.3}
 	\begin{figure}[h]
@@ -123,15 +123,15 @@
 	\FloatBarrier
 	\begin{itemize}
 		\item \textbf{Attori}: \uau, \uaupro;
-		\item \textbf{Descrizione}: l'attore modifica una coppia di elementi;
-		\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Modifica coppia di elementi" nelle scelte possibili nel caso d'uso UC8.2.1.4;
-		\item \textbf{Postcondizione}: l'attore ha modificato una coppia di elementi nella lista di coppie di elementi; 
+		\item \textbf{Descrizione}: l'attore può modificare una coppia di elementi presente nella lista di coppie di elementi;
+		\item \textbf{Precondizione}: l'attore ha inserito almeno una coppia di elementi;
+		\item \textbf{Postcondizione}: l'attore ha modificato una coppia di elementi presente nella lista di coppie di elementi; 
 		\item \textbf{Scenario principale}: 
 		\begin{enumerate}
-			\item L'attore modifica un elemento cambiandone il testo (UC8.2.1.4.1.1);
-			\item L'attore modifica un elemento cambiandone l'immagine (UC8.2.1.4.1.2);
-			\item L'attore modifica un elemento facendolo passare da testo ad immagine (UC8.2.1.4.1.3);
-			\item L'attore modifica un elemento facendolo passare da immagine a testo (UC8.2.1.4.1.4).	
+			\item L'attore può modificare un elemento cambiandone il testo (UC8.2.1.4.1.1);
+			\item L'attore può modificare un elemento cambiandone l'immagine (UC8.2.1.4.1.2);
+			\item L'attore può modificare un elemento facendolo passare da testo ad immagine (UC8.2.1.4.1.3);
+			\item L'attore può modificare un elemento facendolo passare da immagine a testo (UC8.2.1.4.1.4).	
 		\end{enumerate}
 	\end{itemize}
 	
@@ -139,9 +139,9 @@
 		\label{UC8.2.1.4.3.1}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di modificare il testo di un elemento;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Modifica testo di un elemento" nelle scelte possibili nel caso d'uso UC8.2.1.4.3;
-			\item \textbf{Postcondizione}: l'utente ha modificato il testo di un elemento;
+			\item \textbf{Descrizione}: l'attore può modificare il testo di un elemento;
+			\item \textbf{Precondizione}: l'attore sta modificando una coppia di elementi presente nella lista di coppie di elementi; 
+			\item \textbf{Postcondizione}: l'attore ha modificato il testo di un elemento;
 			\item \textbf{Scenario principale}: l'attore modifica il testo di un elemento.  
 		\end{itemize}
 		
@@ -149,9 +149,9 @@
 		\label{UC8.2.1.4.3.2}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di caricare un'altra immagine per un elemento;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Modifica immagine di un elemento" nelle scelte possibili nel caso d'uso UC8.2.1.4.3;
-			\item \textbf{Postcondizione}: l'utente ha caricato un'altra immagine per un elemento;
+			\item \textbf{Descrizione}: l'attore può caricare un'altra immagine per un elemento;
+			\item \textbf{Precondizione}: l'attore sta modificando una coppia di elementi presente nella lista di coppie di elementi; 
+			\item \textbf{Postcondizione}: l'attore ha inserito un'altra immagine per un elemento;
 			\item \textbf{Scenario principale}: l'attore carica un'altra immagine per un elemento.
 		\end{itemize}
 		
@@ -159,9 +159,9 @@
 		\label{UC8.2.1.4.3.3}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di modificare un elemento facendolo diventare un'immagine al posto di un testo;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Cambia testo in immagine" nelle scelte possibili nel caso d'uso UC8.2.1.4.3;
-			\item \textbf{Postcondizione}: l'utente ha fatto diventare un'immagine un elemento che prima era un testo;
+			\item \textbf{Descrizione}: l'attore può modificare un elemento facendolo diventare un'immagine al posto di un testo;
+			\item \textbf{Precondizione}: l'attore sta modificando una coppia di elementi presente nella lista di coppie di elementi; 
+			\item \textbf{Postcondizione}: l'attore ha fatto diventare un'immagine un elemento che prima era un testo;
 			\item \textbf{Scenario principale}: l'attore inserisce un'immagine come modifica dell'elemento.  
 		\end{itemize}
 		
@@ -169,9 +169,9 @@
 		\label{UC8.2.1.4.3.4}
 		\begin{itemize}
 			\item \textbf{Attori}: \uau, \uaupro;
-			\item \textbf{Descrizione}: l'attore decide di modificare un elemento facendolo diventare un testo al posto di un'immagine;
-			\item \textbf{Precondizione}: l'attore ha scelto l'opzione "Cambia immagine in testo" nelle scelte possibili nel caso d'uso UC8.2.1.4.3;
-			\item \textbf{Postcondizione}: l'utente ha fatto diventare un testo un elemento che prima era un'immagine;
+			\item \textbf{Descrizione}: l'attore può modificare un elemento facendolo diventare un testo al posto di un'immagine;
+			\item \textbf{Precondizione}: l'attore sta modificando una coppia di elementi presente nella lista di coppie di elementi; 
+			\item \textbf{Postcondizione}: l'attore ha fatto diventare un testo un elemento che prima era un'immagine;
 			\item \textbf{Scenario principale}: l'attore inserisce del testo come modifica dell'elemento.  
 		\end{itemize}
 		
@@ -181,10 +181,11 @@
 		\item
 		\textbf{Attori}: \uau, \uaupro;
 		\item		
-		\textbf{Descrizione}: lo scopo di questa funzionalità è offrire all'attore la possibilità di modificare il testo della domanda;
+		\textbf{Descrizione}: l'attore può modificare il testo della domanda;
 		\item
-		\textbf{Precondizione}: l'attore ha scelto l'opzione "Modifica testo della domanda" nelle scelte possibili nel caso d'uso UC8.2.1.4;
-		\item \textbf{Postcondizione}: l'attore ha modificato il testo della domanda;
-		\item \textbf{Scenario principale}: l'attore modifica il testo della domanda. 
-		
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda di collegamento; 
+		\item
+			\textbf{Postcondizione}: l'attore ha modificato il testo della domanda;
+		\item
+			\textbf{Scenario principale}: l'attore modifica il testo della domanda.	
 	\end{itemize}
