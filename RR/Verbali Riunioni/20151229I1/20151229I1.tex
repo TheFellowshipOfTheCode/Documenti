@@ -10,16 +10,19 @@
 \newcommand{\stato}{Sviluppo}
 \newcommand{\destinateTo}{\gruppo}
 
-\input{../../Template/layout.tex}
-\input{../../Template/comandi.tex}
+\input{../../../Template/layout.tex}
+\input{../../../Template/comandi.tex}
 \input{sezioni/diario.tex}
 \begin{document}
 
 %inclusione template HomePage
-\input{../../Template/HomePage.tex}
-\input{../../Template/diario.tex}
-\tableofcontents
+\input{../../../Template/HomePage.tex}
+\lhead{\Large{\progetto} \\ \footnotesize{\documento}}
+\rhead{\includegraphics[keepaspectratio = true, width = 25px] {../../../Template/icone/LogoGruppo.png}}
+\renewcommand{\headrulewidth}{0.4pt}  %Linea sotto l'intestazione
 
+\input{../../../Template/diario.tex}
+\tableofcontents
 \input{sezioni/informazioniGenerali.tex}
 \input{sezioni/Riassunto.tex}
 \end{document}
