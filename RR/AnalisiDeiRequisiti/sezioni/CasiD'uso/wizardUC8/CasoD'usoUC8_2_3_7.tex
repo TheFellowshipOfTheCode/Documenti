@@ -3,12 +3,12 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5,keepaspectratio]{UML/UC8_2_1_7.png}
-	\caption{UC8.2.1.7: Creazione domanda a risposta multipla}
+	\caption{UC8.2.1.7: Modifica domanda con area cliccabile nell'immagine}
 \end{figure}
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item \textbf{Descrizione}: questa funzionalità offre all'attore la possibilità di modificare una domanda la cui risposta è selezionabile all'interno di aree cliccabili in un immagine;
+	\item \textbf{Descrizione}: l'attore può utilizzare la procedura guidata la modifica una domanda la cui risposta è selezionabile all'interno di aree cliccabili in un'immagine;
 	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica di una domanda con area cliccabile; 
 	\item \textbf{Postcondizione}: l'attore ha modificato una domanda con area cliccabile nell'immagine;
 	\item \textbf{Scenario principale}:
@@ -24,24 +24,25 @@
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
 	\item \textbf{Descrizione}: l'attore può modificare il testo della domanda;
-	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica del testo della domanda;
-	\item \textbf{Postcondizione}: l'attore ha modificato il testo della domanda.
+	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica di una domanda con area cliccabile; 
+	\item \textbf{Postcondizione}: l'attore ha modificato il testo della domanda;
+	\item \textbf{Scenario principale}: l'attore modifica il testo della domanda. 
 \end{itemize}
 
 \subsubsection{Caso d'uso UC8.2.1.7.2: Inserimento nuova immagine}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item \textbf{Descrizione}: l'attore ha la possibilità di inserire una nuova immagine relativa al testo della domanda;
-	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica dell'immagine; 
+	\item \textbf{Descrizione}: l'attore può inserire una nuova immagine relativa al testo della domanda che sostituisce quella già presente;
+	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica di una domanda con area cliccabile;  
 	\item \textbf{Postcondizione}: l'attore ha inserito una nuova immagine;
-	\item \textbf{Scenario principale}: l'attore inserisce una nuova immagine. 	
+	\item \textbf{Scenario principale}: l'attore inserisce una nuova immagine al posto di quella che era presente. 	
 \end{itemize}
 
 \subsubsection{Caso d'uso UC8.2.1.7.3: Modifica numero aree selezionabili}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item \textbf{Descrizione}: l'attore ha la possibilità di scegliere un nuovo numero di aree selezionabili all'interno dell'immagine;
-	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica del numero di aree selezionabili; 
+	\item \textbf{Descrizione}: l'attore può scegliere un nuovo numero di aree selezionabili all'interno dell'immagine;
+	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica di una domanda con area cliccabile; 
 	\item \textbf{Postcondizione}: l'attore ha scelto il nuovo numero di aree selezionabili all'interno dell'immagine;
 	\item \textbf{Scenario principale}: l'attore sceglie il nuovo numero di aree selezionabili all'interno dell'immagine. 	
 \end{itemize}
@@ -49,9 +50,9 @@
 \subsubsection{Caso d'uso UC8.2.1.7.4: Scelta nuove aree selezionabili}
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item \textbf{Descrizione}: l'attore ha la possibilità di scegliere nuove aree selezionabili all'interno dell'immagine;
-	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di scelta delle nuove aree cliccabili; 
-	\item \textbf{Postcondizione}: l'attore ha scelto nuove aree selezionabili all'interno dell'immagine;
-	\item \textbf{Scenario principale}: l'attore sceglie nuove aree selezionabili all'interno dell'immagine. 	
+	\item \textbf{Descrizione}: l'attore può scegliere dove inserire le nuove aree selezionabili o riposizionare quelle presenti all'interno dell'immagine;
+	\item \textbf{Precondizione}: l'attore ha selezionato la modalità di modifica di una domanda con area cliccabile; 
+	\item \textbf{Postcondizione}: l'attore ha scelto dove inserire le nuove aree selezionabili o dove riposizionare quelle presenti all'interno dell'immagine;
+	\item \textbf{Scenario principale}: l'attore sceglie dove inserire le nuove aree selezionabili o riposiziona quelle presenti all'interno dell'immagine. 	
 \end{itemize}
 

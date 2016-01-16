@@ -1,56 +1,62 @@
-\subsubsection{Caso d’uso UC8.2.1.5: Modifica domanda a ordinamento di immagini}
+\subsubsection{Caso d'uso UC8.2.1.5: Modifica domanda a ordinamento di immagini}
 \label{UC8.2.1.5}
 	\begin{figure}[h]
 		\centering
 			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_2_1_5.png}
-		\caption{UC8.2.1.5: Modifica domanda a ordinamento immagini}
+		\caption{UC8.2.1.5: Modifica domanda a ordinamento di immagini}
 	\end{figure}
 \begin{itemize}
 	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item\textbf{Scopo e descrizione}: gli attori possono modificare una domanda del tipo ordinamento di immagini;
-	\item\textbf{Precondizione}: il sistema mostra agli attori il form di modifica dei campi dati per la tipologia di domanda scelta; 
-	\item \textbf{Postcondizione}: gli attori hanno inserito tutti i campi dati obbligatori;
+	\item\textbf{Descrizione}: l'attore può utilizzare la procedura guidata per la modifica di una domanda a ordinamento di immagini;
+	\item\textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda a ordinamento di immagini;
+	\item \textbf{Postcondizione}: l'attore ha modificato una domanda a ordinamento di immagini;
 	\item\textbf{Scenario principale}: 
 	\begin{itemize}
-		\item Gli attori possono modificare il testo della domanda (UC8.2.1.5.1);
-		\item Gli attori possono modifica l'immagine allegata al testo della domanda (UC8.2.1.5.2);
-		\item Gli attori possono modificare le immagini relative alla risposta (UC8.2.1.5.3);
-		\item Gli attori possono modifica l'ordine corretto delle immagini relative alla risposta (UC8.2.1.5.4);
+		\item L'attore può modificare il testo della domanda (UC8.2.1.5.1);
+		\item L'attore può modifica l'immagine relativa al testo della domanda (UC8.2.1.5.2);
+		\item L'attore può modificare le immagini della sequenza che costituirà la risposta (UC8.2.1.5.3);
+		\item L'attore può modifica l'ordine corretto delle immagini che costituiscono la risposta (UC8.2.1.5.4).
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{Caso d’uso UC8.2.1.5.1: Modifica del testo della domanda}
+\subsubsection{Caso d'uso UC8.2.1.5.1: Modifica testo della domanda}
 \begin{itemize}
 	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item\textbf{Scopo e descrizione}: gli attori possono modificare il testo della domanda;
-	\item\textbf{Precondizione}: il sistema mostra agli attori il form di modifica del testo della domanda; 
-	\item \textbf{Postcondizione}: gli attori hanno inserito il nuovo testo della domanda;
-	\item\textbf{Scenario principale}: gli attori possono modificare il testo della domanda;
+	\textbf{Descrizione}: l'attore può modificare il testo della domanda;
+		\item
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda a ordinamento di immagini; 
+		\item
+			\textbf{Postcondizione}: l'attore ha modificato il testo della domanda;
+		\item
+			\textbf{Scenario principale}: l'attore modifica il testo della domanda.	
+	\end{itemize}
+
+\subsubsection{Caso d'uso UC8.2.1.5.2: Modifica immagine della domanda}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\textbf{Descrizione}: l'attore può modificare l'immagine relativa al testo della domanda;
+		\item
+			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda a ordinamento di immagini; 
+		\item
+			\textbf{Postcondizione}: l'attore ha modificato l'immagine relativa al testo della domanda;
+		\item
+			\textbf{Scenario principale}: l'attore modifica l'immagine relativa al testo della domanda. 	
+	\end{itemize}
+
+\subsubsection{Caso d'uso UC8.2.1.5.3: Modifica immagini come risposta}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore può modificare le immagini presenti come risposta alla domanda sostituendole con delle altre;
+	\item\textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda a ordinamento di immagini;
+	\item \textbf{Postcondizione}: l'attore ha inserito le nuove immagini come risposta alla domanda;
+	\item\textbf{Scenario principale}: l'attore sostituisce le immagini presenti come risposta della domanda con delle altre.
 \end{itemize}
 
-\subsubsection{Caso d’uso UC8.2.1.5.2: Modifica dell'immagine della domanda}
+\subsubsection{Caso d'uso UC8.2.1.5.4: Modifica ordine immagini come risposta}
 \begin{itemize}
 	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item\textbf{Scopo e descrizione}: gli attori possono modificare l'immagine allegata alla domanda;
-	\item\textbf{Precondizione}: il sistema mostra agli attori il form di modifica dell'immagine della domanda; 
-	\item \textbf{Postcondizione}: gli attori hanno inserito la nuova immagine allegata alla domanda;
-	\item\textbf{Scenario principale}: gli attori possono modificare l'immagine allegata alla domanda;
-\end{itemize}
-
-\subsubsection{Caso d’uso UC8.2.1.5.3: Modifica delle immagini della risposta}
-\begin{itemize}
-	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item\textbf{Scopo e descrizione}: gli attori possono modificare le immagini relative alla risposta;
-	\item\textbf{Precondizione}: il sistema mostra agli attori il form di modifica delle immagini relative alla risposta; 
-	\item \textbf{Postcondizione}: gli attori hanno inserito le nuove immagini relative alla risposta;
-	\item\textbf{Scenario principale}: gli attori possono modificare le immagini della risposta;
-\end{itemize}
-
-\subsubsection{Caso d’uso UC8.2.1.5.4: Modifica ordine immagini della risposta}
-\begin{itemize}
-	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
-	\item\textbf{Scopo e descrizione}: gli attori possono modificare l'ordine corretto delle immagini relative alla risposta;
-	\item\textbf{Precondizione}: il sistema mostra agli attori il form di modifica dell'ordine delle immagini relative alla risposta; 
-	\item \textbf{Postcondizione}: gli attori hanno inserito il nuovo ordine delle immagini relative alla risposta;
-	\item\textbf{Scenario principale}: gli attori possono modificare l'ordine dele immagini relative alla risposta;
+	\item\textbf{Descrizione}: l'attore può modificare l'ordine corretto delle immagini che costituiscono la risposta;
+	\item\textbf{Precondizione}: l'attore ha selezionato la funzionalità di modifica di una domanda a ordinamento di immagini;
+	\item \textbf{Postcondizione}: l'attore ha modificato l'ordine delle immagini che costituiscono la risposta;
+	\item\textbf{Scenario principale}: l'attore modifica l'ordine delle immagini che costituiscono la risposta.
 \end{itemize}
