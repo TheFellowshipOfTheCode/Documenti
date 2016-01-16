@@ -1,0 +1,9 @@
+Ruoli di progetto del gruppo TheFellowshipOfTheCode
+
+Matteo Granzotto: Responsabile, Analista
+Matteo Gnoato: Responsabile, Analista
+Alberto Ferrara: Amministratore, Analista
+Franco Berton: Amministratore, Analista
+Mattia Varotto: Verificatore, Analista
+Simone Magagna: Verificatore, Analista
+Marco Prelaz: Verificatore, Analista
