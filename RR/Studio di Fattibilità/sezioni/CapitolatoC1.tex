@@ -1,32 +1,32 @@
 \newpage
 \section{Capitolato C1}
 \subsection{Descrizione}
-L'obiettivo del progetto è di implementare un modello di database NoSQL di tipo Key-value utilizzando il \textit{modello ad attori\ped{G}}.
+L'obiettivo del progetto è di implementare un modello di database \textit{NoSQL\ped{G}} di tipo key-value utilizzando il \textit{modello ad attori\ped{G}}.
 Tale progetto richiede la definizione di mappe, attori ed operazioni basilari. 
 \\Ogni mappa deve essere caratterizzata da:
 \begin{itemize}
-\item un numero arbitrario di coppie chiave / valore;
+\item un numero arbitrario di coppie chiave/valore;
 \item un nome che la contraddistingua; 
-\item un parametro di configurazione, che determinerà il numero di attori da utilizzare per l'implementazione della mappa e ogni quante coppie, la mappa debba essere suddivisa fra più attori.
+\item un parametro di configurazione che determinerà il numero di attori da utilizzare per l'implementazione della mappa e ogni quante coppie la mappa deve essere suddivisa fra più attori.
 \end{itemize}
 Ogni attore deve appartenere al seguente insieme di attori:
 \begin{itemize}
-\item \textbf{Storekeeper}: incaricati di mantenere fisicamente al proprio interno le coppie chiave / valore;
+\item \textbf{Storekeeper}: incaricati di mantenere fisicamente al proprio interno le coppie chiave/valore;
 \item \textbf{Storefinder}: incaricati di ricevere le richieste dall’esterno e instradarle ai 
-rispettivi \textbf{Storekeeper}, in modo da soddisfarle; 
-\item \textbf{Warehousemen}: incaricati di interfacciarsi con gli \textbf{Storekeeper} e di far persistere su disco le rispettive mappe.
+rispettivi Storekeeper in modo da soddisfarle; 
+\item \textbf{Warehousemen}: incaricati di interfacciarsi con gli Storekeeper e di far persistere su disco le rispettive mappe.
 \end{itemize}
 
 Le operazioni da implementare sul database devono essere le seguenti: 
 \begin{itemize}
-\item Inserimento;
-\item Cancellazione;
-\item Aggiornamento. 
+\item \textbf{Inserimento};
+\item \textbf{Cancellazione};
+\item \textbf{Aggiornamento}. 
 \end{itemize}
 
-L'implementazione del suddetto sistema ad attori deve prendere il nome di \textbf{ACTORDB}. In particolare, per l'implementazione degli attori viene richiesto l'utilizzo della libreria \textit{Akka\ped{G}}.
-Il linguaggio da utilizzare può essere scelto fra \textbf{Scala\ped{G}} o \textbf{Java\ped{G}}. 
-Viene richiesta la definizione di un \textbf{DSL} (Domain Specific Language) da utilizzare da riga di comando per poter interagire con il database.
+L'implementazione del suddetto sistema ad attori deve prendere il nome di ACTORDB. In particolare, per l'implementazione degli attori viene richiesto l'utilizzo della libreria Akka.
+Il linguaggio da utilizzare può essere scelto fra \textit{Scala\ped{G}} o \textit{Java\ped{G}}. 
+Viene richiesta la definizione di un \textit{DSL\ped{G}} (Domain Specific Language) da utilizzare da riga di comando per poter interagire con il database.
 
 \subsection{Dominio Applicativo}
 Questa tipologia di database da implementare presenta caratteristiche tecniche ottimali, come: la semplicità strutturale, l'affidabilità, le performance elevate e costanti.
