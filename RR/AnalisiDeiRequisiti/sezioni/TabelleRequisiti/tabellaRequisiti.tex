@@ -1,13 +1,873 @@
 \subsection{Requisiti Funzionali}
 \normalsize
 \begin{longtable}{|c|>{\centering}m{7cm}|c|}
-\hline 
-\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Stato}\\
+\hline
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
 \hline
 \endhead
-\hypertarget{RFD1}{RFD1} & Login & \textcolor{Green}{\textit{Soddisfatto}}\\ \hline
+\hypertarget{RFO1}{RFO1} & L’utente non autenticato può registrarsi & Interno
+\\ \hline
+
+\hypertarget{RFO1.1}{RFO1.1} & L’utente non autenticato può inserire il proprio nome & Interno
+\\ \hline
+
+\hypertarget{RFO1.2}{RFO1.2} & L’utente non autenticato può inserire il proprio cognome & Interno
+\\ \hline
+
+\hypertarget{RFO1.3}{RFO1.3} & L’utente non autenticato può inserire il proprio nome utente & Interno
+\\ \hline
+
+\hypertarget{RFO1.4}{RFO1.4} & L’utente non autenticato può inserire la propria email & Interno
+\\ \hline
+
+\hypertarget{RFO1.5}{RFO1.5} & L’utente non autenticato può inserire una password & Interno
+\\ \hline
+
+\hypertarget{RFO1.6}{RFO1.6} & L’utente non autenticato può confermare la propria password & Interno
+\\ \hline
+
+\hypertarget{RFO1.7}{RFO1.7} & L’utente non autenticato può confermare la registrazione & Interno
+\\ \hline
+
+\hypertarget{RFO1.8}{RFO1.8} & Il sistema deve mostrare un messaggio d’errore di registrazione all’utente non registrato se i dati non sono stati immessi correttamente o sono assenti & Interno
+\\ \hline
+
+\hypertarget{RFO2}{RFO2} & L’utente non autenticato può effettuare il login & Verbale interno
+\\ \hline
+
+\hypertarget{RFO2.1}{RFO2.1} & L'utente non autenticato può fare il login tramite QuizziPedia & Verbale interno
+\\ \hline
+
+\hypertarget{RFO2.1.1}{RFO2.1.1} & L'utente non autenticato può inserire il nome utente o la mail usata durante la fase di registrazione & Interno
+\\ \hline
+
+\hypertarget{RFO2.1.2}{RFO2.1.2} & L'utente non autenticato può inserire la password associata al nome utente o alla mail usata durante la fase di registrazione & Interno
+\\ \hline
+
+\hypertarget{RFO2.1.3}{RFO2.1.3} & L'utente non autenticato può confermare il login & Interno
+\\ \hline
+
+\hypertarget{RFO2.1.4}{RFO2.1.4} & Il sistema deve visualizzare un messaggio di errore in caso di inserimento dei dati errato o assente & Interno
+\\ \hline
+
+\hypertarget{RFF2.2}{RFF2.2} & L'utente non autenticato può eseguire il login tramite Facebook & Interno
+\\ \hline
+
+\hypertarget{RFF2.3}{RFF2.3} & L'utente non autenticato può eseguire il login tramite Twitter & Interno
+\\ \hline
+
+\hypertarget{RFF2.4}{RFF2.4} & L'utente non autenticato può eseguire il login tramite Google+ & Interno
+\\ \hline
+
+\hypertarget{RFF2.5}{RFF2.5} & L'utente non autenticato può eseguire il login tramite Linkedin & Interno
+\\ \hline
+
+\hypertarget{RFO3}{RFO3} & L’utente autenticato e l’utente autenticato pro possono effettuare il logout & Interno
+\\ \hline
+
+\hypertarget{RFO3.1}{RFO3.1} & Il sistema deve notificare all’utente autenticato o all’utente autenticato pro la disconnessione dall’area riservata & Interno
+\\ \hline
+
+\hypertarget{RFD4}{RFD4} & L’utente autenticato e l’utente autenticato pro possono gestire il proprio profilo & Interno
+\\ \hline
+
+\hypertarget{RFD4.1}{RFD4.1} & L’utente autenticato e l’utente autenticato pro possono modificare il proprio nome  & Interno
+\\ \hline
+
+\hypertarget{RFD4.1.1}{RFD4.1.1} & L’utente autenticato e l’utente autenticato pro possono confermare le modifiche al proprio nome & Interno
+\\ \hline
+
+\hypertarget{RFD4.2}{RFD4.2} & L’utente autenticato e l’utente autenticato pro possono modificare il proprio cognome  & Interno
+\\ \hline
+
+\hypertarget{RFD4.2.1}{RFD4.2.1} & L’utente autenticato e l’utente autenticato pro possono confermare le modifiche al proprio cognome & Interno
+\\ \hline
+
+\hypertarget{RFD4.3}{RFD4.3} & L’utente autenticato e l’utente autenticato pro possono modificare il proprio username & Interno
+\\ \hline
+
+\hypertarget{RFD4.3.1}{RFD4.3.1} &  L’utente autenticato e l’utente autenticato pro possono confermare le modifiche al proprio username & Interno
+\\ \hline
+
+\hypertarget{RFD4.4}{RFD4.4} & L’utente autenticato e l’utente autenticato pro possono inserire una foto/immagine  & Interno
+\\ \hline
+
+\hypertarget{RFD4.4.1}{RFD4.4.1} & L’utente autenticato e l’utente autenticato pro possono confermare l’inserimento della foto/immagine & Interno
+\\ \hline
+
+\hypertarget{RFD4.5}{RFD4.5} & L’utente autenticato e l’utente autenticato pro possono modificare la propria e-mail  & Interno
+\\ \hline
+
+\hypertarget{RFD4.5.1}{RFD4.5.1} & L’utente autenticato e l’utente autenticato pro possono confermare le modifiche alla propria e-mail  & Interno
+\\ \hline
+
+\hypertarget{RFD4.6}{RFD4.6} & L’utente autenticato e l’utente autenticato pro possono modificare la propria password & Interno
+\\ \hline
+
+\hypertarget{RFD4.6.1}{RFD4.6.1} & L’utente autenticato e l’utente autenticato pro possono confermare le modifiche alla propria password  & Interno
+\\ \hline
+
+\hypertarget{RFD4.7}{RFD4.7} & L’utente autenticato e l’utente autenticato pro possono cambiare la propria tipologia di account & Interno
+\\ \hline
+
+\hypertarget{RFD4.7.1}{RFD4.7.1} & L’utente autenticato e l’utente autenticato pro possono confermare la nuova tipologia di account  & Interno
+\\ \hline
+
+\hypertarget{RFD4.8}{RFD4.8} & L’utente autenticato e l’utente autenticato pro possono eliminare il proprio account  & Interno
+\\ \hline
+
+\hypertarget{RFD4.8.1}{RFD4.8.1} & L’utente autenticato e l’utente autenticato pro possono confermare l’eliminazione del proprio account & Interno
+\\ \hline
+
+\hypertarget{RFD5}{RFD5} & L’utente autenticato e l’utente autenticato pro possono effettuare un ricerca per l’iscrizione ad un questionario & Interno
+\\ \hline
+
+\hypertarget{RFD5.1}{RFD5.1} & L’utente autenticato e l’utente autenticato pro possono cercare un questionario tramite la barra di ricerca & Interno
+\\ \hline
+
+\hypertarget{RFD5.2}{RFD5.2} & L’utente autenticato e l’utente autenticato pro possono iscriversi ad un questionario & Interno
+\\ \hline
+
+\hypertarget{RFD5.2.1}{RFD5.2.1} & L’utente autenticato e l’utente autenticato pro possono confermare l’iscrizione ad un questionario & Interno
+\\ \hline
+
+\hypertarget{RFD5.3}{RFD5.3} & Il sistema deve visualizzare un messaggio di errore nel caso l’’utente autenticato o l’utente autenticato pro ricerchino un questionario inesistente  & Interno
+\\ \hline
+
+\hypertarget{RFO6}{RFO6} & L’utente autenticato e l’utente autenticato pro possono compilare un questionario & Capitolato
+\\ \hline
+
+\hypertarget{RFD6.1}{RFD6.1} & L’utente autenticato e l’utente autenticato pro a partire da una domanda possono scegliere di spostarsi alla domanda successiva del questionario  & Interno
+\\ \hline
+
+\hypertarget{RFD6.2}{RFD6.2} & L’utente autenticato e l’utente autenticato pro a partire da una domanda possono scegliere di spostarsi alla domanda precedente del questionario & Interno
+\\ \hline
+
+\hypertarget{RFD6.3}{RFD6.3} & L’utente autenticato e l’utente autenticato pro a partire da una domanda possono scegliere di spostarsi ad una qualsiasi altra domanda presente nel questionario & Interno
+\\ \hline
+
+\hypertarget{RFD6.4}{RFD6.4} & L’utente autenticato e l’utente autenticato pro possono concludere il questionario confermando le risposte date alle domande che lo compongono  & Interno
+\\ \hline
+
+\hypertarget{RFO6.5}{RFO6.5} & Il sistema deve valutare le risposte date dagli utilizzatori & Capitolato
+\\ \hline
+
+\hypertarget{RFO7}{RFO7} & L’utente autenticato e l’utente autenticato pro possono gestire le domande che hanno creato & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1}{RFO7.1} & L’utente autenticato e l’utente autenticato pro possono creare una domanda  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.1}{RFD7.1.1} & L’utente autenticato e l’utente autenticato pro possono scegliere un argomento da assegnare alla nuova domanda  & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.2}{RFD7.1.2} & L’utente autenticato e l’utente autenticato pro possono inserire delle parole chiave relative alla nuova domanda & Interno
+\\ \hline
+
+\hypertarget{RFO7.1.3}{RFO7.1.3} & L’utente autenticato e l’utente autenticato pro possono scegliere la tipologia  di domanda da creare  & Interno
+\\ \hline
+
+\hypertarget{RFO7.1.3.1}{RFO7.1.3.1} & L’’utente autenticato e l’utente autenticato pro possono scegliere di creare una domanda vero/falso & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1.3.1.1}{RFO7.1.3.1.1} & L’utente autenticato e autenticato pro possono creare il testo della domanda v/f  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.1.2}{RFD7.1.3.1.2} & L’utente autenticato e autenticato pro possono inserire un immagine relativa al testo della domanda v/f & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.1.2.1}{RFD7.1.3.1.2.1} & L’utente autenticato e autenticato pro possono eliminare l’immagine relativa al testo della domanda v/f  & Interno
+\\ \hline
+
+\hypertarget{RFO7.1.3.1.3}{RFO7.1.3.1.3} & L’utente autenticato e autenticato pro possono selezionare la risposta corretta  & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1.3.2}{RFO7.1.3.2} & L’’utente autenticato e l’utente autenticato pro possono scegliere di creare una domanda a risposta multipla & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1.3.2.1}{RFO7.1.3.2.1} & L’utente autenticato e autenticato pro possono creare il testo della domanda a risposta multipla  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.2.2}{RFD7.1.3.2.2} & L’utente autenticato e autenticato pro possono inserire un immagine relativa al testo della domanda a risposta multipla  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.2.2.1}{RFD7.1.3.2.2.1} & L’utente autenticato e autenticato pro possono eliminare l’immagine relativa al testo della domanda a risposta multipla & Interno
+\\ \hline
+
+\hypertarget{RFO7.1.3.2.3}{RFO7.1.3.2.3} & L’utente autenticato e autenticato pro possono aggiungere due o più opzioni di risposta & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1.3.2.3.1}{RFO7.1.3.2.3.1} & L’utente autenticato e autenticato pro possono aggiungere due o più opzioni di risposta che includono testo & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.2.3.1.1}{RFD7.1.3.2.3.1.1} & L’utente autenticato e autenticato pro possono eliminare   le opzioni di risposta che includono testo & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.2.3.2}{RFD7.1.3.2.3.2} & L’utente autenticato e autenticato pro possono aggiungere due o più opzioni di risposta che includono immagini & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.2.3.2.1}{RFD7.1.3.2.3.2.1} & L’utente autenticato e autenticato pro possono eliminare   le opzioni di risposta che includono immagini  & Interno
+\\ \hline
+
+\hypertarget{RFO7.1.3.2.4}{RFO7.1.3.2.4} & L’utente autenticato e autenticato pro possono selezionare una o più risposte corrette & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.3}{RFD7.1.3.3} & L’utente autenticato e l’utente autenticato pro possono scegliere di creare un esercizio di riempimento degli spazi vuoti  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.3.1}{RFD7.1.3.3.1} & L’utente autenticato e autenticato pro possono scrivere testo dell’esercizio & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.3.2}{RFD7.1.3.3.2} & L’utente autenticato e autenticato pro possono indicare parole da oscurare & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4}{RFD7.1.3.4} & L’utente autenticato e l’utente autenticato pro possono scegliere di creare una domanda di collegamento & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.1}{RFD7.1.3.4.1} & L’utente autenticato e autenticato pro possono inserire il testo della domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.2}{RFD7.1.3.4.2} & L’utente autenticato e autenticato pro possono inserire una o più coppie di elementi & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.2.1}{RFD7.1.3.4.2.1} & L’utente autenticato e autenticato pro possono inserire un’ immagine come primo elemento & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.2.2}{RFD7.1.3.4.2.2} & L’utente autenticato e autenticato pro possono inserire un testo come primo elemento & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.2.3}{RFD7.1.3.4.2.3} & L’utente autenticato e autenticato pro possono inserire un’ immagine come secondo elemento & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.2.4}{RFD7.1.3.4.2.4} & L’utente autenticato e autenticato pro possono inserire un testo come secondo elemento & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.3}{RFD7.1.3.4.3} & L’utente autenticato e autenticato pro possono eliminare una o più coppie di elementi  & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.3.1}{RFD7.1.3.4.3.1} & L’utente autenticato e autenticato pro possono confermare eliminazione coppia di elementi & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.4}{RFD7.1.3.4.4} & L’utente autenticato e autenticato pro possono modificare una o più coppie di elementi & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.4.1}{RFD7.1.3.4.4.1} & L’utente autenticato e autenticato pro possono modificare il testo di un elemento & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.4.2}{RFD7.1.3.4.4.2} & L’utente autenticato e autenticato pro possono modificare l’immagine di un elemento & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.4.3}{RFD7.1.3.4.4.3} & L’utente autenticato e autenticato pro possono cambiare il testo in un’immagine & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.4.4.4}{RFD7.1.3.4.4.4} & L’utente autenticato e autenticato pro possono cambiare l’immagine in un testo & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.5}{RFD7.1.3.5} & L’utente autenticato e l’utente autenticato pro possono scegliere di creare una domanda a ordinamento di immagini  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.5.1}{RFD7.1.3.5.1} & L’utente autenticato e l’utente autenticato pro possono inserire il testo della domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.5.2}{RFD7.1.3.5.2} & L’utente autenticato e l’utente autenticato pro possono inserire immagine per il testo della domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.5.2.1}{RFD7.1.3.5.2.1} & L’utente autenticato e l’utente autenticato pro possono eliminare un immagine relativa al testo della domanda  & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.5.3}{RFD7.1.3.5.3} & L’utente autenticato e l’utente autenticato pro possono inserire immagini come risposta & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.5.3.1}{RFD7.1.3.5.3.1} & L’utente autenticato e l’utente autenticato pro possono eliminare l’immagine di una risposta & Interno
+\\ \hline
+
+\hypertarget{RFD7.1.3.6}{RFD7.1.3.6} & L’utente autenticato e l’utente autenticato pro possono scegliere di creare una domanda a ordinamento di stringhe & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.6.1}{RFD7.1.3.6.1} & L’utente autenticato e l’utente autenticato pro possono inserire il testo della domanda  & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.6.2}{RFD7.1.3.6.2} & L’utente autenticato e l’utente autenticato pro possono inserire stringhe di composizione sequenza & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.6.3}{RFD7.1.3.6.3} & L’utente autenticato e l’utente autenticato pro possono comporre la soluzione della sequenza & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.7}{RFD7.1.3.7} & L’utente autenticato e l’utente autenticato pro possono creare una domanda con area cliccabile nell’immagine & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.7.1}{RFD7.1.3.7.1} & L’utente autenticato e l’utente autenticato pro possono inserire il testo della domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.7.2}{RFD7.1.3.7.2} & L’utente autenticato e l’utente autenticato pro possono inserire un’immagine & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.7.3}{RFD7.1.3.7.3} & L’utente autenticato e l’utente autenticato pro possono scegliere un numero di aree selezionabili & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.1.3.7.4}{RFD7.1.3.7.4} & L’utente autenticato e l’utente autenticato pro possono scegliere le aree  selezionabili & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1.4}{RFO7.1.4} & L’utente autenticato e autenticato pro possono confermare la creazione della domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFO7.1.5}{RFO7.1.5} & Il sistema deve mostrare un messaggio di errore in caso la conferma della creazione della domanda non sia andata a buon fine & Capitolato
+\\ \hline
+
+\hypertarget{RFD7.2}{RFD7.2} & L’utente autenticato e l’utente autenticato pro possono modificare una domanda & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1}{RFD7.2.1} & L’utente può selezionare una domanda da modificare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.1}{RFD7.2.1.1} & l’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda vero/falso & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.1.1}{RFD7.2.1.1.1} & L’utente autenticato e autenticato pro possono modificare il testo della domanda vero/falso & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.1.2}{RFD7.2.1.1.2} & L’utente autenticato e autenticato pro possono modificare l’immagine della domanda vero/falso & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.1.3}{RFD7.2.1.1.3} & L’utente autenticato e autenticato pro possono modificare la risposta corretta della domanda vero/falso & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2}{RFD7.2.1.2} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda a risposta multipla & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2.1}{RFD7.2.1.2.1} & L’utente autenticato e autenticato pro possono modificare il testo della domanda a risposta multipla & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2.2}{RFD7.2.1.2.2} & L’utente autenticato e autenticato pro possono modificare l’immagine della domanda a risposta multipla & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2.3}{RFD7.2.1.2.3} & L’utente autenticato e autenticato pro possono modificare l’opzione di risposta della domanda a risposta multipla & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2.3.1}{RFD7.2.1.2.3.1} & L’utente autenticato e autenticato pro possono modificare l’opzione di risposta che include del testo & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2.3.2}{RFD7.2.1.2.3.2} & L’utente autenticato e autenticato pro possono modificare l’opzione di risposta che include delle immagini & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.2.4}{RFD7.2.1.2.4} & L’utente autenticato e l’utente autenticato pro possono modificare la risposta corretta o le risposte corrette della domanda a risposta multipla & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.3}{RFD7.2.1.3} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare un domanda a riempimento di spazi vuoti & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.3.1}{RFD7.2.1.3.1} & L’utente autenticato e autenticato pro possono modificare il testo della domanda a riempimento di spazi & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.3.2}{RFD7.2.1.3.2} & L’utente autenticato e autenticato pro possono modificare le parole da oscurare della domanda a riempimento di spazi  & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4}{RFD7.2.1.4} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda di collegamento & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.1}{RFD7.2.1.4.1} & L’utente autenticato e autenticato pro possono inserire una nuova coppia di elementi da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.1.1}{RFD7.2.1.4.1.1} & L’utente autenticato e autenticato pro possono inserire un’immagine come primo elemento della domanda & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.1.2}{RFD7.2.1.4.1.2} & L’utente autenticato e autenticato pro possono inserire un testo come primo elemento della domanda & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.1.3}{RFD7.2.1.4.1.3} & L’utente autenticato e autenticato pro possono inserire un’immagine come secondo elemento della domanda  & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.1.4}{RFD7.2.1.4.1.4} & L’utente autenticato e autenticato pro possono inserire un testo come secondo elemento della domanda  & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.2}{RFD7.2.1.4.2} & L’utente autenticato e autenticato pro possono eliminare una coppia di elementi da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.2.1}{RFD7.2.1.4.2.1} & L’utente autenticato e autenticato pro possono eliminare una coppia di elementi da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.3}{RFD7.2.1.4.3} & L’utente autenticato e l'utente autenticato pro possono eliminare una coppia di elementi da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.3.1}{RFD7.2.1.4.3.1} & L’utente autenticato e autenticato pro possono modificare il testo di un elemento da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.3.2}{RFD7.2.1.4.3.2} & L’utente autenticato e autenticato pro possono modificare un’immagine di un elemento da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.3.3}{RFD7.2.1.4.3.3} & L’utente autenticato e autenticato pro possono cambiare il testo di un elemento da collegare in un immagine & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.3.4}{RFD7.2.1.4.3.4} & L’utente autenticato e autenticato pro possono cambiare l’immagine di un elemento da collegare in un testo & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.4}{RFD7.2.1.4.4} & L’utente autenticato e l'utente autenticato pro possono eliminare una coppia di elementi & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.5}{RFD7.2.1.4.5} & L’utente autenticato e autenticato pro possono eliminare una coppia di elementi da collegare & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.4.6}{RFD7.2.1.4.6} & L’utente autenticato e autenticato pro possono modificare il testo della domanda a coppia di elementi da collegare  & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.5}{RFD7.2.1.5} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda di ordinamento immagini & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.5.1}{RFD7.2.1.5.1} & L’utente autenticato e autenticato pro possono modificare il testo della domanda a ordinamento di immagini & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.5.2}{RFD7.2.1.5.2} & L’utente autenticato e autenticato pro possono modificare l’immagine della domanda a ordinamento di immagini  & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.5.3}{RFD7.2.1.5.3} & L’utente autenticato e autenticato pro possono modificare le immagini della risposta della domanda a ordinamento di immagini & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.5.4}{RFD7.2.1.5.4} & L’utente autenticato e autenticato pro possono modificare l’ordine delle immagini della risposta della domanda a ordinamento di immagini & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.6}{RFD7.2.1.6} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda di ordinamento stringhe & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.6.1}{RFD7.2.1.6.1} & L’utente autenticato e autenticato pro possono modificare il testo della domanda a ordinamento di stringhe & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.6.2}{RFD7.2.1.6.2} & L’utente autenticato e autenticato pro possono modificare il testo della risposta e il numero di stringhe della domanda a ordinamento di immagini & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.6.3}{RFD7.2.1.6.3} & L’utente autenticato e autenticato pro possono modificare la soluzione della domanda a ordinamento di stringhe & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.7}{RFD7.2.1.7} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda con immagine ad aree cliccabili & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.7.1}{RFD7.2.1.7.1} & L’utente autenticato e autenticato pro possono modificare il testo della domanda a immagine con aree selezionabili & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.7.2}{RFD7.2.1.7.2} & L’utente autenticato e autenticato pro possono inserire una nuova immagine della domanda a immagine con aree selezionabili & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.7.3}{RFD7.2.1.7.3} & L’utente autenticato e autenticato pro possono modificare il numero della aree selezionabili dell’immagine della domanda a immagine con aree selezionabili & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.7.4}{RFD7.2.1.7.4} & L’utente autenticato e autenticato pro possono scegliere nuove aree selezionabili dell’immagine della domanda a immagine con aree selezionabili & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.1.8}{RFD7.2.1.8} & L’utente autenticato e l’utente autenticato pro posson modificare una domanda con immagine ad aree cliccabili & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.2}{RFD7.2.2} & L’utente autenticato e autenticato pro possono confermare le modifiche apportate alla domanda & Interno
+\\ \hline
+
+\hypertarget{RFD7.2.3}{RFD7.2.3} & Il sistema deve mostrare un messaggio di errore in caso la conferma delle modifiche non sia andata a buon fine & Interno
+\\ \hline
+
+\hypertarget{RFO8}{RFO8} & L’utente autenticato pro può gestire i questionari che ha creato & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD8.1}{RFD8.1} & L’utente autenticato pro può visualizzare i questionari creati & Interno
+\\ \hline
+
+\hypertarget{RFD8.1.1}{RFD8.1.1} & L’utente autenticato pro può modificare un questionario che ha creato & Interno
+\\ \hline
+
+\hypertarget{RFD8.1.1.1}{RFD8.1.1.1} & L’utente autenticato pro può modificare il nome di un questionario & Interno
+\\ \hline
+
+\hypertarget{RFD8.1.1.2}{RFD8.1.1.2} & L’utente autenticato pro può confermare le modifiche che ha effettuato nel questionario & Interno
+\\ \hline
+
+\hypertarget{RFD8.1.2}{RFD8.1.2} & L’utente autenticato pro può eliminare un questionario che ha creato & Interno
+\\ \hline
+
+\hypertarget{RFD8.1.2.1}{RFD8.1.2.1} & L’utente autenticato pro può confermare se eliminare un questionario che ha creato & Interno
+\\ \hline
+
+\hypertarget{RFD8.1.3}{RFD8.1.3} & L’utente autenticato pro può visualizzare i risultati degli esaminandi  & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD8.1.4}{RFD8.1.4} & L’utente autenticato pro può rendere il questionario compilabile da parte degli esaminandi & Interno
+\\ \hline
+
+\hypertarget{RFO8.2}{RFO8.2} & L’utente autenticato pro può creare un nuovo questionario & Capitolato
+\\ \hline
+
+\hypertarget{RFO8.2.1}{RFO8.2.1} & L’utente autenticato pro può scegliere l’argomento del questionario & Capitolato
+\\ \hline
+
+\hypertarget{RFD8.2.2}{RFD8.2.2} & L’utente autenticato pro può scegliere delle parole chiave che identifichino il questionario & Interno
+\\ \hline
+
+\hypertarget{RFD8.2.3}{RFD8.2.3} & L’utente autenticato pro può inserire il nome del questionario & Interno
+\\ \hline
+
+\hypertarget{RFO8.2.4}{RFO8.2.4} & L’utente autenticato pro può concludere il questionario & Interno
+\\ \hline
+
+\hypertarget{RFD8.2.4.1}{RFD8.2.4.1} & L’utente autenticato pro può consultare il resoconto del questionario dopo aver deciso di concluderlo & Interno
+\\ \hline
+
+\hypertarget{RFO8.2.4.2}{RFO8.2.4.2} & L’utente autenticato pro può approvare la conclusione del questionario & Interno
+\\ \hline
+
+\hypertarget{RFO8.3}{RFO8.3} & L’utente autenticato pro può gestire le domande di un questionario & Interno
+\\ \hline
+
+\hypertarget{RFO8.3.1}{RFO8.3.1} & L’utente autenticato pro può aggiungere delle domande all’interno del questionario & Interno
+\\ \hline
+
+\hypertarget{RFO8.3.1.1}{RFO8.3.1.1} & L’utente autenticato pro può ricercare una domanda all’interno del database di domande & Interno
+\\ \hline
+
+\hypertarget{RFO8.3.1.1.1}{RFO8.3.1.1.1} & L’utente autenticato pro può selezionare delle domande da inserire all’interno dei questionari & Interno
+\\ \hline
+
+\hypertarget{RFD8.3.1.1.2}{RFD8.3.1.1.2} & L’utente autenticato pro può applicare dei filtri per effettuare una ricerca delle domande dettagliata & Interno
+\\ \hline
+
+\hypertarget{RFO8.3.2}{RFO8.3.2} & L’utente autenticato pro può eliminare una domanda dal questionario & Interno
+\\ \hline
+
+\hypertarget{RFO8.3.2.1}{RFO8.3.2.1} & L’utente autenticato pro può confermare se eliminare una domanda dal questionario & Interno
+\\ \hline
+
+\hypertarget{RFD8.4}{RFD8.4} & L’utente autenticato pro può gestire le iscrizione degli esaminandi ai questionari & Interno
+\\ \hline
+
+\hypertarget{RFD8.4.1}{RFD8.4.1} & L’utente autenticato pro può selezionare il questionario del quale gestire le iscrizioni & Interno
+\\ \hline
+
+\hypertarget{RFD8.4.1.1}{RFD8.4.1.1} & L’utente autenticato pro può accettare le iscrizioni degli esaminandi ai questionari & Interno
+\\ \hline
+
+\hypertarget{RFO9}{RFO9} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono esercitarsi nella modalità allenamento & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD9.1}{RFD9.1} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono decidere un argomento per fare un allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.2}{RFD9.2} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono decidere delle parole chiave per filtrare maggiormente le domande poste durante l'allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.3}{RFD9.3} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono scegliere il numero di domande che comporranno l'allenamento, potenzialmente possono scegliere la generazione di infinite domande & Interno
+\\ \hline
+
+\hypertarget{RFD9.4}{RFD9.4} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono rispondere alle domande proposte iniziando l'allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.1}{RFD9.4.1} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono confermare una risposta durante un allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.2}{RFD9.4.2} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono rilasciare un Like ad una domanda proposta durante un allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.3}{RFD9.4.3} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono rilasciare commenti ad una domanda proposta durante un allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.4}{RFD9.4.4} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono segnalare una domanda indicando il tipo di segnalazione e scrivendo un commento per essa & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.5}{RFD9.4.5} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono avanzare alla domanda successiva (se presente) durante l'allenamento & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.6}{RFD9.4.6} & L'utente non autenticato, l'utente autenticato e l'utente autenticato pro possono decidere di terminare l'allenamento in qualunque momento & Interno
+\\ \hline
+
+\hypertarget{RFD9.4.7}{RFD9.4.7} & Il sistema deve visualizzare le statistiche finali dell'allenamento svolto & Interno
+\\ \hline
+
+\hypertarget{RFD9.5}{RFD9.5} & Il sistema sceglie una domanda in base all'abilità dell'aversario sull'argomento scelto & Interno
+\\ \hline
+
+\hypertarget{RFD9.6}{RFD9.6} & Il sistema aggiorna automaticamente i dati sull'abilità dell'utente ad ogni risposta & Interno
+\\ \hline
+
+\hypertarget{RFD9.7}{RFD9.7} & Il sistema aggiorna automaticamente i dati sulla difficoltà di una domanda quando un utente risponde alla medesima & Interno
+\\ \hline
+
+\hypertarget{RFD10}{RFD10} & L’utente autenticato e l’utente autenticato pro possono visualizzare il proprio profilo & Interno
+\\ \hline
+
+\hypertarget{RFD10.1}{RFD10.1} & L’utente autenticato e l’utente autenticato pro possono andare alla pagina di gestione del profilo mediante l’apposito link & Interno
+\\ \hline
+
+\hypertarget{RFD10.2}{RFD10.2} & L’utente autenticato e l’utente autenticato pro possono andare alla pagina di gestione delle domande mediante l’apposito link & Interno
+\\ \hline
+
+\hypertarget{RFD10.3}{RFD10.3} & L’utente autenticato pro può andare alla pagina di gestione dei questionari mediante l’apposito link & Interno
+\\ \hline
+
+\hypertarget{RFD10.4}{RFD10.4} & L’utente autenticato e l’utente autenticato pro possono visualizzare la cronologia di tutti i questionari che hanno svolto & Interno
+\\ \hline
+
+\hypertarget{RFD10.4.1}{RFD10.4.1} & L’utente autenticato e l’utente autenticato pro possono selezionare e visualizzare le statistiche di un questionario scelto dalla cronologia & Interno
+\\ \hline
+
+\hypertarget{RFD10.5}{RFD10.5} & L’utente autenticato e l’utente autenticato pro possono visualizzare la lista dei questionari abilitati & Interno
+\\ \hline
+
+\hypertarget{RFD10.5.1}{RFD10.5.1} & L’utente autenticato e l’utente autenticato pro possono selezionare un questionario abilitato & Interno
+\\ \hline
+
+\hypertarget{RFD10.6}{RFD10.6} & L’utente autenticato e l’utente autenticato pro possono tornare alla home page mediante l’apposito link  & Interno
+\\ \hline
+
+\hypertarget{RFO11}{RFO11} & L’utente non autenticato, l'utente autenticato e l’utente autenticato pro possono rispondere alle domande & Capitolato
+\\ \hline
+
+\hypertarget{RFO11.1}{RFO11.1} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono rispondere ad una domanda vero/falso & Capitolato
+\\ \hline
+
+\hypertarget{RFO11.2}{RFO11.2} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono rispondere ad una domanda a risposta multipla & Capitolato
+\\ \hline
+
+\hypertarget{RFO11.3}{RFO11.3} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono compilare un esercizio di riempimento di uno spazio vuoto & Capitolato
+\\ \hline
+
+\hypertarget{RFO11.3.1}{RFO11.3.1} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono riempire lo spazio vuoto selezionato & Capitolato
+\\ \hline
+
+\hypertarget{RFD11.4}{RFD11.4} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono rispondere ad una domanda di collegamento & Capitolato
+\\ \hline
+
+\hypertarget{RFD11.4.1}{RFD11.4.1} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono collegare le voci & Capitolato
+\\ \hline
+
+\hypertarget{RFD11.5}{RFD11.5} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono ordinare delle immagini & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD11.5.1}{RFD11.5.1} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono inserire un’immagine in uno spazio già occupato oppure no & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD11.6}{RFD11.6} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono ordinare delle stringhe & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD11.6.1}{RFD11.6.1} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono inserire una stringa in uno spazio già occupato oppure no & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD11.7}{RFD11.7} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono rispondere ad una domanda con area cliccabile & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFD11.7.1}{RFD11.7.1} & L’utente non autenticato, l’utente autenticato e l’utente autenticato pro possono selezionare un’area cliccabile & Verbale 2016-01-11
+\\ \hline
+
+\hypertarget{RFO12}{RFO12} & L’utente autenticato e l’utente autenticato pro possono ricercare un utente & Interno
+\\ \hline
+
+\hypertarget{RFD12.1}{RFD12.1} & L’utente autenticato e l’utente autenticato pro possono inserire un nome e cognome/username nella barra di ricerca per ricercare un utente & Interno
+\\ \hline
+
+\hypertarget{RFD12.1.1}{RFD12.1.1} &  L’utente autenticato e l’utente autenticato pro possono selezionare l’utente ricercato & Interno
+\\ \hline
+
+\hypertarget{RFO13}{RFO13} & Il sistema deve gestire un sistema per proporre dei questionari & Capitolato
+\\ \hline
+
+\hypertarget{RFO14}{RFO14} & Il sistema deve proporre all’utilizzatore questionari specifici per l’argomento scelto & Capitolato
+\\ \hline
+
+\hypertarget{RFO15}{RFO15} & Il sistema deve creare dei questionari partendo dalle domande archiviate & Capitolato
+\\ \hline
+
+\hypertarget{RFO16}{RFO16} & Il sistema deve archiviare le domande attraverso uno specifico linguaggio chiamato QML & Capitolato
+\\ \hline
+
+\hypertarget{RFO16.1}{RFO16.1} & Il sistema attraverso il linguaggio QML deve gestire domande vero e falso & Capitolato
+\\ \hline
+
+\hypertarget{RFO16.2}{RFO16.2} & Il sistema attraverso il linguaggio QML deve gestire domande a risposte a scelta multipla. & Capitolato
+\\ \hline
+
+\hypertarget{RFO16.3}{RFO16.3} & Il sistema attraverso il linguaggio QML deve gestire esercizi con riempimento di spazi vuoti & Capitolato
+\\ \hline
+
+\hypertarget{RFO16.4}{RFO16.4} & Il sistema attraverso il linguaggio QML deve gestire esercizi con delle immagini & Capitolato
+\\ \hline
+
+\hypertarget{RFD16.5}{RFD16.5} & Il sistema attraverso il linguaggio QML deve gestire esercizi di ordinamento di scelte & Capitolato
+\\ \hline
+
+\hypertarget{RFD16.6}{RFD16.6} & Il sistema attraverso il linguaggio QML deve esercizi a corrispondenza di scelte & Capitolato
+\\ \hline
+
+\hypertarget{RFO16.7}{RFO16.7} & Il sistema deve tradurre le domande descritte in QML in HTML & Capitolato
+\\ \hline
+
+\hypertarget{RFO16.8}{RFO16.8} & Il sistema deve archiviare le domande suddivise per argomento & Capitolato
+\\ \hline
+
+\hypertarget{RFO17}{RFO17} & Il sistema deve archiviare i questionari creati con le domande & Capitolato
+\\ \hline
+
+\hypertarget{RFO18}{RFO18} & Il sistema deve proporre all’utilizzatore dei questionari preconfezionati & Capitolato
+\\ \hline
+
+\hypertarget{RFO19}{RFO19} & Il sistema deve permettere agli utilizzatori di poter creare domande e questionari da dispositivi desktop & Capitolato
+\\ \hline
+
+\hypertarget{RFO20}{RFO20} & Il sistema deve permettere agli utilizzatori di poter rispondere alle domande e ai questionari da dispositivi desktop, Tablet e SmartPhone & Capitolato
+\\ \hline
+
+\hypertarget{RFD21}{RFD21} & Il sistema deve archiviare i risultati dei questionari & Capitolato
+\\ \hline
+
+\hypertarget{RFD22}{RFD22} & Il sistema deve archiviare le statistiche delle risposte date ad ogni domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFF23}{RFF23} & Il sistema deve valutare il candidato rispetto agli altri candidati cha hanno svolto lo stesso quiz & Capitolato
+\\ \hline
+
+\hypertarget{RFD24}{RFD24} & Il sistema deve creare questionari dinamicamente per un argomento scegliendo le domande in modo casuale & Capitolato
+\\ \hline
+
+\hypertarget{RFD25}{RFD25} & Il sistema deve creare questionari dinamicamente scegliendo le domande in base alle risposte date dai questionari precedenti & Capitolato
+\\ \hline
+
+\hypertarget{RFD26}{RFD26} & Il sistema deve creare questionari dinamicamente scegliendo tra le domande più difficili & Capitolato
+\\ \hline
+
+\hypertarget{RFD27}{RFD27} & Il sistema deve creare questionari dinamicamente scegliendo tra le lacune dei partecipanti & Capitolato
+\\ \hline
+
+\hypertarget{RFD28}{RFD28} & Il sistema deve permettere agli utilizzatori di proporre nuove domande & Capitolato
+\\ \hline
+
+\hypertarget{RFF29}{RFF29} & Il sistema deve permettere agli utilizzatori di segnalare positivamente una domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFF30}{RFF30} & Il sistema deve permettere agli utilizzatori di commentare un domanda & Capitolato
+\\ \hline
+
+\hypertarget{RFF31}{RFF31} & Il sistema deve permettere agli utilizzatori di rispondere più volte ad una domanda & Capitolato
+\\ \hline
 
 \caption[Requisiti Funzionali]{Requisiti Funzionali}
 \label{tabella:req0}
+\end{longtable}
+\clearpage
+\subsection{Requisiti di Qualità}
+\normalsize
+\begin{longtable}{|c|>{\centering}m{7cm}|c|}
+\hline
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
+\hline
+\endhead
+\hypertarget{RQO1}{RQO1} & Deve essere fornito un manuale utente & Capitolato
+\\ \hline
+
+\hypertarget{RQO2}{RQO2} & Il manuale utente deve contenere una sezione un cui viene spiegato come installare correttamente l'applicazione & Interno
+\\ \hline
+
+\hypertarget{RQO3}{RQO3} & il manuale utente deve contenere una sezione in vui viene approfonditamente spiegato come utilizzare l'applicazione & Interno
+\\ \hline
+
+\hypertarget{RQO4}{RQO4} & Il manuale utente deve includere una sezione contenente un elenco di possibili errori e malfunzionamenti dell'applicazione e le loro possibili cause & Interno
+\\ \hline
+
+\hypertarget{RQO5}{RQO5} & Il manuale utente deve contenere una sezione che spiega come segnalare eventuali errori e malfunzionamenti & Interno
+\\ \hline
+
+\hypertarget{RQO6}{RQO6} & Deve essere fornito un manuale per gli utenti sviluppatori che intendono estendere l'applicazione & Capitolato
+\\ \hline
+
+\hypertarget{RQO7}{RQO7} & Il manuale per gli utenti sviluppatori che intendono estendere l'applicazione deve contenere una sezione che spiega come segnalare eventuali errori o malfunzionamenti & Interno
+\\ \hline
+
+\hypertarget{RQF8}{RQF8} & La documentazione per l'utente deve essere disponibile in lingua inglese & Interno
+\\ \hline
+
+\hypertarget{RQO9}{RQO9} & La documentazione per l'utente deve essere disponibile in lingua italiana & Interno
+\\ \hline
+
+\caption[Requisiti di Qualità]{Requisiti di Qualità}
+\label{tabella:req2}
+\end{longtable}
+\clearpage
+\subsection{Requisiti di Vincolo}
+\normalsize
+\begin{longtable}{|c|>{\centering}m{7cm}|c|}
+\hline
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
+\hline
+\endhead
+\hypertarget{RVO1}{RVO1} & L’applicazione deve utilizzare il linguaggio \textit{Javascript\ped{G}}  & Capitolato
+\\ \hline
+
+\hypertarget{RVO2}{RVO2} & L’applicazione deve utilizzare il linguaggio di \textit{markup\ped{G}} \textit{HTML5\ped{G}} & Capitolato
+\\ \hline
+
+\hypertarget{RVO3}{RVO3} & L’applicazione deve utilizzare \textit{fogli di stile\ped{G}} in \textit{CSS\ped{G}} & Capitolato
+\\ \hline
+
+\hypertarget{RVD4}{RVD4} & L’applicazione deve utilizzare \textit{fogli di stile\ped{G}} in \textit{CSS3\ped{G}} & Capitolato
+\\ \hline
+
+\hypertarget{RVO5}{RVO5} & L’applicazione deve funzionare su \textit{Mozilla Firefox\ped{G}} versione 33.0 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVO6}{RVO6} & L’applicazione deve funzionare su \textit{Google Chrome\ped{G}} versione 31.0 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVO7}{RVO7} & L’applicazione deve funzionare su \textit{Safari\ped{G}} versione 7.1 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVO8}{RVO8} & L’applicazione deve funzionare su \textit{Opera\ped{G}} versione 26.0 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVD9}{RVD9} & L’applicazione deve funzionare su \textit{Internet Explorer\ped{G}} versione 11 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVO10}{RVO10} & L’applicazione deve funzionare su \textit{Microsoft Edge\ped{G}} versione 25  o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVD11}{RVD11} & L’applicazione deve funzionare su \textit{Android Browser\ped{G}} versione 4.4 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVO12}{RVO12} & L’applicazione deve funzionare su \textit{Safari per iOS\ped{G}} versione 7.1 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVD13}{RVD13} & L’applicazione deve funzionare su \textit{Google Chrome per iOS\ped{G}} versione 39 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVO14}{RVO14} & L’applicazione deve funzionare su \textit{Google Chrome per Android\ped{G}} versione 39 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF15}{RVF15} & L’applicazione deve funzionare su \textit{Mozilla Firefox per Android\ped{G}} versione 33 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF16}{RVF16} & L’applicazione deve funzionare su \textit{Microsoft Edge per Windows 10 mobile\ped{G}} versione 25 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF17}{RVF17} & L’applicazione deve funzionare su \textit{Browser Opera Mobile per Android\ped{G}} versione 34 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF18}{RVF18} & L’applicazione deve funzionare su \textit{Opera Mini per iOS\ped{G}} versione 12 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVD19}{RVD19} & L’applicazione deve funzionare su \textit{Safari per iOS\ped{G}} versione 7.1 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVD20}{RVD20} & L’applicazione deve funzionare su \textit{Google Chrome per Android\ped{G}} versione 39 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF21}{RVF21} & L’applicazione deve funzionare su \textit{Android Browser\ped{G}} versione 4.4 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF22}{RVF22} & L’applicazione deve funzionare su \textit{Google Chrome per iOS\ped{G}} versione 39 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF23}{RVF23} & L’applicazione deve funzionare su \textit{Mozilla Firefox per Android\ped{G}} versione 33 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF24}{RVF24} & L’applicazione deve funzionare su \textit{Microsoft Edge per Windows 10 mobile\ped{G}} versione 25 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF25}{RVF25} & L’applicazione deve funzionare su \textit{Browser Opera per Android\ped{G}} versione 34 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\hypertarget{RVF26}{RVF26} & L’applicazione deve funzionare su \textit{Opera Mini per iOS\ped{G}} versione 12 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & Interno
+\\ \hline
+
+\caption[Requisiti di Vincolo]{Requisiti di Vincolo}
+\label{tabella:req3}
 \end{longtable}
 \clearpage
