@@ -77,3 +77,10 @@
 \newcommand{\uaus}{utenti autenticati}
 \newcommand{\uaupro}{utente autenticato pro}
 \newcommand{\uauspro}{utenti autenticati pro}
+
+\newcommand{\myincludegraphics}[2][]{%
+	\setbox0=\hbox{\phantom{X}}%
+	\vtop{
+		\hbox{\phantom{X}}
+		\vskip-\ht0
+		\hbox{\includegraphics[#1]{#2}}}}

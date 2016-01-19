@@ -1,8 +1,8 @@
 %Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
 \newcommand{\documento}{\PdP}
 \newcommand{\nomedocumentofisico}{PianoDiProgetto\_v1\_0\_0.pdf}
-\newcommand{\redazione}{\GN, \GR}
-\newcommand{\verifica}{\SM, \MP, \MV}
+\newcommand{\redazione}{\GN\\ & \GR}
+\newcommand{\verifica}{\SM\\ & \MP\\ & \MV}
 \newcommand{\approvazione}{\GR}
 \newcommand{\uso}{Esterno}
 \newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
@@ -17,6 +17,7 @@
 \input{../../Template/layout.tex}
 \input{sezioni/diario.tex}
 
+
 %Comandi generali
 \input{../../Template/comandi.tex}
 
@@ -30,7 +31,11 @@
 \pagenumbering{Roman}
 \input{../../Template/diario.tex}
 \input{../../Template/index.tex}
-
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
 %sezioni documento
 \input{sezioni/Introduzione.tex} 
 \input{sezioni/AnalisiDeiRischi.tex}
