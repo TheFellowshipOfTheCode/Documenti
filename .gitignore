@@ -120,3 +120,5 @@ sympy-plots-for-*.tex/
 
 #astah
 *.bak
+
+*.txt
