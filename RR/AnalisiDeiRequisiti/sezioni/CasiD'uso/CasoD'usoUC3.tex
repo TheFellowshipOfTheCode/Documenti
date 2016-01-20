@@ -18,7 +18,7 @@
 			\item L'attore può effettuare il login con Facebook (UC3.2);
 			\item L'attore può effettuare il login con Twitter (UC3.3);
 			\item L'attore può effettuare il login con Google+ (UC3.4);
-			\item L'attore può effettuare il login con Linkedin (UC3.5).
+			\item L'attore può effettuare il login con LinkedIn (UC3.5).
 		\end{enumerate}
 \end{itemize}
 
@@ -74,17 +74,10 @@
 \subsubsection{Caso d'uso UC3.1.4: Autenticazione fallita}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore ha inserito dei dati non validi per autenticarsi, in particolare:
-		\begin{itemize}
-		\item L'attore inserisce un username inesistente;
-		\item L'attore inserisce una mail non registrata;
-		\item L'attore inserisce una password che non corrisponde a quella associata all'username/mail inserita;
-		\item L'attore non inserisce una password;
-		\item L'attore non inserisce né un username/mail né una password.
-		\end{itemize}
-	\item \textbf{Precondizione}: l'attore ha confermato il login;
+	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di autenticazione;
+	\item \textbf{Precondizione}: il sistema ha ricevuto dei dati errati per l'autenticazione;
 	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
-	\item \textbf{Scenario principale}: l'attore visualizza un messaggio relativo ai dati errati che erano stati precedentemente inseriti.	
+	\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC3.2: Login con Facebook}
@@ -111,11 +104,11 @@
 	\item \textbf{Postcondizione}: l'attore è autenticato;
 	\item \textbf{Scenario principale}: l'attore effettua il login tramite Google+.
 \end{itemize}
-\subsubsection{Caso d'uso UC3.5: Login con Linkedin}
+\subsubsection{Caso d'uso UC3.5: Login con LinkedIn}
 \begin{itemize}
 	\item \textbf{Attori}: utente non autenticato;
-	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando Linkedin;
-	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con Linkedin;
+	\item \textbf{Descrizione}: l'attore può autenticarsi utilizzando LinkedIn;
+	\item \textbf{Precondizione}: l'attore visualizza la pagina di login e sceglie la login con LinkedIn;
 	\item \textbf{Postcondizione}: l'attore è autenticato;
-	\item \textbf{Scenario principale}: l'attore effettua il login tramite Linkedin.
+	\item \textbf{Scenario principale}: l'attore effettua il login tramite LinkedIn.
 \end{itemize}

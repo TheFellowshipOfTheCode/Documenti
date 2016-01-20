@@ -1,3 +1,4 @@
+\newpage
 \subsection{Caso d'uso UC1: Scenario principale}
 
 \label{UC1}
@@ -10,21 +11,21 @@
 \begin{itemize}
 \item\textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
 \item\textbf{Descrizione}: nella schermata principale un utente non autenticato può autenticarsi tramite l'apposito form di login oppure registrarsi.\\
-L'utente autenticato è abilitato a:
+L'utente autenticato può:
 \begin{itemize}
 \item Effettuare il logout;
-\item Gestire il proprio profilo: modificare il proprio nome, cognome, username, foto/immagine profilo, indirizzo e-mail, password, tipologie di account. Può inoltre eliminare il proprio account;
-\item Ricercare e iscriversi a questionari: può cercare tra i questionari esistenti e iscriversi, rimanendo in attesa della conferma da parte del creatore del questionario;
-\item Compilare un questionario;
+\item Gestire il proprio profilo: modificare il proprio nome, cognome, username, foto/immagine profilo, indirizzo e-mail, password, tipologia di account oppure eliminare il proprio account;
+\item Ricercare e iscriversi a questionari: cercare tramite una barra di ricerca i questionari esistenti e iscriversi a questi;
+\item Compilare un questionario, se l'autore di questo ha confermato l'iscrizione;
 \item Gestire le domande: inserire nuove domande nel sistema oppure modificarne una da lui creata;
-\item Usufruire della modalità allenamento: può allenarsi rispondendo a domande, proposte dal sistema, di un argomento scelto;
-\item Visualizzare il profilo utente: visualizza la cronologia dei questionari svolti, visualizzare le statistiche per ogni questionario fatto. Può inoltre visualizzare la lista dei questionari a cui è stato abilitato;
-\item Ricercare un utente: può ricercare un utente tra tutti gli iscritti al sistema e visualizzarne il profilo.
+\item Visualizzare il profilo utente: visualizzare la cronologia dei questionari svolti, le statistiche per ogni questionario fatto e la lista dei questionari a cui è stato abilitato;
+\item Ricercare un utente: ricercare un utente tra tutti quelli che sono iscritti al sistema e visualizzarne il profilo.
 \end{itemize}
 
-L'utente autenticato pro può, oltre a svolgere tutte le operazioni dell'utente autenticato, creare questionari oppure modificare o eliminare un questionario da lui creato. Può gestire la lista di iscrizione e accettare o rifiutare un iscritto;
+L'utente autenticato pro può, oltre a svolgere tutte le operazioni dell'utente autenticato, creare questionari oppure modificare o eliminare un questionario da lui creato. Può inoltre gestire la lista di iscrizione e accettare o rifiutare un iscritto.
+\\ Infine ogni tipologia di utente descritta precedentemente può usufruire della modalità allenamento, rispondendo a domande, proposte dinamicamente dal sistema, su un argomento scelto;
 \item\textbf{Precondizione}: il sistema è avviato e mostra la pagina iniziale dell'applicazione;
-\item\textbf{Postcondizione}: il sistema ha ricevuto tutte le informazioni dall'utente sulle operazioni che vuole eseguire.
+\item\textbf{Postcondizione}: il sistema ha ricevuto tutte le informazioni dall'utente sulle operazioni che vuole eseguire;
 \item\textbf{Scenario principale}:
 \begin{itemize}
 \item L'utente non autenticato può registrarsi all'applicazione (UC2);
