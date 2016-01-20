@@ -2,30 +2,30 @@
 \section{Capitolato C1}
 \subsection{Descrizione}
 L'obiettivo del progetto è di implementare un modello di database \textit{NoSQL\ped{G}} di tipo key-value utilizzando il \textit{modello ad attori\ped{G}}.
-Tale progetto richiede la definizione di mappe, attori ed operazioni basilari. 
+Tale progetto richiede la definizione di mappe, attori ed operazioni basilari.
 \\Ogni mappa deve essere caratterizzata da:
 \begin{itemize}
 \item un numero arbitrario di coppie chiave/valore;
-\item un nome che la contraddistingua; 
+\item un nome che la contraddistingua;
 \item un parametro di configurazione che determinerà il numero di attori da utilizzare per l'implementazione della mappa e ogni quante coppie la mappa deve essere suddivisa fra più attori.
 \end{itemize}
 Ogni attore deve appartenere al seguente insieme di attori:
 \begin{itemize}
 \item \textbf{Storekeeper}: incaricati di mantenere fisicamente al proprio interno le coppie chiave/valore;
-\item \textbf{Storefinder}: incaricati di ricevere le richieste dall'esterno e instradarle ai 
-rispettivi Storekeeper in modo da soddisfarle; 
+\item \textbf{Storefinder}: incaricati di ricevere le richieste dall'esterno e instradarle ai
+rispettivi Storekeeper in modo da soddisfarle;
 \item \textbf{Warehousemen}: incaricati di interfacciarsi con gli Storekeeper e di far persistere su disco le rispettive mappe.
 \end{itemize}
 
-Le operazioni da implementare sul database devono essere le seguenti: 
+Le operazioni da implementare sul database devono essere le seguenti:
 \begin{itemize}
 \item \textbf{Inserimento};
 \item \textbf{Cancellazione};
-\item \textbf{Aggiornamento}. 
+\item \textbf{Aggiornamento}.
 \end{itemize}
 
 L'implementazione del suddetto sistema ad attori deve prendere il nome di ACTORDB. In particolare, per l'implementazione degli attori viene richiesto l'utilizzo della libreria Akka.
-Il linguaggio da utilizzare può essere scelto fra \textit{Scala\ped{G}} o \textit{Java\ped{G}}. 
+Il linguaggio da utilizzare può essere scelto fra \textit{Scala\ped{G}} o \textit{Java\ped{G}}.
 Viene richiesta la definizione di un \textit{DSL\ped{G}} (Domain Specific Language) da utilizzare da riga di comando per poter interagire con il database.
 
 \subsection{Dominio Applicativo}
@@ -33,18 +33,18 @@ Questa tipologia di database da implementare presenta caratteristiche tecniche o
 Ciò determina la preferenza nell'utilizzo di questi DB per la gestione di applicazioni di Big Data.
 Quindi a questa tipologia di DB possiamo attribuire svariati ambiti di utilizzo, come ad esempio:
 \begin{itemize}
-\item Big Data; 
+\item Big Data;
 \item Social \& Mobile Infrastructure;
 \item Content Management \& Delivery;
 \item Data Hub;
-\item User Data Management. 
+\item User Data Management.
 \end{itemize}
 
 \subsection{Dominio Tecnologico}
-Il capitolato prevede l'utilizzo delle seguenti tecnologie: 
+Il capitolato prevede l'utilizzo delle seguenti tecnologie:
 \begin{itemize}
 \item \textbf{\textit{Scala\ped{G}} o \textit{Java\ped{G}}}: linguaggi di programmazione consigliati;
-\item \textbf{Akka}: libreria consigliata per l'implementazione degli attori, in quanto fornisce un'implementazione del modello ad attori su JVM.
+\item \textbf{Akka}: libreria consigliata per l'implementazione degli attori, in quanto fornisce un'implementazione del \textit{modello ad attori\ped{G}} su JVM.
 \end{itemize}
 
 \subsection{Criticità}
