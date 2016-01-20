@@ -7,30 +7,29 @@
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: per poter usufruire dei servizi forniti dalla piattaforma, l'attore deve registrarsi inserendo email e password;
 \item \textbf{Precondizione}: il sistema è avviato e mostra la pagina iniziale;
-\item \textbf{Postcondizione}: il sistema ha registrato l'attore.
+\item \textbf{Postcondizione}: il sistema ha registrato l'attore;
 \item \textbf{Scenario principale}:
 	\begin{enumerate}
-	\item L'attore inserisce il proprio nome (UC2.1);
-	\item L'attore inserisce il proprio cognome (UC2.2);
-	\item L'attore sceglie uno username (UC2.3);
-	\item L'attore inserisce l'e-mail (UC2.4);
-	\item L'attore inserisce la password (UC2.5);
-	\item L'attore inserisce una seconda volta la password (UC2.6);
-	\item L'attore conferma i dati inseriti (UC2.7).
+	\item L'attore può inserire il proprio nome (UC2.1);
+	\item L'attore può inserire il proprio cognome (UC2.2);
+	\item L'attore può scegliere un username (UC2.3);
+	\item L'attore può inserire un indirizzo e-mail (UC2.4);
+	\item L'attore può inserire una password (UC2.5);
+	\item L'attore può inserire una seconda volta la password (UC2.6);
+	\item L'attore può confermare i dati inseriti (UC2.7).
 	\end{enumerate}
-\item \textbf{Estensione}: l'attore visualizza un messaggio di errore (UC2.8);
-\item \textbf{Scenario alternativo}: possono verificarsi uno o più dei seguenti scenari:
+\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore sulla registrazione (UC2.8);
+\item \textbf{Scenari alternativi}:
 	\begin{itemize}
-	\item[-] Il nome inserito non è valido oppure è vuoto;
-	\item[-] Il cognome inserito non è valido oppure è vuoto;
-	\item[-] Lo username inserito non è valido oppure è vuoto;
-	\item[-] Lo username inserito è già presente nel sistema;
-	\item[-] L'e-mail inserita non è valida oppure è vuota;
-	\item[-] L'e-mail inserita è già presente nel sistema;
-	\item[-] La password inserita è vuota oppure non è di almeno 8 caratteri;
-	\item[-] La password e la conferma password non coincidono.
+	\item Il nome inserito non è valido oppure è vuoto;
+	\item Il cognome inserito non è valido oppure è vuoto;
+	\item Lo username inserito non è valido oppure è vuoto;
+	\item Lo username inserito è già presente nel sistema;
+	\item L'e-mail inserita non è valida oppure è vuota;
+	\item L'e-mail inserita è già presente nel sistema;
+	\item La password inserita è vuota oppure non è di almeno 8 caratteri;
+	\item La password e la conferma password non coincidono.
 	\end{itemize}
-In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visualizzando un messaggio di errore;
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.1: Inserimento nome}
@@ -38,7 +37,7 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può inserire il proprio nome per potersi registrare;
 \item \textbf{Precondizione}: l'attore è entrato nell'aera di registrazione;
-\item \textbf{Postcondizione}: il nome è stato inserito;
+\item \textbf{Postcondizione}: l'attore ha inserito il nome;
 \item \textbf{Scenario principale}: l'attore inserisce il proprio nome per potersi registrare.
 \end{itemize}
 
@@ -47,8 +46,8 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può inserire il proprio cognome per potersi registrare;
 \item \textbf{Precondizione}: l'attore è entrato nell'aera di registrazione;
-\item \textbf{Postcondizione}: il cognome è stato inserito.
-\item \textbf{Scenario principale}: l'attore inserisce il proprio cognome per potersi registrare;
+\item \textbf{Postcondizione}: l'attore ha inserito il cognome;
+\item \textbf{Scenario principale}: l'attore inserisce il proprio cognome per potersi registrare.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.3: Inserimento username}
@@ -56,8 +55,8 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può inserire il proprio username per potersi registrare;
 \item \textbf{Precondizione}: l'attore è entrato nell'aera di registrazione;
-\item \textbf{Postcondizione}: lo username è stato inserito.
-\item \textbf{Scenario principale}: l'attore inserisce il proprio username per potersi registrare;
+\item \textbf{Postcondizione}: l'attore ha inserito lo username;
+\item \textbf{Scenario principale}: l'attore inserisce il proprio username per potersi registrare.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.4: Inserimento e-mail}
@@ -65,8 +64,8 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può inserire il proprio indirizzo e-mail per potersi registrare;
 \item \textbf{Precondizione}: l'attore è entrato nell'aera di registrazione;
-\item \textbf{Postcondizione}: l'e-mail è stata inserita.
-\item \textbf{Scenario principale}: l'attore inserisce il proprio indirizzo e-mail per potersi registrare; 
+\item \textbf{Postcondizione}: l'attore ha inserito l'e-mail;
+\item \textbf{Scenario principale}: l'attore inserisce il proprio indirizzo e-mail per potersi registrare.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.5: Inserimento password}
@@ -74,8 +73,8 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può inserire una password per potersi registrare;
 \item \textbf{Precondizione}: l'attore è entrato nell'aera di registrazione;
-\item \textbf{Postcondizione}: la password è stata inserita.
-\item \textbf{Scenario principale}: l'attore inserisce una password per potersi registrare;
+\item \textbf{Postcondizione}: l'attore ha inseritola password;
+\item \textbf{Scenario principale}: l'attore inserisce una password per potersi registrare.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.6: Inserimento conferma password}
@@ -83,8 +82,8 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può inserire nuovamente la password scelta;
 \item \textbf{Precondizione}: l'attore è entrato nell'aera di registrazione;
-\item \textbf{Postcondizione}: la conferma della password è stata inserita.
-\item \textbf{Scenario principale}: l'attore inserisce nuovamente la password scelta;
+\item \textbf{Postcondizione}: l'attore ha inserito la conferma della password;
+\item \textbf{Scenario principale}: l'attore inserisce nuovamente la password scelta.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.7: Conferma registrazione}
@@ -92,15 +91,15 @@ In tal caso il sistema ritorna allo stato precedente l'inserimento dei dati visu
 \item \textbf{Attori}: utente non autenticato;
 \item \textbf{Descrizione}: l'attore può confermare i dati inseriti;
 \item \textbf{Precondizione}: l'attore ha inserito correttamente tutti i campi dati richiesti;
-\item \textbf{Postcondizione}: il sistema ha ricevuto i dati per la registrazione.
-\item \textbf{Scenario principale}: l'attore conferma i dati inseriti;
+\item \textbf{Postcondizione}: il sistema ha ricevuto i dati per la registrazione;
+\item \textbf{Scenario principale}: l'attore conferma i dati inseriti.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC2.8: Visualizzazione errore registrazione}
 \begin{itemize}
 \item \textbf{Attori}: utente non autenticato;
-\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
+\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la fase di registrazione;
 \item \textbf{Precondizione}: il sistema ha ricevuto dei dati errati per la registrazione;
-\item \textbf{Postcondizione}: il sistema mostra un messaggio di errore.
-\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi;
+\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+\item \textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
