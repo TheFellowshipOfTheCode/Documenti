@@ -9,14 +9,14 @@
 \FloatBarrier
 \begin{itemize}
 \item\textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
-\item\textbf{Descrizione}: l'attore può svolgere un allenamento che consiste nel rispondere a domande che gli vengono proposte in modo dinamico. Ogni domanda può incrementare o decrementare il punteggio dell'allenamento per fare in modo che la difficoltà delle domande proposte sia sempre in linea con la competenza dell'utente sull'argomento scelto;
+\item\textbf{Descrizione}: l'attore può svolgere un allenamento che consiste nel rispondere a domande che gli vengono proposte in modo dinamico. La difficoltà di ogni domanda viene calcolata in modo che essa sia sempre in linea con la competenza dell'utente sull'argomento scelto;
 \item\textbf{Precondizione}: l'attore ha selezionato l'opzione di allenamento;
 \item\textbf{Postcondizione}: l'attore ha finito di svolgere l'allenamento e può quindi visualizzare la valutazione finale che ha ottenuto e il riepilogo delle risposte date nonché il proprio livello sugli argomenti;
 \item\textbf{Scenario principale}:
 	\begin{enumerate}
 		\item L'attore può scegliere l'argomento per iniziare l'allenamento (UC10.1);
 		\item L'attore può scegliere delle parole chiave (UC10.2);
-		\item L'attore può sceglie il numero di domande che compongono l'allenamento (UC10.3);
+		\item L'attore può scegliere il numero di domande che compongono l'allenamento (UC10.3);
 		\item L'attore può iniziare l'allenamento (UC10.4).
 	\end{enumerate}
 \item \textbf{Inclusioni}: l'attore risponde ad una domanda (UC12).
@@ -43,7 +43,7 @@
 \subsubsection{Caso d'uso UC10.3: Scelta numero di domande}
 	\begin{itemize}
 		\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
-		\item \textbf{Descrizione}: l'attore può sceglie il numero di domande che comporranno l'allenamento, senza restrizione sul numero;
+		\item \textbf{Descrizione}: l'attore può scegliere il numero di domande che comporranno l'allenamento, senza restrizione sul numero;
 		\item \textbf{Precondizione}: l'attore ha selezionato la modalità allenamento;
 		\item \textbf{Postcondizione}: l'attore ha scelto il numero di domande che comporranno l'allenamento;
 		\item \textbf{Scenario principale}: l'attore sceglie il numero di domande che comporranno l'allenamento;
@@ -63,7 +63,15 @@
 		\item \textbf{Descrizione}: l'attore può iniziare l'allenamento;
 		\item \textbf{Precondizione}: l'attore ha scelto i parametri che consentiranno la creazione dell'allenamento personalizzato;
 		\item \textbf{Postcondizione}: l'attore ha iniziato l'allenamento;
-		\item \textbf{Scenario principale}: l'attore inizia l'allenamento.
+		\item \textbf{Scenario principale}: 
+			\begin{enumerate}
+				\item L'attore può confermare la risposta (UC10.4.1);
+				\item L'attore può lasciare un like ad una domanda (UC10.4.2);
+				\item L'attore può lasciare dei commenti alla domanda (UC10.4.3);
+				\item L'attore può segnalare la domanda (UC10.4.4);
+				\item L'attore può avanzare alla domanda successiva (UC10.4.5);
+				\item L'utente può concludere l'allenamento (UC10.4.6).
+			\end{enumerate}	
 	\end{itemize}
 	
 \subsubsection{Caso d'uso UC10.4.1: Conferma risposta}

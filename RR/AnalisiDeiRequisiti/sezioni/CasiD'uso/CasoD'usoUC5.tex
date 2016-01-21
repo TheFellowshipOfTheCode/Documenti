@@ -31,7 +31,7 @@
 \label{UC5.1}
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.5]{UML/UC5_1.png}
+	\includegraphics[scale=0.48]{UML/UC5_1.png}
 	\caption{UC5.1: Modifica nome utente}
 \end{figure}
 \begin{itemize}
@@ -295,9 +295,10 @@
 	\begin{enumerate}
 		\item L'attore può inserire la propria vecchia password (UC5.6.1);
 		\item L'attore può inserire una nuova password (UC5.6.2);
-		\item L'attore può confermare la modifica della password (UC5.6.3).
+		\item L'attore può inserire la conferma della nuova password (UC5.6.3);
+		\item L'attore può confermare la modifica della password (UC5.6.4).
 	\end{enumerate}
-	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore (UC5.6.4);
+	\item \textbf{Estensioni}: l'attore visualizza un messaggio d'errore (UC5.6.5);
 	\item \textbf{Scenari alternativi}: l'attore annulla le modifiche e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
@@ -404,11 +405,8 @@
 	\item \textbf{Descrizione}: l'attore può eliminare il proprio account dal sistema; l'eliminazione dell'account comporta la cancellazione dei propri dati dal sistema; 
 	\item \textbf{Precondizione}: l'attore ha selezionato l'opzione di eliminazione account;
 	\item \textbf{Postcondizione}: il sistema ha eliminato in maniera persistente l'account e tutti i relativi dati;
-	\item \textbf{Scenario principale}:
-		\begin{enumerate}
-			\item L'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC5.8.1).
-		\end{enumerate}
-		\item \textbf{Scenari alternativi}: l'attore annulla l'eliminazione dell'account e il sistema lo riporta alla schermata di gestione del profilo utente.
+	\item \textbf{Scenario principale}: l'utente può confermare l'eliminazione del proprio account e dei relativi dati personali (UC5.8.1);
+	\item \textbf{Scenari alternativi}: l'attore annulla l'eliminazione dell'account e il sistema lo riporta alla schermata di gestione del profilo utente.
 \end{itemize}
 
 \subsubsection{Caso d'uso UC5.8.1: Conferma eliminazione account}
