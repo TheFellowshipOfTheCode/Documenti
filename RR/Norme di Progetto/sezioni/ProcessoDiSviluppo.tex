@@ -1,8 +1,7 @@
-\section{Processo di sviluppo}
+\section{Processi Primari}
+\subsection{Processo di sviluppo}
 
-\subsection{Scopo del processo}
-
-\subsection{Analisi dei Requisiti}
+\subsubsection{Scopo del processo}
 \subsubsection{Studio di Fattibilità}
 Alla pubblicazione dei capitolati d'appalto il \textit{\RdP} dovrà fissare un
 numero di riunioni volte alla discussione e al confronto tra i membri del \textit{team\ped{G}}.
@@ -10,24 +9,23 @@ In seguito, gli \textit{Analisti} dovranno redigere lo \textit{\SdF} in base a q
 emerso nelle riunioni.\\
 Lo \textit{\SdF} sarà articolato nei seguenti punti:
 \begin{itemize}
-  \item \textbf{Descrizione:} descrizione generale di ciò che viene richiesto
-  dal capitolato;
-  \item \textbf{Dominio Applicativo:} descrizione dell'ambito di utilizzo del
-  prodotto richiesto;
-  \item \textbf{Dominio Tecnologico:} descrizione delle tecnologie impiegate
-  nello sviluppo del progetto richiesto;
-  \item \textbf{Criticità:} elenco delle possibili problematiche che potrebbero
-  sorgere durante lo sviluppo del prodotto richiesto, individuando quindi punti
-  critici ed eventuali rischi;
-  \item \textbf{Valutazione Finale:} piccolo riassunto finale nel quale verranno
-  spiegate le motivazioni per cui è stato scelto o scartato il suddetto
-  capitolato.
+	\item \textbf{Descrizione:} descrizione generale di ciò che viene richiesto
+	dal capitolato;
+	\item \textbf{Dominio Applicativo:} descrizione dell'ambito di utilizzo del
+	prodotto richiesto;
+	\item \textbf{Dominio Tecnologico:} descrizione delle tecnologie impiegate
+	nello sviluppo del progetto richiesto;
+	\item \textbf{Criticità:} elenco delle possibili problematiche che potrebbero
+	sorgere durante lo sviluppo del prodotto richiesto, individuando quindi punti
+	critici ed eventuali rischi;
+	\item \textbf{Valutazione Finale:} piccolo riassunto finale nel quale verranno
+	spiegate le motivazioni per cui è stato scelto o scartato il suddetto
+	capitolato.
 \end{itemize}
 
 \subsubsection{Analisi dei Requisiti}
 Ultimato lo \textit{\SdF} gli \textit{\Anas} dovranno redigere l'\textit{\AdR}
 che dovrà obbligatoriamente essere strutturata nel seguente modo:
-
 \paragraph{Classificazione dei requisiti}
 Dovrà essere redatto un elenco di requisiti, emersi durante le riunioni interne
 e/o esterne. Questo compito spetta agli \textit{\Anas}. I requisiti dovranno
@@ -93,13 +91,13 @@ Per ogni caso d'uso devono inoltre essere identificate le seguenti informazioni:
   \item\textbf{Generalizzazioni}: indica quali sono tutte le generalizzazioni,
   se presenti.
 \end{itemize}
-\subsection{Progettazione}
+\subsubsection{Progettazione}
 
-\subsubsection{Descrizione}
+\paragraph{Descrizione}
 L'attività di progettazione definisce come deve essere realizzata la struttura dell'architettura software. I requisiti delineati, all'interno del documento \textit{\AdR}, devono essere utili a realizzare la documentazione specifica e a determinare le linee guida da seguire durante l'attività di codifica.
 Tale attività deve essere svolta in maniera ottimale e precisa dai \textit{\Progs}.
 
-\subsubsection{Diagrammi}
+\paragraph{Diagrammi}
 La progettazione deve utilizzare le seguenti tipologie di diagrammi \textit{UML\ped{G}}:
 \begin{itemize}
 \item
@@ -113,7 +111,7 @@ La progettazione deve utilizzare le seguenti tipologie di diagrammi \textit{UML\
 \end{itemize}
 
 
-\subsubsection{Requisiti per i progettisti}
+\paragraph{Requisiti per i progettisti}
 
 I \textit{\Progs} sono responsabili delle attività di progettazione. Essi sono tenuti ad avere:
 \begin{itemize}
@@ -127,7 +125,7 @@ Notevole inventiva per riuscire a trovare una soluzione progettuale accettabile 
 Capacità di individuare con rapidità e sicurezza le soluzioni più opportune.
 \end{itemize}
 
-\subsubsection{Obiettivi della progettazione}
+\paragraph{Obiettivi della progettazione}
 La fase di progettazione si pone i seguenti obiettivi:
 \begin{itemize}
 \item
@@ -138,20 +136,20 @@ Capacità di poter far fronte a modifiche da effettuare senza che l'intera strut
 Soddisfare i requisiti di qualità fissati dal committente.
 \end{itemize}
 
-\subsection{Codifica}
+\subsubsection{Codifica}
 
-\subsubsection{Descrizione}
+\paragraph{Descrizione}
 L'attività di codifica ha come obiettivo quello di passare dalla descrizione della soluzione in termini di architettura alla descrizione della soluzione in formato eseguibile da un calcolatore. I \textit{\Progrs}, responsabili di questa attività, sono tenuti a seguire le linee guida, delineate nell'attività di progettazione, con lo scopo di produrre in output il software designato.
 
-\subsubsection{Standard di Codifica}
-\paragraph{Descrizione}
+\paragraph{Standard di Codifica}
+\subparagraph{Descrizione}
 Affinché questa attività sia svolta al meglio, è opportuno che i \textit{\Progrs} rispettino uno standard di codifica.
 Esso rappresenta uno strumento fondamentale per garantire sintonia tra gli sviluppatori e la creazione di un codice sorgente uniforme e valido.
 All'interno dello standard di codifica è necessario definire le modalità di scrittura e gestione del codice sorgente, al fine di facilitare la modifica del sistema software.
 L'utilizzo di tecniche di scrittura del codice affidabili e di regole di programmazione valide per la creazione di codice di alta qualità è di fondamentale importanza per le prestazioni e la qualità del software.
 
 
-\paragraph{Tecniche di Scrittura}
+\subparagraph{Tecniche di Scrittura}
 La definizione di tecniche di scrittura è importante per avere una maggiore comprensione del codice sorgente.
 Le tecniche di scrittura del codice sono suddivise in tre categorie:
 \begin{itemize}
@@ -247,40 +245,40 @@ Suddividere logicamente il codice sorgente tra diversi file fisici;
 Suddividere le sezioni complesse ed estese di codice in moduli comprensibili di dimensioni minori.
 \end{itemize}
 
-\subsubsection{Ricorsione}
+\paragraph{Ricorsione}
 La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. Nel caso l'utilizzo di memoria risulti troppo elevato la ricorsione verrà rimossa.
 
-\subsection{Strumenti}
+\subsubsection{Strumenti}
 
-\subsubsection{DocumentsDB}
+\paragraph{DocumentsDB}
 Il \textit{team\ped{G}} ha creato un applicativo web, \textit{DocumentsDB}, al fine di gestire in maniera veloce, automatizzata
 e sicura tutti i dati e il loro tracciamento. \textit{DocumentsDB} è stato realizzato sulla base di un software esistente, \textit{PragmaDB}, realizzato da
 studenti di anni passati e disponibile online. Esso permette la gestione di casi d'uso, attori, fonti, requisiti e termini del \textit{Glossario}.
 Ogni membro del \textit{team\ped{G}} può accedervi via \textit{browser\ped{G}} previa autenticazione.
 L'applicazione si occupa di mantenere ordinata la gerarchia dei requisiti e dei casi d'uso in modo automatico durante tutto il loro ciclo di vita (creazione, modifica, eliminazione).
 \textbf{DocumentsDB} consente di esportare l'elenco degli attori, delle fonti, del glossario, dei casi d'uso, dei requisiti e delle loro relazioni come codice \textit{\LaTeX\ped{G}}.
-Questo rende il lavoro più ordinato e automatizzato.
+Questo rende il lavoro più ordinato e automatizzato. Questo software verrà utilizzato durante l'intero progetto, principalmente nelle attività di analisi e progettazione.
 
-\subsubsection{Tracciabilità}
+\paragraph{Tracciabilità}
 La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del software \textit{DocumentsDB}, il quale dà la possibilità ad ogni membro del \textit{team\ped{G}} di inserire, modificare o eliminare requisiti o casi d'uso.
 Inoltre è utilizzato per tenere traccia dello stato dei requisiti, se quindi sono stati soddisfatti o meno.
 
-\subsubsection{TexMaker}
+\paragraph{TexMaker}
 L'editor scelto dal \textit{team\ped{G}} per sviluppare i documenti in \textit{\LaTeX\ped{G}} è \textit{TexMaker\ped{G}}.
 \textit{TexMaker\ped{G}} è un editor gratuito, moderno e multi-piattaforma per \textit{Linux\ped{G}}, sistemi \textit{Mac OS\ped{G}} e \textit{Microsoft Windows\ped{G}} che integra molti strumenti utili per sviluppare documenti in \textit{\LaTeX\ped{G}}.
 \textit{TexMaker\ped{G}} include il supporto \textit{Unicode\ped{G}}, il controllo ortografico, il completamento automatico, il raggruppamento del codice e un visore incorporato \textit{PDF\ped{G}} con il supporto \textit{SyncTex\ped{G}} e modalità di visualizzazione continua.
-\textit{TexMaker\ped{G}} è uno strumento facile da usare e da configurare.
+\textit{TexMaker\ped{G}} è uno strumento facile da usare e da configurare. Questo software verrà utilizzato durante l'attività di analisi e progettazione per redigere i documenti necessari.
 
-\subsubsection{Astah}
+\paragraph{Astah}
 \textit{Astah\ped{G}} è l'editor scelto dal \textit{team\ped{G}} per la modellazione nel linguaggio \textit{UML\ped{G}}.
 \textit{Astah\ped{G}} è un editor gratuito, scaricabile online sia per \textit{Microsoft Windows\ped{G}}, sia per \textit{Linux\ped{G}} che per \textit{Mac OS\ped{G}}.
 E' un editor abbastanza semplice e user-fiendly. Infatti ad un  primo utilizzo, è facile capire come muoversi nell'ambiente di sviluppo, come aggiungere classi, diagrammi e relazioni.
 Strumento molto utile che l'editor mette a disposizione è quello di poter esportare il diagramma realizzato in un file immagine per una rapida visualizzazione.
-\textit{Astah\ped{G}} supporta la funzionalità per la codifica dei diagrammi delle classi in un linguaggio di programmazione. Dunque, è possibile disegnare un diagramma delle classi, generare il codice e poi sistemare a mano le varie molteplicità delle relazioni.
+\textit{Astah\ped{G}} supporta la funzionalità per la codifica dei diagrammi delle classi in un linguaggio di programmazione. Dunque, è possibile disegnare un diagramma delle classi, generare il codice e poi sistemare a mano le varie molteplicità delle relazioni. Questo software verrà utilizzato nelle attività di analisi e progettazione per la creazione dei diagrammi \textit{UML\ped{G}} necessari.
 
 
 
-\subsubsection{WebStorm}
+\paragraph{WebStorm}
 L'ambiente di sviluppo integrato (\textit{IDE\ped{G}}) utilizzato è \textit{WebStorm\ped{G}}. Sono stati testati anche altri \textit{IDE\ped{G}}, ma nessuno si è dimostrato all'altezza. Esso presenta le seguenti funzionalità:
 \begin{itemize}
 \item
@@ -296,34 +294,4 @@ Compila automaticamente i file \textit{Sass\ped{G}} in \textit{CSS\ped{G}};
 \item
 Tiene traccia dei cambiamenti effettuati sui file, consentendo di visualizzare lo storico delle modifiche locali e ritornare a versioni precedenti in caso di modifiche o perdite accidentali.
 \end{itemize}
-
-
-\subsection{Tecnologie utilizzate}
-\subsubsection{HTML5}
-\textit{HTML\ped{G}5} è un linguaggio di \textit{markup\ped{G}} per la strutturazione delle pagine web, derivato dallo standard che definisce \textit{HTML\ped{G}}.
-Il termine rappresenta due concetti differenti:
-\begin{itemize}
-		\item
-			Una nuova versione del linguaggio \textit{HTML\ped{G}}, con nuovi elementi, attributi e comportamenti;
-		\item
-			Un più ampio insieme di tecnologie che permettono di creare siti web e applicazioni più diversificate e potenti.
-\end{itemize}
-\textit{HTML\ped{G}5} si presenta come un linguaggio pronto ad essere plasmato secondo le più recenti necessità, sia dal lato della strutturazione del contenuto che da quello dello sviluppo di vere e proprie applicazioni.
-Questo linguaggio verrà utilizzato per sviluppare la parte \textit{client\ped{G}} dell'applicativo.
-
-\subsubsection{CSS3}
-\textit{CSS3\ped{G}} è un linguaggio utilizzato per definire la formattazione di documenti \textit{HTML\ped{G}}, \textit{XHTML\ped{G}} e \textit{XML\ped{G}}.
-Questo linguaggio istruisce un \textit{browser\ped{G}} su come il documento debba essere presentato all'utente, per esempio definendone la formattazione del testo, il posizionamento degli elementi rispetto a diversi \textit{media\ped{G}} e \textit{device\ped{G}} eccetera.
-Questa tecnologia verrà utilizzata per arricchire l'aspetto visuale e la presentazione della parte \textit{client\ped{G}}.
-
-\subsubsection{JavaScript}
-\textit{JavaScript\ped{G}} è un linguaggio di \textit{scripting\ped{G}} lato \textit{client\ped{G}} per la creazione di effetti dinamici interattivi all'interno di una pagina Web. Esso è un linguaggio interpretato, cioè non esiste nessun compilatore, ma è direttamente il \textit{browser\ped{G}}, tramite un apposito motore di \textit{scripting\ped{G}}, che interpreta il linguaggio.
-L'enorme diffusione di \textit{JavaScript\ped{G}} è dovuta principalmente al fiorire di numerose librerie nate allo scopo di semplificare la programmazione sul \textit{browser\ped{G}}, ma anche alla nascita di \textit{framework\ped{G}} lato \textit{server\ped{G}} e nel mondo mobile che lo supportano come linguaggio principale.
-La parte dinamica dell'applicativo verrà sviluppata tramite l'utilizzo di questo linguaggio.
-
-\subsubsection{Node.js}
-\textit{Node.js\ped{G}} è un \textit{framework\ped{G}} relativo all'utilizzo lato \textit{server\ped{G}} di \textit{JavaScript\ped{G}}.
-La caratteristica principale di \textit{Node.js\ped{G}} risiede nella possibilità di accedere alle risorse del sistema operativo in modalità \textit{event-driven\ped{G}} e non sfruttando il classico modello basato su processi o \textit{threads\ped{G}} concorrenti, utilizzato dai classici web \textit{server\ped{G}}.
-Il modello \textit{event-driven\ped{G}}, o "programmazione ad eventi", si basa su un concetto piuttosto semplice: si lancia una azione quando accade qualcosa. Ogni azione quindi risulta asincrona a differenza dei pattern di programmazione più comune in cui una azione succede ad un'altra solo dopo che essa è stata completata.
-Tale modello di \textit{networking\ped{G}} è ritenuto più efficiente nelle situazioni critiche in cui si verifica un elevato traffico di rete.
-\textit{Node.js\ped{G}} verrà utilizzato per sviluppare la parte \textit{server\ped{G}} dell'applicativo.
+Questo software verrà utilizzato durante l'attività di codifica.
