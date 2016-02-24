@@ -40,6 +40,94 @@
 	\item \textbf{Scenario principale}: l'attore seleziona l'utente ricercato per visualizzarne il profilo.
 \end{itemize}
 
+\subsection{Caso d'uso UC13.3: Visualizzazione profilo utente ricercato}
+\label{UC13.3}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC13_3.png}
+	\caption{UC13.3: Visualizzazione profilo utente ricercato}
+\end{figure}
+\FloatBarrier
+\begin{itemize}
+	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item \textbf{Descrizione}: l'attore può visualizzare il profilo utente ricercato;
+	\item \textbf{Precondizione}: il sistema visualizza la pagina del profilo utente;
+	\item \textbf{Postcondizione}: l'attore visualizza il profilo utente ricercato;
+	\item \textbf{Scenario principale}:
+	\begin{enumerate}
+		\item L'attore può visualizzare l'username dell'utente ricercato (UC13.3.1);
+		\item L'attore può visualizzare la foto/immagine dell'utente ricercato (UC13.3.2);
+		\item L'attore può visualizzare il livello dell'utente ricercato (UC13.3.3);
+		\item L'attore può visualizzare il numero degli allenamenti svolti dall'utente ricercato (UC13.3.4);
+		\item L'attore può visualizzare la classifica degli argomenti scelti negli allenamenti dall'utente ricercato (UC13.3.5);
+		\item L'attore può visualizzare il numero delle domande risposte in modo corretto dall'utente ricercato (UC13.3.6);
+		\item L'attore può visualizzare il numero delle domande risposte in modo errato dall'utente ricercato (UC13.3.7).
+	\end{enumerate}
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.1: Visualizzazione username utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza il proprio nome utente;
+	\item\textbf{Precondizione}: il sistema visualizza la pagina utente;
+	\item\textbf{Postcondizione}: il sistema visualizza il nome utente dell'utente;
+	\item\textbf{Scenario principale}: l'attore visualizza il proprio nome utente;
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.2: Visualizzazione foto/immagine utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza la propria immagine profilo;
+	\item\textbf{Precondizione}: il sistema visualizza la pagina utente;
+	\item\textbf{Postcondizione}: il sistema visualizza l'immagine profilo dell'utente;
+	\item\textbf{Scenario principale}: l'attore visualizza la propria immagine profilo;
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.3: Visualizzazione livello utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza il proprio livello attuale;
+	\item\textbf{Precondizione}: il sistema visualizza la pagina utente;
+	\item\textbf{Postcondizione}: il sistema visualizza il livello attuale dell'utente;
+	\item\textbf{Scenario principale}: l'attore visualizza il proprio livello attuale.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.4: Visualizzazione numero allenamenti svolti dall'utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza il numero di allenamenti svolti;
+	\item\textbf{Precondizione}: il sistema mostra la pagina dell'utente;
+	\item\textbf{Postcondizione}: il sistema visualizza il numero di allenamenti svolti;
+	\item\textbf{Scenario principale}: l'attore visualizza il numero di allenamenti svolti.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.5: Visualizzazione classifica argomenti scelti negli allenamenti dall'utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza la classifica degli argomenti scelti negli allenamenti;
+	\item\textbf{Precondizione}: il sistema visualizza la pagina dell'utente;
+	\item\textbf{Postcondizione}: il sistema visualizza la classifica degli argomenti scelti negli allenamenti;
+	\item\textbf{Scenario principale}: l'attore visualizza la classifica delgi argomenti scelti negli allenamenti.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.6: Visualizzazione numero domande risposte in modo corretto dall'utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza il numero di domande risposte in modo corretto;
+	\item\textbf{Precondizione}: il sistema visualizza la pagina utente;
+	\item\textbf{Postcondizione}: il sistema visualizza il numero di domande risposte in modo esatto dall'utente;
+	\item\textbf{Scenario principale}: l'attore visualizza il numero di domande risposte in modo corretto.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC13.3.7: Visualizzazione numero domande risposte in modo errato dall'utente ricercato}
+\begin{itemize}
+	\item\textbf{Attori}: utente autenticato, utente autenticato pro;
+	\item\textbf{Descrizione}: l'attore visualizza il numero di domande risposte in modo sbagliato;
+	\item\textbf{Precondizione}: il sistema visualizza la pagina utente;
+	\item\textbf{Postcondizione}: il sistema visualizza il numero di domande risposte in modo sbagliato dall'utente;
+	\item\textbf{Scenario principale}: l'attore visualizza il numero di domande risposte in modo sbagliato.
+\end{itemize}
+
 \subsubsection{Caso d'uso UC13.4: Ricerca utente fallita}
 
 \begin{itemize}
