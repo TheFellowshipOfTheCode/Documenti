@@ -13,7 +13,7 @@
 		\item		
 			\textbf{Descrizione}: l'attore può creare e modificare domande;
 		\item
-			\textbf{Precondizione}: l'attore è autenticato presso il sistema; 
+			\textbf{Precondizione}: il sistema ha riconosciuto l'autenticazione dell'attore; 
 		\item
 			\textbf{Postcondizione}: l'attore ha compiuto una delle operazioni appartenenti a questa funzionalità;
 		\item
@@ -39,7 +39,7 @@
 		\item		
 			\textbf{Descrizione}: l'attore può creare una nuova domanda;
 		\item
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione domanda;
+			\textbf{Precondizione}: il sistema presenta la funzionalità di creazione della domanda;
 		\item
 			\textbf{Postcondizione}: l'attore crea una domanda;		
 		\item
@@ -51,11 +51,26 @@
 					L'attore può inserire le parole chiave relative alla nuova domanda (UC8.1.2);
 					\item
 					L'attore può selezionare la tipologia di domanda (UC8.1.3);
+					
 					\item
-					L'attore può confermare la creazione della domanda (UC8.1.4).
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda vero/falso (UC8.1.4);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda a risposta multipla \\(UC8.1.5);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare un esercizio a riempimento di spazi vuoti (UC8.1.6);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda di collegamento (UC8.1.7);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda a ordinamento di immagini (UC8.1.8);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda a ordinamento di stringhe (UC8.1.9);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda con area cliccabile nell'immagine (UC8.1.10).
+					\item
+					L'attore può confermare la creazione della domanda (UC8.1.11);
 	 			\end{enumerate}
 	 	\item
-			\textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo alla creazione della domanda (UC8.1.5);
+			\textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo alla creazione della domanda (UC8.1.12);
 	 	\item
 	 		\textbf{Scenari alternativi}:
 				\begin{itemize}
@@ -74,7 +89,7 @@
 		\item
 			\textbf{Descrizione}: l'attore può indicare un argomento tra quelli presenti;
 		\item		
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione domanda;
+			\textbf{Precondizione}: il sistema presenta la funzionalità di selezionare un argomento;
 		\item
 			\textbf{Postcondizione}: l'attore ha selezionato un argomento;
 		\item
@@ -88,7 +103,7 @@
 		\item
 			\textbf{Descrizione}: l'attore può inserire le parole chiave relative alla nuova domanda per specificare più dettagliatamente l'argomento della domanda;
 		\item		
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione domanda;
+			\textbf{Precondizione}: il sistema presenta lo spazio destinato all'inserimento di una parola chiave;
 		\item
 			\textbf{Postcondizione}: l'attore ha selezionato delle parole chiave;
 		\item
@@ -97,59 +112,37 @@
 
 
 	\subsubsection{Caso d'uso UC8.1.3: Selezione tipologia di domanda}
-	\label{UC8.1.3}
-	\begin{figure}[h]
-		\centering
-			\includegraphics[scale=0.45,keepaspectratio]{UML/UC8_1_3.png}
-		\caption{UC8.1.3: Selezione tipologia di domanda}
-	\end{figure}
-	\FloatBarrier
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Descrizione}: l'attore può scegliere la tipologia di domanda che vuole inserire;
 		\item		
-			\textbf{Precondizione}: l'attore ha selezionato la funzionalità di creazione domanda;
+			\textbf{Precondizione}: il sistema presenta la funzionalità di selezionare una tipologia di una domanda;
 		\item
 			\textbf{Postcondizione}: l'utente ha selezionato la tipologia di domanda da inserire;
-				\item \textbf{Scenario principale}: 
-					\begin{enumerate}
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda vero/falso (UC8.1.3.1);
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda a risposta multipla \\(UC8.1.3.2);
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare un esercizio a riempimento di spazi vuoti (UC8.1.3.3);
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda di collegamento (UC8.1.3.4);
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda a ordinamento di immagini (UC8.1.3.5);
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda a ordinamento di stringhe (UC8.1.3.6);
-					\item
-					L'attore può richiamare il \textit{wizard\ped{G}} per creare una domanda con area cliccabile nell'immagine (UC8.1.3.7).
-	 			\end{enumerate}
+		\item 
+			\textbf{Scenario principale}: l'utente seleziona la tipologia di domanda
 	\end{itemize}
 
 	%inclusione file latex wizard
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_1.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_2.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_3.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_4.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_5.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_6.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_3_7.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_4.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_5.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_6.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_7.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_8.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_9.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_1_10.tex}
 
 
-	\subsubsection{Caso d'uso UC8.1.4: Conferma creazione}
+	\subsubsection{Caso d'uso UC8.1.11: Conferma creazione}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
 		\item
 			\textbf{Descrizione}: l'attore può confermare la creazione della domanda;
 		\item		
-			\textbf{Precondizione}: l'attore ha finito di creare una domanda tramite un \textit{wizard\ped{G}};
+			\textbf{Precondizione}: il sistema presenta la funzionalità di confermare la creazione di una domanda tramite un \textit{wizard\ped{G}};
 		\item
 			\textbf{Postcondizione}: l'attore ha creato una domanda;
 		\item
@@ -159,7 +152,7 @@
 					
 	\end{itemize}	
 	
-	\subsubsection{Caso d'uso UC8.1.5: Visualizzazione errore creazione domanda}
+	\subsubsection{Caso d'uso UC8.1.12: Visualizzazione errore creazione domanda}
 	\begin{itemize}
 		\item
 			\textbf{Attori}: utente autenticato, utente autenticato pro;
