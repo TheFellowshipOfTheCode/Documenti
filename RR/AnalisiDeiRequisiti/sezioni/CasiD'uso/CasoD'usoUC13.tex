@@ -10,7 +10,7 @@
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
 	\item \textbf{Descrizione}: l'attore può ricercare un utente registrato al sistema;
-	\item \textbf{Precondizione}: l'attore si trova nella pagina iniziale;
+	\item \textbf{Precondizione}: il sistema visualizza la home page dove è possibile ricercare un utente;
 	\item \textbf{Postcondizione}: il sistema visualizza il profilo dell'utente ricercato;
 	\item \textbf{Scenario principale}:
 	\begin{enumerate}
@@ -18,7 +18,6 @@
 		\item L'attore può selezionare l'utente ricercato per visualizzarne il profilo (UC13.2).
 	\end{enumerate} 
 	\item \textbf{Estensioni}: la ricerca dell'utente è fallita (UC13.3);
-	\item \textbf{Scenari alternativi}: l'utente ha inserito nella barra di ricerca un nome e cognome/username inesistente all'interno del sistema. 
 \end{itemize}
 
 \subsubsection{Caso d'uso UC13.1: Inserimento nome e cognome/usermane}
@@ -26,7 +25,7 @@
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
 	\item \textbf{Descrizione}: l'attore può inserire nome e cognome/username di un utente nella barra di ricerca;
-	\item \textbf{Precondizione}: l'attore ha selezionato la barra di ricerca utente;
+	\item \textbf{Precondizione}: il sistema visualizza la home page dove è possibile ricercare un utente;
 	\item \textbf{Postcondizione}: l'attore ha inserito nome e cognome/username dell'utente che vuole ricercare;
 	\item \textbf{Scenario principale}: l'attore inserisce il nome e cognome/username dell'utente che vuole ricercare.
 \end{itemize}
@@ -36,17 +35,17 @@
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
 	\item \textbf{Descrizione}: l'attore può selezionare l'utente ricercato per visualizzarne il profilo;
-	\item \textbf{Precondizione}: l'utente ha inserito il nome e congome/username dell'utente ricercato nella barra di ricerca;
+	\item \textbf{Precondizione}: il sistema visualizza la pagina con l'elenco dei risultati della ricerca utente;
 	\item \textbf{Postcondizione}: il sistema visualizza il profilo dell'utente selezionato;
 	\item \textbf{Scenario principale}: l'attore seleziona l'utente ricercato per visualizzarne il profilo.
 \end{itemize}
 
-\subsubsection{Caso d'uso UC13.3: Ricerca utente fallita}
+\subsubsection{Caso d'uso UC13.4: Ricerca utente fallita}
 
 \begin{itemize}
 	\item \textbf{Attori}: utente autenticato, utente autenticato pro;
 	\item \textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fosse verificato lo scenario alternativo durante la fase di ricerca dell'utente;
-	\item \textbf{Precondizione}: l'attore ha inserito nome e cognome/username di un utente inesistente;
+	\item \textbf{Precondizione}: il sistema visualizza la home page dove è possibile ricercare un utente;
 	\item \textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
 \item\textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.
 \end{itemize}
