@@ -1,0 +1,45 @@
+%Generazione delle variabili che andranno a sostituire quelle del template 'HomePage.tex'
+\newcommand{\documento}{\DDP}
+\newcommand{\nomedocumentofisico}{DefinizioneDiProdotto\_v1\_0\_0.pdf}
+\newcommand{\redazione}{\FB\\ & \AF\\ & \GN\\ & \GR\\ & \SM\\ & \MP\\ & \MV}
+\newcommand{\verifica}{\FB\\ & \AF\\ & \GN}
+\newcommand{\approvazione}{\SM}
+\newcommand{\uso}{Interno}
+\newcommand{\datacreazione}{26 Febbraio 2016}
+\newcommand{\datamodifica}{}
+\newcommand{\stato}{In redazione}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+
+\input{sezioni/diario.tex}
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+%\input{../../Template/diario.tex}
+\input{../../Template/diario_per_piu_pagine.tex}
+\input{../../Template/index.tex}
+
+\newpage 
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\input{sezioni/Introduzione.tex}
+\input{sezioni/DescrizioneGenerale.tex}
+\appendix
+\input{sezioni/Appendice.tex}
+
+\end{document}
