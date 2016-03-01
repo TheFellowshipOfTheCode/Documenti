@@ -61,6 +61,8 @@ Per tutta la durata del progetto, l'infrastruttura impiegata nello sviluppo dovr
 \item i dati ottenuti da DocumentsDB saranno sempre coerenti e aggiornati;
 \item nell'arco dello sviluppo del progetto, DocumentsDB si estenderà fornendo nuove funzionalità in relazione alle nuove attività intraprese; esse risulteranno implementate e funzionanti alla prima necessità di utilizzo;
 \end{itemize}
+\subsubsection{Strategie}
+L'infrastruttura necessaria allo svolgimento del progetto dovrà essere mantenuta costantemente aggiornata; in particolare l'utilizzo delle metriche sopra indicate permetterà l'individuazione di eventuali errori all'interno degli strumenti utilizzati, la cui correzione (da effettuarsi nel minor tempo possibile) permetterà di ripristinare l'erogazione di dati corretti e coerenti.
 \subsubsection{Metriche}
 \paragraph{Disponibilità DocumentsDB}
 \label{dispDocumentsDB}
@@ -78,8 +80,7 @@ Indica il periodo medio intercorso fra l'individuazione di un'incoerenza nella p
 \item \textbf{Range-ottimale}: $0 - 1$;
 \item \textbf{Range-accettazione}: $0 - 3$.
 \end{itemize}
-\subsubsection{Strategie}
-L'infrastruttura necessaria allo svolgimento del progetto dovrà essere mantenuta costantemente aggiornata; in particolare l'utilizzo delle metriche sopra indicate permetterà l'individuazione di eventuali errori all'interno degli strumenti utilizzati, la cui correzione (da effettuarsi nel minor tempo possibile) permetterà di ripristinare l'erogazione di dati corretti e coerenti.
+
 \subsection{Project Planning, Assessment \& Control Process (6.3.1 - 6.3.2)}
 \label{projPlanAssControl}
 Il macro-processo (derivante dall'unione dei processi Project Planning Process e Project Assessment \& Control Process) ha lo scopo di produrre dei piani di sviluppo per il progetto, comprendenti scelta del modello di ciclo di vita  del prodotto, descrizioni delle attività e dei compiti da svolgere durante tutto il ciclo di sviluppo, pianificazione temporale del lavoro e dei costi da sostenere, allocazione di compiti e responsabilità, e di effettuare periodicamente delle misurazioni per rilevare lo stato del progetto rispetto alle pianificazioni prodotte.
@@ -89,6 +90,9 @@ L'intero sviluppo del progetto dovrà seguire la pianificazione prodotta, in par
 \item ogni attività verrà svolta da parte di colui al quale è stata assegnata, rispettando le tempistiche fissate e svolgendo tutti i compiti nei quali è stata suddivisa;
 \item il costo necessario allo svolgimento di una fase di progetto non dovrà eccedere quanto preventivato per tale fase.
 \end{itemize}
+\subsubsection{Strategie}
+La pianificazione effettuata dovrà essere aggiornata costantemente durante tutta l'attività di progetto per essere sempre coerente con la situazione corrente.\\
+Qualsiasi eventuale valore negativo a livello di Schedule Variance o  Budget Variance rilevato in una fase di lavoro dovrà essere assolutamente compensato entro la fine dell'attività di progetto, in quanto non è assolutamente ammesso eccedere le ore di lavoro finali e il preventivo dei costi finale indicato nella pianificazione.
 \subsubsection{Metriche}
 \paragraph{Schedule Variance}
 \label{scheduleVariance}
@@ -106,9 +110,7 @@ Indica se alla data corrente si è speso di più o di meno rispetto a quanto pre
 \item \textbf{Range-ottimale}: $\geq 0$;
 \item \textbf{Valore di accettazione}: $\geq 0$.
 \end{itemize}
-\subsubsection{Strategie}
-La pianificazione effettuata dovrà essere aggiornata costantemente durante tutta l'attività di progetto per essere sempre coerente con la situazione corrente.\\
-Qualsiasi eventuale valore negativo a livello di Schedule Variance o  Budget Variance rilevato in una fase di lavoro dovrà essere assolutamente compensato entro la fine dell'attività di progetto, in quanto non è assolutamente ammesso eccedere le ore di lavoro finali e il preventivo dei costi finale indicato nella pianificazione.
+
 \subsection{Risk Management Process (6.3.4)}
 \label{riskMgmt}
 L'obiettivo del processo è quello di identificare, analizzare, trattare e monitorare continuamente i rischi che possono insorgere durante l'intera attività di progetto.
@@ -119,6 +121,9 @@ Il team dovrà gestire correttamente i rischi, in particolare:
 \item all'inizio di ogni fase, l'analisi dei rischi porterà all'individuazione di nuovi rischi specifici per tale fase;
 \item i rischi analizzati che si paleseranno saranno trattati secondo le strategie individuate in fase di individuazione e il loro impatto sarà controllato.
 \end{itemize}
+\subsubsection{Strategie}
+Il livello di probabilità dei rischi analizzati dovrà sempre essere tenuto sotto controllo.\\
+Anche se a basso livello di pericolosità, in caso il rischio si manifestasse, il team dovrà attuare le contromisure previste al fine di mitigare i suoi effetti ed evitare che la sua pericolosità aumenti.
 \subsubsection{Metriche}
 \paragraph{Rischi non preventivati}
 \label{riskNonPrev}
@@ -136,9 +141,7 @@ Misura il tempo medio trascorso fra l'individuazione di un rischio e il momento 
 \item \textbf{Range-ottimale}: $\geq 60$;
 \item \textbf{Range-accettazione}: $\geq 20$.
 \end{itemize}
-\subsubsection{Strategie}
-Il livello di probabilità dei rischi analizzati dovrà sempre essere tenuto sotto controllo.\\
-Anche se a basso livello di pericolosità, in caso il rischio si manifestasse, il team dovrà attuare le contromisure previste al fine di mitigare i suoi effetti ed evitare che la sua pericolosità aumenti.
+
 \subsection{System/Software Requirements Analysis Process (6.4.2 - 7.1.2)}
 \label{sySoRequiAna}
 Il processo punta a trasformare i requisiti definiti dagli stakeholder in un set di requisiti tecnici che fungerà da linea guida nella progettazione del sistema.
@@ -151,6 +154,8 @@ I requisiti identificati dal team dovranno essere gestiti in maniera tale da rag
 \item nessun requisito dovrà risultare superfluo o ambiguo agli stakeholder;
 \item tutti i requisiti che il prodotto andrà a soddisfare saranno stati precedentemente approvati dai committenti.
 \end{itemize}
+\subsubsection{Strategie}
+Tutti i requisiti individuati dovranno essere correttamente inseriti nella piattaforma DocumentsDB, la quale si occuperà di mantenere traccia delle fonti dalle quali derivano, delle modifiche effettuate e della loro implementazione nel prodotto.
 \subsubsection{Metriche}
 \paragraph{Requisiti obbligatori soddisfatti}
 \label{reqObbSodd}
@@ -176,8 +181,7 @@ Indica la percentuale dei requisiti desiderabili/facoltativi non accettati soddi
 \item \textbf{Range-ottimale}: $50 - 100$;
 \item \textbf{Range-accettazione}: $0 - 100$.
 \end{itemize}
-\subsubsection{Strategie}
-Tutti i requisiti individuati dovranno essere correttamente inseriti nella piattaforma DocumentsDB, la quale si occuperà di mantenere traccia delle fonti dalle quali derivano, delle modifiche effettuate e della loro implementazione nel prodotto.
+
 \subsection{System/Software Architectural Design Process (6.4.3 - 7.1.3)}
 \label{sySoArchiDesign}
 Il processo si pone come obiettivo quello di identificare una corrispondenza fra requisiti di sistema ed elementi del sistema.
@@ -188,6 +192,8 @@ Durante lo svolgimento delle attività previste da questo processo, il team punt
 \item il sistema dovrà presentare basso accoppiamento ed alta coesione
 \item ogni componente dovrà essere progettato puntando su incapsulamento, modularizzazione e riuso di codice.
 \end{itemize}
+\subsubsection{Strategie}
+Nel corso dell'attività di progettazione (sia ad alto livello che di dettaglio) le componenti verranno inserite nella piattaforma DocumentsDB, la quale si occuperà di mantenere aggiornati i tracciamenti fra esse ed i requisiti che soddisfano, oltre alle relazioni presenti fra le varie componenti.
 \subsubsection{Metriche}
 \paragraph{Structural Fan-In}
 In riferimento ad un modulo del software, misura quanti altri moduli lo utilizzano durante la loro esecuzione; tale indicazione permette di stabilire il livello di riuso implementato.
@@ -220,8 +226,7 @@ In riferimento alla metrica Structural Fan-Out, indica la percentuale di moduli 
 \item \textbf{Range-ottimale}: $0 - 3$;
 \item \textbf{Range-accettazione}: $0 - 6$.
 \end{itemize}
-\subsubsection{Strategie}
-Nel corso dell'attività di progettazione (sia ad alto livello che di dettaglio) le componenti verranno inserite nella piattaforma DocumentsDB, la quale si occuperà di mantenere aggiornati i tracciamenti fra esse ed i requisiti che soddisfano, oltre alle relazioni presenti fra le varie componenti.
+
 \subsection{Software Detailed Design Process (7.1.4)}
 \label{sySoDetailDesign}
 Lo scopo del processo è fornire una progettazione di dettaglio del prodotto che andrà ad implementare i requisiti individuati.
@@ -232,6 +237,8 @@ Le attività svolte dovranno raggiungere i seguenti obiettivi:
 \item la struttura a basso livello dell'architettura e le relazioni fra le varie unità software concepite saranno esposte chiaramente nel documento di \textit{\DDP}, che definirà dettagliatamente cosa implementare;
 \item oltre alle unità software individuate, le attività permetteranno di definire dettagliatamente le interfacce fra esse costituite.
 \end{itemize}
+\subsubsection{Strategie}
+Sarà necessario effettuare un'analisi dettagliata delle componenti individuate in progettazione architetturale, suddividendole in unità che siano facilmente codificabili e testabili per le attività successive.
 \subsubsection{Metriche}
 \paragraph{Numero di metodi per classe}
 \label{numMetodiClasse}
@@ -264,8 +271,7 @@ In riferimento alla metrica "Numero di parametri per metodo", indica la percentu
 \item \textbf{Range-ottimale}: $0 - 3$;
 \item \textbf{Range-accettazione}: $0 - 5$.
 \end{itemize}
-\subsubsection{Strategie}
-Sarà necessario effettuare un'analisi dettagliata delle componenti individuate in progettazione architetturale, suddividendole in unità che siano facilmente codificabili e testabili per le attività successive.
+
 \subsection{Software Construction Process (7.1.5)}
 \label{soConstruction}
 Il processo definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
@@ -277,6 +283,9 @@ Le unità software prodotte dovranno risultare di qualità; a questo fine il tea
 \item il codice prodotto dovrà risultare facilmente manutenibile;
 \item il codice prodotto risulterà privo di elementi inutilizzati.
 \end{itemize}
+\subsubsection{Strategie}
+Durante l'attività di codifica, il \textit{\Progr} dovrà attenersi a quanto indicato nel documento \textit{\DDP}, concentrandosi (in particolare) nel limitare la complessità del codice prodotto.\\
+Sarà necessario inoltre procedere con la codifica dei test individuati nell'attività di progettazione, in modo tale da consentire la verifica del corretto funzionamento delle varie unità prodotte.
 \subsubsection{Metriche}
 \paragraph{Produttività di codifica}
 \label{prodCod}
@@ -381,9 +390,7 @@ In riferimento alla metrica Indice di manutenibilità, indica la percentuale di 
 \item \textbf{Range-ottimale}: $0 - 5$;
 \item \textbf{Range-accettazione}: $0 - 10$.
 \end{itemize}
-\subsubsection{Strategie}
-Durante l'attività di codifica, il \textit{\Progr} dovrà attenersi a quanto indicato nel documento \textit{\DDP}, concentrandosi (in particolare) nel limitare la complessità del codice prodotto.\\
-Sarà necessario inoltre procedere con la codifica dei test individuati nell'attività di progettazione, in modo tale da consentire la verifica del corretto funzionamento delle varie unità prodotte.
+
 \subsection{System/Software Integration Process (6.4.5 - 7.1.6)}
 \label{sySoIntegration}
 Il processo si occupa di integrare fra loro gli elementi del sistema, rispettando quanto stabilito nell'attività di progettazione, al fine di produrre un prodotto completo tale da soddisfare quanto espresso dai requisiti identificati.
@@ -393,6 +400,8 @@ Le attività previste da questo processo dovranno puntare a raggiungere un alto 
 \item l'integrazione delle varie parti del sistema sarà completamente automatizzata utilizzando lo strumento di continuous integration Jenkins;
 \item il livello di integrazione raggiunto del sistema sarà sempre consultabile grazie all'utilizzo dello strumento di continuous integration Jenkins.
 \end{itemize}
+\subsubsection{Strategie}
+Sarà necessario configurare accuratamente lo strumento di continuous integration Jenkins affinché esegua dei test di integrazione di quanto prodotto prima che le ultime modifiche diventino parte del sistema.
 \subsubsection{Metriche}
 \paragraph{Componenti integrate}
 \label{compInt}
@@ -402,8 +411,7 @@ Indica la percentuale di componenti progettate, attualmente implementate e corre
 \item \textbf{Range-ottimale}: $100$;
 \item \textbf{Range-accettazione}: $100$.
 \end{itemize}
-\subsubsection{Strategie}
-Sarà necessario configurare accuratamente lo strumento di continuous integration Jenkins affinché esegua dei test di integrazione di quanto prodotto prima che le ultime modifiche diventino parte del sistema.
+
 \subsection{System/Software Qualification Testing Process (6.4.6 - 7.1.7)}
 \label{sySoQualTest}
 Lo scopo del processo è quello di assicurare che ogni requisito individuato sia stato implementato nel prodotto.
@@ -413,6 +421,8 @@ Durante lo svolgimento delle attività, ci si impegnerà affinché:
 \item le attività di test previste dal processo verranno svolte su un sistema le cui componenti sono verificate e correttamente integrate fra loro;
 \item il sistema dovrà implementare tutti i requisiti obbligatori individuati nell'attività di analisi.
 \end{itemize}
+\subsubsection{Strategie}
+Bisognerà cercare di implementare il maggior livello possibile di automazione nell'esecuzione dei test di sistema, in modo tale che la loro esecuzione non richieda costi eccessivi (soprattutto in termini temporali) e sia possibile eseguirne un numero sufficiente a garantire un'ottima copertura dei requisiti; a tal fine molto importante sarà lo strumento di continuous integration Jenkins, il quale andrà opportunamente configurato per eseguire i test stabiliti.
 \subsubsection{Metriche}
 \paragraph{Test di Unità eseguiti}
 \label{tuniese}
@@ -454,8 +464,7 @@ Indica la percentuale di test superati.
 \item \textbf{Range-ottimale}: $100$;
 \item \textbf{Range-accettazione}: $90 - 100$.
 \end{itemize}
-\subsubsection{Strategie}
-Bisognerà cercare di implementare il maggior livello possibile di automazione nell'esecuzione dei test di sistema, in modo tale che la loro esecuzione non richieda costi eccessivi (soprattutto in termini temporali) e sia possibile eseguirne un numero sufficiente a garantire un'ottima copertura dei requisiti; a tal fine molto importante sarà lo strumento di continuous integration Jenkins, il quale andrà opportunamente configurato per eseguire i test stabiliti.
+
 \subsection{Software Documentation Management Process (7.2.1)}
 \label{soDocMgmt}
 Il processo punta a produrre e manutenere le informazioni sul software prodotte dai processi attuati.
@@ -466,6 +475,9 @@ Il processo di documentazione dovrà perseguire le seguenti direttive:
 \item ogni forma di ambiguità sul significato di un termine utilizzato verrà eliminata grazie al \textit{\G};
 \item la documentazione prodotta sarà sempre aggiornata ed allineata allo stato attuale del processo di sviluppo del prodotto.
 \end{itemize}
+\subsubsection{Strategie}
+Durante la stesura della documentazione, ogni termine con significato ambiguo deve essere indicato (corredato di definizione) nel \textit{\G}; gli script automatici provvederanno alla sua segnalazione all'interno del documento.\\
+Ogni documento sarà dotato di numero di versione e corredato da un diario delle modifiche che consente di prendere visione di tutte le azioni effettuate sul testo in oggetto.
 \subsubsection{Metriche}
 \paragraph{Indice Gulpease}
 Misura la leggibilità e la complessità di un documento.
@@ -474,9 +486,7 @@ Misura la leggibilità e la complessità di un documento.
 \item \textbf{Range-ottimale}: $50 - 100$;
 \item \textbf{Range-accettazione}: $40 - 100$.
 \end{itemize}
-\subsubsection{Strategie}
-Durante la stesura della documentazione, ogni termine con significato ambiguo deve essere indicato (corredato di definizione) nel \textit{\G}; gli script automatici provvederanno alla sua segnalazione all'interno del documento.\\
-Ogni documento sarà dotato di numero di versione e corredato da un diario delle modifiche che consente di prendere visione di tutte le azioni effettuate sul testo in oggetto.
+
 \subsection{Software Verification Process (7.2.4)}
 \label{soVerification}
 Il processo punta a verificare se qualsiasi elemento del sistema (software e non) soddisfa completamente i requisiti ad esso correlati.
@@ -487,6 +497,9 @@ Al fine di garantire qualità nell'attuazione del processo:
 \item i test dinamici effettuati sui vari elementi saranno il più possibile automatizzabili;
 \item i test dinamici effettuati sui vari elementi del software copriranno una grande parte delle possibili casistiche d'utilizzo.
 \end{itemize}
+\subsubsection{Strategie}
+Durante le attività di correzione della documentazione, gli errori più frequenti rilevati saranno riportati in un documento, in modo tale da diventare uno dei punti chiave delle successive attività di inspection.\\
+Per ogni test effettuato verrà tenuto tracciamento del suo esito.
 \subsubsection{Metriche}
 \paragraph{Branch Coverage}
 \label{coperturaTest}
@@ -504,6 +517,3 @@ Indica la percentuale di code coverage rilevata sul codice, ossia la percentuale
 \item \textbf{Range-ottimale}: $70 - 100$;
 \item \textbf{Range-accettazione}: $60 - 100$.
 \end{itemize}
-\subsubsection{Strategie}
-Durante le attività di correzione della documentazione, gli errori più frequenti rilevati saranno riportati in un documento, in modo tale da diventare uno dei punti chiave delle successive attività di inspection.\\
-Per ogni test effettuato verrà tenuto tracciamento del suo esito.
