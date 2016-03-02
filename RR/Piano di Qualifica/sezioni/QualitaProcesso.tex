@@ -1,0 +1,519 @@
+\newpage
+\section{Qualità di processo}
+Per garantire la qualità del prodotto è necessario perseguire la qualità dei processi che lo definiscono. Per fare ciò si è deciso di adottare lo standard \textit{ISO/IEC 15504\ped{G}} denominato \textit{SPICE\ped{G}} che definisce un modello di riferimento per la valutazione del livello di maturità dei processi. \\ 
+Per l'esattezza sono previsti sei livelli di maturità, per i quali vengono definiti degli attributi che permettano di misurarla:
+\begin{itemize}
+\item\textbf{Level 0 - Incomplete process}: il processo non è implementato o non riesce a raggiungere i suoi obiettivi;
+\item\textbf{Level 1 - Performed process}: il processo viene messo in atto e raggiunge i suoi scopi. Viene misurato tramite:
+\begin{itemize}
+\item\textbf{Process performance}: capacità di raggiungere i propri obiettivi e di ottenere risultati identificabili.
+\end{itemize}
+\item\textbf{Level 2 - Managed process}: il processo viene eseguito sulla base di obiettivi ben definiti. Viene misurato tramite:
+\begin{itemize}
+\item\textbf{Performance management}: capacità di elaborare un prodotto coerente con gli obiettivi attesi;
+\item\textbf{Work product management}: capacità di elaborare un prodotto appropriatamente documentato, controllato e verificato.
+\end{itemize}
+\item\textbf{Level 3 - Established process}: il processo viene eseguito in base ai principi dell’ingegneria del software. Viene misurato tramite:
+\begin{itemize}
+\item\textbf{Process definition}: capacità di raggiungere i propri obiettivi aderendo agli standard;
+\item\textbf{Process resource}: capacità di sfruttare risorse adeguate che gli permettano di essere attuato efficacemente.
+\end{itemize}
+\item\textbf{Level 4 - Predictable process}: Il processo è attuato all'interno di limiti ben definiti. Viene misurato tramite:
+\begin{itemize}
+\item\textbf{Process measurement}: capacità di utilizzare i risultati raggiunti e le misure ricavate durante l'esecuzione per garantire il raggiungimento dei traguardi definiti;
+\item\textbf{Process control}: capacità di correggere o migliorare, se necessario,  le sue modalità di esecuzione, in seguito a controlli basati sulle misurazioni rilevate.
+\end{itemize}
+\item\textbf{Level 5 - Optimizing process}: Il processo è predicibile ed in grado di adattarsi per raggiungere obiettivi specifici e rilevanti. Viene misurato tramite:
+\begin{itemize}
+\item\textbf{Process change}: capacità di tenere sotto controllo tutti i cambiamenti strutturali e di esecuzione;
+\item\textbf{Continuous improvement}: capacità di identificare
+e implementare le modifiche effettuate, per garantire un miglioramento continuo nella realizzazione degli obiettivi fissati.
+\end{itemize}
+\end{itemize} 	
+
+Ogni attributo definito precedentemente è misurabile e lo standard stabilisce
+4 differenti livelli:
+\begin{itemize}
+\item\textbf{N}: non posseduto (0\% - 15\%);
+\item\textbf{P}: parzialmente posseduto (16\% - 50\%);
+\item\textbf{L}: largamente posseduto (51\% - 85\%);
+\item\textbf{F}: completamente posseduto (86\% - 100\%).
+\end{itemize}
+
+Le misurazioni ottenute vengono utilizzate all'interno della strategia di miglioramento continuo della qualità, realizzata attraverso il ciclo \textit{PDCA\ped{G}}, che definisce una metodologia di controllo dei processi durante il loro ciclo di vita.
+Tale approccio è suddiviso in 4 fasi:
+\begin{itemize}
+\item \textbf{Plan}: fase di pianificazione dove si individuano gli obiettivi e i processi necessari per il raggiungimento dei risultati attesi;
+\item \textbf{Do}: fase di attuazione del piano individuato al passo precedente e raccolta di dati sulla qualità ottenuta;
+\item \textbf{Check}: fase di verifica dove si confrontano i risultati ottenuti (fase di Do) ed i risultati attesi (fase di Plan);
+\item \textbf{Act}: fase in cui si determinano le cause delle differenze fra risultati ottenuti e risultati attesi, per decidere dove attuare eventuali azioni correttive per avere un effettivo miglioramento della qualità.
+\end{itemize}
+
+Per garantire una buona qualità di processo, il team ha individuato dallo standard ISO/IEC 12207:2008 i processi che ritiene più importanti nell'arco del ciclo di vita del prodotto e li ha istanziati individuando obiettivi e metriche coerenti con i livelli di qualità perseguiti.
+\subsection{Infrastructure Management Process (6.2.2)}
+Il processo si pone come obiettivo quello di fornire, mantenere ed aggiornare l'infrastruttura ed i servizi necessari allo svolgimento del progetto nell'arco di tutto il suo ciclo di vita. Con il termine infrastruttura si intendono elementi hardware, software, metodi, strumenti, tecniche e standard impiegati nello sviluppo del prodotto.
+\subsubsection{Obiettivi di qualità}
+Per tutta la durata del progetto, l'infrastruttura impiegata nello sviluppo dovrà raggiungere determinati obiettivi; in particolare:
+\begin{itemize}
+\item tutte le procedure riguardanti le attività svolte più frequentemente durante lo sviluppo del progetto saranno descritte esaustivamente nel documento \textit{\NdP};
+\item tutti i riferimenti normativi e informativi saranno completi di informazioni utili al loro reperimento;
+\item la piattaforma DocumentsDB sarà disponibile all'uso ogniqualvolta un componente del team avesse bisogno di accedere ai dati in essa contenuti;
+\item i dati ottenuti da DocumentsDB saranno sempre coerenti e aggiornati;
+\item nell'arco dello sviluppo del progetto, DocumentsDB si estenderà fornendo nuove funzionalità in relazione alle nuove attività intraprese; esse risulteranno implementate e funzionanti alla prima necessità di utilizzo;
+\end{itemize}
+\subsubsection{Strategie}
+L'infrastruttura necessaria allo svolgimento del progetto dovrà essere mantenuta costantemente aggiornata; in particolare l'utilizzo delle metriche sopra indicate permetterà l'individuazione di eventuali errori all'interno degli strumenti utilizzati, la cui correzione (da effettuarsi nel minor tempo possibile) permetterà di ripristinare l'erogazione di dati corretti e coerenti.
+\subsubsection{Metriche}
+\paragraph{Disponibilità DocumentsDB}
+\label{dispDocumentsDB}
+Indica la percentuale di disponibilità di utilizzo della piattaforma DocumentsDB rispetto alle richieste di accesso.
+\begin{itemize}
+\item \textbf{Misurazione}: $ D = \frac{A}{R} \cdot 100 $, dove $A$ corrisponde al numero di accessi avvenuti correttamente alla pagina di login della piattaforma e $R$ il numero totale di richieste di accesso alla pagina di login inoltrate alla piattaforma;
+\item \textbf{Range-ottimale}: $90 - 100$;
+\item \textbf{Range-accettazione}: $80 - 100$.
+\end{itemize}
+\paragraph{Tempo di correzione incoerenze in DocumentsDB}
+\label{tCorrIncoerDocumentsDB}
+Indica il periodo medio intercorso fra l'individuazione di un'incoerenza nella piattaforma DocumentsDB da parte di un verificatore ed il suo aggiornamento da parte di un altro componente del team.
+\begin{itemize}
+\item \textbf{Misurazione}: $T = \frac{\sum_{i=1}^{n} C_{i}}{n}$ (con $T$ espresso in giorni) dove $C_{i}$ è il tempo intercorso fra il momento di individuazione dell'incoerenza $i$ in DocumentsDB e l'istante in cui tale dato viene corretto;
+\item \textbf{Range-ottimale}: $0 - 1$;
+\item \textbf{Range-accettazione}: $0 - 3$.
+\end{itemize}
+
+\subsection{Project Planning, Assessment \& Control Process (6.3.1 - 6.3.2)}
+\label{projPlanAssControl}
+Il macro-processo (derivante dall'unione dei processi Project Planning Process e Project Assessment \& Control Process) ha lo scopo di produrre dei piani di sviluppo per il progetto, comprendenti scelta del modello di ciclo di vita  del prodotto, descrizioni delle attività e dei compiti da svolgere durante tutto il ciclo di sviluppo, pianificazione temporale del lavoro e dei costi da sostenere, allocazione di compiti e responsabilità, e di effettuare periodicamente delle misurazioni per rilevare lo stato del progetto rispetto alle pianificazioni prodotte.
+\subsubsection{Obiettivi di qualità}
+L'intero sviluppo del progetto dovrà seguire la pianificazione prodotta, in particolare:
+\begin{itemize}
+\item ogni attività verrà svolta da parte di colui al quale è stata assegnata, rispettando le tempistiche fissate e svolgendo tutti i compiti nei quali è stata suddivisa;
+\item il costo necessario allo svolgimento di una fase di progetto non dovrà eccedere quanto preventivato per tale fase.
+\end{itemize}
+\subsubsection{Strategie}
+La pianificazione effettuata dovrà essere aggiornata costantemente durante tutta l'attività di progetto per essere sempre coerente con la situazione corrente.\\
+Qualsiasi eventuale valore negativo a livello di Schedule Variance o  Budget Variance rilevato in una fase di lavoro dovrà essere assolutamente compensato entro la fine dell'attività di progetto, in quanto non è assolutamente ammesso eccedere le ore di lavoro finali e il preventivo dei costi finale indicato nella pianificazione.
+\subsubsection{Metriche}
+\paragraph{Schedule Variance}
+\label{scheduleVariance}
+Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate.
+\begin{itemize}
+\item \textbf{Misurazione}: $SV = BCWP - BCWS$, dove $BCWP$ sono le attività completate ad un certo momento e $BCWS$ le attività che, secondo la pianificazione, dovrebbero essere state completate a quel momento;
+\item \textbf{Range-ottimale}: $\geq 0$;
+\item \textbf{Range-accettazione}: $\geq 0$.
+\end{itemize}
+\paragraph{Budget Variance}
+\label{budgetVariance}
+Indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget nella pianificazione.
+\begin{itemize}
+\item \textbf{Misurazione}: $BV = BCWS - ACWP$, dove $BCWS$ è il costo pianificato per realizzare le attività di progetto alla data corrente e $ACWP$ è il costo effettivamente sostenuto alla data corrente;
+\item \textbf{Range-ottimale}: $\geq 0$;
+\item \textbf{Valore di accettazione}: $\geq 0$.
+\end{itemize}
+
+\subsection{Risk Management Process (6.3.4)}
+\label{riskMgmt}
+L'obiettivo del processo è quello di identificare, analizzare, trattare e monitorare continuamente i rischi che possono insorgere durante l'intera attività di progetto.
+\subsubsection{Obiettivi di qualità}
+Il team dovrà gestire correttamente i rischi, in particolare:
+\begin{itemize}
+\item all'inizio dell'attività di progetto, verranno individuati i principali fattori di rischio riguardanti l'organizzazione delle attività;
+\item all'inizio di ogni fase, l'analisi dei rischi porterà all'individuazione di nuovi rischi specifici per tale fase;
+\item i rischi analizzati che si paleseranno saranno trattati secondo le strategie individuate in fase di individuazione e il loro impatto sarà controllato.
+\end{itemize}
+\subsubsection{Strategie}
+Il livello di probabilità dei rischi analizzati dovrà sempre essere tenuto sotto controllo.\\
+Anche se a basso livello di pericolosità, in caso il rischio si manifestasse, il team dovrà attuare le contromisure previste al fine di mitigare i suoi effetti ed evitare che la sua pericolosità aumenti.
+\subsubsection{Metriche}
+\paragraph{Rischi non preventivati}
+\label{riskNonPrev}
+Indicatore che evidenzia i rischi non preventivati.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che viene incrementato nel momento in cui si manifesta un rischio non individuato nell'attività di analisi dei rischi;
+\item \textbf{Range-ottimale}: $0$;
+\item \textbf{Range-accettazione}: $0 - 5$.
+\end{itemize}
+\paragraph{Efficienza di gestione dei rischi}
+\label{effGestRischi}
+Misura il tempo medio trascorso fra l'individuazione di un rischio e il momento in cui manifesta in modo problematico i suoi effetti. Tale indicatore è importante in quanto determina se l'azione di risk management interviene correttamente su un rischio analizzato per mitigarne/allontanarne gli effetti problematici.
+\begin{itemize}
+\item \textbf{Misurazione}: $E = \frac{\sum_{i=1}^{n} (M_{i} \cdot P_{i})}{\sum_{i=1}^{n} P_{i}}$, (con $E$ espresso in giorni) dove $M_{i}$ è il tempo intercorso fra l'individuazione del rischio $i$ e l'istante in cui manifesta in modo problematico i suoi effetti, espresso in giorni, e $P_{i}$ corrisponde al grado di pericolosità del rischio $i$, valutato in scala crescente [1-5];
+\item \textbf{Range-ottimale}: $\geq 60$;
+\item \textbf{Range-accettazione}: $\geq 20$.
+\end{itemize}
+
+\subsection{System/Software Requirements Analysis Process (6.4.2 - 7.1.2)}
+\label{sySoRequiAna}
+Il processo punta a trasformare i requisiti definiti dagli stakeholder in un set di requisiti tecnici che fungerà da linea guida nella progettazione del sistema.
+\subsubsection{Obiettivi di qualità}
+I requisiti identificati dal team dovranno essere gestiti in maniera tale da raggiungere i seguenti traguardi:
+\begin{itemize}
+\item per ogni requisito verrà tenuta traccia della fonte da cui è stato ricavato;
+\item per ogni requisito dovrà essere possibile indicare dei test, da effettuare per verificarne il soddisfacimento da parte del prodotto;
+\item per ogni requisito sarà possibile ricostruire i cambiamenti principali effettuati nella sua formulazione, durante tutto il ciclo di sviluppo del prodotto;
+\item nessun requisito dovrà risultare superfluo o ambiguo agli stakeholder;
+\item tutti i requisiti che il prodotto andrà a soddisfare saranno stati precedentemente approvati dai committenti.
+\end{itemize}
+\subsubsection{Strategie}
+Tutti i requisiti individuati dovranno essere correttamente inseriti nella piattaforma DocumentsDB, la quale si occuperà di mantenere traccia delle fonti dalle quali derivano, delle modifiche effettuate e della loro implementazione nel prodotto.
+\subsubsection{Metriche}
+\paragraph{Requisiti obbligatori soddisfatti}
+\label{reqObbSodd}
+Indica la percentuale dei requisiti obbligatori soddisfatti dal prodotto.
+\begin{itemize}
+\item \textbf{Misurazione}: $S=\frac{N_{S}}{N_{O}} \cdot 100$, dove $N_{S}$ è il numero dei requisiti obbligatori soddisfatti dal sistema e $N_{O}$ è il numero dei requisiti obbligatori identificati;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $100$.
+\end{itemize}
+\paragraph{Requisiti desiderabili/facoltativi accettati soddisfatti}
+\label{reqAccSodd}
+Indica la percentuale dei requisiti desiderabili/facoltativi accettati soddisfatti dal prodotto.
+\begin{itemize}
+\item \textbf{Misurazione}: $S=\frac{N_{DAS}+N_{FAS}}{N_{DA}+N_{FA}} \cdot 100$, dove $N_{DAS}$ è il numero dei requisiti desiderabili accettati soddisfatti dal sistema, $N_{FAS}$ è il numero dei requisiti facoltativi accettati soddisfatti dal sistema, $N_{DA}$ è il numero dei requisiti desiderabili accettati e $N_{FA}$ è il numero dei requisiti facoltativi accettati;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $100$.
+\end{itemize}
+\paragraph{Requisiti desiderabili/facoltativi non accettati soddisfatti}
+\label{reqNonAccSodd}
+Indica la percentuale dei requisiti desiderabili/facoltativi non accettati soddisfatti dal prodotto.
+\begin{itemize}
+\item \textbf{Misurazione}: $S=\frac{N_{DNS}+N_{FNS}}{N_{DN}+N_{FN}} \cdot 100$, dove $N_{DNS}$ è il numero dei requisiti desiderabili non accettati soddisfatti dal sistema, $N_{FNS}$ è il numero dei requisiti facoltativi non accettati soddisfatti dal sistema, $N_{DN}$ è il numero dei requisiti desiderabili non accettati e $N_{FN}$ è il numero dei requisiti facoltativi non accettati;
+\item \textbf{Range-ottimale}: $50 - 100$;
+\item \textbf{Range-accettazione}: $0 - 100$.
+\end{itemize}
+
+\subsection{System/Software Architectural Design Process (6.4.3 - 7.1.3)}
+\label{sySoArchiDesign}
+Il processo si pone come obiettivo quello di identificare una corrispondenza fra requisiti di sistema ed elementi del sistema.
+\subsubsection{Obiettivi di qualità}
+Durante lo svolgimento delle attività previste da questo processo, il team punterà a definire un'architettura adatta agli scopi del progetto:
+\begin{itemize}
+\item ogni componente progettato come parte del sistema risulterà essere necessario per il funzionamento del prodotto e, quindi, costantemente tracciabile ai requisiti che soddisfa;
+\item il sistema dovrà presentare basso accoppiamento ed alta coesione
+\item ogni componente dovrà essere progettato puntando su incapsulamento, modularizzazione e riuso di codice.
+\end{itemize}
+\subsubsection{Strategie}
+Nel corso dell'attività di progettazione (sia ad alto livello che di dettaglio) le componenti verranno inserite nella piattaforma DocumentsDB, la quale si occuperà di mantenere aggiornati i tracciamenti fra esse ed i requisiti che soddisfano, oltre alle relazioni presenti fra le varie componenti.
+\subsubsection{Metriche}
+\paragraph{Structural Fan-In}
+In riferimento ad un modulo del software, misura quanti altri moduli lo utilizzano durante la loro esecuzione; tale indicazione permette di stabilire il livello di riuso implementato.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che incrementa nel momento in cui viene individuato un modulo che, durante la sua esecuzione, chiama il modulo in oggetto;
+\item \textbf{Range-ottimale}: $\geq 2$;
+\item \textbf{Range-accettazione}: $\geq 0$.
+\end{itemize}
+\paragraph{SFIN - Ottimalità}
+\label{sfin-ottimalita}
+In riferimento alla metrica Structural Fan-In, indica la percentuale di moduli che rispettano i parametri di ottimalità per essa definiti; questa indicazione permette di monitorare il numero di moduli ad alto livello di riuso.
+\begin{itemize}
+\item \textbf{Misurazione}: $SFIN_{O}=\frac{N_{MO}}{N_{M}} \cdot 100$, dove $N_{MO}$ è il numero di moduli che rispettano i parametri di ottimalità per la metrica Structural Fan-In e $N_{M}$ è il numero totale di moduli definiti nell'architettura;
+\item \textbf{Range-ottimale}: $\geq 50$;
+\item \textbf{Range-accettazione}: $\geq 30$.
+\end{itemize}
+\paragraph{Structural Fan-Out}
+\label{SFOUT}
+In riferimento ad un modulo del software, misura quanti moduli vengono utilizzati durante la sua esecuzione; tale indicazione permette di stabilire il livello di accoppiamento implementato.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che incrementa nel momento in cui viene individuato un modulo utilizzato dal modulo in oggetto durante la sua esecuzione;
+\item \textbf{Range-ottimale}: $0 - 1$;
+\item \textbf{Range-accettazione}: $0 - 5$.
+\end{itemize}
+\paragraph{SFOUT - Non Accettabilità}
+\label{sfout-NonAcc}
+In riferimento alla metrica Structural Fan-Out, indica la percentuale di moduli che non rispettano i parametri di accettazione per essa definiti; questa indicazione permette di monitorare la presenza di un numero eccessivo di moduli ad alto livello di accoppiamento.
+\begin{itemize}
+\item \textbf{Misurazione}: $SFOUT_{NA}=\frac{N_{MNA}}{N_{M}} \cdot 100$, dove $N_{MNA}$ è il numero di moduli che non rispettano i parametri di accettazione per la metrica Structural Fan-Out e $N_{M}$ è il numero totale di moduli definiti nell'architettura;
+\item \textbf{Range-ottimale}: $0 - 3$;
+\item \textbf{Range-accettazione}: $0 - 6$.
+\end{itemize}
+
+\subsection{Software Detailed Design Process (7.1.4)}
+\label{sySoDetailDesign}
+Lo scopo del processo è fornire una progettazione di dettaglio del prodotto che andrà ad implementare i requisiti individuati.
+\subsubsection{Obiettivi di qualità}
+Le attività svolte dovranno raggiungere i seguenti obiettivi:
+\begin{itemize}
+\item il livello di dettaglio della progettazione dovrà essere tale da guidare codifica e testing senza bisogno di informazioni aggiuntive, indicando metodi (corredati da parametri) e campi dati forniti da ciascuna classe;
+\item la struttura a basso livello dell'architettura e le relazioni fra le varie unità software concepite saranno esposte chiaramente nel documento di \textit{\DDP}, che definirà dettagliatamente cosa implementare;
+\item oltre alle unità software individuate, le attività permetteranno di definire dettagliatamente le interfacce fra esse costituite.
+\end{itemize}
+\subsubsection{Strategie}
+Sarà necessario effettuare un'analisi dettagliata delle componenti individuate in progettazione architetturale, suddividendole in unità che siano facilmente codificabili e testabili per le attività successive.
+\subsubsection{Metriche}
+\paragraph{Numero di metodi per classe}
+\label{numMetodiClasse}
+Indica il numero di metodi definiti in una classe; un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che indica il numero di metodi definiti in una classe;
+\item \textbf{Range-ottimale}: $1 - 7$;
+\item \textbf{Range-accettazione}: $1 - 10$.
+\end{itemize}
+\paragraph{Metodi per classe - Non Accettabilità}
+\label{numMetodiClasseNA}
+In riferimento alla metrica Numero di metodi per classe, indica la percentuale di classi che non rispettano i parametri di accettazione per essa definiti; questa indicazione permette di monitorare il livello di decomposizione delle funzionalità raggiunto.
+\begin{itemize}
+\item \textbf{Misurazione}: $C_{NA}=\frac{N_{CNA}}{N_{C}} \cdot 100$, dove $N_{CNA}$ è il numero di classi che non rispettano i parametri di accettazione per la metrica Numero di metodi per classe e $N_{C}$ è il numero totale di classi definite nell'architettura;
+\item \textbf{Range-ottimale}: $0 - 5$;
+\item \textbf{Range-accettazione}: $0 - 15$.
+\end{itemize}
+\paragraph{Numero di parametri per metodo}
+Indica il numero di parametri passati ad un metodo; un valore molto alto potrebbe indicare un metodo troppo complesso e non efficacemente suddiviso in sotto-metodi.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che indica il numero di parametri passato ad un metodo;
+\item \textbf{Range-ottimale}: $0 - 4$;
+\item \textbf{Range-accettazione}: $0 - 8$.
+\end{itemize}
+\paragraph{Parametri per metodo - Non Accettabilità}
+\label{numParMetodoNA}
+In riferimento alla metrica "Numero di parametri per metodo", indica la percentuale di metodi che non rispettano i parametri di accettazione per essa definiti; questa indicazione permette di monitorare il livello di complessità dei metodi definiti nell'architettura.
+\begin{itemize}
+\item \textbf{Misurazione}: $M_{NA}=\frac{N_{MNA}}{N_{M}} \cdot 100$, dove $N_{MNA}$ è il numero di metodi che non rispettano i parametri di accettazione per la metrica "Numero di parametri per metodo" e $N_{M}$ è il numero totale di metodi definiti nell'architettura;
+\item \textbf{Range-ottimale}: $0 - 3$;
+\item \textbf{Range-accettazione}: $0 - 5$.
+\end{itemize}
+
+\subsection{Software Construction Process (7.1.5)}
+\label{soConstruction}
+Il processo definisce le attività principali volte alla produzione di unità software eseguibili che riflettano quanto identificato a livello di progettazione.
+\subsubsection{Obiettivi di qualità}
+Le unità software prodotte dovranno risultare di qualità; a questo fine il team si è posto i seguenti obiettivi:
+\begin{itemize}
+\item l'implementazione delle classi e dei metodi definiti in progettazione dovrà puntare a produrre codice a bassa complessità, in modo tale che quanto prodotto risulti facilmente comprensibile e testabile;
+\item l'uso di costrutti e tecniche che creano sdoppiamenti del flusso di esecuzione verrà valutato attentamente ed attuato solo se strettamente necessario;
+\item il codice prodotto dovrà risultare facilmente manutenibile;
+\item il codice prodotto risulterà privo di elementi inutilizzati.
+\end{itemize}
+\subsubsection{Strategie}
+Durante l'attività di codifica, il \textit{\Progr} dovrà attenersi a quanto indicato nel documento \textit{\DDP}, concentrandosi (in particolare) nel limitare la complessità del codice prodotto.\\
+Sarà necessario inoltre procedere con la codifica dei test individuati nell'attività di progettazione, in modo tale da consentire la verifica del corretto funzionamento delle varie unità prodotte.
+\subsubsection{Metriche}
+\paragraph{Produttività di codifica}
+\label{prodCod}
+Indica il numero medio di linee di codice prodotto per ora/persona.
+\begin{itemize}
+\item \textbf{Misurazione}: $P=\frac{N_{SLOC}}{h_{P}}$, dove $N_{SLOC}$ è il numero di Source Lines Of Code prodotte e $h_{P}$ è il numero di ore/persona utilizzate per la codifica;
+\item \textbf{Range-ottimale}: $\geq 10$;
+\item \textbf{Range-accettazione}: $\geq 3$.
+\end{itemize}
+\paragraph{Complessità Ciclomatica}
+\label{complCiclom}
+Indica la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che indica il numero cammini percorribili nel grafo di controllo di flusso di un metodo;
+\item \textbf{Range-ottimale}: $0 - 4$;
+\item \textbf{Range-accettazione}: $0 - 8$.
+\end{itemize}
+\paragraph{Complessità Ciclomatica - Non Accettabilità}
+\label{complCiclomNA}
+In riferimento alla metrica Complessità Ciclomatica, indica la percentuale di unità software che non rispettano i parametri di accettazione per essa definiti; questa indicazione permette di monitorare il livello di complessità delle unità definite nell'architettura.
+\begin{itemize}
+\item \textbf{Misurazione}: $C_{NA}=\frac{N_{UNA}}{N_{U}} \cdot 100$, dove $N_{UNA}$ è il numero di unità che non rispettano i parametri di accettazione per la metrica Complessità Ciclomatica e $N_{U}$ è il numero totale di unità definite nell'architettura;
+\item \textbf{Range-ottimale}: $0$;
+\item \textbf{Range-accettazione}: $0 - 1$.
+\end{itemize}
+\paragraph{Linee di commento su linee di codice}
+\label{lineeCommento}
+Indica la percentuale di linee di commento presenti all'interno del codice sorgente; la loro presenza permette una più semplice comprensione ed un maggior livello di manutenibilità di quanto prodotto.
+\begin{itemize}
+\item \textbf{Misurazione}: $P=\frac{N_{C}}{N_{SLOC}} \cdot 100$, dove $N_{C}$ è il numero di linee di commento presenti nel codice e $N_{SLOC}$ è il numero di Source Lines Of Code prodotte;
+\item \textbf{Range-ottimale}: $\geq 30$;
+\item \textbf{Range-accettazione}: $\geq 25$.
+\end{itemize}
+\paragraph{Chiamate annidate}
+Indica il numero di funzioni o procedure chiamate all'interno di un metodo; un numero eccessivo potrebbe causare dei problemi a livello di stack.
+\begin{itemize}
+\item \textbf{Misurazione}: indice numerico che indica il numero di chiamate a funzioni o procedure presenti all'interno di un metodo;
+\item \textbf{Range-ottimale}: $0 - 5$;
+\item \textbf{Range-accettazione}: $0 - 8$.
+\end{itemize}
+\paragraph{Variabili inutilizzate}
+\label{variabInutilizz}
+Indica la percentuale di variabili dichiarate che non vengono mai utilizzate durante l'esecuzione.
+\begin{itemize}
+\item \textbf{Misurazione}: $P = \frac{N_{VI}}{N_{VD}} \cdot 100$, dove $N_{VI}$ è il numero di variabili che non vengono mai utilizzate e $N_{VD}$ è il numero di variabili dichiarate;
+\item \textbf{Range-ottimale}: $0$;
+\item \textbf{Range-accettazione}: $0$.
+\end{itemize}
+\paragraph{Dipendenze}
+\label{dipendenze}
+Misura il numero medio di chiamate require di una funzione, analizzate staticamente considerando la firma del metodo.
+\begin{itemize}
+\item \textbf{Misurazione}: $D = \frac{\sum_{i=1}^{n} R_{i}}{n}$, dove $R_{i}$ è il numero di chiamate require effettuate dalla funzione $i$;
+\item \textbf{Range-ottimale}: $0 - 5$;
+\item \textbf{Range-accettazione}: $0 - 10$.
+\end{itemize}
+\paragraph{Halstead Difficulty per-function}
+\label{halDiff}
+Misura il livello di complessità di una funzione.
+\begin{itemize}
+\item \textbf{Misurazione}: $DIF = \frac{UOP}{2} \cdot \frac{OD}{UOD}$, dove $UOP$ è il numero di operatori distinti, $OD$ è il numero totale di operandi e $UOD$ è il numero di operandi distinti;
+\item \textbf{Range-ottimale}: $0 - 15$;
+\item \textbf{Range-accettazione}: $0 - 25$.
+\end{itemize}
+\paragraph{Halstead Difficulty per-function - Non Accettabilità}
+\label{halDiffNA}
+In riferimento alla metrica Halstead Difficulty per-function, indica la percentuale di unità software che non rispettano i parametri di accettabilità per essa definiti; questa indicazione permette di monitorare il livello di complessità delle unità definite nell'architettura.
+\begin{itemize}
+\item \textbf{Misurazione}: $HD_{NA}=\frac{N_{UNA}}{N_{U}} \cdot 100$, dove $N_{UNA}$ è il numero di unità che non rispettano i parametri di accettabilità per la metrica Halstead Difficulty per-function e $N_{U}$ è il numero totale di unità definite nell'architettura;
+\item \textbf{Range-ottimale}: $0$;
+\item \textbf{Range-accettazione}: $0 - 1$.
+\end{itemize}
+\paragraph{Halstead Volume per-function}
+\label{halVolume}
+Indica la dimensione dell'implementazione di un algoritmo; si basa sul numero di operazioni eseguite e sugli operandi di una funzione.
+\begin{itemize}
+\item \textbf{Misurazione}: $VOL = (OP + OD) \cdot \log_{2}(UOP + UOD)$, dove $OP$ è il numero totale di operatori, $OD$ è il numero totale di operandi, $UOP$ è il numero di operatori distinti e $UOD$ è il numero di operandi distinti;
+\item \textbf{Range-ottimale}: $20 - 1000$;
+\item \textbf{Range-accettazione}: $20 - 1500$.
+\end{itemize}
+\paragraph{Halstead Effort per-function}
+\label{halEffort}
+Rappresenta il costo necessario a scrivere il codice di una funzione.
+\begin{itemize}
+\item \textbf{Misurazione}: $E = DIF \cdot VOL$, dove $DIF$ indica l'Halstead Difficulty e $VOL$ è l'Halstead Volume;
+\item \textbf{Range-ottimale}: $0 - 300$;
+\item \textbf{Range-accettazione}: $0 - 400$.
+\end{itemize}
+\paragraph{Indice di manutenibilità}
+\label{indMan}
+Permette di stabilire quanto sarà semplice mantenere il codice prodotto.
+\begin{itemize}
+\item \textbf{Misurazione}: $MI = 171 - 3.42 \cdot \ln(aveE) - 0.23 \cdot \ln(aveV) - 16.2 \cdot \ln(aveLOC)$, dove $aveE$ è l'Halstead Effort medio per modulo, $aveV$ è la complessità ciclomatica media per modulo, e $aveLOC$ è il numero medio di linee di codice per modulo;
+\item \textbf{Range-ottimale}: $120 - 171$;
+\item \textbf{Range-accettazione}: $100 - 171$.
+\end{itemize}
+\paragraph{Indice di manutenibilità - Non Accettabilità}
+\label{indManNA}
+In riferimento alla metrica Indice di manutenibilità, indica la percentuale di unità software che non rispettano i parametri di accettabilità per essa definiti; questa indicazione permette di monitorare il livello di complessità delle unità definite nell'architettura.
+\begin{itemize}
+\item \textbf{Misurazione}: $MI_{NA}=\frac{N_{UNA}}{N_{U}} \cdot 100$, dove $N_{UNA}$ è il numero di unità che non rispettano i parametri di accettabilità per la metrica Indice di manutenibilità e $N_{U}$ è il numero totale di unità definite nell'architettura;
+\item \textbf{Range-ottimale}: $0 - 5$;
+\item \textbf{Range-accettazione}: $0 - 10$.
+\end{itemize}
+
+\subsection{System/Software Integration Process (6.4.5 - 7.1.6)}
+\label{sySoIntegration}
+Il processo si occupa di integrare fra loro gli elementi del sistema, rispettando quanto stabilito nell'attività di progettazione, al fine di produrre un prodotto completo tale da soddisfare quanto espresso dai requisiti identificati.
+\subsubsection{Obiettivi di qualità}
+Le attività previste da questo processo dovranno puntare a raggiungere un alto livello di automazione, in particolare:
+\begin{itemize}
+\item l'integrazione delle varie parti del sistema sarà completamente automatizzata utilizzando lo strumento di continuous integration Jenkins;
+\item il livello di integrazione raggiunto del sistema sarà sempre consultabile grazie all'utilizzo dello strumento di continuous integration Jenkins.
+\end{itemize}
+\subsubsection{Strategie}
+Sarà necessario configurare accuratamente lo strumento di continuous integration Jenkins affinché esegua dei test di integrazione di quanto prodotto prima che le ultime modifiche diventino parte del sistema.
+\subsubsection{Metriche}
+\paragraph{Componenti integrate}
+\label{compInt}
+Indica la percentuale di componenti progettate, attualmente implementate e correttamente integrate nel sistema.
+\begin{itemize}
+\item \textbf{Misurazione}: $I=\frac{N_{CI}}{N_{CP}} \cdot 100$, dove $N_{CI}$ è il numero di componenti attualmente integrate nel sistema e $N_{CP}$ è il numero di componenti delineate nell'attività di progettazione;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $100$.
+\end{itemize}
+
+\subsection{System/Software Qualification Testing Process (6.4.6 - 7.1.7)}
+\label{sySoQualTest}
+Lo scopo del processo è quello di assicurare che ogni requisito individuato sia stato implementato nel prodotto.
+\subsubsection{Obiettivi di qualità}
+Durante lo svolgimento delle attività, ci si impegnerà affinché:
+\begin{itemize}
+\item le attività di test previste dal processo verranno svolte su un sistema le cui componenti sono verificate e correttamente integrate fra loro;
+\item il sistema dovrà implementare tutti i requisiti obbligatori individuati nell'attività di analisi.
+\end{itemize}
+\subsubsection{Strategie}
+Bisognerà cercare di implementare il maggior livello possibile di automazione nell'esecuzione dei test di sistema, in modo tale che la loro esecuzione non richieda costi eccessivi (soprattutto in termini temporali) e sia possibile eseguirne un numero sufficiente a garantire un'ottima copertura dei requisiti; a tal fine molto importante sarà lo strumento di continuous integration Jenkins, il quale andrà opportunamente configurato per eseguire i test stabiliti.
+\subsubsection{Metriche}
+\paragraph{Test di Unità eseguiti}
+\label{tuniese}
+Indica la percentuale di test di unità eseguiti.
+\begin{itemize}
+\item \textbf{Misurazione}: $UE=\frac{N_{TUE}}{N_{TUP}} \cdot 100$, dove $N_{TUE}$ è il numero di test di unità eseguiti e $N_{TUP}$ è il numero di test di unità pianificati;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $90 - 100$.
+\end{itemize}
+\paragraph{Test di Integrazione eseguiti}
+\label{tintese}
+Indica la percentuale di test di integrazione eseguiti.
+\begin{itemize}
+\item \textbf{Misurazione}: $IE=\frac{N_{TIE}}{N_{TIP}} \cdot 100$, dove $N_{TIE}$ è il numero di test di integrazione eseguiti e $N_{TIP}$ è il numero di test di integrazione pianificati;
+\item \textbf{Range-ottimale}: $70 - 100$;
+\item \textbf{Range-accettazione}: $60 - 100$.
+\end{itemize}
+\paragraph{Test di Sistema eseguiti}
+\label{tsissup}
+Indica la percentuale di test di sistema eseguiti in modo automatico.
+\begin{itemize}
+\item \textbf{Misurazione}: $SE=\frac{N_{TSE}}{N_{TSP}} \cdot 100$, dove $N_{TSE}$ è il numero di test di sistema eseguiti e $N_{TSP}$ è il numero di test di sistema pianificati;
+\item \textbf{Range-ottimale}: $80 - 100$;
+\item \textbf{Range-accettazione}: $70 - 100$.
+\end{itemize}
+\paragraph{Test di Validazione eseguiti}
+\label{tvalese}
+Indica la percentuale di test di validazione eseguiti manualmente.
+\begin{itemize}
+\item \textbf{Misurazione}: $VE=\frac{N_{TVE}}{N_{TVP}} \cdot 100$, dove $N_{TVE}$ è il numero di test di validazione eseguiti e $N_{TVP}$ è il numero di test di validazione pianificati;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $100$.
+\end{itemize}
+\paragraph{Test superati}
+\label{tsuperati}
+Indica la percentuale di test superati.
+\begin{itemize}
+\item \textbf{Misurazione}: $S=\frac{N_{TS}}{N_{TE}} \cdot 100$, dove $N_{TS}$ è il numero di test superati e $N_{TE}$ è il numero di test eseguiti;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $90 - 100$.
+\end{itemize}
+
+\subsection{Software Documentation Management Process (7.2.1)}
+\label{soDocMgmt}
+Il processo punta a produrre e manutenere le informazioni sul software prodotte dai processi attuati.
+\subsubsection{Obiettivi di qualità}
+Il processo di documentazione dovrà perseguire le seguenti direttive:
+\begin{itemize}
+\item la documentazione prodotta dovrà essere chiara e comprensibile a tutti gli stakeholder e sarà resa disponibile alle parti interessate per la consultazione;
+\item ogni forma di ambiguità sul significato di un termine utilizzato verrà eliminata grazie al \textit{\G};
+\item la documentazione prodotta sarà sempre aggiornata ed allineata allo stato attuale del processo di sviluppo del prodotto.
+\end{itemize}
+\subsubsection{Strategie}
+Durante la stesura della documentazione, ogni termine con significato ambiguo deve essere indicato (corredato di definizione) nel \textit{\G}; gli script automatici provvederanno alla sua segnalazione all'interno del documento.\\
+Ogni documento sarà dotato di numero di versione e corredato da un diario delle modifiche che consente di prendere visione di tutte le azioni effettuate sul testo in oggetto.
+\subsubsection{Metriche}
+\paragraph{Indice Gulpease}
+Misura la leggibilità e la complessità di un documento.
+\begin{itemize}
+\item \textbf{Misurazione}: $G = 89 + \frac{300\cdot{}N_{F}-10\cdot{}N_{L}}{N_{P}}$, dove $N_{F}$ è il numero di frasi, $N_{L}$ è il numero di lettere e $N_{P}$ è il numero di parole presenti nel testo;
+\item \textbf{Range-ottimale}: $50 - 100$;
+\item \textbf{Range-accettazione}: $40 - 100$.
+\end{itemize}
+
+\subsection{Software Verification Process (7.2.4)}
+\label{soVerification}
+Il processo punta a verificare se qualsiasi elemento del sistema (software e non) soddisfa completamente i requisiti ad esso correlati.
+\subsubsection{Obiettivi di qualità}
+Al fine di garantire qualità nell'attuazione del processo:
+\begin{itemize}
+\item la documentazione verrà verificata attraverso inspection, poiché (effettuando un'analisi mirata degli errori) permette risparmio in termini di tempi e costi;
+\item i test dinamici effettuati sui vari elementi saranno il più possibile automatizzabili;
+\item i test dinamici effettuati sui vari elementi del software copriranno una grande parte delle possibili casistiche d'utilizzo.
+\end{itemize}
+\subsubsection{Strategie}
+Durante le attività di correzione della documentazione, gli errori più frequenti rilevati saranno riportati in un documento, in modo tale da diventare uno dei punti chiave delle successive attività di inspection.\\
+Per ogni test effettuato verrà tenuto tracciamento del suo esito.
+\subsubsection{Metriche}
+\paragraph{Branch Coverage}
+\label{coperturaTest}
+Indica la percentuale di branch coverage rilevata sul codice, ossia la percentuale di rami decisionali percorsi dalla suite di test di unità utilizzata.
+\begin{itemize}
+\item \textbf{Misurazione}: $BC=\frac{R_{P}}{R_{T}} \cdot 100$, dove $R_{P}$ è il numero dei rami decisionali percorsi dai test e $R_{T}$ è il numero di rami decisionali definiti nel software;
+\item \textbf{Range-ottimale}: $80 - 100$;
+\item \textbf{Range-accettazione}: $70 - 100$.
+\end{itemize}
+\paragraph{Code Coverage}
+\label{codeCoverage}
+Indica la percentuale di code coverage rilevata sul codice, ossia la percentuale di codice che viene coperta dalla suite di test implementata, comprendente Test di Unità, Test di Integrazione, Test di Sistema e Test di Validazione.
+\begin{itemize}
+\item \textbf{Misurazione}: $CC=\frac{L_{M}}{L_{T}} \cdot 100$, dove $L_{M}$ è il numero di linee di codice monitorata dalla suite di test e $L_{T}$ è il numero di linee di codice implementate nel software;
+\item \textbf{Range-ottimale}: $70 - 100$;
+\item \textbf{Range-accettazione}: $60 - 100$.
+\end{itemize}
