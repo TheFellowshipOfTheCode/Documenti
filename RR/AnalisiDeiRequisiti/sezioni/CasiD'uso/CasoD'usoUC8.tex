@@ -31,7 +31,7 @@
 		\item \textbf{Inclusioni}: 
 			\begin{enumerate}
 				\item L'attore può selezionare un argomento da assegnare alla domanda (UC8.5);
-				\item L'attore può selezionare delle parole chiave da assegnare alle domande (UC8.6).
+				\item L'attore può selezionare delle parole chiave da assegnare alle domande (UC8.6);								\item L'attore può selezionare la domanda da modificare (UC8.7);
 			\end{enumerate}
 	\end{itemize}
 	\subsubsection{Caso d'uso UC8.1: Creazione nuova domanda tramite procedura guidata}
@@ -151,79 +151,66 @@
 		\item
 			\textbf{Postcondizione}: l'attore modifica una domanda;
 		\item
-			\textbf{Scenario principale}: 
-			\begin{enumerate}
-				\item
-				L'attore può selezionare la domanda da modificare (UC8.2.1);
-				\item
-				L'attore può confermare le modifiche apportate (UC8.2.2);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda vero/falso (UC8.2.4);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda a risposta multipla (UC8.2.5);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare un esercizio a riempimento di spazi vuoti (UC8.2.6);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda di collegamento (UC8.2.7);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda a ordinamento di immagini (UC8.2.8);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda a ordinamento di stringhe (UC8.2.9);
-				\item
-				L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda con area cliccabile nell'immagine (UC8.2.10).
-			\end{enumerate}
-	       		
+			\textbf{Scenario principale}:
+				\begin{enumerate} 
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda vero/falso (UC8.2.1);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda a risposta multipla (UC8.2.2);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare un esercizio a riempimento di spazi vuoti (UC8.2.3);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda di collegamento (UC8.2.4);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda a ordinamento di immagini (UC8.2.5);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda a ordinamento di stringhe (UC8.2.6);
+					\item
+					L'attore può richiamare il \textit{wizard\ped{G}} per modificare una domanda con area cliccabile nell'immagine (UC8.2.7).
+					\item
+					L'attore può confermare le modifiche apportate (UC8.2.8);
+				\end{enumerate}	
 	 	\item
-			\textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo alla modifica della domanda (UC8.2.3);
-	\end{itemize}
-	
-		\subsubsection{Caso d'uso UC8.2.1: Selezione domande da modificare}
-		\begin{itemize}
-			\item \textbf{Attori}: utente autenticato, utente autenticato pro;
-			\item \textbf{Descrizione}: l'attore può selezionare la domanda da modificare;
-			\item \textbf{Precondizione}: il sistema mostra la schermata di selezione della domanda da modificare;
-			\item \textbf{Postcondizione}: il sistema ha ricevuto dall'attore la domanda da modificare; 
-			\item \textbf{Scenario principale}: l'attore seleziona la domanda da modificare.
-			
-		\end{itemize}
-
-	\subsubsection{Caso d'uso UC8.2.2: Conferma modifica}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Descrizione}: l'attore può confermare la modifica della domanda;
-		\item		
-			\textbf{Precondizione}: l'attore ha finito di modificare una domanda tramite un \textit{wizard\ped{G}};
-		\item
-			\textbf{Postcondizione}: l'attore ha modificato una domanda;
-		\item
-			\textbf{Scenario principale}: l'attore conferma la modifica della domanda;		
-		\item
-	 		\textbf{Scenari alternativi}: l'attore annulla la modifica della domanda.
-	\end{itemize}		
-	\subsubsection{Caso d'uso UC8.2.3: Visualizzazione errore modifica}
-	\begin{itemize}
-		\item
-			\textbf{Attori}: utente autenticato, utente autenticato pro;
-		\item
-			\textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la modifica della domanda;
-		\item		
-			\textbf{Precondizione}: il sistema ha ricevuto dei dati errati per la modifica della domanda;
-		\item
-			\textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
-		\item
-			\textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.	
+			\textbf{Estensioni}: l'attore visualizza un messaggio d'errore relativo alla modifica della domanda (UC8.2.9);
 	\end{itemize}
 	
 %inclusione file latex wizard
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_1.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_2.tex}
+\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_3.tex}
 \input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_4.tex}
 \input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_5.tex}
 \input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_6.tex}
 \input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_7.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_8.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_9.tex}
-\input{sezioni/CasiD'uso/wizardUC8/CasoD'usoUC8_2_10.tex}	
+
+	\subsubsection{Caso d'uso UC8.2.8: Conferma modifica}
+	\begin{itemize}
+		\item
+		\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+		\textbf{Descrizione}: l'attore può confermare la modifica della domanda;
+		\item		
+		\textbf{Precondizione}: l'attore ha finito di modificare una domanda tramite un \textit{wizard\ped{G}};
+		\item
+		\textbf{Postcondizione}: l'attore ha modificato una domanda;
+		\item
+		\textbf{Scenario principale}: l'attore conferma la modifica della domanda;		
+		\item
+		\textbf{Scenari alternativi}: l'attore annulla la modifica della domanda.
+	\end{itemize}		
+	\subsubsection{Caso d'uso UC8.2.9: Visualizzazione errore modifica}
+	\begin{itemize}
+		\item
+		\textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item
+		\textbf{Descrizione}: l'attore può visualizzare un messaggio d'errore nel caso si fossero verificati uno o più scenari alternativi durante la modifica della domanda;
+		\item		
+		\textbf{Precondizione}: il sistema ha ricevuto dei dati errati per la modifica della domanda;
+		\item
+		\textbf{Postcondizione}: il sistema avvisa l'attore dell'errore verificatosi tramite un opportuno messaggio;
+		\item
+		\textbf{Scenario principale}: l'attore visualizza un messaggio d'errore.	
+	\end{itemize}	
 
 	\subsubsection{Caso d'uso UC8.3: Creazione nuova domanda tramite editor di testo QML}
 	\label{UC8.3}
@@ -283,11 +270,7 @@
 		\item
 		\textbf{Postcondizione}: l'attore modifica una domanda;
 		\item
-		\textbf{Scenario principale}: 
-		\begin{enumerate}
-			\item
-			L'attore può confermare le modifiche apportate (UC8.4.1).
-		\end{enumerate}
+		\textbf{Scenario principale}: l'attore può confermare le modifiche apportate (UC8.4.1).
 	\end{itemize}
 		
 		\subsubsection{Caso d'uso UC8.4.1: Conferma modifica}
@@ -332,4 +315,14 @@
 		\textbf{Postcondizione}: l'attore ha selezionato delle parole chiave;
 		\item
 		\textbf{Scenario principale}: l'attore inserisce delle parole chiave relative alla nuova domanda.	
+	\end{itemize}
+	
+	\subsubsection{Caso d'uso UC8.7: Selezione domande da modificare}
+	\begin{itemize}
+		\item \textbf{Attori}: utente autenticato, utente autenticato pro;
+		\item \textbf{Descrizione}: l'attore può selezionare la domanda da modificare;
+		\item \textbf{Precondizione}: il sistema mostra la schermata di selezione della domanda da modificare;
+		\item \textbf{Postcondizione}: il sistema ha ricevuto dall'attore la domanda da modificare; 
+		\item \textbf{Scenario principale}: l'attore seleziona la domanda da modificare.
+		
 	\end{itemize}
