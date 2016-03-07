@@ -1,0 +1,96 @@
+\newpage
+\section{Interfaccia REST}
+L'interfaccia per il \textit{back-end\ped{G}} del \textit{progetto\ped{G}} \textit{\progetto} è realizzata in stile \textit{REST\ped{G}}.
+%qua inserisco il motivo della scelta di usare REST%
+I dati scambiati mediante l'interfaccia \textit{REST\ped{G}} sono rappresentati in formato JSON\ped{G}, che si integra facilmente con le tecnologie ed il linguaggio utilizzati per sviluppare \progetto. \\
+Se lo scambio di dati avviene correttamente il \textit{server\ped{G}} può fornire in risposta un messaggio di conferma:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"status" : "ok"
+}
+\end{lstlisting}
+\subsection{Errori}
+In caso di errori il \textit{server\ped{G}} risponde con un messaggio d'errore in formato JSON\ped{G}, definito secondo lo schema:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"code" : [codice dell'errore],
+"title" : [titolo dell'errore],
+"message" : [descrizione testuale dell'errore]
+}
+\end{lstlisting}
+\subsubsection{Errori generici}
+Gli errori generici cono gestiti dalla classe \texttt{ErrorHandler} ad eccezione dell'erroe \texttt{404} che viene gestito da \texttt{NotFoundHandler}. In questo modo si ottiene una gestione degli errori più flessibile e modulare, in quanto è possibile inserire in coda allo stack di chiamate di ogni ruote la classe \texttt{NotFoundHandler}, riducendo così la complessità della classe \texttt{ErrorHandler}.
+
+\paragraph{Errori lato server}
+Nel caso si verifichi un errore lato server, questo risponde con un codice HTTP\ped{G} del tipo \texttt{5xx}, di seguito vengono specificati gli errori che possono essere sollevati:
+	\begin{itemize}
+		\item \texttt{500 Errore sconosciuto}: il messaggio descrive un errore generico del server che avviene quando si verifica una condizione non gestibile e quindi non identificabile con un errore specifico.
+	\end{itemize}
+\paragraph{Errori nelle richieste da parte del client}
+Nel caso si verifichi un errore riguardo le richieste ricevute dal client, il server risponde con un codeice HTTP\ped{G} del tipo \texttt{4xx}, di seguito vengono specificati gli errori che possono essere sollevati:
+	\begin{itemize}
+		\item \texttt{400}: il server non può gestire la richiesta in seguito ad una generica richiesta errata. Il contenuto del messaggio d'errore varia in base alla tipologia di richiesta ricevuta;
+		\item \texttt{401}: Accesso non autorizzato;
+		\item \texttt{404}: Pagina non trovata.
+	\end{itemize}
+\paragraph{Errori specifici di \progetto}
+Questi errori rappresentano situazioni specifiche del sistema \progetto, sono quindi stati definiti dei codici personalizzati per questa tipologia di errori basandosi sull'idea dei codici d'errore HTTP\ped{G} standard. I codici dei messaggi d'errore sono stati assegnati secondo diverse categorie, in modo da poter individuare facilmente quale componente dell'applicazione ha causato l'errore. Ad ogni categoria è stato assegnato successivamente un intervallo di codici possibili, evitando di utilizzare gli intervalli \texttt{4xxx} e \texttt{5xxx} per non creare ambiguità con i codici d'errore standard descritti nella sezione precedente. \\
+Le categorie di errori definite sono le seguenti:
+\begin{itemize}
+	\item 
+\end{itemize}
+Gli errori specifici di \textit{\progetto} vengono gestiti dalla classe \texttt{QuizziPediaError} e sono di seguito elencati sotto forma di:
+\begin{center}
+	\texttt{Codice Titolo}: messaggio d'errore
+\end{center}
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\subsubsection{Risorse REST}
+In seguito vengono riportate le risorse \textit{REST\ped{G}} fornite, associate al tipo di metodo HTTP\ped{G} che è possibile richiedere su di esse e ai permessi necessario per effettuare la richiesta. In particolare, i permessi sono:
+\begin{itemize}
+	\item \textbf{Utente}: la risorsa può essere acceduta da qualsiasi tipo di utente;
+	\item \textbf{Utente autenticato}: la risorsa può essere acceduta solo dagli utenti che hanno effettuato il login;
+	\item \textbf{Utente autenticato pro}: la risorsa può essere acceduta solo dagli utenti pro.
+\end{itemize}
+Inoltre per ogni risorsa sono stati specificati i formati per lo scambio dei dati in JSON\ped{G}:
+\begin{itemize}
+	\item \textbf{Request}: rappresenta l'oggetto JSON\ped{G} che dovrà essere passato alla riorsa \textit{REST\ped{G}};
+	\item \textbf{Response}: rappresenta l'oggetto JSON\ped{G} che fornirà in risposta la risorsa \textit{REST\ped{G}};
+	\item \texttt{/sign up}
+		\begin{itemize}
+			\item \textbf{Method}: POST
+			\item \textbf{Livello di Accesso}: Utente;
+			\item \textbf{Descrizione}: crea un nuovo account. Un username univoco inserito dall'utente lo identifica, pertanto non ci sarannò più utenti con lo stesso username. Restituisce un messaggio di conferma se viene effettuato correttamente, altrienti un errore.
+			\item \textbf{Request}: lo scambio dei dati dell'utente avviene attraverso una form che deve avere i seguenti campi:
+			\begin{lstlisting}[language=json,firstnumber=1]
+			{
+			"username" : [username univoco scelto dall'utente]
+			"password" : [la password associata all'account che si vuole registrare]
+			"e-mail" : [l'indirizzo e-mail con cui si effettua la registrazione]
+			"nome" : [nome dell'utente da registrare]
+			"cognome" : [cognome dell'utente da registrare]
+			}
+			\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/login}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente/utente pro;
+			\item \textbf{descrizione}: effettua l'accesso all'account. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore.
+			\begin{lstlisting}[language=json,firstnumber=1]
+			{
+			"username" : [username che corrisponde all'username inserita durante la registrazione]
+			"password" : [la password associata all'username dell'account dell'utente]
+			}
+			\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/logout}
+		\begin{itemize}
+			\item \textbf{Method}: GET;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: effettua il logout. restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+		\end{itemize}
+	\item ...
+\end{itemize}
