@@ -1,0 +1,27 @@
+\subsection{QuizziPedia::Back-End::App}
+\subsubsection{Informazioni generali}
+\label{QuizziPedia::Back-End::App}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App.png}
+	\caption{QuizziPedia::Back-End::App}
+\end{figure}
+	\begin{itemize}
+		\item \textbf{Descrizione} \\
+		Package contenente le componenti del server che implementano il \textit{pattern\ped{G} MVC\ped{G}};
+		\item \textbf{Padre} \\ Back-End;
+		\item \textbf{Interazioni con altri componenti}
+			\begin{itemize}
+				\item Congif \\
+				Package contenente le componenti di configurazione del server;
+			\end{itemize}
+		\item \textbf{Package contenuti}
+			\begin{itemize}
+				\item Controllers \\
+				Package che contiene i controllers di Express, definisce la logica dell'applicazione;
+				\item Models \\
+				Package che contiene le classi che definiscono il model dell'applicazione. Queste classi cono definite come classi schema di \textit{Mongoose\ped{G}}, il quale permette di utilizzare \textit{MongoDB\ped{G}} tramite degli oggetti;
+				\item Routers \\
+				Package contenente i routers della componente back-end dell'applicazione. Contiene i file di configurazione relativi al routing delle richieste del client, ossia i routers di Express.
+			\end{itemize}
+	\end{itemize}
