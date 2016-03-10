@@ -1,23 +1,25 @@
 \paragraph{QuizziPedia::Back-End::App::Models::UserModel}
-\label{QuizziPedia::Back-End::App::Models::userModel}
+\label{QuizziPedia::Back-End::App::Models::UserModel}
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App_Models_userModel.png}
-	\caption{QuizziPedia::Back-End::App::Models::userModel}
+	\caption{QuizziPedia::Back-End::App::Models::UserModel}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione} \\
 	Classe che modella la creazione e la gestione dei dati utente
 	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell’applicazione. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza.
+	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi} 
 		\begin{itemize}
-			\item \textbf{IN QuestionModel} \\
+			\item \textbf{IN SummaryModel} \\
+			Questa classe rappresenta il riepologo dei questionari svolti dagli utenti.
+			\item \textbf{OUT QuestionModel} \\
 			Questa classe rappresenta i dati delle domande create dai vari utenti.
-			\item \textbf{IN QuizModel} \\
-			Questa classe rappresenta i dati dei questionari creati dai vari utenti.
-			\item \textbf{IN QuizSummaryModel} \\
-			Questa classe rappresenta i dati dei questionari creati dai vari utenti.
+			\item \textbf{OUT QuizModel} \\
+			Questa classe rappresenta i dati dei questionari creati dagli utenti Pro.
+			\item \textbf{OUT UserProModel} \\
+			Questa classe rappresenta i dati riguardanti l'utente pro.
 		\end{itemize}
 	\item \textbf{Attributi} 
 		\begin{itemize}
@@ -33,8 +35,6 @@
 				\item 
 					\texttt{userImg} di tipo \texttt{String}, rappresenta il path della foto profilo dell'utente registrato;
 				\item 
-					\texttt{userType} di tipo \texttt{String}, rappresenta la tipologia dell'utente registrato;
-				\item 
 					\texttt{username} di tipo \texttt{String}, rappresenta l'username con cui viene identificato l'utente all'interno dell'applicazione;		
 				\item
 					\texttt{password} di tipo \texttt{String}, rappresenta la password associata all'utente,  appositamente codificata mediante l'algoritmo bcrypt;  		
@@ -42,7 +42,7 @@
 					\texttt{statistics} di tipo \texttt{Array Mixed}, contenente i seguenti attributi:
 				\begin{itemize}
 					\item
-						\texttt{topicId} di tipo \texttt{Objectid}, rappresenta il riferimento all'identificativo nel database degli argomenti;		; 
+						\texttt{topicName} di tipo \texttt{String}, rappresenta il nome della statistica relativa all'argomento;	 
 					\item
 						 \texttt{topicLevel} di tipo \texttt{Number}, identifica il livello di preparazione dell'utente in un determinato argomento;
 					\item
