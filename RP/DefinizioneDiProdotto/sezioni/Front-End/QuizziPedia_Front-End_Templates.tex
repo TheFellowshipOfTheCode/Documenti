@@ -3,37 +3,42 @@
 \subsection{QuizziPedia::Front-End::Templates}
 
 	\label{QuizziPedia::Front-End::Templates}
-	\ref{QuizziPedia::Front-End::Templates}
+
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Package/QuizziPedia_Front-end.png}
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Package/QuizziPedia_Front-end_Templates.png}
 		\caption{QuizziPedia::Front-End::Templates}
 	\end{figure}
 	
 	\subsubsection{Informazioni generali}
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Padre}: ;
-			\item \textbf{Iterazioni con altri componenti}: ;
+			\item \textbf{Descrizione}: package contenente i templates necessari per la creazione dinamica delle viste per le domande;
+			\item \textbf{Padre}: \texttt{Front-End};
+			\item \textbf{Iterazioni con altri componenti}: 
+				\begin{}
+					\item \texttt{Controllers}: package contenente i controllers front-end dell'applicazione;
+					\item \texttt{Views}: package contenente le views front-end dell'applicazione.
+				\end{}
 		\end{itemize}
 
 	\subsubsection{Classi}
-		\paragraph{QuizziPedia::Front-End::Template::AllenamentoSetUpTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::TrainingSetUpTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::AllenamentoSetUpTemplate}
-				\ref{QuizziPedia::Front-End::Templates::AllenamentoSetUpTemplate}
+				\label{QuizziPedia::Front-End::Templates::TrainingSetUpTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::AllenamentoSetUpTemplate}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::TrainingSetUpTemplate}
 				\end{figure}
 						
 			\begin{itemize}
-				\item \textbf{Descrizione}: ;
-				\item \textbf{Utilizzo}: ;
+				\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
+				\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente di selezionare l'argomento e le parole chiave di un allenamento;
 				\item \textbf{Relazioni con altre classi}: 
 					\begin{itemize}
-						\item ;
+						\item \textit{IN} \texttt{TrainingView}: 
+						\item \textit{OUT} \texttt{TrainingController}:
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
@@ -45,22 +50,23 @@
 					\end{itemize}
 			\end{itemize}
 
-		\paragraph{QuizziPedia::Front-End::Template::HeaderRispostaDomandeTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::HeaderTextQuestionTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::HeaderRispostaDomandeTemplate}
-				\ref{QuizziPedia::Front-End::Templates::HeaderRispostaDomandeTemplate}
+				\label{QuizziPedia::Front-End::Templates::HeaderTextQuestionTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
 					\caption{QuizziPedia::Front-End::Templates::}
 				\end{figure}
 		
 			\begin{itemize}
-				\item \textbf{Descrizione}: ;
-				\item \textbf{Utilizzo}: ;
+				\item \textbf{Descrizione}: rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
+				\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la visualizzazione del testo della domanda, dell'argomento della domanda e le parole chiave associate ad essa;
 				\item \textbf{Relazioni con altre classi}: 
 				\begin{itemize}
-					\item ;
+						\item \textit{IN} \texttt{TrainingView}: 
+						\item \textit{IN} \texttt{QuestionController}:
 				\end{itemize}
 				\item \textbf{Attributi}: 
 				\begin{itemize}
@@ -72,14 +78,14 @@
 				\end{itemize}
 			\end{itemize}
 
-		\paragraph{QuizziPedia::Front-End::Template::RispostaOrdinamentoImmaginiTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::SortImagesAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::SortImagesAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::SortImagesAnswerTemplate}
 				\end{figure}
 				
 			\begin{itemize}
@@ -87,7 +93,8 @@
 				\item \textbf{Utilizzo}: ;
 				\item \textbf{Relazioni con altre classi}: 
 				\begin{itemize}
-					\item ;
+						\item \textit{IN} \texttt{TrainingView}: 
+						\item \textit{IN} \texttt{QuestionController}:
 				\end{itemize}
 				\item \textbf{Attributi}: 
 				\begin{itemize}
@@ -99,14 +106,14 @@
 				\end{itemize}
 			\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::RispostaOrdinamentoStringheTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::TrueFalseAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::TrueFalseAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::TrueFalseAnswerTemplate}
 				\end{figure}
 				
 			\begin{itemize}
@@ -114,7 +121,8 @@
 				\item \textbf{Utilizzo}: ;
 				\item \textbf{Relazioni con altre classi}: 
 				\begin{itemize}
-					\item ;
+						\item \textit{IN} \texttt{TrainingView}: 
+						\item \textit{IN} \texttt{QuestionController}:
 				\end{itemize}
 				\item \textbf{Attributi}: 
 				\begin{itemize}
@@ -126,14 +134,14 @@
 				\end{itemize}
 			\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::RispostaRiempimentoTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::SortTextAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::SortTextAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::SortTextAnswerTemplate}
 				\end{figure}
 		
 			\begin{itemize}
@@ -141,7 +149,8 @@
 				\item \textbf{Utilizzo}: ;
 				\item \textbf{Relazioni con altre classi}: 
 				\begin{itemize}
-					\item ;
+						\item \textit{IN} \texttt{TrainingView}: 
+						\item \textit{IN} \texttt{QuestionController}:
 				\end{itemize}
 				\item \textbf{Attributi}: 
 				\begin{itemize}
@@ -153,14 +162,14 @@
 				\end{itemize}
 			\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::RispostaAreaCliccabileTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::MultipleChoiceAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::MultipleChoiceAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::MultipleChoiceAnswerTemplate}
 				\end{figure}
 						
 			\begin{itemize}
@@ -180,14 +189,14 @@
 				\end{itemize}
 			\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::RispostaVeroFalsoTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::EmptyChoiceAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::EmptyChoiceAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::EmptyChoiceAnswerTemplate}
 				\end{figure}
 		
 			\begin{itemize}
@@ -207,14 +216,14 @@
 				\end{itemize}
 			\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::RispostaMultiplaTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::LinkingAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::LinkingAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::LinkingAnswerTemplate}
 				\end{figure}		
 		
 			\begin{itemize}
@@ -234,14 +243,14 @@
 				\end{itemize}
 			\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::RispostaCollegamentoTemplate}
+		\paragraph{QuizziPedia::Front-End::Template::ClickableAnswerTemplate}
 		
-				\label{QuizziPedia::Front-End::Templates::}
-				\ref{QuizziPedia::Front-End::Templates::}
+				\label{QuizziPedia::Front-End::Templates::ClickableAnswerTemplate}
+
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Classi/Temporanea.png}
-					\caption{QuizziPedia::Front-End::Templates::}
+					\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+					\caption{QuizziPedia::Front-End::Templates::ClickableAnswerTemplate}
 				\end{figure}
 		
 			\begin{itemize}
@@ -260,4 +269,31 @@
 					\item ;
 				\end{itemize}
 			\end{itemize}
+			
+		\paragraph{QuizziPedia::Front-End::Template::InfoQuestionnaireTemplate}
+		
+		\label{QuizziPedia::Front-End::Templates::InfoQuestionnaireTemplate}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/Temporanea.png}
+			\caption{QuizziPedia::Front-End::Templates::InfoQuestionnaireTemplate}
+		\end{figure}
+		
+		\begin{itemize}
+			\item \textbf{Descrizione}: ;
+			\item \textbf{Utilizzo}: ;
+			\item \textbf{Relazioni con altre classi}: 
+			\begin{itemize}
+				\item ;
+			\end{itemize}
+			\item \textbf{Attributi}: 
+			\begin{itemize}
+				\item ;
+			\end{itemize}
+			\item \textbf{Metodi}: 
+			\begin{itemize}
+				\item ;
+			\end{itemize}
+		\end{itemize}
 																					
