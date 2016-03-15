@@ -20,26 +20,189 @@
 	\item \texttt{Templates} \\ Package contenente i templates front-end dell'applicazione.
 \end{itemize}
 \subsubsection{Classi}
+
 \paragraph{QuizziPedia::Front-End::Views::LoginView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
+	\item \textbf{Utilizzo}: premette all'utente di autenticarsi inserendo username e password;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{LoginController} \\ 
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::SignUpView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login;
+	\item \textbf{Utilizzo}: permette all'utente di registrarsi al sistema inserendo i campi dati necessari;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{SignUpController} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::PasswordForgotView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente le form necessarie per il recupero della password dimenticata;
+	\item \textbf{Utilizzo}: permette all'utente di recuperare la password dimenticata inserendo i campi dati necessari, assieme alla nuova password inviatagli automaticamente dal sistema all'interno di una mail;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{PasswordForgotController} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::HomeView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente la barra di ricerca per gli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
+	\item \textbf{Utilizzo}: viene utilizzata come view iniziale dell'applicazione;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{HomeController} \\
+		\item \textit{OUT} \texttt{SearchDirective} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+	
 \paragraph{QuizziPedia::Front-End::Views::ResultView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
+	\item \textbf{Utilizzo}: viene visualizzata dopo aver effettuato la ricerca di un utente o di un questionario nella barra di ricerca presente nella HomeView e permette di selezionare un risultato presente al suo interno; 
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{SearchController} \\
+		\item \textit{OUT} \texttt{SubscribeResultDirective} \\
+		\item \textit{OUT} \texttt{UserResultDirective} \\ 
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::UserView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+	\item \textbf{Utilizzo}:  
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::OtherUserView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::ProfileManagementView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::QuestionsManagementView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::TrueFalseView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::MultipleQuestionsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::ConnectionQuestionsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::ImagesSortingQuestionsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::StringsSortingQuestionsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::ClickableAreaQuestionsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::TrainingView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionnaireView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::QuestionnaireManagementView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::TemplateQuestionnaireView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::RegistrationManagementView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::ResultsView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+	\end{itemize}
 \paragraph{QuizziPedia::Front-End::Views::EditorQMLView}
+\begin{itemize}
+	\item \textbf{Descrizione}
+	\item \textbf{Utilizzo}
+	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Attributi}
+\end{itemize}
