@@ -1,10 +1,4 @@
 \paragraph{QuizziPedia::Back-End::App::Models::QuestionModel}
-\label{QuizziPedia::Back-End::App::Models::QuestionModel}
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App_Models_questionModel.png}
-	\caption{QuizziPedia::Back-End::App::Models::QuestionModel}
-\end{figure}
 \begin{itemize}
 \item \textbf{Descrizione}: Questa classe rappresenta le domande;	
 \item \textbf{Utilizzo}: Viene utilizzata per rappresentare le domande. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza;
@@ -33,9 +27,15 @@
 	\end{itemize}
 \item \textbf{Metodi}:
 	\begin{itemize}
-	\item \texttt{+ createQuestion(content: JSON, callback: function(JSON))} \\
+	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON), errback: function(JSON))} \\
 	;   
-	\item \texttt{+ editQuestion(content: JSON, callback: function(JSON))} \\
+	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON), errback: function(JSON))} \\
+	;
+	\item \texttt{+ updateLevel(userLevel: Number, isCorrected: boolean)} \\
+	;  
+	\item \texttt{- addCorrect()} \\
+	;
+	\item \texttt{- addTotal()} \\
 	.
 	\end{itemize}
 \end{itemize}
