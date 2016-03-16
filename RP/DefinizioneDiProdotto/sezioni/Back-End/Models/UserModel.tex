@@ -5,6 +5,7 @@
 	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App_Models_userModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::UserModel}
 \end{figure}
+\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione} \\
 	Classe che modella la creazione e la gestione dei dati utente
@@ -169,6 +170,7 @@
 			\item	
 				\texttt{errback: function(QuizzipediaError)} \\
 				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
+			\end{itemize}	
 		\item			
 		+ \texttt{getUsers(searchword : String, callback : function(JSON), errback : function(QuizziPediaError))}		
 		Questo metodo ritorna un JSON contenente i dati degli utenti in base alla parola chiave cercata, in caso di errori una callback che segnalerà i relativi problemi.\\
