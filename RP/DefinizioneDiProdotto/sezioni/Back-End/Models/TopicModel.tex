@@ -7,9 +7,9 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione} \\
-	Classe che modella gli argomenti all'interno dell'applicazione.
+	Classe che modella gli argomenti all'interno delle domande.
 	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati relativi agli argomenti all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
+	Viene utilizzata per rappresentare i dati relativi agli argomenti delle domande. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi}
 		\begin{itemize}
 			\item \textbf{IN \texttt{QuestionModel}} \\
@@ -20,27 +20,45 @@
 	\item \textbf{Attributi}
 		\begin{itemize}
 			\item \textbf{- topicSchema: Schema} \\
-			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} degli argomenti di \progetto. Lo schema prevede i seguenti attributi:
+			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per gli argomenti e prevede i seguenti attributi:
 				\begin{itemize}
 					\item \texttt{name} di tipo \texttt{String}, rappresenta il nome dell'argomento;
-					\item \texttt{level} di tipo \texttt{Number}, rappresenta il livello medio degli utenti che hanno svolto almeno un allenamento dell'argomento;
-					\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta il numero totale di domande che gli utenti hanno risposto correttamente durante un allenamento dell'argomento; 
-					\item \texttt{totalAnswers} di tipo \texttt{Number}, rappresenta il numero totale di domande che gli utenti hanno risposto durante un allenamento dell'argomento;
-					\item \texttt{question} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{Question} che rappresentano i riferimenti agli identificativi nel database delle domande appartenenti all'argomento;
-					\item \texttt{keywords} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{String} che identificano le parole chiave contenute nelle domande appartenenti all'argomento.
+					\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta il numero totale di domande alle quali gli utenti hanno risposto correttamente durante un allenamento sull'argomento; 
+					\item \texttt{totalAnswers} di tipo \texttt{Number}, rappresenta il numero totale di domande alle quali gli utenti hanno risposto durante un allenamento sull'argomento;
+					\item \texttt{question} di tipo \texttt{Array}, contiene gli \texttt{ObjectId} delle domande sull'argomento.
 				\end{itemize}
 		\end{itemize}
 	\item \textbf{Metodi}
 		\begin{itemize}
-			\item \texttt{+ updateCorrect() : void} \\
-			Aumenta un contatore che tiene aggiornato il numero totale di risposte esatte a domande appartenenti all'argomento;
-			\item \texttt{+ updateTotal(): void} \\
-			Aumenta un contatore che tiene aggiornato il numero totale di risposte appartenenti all'argomento;
-			\item \texttt{+ addKeyword(keyword:String) : void} \\
-			Aggiunge una parola chiave all'argomento;
-			\item \texttt{+ updateLevel() : void} \\
-			Aggiorna il livello di difficoltà generale dell'argomento;
-			\item \texttt{+ addQuestion(questionID : ObjectID) : void} \\
-			Aggiunge un riferimento ad una domanda;
+			\item \texttt{+ updateCorrect(topicId : ObjectId) : void} \\
+			Metodo che consente di tenere aggiornato il numero di risposte esatte date a domande sull'argomento. \\
+			\begin{itemize}
+			\item \texttt{topicId : ObjectId} \\
+			Rappresenta l'identificativo dell'argomento da aggiornare.
+			\end{itemize}
+			\item \texttt{+ updateTotal(topicId : ObjectId): void} \\
+			Metodo che consente di tenere aggiornato il numero totale di risposte date a domande sull'argomento. \\
+			\begin{itemize}
+			\item \texttt{topicId : ObjectId} \\
+			Rappresenta l'identificativo dell'argomento da aggiornare.
+			\end{itemize}
+			\item \texttt{+ addQuestion(topicId : ObjectId, questionID : ObjectID) : void} \\
+			Metodo che consente di aggiunge una domanda tra le domande sull'argomento. \\
+			\begin{itemize}
+			\item \texttt{topicId : ObjectId} \\
+			Rappresenta l'identificativo dell'argomento da aggiornare;
+			\item \texttt{questionId : ObjectId} \\
+			Rappresenta l'identificativo della domanda da aggiungere.
+			\end{itemize}
+			\item \texttt{+ getQuestions(topicId : ObjectId, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			Metodo che consente di ottenere le domande sull'argomento attraverso la funzione di callback oppure un messaggio di errore. \\
+			\begin{itemize}
+			\item \texttt{topicId : ObjectId} \\
+			Rappresenta l'identificativo dell'argomento da aggiornare;
+			\item \texttt{callback : function(JSON)} \\
+			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
+			\item \texttt{errback : function(QuizziPediaError)} \\
+			Rappresenta la callback che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+			\end{itemize}
 		\end{itemize}
 \end{itemize}
