@@ -1,41 +1,104 @@
 \paragraph{QuizziPedia::Back-End::App::Models::QuestionModel}
-\begin{itemize}
-\item \textbf{Descrizione}: Questa classe rappresenta le domande;	
-\item \textbf{Utilizzo}: Viene utilizzata per rappresentare le domande. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza;
-\item \textbf{Relazione con altra classi}:
+\label{QuizziPedia::Back-End::App::Models::QuestionModel}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App_Models_questionModel.png}
+	\caption{QuizziPedia::Back-End::App::Models::QuestionModel}
+\end{figure}
 	\begin{itemize}
-	\item IN UserModel;
-	\item IN SummaryModel;
-	\item OUT TopicModel;
-	\item OUT QuizModel.
-	\end{itemize}
-\item \textbf{Attributi}:
+		\item \textbf{Descrizione} \\
+		Classe che modella i dati relativi alle domande all'interno dell'applicazione;	
+		\item \textbf{Utilizzo} \\
+		Viene utilizzata per rappresentare le domande. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
+		\item \textbf{Relazione con altra classi}:
+			\begin{itemize}
+			\item IN UserModel;
+			Classe che rappresenta tutti gli utenti;
+			\item IN SummaryModel;
+			Classe che rappresenta i riepiloghi dei questionari svolti;
+			\item OUT TopicModel;
+			Classe che rappresenta gli argomenti;
+			\item OUT QuizModel.
+			\end{itemize}
+		\item \textbf{Attributi}:
 	\begin{itemize}
-	\item \texttt{questionSchema: Schema} \\
-	Questo campo dati rappresenta lo schema Mongoose per le domande e prevede i 					seguenti attributi:
+		\item \texttt{questionSchema: Schema} \\
+		Questo campo dati rappresenta lo schema Mongoose per le domande e prevede i seguenti attributi:
 		\begin{itemize}
-		\item \texttt{author} di tipo \texttt{ObjectId}, rappresenta il riferimento 					all'identificativo nel database dell'utente che ha creato la domanda;
-		\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di domanda;
-		\item \texttt{questionText} di tipo \texttt{String}, rappresenta il testo della 				domanda; 
-		\item \texttt{image} di tipo \texttt{String}, rappresenta l'URL dell'immagine 				associata al testo della domanda;
-		\item \texttt{options1} di tipo \texttt{Array}, contiene oggetti di tipo String e 			rappresenta informazioni diverse in base alla tipologia della	 domanda;
-		\item \texttt{options2} di tipo \texttt{Array}, contiene oggetti di tipo String e 			rappresenta informazioni diverse in base alla tipologia della	 domanda;
-		\item \texttt{level} di tipo \texttt{Number}, rappresenta la difficoltà della 				domanda;
-		\item \texttt{totalAnswers} di tipo \texttt{Number}, rappresenta le risposte 					totali che tutti gli utenti hanno dato alla domanda;
-		\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta quante risposte 		corrette hanno dato gli utenti che hanno risposto alla domanda.
+			\item \texttt{author} di tipo \texttt{ObjectId}, rappresenta il riferimento all'identificativo nel database dell'utente che ha creato la domanda;
+			\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di domanda;
+			\item \texttt{questionText} di tipo \texttt{String}, rappresenta il testo della domanda; 
+			\item \texttt{image} di tipo \texttt{String}, rappresenta l'URL dell'immagine associata al testo della domanda;
+			\item \texttt{options1} di tipo \texttt{Array}, contiene oggetti di tipo String e rappresenta informazioni diverse in base alla tipologia della	 domanda;
+			\item \texttt{options2} di tipo \texttt{Array}, contiene oggetti di tipo String e rappresenta informazioni diverse in base alla tipologia della	 domanda;
+			\item \texttt{level} di tipo \texttt{Number}, rappresenta la difficoltà della domanda;
+			\item \texttt{totalAnswers} di tipo \texttt{Number}, rappresenta le risposte totali che tutti gli utenti hanno dato alla domanda;
+			\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta quante risposte corrette hanno dato gli utenti che hanno risposto alla domanda.
 		\end{itemize}
 	\end{itemize}
 \item \textbf{Metodi}:
 	\begin{itemize}
-	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON), errback: function(JSON))} \\
-	;   
-	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON), errback: function(JSON))} \\
-	;
-	\item \texttt{+ updateLevel(userLevel: Number, isCorrected: boolean)} \\
-	;  
-	\item \texttt{- addCorrect()} \\
-	;
-	\item \texttt{- addTotal()} \\
-	.
+	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON), errback: function(QuizziPediaError))} \\
+	Metodo che permette la creazione di una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{question: JSON} \\
+			Rappresenta le informazioni che andranno a comporre la domanda da creare;
+			\item \texttt{callback: function(JSON)} \\
+			Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
+			\item \texttt{errback: function(QuizziPediaError)} \\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+		\end{itemize}   
+	\item \texttt{+ editQuestion(questionID: ObjectID, question: JSON, callback: function(JSON), errback: function(QuizziPediaError))} \\
+	Metodo che permette di modificare una domanda già esistente; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{questionID: ObjectID} \\
+			Indica l'identificativo della domanda da modificare;
+			\item \texttt{question : JSON} \\
+			Rappresenta le nuove informazioni che andranno a modificare le informazioni precedenti di una specifica domanda;
+			\item \texttt{callback: function(JSON)} \\
+			Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso non si verifichino errori durante l'esecuzione;
+			\item \texttt{errback: function(QuizziPediaError)} \\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+		\end{itemize}
+	\item \texttt{+ addKeyword(questionID: ObjectID, keyword: String, callback: function(JSON), errback: function(QuizziPediaError))} \\
+	Metodo che permette di aggiungere delle parole chiave ad una specifica domanda; \\
+		\textbf{Parametri}:
+			 \begin{itemize}
+			 	\item \texttt{questionID: ObjectID} \\
+			 	Indica l'identificativo della domanda a cui si devono inserire le parole chiave;
+			 	\item \texttt{keyword: String} \\
+			 	Rappresenta la parola chiave da inserire
+			 	\item \texttt{callback: function(JSON)} \\
+			 	Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso si verifichino errori durante l'esecuzione;
+			 	\item \texttt{errback: function(QuizziPediaError)} \\
+			 	Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+			 \end{itemize}
+	\item \texttt{+ updateLevel(questionID: ObjectID, userLevel: Number, isCorrected: boolean)} \\
+	Metodo che permette di aggiornare il livello di difficoltà della domanda, questo metodo è chiamato ogni qualvolta un utente risponde ad una domanda durante un allenamento;
+		\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionID: ObjectID} \\
+				Indica l'identificativo della domanda a cui si devono aggiornare le informazioni che riguardano la difficoltà;
+				\item \texttt{userLevel: Number} \\
+				Indica, con un numero compreso tra 1 e 1000, l'abilità dell'utente che ha risposto alla domanda;
+				\item \texttt{isCorrected: boolean} \\
+				Indica se l'utente che ha risposto alla domanda ha risposto correttamente.
+			\end{itemize}  
+	\item \texttt{- addCorrect(questionID : ObjectID)} \\
+	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda; \\
+		\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionID: ObjectID} \\
+				Indica l'identificativo della domanda a cui si deve incrementare il contatore delle risposte date correttamente.
+			\end{itemize}
+	\item \texttt{- addTotal(questionID : ObjectID)} \\
+	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda.
+		\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionID: ObjectID} \\
+				Indica l'identificativo della domanda a cui si deve incrementare il contatore complessivo delle risposte date. 
+			\end{itemize}
 	\end{itemize}
 \end{itemize}
