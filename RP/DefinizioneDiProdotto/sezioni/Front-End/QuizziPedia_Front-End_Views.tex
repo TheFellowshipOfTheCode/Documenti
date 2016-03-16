@@ -82,124 +82,204 @@
 \paragraph{QuizziPedia::Front-End::Views::UserView}
 \begin{itemize}
 	\item \textbf{Descrizione}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
-	\item \textbf{Utilizzo}:  
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Utilizzo}:  permette ad un utente di visualizzare i propri dati personali e le proprie statistiche e di controllare a quali questionari è iscritto. 
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{OUT} \texttt{StatisticsDirective}
+		\item \textit{OUT} \texttt{UserDetailsDirective}
+		\item \textit{OUT} \texttt{QuestionariDetailsDirective}
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::OtherUserView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i dati personali e le statistiche di un utente ricercato;
+	\item \textbf{Utilizzo}: viene visualizzata dopo la ricerca di un utente e permette all'utente che ha effettuato la ricerca di visualizzare i dati personali e le statistiche di un utente ricercato;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{OUT} \texttt{StatisticsDirective}
+		\item \textit{OUT} \texttt{UserDetailsDirective}
 	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::ProfileManagementView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema;
+	\item \textbf{Utilizzo}: permette all'utente di modificare tutti i campi elencati e di rendere persistenti queste modifiche se sono accettate dal sistema;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ProfileManagementController} \\
 	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::QuestionsManagementView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente l'elenco delle domande create; 
+	\item \textbf{Utilizzo}: visualizza l'elenco delle domande create permettendo all'utente di crearne una nuova e di modificarne una presente nell'elenco;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionsManagementController} \\
+		\item \textit{OUT} \texttt{OneQuestionDirective} \\
+		\item \textit{OUT} \texttt{NewQuestionButtonsDirective} \\ 
 	\end{itemize}
-\paragraph{QuizziPedia::Front-End::Views::TrueFalseView}
+	\item \textbf{Attributi}
+\end{itemize}
+
+\paragraph{QuizziPedia::Front-End::Views::TrueFalseQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda vero/falso; 
+	\item \textbf{Utilizzo}: permette all'utente di creare una domanda vero/falso compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{TrueFalseQuestionsController} \\
+		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+		\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
+		\item \textit{OUT} \texttt{QuestionTextDirective} \\
+		\item \textit{OUT} \texttt{AnswerChoiceDirective} \\   
 	\end{itemize}
+\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::MultipleQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a risposta multipla;
+	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a risposta multipla compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+		\begin{itemize}
+			\item \textit{IN} \texttt{MultiplyQuestionsController} \\
+			\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+			\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
+			\item \textit{OUT} \texttt{QuestionTextDirective} \\
+			\item \textit{OUT} \texttt{AnswerChoiceDirective} \\   
+		\end{itemize}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::ConnectionQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a collegamento;
+	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a collegamento compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ConnectionQuestionsController} \\
+		\item \textit{IN} \texttt{InputToListController} \\
+		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::ImagesSortingQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a ordinamento immagini;
+	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento immagini compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ImagesSortingQuestionsController} \\
+		\item \textit{IN} \texttt{InputToListController} \\
+		\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
+		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::StringsSortingQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a ordinamento stringhe;
+	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento stringhe compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+		\begin{itemize}
+			\item \textit{IN} \texttt{StringsSortingQuestionsController} \\
+			\item \textit{IN} \texttt{InputToListController} \\
+			\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+			\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
+		\end{itemize}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a riempimento testo;
+	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda a riempimento testo compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{FillingQuestionsController} \\
+		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::ClickableAreaQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
+	\item \textbf{Descrizione}: view contenente i campi per creare una domanda ad area cliccabile;
+	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda ad area cliccabile compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ClickableAreaQuestionsController} \\
+		\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
+		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
+		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
+\paragraph{QuizziPedia::Front-End::Views::EditorQMLView}
+\begin{itemize}
+	\item \textbf{Descrizione}: view contenente l'editor QML per la creazione di domande personalizzate;
+	\item \textbf{Utilizzo}: permette ad un utente di creare domande personalizzate attraverso la scrittura del codice QML direttamente nell'editor di testo presente nella view;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{EditorQMLController} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::TrainingView}
 \begin{itemize}
 	\item \textbf{Descrizione}
 	\item \textbf{Utilizzo}
 	\item \textbf{Relazioni con altre classi}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionnaireView}
 \begin{itemize}
 	\item \textbf{Descrizione}
 	\item \textbf{Utilizzo}
 	\item \textbf{Relazioni con altre classi}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::QuestionnaireManagementView}
 \begin{itemize}
 	\item \textbf{Descrizione}
 	\item \textbf{Utilizzo}
 	\item \textbf{Relazioni con altre classi}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::TemplateQuestionnaireView}
 \begin{itemize}
 	\item \textbf{Descrizione}
 	\item \textbf{Utilizzo}
 	\item \textbf{Relazioni con altre classi}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::RegistrationManagementView}
 \begin{itemize}
 	\item \textbf{Descrizione}
 	\item \textbf{Utilizzo}
 	\item \textbf{Relazioni con altre classi}
 	\item \textbf{Attributi}
-	\end{itemize}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::ResultsView}
-\begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
-	\item \textbf{Attributi}
-	\end{itemize}
-\paragraph{QuizziPedia::Front-End::Views::EditorQMLView}
 \begin{itemize}
 	\item \textbf{Descrizione}
 	\item \textbf{Utilizzo}
