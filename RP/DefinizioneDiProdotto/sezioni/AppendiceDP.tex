@@ -60,8 +60,6 @@ Nello specifico di \textit{AngularJS\ped{G}} \texttt{Injector} funziona da \text
 	\end{itemize}
 \textbf{Applicabilità}	Il design pattern \textit{iterator\ped{G}}, quindi, supera le soluzioni che si possono ottenere con la pura programmazione ad oggetti mediante codice più complesso.
 \\
-\textbf{Utilizzo}
-\\\\
 \textbf{Struttura}	Il pattern \textit{iterator\ped{G}} definisce due gerarchie di classi: una per i contenitori e una per gli iteratori\ped{G}. Le classi contenitore possono essere specializzate per tipo di elemento contenuto o per tipo di struttura in cui gli elementi sono organizzati. Le classi di iteratori\ped{G} sono specializzati per tipo di contenitore (iteratore\ped{G} concreto) e per tipo di navigazione attraverso la sequenza di elementi (iteratori\ped{G} specializzati).
 \\
 \label{Struttura logica del pattern Iterator}
@@ -84,28 +82,15 @@ Nello specifico di \textit{AngularJS\ped{G}} \texttt{Injector} funziona da \text
 \subsubsection{Observer}
 \textbf{Scopo}	Definisce una dipendenza “1..n” fra oggetti, riflettendo la modifica di un oggetto sui dipendenti.
 \\\\
-\textbf{Motivazione}	Il design pattern \textit{observer\ped{G}} verrà utilizzato per mantenere la consistenza fra oggetti. Il pattern definisce come implementare la relazione di dipendenza:
+\textbf{Motivazione}	In alcuni casi è necessario tenere sincronizzati vari oggetti e, nel caso un oggetto venga modificato, avere la possibilità di riflettere il cambiamento sugli oggetti dipendenti. \\ Il pattern \textit{Observer\ped{G}} permette di implementare ciò definendo due tipologie di oggetti: i \textit{subject}, che rappresentano gli oggetti osservati, e gli \textit{observer\ped{G}} che rappresentano gli oggetti che osservano lo stato del \texttt{subject}. Con questo pattern è possibile quindi realizzare un sistema \textit{publish-subscribe}, nel quale i vari \textit{subject} si registrano per essere notificati dalle modifiche subite dal \textit{subject}.
+\\\\
+\textbf{Applicabilità}	Il pattern \textit{observer\ped{G}} viene usato nei seguenti casi:
 	\begin{itemize}
-		\item \textit{Subject}: effettua le notifiche;
-		\item \textit{Observer}: si aggiorna in risposta ad una notifica.
+		\item Si vuole che il cambiamento dello stato di un oggetto provochi l'aggiornamento di altri oggetti;
+		\item Si vuole notificare degli oggetti dell'avvenimento di un determinato evento senza sapere il loro tipo.
 	\end{itemize}
-\textbf{Applicabilità}	
-\\\\
+
 \textbf{Utilizzo}
-\\\\
-\textbf{Struttura}
-\\\\
-\textbf{Collaborazioni}
-\\\\
-\textbf{Svantaggi}
-\subsubsection{Strategy}
-\textbf{Scopo}
-\textbf{Motivazione}
-\textbf{Applicabilità}
-\textbf{Utilizzo}
-\textbf{Struttura}
-\textbf{Collaborazioni}
-\textbf{Svantaggi}
 
 \subsection{Architetturali}
 \subsubsection{MVC}
