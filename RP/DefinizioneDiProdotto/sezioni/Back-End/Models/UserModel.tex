@@ -60,7 +60,7 @@
 	\item \textbf{Metodi}
 		\begin{itemize}
 		\item
-		- \texttt{generateHash(password: String): String} \\
+		- \texttt{hashPassword(password: String): String} \\
 		Effettua l'hashing della stringa password se non è già stata criptata tramite campo salt per evitare attacchi di tipo rainbow. \\
 		\textbf{Parametri} 
 			\begin{itemize}
@@ -75,7 +75,106 @@
 			\begin{itemize}
 			\item
 				\texttt{password: String} \\
-				Rappresenta la password dell'utente.
+				Rappresenta la password inserita dall'utente.
+			\end{itemize}
+		\item
+		+ \texttt{editUser(content: JSON, callback: function(JSON), errback: function(QuizzipediaError))} \\
+		Questo metodo aggiorna i dati personali dell'utente. Restituisce un oggetto JSON che descrive l’elemento dopo l’aggiornamento oppure un messaggio di errore.	\\
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item
+				\texttt{content: JSON} \\
+				Rappresenta i dati dell'utente da aggiornare.
+			\item	
+				\texttt{callback: function(JSON)} \\
+				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.
+			\item	
+				\texttt{errback: function(QuizzipediaError)} \\
+				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
+			\end{itemize}	
+		+ \texttt{editPassword(password: String, errback: function(QuizzipediaError))} \\
+		Questo metodo aggiorna la password vecchia dell'utente con quella passata per parametro. Restituisce un messaggio di errore nel caso in cui si verificati dei problemi nel cambio della password.	\\
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item
+				\texttt{password: String} \\
+				Rappresenta la nuova password dell'utente da sostituire a quella vecchia.
+			\item	
+				\texttt{errback: function(QuizzipediaError)} \\
+				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
+			\end{itemize}
+		+ \texttt{setImg(image : String, errback : function(QuizziPediaError))} \\	
+		Questo metodo aggiorna l'immagine profilo dell'utente. Restituisce un messaggio di errore nel caso in cui si verificati dei problemi nell'aggiornamento dell'immagine.	\\	
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item
+				\texttt{image: String} \\
+				Rappresenta l'immagine per aggiornare la foto del profilo.
+			\item	
+				\texttt{errback: function(QuizzipediaError)} \\
+				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
+			\end{itemize}
+		+ \texttt{updateStatistics(statistics : JSON, callback : function(JSON))} \\	
+		Questo metodo aggiorna le statistiche dell'utente in un determinato argomento. Restituisce un oggetto JSON che descrive le statistiche dell'utente dopo l'aggiornamento.	\\	
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item
+				\texttt{statistics: JSON} \\
+				Rappresenta il contenuto delle statistiche riguardanti l'esercitazione effettuata in un determinato argomento da utilizzare per aggiornare quelle esistenti .
+			\item	
+				\texttt{callback: function(JSON)} \\
+				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.
+			\end{itemize}	
+		+ \texttt{upLevel(callback : function(JSON))} \\
+		Questo metodo aggiorna il livello di difficoltà relativo alla capacità dell'utente a rispondere a determinate domande. Restituisce un oggetto JSON che descrive il livello dell'utente dopo l'aggiornamento.	\\	
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item	
+				\texttt{callback: function(JSON)} \\
+				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.		
+			\end{itemize}	
+		+ \texttt{deleteUser(callback : function(JSON), errback:function(QuizzipediaError))} \\	
+		Questo metodo elimina dal sistema l'utente registrato. Restituisce un oggetto JSON che descrive i dati dell'utente eliminato.	\\	
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item	
+				\texttt{callback: function(JSON)} \\
+				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.	
+			\item	
+				\texttt{errback: function(QuizzipediaError)} \\
+				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.		
+			\end{itemize}
+		+ \texttt{updateSummary(quiz : JSON)}	
+		Questo metodo aggiorna la cronologia dell'utente in relazione ai questionari svolti.\\	
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item	
+				\texttt{quiz : JSON)} \\
+				Rappresenta il contenuto del questionario svolto .		
+			\end{itemize}
+		+ \texttt{getSummaries(callback : function(JSON), errback : function(QuizziPediaError))}	
+		Questo metodo ritorna un JSON contenente la cronologia dei questionari svolti da parte dell'utente, in caso di errori una callback che segnalerà i relativi problemi.\\
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item	
+				\texttt{callback: function(JSON)} \\
+				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.	
+			\item	
+				\texttt{errback: function(QuizzipediaError)} \\
+				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.	
+		+ \texttt{getUsers(searchword : String, callback : function(JSON), errback : function(QuizziPediaError))}		
+		Questo metodo ritorna un JSON contenente i dati degli utenti in base alla parola chiave cercata, in caso di errori una callback che segnalerà i relativi problemi.\\
+		\textbf{Parametri} 
+			\begin{itemize}
+			\item	
+				\texttt{searchword: String} \\
+				Rappresenta la parola chiave cercata in base alla quale verrà filtrata la ricerca degli utenti.	
+			\item	
+				\texttt{callback: function(JSON)} \\
+				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.	
+			\item	
+				\texttt{errback: function(QuizzipediaError)} \\
+				Questo parametro rappresenta la callback che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.		
 			\end{itemize}
 		\end{itemize}	
 \end{itemize}
