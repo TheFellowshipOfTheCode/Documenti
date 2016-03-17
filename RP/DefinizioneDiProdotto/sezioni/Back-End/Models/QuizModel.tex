@@ -31,15 +31,19 @@
 		\end{itemize}
 	\item \textbf{Metodi}
 		\begin{itemize}
-			\item \texttt{+ createQuiz(info: JSON, errback: QuizziPediaError): void}\\
+		
+			\item \texttt{+ createQuiz(info: JSON, callback: function(JSON), errback: function(QuizziPediaError)): void}\\
 			Crea un questionario con i dati che vengono passati.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{info: JSON}\\
 				Rappresenta i dati del questionario che verrà creato.
-				\item \texttt{errback: QuizziPediaError}\\
+				\item \texttt{callback: function(JSON)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				\item \texttt{errback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
+			
 			\item \texttt{+ addQuestion(questionID: ObjectId, quizID: ObjectId): void}\\
 			Aggiunge una domanda al questionario.\\
 			\textbf{Parametri}:
@@ -49,6 +53,7 @@
 				\item \texttt{quizID: ObjectId}\\
 				Rappresenta l'identificativo del questionario a cui verrà aggiunta una domanda.
 			\end{itemize}
+			
 			\item \texttt{+ removeQuestion(questionID: ObjectId, quizID: ObjectId): void}\\
 			Rimuove una domanda dal questionario.\\
 			\textbf{Parametri}:
@@ -58,7 +63,8 @@
 				\item \texttt{quizID: ObjectId}\\
 				Rappresenta l'identificativo del questionario a cui verrà rimossa la domanda.
 			\end{itemize}
-			\item \texttt{+ setTitle(title: String, quizID: ObjectId,  errback: QuizziPediaError): void}\\ 						
+			
+			\item \texttt{+ setTitle(title: String, quizID: ObjectId,  errback: function(QuizziPediaError)): void}\\ 		
 			Dà un titolo al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -66,9 +72,10 @@
 				Rappresenta il titolo da dare al questionario.
 				\item \texttt{quizID: ObjectId}\\
 				Rappresenta l'identificativo del questionario a cui verrà dato il titolo.
-				\item \texttt{errback: QuizziPediaError}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				\item \texttt{errback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
+			
 			\item \texttt{+ addUser(quizID: ObjectId, userID: ObjectId): void}\\
 			Iscrive un utente al questionario.\\
 			\textbf{Parametri}:
@@ -78,6 +85,7 @@
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da aggiungere al questionario.
 			\end{itemize}
+			
 			\item \texttt{+ addActiveUser(quizID: ObjectId, userID: ObjectId): void}\\
 			Iscrive un utente al questionario.\\
 			\textbf{Parametri}:
@@ -87,7 +95,16 @@
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da aggiungere al questionario.
 			\end{itemize}
-			\item \texttt{+ removeUser(quizID: ObjectId, userID: ObjectId, errback: QuizziPediaError): void}\\
+			
+			\item \texttt{+ addCorrect(quizID: ObjectId): void}\\
+			Incrementa il numero di risposte corrette date alle domande del questionario.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{quizID: ObjectId}\\
+				Rappresenta l'identificativo del questionario di cui si deve incrementare il numero di risposte corrette date.
+			\end{itemize}
+			
+			\item \texttt{+ removeUser(quizID: ObjectId, userID: ObjectId, errback: function(QuizziPediaError)): void}\\
 			Rimuovere un utente dalla lista degli iscritti al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -95,19 +112,32 @@
 				Rappresenta l'identificativo del questionario da cui verrà rimosso un utente.
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da rimuovere dalla lista degli iscritti al questionario.
-				\item \texttt{errback: QuizziPediaError}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				\item \texttt{errback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
-			\item \texttt{+ addCorrect(): void}\\
-			Incrementa il numero di risposte corrette date alle domande del questionario.\\
-			\item \texttt{+ searchQuiz(title: String, errback: QuizziPediaError): JSON}\\
+			
+			\item \texttt{+ searchQuiz(searchword: String, callback: function(JSON), errback: function(QuizziPediaError)): void}\\
 			Ricerca un questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{title: String}\\
 				Rappresenta il titolo del questionario da ricercare.
-				\item \texttt{errback: QuizziPediaError}\\
+				\item \texttt{callback: function(JSON)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				\item \texttt{errback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
+			\end{itemize}
+			
+			\item \texttt{+ getQuizzes(userID: ObjectId, callback: function(JSON), errback: function(QuizziPediaError)): void}\\
+			Ritorna la cronologia dei questionari svolti da un utente.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{userID: ObjectId}\\
+				Rappresenta l'identificativo dell'utente per cui si deve mostrare la cronologia dei questionari svolti.
+				\item \texttt{callback: function(JSON)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				\item \texttt{errback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 		\end{itemize}
 \end{itemize}
