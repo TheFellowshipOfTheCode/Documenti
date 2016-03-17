@@ -37,11 +37,11 @@
 		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Utilizzo}: ;
+			\item \textbf{Descrizione}: rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione;
+			\item \textbf{Utilizzo}: viene utilizzata per racchiudere tutte le informazioni riguardanti l’errore;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item ;
+				\item \textit{IN} \texttt{ErrorController}: 
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -64,11 +64,35 @@
 		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Utilizzo}: ;
+			\item \textbf{Descrizione}: rappresenta le informazioni per la giusta traduzione per la struttura della pagina visualizzata;
+			\item \textbf{Utilizzo}: viene utilizzata per racchiudere tutte le informazioni riguardanti la giusta traduzione per la struttura della pagina visualizzata;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item ;
+				\item \textit{IN} \texttt{LoginController}: 
+				\item \textit{IN} \texttt{SignUpController}: 
+				\item \textit{IN} \texttt{HomeController}: 
+				\item \textit{IN} \texttt{SearchController}: 
+				\item \textit{IN} \texttt{ProfileManagementController}: 
+				\item \textit{IN} \texttt{LogoutController}: 
+				\item \textit{IN} \texttt{PasswordForgotController}:
+				\item \textit{IN} \texttt{TrueFalseController}: 
+				\item \textit{IN} \texttt{MultiplyQuestionsController}: 
+				\item \textit{IN} \texttt{ConnectionQuestionsController}: 
+				\item \textit{IN} \texttt{ImagesSortingQuestionsController}: 
+				\item \textit{IN} \texttt{StringsSortingQuestionsController}: 
+				\item \textit{IN} \texttt{FillingQuestionsController}: 
+				\item \textit{IN} \texttt{ClickableAreaQuestionsController}: 
+				\item \textit{IN} \texttt{EditorQMLController}: 
+				\item \textit{IN} \texttt{QuestionsManagementController}: 
+				\item \textit{IN} \texttt{TrainingController}: 
+				\item \textit{IN} \texttt{FillingQuestionnaireController}: 
+				\item \textit{IN} \texttt{TemplateQuestionnaireController}: 
+				\item \textit{IN} \texttt{EnrollmentManagementController}: 
+				\item \textit{IN} \texttt{ResultsController}: 
+				\item \textit{IN} \texttt{QuestionnaireManagementController}: 
+				\item \textit{IN} \texttt{MenuController}: 
+				\item \textit{IN} \texttt{FooterController}: 
+				\item \textit{IN} \texttt{ErrorController}:
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -91,11 +115,13 @@
 		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Utilizzo}: ;
+			\item \textbf{Descrizione}: rappresenta una domanda. Contiene tutte le informazioni necessarie alla
+			presentazione del contenuto della domanda;
+			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di una domanda;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item ;
+
+				\item \textit{IN} \texttt{ResultsController}:
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -118,11 +144,15 @@
 		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Utilizzo}: ;
+			\item \textbf{Descrizione}: rappresenta un questionario. Contiene tutte le informazioni necessarie alla
+			presentazione del contenuto del questionario;
+			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di un questionario;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item ;
+				\item \textit{IN} \texttt{SearchController}:
+				\item \textit{IN} \texttt{QuestionnaireDetailsController}:
+				  
+				\item \textit{IN} \texttt{KeywordsController}
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -145,8 +175,9 @@
 		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Utilizzo}: ;
+			\item \textbf{Descrizione}: rappresenta un allenamento. Contiene tutte le informazioni necessarie alla
+			presentazione del contenuto di un allenamento;
+			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di un allenamento;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
 				\item ;
@@ -172,11 +203,15 @@
 		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: ;
-			\item \textbf{Utilizzo}: ;
+			\item \textbf{Descrizione}: rappresenta un utente. Contiene tutte le informazioni necessarie alla
+			presentazione del contenuto di un utente sia nella visualizzazione che nella gestione di un profilo;
+			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di un utente;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item ;
+				\item \textit{IN} \texttt{LoginController}: 
+				\item \textit{IN} \texttt{SearchController}:
+				\item \textit{IN} \texttt{UserDetailsController}:
+				\item \textit{IN} \texttt{StatisticsController}:
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
