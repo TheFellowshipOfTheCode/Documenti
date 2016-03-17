@@ -36,7 +36,7 @@
 			\item \texttt{topicId : ObjectId} \\
 			Rappresenta l'identificativo dell'argomento da aggiornare.
 			\end{itemize}
-			\item \texttt{+ updateTotal(topicId : ObjectId): void} \\
+			\item \texttt{+ updateTotal(topicId : ObjectId) : void} \\
 			Metodo che consente di tenere aggiornato il numero totale di risposte date a domande sull'argomento. \\
 			\begin{itemize}
 			\item \texttt{topicId : ObjectId} \\
@@ -54,7 +54,19 @@
 			Metodo che consente di ottenere le domande sull'argomento attraverso la funzione di callback oppure un messaggio di errore. \\
 			\begin{itemize}
 			\item \texttt{topicId : ObjectId} \\
-			Rappresenta l'identificativo dell'argomento da aggiornare;
+			Rappresenta l'identificativo dell'argomento trattato dalle domande che si vuole ottenere;
+			\item \texttt{callback : function(JSON)} \\
+			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
+			\item \texttt{errback : function(QuizziPediaError)} \\
+			Rappresenta la callback che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+			\end{itemize}
+			\item \texttt{+ getNextQuestion(topicId : ObjectId, levelUser : Number, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			Metodo che consente di ottenere la domanda successiva nella modalità allenamento, in base al livello dell'utente che lo sta svolgendo. \\
+			\begin{itemize}
+			\item \texttt{topicId : ObjectId} \\
+			Rappresenta l'identificativo dell'argomento trattato nell'allenamento;
+			\item \texttt{levelUser : Number} \\
+			Rappresenta il livello dell'utente che sta svolgendo l'allenamento;
 			\item \texttt{callback : function(JSON)} \\
 			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
 			\item \texttt{errback : function(QuizziPediaError)} \\
