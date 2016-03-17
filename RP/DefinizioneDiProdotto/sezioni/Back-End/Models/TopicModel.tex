@@ -30,41 +30,34 @@
 		\end{itemize}
 	\item \textbf{Metodi}
 		\begin{itemize}
-			\item \texttt{+ updateCorrect(topicId : ObjectId) : void} \\
-			Metodo che consente di tenere aggiornato il numero di risposte esatte date a domande sull'argomento. \\
-			\begin{itemize}
-			\item \texttt{topicId : ObjectId} \\
-			Rappresenta l'identificativo dell'argomento da aggiornare.
-			\end{itemize}
-			\item \texttt{+ updateTotal(topicId : ObjectId) : void} \\
-			Metodo che consente di tenere aggiornato il numero totale di risposte date a domande sull'argomento. \\
-			\begin{itemize}
-			\item \texttt{topicId : ObjectId} \\
-			Rappresenta l'identificativo dell'argomento da aggiornare.
-			\end{itemize}
-			\item \texttt{+ addQuestion(topicId : ObjectId, questionID : ObjectID) : void} \\
+			\item \texttt{+ updateCorrect() : void} \\
+			Metodo che consente di tenere aggiornato il numero di risposte esatte date a domande sull'argomento.
+			\item \texttt{+ updateTotal() : void} \\
+			Metodo che consente di tenere aggiornato il numero totale di risposte date a domande sull'argomento.
+			\item \texttt{+ addQuestion(questionID : ObjectID) : void} \\
 			Metodo che consente di aggiunge una domanda tra le domande sull'argomento. \\
+			\textbf{Parametri}:
 			\begin{itemize}
-			\item \texttt{topicId : ObjectId} \\
-			Rappresenta l'identificativo dell'argomento da aggiornare;
 			\item \texttt{questionId : ObjectId} \\
 			Rappresenta l'identificativo della domanda da aggiungere.
 			\end{itemize}
-			\item \texttt{+ getQuestions(topicId : ObjectId, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			\item \texttt{+ getQuestions(language : String, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
 			Metodo che consente di ottenere le domande sull'argomento attraverso la funzione di callback oppure un messaggio di errore. \\
+			\textbf{Parametri}:
 			\begin{itemize}
-			\item \texttt{topicId : ObjectId} \\
-			Rappresenta l'identificativo dell'argomento trattato dalle domande che si vuole ottenere;
+			\item \texttt{language : String} \\
+			Rappresenta la lingua in cui sono scritte le domande che si vuole ottenere;
 			\item \texttt{callback : function(JSON)} \\
 			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
 			\item \texttt{errback : function(QuizziPediaError)} \\
 			Rappresenta la callback che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 			\end{itemize}
-			\item \texttt{+ getNextQuestion(topicId : ObjectId, levelUser : Number, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			\item \texttt{+ getNextQuestion(language : String, levelUser : Number, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
 			Metodo che consente di ottenere la domanda successiva nella modalità allenamento, in base al livello dell'utente che lo sta svolgendo. \\
+			\textbf{Parametri}:
 			\begin{itemize}
-			\item \texttt{topicId : ObjectId} \\
-			Rappresenta l'identificativo dell'argomento trattato nell'allenamento;
+			\item \texttt{language : String} \\
+			Rappresenta la lingua in cui è scritta la domanda che si vuole ottenere;
 			\item \texttt{levelUser : Number} \\
 			Rappresenta il livello dell'utente che sta svolgendo l'allenamento;
 			\item \texttt{callback : function(JSON)} \\
