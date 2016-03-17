@@ -21,6 +21,20 @@
 \end{itemize}
 \subsubsection{Classi}
 
+\paragraph{QuizziPedia::Front-End::Views::Index}
+\begin{itemize}
+	\item \textbf{Descrizione}:  view generale dell'applicazione;
+	\item \textbf{Utilizzo}: contiene gli elementi che saranno presenti in ogni pagina dell'applicazione;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{MenuBarDirective} \\
+		\item \textit{IN} \texttt{SearchDirective} \\
+		\item \textit{IN} \texttt{ErrorsDirective} \\
+		\item \textit{IN} \texttt{FooterDirective} \\ 
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
 \paragraph{QuizziPedia::Front-End::Views::LoginView}
 \begin{itemize}
 	\item \textbf{Descrizione}: view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
@@ -308,16 +322,22 @@
 
 \paragraph{QuizziPedia::Front-End::Views::RegistrationManagementView}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: view per la gestione degli utenti iscritti a un proprio questionario;
+	\item \textbf{Utilizzo}: permette di visualizzare tutti gli utenti iscritti al proprio questionario e abilitarli alla compilazione;
 	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{RegistrationManagementController} \\
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::ResultsView}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: view contenente i risultati conseguiti dagli utenti che hanno compilato il proprio questionario;
+	\item \textbf{Utilizzo}: permette di visualizzare i risultati di ogni utente conseguiti nella compilazione del questionario;
 	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ResultsController} \\
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
