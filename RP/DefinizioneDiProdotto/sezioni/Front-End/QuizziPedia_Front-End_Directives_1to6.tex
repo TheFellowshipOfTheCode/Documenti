@@ -1,6 +1,38 @@
-AlwaysSearchDirective
-AnswerChoiceDirective
-ErrorsDirective
-FooterDirective
+\paragraph{QuizziPedia::Front-End::Directives::AnswerChoiceDirective}
+\begin{itemize}
+	\item \textbf{Descrizione}: directive contenente le risposte a scelta;
+	\item \textbf{Utilizzo}: permette all'utente di utilizzare quest'unica direttiva per creare domande vero/falso e risposte a scelta multipla;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{TrueFalseQuestionsView} \\
+		\item \textit{IN} \texttt{MultipleQuestionsView} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
+\paragraph{QuizziPedia::Front-End::Directives::ErrorsDirective}
+\begin{itemize}
+	\item \textbf{Descrizione}: directive che mostra l'eventuale errore dopo un'azione;
+	\item \textbf{Utilizzo}: permette all'\texttt{ErrorController} di utilizzare un template unico per la visualizzazione dei diversi errori;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ErrorsController} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
+\paragraph{QuizziPedia::Front-End::Directives::FooterDirective}
+\begin{itemize}
+	\item \textbf{Descrizione}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;
+	\item \textbf{Utilizzo}: permette all'\texttt{ErrorController} di utilizzare un template unico per la visualizzazione dei diversi errori;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ErrorsController} \\
+	\end{itemize}
+	\item \textbf{Attributi}
+\end{itemize}
+
+
+
 ImageInTheQuestionDirective
 KeywordsDirective
