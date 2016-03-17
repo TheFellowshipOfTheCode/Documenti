@@ -61,7 +61,7 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{HomeController} \\
-		\item \textit{OUT} \texttt{SearchDirective} \\
+		\item \textit{IN} \texttt{SearchDirective} \\
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -73,8 +73,8 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{SearchController} \\
-		\item \textit{OUT} \texttt{SubscribeResultDirective} \\
-		\item \textit{OUT} \texttt{UserResultDirective} \\ 
+		\item \textit{IN} \texttt{SubscribeResultDirective} \\
+		\item \textit{IN} \texttt{UserResultsDirective} \\ 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -85,9 +85,9 @@
 	\item \textbf{Utilizzo}:  permette ad un utente di visualizzare i propri dati personali e le proprie statistiche e di controllare a quali questionari è iscritto. 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{OUT} \texttt{StatisticsDirective}
-		\item \textit{OUT} \texttt{UserDetailsDirective}
-		\item \textit{OUT} \texttt{QuestionariDetailsDirective}
+		\item \textit{IN} \texttt{StatisticsDirective}
+		\item \textit{IN} \texttt{UserDetailsDirective}
+		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -98,8 +98,8 @@
 	\item \textbf{Utilizzo}: viene visualizzata dopo la ricerca di un utente e permette all'utente che ha effettuato la ricerca di visualizzare i dati personali e le statistiche di un utente ricercato;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{OUT} \texttt{StatisticsDirective}
-		\item \textit{OUT} \texttt{UserDetailsDirective}
+		\item \textit{IN} \texttt{StatisticsDirective}
+		\item \textit{IN} \texttt{UserDetailsDirective}
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -122,8 +122,8 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionsManagementController} \\
-		\item \textit{OUT} \texttt{OneQuestionDirective} \\
-		\item \textit{OUT} \texttt{NewQuestionButtonsDirective} \\ 
+		\item \textit{IN} \texttt{OneQuestionDirective} \\
+		\item \textit{IN} \texttt{NewQuestionButtonDirective} \\ 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -135,10 +135,10 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{TrueFalseQuestionsController} \\
-		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-		\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
-		\item \textit{OUT} \texttt{QuestionTextDirective} \\
-		\item \textit{OUT} \texttt{AnswerChoiceDirective} \\   
+		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
+		\item \textit{IN} \texttt{QuestionTextDirective} \\
+		\item \textit{IN} \texttt{AnswerChoiceDirective} \\   
 	\end{itemize}
 \item \textbf{Attributi}
 \end{itemize}
@@ -150,10 +150,10 @@
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textit{IN} \texttt{MultiplyQuestionsController} \\
-			\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-			\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
-			\item \textit{OUT} \texttt{QuestionTextDirective} \\
-			\item \textit{OUT} \texttt{AnswerChoiceDirective} \\   
+			\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+			\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
+			\item \textit{IN} \texttt{QuestionTextDirective} \\
+			\item \textit{IN} \texttt{AnswerChoiceDirective} \\   
 		\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -166,8 +166,8 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{ConnectionQuestionsController} \\
 		\item \textit{IN} \texttt{InputToListController} \\
-		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -180,9 +180,9 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{ImagesSortingQuestionsController} \\
 		\item \textit{IN} \texttt{InputToListController} \\
-		\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
-		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
+		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -195,8 +195,8 @@
 		\begin{itemize}
 			\item \textit{IN} \texttt{StringsSortingQuestionsController} \\
 			\item \textit{IN} \texttt{InputToListController} \\
-			\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-			\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
+			\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+			\item \textit{IN} \texttt{QuestionTextDirective} \\ 
 		\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -208,8 +208,8 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{FillingQuestionsController} \\
-		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -221,9 +221,9 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ClickableAreaQuestionsController} \\
-		\item \textit{OUT} \texttt{ImageInTheQuestionDirective} \\
-		\item \textit{OUT} \texttt{TopicKeywordsDirective} \\
-		\item \textit{OUT} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
+		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
+		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -241,48 +241,83 @@
 
 \paragraph{QuizziPedia::Front-End::Views::TrainingView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: view principale della modalità allenamento;
+	\item \textbf{Utilizzo}: all'interno di essa verrà caricato inizialmente il template dove si potranno scegliere l'argomento e le parole chiave dell'allenamento; verranno poi caricati i templates di ogni domanda in base alle preferenze scelte; 
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{TrainingController} \\
+		\item \textit{IN} \texttt{TrainingSetUpTemplate} \\
+		\item \textit{IN} \texttt{HeaderTextQuestionTemplate} \\
+		\item \textit{IN} \texttt{TrueFalseAnswerTemplate} \\
+		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate} \\
+		\item \textit{IN} \texttt{LinkingAnswerTemplate} \\
+		\item \textit{IN} \texttt{SortImagesAnswerTemplate} \\
+		\item \textit{IN} \texttt{SortTextAnswerTemplate} \\
+		\item \textit{IN} \texttt{EmptyChoiceAnswerTemplate} \\
+		\item \textit{IN} \texttt{ClickableAnswerTemplate} \\
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionnaireView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: view principale per la compilazione del questionario;
+	\item \textbf{Utilizzo}: all'interno di essa verrà caricato inizialmente il template contenente le informazioni generali relative al questionario; verranno poi caricati i templates di ogni domanda presente nel questionario;
+	\item \textbf{Relazioni con altre classi}: 
+	\begin{itemize}
+		\item \textit{IN} \texttt{FillingQuestionnaireController} \\
+		\item \textit{IN} \texttt{InfoQuestionnaireTemplate} \\
+		\item \textit{IN} \texttt{HeaderTextQuestionTemplate} \\
+		\item \textit{IN} \texttt{TrueFalseAnswerTemplate} \\
+		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate} \\
+		\item \textit{IN} \texttt{LinkingAnswerTemplate} \\
+		\item \textit{IN} \texttt{SortImagesAnswerTemplate} \\
+		\item \textit{IN} \texttt{SortTextAnswerTemplate} \\
+		\item \textit{IN} \texttt{EmptyChoiceAnswerTemplate} \\
+		\item \textit{IN} \texttt{ClickableAnswerTemplate} \\
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::QuestionnaireManagementView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: view principale per la gestione dei questionari;
+	\item \textbf{Utilizzo}: permette di visualizzare tutti i questionari creati, quelli abilitati per la compilazione e quelli non ancora abilitati;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionnaireManagementController} \\
+		\item \textit{IN} \texttt{CreationAndModifyDirective} \\
+		\item \textit{IN} \texttt{ExamModalityDirective} \\
+		\item \textit{IN} \texttt{QuestionnaireResultsDirective} \\
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Views::TemplateQuestionnaireView}
+\paragraph{QuizziPedia::Front-End::Views::CreateQuestionnaireView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: view per la creazione del questionario;
+	\item \textbf{Utilizzo}: permette all'utente di creare un questionario compilando tutti i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{CreateQuestionnaireController} \\
+		\item \textit{IN} \texttt{KeywordsDirective} \\
+		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective} \\ 
+	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::RegistrationManagementView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}:
+	\item \textbf{Utilizzo}:
+	\item \textbf{Relazioni con altre classi}:
 	\item \textbf{Attributi}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::ResultsView}
 \begin{itemize}
-	\item \textbf{Descrizione}
-	\item \textbf{Utilizzo}
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}:
+	\item \textbf{Utilizzo}:
+	\item \textbf{Relazioni con altre classi}:
 	\item \textbf{Attributi}
 \end{itemize}
