@@ -102,17 +102,17 @@
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Utilizzo}: ;
+	\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
+	\item \textbf{Utilizzo}: viene usato per permettere all'utente di scrivere o modificare il testo di una domanda;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{}: 
-		\item \textit{IN} \texttt{}: 
-		\item \textit{IN} \texttt{}: 
-		\item \textit{IN} \texttt{}: 
-		\item \textit{IN} \texttt{}: 
-		\item \textit{IN} \texttt{}: 
-		\item \textit{IN} \texttt{}: 
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: 
+		\item \textit{IN} \texttt{MultipleQuestionsView}: 
+		\item \textit{IN} \texttt{ConnectionQuestionsView}: 
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: 
+		\item \textit{IN} \texttt{StringsSortingQuestionsView}: 
+		\item \textit{IN} \texttt{FillingQuestionsView}: 
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -135,11 +135,54 @@
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Utilizzo}: ;
+	\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare. Ogni item di questa lista contiene:
+		\begin{itemize}
+			\item Nome del questionario;
+			\item Autore del questionario;
+			\item Argomento del questionario;
+			\item Parole chiave del questionario;
+		\end{itemize}
+	Al verificarsi dell'evento click su un item della lista l'utente verrà indirizzato alla view per la compilazione del questionario selezionato;
+	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare la lista di questionari che può compilare;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{}: 
+		\item \textit{IN} \texttt{UserView}: 
+		\item \textit{IN} \texttt{QuestionnaireDetailsController}: 
+	\end{itemize}
+	\item \textbf{Attributi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+	\item \textbf{Metodi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+\end{itemize}
+
+\paragraph{QuizziPedia::Front-End::Directives::QuestionnaireDoneDetailsDirective}
+
+\label{QuizziPedia::Front-End::Directives::QuestionnaireDoneDetailsDirective}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_QuestionnaireDetailsDoneDirective.png}
+	\caption{QuizziPedia::Front-End::Directives::QuestionnaireDetailsDoneDirective}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che ha già compilato e di conseguenza vederne le valutazioni. Ogni item di questa lista contiene:
+	\begin{itemize}
+		\item Nome del questionario;
+		\item Autore del questionario;
+		\item Argomento del questionario;
+		\item Parole chiave del questionario;
+		\item Valutazione del questionario.
+	\end{itemize};
+	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare la lista di questionari che ha compilato;
+	\item \textbf{Relazioni con altre classi}: 
+	\begin{itemize}
+		\item \textit{IN} \texttt{UserView}: 
+		\item \textit{IN} \texttt{QuestionnaireDetailsController}: 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -158,15 +201,22 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_QuestionsManagementQuestionnaireDirective.png}
-	\caption{QuizziPedia::Front-End::Directives::}
+	\caption{QuizziPedia::Front-End::Directives::QuestionsManagementQuestionnaireDirective}
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: ;
-	\item \textbf{Utilizzo}: ;
+	\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di:
+		\begin{itemize}
+			\item Effettuare delle ricerche sul database di domande;
+			\item Selezionare le domande da inserire nel questionario;
+			\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
+		\end{itemize}
+		Questo componente si presta sia per la creazione che per la modifica di un questionario;
+	\item \textbf{Utilizzo}: viene utilizzato per gestire le domande di un questionario. Esso permette di ricercare, inserire e togliere domande dalla lista di domande che andranno a comporre il questionario;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{}: 
+		\item \textit{IN} \texttt{CreateQuestionnaireView}: 
+		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
