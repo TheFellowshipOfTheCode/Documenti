@@ -50,5 +50,16 @@
 			\item \texttt{next: function(QuizziPediaError)} \\
 			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 			\end{itemize}
+			\item \texttt{+ getNextQuestion(req : Request, res : Response, next : function(QuizziPediaError))} \\
+			Restituisce la domanda successiva di un allenamento.  \\
+			\textbf{Parametri}:
+			\begin{itemize}
+			\item \texttt{req: Request} \\
+			Rappresenta la richiesta inviata al server. Contiene l'identificativo dell'argomento trattato nell'allenamento e il livello dell'utente che lo sta svolgendo;
+			\item \texttt{res: Response} \\
+			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo;
+			\item \texttt{next: function(QuizziPediaError)} \\
+			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+			\end{itemize}
 		\end{itemize}
 \end{itemize}
