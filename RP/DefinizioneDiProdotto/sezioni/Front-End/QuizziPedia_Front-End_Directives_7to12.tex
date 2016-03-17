@@ -9,11 +9,22 @@
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: rappresenta un ;
-	\item \textbf{Utilizzo}: viene utilizzato per ;
+	\item \textbf{Descrizione}: rappresenta un menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con del testo. Al click di un pulsante viene invocata la funzione ad esso associata;
+	\item \textbf{Utilizzo}: viene utilizzato per realizzare il menù, presente in ogni pagina dell'applicazione, che permette all'utente di selezionare un'opzione in base al contesto in cui si trova:
+		\begin{itemize}
+			\item Login;
+			\item Registrazione;
+			\item Ricerca;
+			\item Visualizzare il proprio profilo utente;
+			\item Gestire le domande create;
+			\item Gestire i questionari creati.
+		\end{itemize}
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{}: 
+		\item \textit{IN} \texttt{Index}: 
+		\item \textit{IN} \texttt{SearchDirective}: 
+		\item \textit{IN} \texttt{LogoutController}: 
+		\item \textit{IN} \texttt{MenuBarController}: 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
