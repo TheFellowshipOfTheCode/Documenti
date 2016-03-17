@@ -85,7 +85,8 @@
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
 		\item \textit{IN} \texttt{HomeView}: 
-		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{LangService}:
+		\item \textit{OUT} \texttt{ErrorController}:  
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -108,7 +109,7 @@
 	\item \textbf{Utilizzo}: fornisce all'utente le funzionalità di ricerca per utenti e questionari;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ErrorController}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 		\item \textit{OUT} \texttt{UserDetailsService}: 
 		\item \textit{OUT} \texttt{QuizService}: 
 		\item \textit{OUT} \texttt{LangService}: 
@@ -137,6 +138,7 @@
 		\item \textit{IN} \texttt{ProfileManagementView}:  
 		\item \textit{OUT} \texttt{UserDetailsService}: 
 		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -162,6 +164,7 @@
 		\item \textit{OUT} \texttt{MenuDirective}:
 		\item \textit{OUT} \texttt{AuthService}: 
 		\item \textit{OUT} \texttt{LangService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -213,6 +216,7 @@
 		\item \textit{IN} \texttt{TrueFalseQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -224,20 +228,21 @@
 	\end{itemize}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Controllers::MultiplyQuestionsController}
+\paragraph{QuizziPedia::Front-End::Controllers::MultipleQuestionsController}
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_MultiplyQuestionsController.png}
-	\caption{QuizziPedia::Front-End::Controllers::MultiplyChoiceQuestion}
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_MultipleQuestionsController.png}
+	\caption{QuizziPedia::Front-End::Controllers::MultipleChoiceQuestion}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a risposta multipla nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{MultiplyQuestionsView}:  
+		\item \textit{IN} \texttt{MultipleQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -263,6 +268,7 @@
 		\item \textit{IN} \texttt{ConnectionQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -288,6 +294,7 @@
 		\item \textit{IN} \texttt{ImagesSortingQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -313,6 +320,7 @@
 		\item \textit{IN} \texttt{StringsSortingQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -338,6 +346,7 @@
 		\item \textit{IN} \texttt{FillingQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -363,6 +372,7 @@
 		\item \textit{IN} \texttt{ClickableAreaQuestionsView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -388,6 +398,7 @@
 		\item \textit{IN} \texttt{EditorQMLView}:  
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuestionService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -413,6 +424,7 @@
 		\item \textit{IN} \texttt{QuestionsManagementView}:  
 		\item \textit{OUT} \texttt{LangService}:
 		\item \textit{OUT} \texttt{QuestionService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -438,6 +450,7 @@
 		\item \textit{IN} \texttt{TrainingView}: 
 		\item \textit{IN} \texttt{TrainingSetUpTemplate}:
 		\item \textit{OUT} \texttt{LangService}:  
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -464,6 +477,7 @@
 		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: 
 		\item \textit{OUT} \texttt{LangService}: 
 		\item \textit{OUT} \texttt{QuizService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -489,6 +503,7 @@
 		\item \textit{IN} \texttt{CreateQuestionnaireView}:  
 		\item \textit{OUT} \texttt{QuizService}: 
 		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -514,6 +529,7 @@
 		\item \textit{IN} \texttt{RegistratioManagementView}: 
 		\item \textit{OUT} \texttt{QuizService}: 
 		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -539,6 +555,7 @@
 		\item \textit{IN} \texttt{ResultsView}: 
 		\item \textit{OUT} \texttt{QuizService}:
 		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -564,6 +581,7 @@
 		\item \textit{IN} \texttt{QuestionnaireManagementeView}: 
 		\item \textit{OUT} \texttt{QuizService}:
 		\item \textit{OUT} \texttt{LangService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -588,6 +606,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{MenuDirective}:  
 		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -612,6 +631,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{FooterDirective}:  
 		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -666,6 +686,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}:
 		\item \textit{OUT} \texttt{QuizService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -690,6 +711,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{UserDetailsDirective}: 
 		\item \textit{OUT} \texttt{UserDetailsService}:
+		\item \textit{OUT} \texttt{ErrorController}: 
 
 	\end{itemize}
 	\item \textbf{Attributi:}
@@ -721,7 +743,8 @@
 		\item \textit{IN} \texttt{SortTextAnswerTemplate}:  
 		\item \textit{IN} \texttt{EmptyChoiceAnswerTemnplate}:  
 		\item \textit{IN} \texttt{ClickableAnswerTemplate}:  
-		\item \textit{OUT} \texttt{QuestionsServices}: 
+		\item \textit{OUT} \texttt{QuestionsServices}:
+		\item \textit{OUT} \texttt{ErrorController}:  
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -746,6 +769,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{KeywordsDirective}: 
 		\item \textit{IN} \texttt{QuestionsService }: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -770,6 +794,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementDirective}: 
 		\item \textit{IN} \texttt{QuestionsService}: 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -794,7 +819,8 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{ConnectionQuestionsView}:
 		\item \textit{IN} \texttt{StringsSortingQuestionsView}:  
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView}:    
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}:  
+		\item \textit{OUT} \texttt{ErrorController}:   
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -818,6 +844,7 @@
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
 		\item \textit{IN} \texttt{NewQuestionButtonsDirective} 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -842,6 +869,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{StatisticsDirective} 
 		\item \textit{OUT} \texttt{StatisticsService} 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -867,6 +895,7 @@
 		\item \textit{IN} \texttt{QuizCreatedDirective} 
 		\item \textit{OUT} \texttt{QuizNoExamModeDirective} 
 		\item \textit{OUT} \texttt{QuizExamModeDirective} 
+		\item \textit{OUT} \texttt{ErrorController}: 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
