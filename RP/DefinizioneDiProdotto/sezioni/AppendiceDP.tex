@@ -14,6 +14,7 @@ Ciononostante i \textit{client\ped{G}} possono comunque accedere alle funzionali
 		\item Si vuole promuovere il disaccoppiamento tra sottosistemi e \textit{client\ped{G}}, semplificando le dipendenze;
 		\item Si vuole stratificare un sistema: è possibile definire una classe \textit{Facade\ped{G}} come punto d'ingresso per ogni livello di sottosistema. In questo modo, se vi sono dipendenze fra sottosistemi, essi possono comunicare fra loro attraverso la propria \textit{Facade\ped{G}}.
 	\end{itemize}
+	
 \textbf{Utilizzo}
 
 \subsection{Creazionali}
@@ -49,6 +50,48 @@ Nello specifico di \textit{AngularJS\ped{G}} \texttt{Injector} funziona da \text
 
 
 \subsection{Comportamentali}
+\subsubsection{Chain-of-responsability}
+\textbf{Scopo}	Il pattern \textit{Chain-of-responsability\ped{G}} ha lo scopo di evitare l'accoppiamento tra il mittente di una richiesta e il destinatario, in modo che più di un singolo oggetto possa eseguire la richiesta. Concatenare gli oggetti destinatari e passare la richiesta di oggetto in oggetto, finché uno di questi non riesce ad esaudirla.
+\\\\
+\textbf{Motivazione}	L'oggetto che ha iniziato la richiesta non è a conoscenza di chi la esaudirà, per questo si parla di destinatario implicito. Ogni oggetto della catena condivide un'interfaccia comune \textit{handler} per la gestione delle richieste e per accedere al successivo elemento della catena. Questo per consentire il passaggio lungo la catena e per assicurare che l'oggetto che eventualmente esaudirà la richiesta rimanga implicito. Il metodo che viene mantenuto in tutte le interfacce per creare la catena si chiama \textit{handle}. \textit{handle}, nella versione standard, esegue la chiamata al successore della catena. Alla fine della catena viene fatto l'ovverriding\ped{G} di questo metodo, implementando la richiesta iniziale oppure generando l'errore.
+\\\\
+\textbf{Applicabilità}	\textit{Chain-of-responability} si usa nei seguenti casi:
+	\begin{itemize}
+		\item Più di un oggetto può gestire la richiesta ed il ricevente che la gestirà non è conosciuto a priori;
+		\item Si vuole passare una richiesta ad uno dei molti oggetti, senza esplicitare il ricevente;
+		\item L'insieme di oggetti che gestirà una richiesta deve essere definito dinamicamente.
+	\end{itemize}
+\textbf{Utilizzo}	Express una \textit{Chain-of-responsability} per la gestione dei middleware e del routing. Nell'architettura viene utilizzato all'interno del package \textit{Back-End\ped{G}}::App. Ogni \textit{ConcreteHandler} eredita da \textit{MiddlewareHandler}, che corrisponde all'interfaccia astratta \textit{Handler} del design pattern. Con Express i middleware corrispondono ai \textit{ConcreteHandler}. L'implementaizone di questi risulta sotto alcuni aspetti differente da una normale implementazione del pattern:
+	\begin{enumerate}
+		\item I middleware di express possono essere delle classi che implementano il metodo \textit{handle} oppure delle funzioni secondo lo stile funzionale delle \textit{librerie\ped{G}} e dei moduli di Node.js. Nella nostra architettura abbiamo utilizzato principalmente la seconda verisone;
+		\item Nel \textit{design pattern\ped{G}} è previsto che l'oggetto \textit{ConcreteHandler} abbia un riferimento (successor) al \textit{ConcreteHandler} successivo. Express, anzichè un riferimento, passa al metodo che esegue il middleware una \textit{callback\ped{G}}. Il middleware che esegue la \textit{callback\ped{G}} passa il controllo all'oggetto del \textit{server\ped{G}} di Express, il quale passerà a sua volta il controllo al successivo middleware.
+	\end{enumerate}
+Express divide i middleware in due tipologie:
+	\begin{enumerate}
+		\item \textit{Middleware standard} con 3 parametri formali;
+		\item \textit{Middleware per la gesitone delgi errori} con 4 parametri formali, ovvero i 3 del middleware standard più un parametro per gli errori.
+	\end{enumerate}
+Ogni middleware può passare il controllo ai middleware standard successivo, oppure ad un middleware per la gestione degli errori, passandogli l'errore relativo. Ogni middleware di Express deve essere invocato con i parametri elencati \textbf{nel seguente ordine:}
+	\begin{enumerate}
+		\item L'eventuale errore da gestire, in caso si tratti di un middleware per la gestione degli errori;
+		\item L'oggetto contenente la richiesta da risolvere;
+		\item L'oggetto che conterrà la risposta;
+		\item La \textit{callback\ped{G}} da utilizzare per passare il controllo al successivo middleware.
+	\end{enumerate}
+
+\textbf{Struttura}
+\label{Struttura logica del pattern Chain-of-responsability}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.50]{UML/strutturaPattern/Chain-of-responsability.png}
+	\caption{Struttura logica del pattern Chain-of-responsability}
+\end{figure}
+
+\textbf{Collaborazioni}		Quando un \textit{client\ped{G}} effettua una richiesta, questa viene propagata lungo la catena finché un \textit{ConcreteHandler} non si assume la responsabilità di gestirla.
+\\\\
+\textbf{Svantaggi}	È necessario porre attenzione a come si configura la catena. Infatti, in caso di configurazione inappropriata, sussiste il rischio che la richiesta passi per diversi putni della catena senza essere mai realizzata, oppure che la richiesta non venga realizzata perché non esiste un \textit{ConcreteHandler} che la possa risolvere.
+
+
 \subsubsection{Iterator}
 \textbf{Scopo}	Il design pattern \textit{iterator\ped{G}} risolve diversi problemi connessi all'accesso e alla navigazione attraverso gli elementi di una struttura dati contenitrice, senza esporre i dettagli dell'implementazione e della struttura interna del contenitore
 \\\\
