@@ -6,7 +6,12 @@
 	Viene utilizzata quando si verifica un errore. Si preoccupa di delegare la costruzione del messaggio d’errore al modulo specifico qualora questo esista, altrimenti costruisce un messaggio d’errore generico. In questo modo i messaggi d’errore specifici vengono delegati ad un altro modulo, rendendo così possibile aggiungere in futuro altri moduli per gestire più flessibilmente nuove tipologie di errori.
 	\item \textbf{Relazioni con altre classi}:\\
 	\begin{itemize}
-		\item ................
+		\item IN \texttt{QuizRouter}\\
+		Classe che gestisce le richieste relative alla gestione di un questionario. Componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}.
+		\item IN \texttt{QuestionRouter}\\
+		Classe che gestisce le richieste relative alla gestione di una domanda. Componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}.
+		\item IN \texttt{UserRouter}\\
+		Classe che gestisce le richieste relative alla gestione di un utente. Componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza il modulo \textit{Passport\ped{G}}.
 		\item OUT \texttt{QuizziPediaError}\\
 		Classe di gestione degli errori. Esegue la costruzione del messaggio d’errore specifico per i moduli di Premi::Back-End::App.
 	\end{itemize}
