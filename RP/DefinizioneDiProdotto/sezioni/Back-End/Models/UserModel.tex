@@ -1,6 +1,6 @@
 \paragraph{QuizziPedia::Back-End::App::Models::UserModel}
 \label{QuizziPedia::Back-End::App::Models::UserModel}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_userModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::UserModel}
@@ -13,13 +13,13 @@
 	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi} 
 		\begin{itemize}
-			\item \textbf{IN SummaryModel} \\
+			\item \textbf{OUT SummaryModel} \\
 			Questa classe rappresenta il riepologo dei questionari svolti dagli utenti.
-			\item \textbf{OUT QuestionModel} \\
+			\item \textbf{IN QuestionModel} \\
 			Questa classe rappresenta i dati delle domande create dai vari utenti.
-			\item \textbf{OUT QuizModel} \\
+			\item \textbf{IN QuizModel} \\
 			Questa classe rappresenta i dati dei questionari creati dagli utenti Pro.
-			\item \textbf{OUT UserProModel} \\
+			\item \textbf{IN UserProModel} \\
 			Questa classe rappresenta i dati riguardanti l'utente pro.
 		\end{itemize}
 	\item \textbf{Attributi} 
