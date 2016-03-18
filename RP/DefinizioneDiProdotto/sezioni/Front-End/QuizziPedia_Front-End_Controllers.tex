@@ -31,10 +31,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità di autenticazione al sistema, compresa la gestione di situazioni di errore autenticazione;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginView}:  
-		\item \textit{OUT} \texttt{LangService}:
-		\item \textit{OUT} \texttt{AuthService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{LoginView}: view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 
 	\end{itemize}
 	\item \textbf{Attributi:}
@@ -58,10 +58,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità di registrazione di un utente al sistema;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{SignUpView}:
-		\item \textit{OUT} \texttt{AuthService}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}:  
+		\item \textit{IN} \texttt{SignUpView}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login;
+		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -84,9 +84,9 @@
 	\item \textbf{Utilizzo}: fornisce tutte le informazioni da mostrare nella homepage;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{HomeView}: 
-		\item \textit{OUT} \texttt{LangService}:
-		\item \textit{OUT} \texttt{ErrorController}:  
+		\item \textit{IN} \texttt{HomeView}: view contenente la barra di ricerca per gli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -109,10 +109,11 @@
 	\item \textbf{Utilizzo}: fornisce all'utente le funzionalità di ricerca per utenti e questionari;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{OUT} \texttt{ErrorController}: 
-		\item \textit{OUT} \texttt{UserDetailsService}: 
-		\item \textit{OUT} \texttt{QuizService}: 
-		\item \textit{OUT} \texttt{LangService}: 
+		\item \textit{OUT} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente;
+		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -135,10 +136,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità all'utente per poter gestire i propri dati;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ProfileManagementView}:  
-		\item \textit{OUT} \texttt{UserDetailsService}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema;
+		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -161,10 +162,10 @@
 	\item \textbf{Utilizzo}: fornisce la funzionalità per effettuare il logout dall'applicazione;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{OUT} \texttt{MenuBarDirective}:
-		\item \textit{OUT} \texttt{AuthService}: 
-		\item \textit{OUT} \texttt{LangService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{OUT} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
+		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -187,10 +188,10 @@
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per ripristinare la password dopo aver verificato l'identità dell'utente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{PasswordForgotView}: 
-		\item \textit{OUT} \texttt{AuthService}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{PasswordForgotView}: view contenente le form necessarie per il recupero della password dimenticata; 
+		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -213,10 +214,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda vero/falso nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso;  
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -239,10 +240,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a risposta multipla nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{MultipleQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente i campi per creare una domanda a risposta multipla;  
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -265,10 +266,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a collegamento nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;  
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -291,10 +292,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento immagini nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini; 
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -317,10 +318,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento di stringhe nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{StringsSortingQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe; 
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -343,10 +344,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ariempimento di spazi nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{FillingQuestionsView}: view contenente i campi per creare una domanda a riempimento testo; 
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -369,10 +370,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ad area cliccabile nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ClickableAreaQuestionsView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi per creare una domanda ad area cliccabile; 
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -395,10 +396,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per creare e modificare una domanda tramite editor QML;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{EditorQMLView}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuestionService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{EditorQMLView}: view contenente l'editor QML per la creazione di domande personalizzate; 
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -421,10 +422,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per richiedere al back-end le domande create dall'utente e mostrarle nella sua pagina personale; 
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementView}:  
-		\item \textit{OUT} \texttt{LangService}:
-		\item \textit{OUT} \texttt{QuestionService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -447,10 +448,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le domande che siano in accordo con il livello dell'utente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrainingView}: 
-		\item \textit{IN} \texttt{TrainingSetUpTemplate}:
-		\item \textit{OUT} \texttt{LangService}:  
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento;
+		\item \textit{IN} \texttt{TrainingSetUpTemplate}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -473,11 +474,11 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per compilare un questionario e per gestire il cambio di domanda;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionnaireView}:  
-		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{QuizService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;  
+		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -500,10 +501,10 @@
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per la creazione di un nuovo questionario e per la modifica di uno esistente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{CreateQuestionnaireView}:  
-		\item \textit{OUT} \texttt{QuizService}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario; 
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -526,10 +527,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità di iscrizione ad un questionario;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{RegistratioManagementView}: 
-		\item \textit{OUT} \texttt{QuizService}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{RegistratioManagementView}: view per la gestione degli utenti iscritti a un proprio questionario; 
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -552,10 +553,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati dal back-end e mostrarli all'utente nella view;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ResultsView}: 
-		\item \textit{OUT} \texttt{QuizService}:
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari; 
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -578,10 +579,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end tutti i questionari creati da un utente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireManagementeView}: 
-		\item \textit{OUT} \texttt{QuizService}:
-		\item \textit{OUT} \texttt{LangService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{QuestionnaireManagementeView}: view principale per la gestione dei questionari;
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -604,9 +605,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per aggiornare, a seconda della pagina, il contenuto del menù;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{MenuBarDirective}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;  
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -629,9 +630,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le informazioni da mostrare nel footer;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{FooterDirective}:  
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;  
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -654,14 +655,14 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità che permettono di recuperare il giusto messaggio di errore ad ogni situazione anomala;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ErrorDirective}: 
-		\item \textit{IN} \texttt{LoginController}: 
-		\item \textit{IN} \texttt{PasswordForgotController}: 
-		\item \textit{IN} \texttt{SignUpController}: 
-		\item \textit{IN} \texttt{SearchController}: 
-		\item \textit{OUT} \texttt{LangService}: 
-		\item \textit{OUT} \texttt{ErrorService}: 
-		\item \textit{OUT} \texttt{ErrorModel}:
+		\item \textit{IN} \texttt{ErrorDirective}: directive che mostra l'eventuale errore dopo un'azione;
+		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema; 
+		\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
+		\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
+		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+		\item \textit{OUT} \texttt{ErrorService}: questa classe permette di gestire il recupero e la gestione dei messaggi di errore;
+		\item \textit{OUT} \texttt{ErrorInfoModel}: rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -684,9 +685,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end i dettagli di un questionario creato da un utente al fine di poterli visualizzare nel suo profilo;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}:
-		\item \textit{OUT} \texttt{QuizService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare;
+		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -709,9 +710,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati di un utente, visualizzabili sia come dati personali dell'utente che ha effettuato l'accesso sia come risultato di una ricerca per utenti;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserDetailsDirective}: 
-		\item \textit{OUT} \texttt{UserDetailsService}:
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{UserDetailsDirective}: directive che permette di visualizzare i dati personali di un utente;
+		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 
 	\end{itemize}
 	\item \textbf{Attributi:}
@@ -735,16 +736,16 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande esistenti nel database al fine di mostrarle durante la modalità allenamento nell'apposito template;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}:  
-		\item \textit{IN} \texttt{TrueFalseAnswerTemplate}:  
-		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate}:  
-		\item \textit{IN} \texttt{LinkingAnswerTemplate}:  
-		\item \textit{IN} \texttt{SortImagesAnswerTemplate}:  
-		\item \textit{IN} \texttt{SortTextAnswerTemplate}:  
-		\item \textit{IN} \texttt{EmptyChoiceAnswerTemnplate}:  
-		\item \textit{IN} \texttt{ClickableAnswerTemplate}:  
-		\item \textit{OUT} \texttt{QuestionsServices}:
-		\item \textit{OUT} \texttt{ErrorController}:  
+		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}: rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{TrueFalseAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda a risposta multipla. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{LinkingAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda di collegamento. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{SortImagesAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{SortTextAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di stringhe. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{EmptySpaceAnswerTemnplate}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{ClickableAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;  
+		\item \textit{OUT} \texttt{QuestionServices}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -767,9 +768,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle parole chiave durante la creazione di un questionario;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{TopicKeywordsDirective}: 
-		\item \textit{IN} \texttt{QuestionsService }: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda; 
+		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande; 
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -792,9 +793,15 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande dal back-end e le rende disponibili per poter popolare le view;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementDirective}: 
-		\item \textit{IN} \texttt{QuestionsService}: 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementDirective}: rappresenta il componente grafico che permette all'utente di:
+		\begin{itemize}
+			\item Effettuare delle ricerche sul database di domande;
+			\item Selezionare le domande da inserire nel questionario;
+			\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
+		\end{itemize}
+		Questo componente si presta sia per la creazione che per la modifica di un questionario;
+		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -817,10 +824,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per confermare porzioni di domanda durante la creazione;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsView}:
-		\item \textit{IN} \texttt{StringsSortingQuestionsView}:  
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView}:  
-		\item \textit{OUT} \texttt{ErrorController}:   
+		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;
+		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe; 
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immmagini;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente. 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -843,8 +850,8 @@
 	\item \textbf{Utilizzo}: effettua il redirect alla pagina di creazione nuova domanda quando l'utente seleziona l'apposito link;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{NewQuestionButtonsDirective} 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{NewQuestionButtonsDirective}: rappresenta il componente grafico che permette all'utente di posizionarsi nella view di creazione di una nuova domanda; 
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -867,9 +874,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella view;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{StatisticsDirective} 
-		\item \textit{OUT} \texttt{StatisticsService} 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{StatisticsDirective}: directive che permette di visualizzare le statistiche di un utente; 
+		\item \textit{OUT} \texttt{StatisticsService}: questa classe permette di ottenere le statistiche dell'utente;
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -892,10 +899,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per reagire ai comandi dell'utente, effettua redirect alle pagine richieste, come la visualizzazione delle statistiche di un questionario e iniziare un questionario in modalità esame.
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuizCreatedDirective} 
-		\item \textit{OUT} \texttt{QuizNoExamModeDirective} 
-		\item \textit{OUT} \texttt{QuizExamModeDirective} 
-		\item \textit{OUT} \texttt{ErrorController}: 
+		\item \textit{IN} \texttt{CreationAndModifyDirective}:  
+		\item \textit{OUT} \texttt{ExamModalityDirective}:
+		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}

@@ -53,31 +53,31 @@
 	\item \textbf{Utilizzo}: fornisce delle funzionalità per recuperare la giusta traduzione della pagina.
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginController} 
-		\item \textit{IN} \texttt{SignUpController} 
-		\item \textit{IN} \texttt{HomeController} 
-		\item \textit{IN} \texttt{SearchController} 
-		\item \textit{IN} \texttt{ProfileManagementController} 
-		\item \textit{IN} \texttt{LogoutController} 
-		\item \textit{IN} \texttt{PasswordForgotController}
-		\item \textit{IN} \texttt{TrueFalseController} 
-		\item \textit{IN} \texttt{MultiplyQuestionsController} 
-		\item \textit{IN} \texttt{ConnectionQuestionsController} 
-		\item \textit{IN} \texttt{ImagesSortingQuestionsController} 
-		\item \textit{IN} \texttt{StringsSortingQuestionsController} 
-		\item \textit{IN} \texttt{FillingQuestionsController} 
-		\item \textit{IN} \texttt{ClickableAreaQuestionsController} 
-		\item \textit{IN} \texttt{EditorQMLController} 
-		\item \textit{IN} \texttt{QuestionsManagementController} 
-		\item \textit{IN} \texttt{TrainingController} 
-		\item \textit{IN} \texttt{FillingQuestionnaireController} 
-		\item \textit{IN} \texttt{TemplateQuestionnaireController} 
-		\item \textit{IN} \texttt{EnrollmentManagementController} 
-		\item \textit{IN} \texttt{ResultsController} 
-		\item \textit{IN} \texttt{QuestionnaireManagementController} 
-		\item \textit{IN} \texttt{MenuController} 
-		\item \textit{IN} \texttt{FooterController} 
-		\item \textit{IN} \texttt{ErrorController} 
+		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema; 
+		\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
+		\item \textit{IN} \texttt{HomeController}: questa classe permette di gestire la home page;
+		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
+		\item \textit{IN} \texttt{LogoutController}: questa classe permette di gestire la pagina di logout;
+		\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
+		\item \textit{IN} \texttt{TrueFalseController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
+		\item \textit{IN} \texttt{MultiplyQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla; 
+		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
+		\item \textit{IN} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
+		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi; 
+		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
+		\item \textit{IN} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
+		\item \textit{IN} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
+		\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
+		\item \textit{IN} \texttt{TemplateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario; 
+		\item \textit{IN} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
+		\item \textit{IN} \texttt{ResultsController}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente;
+		\item \textit{IN} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente;  
+		\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
+		\item \textit{IN} \texttt{FooterController}: questa classe permette di gestire il footer dell'applicazione;
+		\item \textit{IN} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 		
 	\end{itemize}
 	\item \textbf{Attributi:}
@@ -101,14 +101,14 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un quiz in seguito ad una ricerca dell'utente, passando i risultati ai controllers. Ritorna dei riferimenti alle domande del quiz;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{SearchController} 
-		\item \textit{IN} \texttt{QuestionsController}
-		\item \textit{IN} \texttt{QuestionnaireDetailsController} 
-		\item \textit{IN} \texttt{FillingQuestionnaireController} 
-		\item \textit{OUT} \texttt{TemplateQuestionnaireController} 
-		\item \textit{OUT} \texttt{RegistrationManagementController} 
-		\item \textit{OUT} \texttt{ResultsController} 
-		\item \textit{OUT} \texttt{QuestionnaireManagementController} 
+		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
+		\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
+		\item \textit{OUT} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
+		\item \textit{OUT} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
+		\item \textit{OUT} \texttt{ResultsController}: questa classe permette di gestire le iscrizione degli utenti ai questionari; 
+		\item \textit{OUT} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente. 
 		
 	\end{itemize}
 	\item \textbf{Attributi:}
@@ -132,7 +132,7 @@
 	\item \textbf{Utilizzo}: fornisce al controller i giusti messaggi di errore da mostrare all'utente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{ErrorController} 
+		\item \textit{IN} \texttt{ErrorController}:questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente. 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -155,7 +155,7 @@
 	\item \textbf{Utilizzo}: fornisce al controller le statistiche salvate;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{StatisticsController} 
+		\item \textit{IN} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -178,17 +178,17 @@
 	\item \textbf{Utilizzo}: utilizzata per richiedere domande presenti nel database. Offre inoltre delle funzionalità per inserire nuove domande;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseController} 
-		\item \textit{IN} \texttt{MultiplyQuestionsController} 
-		\item \textit{IN} \texttt{ConnectionQuestionsController} 
-		\item \textit{IN} \texttt{ImagesSortingQuestionsController} 
-		\item \textit{IN} \texttt{StringsSortingQuestionsController} 
-		\item \textit{IN} \texttt{FillingQuestionsController} 
-		\item \textit{IN} \texttt{ClickableAreaQuestionsController} 
-		\item \textit{IN} \texttt{EditorQMLController} 
-		\item \textit{IN} \texttt{QuestionsManagementController} 
-		\item \textit{IN} \texttt{KeywordsController} 
-		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController} 
+		\item \textit{IN} \texttt{TrueFalseController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
+		\item \textit{IN} \texttt{MultiplyQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla; 
+		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
+		\item \textit{IN} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
+		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi; 
+		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
+		\item \textit{IN} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente
+		\item \textit{IN} \texttt{TopicKeywordsController}: questa classe permette di gestire il recupero delle parole chiave di un questionario;
+		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: questa classe permette di gestire il recupero delle domande per il questionario.
 		
 	\end{itemize}
 	\item \textbf{Attributi:}
@@ -212,9 +212,9 @@
 	\item \textbf{Utilizzo}: utilizzata per ottenere i dati personali di un utente. Permette inoltre di trovare i dati di utenti ricercati tramite l'apposita barra di ricerca;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{SearchController} 
-		\item \textit{OUT} \texttt{UserDetailsController} 
-		\item \textit{OUT} \texttt{ProfileManagementController} 
+		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{OUT} \texttt{UserDetailController}: questa classe permette di gestire i dati di un utente;
+		\item \textit{OUT} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente. 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}

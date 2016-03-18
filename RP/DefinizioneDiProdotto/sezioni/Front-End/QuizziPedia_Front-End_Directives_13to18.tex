@@ -17,8 +17,8 @@
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-			\item \textit{IN} \texttt{HomeView} 
-		\item \textit{IN} \texttt{MenuBarDirective} 
+			\item \textit{IN} \texttt{HomeView}: view contenente la barra di ricerca per gli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
+		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata.
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -42,9 +42,10 @@
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView} 
-		\item \textit{IN} \texttt{OtherUserView} 
-		\item \textit{OUT} \texttt{StatisticsController} 
+		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textit{IN} \texttt{OtherUserView}: view contenente i dati personali e le statistiche di un utente ricercato;
+		\item \textit{OUT} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente;
+		\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella view. 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -64,7 +65,7 @@
 	\item \textbf{Utilizzo}: permette di visualizzare e iscriversi ai questionari ricercati. Include un pulsate per ogni questionario che permette l'iscrizione ad esso.
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ResultsView} 
+		\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari.
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -88,14 +89,14 @@
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView} 
-		\item \textit{IN} \texttt{MultiplyQuestionsView} 
-		\item \textit{IN} \texttt{ConnectionQuestionsView}
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView} 
-		\item \textit{IN} \texttt{StringsSortingQuestionsView} 
-		\item \textit{IN} \texttt{FillingQuestionsView} 
-		\item \textit{IN} \texttt{ClickableAreaQuestionsView} 
-		\item \textit{IN} \texttt{EditorQMLView} 
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente i campi per creare una domanda a risposta multipla;
+		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe;
+		\item \textit{IN} \texttt{FillingQuestionsView}: view contenente i campi per creare una domanda a riempimento testo;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi per creare una domanda ad area cliccabile;
+		\item \textit{IN} \texttt{EditorQMLView}: view contenente l'editor QML per la creazione di domande personalizzate;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -120,8 +121,9 @@
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView} 
-		\item \textit{OUT} \texttt{UserDetailsController} 
+		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textit{IN} \texttt{OtherUserView}: view contenente i dati personali e le statistiche di un utente ricercato;
+		\item \textit{OUT} \texttt{UserDetailsController}: questa classe permette di gestire i dati di un utente.
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -145,7 +147,7 @@
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ResultsView} 
+		\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari.
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
