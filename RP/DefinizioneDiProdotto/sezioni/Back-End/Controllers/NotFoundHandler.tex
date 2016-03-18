@@ -1,0 +1,40 @@
+\subsection{QuizziPedia::Back-End::App::Controllers::NotFoundHandler}
+\subsubsection{Informazioni generali}
+\label{QuizziPedia::Back-End::App::Controllers::NotFoundHandler}
+%\begin{figure}
+%	\centering
+%	\includegraphics[scale=0.45]{UML/Package/.............creare immagine........}
+%	\caption{QuizziPedia::Back-End::App::Controllers::NotFoundHandler}
+%\end{figure}
+
+\begin{itemize}
+	\item \textbf{Descrizione}\\
+	Classe che si occupa della gestione dell'errore di pagina non trovata. Componente ConcreteHandler del design pattern Chain of responsibility.
+	\item \textbf{Utilizzo}\\
+	Viene utilizzata per generare una pagina 404 di errore nel caso in cui l'URI passato non corrisponda ad una risorsa presente nell'applicazione.
+	\item \textbf{Relazione con altre classi}\\
+	\begin{itemize}
+		\item \textbf{IN} \texttt{UserRouter}\\
+		Classe che gestisce le richieste relative alle operazioni riguardanti l'utente. Componente ConcreteHandler del design pattern Chain of responsibility.
+		\item \textbf{IN} \texttt{QuestionRouter}\\
+		Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente ConcreteHandler del design pattern Chain of responsibility.
+		\item \textbf{IN} \texttt{QuizRouter}\\
+		Classe che gestisce le richieste relative alle operazioni riguardanti i questionari. Componente ConcreteHandler del design pattern Chain of responsibility.
+		.................................
+	\end{itemize}
+	\item \textbf{Metodi}\\
+	\begin{itemize}
+		\item \texttt{+ handle(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		Metodo che gestisce la costruzione dei messaggi d'errore ritornando un JSON contenente il messaggio d'errore.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req: Request}\\
+			Rappresenta la richiesta inviata al server.
+			\item \texttt{res: Response}\\
+			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo.
+			\item \texttt{next: function(QuizziPediaError)}\\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
