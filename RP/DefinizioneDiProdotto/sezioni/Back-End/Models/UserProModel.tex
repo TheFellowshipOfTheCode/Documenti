@@ -13,9 +13,12 @@
 	Viene utilizzata per rappresentare i dati dell'utente pro. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi} 
 		\begin{itemize}
-			\item \textbf{OUT QuizModel} \\
+			\item IN \textbf {UserManagementController} \\
+			Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica dei dati dell'utente.
+Rappresenta il ConcreteHandler nel design pattern Chain of responsibility. Utilizza Passport.
+			\item IN \textbf{QuizModel} \\
 			Questa classe rappresenta i dati dei questionari creati dagli utenti Pro.
-			\item \textbf{IN UserModel} \\
+			\item OUT \textbf{UserModel} \\
 			Questa classe rappresenta i dati riguardanti i vari utenti registrati al sistema.
 		\end{itemize}
 	\item \textbf{Attributi} 
