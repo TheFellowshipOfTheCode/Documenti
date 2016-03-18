@@ -1,10 +1,11 @@
 \paragraph{QuizziPedia::Back-End::App::Models::SummaryModel}
 \label{QuizziPedia::Back-End::App::Models::summaryModel}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_summaryModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::summaryModel}
 \end{figure}
+\FloatBarrier
 
 
 
@@ -14,7 +15,16 @@
 	\item \textbf{Utilizzo} \\
 	Viene utilizzata per rappresentare i dati relativi ai riepiloghi all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi}
-		............
+		\begin{itemize}
+			\item \textbf{OUT} \texttt{QuizModel}\\
+			Classe che modella i questionari.
+			\item \textbf{OUT} \texttt{QuestionModel}\\
+			Classe che modella le domande.
+			\item \textbf{IN} \texttt{UserModel}\\
+			Classe che modella gli utenti.
+			\item \textbf{IN} \texttt{SummaryController}\\
+			Classe che gestisce le operazioni relative ai riepiloghi.
+		\end{itemize}
 	\item \textbf{Attributi}
 		\begin{itemize}
 			\item \textbf{- summarySchema: Schema} \\
