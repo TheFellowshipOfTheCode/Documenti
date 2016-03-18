@@ -13,13 +13,20 @@
 	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi} 
 		\begin{itemize}
-			\item \textbf{OUT SummaryModel} \\
+			\item IN \textbf {AuthenticationController} \\
+			Classe che si occupa della registrazione e dell’autenticazione dell’utente nel sistema. È un componente ConcreteHandler del design pattern Chain of responsibility. Risulta essere il componente che eventualmente esegue la richiesta del client attraverso Passport.
+			\item IN \textbf {SessionController} \\
+			Classe middleware che, utilizzando Passport, si occupa di controllare la consistenza dell'oggetto session durante la sessione associata all’utente autenticato. È un componente ConcreteHandler del design pattern Chain of responsibility.	
+			\item IN \textbf {UserManagementController} \\
+			Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica dei dati dell'utente.
+Rappresenta il ConcreteHandler nel design pattern Chain of responsibility. Utilizza Passport.
+			\item OUT \textbf{SummaryModel} \\
 			Questa classe rappresenta il riepologo dei questionari svolti dagli utenti.
-			\item \textbf{IN QuestionModel} \\
+			\item IN \textbf{QuestionModel} \\
 			Questa classe rappresenta i dati delle domande create dai vari utenti.
-			\item \textbf{IN QuizModel} \\
+			\item IN \textbf{QuizModel} \\
 			Questa classe rappresenta i dati dei questionari creati dagli utenti Pro.
-			\item \textbf{IN UserProModel} \\
+			\item IN \textbf{UserProModel} \\
 			Questa classe rappresenta i dati riguardanti l'utente pro.
 		\end{itemize}
 	\item \textbf{Attributi} 
