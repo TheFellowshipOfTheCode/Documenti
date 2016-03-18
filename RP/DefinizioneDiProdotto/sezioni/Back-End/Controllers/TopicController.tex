@@ -8,13 +8,13 @@
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione} \\
-	Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande. È un componente ConcreteHandler del design pattern Chain of responsibility.
+	Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande. È un componente \textit{ConcreteHandler\ped{g}} del \textit{design pattern\ped{g}} \textit{Chain of responsibility\ped{g}}.
 	\item \textbf{Utilizzo} \\
-	Viene utilizzata per implementare le funzionalità necessarie a gestire le richieste REST legate agli argomenti delle domande.
+	Viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{g}} legate agli argomenti delle domande.
 	\item \textbf{Relazioni con altre classi}
 		\begin{itemize}
 			\item \textbf{IN \texttt{QuestionRouter}} \\
-			Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente ConcreteHandler del design pattern Chain of responsibility.
+			Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente \textit{ConcreteHandler\ped{g}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}.
 			\item \textbf{OUT \texttt{TopicModel}} \\
 			Classe che modella gli argomenti delle domande.
 		\end{itemize}
@@ -29,7 +29,7 @@
 			\item \texttt{res: Response} \\
 			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo;
 			\item \texttt{next: function(QuizziPediaError)} \\
-			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 			\end{itemize}
 			\item \texttt{+ addQuestion(req : Request, res : Response, next : function(QuizziPediaError))} \\
 			Aggiunge una domanda tra le domande sull'argomento.  \\
@@ -40,7 +40,7 @@
 			\item \texttt{res: Response} \\
 			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo;
 			\item \texttt{next: function(QuizziPediaError)} \\
-			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 			\end{itemize}
 			\item \texttt{+ getQuestions(req : Request, res : Response, next : function(QuizziPediaError))} \\
 			Restituisce le domande sull'argomento.  \\
@@ -51,7 +51,7 @@
 			\item \texttt{res: Response} \\
 			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo;
 			\item \texttt{next: function(QuizziPediaError)} \\
-			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 			\end{itemize}
 			\item \texttt{+ getNextQuestion(req : Request, res : Response, next : function(QuizziPediaError))} \\
 			Restituisce la domanda successiva di un allenamento.  \\
@@ -62,7 +62,7 @@
 			\item \texttt{res: Response} \\
 			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo;
 			\item \texttt{next: function(QuizziPediaError)} \\
-			Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 			\end{itemize}
 		\end{itemize}
 \end{itemize}
