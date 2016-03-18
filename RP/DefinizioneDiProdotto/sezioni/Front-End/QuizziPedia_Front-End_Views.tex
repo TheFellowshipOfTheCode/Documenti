@@ -85,9 +85,9 @@
 	\item \textbf{Utilizzo}: viene visualizzata dopo aver effettuato la ricerca di un utente o di un questionario nella barra di ricerca presente nella HomeView e permette di selezionare un risultato presente al suo interno; 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{SearchController}:
-		\item \textit{IN} \texttt{SubscribeResultDirective}: 
-		\item \textit{IN} \texttt{UserResultsDirective}:
+		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{IN} \texttt{SubscribeResultDirective}: directive che permette di visualizzare e iscriversi ai questionari ricercati;
+		\item \textit{IN} \texttt{UserResultsDirective}: directive che permette di visualizzare la lista degli utenti ricercati dopo aver utilizzato l'apposita funzione di ricerca;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -98,9 +98,17 @@
 	\item \textbf{Utilizzo}:  permette ad un utente di visualizzare i propri dati personali e le proprie statistiche e di controllare a quali questionari è iscritto. 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{StatisticsDirective}
-		\item \textit{IN} \texttt{UserDetailsDirective}
-		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}
+		\item \textit{IN} \texttt{StatisticsDirective}: directive che permette di visualizzare le statistiche di un utente;
+		\item \textit{IN} \texttt{UserDetailsDirective}: directive che permette di visualizzare i dati personali di un utente;
+		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare. Ogni item di questa lista contiene:
+		\begin{itemize} 
+		\item Nome del questionario;
+		\item Autore del questionario;
+		\item Argomento del questionario;
+		\item Parole chiave del questionario;
+		\end{itemize}
+		Al verificarsi dell'evento click su un item della lista l'utente verrà indirizzato alla view per
+		la compilazione del questionario selezionato;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -111,8 +119,8 @@
 	\item \textbf{Utilizzo}: viene visualizzata dopo la ricerca di un utente e permette all'utente che ha effettuato la ricerca di visualizzare i dati personali e le statistiche di un utente ricercato;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{StatisticsDirective}
-		\item \textit{IN} \texttt{UserDetailsDirective}
+		\item \textit{IN} \texttt{StatisticsDirective}: directive che permette di visualizzare le statistiche di un utente;
+		\item \textit{IN} \texttt{UserDetailsDirective}: directive che permette di visualizzare i dati personali di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -123,7 +131,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di modificare tutti i campi elencati e di rendere persistenti queste modifiche se sono accettate dal sistema;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ProfileManagementController} \\
+		\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -134,9 +142,10 @@
 	\item \textbf{Utilizzo}: visualizza l'elenco delle domande create permettendo all'utente di crearne una nuova e di modificarne una presente nell'elenco;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementController} \\
-		\item \textit{IN} \texttt{OneQuestionDirective} \\
-		\item \textit{IN} \texttt{NewQuestionButtonDirective} \\ 
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
+		\item \textit{IN} \texttt{OneQuestionDirective}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click su di essa sarà possibile modificare
+		tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
+		\item \textit{IN} \texttt{NewQuestionButtonDirective}: 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -147,11 +156,11 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda vero/falso compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsController} \\
-		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
-		\item \textit{IN} \texttt{QuestionTextDirective} \\
-		\item \textit{IN} \texttt{AnswerChoiceDirective} \\   
+		\item \textit{IN} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
+		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
+		\item \textit{IN} \texttt{AnswerChoiceDirective}: directive contenente il componente grafico per le risposte a scelta;  
 	\end{itemize}
 \item \textbf{Attributi}
 \end{itemize}
@@ -162,11 +171,12 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a risposta multipla compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
-			\item \textit{IN} \texttt{MultiplyQuestionsController} \\
-			\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-			\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
-			\item \textit{IN} \texttt{QuestionTextDirective} \\
-			\item \textit{IN} \texttt{AnswerChoiceDirective} \\   
+			\item \textit{IN} \texttt{MultipleQuestionsController}: questa classe permette di gestire la creazione e la modica di una domanda
+			a risposta multipla;
+			\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+			\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
+			\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente graco che permette all'utente di scrivere o modificare il testo di una domanda;
+			\item \textit{IN} \texttt{AnswerChoiceDirective}: directive contenente il componente grafico per le risposte a scelta;
 		\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -177,10 +187,10 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a collegamento compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsController} \\
-		\item \textit{IN} \texttt{InputToListController} \\
-		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{ConnectionQuestionsController}:
+		\item \textit{IN} \texttt{InputToListController}:
+		\item \textit{IN} \texttt{TopicKeywordsDirective}:
+		\item \textit{IN} \texttt{QuestionTextDirective}: 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -191,7 +201,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento immagini compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ImagesSortingQuestionsController} \\
+		\item \textit{IN} \texttt{ImagesSortingQuestionsController}:
 		\item \textit{IN} \texttt{InputToListController} \\
 		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
 		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
