@@ -187,10 +187,10 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a collegamento compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsController}:
-		\item \textit{IN} \texttt{InputToListController}:
-		\item \textit{IN} \texttt{TopicKeywordsDirective}:
-		\item \textit{IN} \texttt{QuestionTextDirective}: 
+		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
+		\item \textit{IN} \texttt{InputToListController}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -201,11 +201,11 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento immagini compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ImagesSortingQuestionsController}:
-		\item \textit{IN} \texttt{InputToListController} \\
-		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
-		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{InputToListController}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -216,10 +216,10 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento stringhe compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
-			\item \textit{IN} \texttt{StringsSortingQuestionsController} \\
-			\item \textit{IN} \texttt{InputToListController} \\
-			\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-			\item \textit{IN} \texttt{QuestionTextDirective} \\ 
+			\item \textit{IN} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
+			\item \textit{IN} \texttt{InputToListController}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+			\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+			\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -340,7 +340,7 @@
 	\item \textbf{Attributi}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Views::ResultsView}
+\paragraph{QuizziPedia::Front-End::Views::ResultsQuestionnarieView}
 \begin{itemize}
 	\item \textbf{Descrizione}: view contenente i risultati conseguiti dagli utenti che hanno compilato il proprio questionario;
 	\item \textbf{Utilizzo}: permette di visualizzare i risultati di ogni utente conseguiti nella compilazione del questionario;
