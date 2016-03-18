@@ -21,10 +21,10 @@
 		\end{itemize}
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{Index}: 
-		\item \textit{IN} \texttt{SearchDirective}: 
-		\item \textit{IN} \texttt{LogoutController}: 
-		\item \textit{IN} \texttt{MenuBarController}: 
+		\item \textit{IN} \texttt{Index}: view generale dell'applicazione;
+		\item \textit{IN} \texttt{SearchDirective}: directive che permette di effettuare la ricerca di utenti e questionari;
+		\item \textit{IN} \texttt{LogoutController}: questa classe permette di gestire la pagina di logout;
+		\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -51,8 +51,8 @@
 	\item \textbf{Utilizzo}: viene utilizzato per permette all'utente di posizionarsi nella view di creazione di una nuova domanda;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementView}: 
-		\item \textit{IN} \texttt{NewQuestionButtonsController}: 
+		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
+		\item \textit{IN} \texttt{NewQuestionsButtonsController}: questa classe permette di effettuare il redirect alla pagina di creazione nuova domanda;
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -79,7 +79,7 @@
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare le domande che ha creato;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementView}: 
+		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -106,13 +106,13 @@
 	\item \textbf{Utilizzo}: viene usato per permettere all'utente di scrivere o modificare il testo di una domanda;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView}: 
-		\item \textit{IN} \texttt{MultipleQuestionsView}: 
-		\item \textit{IN} \texttt{ConnectionQuestionsView}: 
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: 
-		\item \textit{IN} \texttt{StringsSortingQuestionsView}: 
-		\item \textit{IN} \texttt{FillingQuestionsView}: 
-		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: 
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente i campi per creare una domanda a risposta multipla;
+		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe;
+		\item \textit{IN} \texttt{FillingQuestionsView}: view contenente i campi per creare una domanda a riempimento testo;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi per creare una domanda ad area cliccabile;
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -146,8 +146,8 @@
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare la lista di questionari che può compilare;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView}: 
-		\item \textit{IN} \texttt{QuestionnaireDetailsController}: 
+		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario; 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -181,8 +181,8 @@
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare la lista di questionari che ha compilato;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView}: 
-		\item \textit{IN} \texttt{QuestionnaireDetailsController}: 
+		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -215,8 +215,8 @@
 	\item \textbf{Utilizzo}: viene utilizzato per gestire le domande di un questionario. Esso permette di ricercare, inserire e togliere domande dalla lista di domande che andranno a comporre il questionario;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{CreateQuestionnaireView}: 
-		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: 
+		\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario;
+		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: questa classe permette di gestire il recupero delle domande per il questionario;
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
