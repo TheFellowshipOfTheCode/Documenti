@@ -1,11 +1,11 @@
 \paragraph{QuizziPedia::Back-End::App::Models::QuizModel}
 \label{QuizziPedia::Back-End::App::Models::QuizModel}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_quizModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::QuizModel}
 \end{figure}
-
+\FloatBarrier
 
 
 
@@ -15,7 +15,12 @@
 	\item \textbf{Utilizzo} \\
 	Viene utilizzata per rappresentare i dati relativi ai questionari all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
 	\item \textbf{Relazioni con altre classi}
-		............
+		\begin{itemize}
+			\item \textbf{OUT} \texttt{QuestionModel}\\
+			Classe che rappresenta le operazioni relative alle domande.
+			\item \textbf{OUT} \texttt{UserModel}\\
+			Classe che rappresenta le operazioni relative agli utenti.
+		\end{itemize}
 	\item \textbf{Attributi}
 		\begin{itemize}
 			\item \textbf{- quizSchema: Schema} \\
@@ -44,72 +49,55 @@
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ addQuestion(questionID: ObjectId, quizID: ObjectId): void}\\
+			\item \texttt{+ addQuestion(questionID: ObjectId): void}\\
 			Aggiunge una domanda al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{questionID: ObjectId}\\
 				Rappresenta l'identificativo della domanda da aggiungere al questionario.
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario a cui verrà aggiunta una domanda.
 			\end{itemize}
 			
-			\item \texttt{+ removeQuestion(questionID: ObjectId, quizID: ObjectId): void}\\
+			\item \texttt{+ removeQuestion(questionID: ObjectId): void}\\
 			Rimuove una domanda dal questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{questionID: ObjectId}\\
 				Rappresenta l'identificativo della domanda da rimuovere dal questionario.
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario a cui verrà rimossa la domanda.
 			\end{itemize}
 			
-			\item \texttt{+ setTitle(title: String, quizID: ObjectId,  errback: function(QuizziPediaError)): void}\\ 		
+			\item \texttt{+ setTitle(title: String, errback: function(QuizziPediaError)): void}\\ 		
 			Dà un titolo al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{title: String}\\
 				Rappresenta il titolo da dare al questionario.
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario a cui verrà dato il titolo.
 				\item \texttt{errback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ addUser(quizID: ObjectId, userID: ObjectId): void}\\
+			\item \texttt{+ addUser(userID: ObjectId): void}\\
 			Iscrive un utente al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario a cui verrà iscritto l'utente.
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da aggiungere al questionario.
 			\end{itemize}
 			
-			\item \texttt{+ addActiveUser(quizID: ObjectId, userID: ObjectId): void}\\
+			\item \texttt{+ addActiveUser(userID: ObjectId): void}\\
 			Iscrive un utente al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario a cui verrà iscritto un utente.
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da aggiungere al questionario.
 			\end{itemize}
 			
-			\item \texttt{+ addCorrect(quizID: ObjectId): void}\\
-			Incrementa il numero di risposte corrette date alle domande del questionario.\\
-			\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario di cui si deve incrementare il numero di risposte corrette date.
-			\end{itemize}
+			\item \texttt{+ addCorrect(): void}\\
+			Incrementa il numero di risposte corrette date alle domande del questionario.\\			
 			
-			\item \texttt{+ removeUser(quizID: ObjectId, userID: ObjectId, errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ removeUser(userID: ObjectId, errback: function(QuizziPediaError)): void}\\
 			Rimuovere un utente dalla lista degli iscritti al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{quizID: ObjectId}\\
-				Rappresenta l'identificativo del questionario da cui verrà rimosso un utente.
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da rimuovere dalla lista degli iscritti al questionario.
 				\item \texttt{errback: function(QuizziPediaError)}\\
