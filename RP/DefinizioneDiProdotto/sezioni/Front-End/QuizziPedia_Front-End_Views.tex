@@ -28,9 +28,8 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
-		\item \textit{IN} \texttt{SearchDirective} \\
-		\item \textit{IN} \texttt{ErrorsDirective} \\
-		\item \textit{IN} \texttt{FooterDirective} \\ 
+		\item \textit{IN} \texttt{ErrorsDirective}: directive che mostra l'eventuale errore dopo un'azione;
+		\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -41,7 +40,7 @@
 	\item \textbf{Utilizzo}: premette all'utente di autenticarsi inserendo username e password;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginController} \\ 
+		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -52,7 +51,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di registrarsi al sistema inserendo i campi dati necessari;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{SignUpController} \\
+		\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -63,7 +62,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di recuperare la password dimenticata inserendo i campi dati necessari, assieme alla nuova password inviatagli automaticamente dal sistema all'interno di una mail;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{PasswordForgotController} \\
+		\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -74,8 +73,8 @@
 	\item \textbf{Utilizzo}: viene utilizzata come view iniziale dell'applicazione;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{HomeController} \\
-		\item \textit{IN} \texttt{SearchDirective} \\
+		\item \textit{IN} \texttt{HomeController}: questa classe permette di gestire la home page;
+		\item \textit{IN} \texttt{SearchDirective}: directive che permette di eettuare la ricerca di utenti e questionari;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -86,9 +85,9 @@
 	\item \textbf{Utilizzo}: viene visualizzata dopo aver effettuato la ricerca di un utente o di un questionario nella barra di ricerca presente nella HomeView e permette di selezionare un risultato presente al suo interno; 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{SearchController} \\
-		\item \textit{IN} \texttt{SubscribeResultDirective} \\
-		\item \textit{IN} \texttt{UserResultsDirective} \\ 
+		\item \textit{IN} \texttt{SearchController}:
+		\item \textit{IN} \texttt{SubscribeResultDirective}: 
+		\item \textit{IN} \texttt{UserResultsDirective}:
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
