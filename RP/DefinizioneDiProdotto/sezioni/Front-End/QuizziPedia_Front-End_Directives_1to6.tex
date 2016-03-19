@@ -4,8 +4,8 @@
 	\item \textbf{Utilizzo}: permette all'utente di utilizzare quest'unica direttiva per creare domande vero/falso e risposte a scelta multipla;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView} \\
-		\item \textit{IN} \texttt{MultipleQuestionsView} \\
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{MultipleQuestionsView}:  view contenente i campi per creare una domanda vero/falso; 
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -16,8 +16,8 @@
 	\item \textbf{Utilizzo}: permette di creare un nuovo questionario o di modificarne uno esistente;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireManagementView} \\
-		\item \textit{IN} \texttt{QuizEventController} \\
+		\item \textit{IN} \texttt{QuestionnaireManagementView}: view principale per la gestione dei questionari; 
+		\item \textit{IN} \texttt{QuizEventController}: questa classe permette di reagire ai comandi dell'utente durante la gestione dei suoi questionari;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -28,8 +28,8 @@
 	\item \textbf{Utilizzo}: permette all'\texttt{ErrorController} di utilizzare un template unico per la visualizzazione dei diversi errori;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ErrorsController}
-		\item \textit{IN} \texttt{Index}
+		\item \textit{IN} \texttt{Index}: view generale dell'applicazione;
+		\item \textit{IN} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -52,9 +52,8 @@
 	\item \textbf{Utilizzo}: permette all'\texttt{ErrorController} di utilizzare un template unico per la visualizzazione dei diversi errori;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FooterController}
-		\item \textit{IN} \texttt{ErrorsController}
-		\item \textit{IN} \texttt{Index}
+		\item \textit{IN} \texttt{Index}: view generale dell'applicazione;
+		\item \textit{IN} \texttt{FooterController}: questa classe permette di gestire il footer dell'applicazione;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -65,10 +64,10 @@
 	\item \textbf{Utilizzo}: permette di utilizzare un unico template per inserire un immagine in una domanda;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView} \\
-		\item \textit{IN} \texttt{MultipleQuestionsView} \\
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView} \\
-		\item \textit{IN} \texttt{ClickableAreaQuestionsView} \\
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{MultipleQuestionsView}:  view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}:  view contenente i campi per creare una domanda ad area cliccabile;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
