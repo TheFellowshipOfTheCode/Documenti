@@ -28,7 +28,7 @@ Nel caso si verifichi un errore lato server, questo risponde con un codice HTTP\
 		\item \texttt{500 Errore sconosciuto}: il messaggio descrive un errore generico del server che avviene quando si verifica una condizione non gestibile e quindi non identificabile con un errore specifico.
 	\end{itemize}
 \paragraph{Errori nelle richieste da parte del client}
-Nel caso si verifichi un errore riguardo le richieste ricevute dal client, il server risponde con un codeice HTTP\ped{G} del tipo \texttt{4xx}, di seguito vengono specificati gli errori che possono essere sollevati:
+Nel caso si verifichi un errore riguardo le richieste ricevute dal client, il server risponde con un codice HTTP\ped{G} del tipo \texttt{4xx}, di seguito vengono specificati gli errori che possono essere sollevati:
 	\begin{itemize}
 		\item \texttt{400}: il server non può gestire la richiesta in seguito ad una generica richiesta errata. Il contenuto del messaggio d'errore varia in base alla tipologia di richiesta ricevuta;
 		\item \texttt{401}: Accesso non autorizzato;
@@ -57,7 +57,7 @@ Le categorie di errori definite sono le seguenti:
 	\item \texttt{3xx}: errori del middleware \texttt{topicById};
 	\item \texttt{6xx}: errori del middleware \texttt{quizById};
 	\item \texttt{7xx}: errori del middleware \texttt{summaryById};
-	\item \texttt{8xx}: errori del controller \texttt{Questioncontroller};
+	\item \texttt{8xx}: errori del controller \texttt{QuestionController};
 	\item \texttt{9xx}: errori del controller \texttt{TopicController};
 	\item \texttt{10xx}: errori del controller \texttt{QuizController};
 	\item \texttt{11xx}: errori del controller \texttt{SummaryController};
@@ -78,7 +78,7 @@ Gli errori specifici di \textit{\progetto} vengono gestiti dalla classe \texttt{
 	\item \texttt{104 Password uguale all'attuale:} è necessario inserire una password diversa della precedente;
 	\item \texttt{105 Le password non coincidono:} è necessario che 'password' e 'conferma password' siano identiche;
 	\item \texttt{111 Campo obbligatorio vuoto:} è necessario riempire tutti i campi obbligatori;
-	\item \texttt{112 Username non disponibile:} l 'username è  gia stato utilizzato, prego inserire un nuovo username;
+	\item \texttt{112 Username non disponibile:} l 'username è già stato utilizzato, prego inserire un nuovo username;
 	\item \texttt{113 Username non valido:} l'username non è valido;
 	\item \texttt{114 Indirizzo mail non valido: } è necessario fornire un indirizzo e-mail valido;
 	\item \texttt{121 Formato immagine non valido: } Il formato dell'immagine non è valido;
@@ -90,7 +90,7 @@ Gli errori specifici di \textit{\progetto} vengono gestiti dalla classe \texttt{
 	\item \texttt{700 Sommario non valido:} l'identificativo del questionario fornito non è un identificativo valido;
 	\item \texttt{800 Dati non validi:} i dati relativi al contenuto della domanda non sono  validi o sono formattati in modo errato;
 	\item \texttt{900 Dati non validi:} i dati relativi al contenuto dell'argomento non sono validi;
-	\item \texttt{1000 Dati non validi:} i dati relativi al contenuto del questionario non valdi;
+	\item \texttt{1000 Dati non validi:} i dati relativi al contenuto del questionario non validi;
 	\item \texttt{1100 Dati non validi:} i dati relativi al contenuto del  sommario non validi o sono formattati in modo errato;
 	\item \texttt{1200 Dati non validi:} i dati per la modifica di una domanda non sono definiti;
 	\item \texttt{1300 Dati non validi:} i dati per la gestione dell' argomento non sono definiti;
@@ -107,13 +107,13 @@ In seguito vengono riportate le risorse \textit{REST\ped{G}} fornite, associate 
 \end{itemize}
 Inoltre per ogni risorsa sono stati specificati i formati per lo scambio dei dati in JSON\ped{G}:
 \begin{itemize}
-	\item \textbf{Request}: rappresenta l'oggetto JSON\ped{G} che dovrà essere passato alla riorsa \textit{REST\ped{G}};
+	\item \textbf{Request}: rappresenta l'oggetto JSON\ped{G} che dovrà essere passato alla risorsa \textit{REST\ped{G}};
 	\item \textbf{Response}: rappresenta l'oggetto JSON\ped{G} che fornirà in risposta la risorsa \textit{REST\ped{G}};
-	\item \texttt{/sign up}
+	\item \texttt{/signup}
 		\begin{itemize}
 			\item \textbf{Method}: POST
 			\item \textbf{Livello di Accesso}: Utente;
-			\item \textbf{Descrizione}: crea un nuovo account. Un username univoco inserito dall'utente lo identifica, pertanto non ci sarannò più utenti con lo stesso username. Restituisce un messaggio di conferma se viene effettuato correttamente, altrienti un errore.
+			\item \textbf{Descrizione}: crea un nuovo account. Un username univoco inserito dall'utente lo identifica, pertanto non ci saranno più utenti con lo stesso username. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore.
 			\item \textbf{Request}: lo scambio dei dati dell'utente avviene attraverso una form che deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
@@ -125,23 +125,241 @@ Inoltre per ogni risorsa sono stati specificati i formati per lo scambio dei dat
 }
 \end{lstlisting}
 		\end{itemize}
-	\item \texttt{/login}
+	\item \texttt{/signin}
 		\begin{itemize}
 			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: utente/utente pro;
 			\item \textbf{descrizione}: effettua l'accesso all'account. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore.
+			\item \textbf{Request}: lo scambio dei dati dell'utente avviene attraverso una form che deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "username" : [username che corrisponde all'username inserita durante la registrazione]
 "password" : [la password associata all'username dell'account dell'utente]
 }
 \end{lstlisting}
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+"username" : [username che corrisponde all'username inserita durante la registrazione]
+}
+\end{lstlisting}
 		\end{itemize}
-	\item \texttt{/logout}
+	\item \texttt{/signout}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: effettua il logout. restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Request}: la richiesta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username dell'utente che vuole terminare la sessione]
+"userId" : [identificativo dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta di \textit{logout\ped{G}} deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username che corrisponde all'username inserita durante la registrazione]
+"status": "logout"
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/recovery}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: effettua il recupero della password, restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Request}: la richiesta di recupero della password deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"e-mail" : [la password associata all'username dell'account dell'utente]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/lang}
+		\begin{itemize}
+			\item \textbf{Method}: GET;
+			\item \textbf{Livello di Accesso}: utente;
+			\item \textbf{Descrizione}: restituisce un JSON contenete i nomi delle variabili nella lingua indicata;
+			\item \textbf{Response}: il JSON restituito deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"lang" : [ita | eng]
+"ita" : [array JSON con associazione: "variabile" : "traduzione"]
+"eng" : [array JSON con associazione: "variabile" : "traduzione"]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/error}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \texttt{Livello di Accesso}: utente;
+			\item \textbf{Descrizione}: restituisce il messaggio d'errore nella giusta lingua;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"error": [numero dell'errore verificatosi]
+}
+\end{lstlisting}
+			\item \textbf{Response} la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"messaggio" : [contenuto del messaggio d'errore]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/user/search}
+	 \begin{itemize}
+	 	\item \textbf{Method}: POST;
+	 	\item \textbf{Livello di Accesso:} utente autenticato/autenticato pro;
+	 	\item \textbf{Descrizione}: effettua una ricerca di utenti da parte di un utente;
+	 	\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"ricerca" : [stringa da ricercare]
+}
+\end{lstlisting} 
+		\item \textbf{Response:} la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"result" : [array di oggeti che contengono l'username e l'identificativo degli utenti trovati]
+}
+\end{lstlisting}
+	 \end{itemize}
+	\item \texttt{/user/me}
 		\begin{itemize}
 			\item \textbf{Method}: GET;
 			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: effettua il logout. restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Descrizione}: fornisce le informazioni per la visualizzazione del profilo utente personale;
+			\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+"username" : [username utente]
+"nome" : [nome utente]
+"cognome" : [cognome utente]
+"e-mail" : [indirizzo e-mail utente]
+"img" : [url immagine utente]
+"tipologia" : [normale | pro]
+"livello" : [livello dell'utente]
+"Statistiche"  : [array delle statistiche dell'utente]
+}
+\end{lstlisting}
 		\end{itemize}
-	\item ...
+	\item \texttt{/user/updateme}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Acccesso:} utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce l'identificativo dell'utente che deve modificare le proprie informazioni;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificatiivo dell'utente]
+"username" : [username che corrisponde all'username inserita durante la registrazione]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"nome" : [nome utente]
+"cognome" : [cognome utente]
+"img" : [url immagine utente]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/user/userId}
+		\begin{itemize}
+			\item \textbf{Method}: GET;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni su un utente da visualizzare;
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username utente da visualizzare]
+"nome" : [nome utente da visualizzare]
+"cognome" : [cognome utente da visualizzare]
+"livello" : [livello utente da visualizzare]
+"statistiche" : [array di statistiche dell'utente da visualizzare]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/quiz/search}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce i risultati trovati da una ricerca sui questionari;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"search" : [stringa da ricercare sui questionari]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"result" : [array di oggetti che contengono il nome utente di chi ha creato il questionario, il nome del questionarioe il suo identificativo]
+}
+\end{lstlisting} 
+		\end{itemize}
+	\item \texttt{/quiz/me}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item  \textbf{Descrizione}: ; 
+			\item \textbf{Request}: ;
+			\item \textbf{Response}: ;
+		\end{itemize}
+	\item \texttt{/stats}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni riguardante le statistiche dell'utente;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"statistics" : [Array contenente le statistiche dell'utente]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/question/mine}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso} utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni riguardanti una domanda;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"question" : [array contenente oggetti che compongono la domanda]
+}
+\end{lstlisting}
+		\end{itemize}
+	\item \texttt{/question/send}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: risponde con un messaggio di conferma se la domanda ricevuta è stata validata e inserita correttamente del database;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"topic" : [argomento della domanda]
+"tipologia" : [tipologia della domanda]
+"testo" : [testo della domanda]
+"risposte" : [array di possibli risposte della domanda]
+"corretta" : [risposta corretta]
+}
+\end{lstlisting}
+		\end{itemize}
 \end{itemize}
