@@ -230,9 +230,9 @@
 	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda a riempimento testo compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionsController} \\
-		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di sdirective che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -243,10 +243,10 @@
 	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda ad area cliccabile compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ClickableAreaQuestionsController} \\
-		\item \textit{IN} \texttt{ImageInTheQuestionDirective} \\
-		\item \textit{IN} \texttt{TopicKeywordsDirective} \\
-		\item \textit{IN} \texttt{QuestionTextDirective} \\ 
+		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
+		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -257,7 +257,7 @@
 	\item \textbf{Utilizzo}: permette ad un utente di creare domande personalizzate attraverso la scrittura del codice QML direttamente nell'editor di testo presente nella view;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{EditorQMLController} \\
+		\item \textit{IN} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -268,16 +268,16 @@
 	\item \textbf{Utilizzo}: all'interno di essa verrà caricato inizialmente il template dove si potranno scegliere l'argomento e le parole chiave dell'allenamento; verranno poi caricati i templates di ogni domanda in base alle preferenze scelte; 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrainingController} \\
-		\item \textit{IN} \texttt{TrainingSetUpTemplate} \\
-		\item \textit{IN} \texttt{HeaderTextQuestionTemplate} \\
-		\item \textit{IN} \texttt{TrueFalseAnswerTemplate} \\
-		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate} \\
-		\item \textit{IN} \texttt{LinkingAnswerTemplate} \\
-		\item \textit{IN} \texttt{SortImagesAnswerTemplate} \\
-		\item \textit{IN} \texttt{SortTextAnswerTemplate} \\
-		\item \textit{IN} \texttt{EmptyChoiceAnswerTemplate} \\
-		\item \textit{IN} \texttt{ClickableAnswerTemplate} \\
+		\item \textit{IN} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
+		\item \textit{IN} \texttt{TrainingSetUpTemplate}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene visualizzato	dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}:rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{TrueFalseAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda a risposta multipla. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{LinkingAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda di collegamento. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{SortImagesAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{SortTextAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di stringhe. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{EmptySpaceAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{ClickableAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -288,16 +288,16 @@
 	\item \textbf{Utilizzo}: all'interno di essa verrà caricato inizialmente il template contenente le informazioni generali relative al questionario; verranno poi caricati i templates di ogni domanda presente nel questionario;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionnaireController} \\
-		\item \textit{IN} \texttt{InfoQuestionnaireTemplate} \\
-		\item \textit{IN} \texttt{HeaderTextQuestionTemplate} \\
-		\item \textit{IN} \texttt{TrueFalseAnswerTemplate} \\
-		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate} \\
-		\item \textit{IN} \texttt{LinkingAnswerTemplate} \\
-		\item \textit{IN} \texttt{SortImagesAnswerTemplate} \\
-		\item \textit{IN} \texttt{SortTextAnswerTemplate} \\
-		\item \textit{IN} \texttt{EmptyChoiceAnswerTemplate} \\
-		\item \textit{IN} \texttt{ClickableAnswerTemplate} \\
+		\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
+		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}:rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{TrueFalseAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{MultipleChoiceAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda a risposta multipla. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{LinkingAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda di collegamento. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{SortImagesAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{SortTextAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di stringhe. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{EmptySpaceAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+		\item \textit{IN} \texttt{ClickableAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -308,10 +308,10 @@
 	\item \textbf{Utilizzo}: permette di visualizzare tutti i questionari creati, quelli abilitati per la compilazione e quelli non ancora abilitati;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireManagementController} \\
-		\item \textit{IN} \texttt{CreationAndModifyDirective} \\
-		\item \textit{IN} \texttt{ExamModalityDirective} \\
-		\item \textit{IN} \texttt{QuestionnaireResultsDirective} \\
+		\item \textit{IN} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente;
+		\item \textit{IN} \texttt{CreationAndModifyDirective}: componente grafico contenente il bottone per creare un questionario uno per modificare un questionario;
+		\item \textit{IN} \texttt{ExamModalityDirective}: directive contenete i componenti grafici per attivare la modalità esame su un questionario e gestire le iscrizioni;
+		\item \textit{IN} \texttt{QuestionnaireResultsDirective}:
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -322,9 +322,14 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare un questionario compilando tutti i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{CreateQuestionnaireController} \\
-		\item \textit{IN} \texttt{KeywordsDirective} \\
-		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective} \\ 
+		\item \textit{IN} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
+		\item \textit{IN} \texttt{KeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective}: rappresenta il componente grafico che permette all'utente di:
+		\begin{itemize}
+			\item Effettuare delle ricerche sul database di domande;
+			\item Selezionare le domande da inserire nel questionario;
+			\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
+			\end{itemize}
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -335,7 +340,7 @@
 	\item \textbf{Utilizzo}: permette di visualizzare tutti gli utenti iscritti al proprio questionario e abilitarli alla compilazione;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{RegistrationManagementController} \\
+		\item \textit{IN} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
@@ -346,7 +351,7 @@
 	\item \textbf{Utilizzo}: permette di visualizzare i risultati di ogni utente conseguiti nella compilazione del questionario;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ResultsController} \\
+		\item \textit{IN} \texttt{ResultsController}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente;
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
