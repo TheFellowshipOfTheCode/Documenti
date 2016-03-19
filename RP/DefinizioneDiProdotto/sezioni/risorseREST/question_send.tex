@@ -1,0 +1,16 @@
+	\item \texttt{/question/send}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: risponde con un messaggio di conferma se la domanda ricevuta è stata validata e inserita correttamente del database;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"topic" : [argomento della domanda]
+"tipologia" : [tipologia della domanda]
+"testo" : [testo della domanda]
+"risposte" : [array di possibli risposte della domanda]
+"corretta" : [risposta corretta]
+}
+\end{lstlisting}
+		\end{itemize}

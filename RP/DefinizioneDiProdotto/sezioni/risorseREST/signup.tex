@@ -1,0 +1,16 @@
+	\item \texttt{/signup}
+		\begin{itemize}
+			\item \textbf{Method}: POST
+			\item \textbf{Livello di Accesso}: Utente;
+			\item \textbf{Descrizione}: crea un nuovo account. Un username univoco inserito dall'utente lo identifica, pertanto non ci saranno più utenti con lo stesso username. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore.
+			\item \textbf{Request}: lo scambio dei dati dell'utente avviene attraverso una form che deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username univoco scelto dall'utente]
+"password" : [la password associata all'account che si vuole registrare]
+"e-mail" : [l'indirizzo e-mail con cui si effettua la registrazione]
+"nome" : [nome dell'utente da registrare]
+"cognome" : [cognome dell'utente da registrare]
+}
+\end{lstlisting}
+		\end{itemize}

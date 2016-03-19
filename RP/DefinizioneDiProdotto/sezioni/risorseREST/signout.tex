@@ -1,0 +1,20 @@
+	\item \texttt{/signout}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: effettua il logout. restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Request}: la richiesta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username dell'utente che vuole terminare la sessione]
+"userId" : [identificativo dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta di \textit{logout\ped{G}} deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username che corrisponde all'username inserita durante la registrazione]
+"status": "logout"
+}
+\end{lstlisting}
+		\end{itemize}

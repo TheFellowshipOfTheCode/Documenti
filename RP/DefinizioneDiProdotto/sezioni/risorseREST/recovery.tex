@@ -1,0 +1,12 @@
+	\item \texttt{/recovery}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: effettua il recupero della password, restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Request}: la richiesta di recupero della password deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"e-mail" : [la password associata all'username dell'account dell'utente]
+}
+\end{lstlisting}
+		\end{itemize}

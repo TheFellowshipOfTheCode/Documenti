@@ -1,0 +1,16 @@
+	\item \texttt{/user/userId}
+		\begin{itemize}
+			\item \textbf{Method}: GET;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni su un utente da visualizzare;
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username utente da visualizzare]
+"nome" : [nome utente da visualizzare]
+"cognome" : [cognome utente da visualizzare]
+"livello" : [livello utente da visualizzare]
+"statistiche" : [array di statistiche dell'utente da visualizzare]
+}
+\end{lstlisting}
+		\end{itemize}

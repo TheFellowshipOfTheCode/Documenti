@@ -1,0 +1,14 @@
+	\item \texttt{/lang}
+		\begin{itemize}
+			\item \textbf{Method}: GET;
+			\item \textbf{Livello di Accesso}: utente;
+			\item \textbf{Descrizione}: restituisce un JSON contenete i nomi delle variabili nella lingua indicata;
+			\item \textbf{Response}: il JSON restituito deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"lang" : [ita | eng]
+"ita" : [array JSON con associazione: "variabile" : "traduzione"]
+"eng" : [array JSON con associazione: "variabile" : "traduzione"]
+}
+\end{lstlisting}
+		\end{itemize}

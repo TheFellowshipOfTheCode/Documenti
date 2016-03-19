@@ -1,0 +1,18 @@
+	\item \texttt{/question/mine}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso} utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni riguardanti una domanda;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"question" : [array contenente oggetti che compongono la domanda]
+}
+\end{lstlisting}
+		\end{itemize}

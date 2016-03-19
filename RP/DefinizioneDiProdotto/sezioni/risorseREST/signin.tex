@@ -1,0 +1,20 @@
+	\item \texttt{/signin}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente/utente pro;
+			\item \textbf{descrizione}: effettua l'accesso all'account. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore.
+			\item \textbf{Request}: lo scambio dei dati dell'utente avviene attraverso una form che deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username che corrisponde all'username inserita durante la registrazione]
+"password" : [la password associata all'username dell'account dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+"username" : [username che corrisponde all'username inserita durante la registrazione]
+}
+\end{lstlisting}
+		\end{itemize}
