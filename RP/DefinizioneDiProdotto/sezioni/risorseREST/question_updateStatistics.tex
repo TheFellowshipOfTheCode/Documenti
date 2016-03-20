@@ -1,0 +1,20 @@
+	\item \texttt{/question/updateStatistics}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni necessarie per l'aggiornamento delle statistiche della domanda;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"questionId" : [identificativo della domanda]
+"correct" : [true | false]
+"levelUser" : [livello, sull'argomento della domanda, dell'utente che ha risposto]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"status" : "update completed"
+}
+\end{lstlisting}
+		\end{itemize}

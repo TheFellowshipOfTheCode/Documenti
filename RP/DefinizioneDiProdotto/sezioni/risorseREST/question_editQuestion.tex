@@ -1,0 +1,22 @@
+	\item \texttt{/question/editQuestion}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni necessaria alla modifica di una domanda già presente nel sistema;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente che vuole modificare la domanda]
+"testo" : [testo da sovrascrivere al testo attuale della domanda]
+"option1" : [Array di stringhe da sovrascrivere all array di risposte attuale della domanda]
+"option2" : [Array di stringhe da sovrascrivere all'array di risposte corrette della domanda]
+"keyword" : [Array di stringhe da sovrascrivere all'array di keyword attuali della domanda]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta, se la domanda è stata modificata correttamente, deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"status": "ok"
+}
+\end{lstlisting}
+		\end{itemize}
