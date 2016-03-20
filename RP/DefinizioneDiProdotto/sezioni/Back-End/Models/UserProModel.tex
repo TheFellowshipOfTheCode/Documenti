@@ -34,7 +34,7 @@ Rappresenta il ConcreteHandler nel design pattern Chain of responsibility. Utili
 		\begin{itemize}
 		\item
 		+ \texttt{addUserPro(userId : ObjectId, callback: function(JSON), errback: function(QuizzipediaError))} \\	
-		Questo metodo aggiorna la tipologia di utenza. In specifico l'utente di tipo basic passerà a pro. Ritorna un JSON contenente i dati del nuovo utente pro, qualora si siano verificati problemi verrà ritornato un messaggio d'errore.	\\	
+		Questo metodo è statico ed aggiorna la tipologia di utenza. In specifico l'utente di tipo basic passerà a pro. Ritorna un JSON contenente i dati del nuovo utente pro, qualora si siano verificati problemi verrà ritornato un messaggio d'errore.	\\	
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item
@@ -49,7 +49,7 @@ Rappresenta il ConcreteHandler nel design pattern Chain of responsibility. Utili
 			\end{itemize}	
 		\item	
 		+ \texttt{deleteUserPro(userId : ObjectId, callback: function(JSON), errback: function(QuizzipediaError))} \\	
-		Questo metodo aggiorna la tipologia di utenza. In specifico l'utente di tipo pro ritornerà a basic, eliminando il riferimento alla classe user . Ritorna un JSON contenente i dati dell'utente pro ritornato a basic, qualora si siano verificati problemi verrà ritornato un messaggio d'errore.	\\	
+		Questo metodo è statico ed aggiorna la tipologia di utenza. In specifico l'utente di tipo pro ritornerà a basic, eliminando il riferimento alla classe user . Ritorna un JSON contenente i dati dell'utente pro ritornato a basic, qualora si siano verificati problemi verrà ritornato un messaggio d'errore.	\\	
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item
