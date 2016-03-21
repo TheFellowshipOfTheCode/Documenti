@@ -8,18 +8,17 @@
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}\\
-	Classe che si occupa della gestione dell'errore di pagina non trovata. Componente ConcreteHandler del design pattern Chain of responsibility.
+	Classe che si occupa della gestione dell'errore di pagina non trovata. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}.
 	\item \textbf{Utilizzo}\\
-	Viene utilizzata per generare una pagina 404 di errore nel caso in cui l'URI passato non corrisponda ad una risorsa presente nell'applicazione.
+	Viene utilizzata per generare una pagina 404 di errore nel caso in cui l'\textit{URI\ped{G}} passato non corrisponda ad una risorsa presente nell'applicazione.
 	\item \textbf{Relazione con altre classi}\\
 	\begin{itemize}
 		\item \textbf{IN} \texttt{UserRouter}\\
-		Classe che gestisce le richieste relative alle operazioni riguardanti l'utente. Componente ConcreteHandler del design pattern Chain of responsibility.
+		Classe che gestisce le richieste relative alle operazioni riguardanti l'utente. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
 		\item \textbf{IN} \texttt{QuestionRouter}\\
-		Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente ConcreteHandler del design pattern Chain of responsibility.
+		Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
 		\item \textbf{IN} \texttt{QuizRouter}\\
-		Classe che gestisce le richieste relative alle operazioni riguardanti i questionari. Componente ConcreteHandler del design pattern Chain of responsibility.
-		.................................
+		Classe che gestisce le richieste relative alle operazioni riguardanti i questionari. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}.
 	\end{itemize}
 	\item \textbf{Metodi}\\
 	\begin{itemize}
@@ -28,11 +27,11 @@
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{req: Request}\\
-			Rappresenta la richiesta inviata al server.
+			Rappresenta la richiesta inviata al \textit{server\ped{G}};
 			\item \texttt{res: Response}\\
-			Rappresenta la risposta che il server fornirà al termine dell'esecuzione del metodo.
+			Rappresenta la risposta che il \textit{server\ped{G}} fornirà al termine dell'esecuzione del metodo;
 			\item \texttt{next: function(QuizziPediaError)}\\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo QuizziPediaError attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi middleware. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
