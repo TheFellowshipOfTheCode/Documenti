@@ -12,7 +12,7 @@
 		\item \textbf{Package contenuti}
 		\begin{itemize}
 			\item App \\
-			Package\ped{G} contenente le componenti del server che implementano il \textit{pattern MVC\ped{G}}.
+			Package\ped{G} contenente le componenti del server che implementano il \textit{pattern MVC\ped{G}};
 			\item Config \\
 			Package\ped{G} contenente le componenti di configurazione del server\ped{G}.
 		\end{itemize}
@@ -21,7 +21,7 @@
 	\paragraph{QuizziPedia::Back-End::Server}
 	\begin{itemize}
 		\item \textbf{Descrizione} \\
-		Classe che avvia il server. Nello specifico apre una connessione al database tramite Mongoose, invoca il middleware\ped{G} Express\ped{G} passando un riferimento al database MongoDB\ped{G} come parametro in modo  che possa configurarsi con esso, invoca il middleware\ped{G} Passport\ped{G} ed infine si mette in ascolto su una determinata porta. E' il componente client del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza i moduli Mongoose\ped{G}, Express\ped{G}, Passport\ped{G}.
+		Classe che avvia il server\ped{G}. Nello specifico apre una connessione al database tramite Mongoose\ped{G}, invoca il \textit{middleware\ped{G}} Express\ped{G} passando un riferimento al database MongoDB\ped{G} come parametro in modo  che possa configurarsi con esso, invoca il middleware\ped{G} Passport\ped{G} ed infine si mette in ascolto su una determinata porta. E' il componente client del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza i moduli Mongoose\ped{G}, Express\ped{G}, Passport\ped{G}.
 		\item \textbf{Utilizzo} \\
 		Utilizzo per avviare l'applicazione lato server. Inizializza, internamente al back-end, la catena di gestione delle chiamate REST\ped{G} utilizzando le classi contenute nel package \texttt{Routers}
 		\item \textbf{Relazioni con altre classi}
