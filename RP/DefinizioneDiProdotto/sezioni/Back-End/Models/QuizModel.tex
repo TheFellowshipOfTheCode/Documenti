@@ -76,7 +76,7 @@
 			\end{itemize}
 			
 			\item \texttt{+ addUser(userID: ObjectId): void}\\
-			Iscrive un utente al questionario.\\
+			Aggiunge un utente dalla lista degli iscritti al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{userID: ObjectId}\\
@@ -84,7 +84,7 @@
 			\end{itemize}
 			
 			\item \texttt{+ addActiveUser(userID: ObjectId): void}\\
-			Iscrive un utente al questionario.\\
+			Aggiunge un utente dalla lista degli utenti che hanno svolto il questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{userID: ObjectId}\\
@@ -92,7 +92,7 @@
 			\end{itemize}
 			
 			\item \texttt{+ addCorrect(): void}\\
-			Incrementa il numero di risposte corrette date alle domande del questionario.\\			
+			Incrementa il numero di risposte corrette date alle domande del questionario.		
 			
 			\item \texttt{+ removeUser(userID: ObjectId, errback: function(QuizziPediaError)): void}\\
 			Rimuovere un utente dalla lista degli iscritti al questionario.\\
@@ -108,8 +108,8 @@
 			Ricerca un questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{title: String}\\
-				Rappresenta il titolo del questionario da ricercare.
+				\item \texttt{searchword: String}\\
+				Rappresenta il titolo o l'autore del questionario da ricercare.
 				\item \texttt{callback: function(JSON)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
 				\item \texttt{errback: function(QuizziPediaError)}\\

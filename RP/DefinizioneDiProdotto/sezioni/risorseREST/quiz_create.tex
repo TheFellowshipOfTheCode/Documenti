@@ -1,0 +1,14 @@
+	\item \texttt{/quiz/create}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente autenticato pro;
+			\item \textbf{Descrizione}: fornisce le informazioni che andranno a comporre una domanda da inserire nel sistema;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente che crea il questionario]
+"title" : [titolo del questionario]
+"questions" : [array di domande]
+}
+\end{lstlisting}
+		\end{itemize}

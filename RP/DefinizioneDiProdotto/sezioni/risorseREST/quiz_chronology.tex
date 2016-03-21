@@ -1,18 +1,18 @@
-	\item \texttt{/quiz/search}
+	\item \texttt{/quiz/chronology}
 		\begin{itemize}
 			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: fornisce i risultati trovati da una ricerca sui questionari ai quali ci si può iscrivere;
+			\item \textbf{Descrizione}: fornisce la cronologia dei questionari svolti da un utente;
 			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"search" : [stringa da ricercare sui questionari]
+"_userId" : [identificativo dell'utente che ha svolto dei questionari]
 }
 \end{lstlisting}
 			\item \textbf{Response}: la risposta deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"quizzes" : [array di oggetti che contengono il nome utente di chi ha creato il questionario, il nome del questionario e il suo identificativo]
+"quizzes" : [array di oggetti che contengono l'identificativo dei riepiloghi dei questionari svolti]
 }
 \end{lstlisting} 
 		\end{itemize}
