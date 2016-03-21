@@ -8,24 +8,24 @@
 \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione} \\
-	Classe che modella la creazione e la gestione dei dati utente
+	Classe che modella la creazione e la gestione dei dati utente;
 	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
+	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
 	\item \textbf{Relazioni con altre classi} 
 		\begin{itemize}
 			\item IN \textbf {AuthenticationController} \\
-			Classe che si occupa della registrazione e dell'autenticazione dell'utente nel sistema. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}} . Risulta essere il componente che eventualmente esegue la richiesta del client attraverso \textit{Passport\ped{G}}.
+			Classe che si occupa della registrazione e dell'autenticazione dell'utente nel sistema. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}} . Risulta essere il componente che eventualmente esegue la richiesta del client attraverso \textit{Passport\ped{G}};
 			\item IN \textbf {SessionController} \\
-			Classe \textit{middleware\ped{G}} che, utilizzando \textit{Passport\ped{G}}, si occupa di controllare la consistenza dell'oggetto session durante la sessione associata all’utente autenticato. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}.	
+			Classe \textit{middleware\ped{G}} che, utilizzando \textit{Passport\ped{G}}, si occupa di controllare la consistenza dell'oggetto session durante la sessione associata all’utente autenticato. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}};
 			\item IN \textbf {UserManagementController} \\
 			Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica dei dati dell'utente.
-Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibility\ped{G}}. Utilizza \textit{Passport\ped{G}}.
+Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibility\ped{G}}. Utilizza \textit{Passport\ped{G}};
 			\item OUT \textbf{SummaryModel} \\
-			Questa classe rappresenta il riepologo dei questionari svolti dagli utenti.
+			Questa classe rappresenta il riepilogo dei questionari svolti dagli utenti;
 			\item IN \textbf{QuestionModel} \\
-			Questa classe rappresenta i dati delle domande create dai vari utenti.
+			Questa classe rappresenta i dati delle domande create dai vari utenti;
 			\item IN \textbf{QuizModel} \\
-			Questa classe rappresenta i dati dei questionari creati dagli utenti Pro.
+			Questa classe rappresenta i dati dei questionari creati dagli utenti Pro;
 			\item IN \textbf{UserProModel} \\
 			Questa classe rappresenta i dati riguardanti l'utente pro.
 		\end{itemize}
@@ -62,15 +62,15 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 					\texttt{levelUsers} di tipo \texttt{Number}, identifica il livello dell'utente;				
 				
 				\item
-					\texttt{quizSummaries} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{ObjectId}, che rappresentano i riferimenti agli identificativi nel database dei questionari svolti dall'utente;		
+					\texttt{quizSummaries} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{ObjectId}, che rappresentano i riferimenti agli identificativi nel database dei questionari svolti dall'utente.		
 			\end{itemize}	
 		\end{itemize}	
 	\item \textbf{Metodi}
 		\begin{itemize}
 		\item
 		- \texttt{hashPassword(password: String): String} \\
-		Effettua l'hashing della stringa password se non è già stata criptata tramite campo salt per evitare attacchi di tipo rainbow. \\
-		\textbf{Parametri} 
+		Effettua l'hashing della stringa password se non è già stata criptata tramite campo salt per evitare attacchi di tipo rainbow; \\
+		\textbf{Parametri}: 
 			\begin{itemize}
 			\item
 				 \texttt{password: String} \\
@@ -79,66 +79,66 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 		\item
 		- \texttt{validPassword(password: String): String} \\
 		Effettua la validità della password inserita comparandola con la password criptata.	\\
-		\textbf{Parametri} 
+		\textbf{Parametri}: 
 			\begin{itemize}
 			\item
 				\texttt{password: String} \\
 				Rappresenta la password inserita dall'utente.
 			\end{itemize}
 		\item
-		+ \texttt{editUser(content: JSON, callback: function(JSON), errback: function(QuizzipediaError))} \\
-		Questo metodo aggiorna i dati personali dell'utente. Restituisce un oggetto \textit{JSON\ped{G}} che descrive l’elemento dopo l’aggiornamento oppure un messaggio di errore.	\\
+		+ \texttt{editUser(content: JSON, callback: function(JSON), errback:\\ function(QuizziPediaError))} \\
+		Questo metodo aggiorna i dati personali dell'utente. Restituisce un oggetto \textit{JSON\ped{G}} che descrive l'elemento dopo l'aggiornamento oppure un messaggio di errore.	\\
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item
 				\texttt{content: JSON} \\
-				Rappresenta i dati dell'utente da aggiornare.
+				Rappresenta i dati dell'utente da aggiornare;
 			\item	
 				\texttt{callback: function(JSON)} \\
-				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione.
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione;
 			\item	
-				\texttt{errback: function(QuizzipediaError)} \\
+				\texttt{errback: function(QuizziPediaError)} \\
 				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
 			\end{itemize}	
 		\item	
-		+ \texttt{editPassword(password: String, errback: function(QuizzipediaError))} \\
-		Questo metodo aggiorna la password vecchia dell'utente con quella passata per parametro. Restituisce un messaggio di errore nel caso in cui si verificati dei problemi nel cambio della password.	\\
+		+ \texttt{editPassword(password: String, errback: function(QuizziPediaError))} \\
+		Questo metodo aggiorna la password vecchia dell'utente con quella passata per parametro. Restituisce un messaggio di errore nel caso in cui si verificati dei problemi nel cambio della password;	\\
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item
 				\texttt{password: String} \\
-				Rappresenta la nuova password dell'utente da sostituire a quella vecchia.
+				Rappresenta la nuova password dell'utente da sostituire a quella vecchia;
 			\item	
 				\texttt{errback: function(QuizzipediaError)} \\
 				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
 			\end{itemize}
 		\item	
 		+ \texttt{setImg(image : String, errback : function(QuizziPediaError))} \\	
-		Questo metodo aggiorna l'immagine profilo dell'utente. Restituisce un messaggio di errore nel caso in cui si verificati dei problemi nell'aggiornamento dell'immagine.	\\	
+		Questo metodo aggiorna l'immagine profilo dell'utente. Restituisce un messaggio di errore nel caso in cui si verificati dei problemi nell'aggiornamento dell'immagine;	\\	
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item
 				\texttt{image: String} \\
-				Rappresenta l'immagine per aggiornare la foto del profilo.
+				Rappresenta l'immagine per aggiornare la foto del profilo;
 			\item	
-				\texttt{errback: function(QuizzipediaError)} \\
+				\texttt{errback: function(QuizziPediaError)} \\
 				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
 			\end{itemize}
 		\item	
 		+ \texttt{updateStatistics(statistics : JSON, callback : function(JSON))} \\	
-		Questo metodo aggiorna le statistiche dell'utente in un determinato argomento. Restituisce un oggetto \textit{JSON\ped{G}} che descrive le statistiche dell'utente dopo l'aggiornamento.	\\	
+		Questo metodo aggiorna le statistiche dell'utente in un determinato argomento. Restituisce un oggetto \textit{JSON\ped{G}} che descrive le statistiche dell'utente dopo l'aggiornamento;	\\	
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item
 				\texttt{statistics: JSON} \\
-				Rappresenta il contenuto delle statistiche riguardanti l'esercitazione effettuata in un determinato argomento da utilizzare per aggiornare quelle esistenti .
+				Rappresenta il contenuto delle statistiche riguardanti l'esercitazione effettuata in un determinato argomento da utilizzare per aggiornare quelle esistenti;
 			\item	
 				\texttt{callback: function(JSON)} \\
 				Rappresenta la callback che il metodo deve chiamare al termine dell'elaborazione.
 			\end{itemize}
 		\item		
 		+ \texttt{upLevel(callback : function(JSON))} \\
-		Questo metodo aggiorna il livello di difficoltà relativo alla capacità dell'utente a rispondere a determinate domande. Restituisce un oggetto \textit{JSON\ped{G}} che descrive il livello dell'utente dopo l'aggiornamento.	\\	
+		Questo metodo aggiorna il livello di difficoltà relativo alla capacità dell'utente a rispondere a determinate domande. Restituisce un oggetto \textit{JSON\ped{G}} che descrive il livello dell'utente dopo l'aggiornamento;	\\	
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item	
@@ -147,15 +147,15 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 			\end{itemize}
 		\item		
 		+ \texttt{deleteUser(callback : function(JSON), errback:function(QuizzipediaError))} \\	
-		Questo metodo elimina dal sistema l'utente registrato. Restituisce un oggetto \textit{JSON\ped{G}} che descrive i dati dell'utente eliminato.	\\	
+		Questo metodo elimina dal sistema l'utente registrato. Restituisce un oggetto \textit{JSON\ped{G}} che descrive i dati dell'utente eliminato;	\\	
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item	
 				\texttt{callback: function(JSON)} \\
-				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione.	
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione;	
 			\item	
-				\texttt{errback: function(QuizzipediaError)} \\
-				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.		
+				\texttt{errback: function(QuizziPediaError)} \\
+				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo;		
 			\end{itemize}
 		\item	
 		+ \texttt{updateSummary(quiz : JSON)}	
@@ -164,33 +164,33 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 			\begin{itemize}
 			\item	
 				\texttt{quiz : JSON)} \\
-				Rappresenta il contenuto del questionario svolto .		
+				Rappresenta il contenuto del questionario svolto.		
 			\end{itemize}
 		\item	
 		+ \texttt{getSummaries(callback : function(JSON), errback : function(QuizziPediaError))}	
-		Questo metodo ritorna un \textit{JSON\ped{G}} contenente la cronologia dei questionari svolti da parte dell'utente, in caso di errori una \textit{callback\ped{G}} che segnalerà i relativi problemi.\\
+		Questo metodo ritorna un \textit{JSON\ped{G}} contenente la cronologia dei questionari svolti da parte dell'utente, in caso di errori una \textit{callback\ped{G}} che segnalerà i relativi problemi;\\
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item	
 				\texttt{callback: function(JSON)} \\
-				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione.	
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione;	
 			\item	
-				\texttt{errback: function(QuizzipediaError)} \\
+				\texttt{errback: function(QuizziPediaError)} \\
 				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.
 			\end{itemize}	
 		\item			
-		+ \texttt{getUsers(searchword : String, callback : function(JSON), errback : function(QuizziPediaError))}		
-		Questo metodo è statico e ritorna un \textit{JSON\ped{G}} contenente i dati degli utenti in base alla parola chiave cercata, in caso di errori una \textit{callback\ped{G}} che segnalerà i relativi problemi.\\
+		+ \texttt{\underline{getUsers}(searchword : String, callback : function(JSON), errback : \\function(QuizziPediaError))}		
+		Questo metodo è statico e ritorna un \textit{JSON\ped{G}} contenente i dati degli utenti in base alla parola chiave cercata, in caso di errori una \textit{callback\ped{G}} che segnalerà i relativi problemi;\\
 		\textbf{Parametri} 
 			\begin{itemize}
 			\item	
 				\texttt{searchword: String} \\
-				Rappresenta la parola chiave cercata in base alla quale verrà filtrata la ricerca degli utenti.	
+				Rappresenta la parola chiave cercata in base alla quale verrà filtrata la ricerca degli utenti;	
 			\item	
 				\texttt{callback: function(JSON)} \\
-				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione.	
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione;	
 			\item	
-				\texttt{errback: function(QuizzipediaError)} \\
+				\texttt{errback: function(QuizziPediaError)} \\
 				Questo parametro rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori nell'esecuzione del metodo.		
 			\end{itemize}
 		\end{itemize}	
