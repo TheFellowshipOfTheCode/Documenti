@@ -17,7 +17,7 @@
 	\item \textbf{Relazioni con altre classi}
 		\begin{itemize}
 			\item \textbf{OUT} \texttt{QuestionModel}\\
-			Classe che rappresenta le operazioni relative alle domande.
+			Classe che rappresenta le operazioni relative alle domande;
 			\item \textbf{OUT} \texttt{UserModel}\\
 			Classe che rappresenta le operazioni relative agli utenti.
 		\end{itemize}
@@ -42,9 +42,9 @@
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{info: JSON}\\
-				Rappresenta i dati del questionario che verrà creato.
+				Rappresenta i dati del questionario che verrà creato;
 				\item \texttt{callback: function(JSON)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
 				\item \texttt{errback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
@@ -70,7 +70,7 @@
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{title: String}\\
-				Rappresenta il titolo da dare al questionario.
+				Rappresenta il titolo da dare al questionario;
 				\item \texttt{errback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
@@ -99,7 +99,7 @@
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{userID: ObjectId}\\
-				Rappresenta l'identificativo dell'utente da rimuovere dalla lista degli iscritti al questionario.
+				Rappresenta l'identificativo dell'utente da rimuovere dalla lista degli iscritti al questionario;
 				\item \texttt{errback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
@@ -109,9 +109,9 @@
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{searchword: String}\\
-				Rappresenta il titolo o l'autore del questionario da ricercare.
+				Rappresenta il titolo o l'autore del questionario da ricercare;
 				\item \texttt{callback: function(JSON)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
 				\item \texttt{errback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
@@ -121,9 +121,9 @@
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{userID: ObjectId}\\
-				Rappresenta l'identificativo dell'utente per cui si deve mostrare la cronologia dei questionari svolti.
+				Rappresenta l'identificativo dell'utente per cui si deve mostrare la cronologia dei questionari svolti;
 				\item \texttt{callback: function(JSON)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
 				\item \texttt{errback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
