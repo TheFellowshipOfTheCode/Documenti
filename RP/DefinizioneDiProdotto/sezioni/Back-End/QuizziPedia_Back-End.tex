@@ -8,13 +8,14 @@
 \end{figure}
 \FloatBarrier
 	\begin{itemize}
-		\item \textbf{Descrizione} \\ Package contenenti le componenti della parte back-end dell' applicazione;
+		\item \textbf{Descrizione} \\ 
+		\textit{Package\ped{G}} contenenti le componenti della parte back-end dell' applicazione;
 		\item \textbf{Package contenuti}
 		\begin{itemize}
 			\item App \\
-			Package\ped{G} contenente le componenti del server\ped{G} che implementano il \textit{pattern MVC\ped{G}};
+			\textit{Package\ped{G}} contenente le componenti del \textit{server\ped{G}} che implementano il \textit{pattern MVC\ped{G}};
 			\item Config \\
-			Package\ped{G} contenente le componenti di configurazione del server\ped{G}.
+			\textit{Package\ped{G}} contenente le componenti di configurazione del \textit{server\ped{G}}.
 		\end{itemize}
 	\end{itemize}
 \subsubsection{Classi}
@@ -28,8 +29,8 @@
 \FloatBarrier
 	\begin{itemize}
 		\item \textbf{Descrizione} \\
-		Classe che avvia il server\ped{G}. Nello specifico apre una connessione al database tramite Mongoose\ped{G}, invoca il \textit{middleware\ped{G}} Express\ped{G} passando un riferimento al database MongoDB\ped{G} come parametro in modo  che possa configurarsi con esso, invoca il \textit{middleware\ped{G}} Passport\ped{G} ed infine si mette in ascolto su una determinata porta. E' il componente client\ped{G} del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza i moduli Mongoose\ped{G}, Express\ped{G}, Passport\ped{G};
+		Classe che avvia il \textit{server\ped{G}}. Nello specifico apre una connessione al database tramite \textit{Mongoose\ped{G}}, invoca il \textit{middleware\ped{G}} \textit{Express\ped{G}} passando un riferimento al database \textit{MongoDB\ped{G}} come parametro in modo  che possa configurarsi con esso, invoca il \textit{middleware\ped{G}} \textit{Passport\ped{G}} ed infine si mette in ascolto su una determinata porta. E' il componente \textit{client\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}. Utilizza i moduli \textit{Mongoose\ped{G}}, \textit{Express\ped{G}}, \textit{Passport\ped{G}};
 		\item \textbf{Utilizzo} \\
-		Utilizzo per avviare l'applicazione lato server\ped{G}. Inizializza, internamente al back-end, la catena di gestione delle chiamate REST\ped{G} utilizzando le classi contenute nel package\ped{G} \texttt{Routers}
+		Utilizzo per avviare l'applicazione lato \textit{server\ped{G}}. Inizializza, internamente al back-end, la catena di gestione delle chiamate \textit{REST\ped{G}} utilizzando le classi contenute nel \textit{package\ped{G}} \texttt{Routers}
 	\end{itemize}
 	
