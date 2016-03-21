@@ -1,0 +1,18 @@
+\item \texttt{/errorshandler/handleerror}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente;
+			\item \textbf{Descrizione}: restituisce un \textit{JSON\ped{G}} contenente un messaggio d'errore;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"errorNumber" : [numero dell'errore verificatosi]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"errorMessage" : [un JSON contenente il messaggio d'errore]
+}
+\end{lstlisting}
+		\end{itemize}

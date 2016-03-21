@@ -1,0 +1,21 @@
+\item \texttt{/summary/create}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: utente;
+			\item \textbf{Descrizione}: crea un riepilogo in base al questionario svolto e alle risposte date alle domande del questionario;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_summaryId" : [identificativo del riepilogo]
+"_quizId" : [identificativo del quiz per cui verrà creato il riepilogo]
+"givenAnswers" : [array contenente le risposte date alle domande del questionario svolto]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"comparedQuestions" : [array contenente booleani (true o false) che definiscono se le risposte date alle domande del questionario sono corrette o meno]
+"date" : [momento in cui viene creato il riepilogo]
+}
+\end{lstlisting}
+		\end{itemize}
