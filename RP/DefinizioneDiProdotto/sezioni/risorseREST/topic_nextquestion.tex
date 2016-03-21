@@ -1,0 +1,25 @@
+\item \texttt{/topic/nextquestion}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Acccesso}: utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: restituisce la domanda successiva di un allenamento;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_topicId" : [identificativo dell'argomento]
+"language" : [lingua in cui è scritta la domanda]
+"levelUser" : [livello dell'utente che sta svolgendo l'allenamento]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : [utente che ha creato la domanda]
+"type" : [tipologia della domanda]
+"questionText" : [testo della domanda]
+"image" : [URL dell'immagine associata al testo della domanda]
+"options1" : [array di risposte che varia di significato in base alla tipologia della domanda]
+"options2" : [array di risposte che varia di significato in base alla tipologia della domanda]
+}
+\end{lstlisting}
+		\end{itemize}

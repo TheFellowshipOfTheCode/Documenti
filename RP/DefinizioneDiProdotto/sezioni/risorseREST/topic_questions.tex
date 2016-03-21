@@ -1,0 +1,19 @@
+\item \texttt{/topic/questions}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Acccesso}: utente autenticato pro;
+			\item \textbf{Descrizione}: restituisce le domande di un determinato argomento in seguito alla ricerca per selezionare le domande da inserire in un questionario;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_topicId" : [identificativo dell'argomento]
+"language" : [lingua in cui è scritta la domanda]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve avere i seguenti dati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"questions" : [array di oggetti che contengono l'identificativo delle domande e l'username dell'autore]
+}
+\end{lstlisting}
+		\end{itemize}
