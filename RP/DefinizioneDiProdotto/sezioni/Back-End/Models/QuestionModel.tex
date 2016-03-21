@@ -1,10 +1,11 @@
 \paragraph{QuizziPedia::Back-End::App::Models::QuestionModel}
 \label{QuizziPedia::Back-End::App::Models::QuestionModel}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_questionModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::QuestionModel}
 \end{figure}
+\FloatBarrier
 	\begin{itemize}
 		\item \textbf{Descrizione} \\
 		Classe che modella i dati relativi alle domande all'interno dell'applicazione;	
@@ -12,13 +13,14 @@
 		Viene utilizzata per rappresentare le domande. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
 		\item \textbf{Relazione con altra classi}:
 			\begin{itemize}
-			\item IN UserModel;
+			\item IN \textbf{UserModel} \\
 			Classe che rappresenta tutti gli utenti;
-			\item IN SummaryModel;
+			\item OUT \textbf{SummaryModel} \\
 			Classe che rappresenta i riepiloghi dei questionari svolti;
-			\item OUT TopicModel;
+			\item OUT \textbf{TopicModel} \\
 			Classe che rappresenta gli argomenti;
-			\item OUT QuizModel.
+			\item OUT \textbf{QuizModel} \\
+			Classe che modella i questionari all'interno dell'applicazione;
 			\end{itemize}
 		\item \textbf{Attributi}:
 	\begin{itemize}
@@ -39,7 +41,7 @@
 	\end{itemize}
 \item \textbf{Metodi}:
 	\begin{itemize}
-	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON), errback: function(QuizziPediaError))} \\
+	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError))} \\
 	Metodo che permette la creazione di una nuova domanda; \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -50,12 +52,10 @@
 			\item \texttt{errback: function(QuizziPediaError)} \\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 		\end{itemize}   
-	\item \texttt{+ editQuestion(questionID: ObjectID, question: JSON, callback: function(JSON), errback: function(QuizziPediaError))} \\
+	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError))} \\
 	Metodo che permette di modificare una domanda già esistente; \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{questionID: ObjectID} \\
-			Indica l'identificativo della domanda da modificare;
 			\item \texttt{question : JSON} \\
 			Rappresenta le nuove informazioni che andranno a modificare le informazioni precedenti di una specifica domanda;
 			\item \texttt{callback: function(JSON)} \\
@@ -63,12 +63,10 @@
 			\item \texttt{errback: function(QuizziPediaError)} \\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 		\end{itemize}
-	\item \texttt{+ addKeyword(questionID: ObjectID, keyword: String, callback: function(JSON), errback: function(QuizziPediaError))} \\
+	\item \texttt{+ addKeyword(keyword: String, callback: function(JSON),\\ errback: function(QuizziPediaError))} \\
 	Metodo che permette di aggiungere delle parole chiave ad una specifica domanda; \\
 		\textbf{Parametri}:
 			 \begin{itemize}
-			 	\item \texttt{questionID: ObjectID} \\
-			 	Indica l'identificativo della domanda a cui si devono inserire le parole chiave;
 			 	\item \texttt{keyword: String} \\
 			 	Rappresenta la parola chiave da inserire
 			 	\item \texttt{callback: function(JSON)} \\
@@ -76,30 +74,27 @@
 			 	\item \texttt{errback: function(QuizziPediaError)} \\
 			 	Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 			 \end{itemize}
-	\item \texttt{+ updateLevel(questionID: ObjectID, userLevel: Number, isCorrected: boolean)} \\
+	\item \texttt{+ updateLevel(userLevel: Number, isCorrected: boolean)} \\
 	Metodo che permette di aggiornare il livello di difficoltà della domanda, questo metodo è chiamato ogni qualvolta un utente risponde ad una domanda durante un allenamento;
 		\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{questionID: ObjectID} \\
-				Indica l'identificativo della domanda a cui si devono aggiornare le informazioni che riguardano la difficoltà;
 				\item \texttt{userLevel: Number} \\
 				Indica, con un numero compreso tra 1 e 1000, l'abilità dell'utente che ha risposto alla domanda;
 				\item \texttt{isCorrected: boolean} \\
 				Indica se l'utente che ha risposto alla domanda ha risposto correttamente.
 			\end{itemize}  
-	\item \texttt{- addCorrect(questionID : ObjectID)} \\
-	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda; \\
-		\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{questionID: ObjectID} \\
-				Indica l'identificativo della domanda a cui si deve incrementare il contatore delle risposte date correttamente.
-			\end{itemize}
-	\item \texttt{- addTotal(questionID : ObjectID)} \\
+	\item \texttt{- addCorrect()} \\
+	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda;
+	\item \texttt{- addTotal()} \\
 	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda.
-		\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{questionID: ObjectID} \\
-				Indica l'identificativo della domanda a cui si deve incrementare il contatore complessivo delle risposte date. 
-			\end{itemize}
+	\item \texttt{+ compareAnswers(option1: JSON, option2: JSON)}
+	Metodo che serve per confrontare le risposte date dagli utenti con le risposte effettive delle domande per sapere se sono corrette, ogni tipologia di domanda tratterà in modo diverso i parametri per confrontare il proprio metodo di risposta; \\
+	\textbf{Parametri:}
+		\begin{itemize}
+			\item \texttt{option1: JSON} \\
+			Rappresenta la prima parte della risposta fornita dall'utente;
+			\item \texttt{option2: JSON} \\
+			Rappresenta la seconda parte della risposta fornita dall'utente;
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
