@@ -13,30 +13,41 @@
 		Viene utilizzata per rappresentare le domande. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
 		\item \textbf{Relazione con altra classi}:
 			\begin{itemize}
-			\item IN \textbf{UserModel} \\
+			\item \textbf{IN \texttt{UserModel}} \\
 			Classe che rappresenta tutti gli utenti;
-			\item OUT \textbf{SummaryModel} \\
+			\item \textbf{OUT \texttt{SummaryModel} }\\
 			Classe che rappresenta i riepiloghi dei questionari svolti;
-			\item OUT \textbf{TopicModel} \\
+			\item \textbf{OUT \texttt{TopicModel}} \\
 			Classe che rappresenta gli argomenti;
-			\item OUT \textbf{QuizModel} \\
+			\item \textbf{OUT \texttt{QuizModel}} \\
 			Classe che modella i questionari all'interno dell'applicazione;
+			\item \textbf{IN \texttt{QuestionController}} \\
+			Classe che gestisce la logica applicativa riguardante la visualizzazione, la creazione e la modifica delle domande presenti nell'applicazione;
+			\item \textbf{OUT \texttt{UserModel}} \\
+			Classe che modella la creazione e la gestione dei dati utente;
+			\item \textbf{IN \texttt{QuizModel}} \\
+			Classe che modella i questionari all'interno dell'applicazione.
+			\item \textbf{OUT \texttt{SummaryModel}} \\
+			Classe che modella i riepiloghi all'interno dell'applicazione.
+			\item \textbf{IN \texttt{TopicModel}} \\
+			Classe che modella gli argomenti all'interno delle domande.
 			\end{itemize}
 		\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{questionSchema: Schema} \\
-		Questo campo dati rappresenta lo schema Mongoose per le domande e prevede i seguenti attributi:
+		Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per le domande e prevede i seguenti attributi:
 		\begin{itemize}
 			\item \texttt{author} di tipo \texttt{ObjectId}, rappresenta il riferimento all'identificativo nel database dell'utente che ha creato la domanda;
 			\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di domanda;
 			\item \texttt{language} di tipo \texttt{String}, rappresenta la lingua in cui è scritta la domanda; 
 			\item \texttt{questionText} di tipo \texttt{String}, rappresenta il testo della domanda; 
-			\item \texttt{image} di tipo \texttt{String}, rappresenta l'URL dell'immagine associata al testo della domanda;
-			\item \texttt{options1} di tipo \texttt{Array}, contiene oggetti di tipo String e rappresenta informazioni diverse in base alla tipologia della domanda;
-			\item \texttt{options2} di tipo \texttt{Array}, contiene oggetti di tipo String e rappresenta informazioni diverse in base alla tipologia della domanda;
+			\item \texttt{image} di tipo \texttt{String}, rappresenta l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda;
+			\item \texttt{options1} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{String} e rappresenta informazioni diverse in base alla tipologia della domanda;
+			\item \texttt{options2} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{String} e rappresenta informazioni diverse in base alla tipologia della domanda;
 			\item \texttt{level} di tipo \texttt{Number}, rappresenta la difficoltà della domanda;
 			\item \texttt{totalAnswers} di tipo \texttt{Number}, rappresenta le risposte totali che tutti gli utenti hanno dato alla domanda;
 			\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta quante risposte corrette hanno dato gli utenti che hanno risposto alla domanda.
+			\item \texttt{keywords} di tipo \texttt{Array}, contiene oggettid i tipo \texttt{String} che rappresentano le parole chiave utili per ricercare una domanda;
 		\end{itemize}
 	\end{itemize}
 \item \textbf{Metodi}:
