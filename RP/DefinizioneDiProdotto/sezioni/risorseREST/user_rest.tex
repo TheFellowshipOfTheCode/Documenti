@@ -1,81 +1,72 @@
-\item \texttt{/profile/:userId}
+\item \texttt{/:lang/user}
 	\begin{itemize}
 		\item \textbf{Method}: DELETE;
-		\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-		\item \textbf{Descrizione}: elimina l'utente autenticato con id pari a :userId. 		Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
-		\item \textbf{Response}:la risposta deve contenere i seguenti campi:
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-   	"name" : [identifica il nome dell'utente]
-    	"surname" : [identifica il nome dell'utente]
-}
-\end{lstlisting}
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: elimina l'utente autenticato. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
 	\end{itemize}	
 	
-	\item \texttt{/profile/info/:userId}
+	\item \texttt{/:lang/user}
 		\begin{itemize}
 			\item \textbf{Method}: GET;
-			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: restituisce le informazioni riguardante l'utente autenticato con id pari a :userId. Restituisce un messaggio di conferma se viene
-effettuato correttamente, altrimenti un errore;
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: restituisce le informazioni riguardante l'utente autenticato. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
 			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-	"username" : [username utente da visualizzare]
-	"name" : [nome utente da visualizzare]
-	"surname" : [cognome utente da visualizzare]
-	"email" : [email utente da visualizzare]
-	"userImg": [rappresenta l'immagine dell'utente da visualizzare]
-	"levelUser" : [livello utente da visualizzare]
+"username" : [username utente da visualizzare]
+"name" : [nome utente da visualizzare]
+"surname" : [cognome utente da visualizzare]
+"email" : [email utente da visualizzare]
+"userImg": [rappresenta l'immagine dell'utente da visualizzare]
+"levelUser" : [livello utente da visualizzare]
 }
 \end{lstlisting}
 		\end{itemize}
 		
-	\item \texttt{/profile/info/:userId}
+	\item \texttt{/:lang/user}
 		\begin{itemize}
 			\item \textbf{Method}: PUT;
-			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: modifica le informazioni riguardante l'utente autenticato con id pari a :userId. Restituisce un messaggio di conferma se viene
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: modifica le informazioni riguardante l'utente autenticato. Restituisce un messaggio di conferma se viene
 effettuato correttamente, altrimenti un errore;
 			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-	"name" : [nome utente]
-	"surname" : [cognome utente]
-	"email" : [email utente]
-	"userImg": [immagine profilo utente]
-	"levelUser" : [livello utente]
+"name" : [nome utente]
+"surname" : [cognome utente]
+"email" : [email utente]
+"userImg": [immagine profilo utente]
 }
 \end{lstlisting}
 		\end{itemize}	
 		
-	\item \texttt{/profile/info/privacy/:userId}
+	\item \texttt{/:lang/user/privacy}
 		\begin{itemize}
 			\item \textbf{Method}: PUT;
-			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: modifica la password di accesso al sistema riguardante l'utente autenticato con id pari a :userId. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: modifica la password di accesso al sistema riguardante l'utente autenticato. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
 			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:	
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-    "password" : [identifica la nuova password inserita dallutente]
+"password" : [identifica la nuova password inserita dallutente]
 }	
 
 \end{lstlisting}
 		\end{itemize}
 		
-	\item \texttt{/profile/statistics/:userId}
+	\item \texttt{/:lang/user/statistics}
 		\begin{itemize}
 			\item \textbf{Method}: GET;
-			\item \textbf{Livello di Accesso}: utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: restituisce le statistiche riguardanti l'utente autenticato con id pari a :userId. 
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: restituisce le statistiche riguardanti l'utente autenticato; 
 			\item \textbf{Response}: la risposta deve contenere i seguenti campi:	
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-    "name": [identifica il nome dell'utente]
-    "surname": [identifica il nome dell'utente]
-    "userImg": [rappresenta l'immagine dell'utente]
-	"statistics":[array di JSON, contenente le statische dell'utente di ogni argomento]
-	"summaries":[array di JSON contenente la cronologia dei questionari svolti dall'utente]   
+"name": [identifica il nome dell'utente]
+"surname": [identifica il nome dell'utente]
+"userImg": [rappresenta l'immagine dell'utente]
+"statistics":[array di JSON, contenente le statische dell'utente di ogni argomento]
+"summaries":[array di JSON contenente la cronologia dei questionari svolti dall'utente]   
 }	
 
 \end{lstlisting}
