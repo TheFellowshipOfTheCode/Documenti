@@ -6,15 +6,16 @@
 			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"_summaryId" : [identificativo del riepilogo]
-"_quizId" : [identificativo del quiz per cui verrà creato il riepilogo]
+"_quizId" : [identificativo del quiz per cui verra' creato il riepilogo]
 "givenAnswers" : [array contenente le risposte date alle domande del questionario svolto]
 }
 \end{lstlisting}
 			\item \textbf{Response}: la risposta deve avere i seguenti dati:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
+"_summaryId" : [identificativo del riepilogo]
 "comparedQuestions" : [array contenente booleani (true o false) che definiscono se le risposte date alle domande del questionario sono corrette o meno]
+"questions" : [array di identificativi alle domande del questionario svolto]
 "date" : [momento in cui viene creato il riepilogo]
 }
 \end{lstlisting}
