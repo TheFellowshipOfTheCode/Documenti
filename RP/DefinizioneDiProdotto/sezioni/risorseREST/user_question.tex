@@ -1,0 +1,39 @@
+\item \texttt{/:lang/user/question}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: Restituisce le domande create dall'utente;
+		\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"listQuestion" : [ "type" : [identifica tipologia domanda]
+"language" : [identifica la lingua della domanda]
+"questionText" : [identifica il testo della domanda]
+"image" : [identifica l'immagine relativa al testo della domanda]
+"option1" : [identifica l'array di opzioni di risposte]
+"option2" : [identifica l'array di opzioni di risposte]
+"totalAnswer" : [identifica il numero totale di risposte date alla domanda]
+"correctAnswer" : [identifica il numero di risposte corrette date alla domanda]
+]
+}
+\end{lstlisting}
+	\end{itemize}	
+	
+	
+	\item \texttt{/:lang/user/question}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: Aggiunge una domanda nel sistema, restituisce un messaggio di conferma o di errore;
+			\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"listQuestion" : [ "type" : [identifica tipologia domanda]
+"language" : [identifica la lingua della domanda]
+"questionText" : [identifica il testo della domanda]
+"image" : [identifica l'immagine relativa al testo della domanda]
+"option1" : [identifica l'array di opzioni di risposte]
+"option2" : [identifica l'array di opzioni di risposte]
+}
+\end{lstlisting}
+		\end{itemize}

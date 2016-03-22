@@ -1,0 +1,52 @@
+	\item \texttt{/:lang/training}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: Utente;
+			\item \textbf{Descrizione}: restituisce una domanda in base al livello di abilità raggiunto dall'utente;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"topicTraining" : [indica l'argomento scelto per iniziare l'allenamento]
+"numberQuestions" : [indica il numero di domande che componono l'allenamento]
+"keyword" : [indica un array di parole chiavi per filtrare le domande]
+"levelUser" : [indica il livello di abilità sull'argomento scelto dell'utente]
+}
+\end{lstlisting}
+			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_questionId" : [identificativo della domanda]
+"type" : [indica la tipologia della domanda]
+"questionText" : [indica il testo della domanda]
+"option1" : [indica un array di opzioni di risposta]
+"option2" : [indica un array di opzioni di risposta] 
+}
+\end{lstlisting}
+		\end{itemize}
+		
+		
+	\item \texttt{/:lang/user/training}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: restituisce una domanda, aggiorna le statistiche della domanda e dell'utente;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"topicTraining" : [indica l'argomento scelto per iniziare l'allenamento]
+"numberQuestions" : [indica il numero di domande che componono l'allenamento]
+"keyword" : [indica un array di parole chiavi per filtrare le domande]
+"levelUser" : [indica il livello di abilità sull'argomento scelto dell'utente]
+}
+\end{lstlisting}
+		\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_questionId" : [identificativo della domanda]
+"type" : [indica la tipologia della domanda]
+"questionText" : [indica il testo della domanda]
+"option1" : [indica un array di opzioni di risposta]
+"option2" : [indica un array di opzioni di risposta] 
+}
+\end{lstlisting}
+	\end{itemize}

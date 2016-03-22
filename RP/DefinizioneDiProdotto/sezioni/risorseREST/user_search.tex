@@ -1,18 +1,61 @@
-	\item \texttt{/user/search}
+	\item \texttt{/:lang/user/search}
 	 \begin{itemize}
 	 	\item \textbf{Method}: POST;
-	 	\item \textbf{Livello di Accesso:} utente autenticato/autenticato pro;
+	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
 	 	\item \textbf{Descrizione}: effettua una ricerca di utenti da parte di un utente;
 	 	\item \textbf{Request}: la richiesta deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"ricerca" : [stringa da ricercare]
+"keyword" : [stringa da ricercare]
 }
 \end{lstlisting} 
-		\item \textbf{Response:} la risposta deve avere i seguenti campi:
+		\item \textbf{Response:} la risposta deve avere due campi \texttt{array} contenenti i risultati divisi per utenti e questionari:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"result" : [array di oggeti che contengono l'username e l'identificativo degli utenti trovati]
+"userResult" : ["_userID" : [identificativi dell'utente trovato]
+"name" : [nome dell'utente trovato]
+"surname" : [cognome dell'utente trovato]
+]
+"quizResult : "["_quizID" : [identificativo del questionario]
+"title" : [titolo del questionario]
+"author" : [username dell'autore del questionario]
+]
 }
 \end{lstlisting}
 	 \end{itemize}
+	 
+	 
+	\item \texttt{/:lang/user/search/userInfo}
+	 \begin{itemize}
+	 	\item \textbf{Method}: GET;
+	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+	 	\item \textbf{Descrizione}: Restituisce le informazioni dell'utente precedentemente trovato tramite una ricerca;
+	 	\item \textbf{Response:} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username utente da visualizzare]
+"name" : [nome utente da visualizzare]
+"surname" : [cognome utente da visualizzare]
+"email" : [email utente da visualizzare]
+"userImg": [rappresenta l'immagine dell'utente da visualizzare]
+"levelUser" : [livello utente da visualizzare]
+"statistics":[array di JSON, contenente le statische dell'utente di ogni argomento]
+}
+\end{lstlisting}
+	 \end{itemize}
+	 
+	 
+	\item \texttt{/:lang/user/search/quiz}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: Restituisce le informazioni dell questionario precedentemente trovato tramite una ricerca;
+		\item \textbf{Response:} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [identifica il titolo del questionario]
+"author" : [identifica l'autore del questionario]
+"questions" : [identifica l'Array di JSON con le domande relative al questionario]
+}
+\end{lstlisting}
+	\end{itemize}

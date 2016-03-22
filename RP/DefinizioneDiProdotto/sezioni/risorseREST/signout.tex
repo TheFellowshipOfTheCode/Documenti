@@ -1,6 +1,12 @@
-	\item \texttt{/signout}
+	\item \texttt{/:lang/signout}
 		\begin{itemize}
-			\item \textbf{Method}: GET;
+			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
 			\item \textbf{Descrizione}: effettua il logout. restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
+			\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente]
+}
+\end{lstlisting}
 		\end{itemize}

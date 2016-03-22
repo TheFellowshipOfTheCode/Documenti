@@ -1,4 +1,4 @@
-\item \texttt{/:lang/user}
+\item \texttt{/:lang/user/:userId}
 	\begin{itemize}
 		\item \textbf{Method}: DELETE;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -23,7 +23,7 @@
 \end{lstlisting}
 		\end{itemize}
 		
-	\item \texttt{/:lang/user}
+	\item \texttt{/:lang/user/:userId}
 		\begin{itemize}
 			\item \textbf{Method}: PUT;
 			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -40,7 +40,7 @@ effettuato correttamente, altrimenti un errore;
 \end{lstlisting}
 		\end{itemize}	
 		
-	\item \texttt{/:lang/user/privacy}
+	\item \texttt{/:lang/user/:userId/privacy}
 		\begin{itemize}
 			\item \textbf{Method}: PUT;
 			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -54,7 +54,7 @@ effettuato correttamente, altrimenti un errore;
 \end{lstlisting}
 		\end{itemize}
 		
-	\item \texttt{/:lang/user/statistics}
+	\item \texttt{/:lang/user/:userId/statistics}
 		\begin{itemize}
 			\item \textbf{Method}: GET;
 			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -71,4 +71,19 @@ effettuato correttamente, altrimenti un errore;
 
 \end{lstlisting}
 		\end{itemize}
+		
+		
+	\item \texttt{/:lang/user/:userId/statistics/:summaryId}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: restituisce le statistiche di un questionario svolto; 
+		\item \textbf{Response}: la risposta deve contenere i seguenti campi:	
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"givenAnswer" : [Arrai di JSON contenente le domande del quiz associate alle risposte date dall'utente]
+"mark" : [identifica la valutazione finale del questionario svolto]
+}	
+\end{lstlisting}
+	\end{itemize}
 	
