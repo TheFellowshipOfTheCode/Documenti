@@ -11,11 +11,11 @@
 \subsubsection{Informazioni generali}
 \begin{itemize}
 	\item \textbf{Descrizione}: package che contiene i controller individuati per la parte front-end dell'applicazione;
-	\item \textbf{Padre:} \texttt{Front-End};
-	\item \textbf{Interazione con altri componenti:}
+	\item \textbf{Padre}: \texttt{Front-End};
+	\item \textbf{Interazione con altri componenti}:
 	\begin{itemize}
-		\item \texttt{Models} - package che contiene le classi model individuate;
-		\item \texttt{Services} - package che contiene le classi services individuate.
+		\item \texttt{Models}: package che contiene le classi model individuate;
+		\item \texttt{Services}: package che contiene le classi services individuate.
 	\end{itemize} 
 \end{itemize}
 \subsubsection{Classi}
@@ -29,22 +29,32 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire l'autenticazione dell'utente al sistema; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità di autenticazione al sistema, compresa la gestione di situazioni di errore autenticazione;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginView}: view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
-
+		\item \textit{OUT} \texttt{LoginMV}: !!!view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
+		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		inserisco l'utente corrente passato da passport;
+		\item \texttt{-} \texttt{\$controller: \$controller} \\
+		Serve per inniettare un controller dentro un altro controller, in questa caso per l'errorcontroller;
+		\item \texttt{-} \texttt{AuthService: AuthService} \\
+		Scrive al metodo login passandogli due valori: username e password;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{LoginController(\$scope,\$controller, AuthService)} \\
+		Costruttore;
+		\item \texttt{+} \texttt{logIn(): void} \\
+		metodo che richiama il service authservice e gli passa username e password, in più se ok aggiungo a rootscope l'utente corrente cioè UserDetailsModel (vedere cosa di franco) poi redirect a homepage;
+		\item \texttt{+} \texttt{signUp(): void} \\
+		redirect alla view di registrazione;
+		\item \texttt{+} \texttt{recoveryPassword(): void} \\
+		redirect alla view di recupara passowrd;
 	\end{itemize}
 \end{itemize}
 
@@ -57,21 +67,27 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la registrazione di un utente al sistema;
 	\item \textbf{Utilizzo}: fornisce le funzionalità di registrazione di un utente al sistema;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{SignUpView}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login;
-		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
+		\item \textit{IN} \texttt{SignUpMV}: !!!view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login;
+		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{+} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{+} \texttt{\$controller: \$controller} \\
+		\item \texttt{+} \texttt{AuthService: AuthService} \\
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{SignUpController(\$scope,\$controller, AuthService)} \\
+		Costruttore;
+		\item \texttt{+} \texttt{signUp(): void} \\
+		prende i dati dal modelview e li passa a authservice attraverso la funzione signUp, una volta completata la registrazione di viene reindirizzati alla loginView;
+		\item \texttt{+} \texttt{logIn(): void} \\
+		redirect a pagina di login;
+	
 	\end{itemize}
 \end{itemize}
 
@@ -84,18 +100,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la home page;
 	\item \textbf{Utilizzo}: fornisce tutte le informazioni da mostrare nella homepage;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{HomeView}: view contenente la barra di ricerca per gli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
 		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -110,20 +125,18 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 	\item \textbf{Utilizzo}: fornisce all'utente le funzionalità di ricerca per utenti e questionari;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{OUT} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente;
 		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -138,19 +151,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il profilo personale di un utente; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità all'utente per poter gestire i propri dati;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema;
 		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -165,19 +176,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la pagina di logout;
 	\item \textbf{Utilizzo}: fornisce la funzionalità per effettuare il logout dall'applicazione;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{OUT} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
 		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -192,19 +201,19 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il ripristino della password dimenticata;
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per ripristinare la password dopo aver verificato l'identità dell'utente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{PasswordForgotView}: view contenente le form necessarie per il recupero della password dimenticata; 
-		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
+		\item \textit{IN} \texttt{PasswordForgotMV}: !!view contenente le form necessarie per il recupero della password dimenticata; 
+		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{+} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{+} \texttt{\$controller: \$controller} \\
+		\item \texttt{+} \texttt{AuthService: AuthService} \\
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -219,19 +228,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda vero/falso nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso;  
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -246,19 +253,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a risposta multipla nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente i campi per creare una domanda a risposta multipla;  
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -273,19 +278,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a collegamento nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;  
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -300,19 +303,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento immagini nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini; 
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -327,19 +328,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento di stringhe nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe; 
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -354,19 +353,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ariempimento di spazi nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{FillingQuestionsView}: view contenente i campi per creare una domanda a riempimento testo; 
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -381,19 +378,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ad area cliccabile nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi per creare una domanda ad area cliccabile; 
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -408,19 +403,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per creare e modificare una domanda tramite editor QML;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{EditorQMLView}: view contenente l'editor QML per la creazione di domande personalizzate; 
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -435,19 +428,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire di ottenere le domande create dall'utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per richiedere al back-end le domande create dall'utente e mostrarle nella sua pagina personale; 
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -462,19 +453,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le domande che siano in accordo con il livello dell'utente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento;
 		\item \textit{IN} \texttt{TrainingSetUpTemplate}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -489,20 +478,18 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la compilazione del questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per compilare un questionario e per gestire il cambio di domanda;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;  
 		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -517,19 +504,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione di un questionario;
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per la creazione di un nuovo questionario e per la modifica di uno esistente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario; 
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -544,19 +529,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
 	\item \textbf{Utilizzo}: fornisce le funzionalità di iscrizione ad un questionario;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{RegistratioManagementView}: view per la gestione degli utenti iscritti a un proprio questionario; 
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -571,19 +554,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati dal back-end e mostrarli all'utente nella view;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ResultsQuestionnaireView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari; 
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -598,19 +579,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire tutti i questionari creati da un utente; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end tutti i questionari creati da un utente;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionnaireManagementeView}: view principale per la gestione dei questionari;
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -625,18 +604,16 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il menù fisso per ogni pagina;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per aggiornare, a seconda della pagina, il contenuto del menù;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;  
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -651,49 +628,16 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il footer dell'applicazione;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le informazioni da mostrare nel footer;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;  
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
-	\begin{itemize}
-		\item 
-	\end{itemize}
-\end{itemize}
-
-\paragraph{QuizziPedia::Front-End::Controllers::ErrorController}
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ErrorController.png}
-	\caption{QuizziPedia::Front-End::Controllers::ErrorController}
-\end{figure}
-\begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente;
-	\item \textbf{Utilizzo}: fornisce le funzionalità che permettono di recuperare il giusto messaggio di errore ad ogni situazione anomala;
-	\item \textbf{Relazione con altre classi:}
-	\begin{itemize}
-		\item \textit{IN} \texttt{ErrorDirective}: directive che mostra l'eventuale errore dopo un'azione;
-		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema; 
-		\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
-		\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
-		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
-		\item \textit{OUT} \texttt{LangService}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
-		\item \textit{OUT} \texttt{ErrorService}: questa classe permette di gestire il recupero e la gestione dei messaggi di errore;
-		\item \textit{OUT} \texttt{ErrorInfoModel}: rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione.
-	\end{itemize}
-	\item \textbf{Attributi:}
-	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
-		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -708,18 +652,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire i dettagli di un questionario; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end i dettagli di un questionario creato da un utente al fine di poterli visualizzare nel suo profilo;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare;
 		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -734,18 +677,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire i dati di un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati di un utente, visualizzabili sia come dati personali dell'utente che ha effettuato l'accesso sia come risultato di una ricerca per utenti;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{UserDetailsDirective}: directive che permette di visualizzare i dati personali di un utente;
 		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -760,7 +702,7 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande esistenti nel database al fine di mostrarle durante la modalità allenamento nell'apposito template;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}: rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
 		\item \textit{IN} \texttt{TrueFalseAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
@@ -771,14 +713,13 @@
 		\item \textit{IN} \texttt{EmptySpaceAnswerTemnplate}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
 		\item \textit{IN} \texttt{ClickableAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;  
 		\item \textit{OUT} \texttt{QuestionServices}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -793,18 +734,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle parole chiave di un questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle parole chiave durante la creazione di un questionario;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda; 
 		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande; 
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -819,7 +759,7 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle domande per il questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande dal back-end e le rende disponibili per poter popolare le view;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementDirective}: rappresenta il componente grafico che permette all'utente di:
 		\begin{itemize}
@@ -829,14 +769,13 @@
 		\end{itemize}
 		Questo componente si presta sia per la creazione che per la modifica di un questionario;
 		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -851,19 +790,18 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per confermare porzioni di domanda durante la creazione;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;
 		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe; 
 		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immmagini;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente. 
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -878,17 +816,16 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di effettuare il redirect alla pagina di creazione nuova domanda;
 	\item \textbf{Utilizzo}: effettua il redirect alla pagina di creazione nuova domanda quando l'utente seleziona l'apposito link;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{NewQuestionButtonsDirective}: rappresenta il componente grafico che permette all'utente di posizionarsi nella view di creazione di una nuova domanda; 
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -903,18 +840,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di le statistiche di un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella view;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{StatisticsDirective}: directive che permette di visualizzare le statistiche di un utente; 
 		\item \textit{OUT} \texttt{StatisticsService}: questa classe permette di ottenere le statistiche dell'utente;
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
@@ -929,18 +865,17 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di reagire ai comandi dell'utente durante la gestione dei suoi questionari;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per reagire ai comandi dell'utente, effettua redirect alle pagine richieste, come la visualizzazione delle statistiche di un questionario e iniziare un questionario in modalità esame.
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreationAndModifyDirective}:  
 		\item \textit{OUT} \texttt{ExamModalityDirective}:
-		\item \textit{OUT} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
 	\end{itemize}
-	\item \textbf{Attributi:}
+	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 	\end{itemize}
-	\item \textbf{Metodi:}
+	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item 
 	\end{itemize}
