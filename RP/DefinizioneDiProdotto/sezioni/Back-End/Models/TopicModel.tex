@@ -42,12 +42,14 @@
 			\item \texttt{questionId : ObjectId} \\
 			Rappresenta l'identificativo della domanda da aggiungere.
 			\end{itemize}
-			\item \texttt{+ getQuestions(language : String, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			\item \texttt{+ getQuestions(language : String, keyword : [String], callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
 			Metodo che consente di ottenere le domande sull'argomento attraverso la funzione di \textit{callback\ped{G}} oppure un messaggio di errore. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 			\item \texttt{language : String} \\
 			Rappresenta la lingua in cui sono scritte le domande che si vuole ottenere;
+			\item \texttt{keyword : [String]} \\
+			Rappresenta le keyword che possono essere assegnate alle domande che si vuole ottenere;
 			\item \texttt{callback : function(JSON)} \\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
 			\item \texttt{errback : function(QuizziPediaError)} \\
