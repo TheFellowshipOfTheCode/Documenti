@@ -2,11 +2,11 @@
 \subsection{QuizziPedia::Front-End::Controllers}
 
 
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Front-End_Controllers.png}
-	\caption{QuizziPedia::Front-End::Controllers::SignUpController}
-\end{figure}
+	\caption{QuizziPedia::Front-End::Controllers}
+\end{figure} \FloatBarrier
 
 \subsubsection{Informazioni generali}
 \begin{itemize}
@@ -21,82 +21,116 @@
 \subsubsection{Classi}
 
 \paragraph{QuizziPedia::Front-End::Controllers::LoginController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_LoginController.png}
 	\caption{QuizziPedia::Front-End::Controllers::LoginController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire l'autenticazione dell'utente al sistema; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità di autenticazione al sistema, compresa la gestione di situazioni di errore autenticazione;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{OUT} \texttt{LoginMV}: !!!view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
+		\item \textit{OUT} \texttt{LoginModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{LoginView} e il controller \texttt{LoginController};
 		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
-		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
 		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
-		inserisco l'utente corrente passato da passport;
-		\item \texttt{-} \texttt{\$controller: \$controller} \\
-		Serve per inniettare un controller dentro un altro controller, in questa caso per l'errorcontroller;
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. Nel caso della login viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{logIn()} del service \texttt{AuthService} di tipo \texttt{UserDetailsModel};
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 		\item \texttt{-} \texttt{AuthService: AuthService} \\
-		Scrive al metodo login passandogli due valori: username e password;
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
+		\item \texttt{+} \texttt{user: LoginModelView} \\
+		Oggetto di tipo \texttt{LoginModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{LoginView} e il controller \texttt{LoginController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{LoginController(\$scope,\$controller, AuthService)} \\
-		Costruttore;
+		\item \texttt{+} \texttt{LoginController(\$scope: \$scope, \$rootScope: \$rootScope, \$location: \$location, \$mdDialog: \$mdDialog, AuthService: AuthService)} \\
+		Metodo costruttore della classe; \\
+		\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{\$scope: \$scope} \\
+				Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+				\item \texttt{\$rootScope: \$rootScope} \\
+				Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. Nel caso della login viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{logIn()} del service \texttt{AuthService};
+				\item \texttt{\$location: \$location} \\
+				Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+				\item \texttt{\$mdDialog: \$mdDialog} \\
+				Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+				\item \texttt{AuthService: AuthService} \\
+				Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
+			\end{itemize}
 		\item \texttt{+} \texttt{logIn(): void} \\
-		metodo che richiama il service authservice e gli passa username e password, in più se ok aggiungo a rootscope l'utente corrente cioè UserDetailsModel (vedere cosa di franco) poi redirect a homepage;
+		Metodo che richiama il metodo \texttt{Login} del service \texttt{AuthService} passandogli \texttt{username} e \texttt{password}. Nel caso di buona riuscita dell'operazione, viene inserito nell'oggetto globale \texttt{\$rootScope} l'utente corrente che ha come model l'\texttt{UserDetailsModel} e poi viene effettuato il redirect alla homepage dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
 		\item \texttt{+} \texttt{signUp(): void} \\
-		redirect alla view di registrazione;
+		Metodo che gestisce l’evento click sul pulsante di registrazione. Effettua il redirect alla pagina di registrazione;
 		\item \texttt{+} \texttt{recoveryPassword(): void} \\
-		redirect alla view di recupara passowrd;
+		Metodo che gestisce l’evento click sul pulsante di recupero password. Effettua il redirect alla pagina per il recupero della password; 
 	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::SignUpController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_SignUpController.png}
 	\caption{QuizziPedia::Front-End::Controllers::SignUpController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la registrazione di un utente al sistema;
 	\item \textbf{Utilizzo}: fornisce le funzionalità di registrazione di un utente al sistema;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{SignUpMV}: !!!view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login;
+		\item \textit{IN} \texttt{SignUpModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController};
 		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{\$scope: \$scope} \\
-		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{+} \texttt{\$controller: \$controller} \\
-		\item \texttt{+} \texttt{AuthService: AuthService} \\
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{AuthService: AuthService} \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{signUp} di \$texttt{AuthService} a cui viene passato come parametro un oggetto di tipo \texttt{SignUpModelView};
+		\item \texttt{+} \texttt{newUser: SignUpModelView} \\
+		Oggetto di tipo \texttt{SignUpModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{SignUpController(\$scope,\$controller, AuthService)} \\
-		Costruttore;
+		\item \texttt{+} \texttt{SignUpController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog, AuthService: AuthService)} \\
+		Metodo costruttore della classe; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{\$location: \$location} \\
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{AuthService: AuthService} \\
+			Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
+		\end{itemize}
 		\item \texttt{+} \texttt{signUp(): void} \\
-		prende i dati dal modelview e li passa a authservice attraverso la funzione signUp, una volta completata la registrazione di viene reindirizzati alla loginView;
+		Metodo che richiama il metodo \texttt{signUp} del service \texttt{AuthService} passandogli un oggetto di tipo \texttt{SignUpModelView}. Nel caso di buona riuscita dell'operazione viene mostrato un messaggio di successo. Con l'azione di click sul bottone presentato dal messaggio di successo è possibile effettuare il redirect alla pagina di login dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
 		\item \texttt{+} \texttt{logIn(): void} \\
-		redirect a pagina di login;
+		Metodo che gestisce l’evento click sul pulsante di login. Effettua il redirect alla pagina di login;
 	
 	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::HomeController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_HomeController.png}
 	\caption{QuizziPedia::Front-End::Controllers::HomeController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la home page;
 	\item \textbf{Utilizzo}: fornisce tutte le informazioni da mostrare nella homepage;
@@ -117,11 +151,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::SearchController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_SearchController.png}
 	\caption{QuizziPedia::Front-End::Controllers::SearchController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 	\item \textbf{Utilizzo}: fornisce all'utente le funzionalità di ricerca per utenti e questionari;
@@ -143,11 +177,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::ProfileManagementController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ProfileManagementController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ProfileManagementController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il profilo personale di un utente; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità all'utente per poter gestire i propri dati;
@@ -168,63 +202,107 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::LogoutController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_LogoutController.png}
 	\caption{QuizziPedia::Front-End::Controllers::LogoutController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di gestire la pagina di logout;
+	\item \textbf{Descrizione}: questa classe permette di gestire l'azione di logout;
 	\item \textbf{Utilizzo}: fornisce la funzionalità per effettuare il logout dall'applicazione;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{OUT} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
-		\item \textit{OUT} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
+		\item \textit{OUT} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata. Nel caso di un utente autenticato sarà presente un bottone per effettuare il logout;
+		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
-		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. Nel caso della logout viene utilizzata per rimuovere da \$rootScope l'oggetto di di tipo \texttt{UsersDetailModel};
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{AuthService: AuthService} \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logOut} di \$texttt{AuthService} a cui viene passato il parametro \texttt{username};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{LogoutController(\$scope: \$scope, \$rootScope: \$rootScope, \$location: \$location, \$mdDialog: \$mdDialog, AuthService: AuthService)} \\
+		Metodo costruttore della classe; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{\$rootScope: \$rootScope} \\
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. Nel caso della logout viene utilizzata per rimuovere da \$rootScope l'oggetto di di tipo \texttt{UsersDetailModel};
+			\item \texttt{\$location: \$location} \\
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{AuthService: AuthService} \\
+			Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione.  Viene utilizzato il metodo \texttt{logOut} di \$texttt{AuthService} a cui viene passato il parametro \texttt{username};
+		\end{itemize}
+		\item \texttt{+} \texttt{logOut(): void} \\
+		Metodo che richiama il metodo \texttt{logOut} del service \texttt{AuthService} passandogli lo \texttt{username}. Prima di effettuare questa operazione viene mostrato a video un messaggio di conferma per il proseguo dell'operazione;
 	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::PasswordForgotController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_PasswordForgotController.png}
 	\caption{QuizziPedia::Front-End::Controllers::PasswordForgotController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il ripristino della password dimenticata;
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per ripristinare la password dopo aver verificato l'identità dell'utente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{PasswordForgotMV}: !!view contenente le form necessarie per il recupero della password dimenticata; 
+		\item \textit{IN} \texttt{PasswordForgotModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{PasswordForgotView} e il controller \texttt{PasswordForgotController};
 		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{+} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{+} \texttt{\$controller: \$controller} \\
-		\item \texttt{+} \texttt{AuthService: AuthService} \\
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{AuthService: AuthService} \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{passwordForgot} di \$texttt{AuthService} a cui viene passato il parametro \texttt{email};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{PasswordForgotController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog, AuthService: AuthService)} \\
+		Metodo costruttore della classe; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{\$location: \$location} \\
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{AuthService: AuthService} \\
+			Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{passwordForgot} di \$texttt{AuthService} a cui viene passato il parametro \texttt{email};
+		\end{itemize}
+		\item \texttt{+} \texttt{passwordForgot(): void} \\
+		Metodo che richiama il metodo \texttt{passwordForgot} del service \texttt{AuthService} passandogli il parametro \texttt{email}. Nel caso di buona riuscita dell'operazione, viene mostrato un messaggio di successo il cui corpo contiene anche un bottone per effettuare il redirect alla pagina di login. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
+		\item \texttt{+} \texttt{logIn(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di login. Effettua il redirect alla pagina di login;
 	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::TrueFalseQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TrueFalseQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::TrueFalseQuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda vero/falso nel database e per modificarne una esistente;
@@ -245,11 +323,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::MultipleQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_MultipleQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::MultipleChoiceQuestion}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a risposta multipla nel database e per modificarne una esistente;
@@ -270,11 +348,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::ConnectionQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ConnectionQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ConnectionQuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a collegamento nel database e per modificarne una esistente;
@@ -295,11 +373,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::ImagesSortingQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ImagesSortingQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ImagesSortingQuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento immagini nel database e per modificarne una esistente;
@@ -320,11 +398,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::StringsSortingQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_StringSortingQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::StringsSortingQuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento di stringhe nel database e per modificarne una esistente;
@@ -345,11 +423,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::FillingQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_FillingQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::FillingQuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ariempimento di spazi nel database e per modificarne una esistente;
@@ -370,11 +448,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::ClickableAreaQuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ClickableAreaQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ClickableAreaQuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ad area cliccabile nel database e per modificarne una esistente;
@@ -395,11 +473,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::EditorQMLController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_EditorQMLController.png}
 	\caption{QuizziPedia::Front-End::Controllers::EditorQMLController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per creare e modificare una domanda tramite editor QML;
@@ -420,11 +498,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionsManagementController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionsManagementController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionsManagementController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire di ottenere le domande create dall'utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per richiedere al back-end le domande create dall'utente e mostrarle nella sua pagina personale; 
@@ -445,11 +523,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::TrainingController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TrainingController.png}
 	\caption{QuizziPedia::Front-End::Controllers::TrainingController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le domande che siano in accordo con il livello dell'utente;
@@ -470,11 +548,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::FillingQuestionnaireController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_FillingQuestionnaireController.png}
 	\caption{QuizziPedia::Front-End::Controllers::FillingQuestionnaireController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la compilazione del questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per compilare un questionario e per gestire il cambio di domanda;
@@ -496,11 +574,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::CreateQuestionnaireController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_CreateQuestionnaireController.png}
 	\caption{QuizziPedia::Front-End::Controllers::CreateQuestionnaireController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione di un questionario;
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per la creazione di un nuovo questionario e per la modifica di uno esistente;
@@ -521,11 +599,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::RegistrationManagementController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_RegistrationManagementController.png}
 	\caption{QuizziPedia::Front-End::Controllers::RegistrationManagementController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
 	\item \textbf{Utilizzo}: fornisce le funzionalità di iscrizione ad un questionario;
@@ -546,11 +624,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::ResultsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ResultsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ResultsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati dal back-end e mostrarli all'utente nella view;
@@ -571,11 +649,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionnaireManagementController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionnaireManagementController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionnaireManagementController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire tutti i questionari creati da un utente; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end tutti i questionari creati da un utente;
@@ -596,11 +674,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::MenuBarController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_MenuBarController.png}
 	\caption{QuizziPedia::Front-End::Controllers::MenuBarController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il menù fisso per ogni pagina;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per aggiornare, a seconda della pagina, il contenuto del menù;
@@ -620,11 +698,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::FooterController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_FooterController.png}
 	\caption{QuizziPedia::Front-End::Controllers::FooterController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il footer dell'applicazione;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le informazioni da mostrare nel footer;
@@ -644,11 +722,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionnaireDetailsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionnaireDetailsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionnaireDetailsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire i dettagli di un questionario; 
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end i dettagli di un questionario creato da un utente al fine di poterli visualizzare nel suo profilo;
@@ -669,11 +747,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::UserDetailController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_UserDetailController.png}
 	\caption{QuizziPedia::Front-End::Controllers::UserDetailController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire i dati di un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati di un utente, visualizzabili sia come dati personali dell'utente che ha effettuato l'accesso sia come risultato di una ricerca per utenti;
@@ -694,11 +772,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande esistenti nel database al fine di mostrarle durante la modalità allenamento nell'apposito template;
@@ -726,11 +804,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::TopicKeywordsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TopicKeywordsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::TopicKeywordsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle parole chiave di un questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle parole chiave durante la creazione di un questionario;
@@ -751,11 +829,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionnaireQuestionsManagementController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionnaireQuestionsManagementController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionnaireQuestionsManagementController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle domande per il questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande dal back-end e le rende disponibili per poter popolare le view;
@@ -782,11 +860,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::InputToListController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_InputToListController.png}
 	\caption{QuizziPedia::Front-End::Controllers::InputToListController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per confermare porzioni di domanda durante la creazione;
@@ -808,11 +886,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::NewQuestionsButtonController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_NewQuestionsButtonController.png}
 	\caption{QuizziPedia::Front-End::Controllers::NewQuestionButtonController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di effettuare il redirect alla pagina di creazione nuova domanda;
 	\item \textbf{Utilizzo}: effettua il redirect alla pagina di creazione nuova domanda quando l'utente seleziona l'apposito link;
@@ -832,11 +910,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::StatisticsController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_StatisticsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::StatisticsController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di le statistiche di un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella view;
@@ -857,11 +935,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuizEventController}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuizEventController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuizEventController}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di reagire ai comandi dell'utente durante la gestione dei suoi questionari;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per reagire ai comandi dell'utente, effettua redirect alle pagine richieste, come la visualizzazione delle statistiche di un questionario e iniziare un questionario in modalità esame.
