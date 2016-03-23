@@ -1,4 +1,4 @@
-\item \texttt{/:lang/user/question}
+\item \texttt{/:lang/user/:userId/question}
 	\begin{itemize}
 		\item \textbf{Method}: GET;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -25,7 +25,7 @@
 			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
 			\item \textbf{Descrizione}: Aggiunge una domanda nel sistema, restituisce un messaggio di conferma o di errore;
-			\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "listQuestion" : [ "type" : [identifica tipologia domanda]
