@@ -1,4 +1,22 @@
-\paragraph{POST /:lang/training}
+\paragraph{GET /:lang/user/training/question} % richiesta che ritorna la prossima domanda dell'allenamento
+\begin{itemize}
+\item \textbf{Successo}
+% descrizione diagramma e UML
+
+\textbf{Descrizione}: il \texttt{QuestionRouter} gestisce la richiesta \textit{REST\ped{G}} del Front-End passando il controllo al \texttt{TopicController}; viene poi invocato il metodo \texttt{getNextQuestion(req,res,next)} che ritorna la prossima domanda da sottoporre all'utente durante l'Allenamento. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-End/GET __lang_user_training_question.png}
+	\caption{GET /:lang/user/training/question}
+\end{figure}
+\FloatBarrier
+
+\item \textbf{Fallimento}
+% descrizione diagramma e UML
+\end{itemize}
+
+\paragraph{POST /:lang/user/training/userstatistics} % richiesta che aggiorna le statistiche dell'utente
 \begin{itemize}
 \item \textbf{Successo}
 % descrizione diagramma e UML
@@ -6,10 +24,10 @@
 % descrizione diagramma e UML
 \end{itemize}
 
-\paragraph{POST /:lang/user/training}
+\paragraph{POST /:lang/user/training/questionstatistics} % richiesta che aggiorna le statistiche della domanda
 \begin{itemize}
 \item \textbf{Successo}
 % descrizione diagramma e UML
 \item \textbf{Fallimento}
 % descrizione diagramma e UML
-\end{itemize}
+\end{itemize}  

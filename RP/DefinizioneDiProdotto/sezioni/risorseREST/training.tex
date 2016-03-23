@@ -1,52 +1,58 @@
-	\item \texttt{/:lang/training}
-		\begin{itemize}
-			\item \textbf{Method}: POST;
-			\item \textbf{Livello di Accesso}: Utente;
-			\item \textbf{Descrizione}: restituisce una domanda in base al livello di abilità raggiunto dall'utente;
-			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"topicTraining" : [indica l'argomento scelto per iniziare l'allenamento]
-"numberQuestions" : [indica il numero di domande che componono l'allenamento]
-"keyword" : [indica un array di parole chiavi per filtrare le domande]
-"levelUser" : [indica il livello di abilita' sull'argomento scelto dell'utente]
-}
-\end{lstlisting}
-			\item \textbf{Response}: la risposta deve contenere i seguenti campi:
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"_questionId" : [identificativo della domanda]
-"type" : [indica la tipologia della domanda]
-"questionText" : [indica il testo della domanda]
-"option1" : [indica un array di opzioni di risposta]
-"option2" : [indica un array di opzioni di risposta] 
-}
-\end{lstlisting}
-		\end{itemize}
-		
-		
-	\item \texttt{/:lang/user/training}
-		\begin{itemize}
-			\item \textbf{Method}: POST;
-			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
-			\item \textbf{Descrizione}: restituisce una domanda, aggiorna le statistiche della domanda e dell'utente;
-			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"topicTraining" : [indica l'argomento scelto per iniziare l'allenamento]
-"numberQuestions" : [indica il numero di domande che componono l'allenamento]
-"keyword" : [indica un array di parole chiavi per filtrare le domande]
-"levelUser" : [indica il livello di abilita' sull'argomento scelto dell'utente]
-}
-\end{lstlisting}
-		\item \textbf{Response}: la risposta deve contenere i seguenti campi:
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"_questionId" : [identificativo della domanda]
-"type" : [indica la tipologia della domanda]
-"questionText" : [indica il testo della domanda]
-"option1" : [indica un array di opzioni di risposta]
-"option2" : [indica un array di opzioni di risposta] 
-}
-\end{lstlisting}
-	\end{itemize}
+\item \texttt{/:lang/user/training/question}
+\begin{itemize}
+	\item \textbf{Method}: GET;
+	\item \textbf{Livello di Accesso}: Utente;
+	\item \textbf{Descrizione}: restituisce una domanda in base al livello di abilità raggiunto dall'utente;
+	\item \textbf{Response}: la risposta deve contenere i seguenti campi:
+	\begin{lstlisting}[language=json,firstnumber=1]
+	{
+	"_questionId" : [identificativo della domanda]
+	"type" : [indica la tipologia della domanda]
+	"questionText" : [indica il testo della domanda]
+	"option1" : [indica un array di opzioni di risposta]
+	"option2" : [indica un array di opzioni di risposta]
+	}
+	\end{lstlisting}
+\end{itemize}
+
+\item \texttt{/:lang/user/training/userstatistics}
+\begin{itemize}
+	\item \textbf{Method}: PUT;
+	\item \textbf{Livello di Accesso}: Utente autenticato;
+	\item \textbf{Descrizione}: aggiorna le statistiche dell'utente dopo che ha risposto ad una domanda;
+	\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+	\begin{lstlisting}[language=json,firstnumber=1]
+	{
+	"statistics" : [statistiche relative alla domanda]
+	"level" : [livello dell'utente]
+	}
+	\end{lstlisting}	
+\end{itemize}
+
+\item \texttt{/:lang/user/training/questionstatistics}
+\begin{itemize}
+	\item \textbf{Method}: PUT;
+	\item \textbf{Livello di Accesso}: Utente autenticato;
+	\item \textbf{Descrizione}: aggiorna le statistiche della domanda;
+	\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+	\begin{lstlisting}[language=json,firstnumber=1]
+	{
+	"level" : [livello della domanda]
+	"totalAnswers" : [risposte totali date alla domanda]
+	"correctAnswers" : [risposte corrette totali date alla domanda]
+	}
+	\end{lstlisting}
+\end{itemize}
+
+\item \texttt{/:lang/user/training/userlevelupdate}
+\begin{itemize}
+	\item \textbf{Method}: PUT;
+	\item \textbf{Livello di Accesso}: Utente non autenticato;
+	\item \textbf{Descrizione}: aggiorna il livello dell'utente non autenticato;
+	\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+	\begin{lstlisting}[language=json,firstnumber=1]
+	{
+	"level" : [livello della domanda]
+	}
+	\end{lstlisting}
+\end{itemize}
