@@ -169,6 +169,21 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 	\textbf{Metodi}:
 	\begin{itemize}
 		\item
+		\texttt{+ UpdatePasswordUser(req: Request, res: Response, next: function(QuzziPediaError))} \\
+		Metodo usato dal \textit{middleware\ped{G}} per aggiorna la password dell'utente; \\
+		\textbf{Parametri}:
+		 \begin{itemize}
+		  \item
+			\texttt{req: Request} \\
+			Rappresenta la richiesta inviata dal client;
+		  \item
+			\texttt{res: Response} \\
+			Rappresenta la risposta che fornirà il server;
+		  \item
+		    \texttt{next: function(QuizziPediaError)} \\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+		 \end{itemize}
+		\item
 		\texttt{+ UpdateDataUser(req: Request, res: Response, next: function(QuzziPediaError))} \\
 		Metodo usato dal \textit{middleware\ped{G}} per aggiornare i dati dell'utente; \\
 		\textbf{Parametri}:
@@ -201,6 +216,51 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 		 \item
 		 \texttt{+ deleteUser(req: Request, res: Response, next: function(QuzziPediaError))} \\
 		Metodo usato dal \textit{middleware\ped{G}} per eliminare un utente dal sistema; \\
+		\textbf{Parametri}:
+		 \begin{itemize}
+		  \item
+			\texttt{req: Request} \\
+			Rappresenta la richiesta inviata dal client;
+		  \item
+			\texttt{res: Response} \\
+			Rappresenta la risposta che fornirà il server;
+		  \item
+		    \texttt{next: function(QuizziPediaError)} \\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+		 \end{itemize}
+		  \item
+		 \texttt{+ getInfo(req: Request, res: Response, next: function(QuzziPediaError))} \\
+		Metodo usato dal \textit{middleware\ped{G}} per ottenere le informazioni dell'utente; \\
+		\textbf{Parametri}:
+		 \begin{itemize}
+		  \item
+			\texttt{req: Request} \\
+			Rappresenta la richiesta inviata dal client;
+		  \item
+			\texttt{res: Response} \\
+			Rappresenta la risposta che fornirà il server;
+		  \item
+		    \texttt{next: function(QuizziPediaError)} \\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+		 \end{itemize}
+		  \item
+		 \texttt{+ getStatistics(req: Request, res: Response, next: function(QuzziPediaError))} \\
+		Metodo usato dal \textit{middleware\ped{G}} per ottenere le statistiche dell'utente; \\
+		\textbf{Parametri}:
+		 \begin{itemize}
+		  \item
+			\texttt{req: Request} \\
+			Rappresenta la richiesta inviata dal client;
+		  \item
+			\texttt{res: Response} \\
+			Rappresenta la risposta che fornirà il server;
+		  \item
+		    \texttt{next: function(QuizziPediaError)} \\
+			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+		 \end{itemize}
+		   \item
+		 \texttt{+ getSummary(req: Request, res: Response, next: function(QuzziPediaError))} \\
+		Metodo usato dal \textit{middleware\ped{G}} per ottenere il riepilogo di un determinato questionario svolto; \\
 		\textbf{Parametri}:
 		 \begin{itemize}
 		  \item

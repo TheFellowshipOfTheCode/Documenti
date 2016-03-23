@@ -71,17 +71,35 @@ effettuato correttamente, altrimenti un errore;
 
 \end{lstlisting}
 		\end{itemize}
-		
-		
-	\item \texttt{/:lang/user/:userId/statistics/:summaryId}
+
+\item \texttt{/:lang/user/:userId/statistics/summary}
 	\begin{itemize}
 		\item \textbf{Method}: GET;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
-		\item \textbf{Descrizione}: restituisce le statistiche di un questionario svolto; 
+		\item \textbf{Descrizione}: restituisce la cronologia dei questionari svolti; 
 		\item \textbf{Response}: la risposta deve contenere i seguenti campi:	
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"givenAnswer" : [Arrai di JSON contenente le domande del quiz associate alle risposte date dall'utente]
+summary:[
+{
+ summaryId : [identifica l'id di una summary]
+}
+]
+}	
+\end{lstlisting}
+	\end{itemize}		
+
+		
+	\item \texttt{/:lang/user/:userId/statistics/summary/:summaryId}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: restituisce le statistiche di un particolare questionario svolto; 
+		\item \textbf{Response}: la risposta deve contenere i seguenti campi:	
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"quizId"	 : [identifica l'id il quiz svolto]
+"givenAnswer" : [array di JSON contenente le domande del quiz associate alle risposte date dall'utente]
 "mark" : [identifica la valutazione finale del questionario svolto]
 }	
 \end{lstlisting}
