@@ -42,7 +42,7 @@
 			\item \texttt{questionId : ObjectId} \\
 			Rappresenta l'identificativo della domanda da aggiungere.
 			\end{itemize}
-			\item \texttt{+ getQuestions(language : String, keyword : [String], callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			\item \texttt{+ getQuestions(language : String, keyword : [String], callback : function(JSON), errback : function(QuizziPediaError))} \\
 			Metodo che consente di ottenere le domande sull'argomento attraverso la funzione di \textit{callback\ped{G}} oppure un messaggio di errore. \\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -55,7 +55,7 @@
 			\item \texttt{errback : function(QuizziPediaError)} \\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 			\end{itemize}
-			\item \texttt{+ getNextQuestion(language : String, levelUser : Number, callback : function(JSON), errback : function(QuizziPediaError)) : void} \\
+			\item \texttt{+ getNextQuestion(language : String, levelUser : Number, callback : function(JSON), errback : function(QuizziPediaError))} \\
 			Metodo che consente di ottenere la domanda successiva nella modalità allenamento, in base al livello dell'utente che lo sta svolgendo. \\
 			\textbf{Parametri}:
 			\begin{itemize}
