@@ -184,7 +184,7 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		 \end{itemize}
 		\item
-		\texttt{+ UpdateDataUser(req: Request, res: Response, next: function(QuzziPediaError))} \\
+		\texttt{+ updateDataUser(req: Request, res: Response, next: function(QuzziPediaError))} \\
 		Metodo usato dal \textit{middleware\ped{G}} per aggiornare i dati dell'utente; \\
 		\textbf{Parametri}:
 		 \begin{itemize}
@@ -199,7 +199,7 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		 \end{itemize}
 		 \item
-		\texttt{+ UpdateStatisticsUser(req: Request, res: Response, next: \\function(QuzziPediaError))} \\
+		\texttt{+ updateStatisticsUser(req: Request, res: Response, next: \\function(QuzziPediaError))} \\
 		Metodo usato dal \textit{middleware\ped{G}} per aggiornare le statistiche dell'utente; \\
 		\textbf{Parametri}:
 		 \begin{itemize}
