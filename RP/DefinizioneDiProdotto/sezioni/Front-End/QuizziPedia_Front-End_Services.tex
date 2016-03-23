@@ -42,16 +42,11 @@
 	\item \textbf{Metodi:}
 	\begin{itemize}
 		\item + \texttt{isLogged(): Boolean} \\ Metodo che restituisce ln valore dell'attributo \textit{logged};
-		\item \texttt{login(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+		\item + \texttt{login(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
 			\textbf{Parametri}: 
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
 				\item \texttt{password: String}: parametro che rappresenta la password dell'utente.
-			\end{itemize}
-		\item - \texttt{handleError(response: Object): Promise} \\ Metodo che permette di gestire una chiamata HTTP che non ha avuto successo verso il server; \\
-			\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{response: Object}: parametro che rappresenta l'oggetto risposta ricevuto dopo la chiamata HTTP effettuata tramite \texttt{\$http}.
 			\end{itemize}
 		\item + \texttt{logout(): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
 		\item + \texttt{signUp(username: String, password: String, checkPassword: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
@@ -68,6 +63,11 @@
 			\end{itemize}
 	\end{itemize}
 \end{itemize}
+
+
+\paragraph{QuizziPedia::Front-End::Services::SearchService}
+metodo per richiesta oggetto coi risultati
+
 
 \paragraph{QuizziPedia::Front-End::Services::LangService}
 \begin{figure}
@@ -100,7 +100,7 @@
 	\caption{QuizziPedia::Front-End::Services::QuizService}
 \end{figure}
 \begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca. Permette inoltre di iscriversi ad un questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un quiz in seguito ad una ricerca dell'utente, passando i risultati ai controllers. Ritorna dei riferimenti alle domande del quiz;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
@@ -119,6 +119,7 @@
 		\item 
 	\end{itemize}
 	\item \textbf{Metodi:}
+	metodo per iscriversi ad un questionario
 	\begin{itemize}
 		\item 
 	\end{itemize}

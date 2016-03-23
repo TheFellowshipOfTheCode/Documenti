@@ -201,17 +201,27 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità all'utente per poter gestire i propri dati;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema;
-		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
+		\item \textit{IN} \texttt{ProfileManagementModelView}: ;
+		\item \textit{IN} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
+		\item \textit{IN} \texttt{UserDetailsModel}: 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel};
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;		
+		\item \texttt{-} \texttt{UserDetailsService: UserDetailsService}: \\
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{ProfileManagementController}: \\Metodo costruttore della classe
+		\item \texttt{getuserDetails}: \\
+		\item \texttt{+} \texttt{confirm(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di conferma modifica. Gestisce l'invio dei nuovi oggetti creati al back-end per il salvaggio persistente dei dati. Aggiorna inoltre UserDetailsModel.
+
 	\end{itemize}
 \end{itemize}
 
@@ -522,17 +532,24 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per richiedere al back-end le domande create dall'utente e mostrarle nella sua pagina personale; 
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionsManagementModelView}: ; 
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{-} \texttt{QuestionService}
+
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{QuestionsManagementsController()} \\ Costruttore della classe;
+		\item \texttt{-} \texttt{getQuestionsByUser(username: String)} \\ ;
+		\item \texttt{+} \texttt{editQuestion()} \\ redirect a modifica domanda;
+		
 	\end{itemize}
 \end{itemize}
 
@@ -746,42 +763,51 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end i dettagli di un questionario creato da un utente al fine di poterli visualizzare nel suo profilo;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare;
-		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: ;
+		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{} \texttt{QuestionnaireModel}: ;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};
+
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{QuestionnaireDetailsController}: \\ Metodo costruttore della classe;
+		\item \texttt{-} \texttt{getQuestionnaireDetails(username: String)}: \\ Metodo che richiede al service i dettagli dei questionari
 	\end{itemize}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Controllers::UserDetailController}
+\paragraph{QuizziPedia::Front-End::Controllers::UserDetailsController}
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_UserDetailController.png}
 	\caption{QuizziPedia::Front-End::Controllers::UserDetailController}
 \end{figure} \FloatBarrier
-\begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di gestire i dati di un utente;
-	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati di un utente, visualizzabili sia come dati personali dell'utente che ha effettuato l'accesso sia come risultato di una ricerca per utenti;
+	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un utente;
+	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un utente per poterle mostrare nella view;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserDetailsDirective}: directive che permette di visualizzare i dati personali di un utente;
-		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{UserDetailsModelView}: directive che permette di visualizzare i dati di un utente; 
+		\item \textit{IN} \texttt{UserDetailsService}: questa classe permette di ottenere i dati dell'utente;
+		\item \textit{IN} \texttt{UserDetailsModel}: 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-	\end{itemize}
-	\item \textbf{Metodi}:
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getUserDetails} del service \texttt{UserDetailsService};
+		\item \texttt{-} \texttt{userDetailsService}: parametro permette di ottenere i dati dell'utente;
+	\end{itemize}	
 	\begin{itemize}
-		\item 
+		\item \textbf{Metodi}:
+		\item \texttt{+} \texttt{UserDetailsController()} \\ Metodo costruttore della classe;
+		\item \texttt{-} \texttt{getUserDetails(username: String)} \\ Metodo che permette di ottenere i dati con una chiamata a UserDetailsService;
 	\end{itemize}
 \end{itemize}
 
@@ -910,16 +936,19 @@
 	\item \textbf{Utilizzo}: effettua il redirect alla pagina di creazione nuova domanda quando l'utente seleziona l'apposito link;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{NewQuestionButtonsDirective}: rappresenta il componente grafico che permette all'utente di posizionarsi nella view di creazione di una nuova domanda; 
+		\item \textit{IN} \texttt{NewQuestionButtonsModelView}: ; 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{NewQuestionButtonsController()} \\ Metodo costruttore della classe;
+		\item \texttt{+} \texttt{newQuestion()} \\ redirect a creazione domanda;
 	\end{itemize}
 \end{itemize}
 
@@ -936,16 +965,20 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{StatisticsModelView}: directive che permette di visualizzare le statistiche di un utente; 
 		\item \textit{IN} \texttt{StatisticsService}: questa classe permette di ottenere le statistiche dell'utente;
-		\item \textit{IN} \texttt{UserDeailsModel}: 
+		\item \textit{IN} \texttt{UserDetailsModel}: 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-	\end{itemize}
-	\item \textbf{Metodi}:
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getStatistics} del service \texttt{StatisticsService};
+		\item \texttt{-} \texttt{StatisticsService}: parametro permette di ottenere le statistiche dell'utente;
+	\end{itemize}	
 	\begin{itemize}
-		\item 
+		\item \textbf{Metodi}:
+		\item \texttt{+} \texttt{StatisticsController()} \\ Metodo costruttore della classe;
+		\item \texttt{-} \texttt{getStatistics(username: String)} \\ Metodo che permette di ottenere le statistiche con una chiamata a StatisticsService;
 	\end{itemize}
 \end{itemize}
 
