@@ -332,17 +332,24 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda vero/falso nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso;  
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{TrueFalseQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{TrueFalseQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la casica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
 \end{itemize}
 
@@ -357,18 +364,26 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a risposta multipla nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente i campi per creare una domanda a risposta multipla;  
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{MultipleQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{MultipleQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
+
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::ConnectionQuestionsController}
@@ -382,17 +397,24 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a collegamento nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi per creare una domanda a collegamento;  
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{ConnectionQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{ConnectionQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
 \end{itemize}
 
@@ -407,17 +429,24 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento immagini nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini; 
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{ImageSortingQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{ImageSortingQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
 \end{itemize}
 
@@ -432,17 +461,24 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento di stringhe nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{StringsSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento stringhe; 
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{StringsSortingQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{StringsSortingQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
 \end{itemize}
 
@@ -457,17 +493,24 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ariempimento di spazi nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionsView}: view contenente i campi per creare una domanda a riempimento testo; 
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{FillingQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{FillingQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
 \end{itemize}
 
@@ -480,19 +523,25 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ad area cliccabile nel database e per modificarne una esistente;
-	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi per creare una domanda ad area cliccabile; 
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsModelView}: ;
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{ClickableAreaQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
+		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
 	\end{itemize}
 \end{itemize}
 
@@ -542,12 +591,13 @@
 		\item \texttt{-} \texttt{\$location: \$location} \\
 		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 		\item \texttt{-} \texttt{QuestionService}
+		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per passare l'id della domanda alla pagina che andrà a modificarla; 
 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item \texttt{+} \texttt{QuestionsManagementsController()} \\ Costruttore della classe;
-		\item \texttt{-} \texttt{getQuestionsByUser(username: String)} \\ ;
+		\item \texttt{-} \texttt{getQuestionsByUser(username: String)} \\ Prende le domande creare dall'utente e ne mostra un'anteprima;
 		\item \texttt{+} \texttt{editQuestion()} \\ redirect a modifica domanda;
 		
 	\end{itemize}
@@ -564,17 +614,22 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le domande che siano in accordo con il livello dell'utente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento;
+		\item \textit{IN} \texttt{TrainingModelView}: ;
+		\item \textit{IN} \texttt{TrainingModeModel}: ?;
 		\item \textit{IN} \texttt{TrainingSetUpTemplate}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
+		\item \textit{IN} \texttt{QuestionController}: ;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{TrainingModeModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getNextQuestion};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{TrainingController} \\ Metodo costruttore della classe;
+		\item \texttt{-} \texttt{getNextQuestion} \\ Metodo che gestisce l'evento del click al pulsante "prossima domanda", fa una richiesta al QuestionController che ritornerà la domanda successiva.
 	\end{itemize}
 \end{itemize}
 
@@ -589,18 +644,23 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per compilare un questionario e per gestire il cambio di domanda;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;  
+		\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;  
 		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
-		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{IN} \texttt{QuestionnaireModel}: ;
+		\item \textit{IN} \texttt{QuestionsController}: ; 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getNextQuestion} e la lista di puntatore ritornata dalla chiamata a \texttt{getQuestionsPreview};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{getQuestionsPreview}: \\ Metodo che permette di ottenere la lista di puntatori a tutte le domande del questionario;
+		\item \texttt{+} \texttt{getNextQuestion}: \\ Metodo che ritorna la domanda successiva del quiz tramite chiamata a QuestionController;
 	\end{itemize}
 \end{itemize}
 
@@ -615,17 +675,25 @@
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per la creazione di un nuovo questionario e per la modifica di uno esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario; 
-		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: view per la creazione del questionario; 
+		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{IN} \texttt{TrainingModeModel}
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{TrainingModeModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestiontionnaire} e la lista dei questionari ottenuta dalla chiamata \texttt{getQuestionnairePreview};
+		\item \texttt{-} \texttt{QuizService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{CreateQuestionnaireController}: \\ Metodo costruttore della classe
+		\item \texttt{+} \texttt{createQuestionnaire(passerò l'oggetto questionario in trainingModeModel)}: ;
+		\item \texttt{+} \texttt{modifyQuestionnaire(passerò l'oggetto modificato)}: ;
+		\item \texttt{+} \texttt{getQuestionnaire(id questionario che voglio modificare)}: ;
+		\item \texttt{+} \texttt{getQuestionnairePreview(username: String)}: serve per ottenere la lista di tutti i questionari di un utente;
 	\end{itemize}
 \end{itemize}
 
@@ -788,6 +856,7 @@
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_UserDetailController.png}
 	\caption{QuizziPedia::Front-End::Controllers::UserDetailController}
 \end{figure} \FloatBarrier
+\begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un utente per poterle mostrare nella view;
 	\item \textbf{Relazione con altre classi}:
@@ -828,18 +897,25 @@
 		\item \textit{IN} \texttt{LinkingAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda di collegamento. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
 		\item \textit{IN} \texttt{SortImagesAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
 		\item \textit{IN} \texttt{SortTextAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di stringhe. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{EmptySpaceAnswerTemnplate}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
+		\item \textit{IN} \texttt{EmptySpaceAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
 		\item \textit{IN} \texttt{ClickableAnswerTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;  
-		\item \textit{OUT} \texttt{QuestionServices}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionServices}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: ;
+		\item \textit{OUT} \texttt{FillingQuestionnaireController}: ;
+		
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionItemModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestion} del service \texttt{QuestionService};
+		\item \texttt{-} \texttt{QuestionService}: ;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{QuestionsController}: \\ Metodo costruttore della classe
+		\item \texttt{+} \texttt{getQuestion}: \\ Metodo che richiede al back-end una domanda;
 	\end{itemize}
 \end{itemize}
 
