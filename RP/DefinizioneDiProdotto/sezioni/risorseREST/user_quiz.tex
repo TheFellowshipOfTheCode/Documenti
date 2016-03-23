@@ -57,20 +57,6 @@
 	\end{itemize}
 	
 	
-	\item \texttt{/:lang/user/quiz/:quizId/addUser}
-	\begin{itemize}
-		\item \textbf{Method}: POST;
-		\item \textbf{Livello di Accesso}: Utente autenticato pro;
-		\item \textbf{Descrizione}: Iscrive un utente ad un questionario, restituisce un messaggio di conferma o di errore;
-		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
-		\begin{lstlisting}[language=json,firstnumber=1]
-		{
-		"_userId" : [identificativo dell'utente da iscrivere al questionario]
-		}
-		\end{lstlisting}
-	\end{itemize}
-	
-	
 	\item \texttt{/:lang/user/:userId/quiz/:quizId}
 	\begin{itemize}
 		\item \textbf{Method}: PUT;
