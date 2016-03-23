@@ -163,18 +163,30 @@
 	\item \textbf{Utilizzo}: fornisce all'utente le funzionalità di ricerca per utenti e questionari;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{OUT} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
-		\item \textit{OUT} \texttt{UserDetailsService}: questa classe permette di ottenere i dati personali degli utenti;
-		\item \textit{OUT} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{IN} \texttt{ResultsModelView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
+		\item \textit{IN} \texttt{SearchService}: questa classe permette di ottenere i dati personali degli utenti;
+		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{\$mdDialog: \$mdDialog} \\
+		Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{SearchService: SearchService} \\
+		\item \texttt{-} \texttt{QuizService: QuizService} \\
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{SearchController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog)} \\
+		Metodo costruttore della classe; \\ 
+		\item \texttt{-} \texttt{getSearch(stringSearch: String): SearchModelView} \\
+		\item \texttt{+} \texttt{goToUser(idUser: String): void} \\
+		Evento per andare all'utente;
+		\item \texttt{+} \texttt{registrationToQuiz(idQuiz: String): void} \\
+		Evento per registrarsi al questionario attraverso quiz service;
 	\end{itemize}
 \end{itemize}
 
