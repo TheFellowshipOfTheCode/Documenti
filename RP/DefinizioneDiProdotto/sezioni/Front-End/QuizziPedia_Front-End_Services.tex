@@ -35,31 +35,36 @@
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{logged: Boolean}: campo dati che indica se l'utente è autenticato;
-		\item \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\item - \texttt{logged: Boolean}: campo dati che indica se l'utente è autenticato;
+		\item - \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
+		\item - \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item \texttt{isLogged(): Boolean} \\ Metodo che restituisce ln valore dell'attributo \textit{logged};
-		\item \texttt{logIn(user: String, pass: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+		\item + \texttt{isLogged(): Boolean} \\ Metodo che restituisce ln valore dell'attributo \textit{logged};
+		\item \texttt{login(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
 			\textbf{Parametri}: 
 			\begin{itemize}
-				\item \texttt{user: String}: parametro che rappresenta lo username o la email dell'utente;
-				\item \texttt{pass: String}: parametro che rappresenta la password dell'utente.
+				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
+				\item \texttt{password: String}: parametro che rappresenta la password dell'utente.
 			\end{itemize}
-		\item \texttt{handleError(response: Object): Response} \\ Metodo che permette di gestire una chiamata HTTP verso il server che non ha avuto successo; \\
+		\item - \texttt{handleError(response: Object): Promise} \\ Metodo che permette di gestire una chiamata HTTP che non ha avuto successo verso il server; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{response: Object}: parametro che rappresenta l'oggetto risposta ricevuto dopo la chiamata HTTP effettuata tramite \texttt{\$http}.
 			\end{itemize}
-		\item \texttt{logout(): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
-		\item \texttt{signUp(user: String, pass: String, checkPass: String): Promise}: \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\item + \texttt{logout(): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+		\item + \texttt{signUp(username: String, password: String, checkPassword: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
 			\textbf{parametri}:
 			\begin{itemize}
-				\item \texttt{user: String}: parametro che rappresenta lo username o la email dell'utente;
-				\item \texttt{pass: String}: parametro che rappresenta la password dell'utente;
-				\item \texttt{checkPass: String}: parametro che rappresenta la conferma della password dell'utente.
+				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
+				\item \texttt{password: String}: parametro che rappresenta la password dell'utente;
+				\item \texttt{checkPassword: String}: parametro che rappresenta la conferma della password dell'utente.
+			\end{itemize}
+		\item + \texttt{getNewPassword(email: String):} Void \\Metodo che permette il recupero della password. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{email: String}: parametro che rappresenta la mail a cui mandare una mail per resettare la password.
 			\end{itemize}
 	\end{itemize}
 \end{itemize}
@@ -75,31 +80,7 @@
 	\item \textbf{Utilizzo}: fornisce delle funzionalità per recuperare la giusta traduzione della pagina.
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema; 
-		\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
-		\item \textit{IN} \texttt{HomeController}: questa classe permette di gestire la home page;
-		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
-		\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
-		\item \textit{IN} \texttt{LogoutController}: questa classe permette di gestire la pagina di logout;
-		\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
-		\item \textit{IN} \texttt{TrueFalseController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
-		\item \textit{IN} \texttt{MultiplyQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla; 
-		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
-		\item \textit{IN} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
-		\item \textit{IN} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
-		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi; 
-		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
-		\item \textit{IN} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
-		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
-		\item \textit{IN} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
-		\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
-		\item \textit{IN} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario; 
-		\item \textit{IN} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
-		\item \textit{IN} \texttt{ResultsController}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente;
-		\item \textit{IN} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente;  
-		\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
-		\item \textit{IN} \texttt{FooterController}: questa classe permette di gestire il footer dell'applicazione;
-		\item \textit{IN} \texttt{ErrorController}: questa classe permette di gestire tutti i messaggi di errore da mostrare all'utente.
+		\item \textit{IN} \texttt{AppRun}
 		
 	\end{itemize}
 	\item \textbf{Attributi:}
