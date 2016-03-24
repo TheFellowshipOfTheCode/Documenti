@@ -5,8 +5,8 @@ Segue un elenco ordinato dei \textit{middleware\ped{G}} utilizzati, l'ordine di 
 	\item \texttt{express.compress()}: \textit{middleware\ped{G}} per comprimere ccon il formato \texttt{gzip} le comunicazioni;
 	\item \texttt{express.logger()}: \textit{middleware\ped{G}} utilizzato per registrare un log delle richieste, utile per fare il \textit{debugging\ped{G}} dell'applicazione;
 	\item \texttt{express.json()}: \textit{middleware\ped{G}} che estrae dalla richiesta i parametri che sono nel formato \textit{JSON\ped{G}};
-	\item \texttt{express.urlencoded()}: \textit{middleware\ped{G}} che estrae dalla richiesta i parametri di tipo \texttt{www-form-encoded}, questi possono essere inviati ad esempio conun richiesta POST;
-	\item \texttt{express.methodOverride()}: \textit{middleware\ped{G}} utilizzato per permettere anche ai vecchi \textit{browser\ped{G}} di avere un modo per fare richieste PUT e DELETE;
+	\item \texttt{express.urlencoded()}: \textit{middleware\ped{G}} che estrae dalla richiesta i parametri di tipo \\ \texttt{www-form-encoded}, questi possono essere inviati ad esempio conun richiesta POST;
+	\item \texttt{express.methodOverride()}: \textit{middleware\ped{G}} utilizzato per permettere anche ai vecchi \\ \textit{browser\ped{G}} di avere un modo per fare richieste PUT e DELETE;
 	\item \texttt{express.cookieParser()}: \textit{middleware\ped{G}} che analizza i \textit{cookie\ped{G}};
 	\item \texttt{express.cookieSession()}: \textit{middleware\ped{G}} che permette di memorizzare i record della sessione utente per mantenerne lo stato di login;
 	\item \texttt{express.ruote()}: \textit{middleware\ped{G}} che permette di configurare un singolo \textit{ruote\ped{G}}, nell'organizzazione interna \texttt{QuizziPedia::Back-End::App::Routers} ogni modulo router contiene i routers logicamente correlati;
@@ -23,7 +23,7 @@ Nel seguente \textit{diagramma di sequenza} viene rappresentata una generica ric
 \label{Gestione richiesta generica}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GestioneRichiestaGenerica.png}
+	\includegraphics[scale=0.39]{UML/DiagrammiDiSequenza/Back-end/GestioneRichiestaGenerica.png}
 	\caption{Gestione di una richiesta dal client}
 \end{figure}
 \FloatBarrier
