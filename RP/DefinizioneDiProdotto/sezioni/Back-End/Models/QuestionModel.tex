@@ -97,7 +97,7 @@
 	\item \texttt{- addCorrect()} \\
 	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda;
 	\item \texttt{- addTotal()} \\
-	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda.
+	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda;
 	\item \texttt{+ compareAnswers(option1: JSON, option2: JSON)}
 	Metodo che serve per confrontare le risposte date dagli utenti con le risposte effettive delle domande per sapere se sono corrette, ogni tipologia di domanda tratterà in modo diverso i parametri per confrontare il proprio metodo di risposta; \\
 	\textbf{Parametri:}
@@ -105,7 +105,14 @@
 			\item \texttt{option1: JSON} \\
 			Rappresenta la prima parte della risposta fornita dall'utente;
 			\item \texttt{option2: JSON} \\
-			Rappresenta la seconda parte della risposta fornita dall'utente;
+			Rappresenta la seconda parte della risposta fornita dall'utente.
 		\end{itemize}
+	\item \texttt{+ getQuestions(userID: ObjectId)}\\
+	Metodo che ritorna tutte le domande create da un utente.\\
+	\textbf{Parametri:}
+	\begin{itemize}
+		\item \texttt{userID: ObjectId}\\
+		Rappresenta l'identificativo dell'utente del quale si vogliono ritornare le domande.
+	\end{itemize}
 	\end{itemize}
 \end{itemize}
