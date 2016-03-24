@@ -17,6 +17,8 @@
 				Classe che avvia il server\ped{G}. Nello specifico apre una connessione al database tramite \textit{Mongoose\ped{G}}, invoca il \textit{middleware\ped{G}} \textit{Express\ped{G}} passando un riferimento al database \textit{MongoDB\ped{G}} come parametro in modo che possa configurarsi con esso, invoca il \textit{middleware\ped{G}} \textit{Passport\ped{G}} ed infine si mette in ascolto su una determinata porta. è il componente \textit{client\ped{G}} del pattern \textit{Chain of responsability\ped{G}}. Utilizza i moduli \textit{Mongoose\ped{G}}, \textit{Express\ped{G}}, \textit{Passport\ped{G}};
 				\item \textbf{OUT \texttt{NotFoundHandler}} \\
 				Classe che si occupa della gestione dell'errore di una pagina non trovata. Componente ConcreteHandler\ped{G} del design pattern \textit{Chain-of-responsability\ped{G}}.
+				\item \textbf{OUT \texttt{LangController}} \\
+					Classe che gestisce la logica applicativa riguardante il passaggio della traduzione delle variabili;
 			\end{itemize}
 		\item \textbf{Metodi}
 			\begin{itemize}

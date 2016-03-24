@@ -1,3 +1,28 @@
+\paragraph{GET /:lang}
+\begin{itemize}
+\item \textbf{Successo}
+Questo scenario rappresenta il successo di una richiesta di keywords inerenti alla lingua impostata che impone, come vincolo per poter essere effettuata, che l'utente non sia autenticato e non possieda già un account nel sistema.  
+\label{Procedura di traduzione}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_lang_success.png}
+	\caption{GET /:lang}
+\end{figure}
+\FloatBarrier
+
+\item \textbf{Fallimento}
+Quando viene effettuata una richiesta di traduzione in una lingua non riconosciuta dal sistema viene sollevato un errore. Tale scenario rappresenta il fallimento di una richiesta di traduzione che impone, come vincolo per poter essere effettuata, che l'utente non sia autenticato e non possieda già un account nel sistema. In questo caso il modulo \texttt{LangController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+ 
+\label{Fallimento della procedura di traduzione}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_lang_failure.png}
+	\caption{GET /:lang}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+
 \paragraph{POST /:lang/signup}
 \begin{itemize}
 \item \textbf{Successo}

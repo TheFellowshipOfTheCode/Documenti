@@ -1,3 +1,17 @@
+	\item \texttt{/:lang}
+		\begin{itemize}
+			\item \textbf{Method}: GET
+			\item \textbf{Livello di Accesso}: Utente;
+			\item \textbf{Descrizione}: restituisce le keywords inerenti alla lingua impostata
+			\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"keywords": [Array contenente le keywords inerenti alla lingua impostata ]
+}
+\end{lstlisting}
+		\end{itemize}
+	
+	
 	\item \texttt{/:lang/signup}
 		\begin{itemize}
 			\item \textbf{Method}: POST
