@@ -28,10 +28,10 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità di registrazione e autenticazione ai controllers. Controlla che i dati inseriti dall'utente siano presenti nel \textit{Database\ped{G}} in caso di autenticazione. Presenta anche le funzionalità per la gestione del reset della password;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginController}: questa classe gestisce la logica alla base della pagina di autenticazione;
-		\item \textit{IN} \texttt{LogoutController}: questa classe permette di gestire la pagina di logout;
-		\item \textit{IN} \texttt{PasswordForgotController}: questa classe gestisce la logica alla base del reset della password;
-		\item \textit{IN} \texttt{SignUpController}: questa classe gestisce la logica alla base della registrazione di un nuovo utente.
+		\item \textit{OUT} \texttt{LoginController}: questa classe gestisce la logica alla base della pagina di autenticazione;
+		\item \textit{OUT} \texttt{LogoutController}: questa classe permette di gestire la pagina di logout;
+		\item \textit{OUT} \texttt{PasswordForgotController}: questa classe gestisce la logica alla base del reset della password;
+		\item \textit{OUT} \texttt{SignUpController}: questa classe gestisce la logica alla base della registrazione di un nuovo utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -42,21 +42,23 @@
 	\item \textbf{Metodi:}
 	\begin{itemize}
 		\item + \texttt{isLogged(): Boolean} \\ Metodo che restituisce ln valore dell'attributo \textit{logged};
-		\item + \texttt{login(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+		\item + \texttt{signin(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
 			\textbf{Parametri}: 
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
 				\item \texttt{password: String}: parametro che rappresenta la password dell'utente.
 			\end{itemize}
-		\item + \texttt{logout(): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
-		\item + \texttt{signUp(username: String, password: String, checkPassword: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\item + \texttt{logout(username: String): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+		\item + \texttt{signup(username: String, password: String, email: String, nome: String, cognome: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
 			\textbf{parametri}:
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
 				\item \texttt{password: String}: parametro che rappresenta la password dell'utente;
-				\item \texttt{checkPassword: String}: parametro che rappresenta la conferma della password dell'utente.
+				\item \texttt{email: String}: parametro che rappresenta la email dell'utente;
+				\item \texttt{nome: String}: parametro che rappresenta il nome dell'utente;
+				\item \texttt{cognome: String}: parametro che rappresenta il cognome dell'utente.
 			\end{itemize}
-		\item + \texttt{getNewPassword(email: String):} Void \\Metodo che permette il recupero della password. \\
+		\item + \texttt{getNewPassword(email: String): Void}  \\Metodo che permette il recupero della password. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{email: String}: parametro che rappresenta la mail a cui mandare una mail per resettare la password.
@@ -66,8 +68,27 @@
 
 
 \paragraph{QuizziPedia::Front-End::Services::SearchService}
-metodo per richiesta oggetto coi risultati
-
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ SearchService.png}
+	\caption{QuizziPedia::Front-End::Services::LangService}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe permette di gestire il recupero dei dati dal back-end a seguito di una ricerca effettuata da un utente;
+	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end delle informazioni basandosi sulle keyword inserite dall'utente;
+	\item \textbf{Relazione con altre classi:}
+	\begin{itemize}
+		\item \textit{OUT} \texttt{SearchController}: ;
+	\end{itemize}
+	\item \textbf{Attributi:}
+	\begin{itemize}
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone. 
+	\end{itemize}
+	\item \textbf{Metodi:}
+	\begin{itemize}
+		\item \texttt{+} \texttt{Search(keyword: String): Promise} \\Metodo che serve per recuperare la lista di utenti e questionari dopo una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	\end{itemize}
+\end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::LangService}
 \begin{figure}
@@ -81,7 +102,6 @@ metodo per richiesta oggetto coi risultati
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
 		\item \textit{IN} \texttt{AppRun}
-		
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
@@ -104,10 +124,10 @@ metodo per richiesta oggetto coi risultati
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un quiz in seguito ad una ricerca dell'utente, passando i risultati ai controllers. Ritorna dei riferimenti alle domande del quiz;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
-		\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
-		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
-		\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
+		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{OUT} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+		\item \textit{OUT} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
+		\item \textit{OUT} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
 		\item \textit{OUT} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
 		\item \textit{OUT} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
 		\item \textit{OUT} \texttt{ResultsController}: questa classe permette di gestire le iscrizione degli utenti ai questionari; 
@@ -116,12 +136,19 @@ metodo per richiesta oggetto coi risultati
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item 
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
-	\item \textbf{Metodi:}
-	metodo per iscriversi ad un questionario
+	\item \textbf{Metodi:} \\
+	\item \texttt{+} \texttt{Search(quizId: String): Promise} \\Metodo che serve per recuperare i questionari dopo averne selezionato uno dalla lista ottenuta da una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	\item \texttt{+} \texttt{subscribeQuestionnaire()}: \\Metodo per iscriversi ad un questionario;
+	\item \texttt{+} \texttt{getQuestionnaireDetails(username: String): Promise}: \\Metodo che serve per ritornare i dettagli di tutti i questionari creati da un utente; Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\ 
+	\item \texttt{getDoneQuestionnaire(username: String): Promise}: \\ Metodo che restituisce tutti i questionari svolti da un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{UserDetailsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\ 
+	\item \texttt{getQuestionnaireCreated(username: String): Promise}: \\Metodo che restituisce tutti i quiz creati da un utente pro. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	\item \texttt{createQuestionnaire(title: String, questions: JSON[]): Promise}: \\ Metodo che permette di creare un nuovo questionario. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	\textbf{parametri}:
 	\begin{itemize}
-		\item 
+		\item \texttt{title: String}: parametro che rappresenta il titolo del questionario.
+		\item \texttt{}: parametro contenente tutte le domande del questionario;
 	\end{itemize}
 \end{itemize}
 
@@ -140,11 +167,12 @@ metodo per richiesta oggetto coi risultati
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item 
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{getStatistics(username: String): Promise}: \\Metodo che serve per recuperare le statistiche di un utente tramite chiamata al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\item \texttt{+} \texttt{getQuestionnaireStatistics(quizId: String): Promise} \\Metodo che restituisce le statistiche di un questionario.  Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
 	\end{itemize}
 \end{itemize}
 
@@ -179,7 +207,16 @@ metodo per richiesta oggetto coi risultati
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{sendQuestion(type: String, lang: String, text: String, image: ?, answer: String[]): Promise}: \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata;\\ 
+		\textbf{Parametri}: 
+		\begin{itemize}
+			\item \texttt{type: String}: identifica la tipologia della domanda;
+			\item \texttt{lang: String}: identifica la lingua della domanda;
+			\item \texttt{text: String}: identifica il testo della domanda;
+			\item \texttt{image: ?}: identifica un'immagine associata alla domanda;
+			\item \texttt{answer: String[]}: identifica l'array delle risposte alla domanda.
+		\end{itemize}
+		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise}: \\Metodo che ritorna tutte le domande create Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
 	\end{itemize}
 \end{itemize}
 
@@ -194,16 +231,18 @@ metodo per richiesta oggetto coi risultati
 	\item \textbf{Utilizzo}: utilizzata per ottenere i dati personali di un utente. Permette inoltre di trovare i dati di utenti ricercati tramite l'apposita barra di ricerca;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 		\item \textit{OUT} \texttt{UserDetailsController}: questa classe permette di gestire i dati di un utente;
 		\item \textit{OUT} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente. 
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item 
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{getUserDetails(userId: String): Promise} \\ Metodo che serve per ottenere i dettagli di un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\item \texttt{+} \texttt{confirmSaveUser(user: Object): Promise} \\Metodo che serve per inviare al back-end una richiesta di salvataggio persistente dei dati. Viene invocato da Confirm in SearchController. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	
 	\end{itemize}
 \end{itemize}
