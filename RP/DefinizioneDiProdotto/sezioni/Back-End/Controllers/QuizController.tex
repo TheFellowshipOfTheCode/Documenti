@@ -93,18 +93,6 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 		
-		\item \texttt{+ getChronology((req: Request, res: Response, next: function(QuizziPediaError))}\\
-			Mostra la cronologia dei questionari svolti da un utente.\\
-			\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{req: Request}\\
-			Rappresenta la richiesta inviata al \textit{server\ped{G}}. Contiene il nome del questionario da ricercare;
-				\item \texttt{res: Response}\\
-			Rappresenta la risposta che il \textit{server\ped{G}} fornirà al termine dell'esecuzione del metodo;
-				\item \texttt{next: function(QuizziPediaError)}\\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
-			\end{itemize}
-		
 		\item \texttt{+ getPersonalQuizzes((req: Request, res: Response, next: function(QuizziPediaError))}\\
 			Mostra i questionari creati da un utente.\\
 			\textbf{Parametri}:
