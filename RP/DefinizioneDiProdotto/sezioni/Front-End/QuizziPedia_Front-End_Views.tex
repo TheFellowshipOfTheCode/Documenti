@@ -21,28 +21,30 @@
 \end{itemize}
 \subsubsection{Classi}
 
-\paragraph{QuizziPedia::Front-End::Views::Index}
-\begin{itemize}
-	\item \textbf{Descrizione}: view generale dell'applicazione;
-	\item \textbf{Utilizzo}: contiene gli elementi che saranno presenti in ogni pagina dell'applicazione;
-	\item \textbf{Relazioni con altre classi}:
-	\begin{itemize}
-		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
-		\item \textit{IN} \texttt{ErrorsDirective}: directive che mostra l'eventuale errore dopo un'azione;
-		\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;
-	\end{itemize}
-	\item \textbf{Attributi}
-\end{itemize}
-
 \paragraph{QuizziPedia::Front-End::Views::LoginView}
 \begin{itemize}
+	\begin{figure} [ht]
+		\centering
+		\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_LoginView.png}
+		\caption{QuizziPedia::Front-End::Controllers::LoginView}
+	\end{figure} \FloatBarrier
 	\item \textbf{Descrizione}: view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
 	\item \textbf{Utilizzo}: premette all'utente di autenticarsi inserendo username e password;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema;
+		\item \textit{IN} \texttt{LoginModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{LoginView} e il controller \texttt{LoginController};
+		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione;
 	\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ user: Object} \\ Campo dati contenente due attributi: \texttt{email} e \texttt{password};
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ usernameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del nome utente, in italiano o in inglese; 
+		\item \texttt{+ bottonLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di autenticazione, in italiano o in inglese;
+		\item \texttt{+ recuperaBotton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link al recupero della password, in italiano o in inglese;
+		\item \texttt{+ errorUser: String} \\ Attributo che visualizza un eventuale messaggio di errore nell'inserimento della username, in italiano o in inglese;
+		\item \texttt{+ errorPassword: String} \\ Attributo che visualizza un eventuale messaggio di errore nell'inserimento della password, in italiano o in inglese;
+	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::SignUpView}
