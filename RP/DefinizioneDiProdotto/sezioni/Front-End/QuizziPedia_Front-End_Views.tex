@@ -41,7 +41,7 @@
 		\item \texttt{+ user: Object} \\ Campo dati contenente due attributi: \texttt{email} e \texttt{password};
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ usernameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del nome utente, in italiano o in inglese; 
-		\item \texttt{+ buttonLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di autenticazione, in italiano o in inglese;
+		\item \texttt{+ buttonLoginLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di autenticazione, in italiano o in inglese;
 		\item \texttt{+ recuperaBottonLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link al recupero della password, in italiano o in inglese;
 		\item \texttt{+ errorUser: String} \\ Attributo che visualizza un eventuale messaggio di errore nell'inserimento della username, in italiano o in inglese;
 		\item \texttt{+ errorPassword: String} \\ Attributo che visualizza un eventuale messaggio di errore nell'inserimento della password, in italiano o in inglese.
@@ -65,13 +65,13 @@
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+ user: Object} \\ Campo dati contenente i seguenti attributi: \texttt{nome}, \texttt{cognome}, \texttt{username}, \texttt{email}, \texttt{password} e \texttt{passwordCheck};
+		\item \texttt{+ user: Object} \\ Campo dati contenente i seguenti attributi: \texttt{name}, \texttt{surname}, \texttt{username}, \texttt{email}, \texttt{password} e \texttt{passwordCheck};
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ nameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del nome, in italiano o in inglese;
 		\item \texttt{+ surnameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del cognome, in italiano o in inglese;
 		\item \texttt{+ usernameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del nome utente, in italiano o in inglese;
 		\item \texttt{+ emailLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento della posta elettronica, in italiano o in inglese;
-		\item \texttt{+ buttonLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di registrazione, in italiano o in inglese;
+		\item \texttt{+ buttonSignUpLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di registrazione, in italiano o in inglese;
 		\item \texttt{+ loginButtonLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link all'autenticazione, in italiano o in inglese;
 		\item \texttt{+ errorUser: String} \\ Attributo che visualizza un eventuale messaggio di errore nell'inserimento della username;
 		\item \texttt{+ errorEmail: String} \\ Attributo che visualizza un eventuale messaggio di errore nell'inserimento della email;
@@ -151,6 +151,7 @@
 		\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::UserView}
 \begin{figure} [ht]
 	\centering
@@ -188,6 +189,7 @@
 		\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::OtherUserView}
 \begin{figure} [ht]
 	\centering
@@ -209,31 +211,54 @@
 	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::ProfileManagementView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_ProfileManagementView.png}
+	\caption{QuizziPedia::Front-End::Views::ProfileManagementView}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema;
-	\item \textbf{Utilizzo}: permette all'utente di modificare tutti i campi elencati, tranne l' e di rendere persistenti queste modifiche se sono accettate dal sistema;
+	\item \textbf{Utilizzo}: permette all'utente di modificare tutti i campi elencati, tranne l'username, e di rendere persistenti tali modifiche se sono accettate dal sistema;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
+		\item \textit{IN} \texttt{ProfileManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ProfileManagementView} e il controller \texttt{ProfileManagementController};
 		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ user: Object} \\ Campo dati contenente i seguenti attributi: \texttt{name}, \texttt{surname}, \texttt{email}, \texttt{image}, \texttt{password} e \texttt{passwordCheck};
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ nameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del nome, in italiano o in inglese;
+		\item \texttt{+ surnameLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento del cognome, in italiano o in inglese;
+		\item \texttt{+ emailLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento della posta elettronica, in italiano o in inglese;
+		\item \texttt{+ imageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per l'inserimento dell'immagine, in italiano o in inglese;
+		\item \texttt{+ buttonImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento immagine, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::QuestionsManagementView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_QuestionsManagementView.png}
+	\caption{QuizziPedia::Front-End::Views::QuestionsManagementView}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: view contenente l'elenco delle domande create; 
-	\item \textbf{Utilizzo}: visualizza l'elenco delle domande create permettendo all'utente di crearne una nuova e di modificarne una presente nell'elenco;
+	\item \textbf{Utilizzo}: visualizza l'elenco delle domande create permettendo all'utente di crearne una nuova o di modificarne una presente nell'elenco;
 	\item \textbf{Relazioni con altre classi}:
-	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
-		\item \textit{IN} \texttt{OneQuestionDirective}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click su di essa sarà possibile modificare
-		tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
-		\item \textit{IN} \texttt{NewQuestionButtonDirective}:
+	\begin{itemize} 
+		\item \textit{IN} \texttt{QuestionsManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};
+		\item \textit{IN} \texttt{OneQuestionDirective}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click su di essa sarà possibile modificare tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
+		\item \textit{IN} \texttt{NewQuestionButtonDirective}:  rappresenta il componente grafico che permette all'utente di posizionarsi nella view di creazione di una nuova domanda;
 		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione. 
 	\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Views::TrueFalseQuestionsView}
