@@ -72,22 +72,24 @@
 	\end{itemize}
 	
 	
-	\item \texttt{/:lang/user/quiz/:quizId/test}
+	\item \texttt{/:lang/user/quiz/:quizId/summary}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
-		\item \textbf{Descrizione}: Restituisce la valutazione del questionario;
+		\item \textbf{Descrizione}: Crea il riepilogo del questionario svolto;
 		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"_userId" : [identificativo dell'utente]
-"givenAnswer" : [Arrai di JSON contenente le domande del quiz associate alle risposte date dall'utente]
+"_quizId" : [identificativo del questionario svolto]
+"_userId" : [identificativo dell'utente che ha svolto il questionario]
+"givenAnswers" : [Array di JSON contenente le domande del quiz associate alle risposte date dall'utente]
 }
 \end{lstlisting}
 		\item \textbf{Response}: la risposta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "mark" : [valutazione del questionario]
+"answers" : [Array di JSON contenente le domande del quiz associate alle risposte date dall'utente e le risposte corrette]
 }
 \end{lstlisting}
 	\end{itemize}
