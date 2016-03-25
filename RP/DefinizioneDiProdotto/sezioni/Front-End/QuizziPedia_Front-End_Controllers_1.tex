@@ -146,7 +146,7 @@
 	\item \textbf{Utilizzo}: fornisce all'utente le funzionalità di ricerca per utenti e questionari;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ResultsModelView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
+		\item \textit{IN} \texttt{ResultsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView}, la directive \texttt{SearchDirective} e il controller \texttt{ResultsController};
 		\item \textit{IN} \texttt{SearchService}: questa classe permette di eseguire una ricerca tra i questionari e gli utenti presenti ritornando un \textit{Object} contenente i risultati di tale operazione;
 		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca. Permette inoltre di iscriversi ad un questionario;
 	\end{itemize}
@@ -201,6 +201,13 @@
 			\item \texttt{idQuiz: String} \\
 			Parametro contenente l'id del questionario di cui si vuole effettuare l'iscrizione;
 		\end{itemize} 
+		\item \texttt{+} \texttt{goToResultsPage(stringSearch: String): void} \\
+		Metodo che gestisce l’evento click sul pulsante per effettuare una ricerca.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{stringSearch: String} \\
+			Parametro contenente la stringa della quale effettuare la ricerca;
+		\end{itemize} 
 	\end{itemize}
 \end{itemize}
 
@@ -231,6 +238,11 @@
 		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate agli utenti;
 		\item \texttt{+} \texttt{user: UserDetailsModel}: \\
 		Oggetto di tipo \texttt{UserDetailsModel}. Viene mantenuto all'interno del \$rootScope; 
+		\item \texttt{-} \texttt{Upload: Upload} \\
+		Campo dati contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+		\item \texttt{-} \texttt{\$timeout: \$timeout} \\
+		Campo dati contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -248,10 +260,14 @@
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 			\item \texttt{UserDetailsService: UserDetailsService} \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’utente;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
 		\end{itemize}
 		\item \texttt{+} \texttt{confirm(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di conferma modifica. Aggiorna, in caso di modifiche, l'oggetto locale \texttt{UserDetailsModel}. Inoltre, utilizzando il metodo dell'\texttt{UserDetailsService}, aggiorna anche nel server i dati dell'utente.
-
 	\end{itemize}
 \end{itemize}
 
@@ -313,24 +329,57 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda vero/falso nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{TrueFalseQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrueFalseQuestionsView} e il controller \texttt{TrueFalseQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+			\begin{itemize}
+				\item Ottenere una domanda attraverso il metodo dedicato;
+				\item Caricare una domanda modificata;
+				\item Caricare una nuova domanda.
+			\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{-} \texttt{Upload: Upload} \\
+		Campo dati contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+		\item \texttt{-} \texttt{\$timeout: \$timeout} \\
+		Campo dati contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+		\item \texttt{-} \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{TrueFalseQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la casica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{TrueFalseQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 \end{itemize}
 
@@ -345,24 +394,57 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a risposta multipla nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{MultipleQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{MultipleQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{MultipleQuestionsView} e il controller \texttt{MultipleQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{-} \texttt{Upload: Upload} \\
+		Campo dati contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+		\item \texttt{-} \texttt{\$timeout: \$timeout} \\
+		Campo dati contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+		\item \texttt{-} \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{MultipleQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{MultipleQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 
 \end{itemize}
@@ -378,24 +460,57 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a collegamento nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{ConnectionQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ConnectionQuestionsView} e il controller \texttt{ConnectionQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{-} \texttt{Upload: Upload} \\
+		Campo dati contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+		\item \texttt{-} \texttt{\$timeout: \$timeout} \\
+		Campo dati contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+		\item \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{ConnectionQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{ConnectionQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 \end{itemize}
 
@@ -410,24 +525,57 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento immagini nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ImageSortingQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{ImageSortingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ImagesSortingQuestionsView} e il controller \texttt{ImagesSortingQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{-} \texttt{Upload: Upload} \\
+		Campo dati contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+		\item \texttt{-} \texttt{\$timeout: \$timeout} \\
+		Campo dati contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+		\item \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{ImageSortingQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{ImageSortingQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 \end{itemize}
 
@@ -442,24 +590,47 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda a ordinamento di stringhe nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{StringsSortingQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{StringsSortingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StringsSortingQuestionsView} e il controller \texttt{StringsSortingQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{StringsSortingQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{StringsSortingQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, \$routeParams: \$routeParams)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 \end{itemize}
 
@@ -474,24 +645,60 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ariempimento di spazi nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{FillingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionsView} e il controller \texttt{FillingQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{FillingQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{FillingQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
+		\item \texttt{+} \texttt{choseThatWord(word:String, number: Integer): void}\\
+		Metodo che gestisce l’evento click su una parola del testo. Una volta selezionata essa verrà inserita nell'array che conterrà le parole che dovranno essere nascoste quando l'esercizio sarà proposto; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{word:String} \\
+			Parametro contenente la parola scelta da nascondere;
+			\item \texttt{number: Integer} \\ 
+			Parametro che si riferisce al numero della parola scelta da nascondere;
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
@@ -505,24 +712,66 @@
 	\item \textbf{Descrizione}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda ad area cliccabile nel database e per modificarne una esistente;
 	\begin{itemize}
-		\item \textit{IN} \texttt{ClickableAreaQuestionsModelView}: ;
-		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
-		\item \textit{IN} \texttt{QuestionItemModel}: è il modello (astratto) della domanda;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ClickableAreaQuestionsView} e il controller \texttt{ClickableAreaQuestionsController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{Question: QuestionItemModel} \\ Oggetto nel quale andremo a salvare la domanda dopo averla scaricata dal service (per poterla caricare nella view);
-		\item \texttt{+} \texttt{\$cookie: \$cookie}: serve per recuperare l'id della domanda dalla pagina da cui arrivo;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{-} \texttt{Upload: Upload} \\
+		Campo dati contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+		\item \texttt{-} \texttt{\$timeout: \$timeout} \\
+		Campo dati contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+		\item \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{ClickableAreaQuestionsController} \\ Costruttore della classe (controllerà anche se la domanda esiste (tramite cookie) e in caso la carica, altrimenti view con form vuota);
-		\item \texttt{+} \texttt{submitQuestion}: raccoglie i dati dal modelview e li manda al service;
+		\item \texttt{+} \texttt{ClickableAreaQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{Upload: Upload} \\
+			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
+			\item \texttt{\$timeout: \$timeout} \\
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
+		\item \texttt{+} \texttt{choseThatPoint(x:Integer, y: Integer): void}\\
+		Metodo che gestisce l’evento click su un punto dell'immagine. Una volta selezionato esso verrà inserito nell'array di punti; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{x: Integer} \\
+			Parametro contenente la coordinata x del punto;
+			\item \texttt{y: Integer} \\ 
+			Parametro contenente la coordinata y del punto;
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
@@ -537,19 +786,55 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per creare e modificare una domanda tramite editor QML;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{EditorQMLView}: view contenente l'editor QML per la creazione di domande personalizzate; 
-		\item \textit{OUT} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{EditorQMLModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{EditorQMLView} e il controller \texttt{EditorQMLController};
+		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
+		\begin{itemize}
+			\item Ottenere una domanda attraverso il metodo dedicato;
+			\item Caricare una domanda modificata;
+			\item Caricare una nuova domanda.
+		\end{itemize}
+		\item \textit{IN} \texttt{ParserQML}: questa classe rappresenta il parser QML. Essa fa diventale un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa;
+		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
+		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande; 
+		\item \texttt{-} \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\item \texttt{-} \texttt{ParserQML: ParserQML} \\
+		Campo dati che si riferisce alla classe che rappresenta il parser QML. Essa fa diventale un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{EditorQMLController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, \$routeParams: \$routeParams, ParserQML: ParserQML)} \\ 
+		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare in formato QML. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
+			Parametro che si riferisce alla classe che rappresenta il modello della classe;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuestionService: QuestionService}: \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+			\item \texttt{ParserQML: ParserQML} \\
+			Parametro contenente un riferimento alla classe che rappresenta il parser QML. Essa fa diventale un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa;
+		\end{itemize}
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview, li converte attraverso il parser QML, e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 \end{itemize}
+
 
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionsManagementController}
 \begin{figure} [ht]
@@ -562,7 +847,7 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per richiedere al server le domande create dall'utente e mostrarle nella pagina dedicata. Inoltre permette di catturare gli eventi per modificare le domande esistenti e per crearne una di nuova; 
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};; 
+		\item \textit{IN} \texttt{QuestionsManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController}; 
 		\item \textit{IN} \texttt{QuestionService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
 	\end{itemize}
 	\item \textbf{Attributi}:
@@ -595,7 +880,7 @@
 			Parametro di tipo \texttt{String} contenente l'username dell'utente;
 		\end{itemize}
 		\item \texttt{+} \texttt{editQuestion(idQuestion: String)} \\ 
-		redirect a modifica domanda;
+		Metodo che gestisce l’evento click sul pulsante per modificare la domanda. Effettua il redirect alla pagina di modifica della domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{idQuestion: username} \\
@@ -612,10 +897,10 @@
 \end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di effettuare il redirect alla pagina di creazione nuova domanda;
-	\item \textbf{Utilizzo}: effettua il redirect alla pagina di creazione nuova domanda quando l'utente seleziona l'apposito link;
+	\item \textbf{Utilizzo}: effettua il redirect alla pagina di creazione di una nuova domanda quando l'utente seleziona interagisce con il bottone a cui è collegato il corrispettivo evento;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{NewQuestionButtonsModelView}: ; 
+		\item \textit{IN} \texttt{NewQuestionButtonsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{NewQuestionButtonsDirective} e il controller \texttt{NewQuestionsButtonController}; 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -626,9 +911,19 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{NewQuestionButtonsController()} \\ Metodo costruttore della classe;
-		\item \texttt{+} \texttt{newQuestion()} \\ redirect a creazione domanda;
+		\item \texttt{+} \texttt{NewQuestionButtonsController(\$scope: \$scope, \$location: \$location)} \\ 
+		Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{\$location: \$location} \\
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\end{itemize}
+		\item \texttt{+} \texttt{newQuestion()} \\ 
+		Metodo che gestisce l’evento click sul pulsante per creare una nuova domanda. Effettua il redirect alla pagina di creazione di una domanda;
 	\end{itemize}
+	
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Controllers::StatisticsController}
@@ -642,22 +937,34 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella view;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{StatisticsModelView}: directive che permette di visualizzare le statistiche di un utente; 
+		\item \textit{IN} \texttt{StatisticsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{StatisticsDirective} e il controller \texttt{StatisticsController}; 
 		\item \textit{IN} \texttt{StatisticsService}: questa classe permette di ottenere le statistiche dell'utente;
-		\item \textit{IN} \texttt{UserDetailsModel}: 
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
-		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getStatistics} del service \texttt{StatisticsService};
-		\item \texttt{-} \texttt{StatisticsService}: parametro permette di ottenere le statistiche dell'utente;
+		\item \texttt{-} \texttt{StatisticsService: StatisticsService} \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle statistiche da visualizzare;
 	\end{itemize}	
 	\begin{itemize}
 		\item \textbf{Metodi}:
-		\item \texttt{+} \texttt{StatisticsController()} \\ Metodo costruttore della classe;
-		\item \texttt{-} \texttt{getStatistics(username: String)} \\ Metodo che permette di ottenere le statistiche con una chiamata a StatisticsService;
+		\item \texttt{+} \texttt{StatisticsController(\$scope: \$scope, StatisticsService: StatisticsService)} \\ 
+		Metodo costruttore della classe. \\
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{StatisticsService: StatisticsService} \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle statistiche da visualizzare;
+		\end{itemize}
+		\item \texttt{-} \texttt{getStatistics(username: String)} \\ 
+		Metodo che permette di ottenere le statistiche si un utente grazie all'utilizzo di \texttt{StatisticsService}; \\
+		\textbf{Parametri}: 
+		Metodo costruttore della classe. \\
+		\begin{itemize}
+			\item \texttt{username: String} \\
+			Parametro contenente la stringa username utilizzata per poter recuperare le giuste statistiche attraverso lo \texttt{StatisticsService}; 
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
@@ -672,88 +979,55 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per aggiornare, a seconda della pagina, il contenuto del menù;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;  
+		\item \textit{IN} \texttt{MenuBarModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{MenuBarDirective} e il controller \texttt{MenuBarController}. Rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata; 
+		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
+		\item \textit{IN} \texttt{MenuBarModel}: questa classe rappresenta la classe che contiene le informazioni per la giusta visualizzazione della barra;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-	\end{itemize}
-	\item \textbf{Metodi}:
-	\begin{itemize}
-		\item 
-	\end{itemize}
-\end{itemize}
-
-\paragraph{QuizziPedia::Front-End::Controllers::LogoutController}
-\begin{figure} [ht]
-	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_LogoutController.png}
-	\caption{QuizziPedia::Front-End::Controllers::LogoutController}
-\end{figure} \FloatBarrier
-\begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di gestire l'azione di logout;
-	\item \textbf{Utilizzo}: fornisce la funzionalità per effettuare il logout dall'applicazione;
-	\item \textbf{Relazione con altre classi}:
-	\begin{itemize}
-		\item \textit{OUT} \texttt{MenuBarModelView}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata. Nel caso di un utente autenticato sarà presente un bottone per effettuare il logout;
-		\item \textit{IN} \texttt{AuthService}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
-	\end{itemize}
-	\item \textbf{Attributi}:
-	\begin{itemize}
-		\item \texttt{-} \texttt{\$scope: \$scope} \\
-		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
-		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
-		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. Nel caso della logout viene utilizzata per rimuovere da \$rootScope l'oggetto di di tipo \texttt{UsersDetailModel};
 		\item \texttt{-} \texttt{\$location: \$location} \\
-		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa; 
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 		\item \texttt{-} \texttt{AuthService: AuthService} \\
-		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logOut} di \$texttt{AuthService} a cui viene passato il parametro \texttt{username};
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione;
+		\item \texttt{-} \texttt{MenuBarModel: MenuBarModel}: \\
+		Campo dati contenente un riferimento all'oggetto che contiene le informazioni per la giusta visualizzazione della barra;
+		
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{LogoutController(\$scope: \$scope, \$rootScope: \$rootScope, \$location: \$location, \$mdDialog: \$mdDialog, AuthService: AuthService)} \\
+		\item \texttt{+} \texttt{MenuBarController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog, AuthService: AuthService, MenuBarModel: MenuBarModel)} \\
 		Metodo costruttore della classe; \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
 			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
-			\item \texttt{\$rootScope: \$rootScope} \\
-			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. Nel caso della logout viene utilizzata per rimuovere da \$rootScope l'oggetto di di tipo \texttt{UsersDetailModel};
 			\item \texttt{\$location: \$location} \\
 			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 			\item \texttt{AuthService: AuthService} \\
-			Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione.  Viene utilizzato il metodo \texttt{logOut} di \$texttt{AuthService} a cui viene passato il parametro \texttt{username};
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione.  Viene utilizzato il metodo \texttt{logOut} di \$texttt{AuthService} a cui viene passato il parametro \texttt{username};
+			\item \texttt{MenuBarModel: MenuBarModel}: \\
+			Parametro contenente un riferimento all'oggetto che contiene le informazioni per la giusta visualizzazione della barra;
 		\end{itemize}
 		\item \texttt{+} \texttt{logOut(): void} \\
-		Metodo che richiama il metodo \texttt{logOut} del service \texttt{AuthService} passandogli lo \texttt{username}. Prima di effettuare questa operazione viene mostrato a video un messaggio di conferma per il proseguo dell'operazione;
+		Metodo che richiama il metodo \texttt{logOut} del service \texttt{AuthService} passandogli lo \texttt{username}. Prima di effettuare questa operazione viene mostrato a video un messaggio di conferma per il proseguo dell'operazione; 
+		\item \texttt{+} \texttt{logIn(): void} \\
+		Metodo che gestisce l’evento click sul pulsante per effettuare il login. Effettua il redirect alla pagina per effettuare il login; 
+		\item \texttt{+} \texttt{signUp(): void} \\
+		Metodo che gestisce l’evento click sul pulsante per effettuare la registrazione. Effettua il redirect alla pagina per effettuare la registrazione; 
+		\item \texttt{+} \texttt{goToUserPage(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di visualizzazione della pagina utente. Effettua il redirect alla pagina di visualizzazione della pagina utente; 
+		\item \texttt{+} \texttt{goToUserManagemetPage(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di gestione del profilo utente. Effettua il redirect alla pagina di gestione del profilo utente; 
+		\item \texttt{+} \texttt{goToQuestionsManagementPage(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di gestione delle domande. Effettua il redirect alla pagina di gestione delle domande; 
+		\item \texttt{+} \texttt{goToQuizManagementPage(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di gestione dei questionari. Effettua il redirect alla pagina di gestione dei questionari; 
 	\end{itemize}
-\end{itemize}
-
-\paragraph{QuizziPedia::Front-End::Controllers::FooterController}
-\begin{figure} [ht]
-	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_FooterController.png}
-	\caption{QuizziPedia::Front-End::Controllers::FooterController}
-\end{figure} \FloatBarrier
-\begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di gestire il footer dell'applicazione;
-	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le informazioni da mostrare nel footer;
-	\item \textbf{Relazione con altre classi}:
-	\begin{itemize}
-		\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;  
-	\end{itemize}
-	\item \textbf{Attributi}:
-	\begin{itemize}
-		\item \texttt{-} \texttt{\$scope: \$scope} \\
-		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-	\end{itemize}
-	\item \textbf{Metodi}:
-	\begin{itemize}
-		\item 
-	\end{itemize}
+	
 \end{itemize}
