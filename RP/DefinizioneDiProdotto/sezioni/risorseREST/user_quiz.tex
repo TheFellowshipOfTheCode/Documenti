@@ -30,7 +30,7 @@
 		\end{itemize}
 		
 		
-	\item \texttt{/:lang/user/quiz/:quizId/addUser}
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/addUser}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato pro;
@@ -43,7 +43,7 @@
 \end{lstlisting}
 	\end{itemize}
 	
-	\item \texttt{/:lang/user/quiz/:quizId/activeUser}
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/activeUser}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -72,7 +72,7 @@
 	
 	\item \texttt{/:lang/user/:userId/quiz/:quizId/test}
 	\begin{itemize}
-		\item \textbf{Method}: POST;
+		\item \textbf{Method}: GET;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
 		\item \textbf{Descrizione}: Restituisce il quiz selezionato dall'utente per effettuare l'esercitazione;
 		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:

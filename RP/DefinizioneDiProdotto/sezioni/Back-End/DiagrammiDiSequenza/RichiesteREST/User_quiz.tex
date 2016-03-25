@@ -7,7 +7,7 @@
 % descrizione diagramma e UML
 \end{itemize}
 
-\paragraph{POST /:lang/user/quiz}
+\paragraph{POST /:lang/user/:useId/quiz}
 \begin{itemize}
 \item \textbf{Successo}
 % descrizione diagramma e UML
@@ -15,7 +15,7 @@
 % descrizione diagramma e UML
 \end{itemize}
 
-\paragraph{POST /:lang/user/quiz/:quizId/addUser}
+\paragraph{POST /:lang/user/:userId/quiz/:quizId/addUser}
 \begin{itemize}
 \item \textbf{Successo}
 % descrizione diagramma e UML
@@ -23,7 +23,7 @@
 % descrizione diagramma e UML
 \end{itemize}
 
-\paragraph{POST /:lang/user/quiz/:quizId/activeUser}
+\paragraph{POST /:lang/user/:userId/quiz/:quizId/activeUser}
 \begin{itemize}
 \item \textbf{Successo}
 % descrizione diagramma e UML
@@ -39,8 +39,16 @@
 % descrizione diagramma e UML
 \end{itemize}
 
+\paragraph{GET /:lang/user/:userId/quiz/:quizId/test}
+\begin{itemize}
+\item \textbf{Successo}
+% descrizione diagramma e UML
+\item \textbf{Fallimento}
+% descrizione diagramma e UML
+\end{itemize}
 
-\paragraph{POST /:lang/user/quiz/:quizId/test}
+
+\paragraph{POST /:lang/user/:userId/quiz/:quizId/summary}
 \begin{itemize}
 \item \textbf{Successo}
 % descrizione diagramma e UML
