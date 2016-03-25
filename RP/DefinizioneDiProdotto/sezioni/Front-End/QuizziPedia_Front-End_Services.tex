@@ -176,6 +176,16 @@
 		\item \texttt{title: String}: parametro che rappresenta il titolo del questionario.
 		\item \texttt{questions: QuestionnaireItemModel}: parametro contenente tutte le domande del questionario;
 	\end{itemize}
+	\item \texttt{+} \texttt{getUserQuestionnaire(username: String): QuestionnaireModel[]}: \\Metodo che ritorna un array di QuestionnaireModel che sono tutti i questionari creati dall'utente in input.
+	\textbf{Paramentri}:
+	\begin{itemize}
+		\item \texttt{username: String}: parametro che indica l'identificativo dell'utente del quale vogliamo richiedere i questionari.
+	\end{itemize}
+	\item \texttt{+} \texttt{getSubscribedQuestionnaire(username: String): QuestionnaireModel[]}: \\Metodo che ritorna la lista dei questionari a cui l'utente è iscritto.
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{username: String}: parametro che indica l'utente del quale scaricare i quiz a cui risulta iscritto.
+	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::StatisticsService}
