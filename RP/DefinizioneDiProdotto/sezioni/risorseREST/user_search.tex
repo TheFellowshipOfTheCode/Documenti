@@ -1,6 +1,6 @@
-	\item \texttt{/:lang/user/search}
+	\item \texttt{/:lang/user/:userId/search/:keyword/users}
 	 \begin{itemize}
-	 	\item \textbf{Method}: POST;
+	 	\item \textbf{Method}: GET;
 	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
 	 	\item \textbf{Descrizione}: effettua una ricerca di utenti da parte di un utente;
 	 	\item \textbf{Request}: la richiesta deve avere i seguenti campi:
@@ -9,23 +9,42 @@
 "keyword" : [stringa da ricercare]
 }
 \end{lstlisting} 
-		\item \textbf{Response:} la risposta deve avere due campi \texttt{array} contenenti i risultati divisi per utenti e questionari:
+		\item \textbf{Response:} la risposta deve avere un campo \texttt{array} contenente i risultati degli utenti trovati:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"userResult" : ["_userID" : [identificativi dell'utente trovato]
+"userResult" : [
+"_userID" : [identificativi dell'utente trovato]
 "name" : [nome dell'utente trovato]
 "surname" : [cognome dell'utente trovato]
 ]
-"quizResult : "["_quizID" : [identificativo del questionario]
+}
+\end{lstlisting}
+	 \end{itemize}
+
+\item \texttt{/:lang/user/:userId/search/:keyword/quizzes}
+	 \begin{itemize}
+	 	\item \textbf{Method}: GET;
+	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+	 	\item \textbf{Descrizione}: effettua una ricerca di questionari da parte di un utente;
+	 	\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"keyword" : [stringa da ricercare]
+}
+\end{lstlisting} 
+		\item \textbf{Response:} la risposta deve avere un campo \texttt{array} contenente i risultati dei questionari trovati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"quizResult : [
+"_quizID" : [identificativo del questionario]
 "title" : [titolo del questionario]
 "author" : [username dell'autore del questionario]
 ]
 }
 \end{lstlisting}
-	 \end{itemize}
+	 \end{itemize}	 
 	 
-	 
-	\item \texttt{/:lang/user/search/:userId}
+	\item \texttt{/:lang/user/:userId/search/users/:users}
 	 \begin{itemize}
 	 	\item \textbf{Method}: GET;
 	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
@@ -45,11 +64,11 @@
 	 \end{itemize}
 	 
 	 
-	\item \texttt{/:lang/user/search/:quizId}
+	\item \texttt{/:lang/user/:userId/search/quizzes/:quizId}
 	\begin{itemize}
 		\item \textbf{Method}: GET;
 		\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
-		\item \textbf{Descrizione}: Restituisce le informazioni dell questionario precedentemente trovato tramite una ricerca;
+		\item \textbf{Descrizione}: Restituisce le informazioni del questionario precedentemente trovato tramite una ricerca;
 		\item \textbf{Response:} 
 \begin{lstlisting}[language=json,firstnumber=1]
 {

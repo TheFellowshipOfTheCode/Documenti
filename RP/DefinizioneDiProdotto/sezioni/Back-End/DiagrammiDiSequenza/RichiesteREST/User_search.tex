@@ -1,53 +1,108 @@
-\paragraph{POST /:lang/user/search}
+\paragraph{GET /:lang/user/:userId/search/:keyword/users}
 \begin{itemize}
 \item \textbf{Successo}
-% descrizione diagramma e UML
-
-\textbf{Descrizione}: ..............DA SISTEMARE..............
+Questo scenario rappresenta la ricerca da parte di utente di altri utenti; verrà ritornata la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca. 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/POST__lang_user_search.png}
-	\caption{POST /:lang/user/search}
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search__keyword_users_success.png}
+	\caption{Successo: GET /:lang/user/:userId/search/:keyword/users}
 \end{figure}
 \FloatBarrier
 
 \item \textbf{Fallimento}
-% descrizione diagramma e UML
+Questo scenario rappresenta una ricerca da parte di un utente di altri utenti non andata a buon fine; in questo caso il modulo \texttt{UserManagementController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search__keyword_users_failure.png}
+	\caption{Fallimento: GET /:lang/user/:userId/search/:keyword/users}
+\end{figure}
+\FloatBarrier
+
 \end{itemize}
 
-\paragraph{GET /:lang/user/search/:userId}
+
+
+
+
+
+\paragraph{GET /:lang/user/:userId/search/:keyword/quizzes}
 \begin{itemize}
 \item \textbf{Successo}
-% descrizione diagramma e UML
-
-\textbf{Descrizione}: lo \texttt{UserRouter} gestisce la richiesta \textit{REST\ped{G}} del Front-End passando il controllo allo \texttt{UserManagementController}; viene poi invocato il metodo\\ \texttt{getInfo(req,res,next)} che ritorna tutte le informazioni riguardanti l'utente.
+Questo scenario rappresenta la ricerca da parte di utente di questionari; verrà ritornata la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user_search__userId.png}
-	\caption{GET /:lang/user/search/:userId}
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search__keyword_quizzes_success.png}
+	\caption{Successo: GET /:lang/user/:userId/search/:keyword/quizzes}
 \end{figure}
 \FloatBarrier
 
 \item \textbf{Fallimento}
-% descrizione diagramma e UML
+Questo scenario rappresenta una ricerca da parte di un utente di questionari non andata a buon fine; in questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search__keyword_quizzes_failure.png}
+	\caption{Failure: GET /:lang/user/:userId/search/:keyword/quizzes}
+\end{figure}
+\FloatBarrier
 \end{itemize}
 
-\paragraph{GET /:lang/user/search/:quizId}
+
+
+
+
+
+\paragraph{GET /:lang/user/:userId/search/users/:users}
 \begin{itemize}
 \item \textbf{Successo}
-% descrizione diagramma e UML
-
-\textbf{Descrizione}: il \texttt{QuizRouter} gestisce la richiesta \textit{REST\ped{G}} del Front-End passando il controllo al \texttt{QuizController}; viene poi invocato il metodo\\ \texttt{searchQuiz(req,res,next)} che ritorna tutti i questionari ricercati.
+Questo scenario rappresenta la visualizzazione di un utente tra quelli ritornati come risultato della ricerca; verranno visualizzate le informazioni riguardanti l'utente selezionato.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user_search__quizId.png}
-	\caption{GET /:lang/user/search/:quizId}
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search_users__users_success.png}
+	\caption{Successo: GET /:lang/user/:userId/search/users/:users}
 \end{figure}
 \FloatBarrier
 
 \item \textbf{Fallimento}
-% descrizione diagramma e UML
+Questo scenario rappresenta la visualizzazione delle informazioni di un utente non andata a buon fine; in questo caso il modulo \texttt{UserManagementController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search_users__users_failure.png}
+	\caption{Fallimento: GET /:lang/user/:userId/search/users/:users}
+\end{figure}
+\FloatBarrier
+
+\end{itemize}
+
+
+
+
+
+\paragraph{GET /:lang/user/:userId/search/quizzes/:quizId}
+\begin{itemize}
+\item \textbf{Successo}
+Questo scenario rappresenta la visualizzazione di un questionario tra quelli ritornati come risultato della ricerca.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search_quizzes__quizId_success.png}
+	\caption{Successo: GET /:lang/user/:userId/search/quizzes/:quizId}
+\end{figure}
+\FloatBarrier
+
+\item \textbf{Fallimento}
+Questo scenario rappresenta la visualizzazione di un questionario non andata a buon fine; in questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user__userId_search_quizzes__quizId_failure.png}
+	\caption{Fallimento: GET /:lang/user/:userId/search/quizzes/:quizId}
+\end{figure}
+\FloatBarrier
+
 \end{itemize}
