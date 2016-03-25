@@ -15,7 +15,7 @@
 	\end{itemize}	
 	
 	
-	\item \texttt{/:lang/user/quiz}
+	\item \texttt{/:lang/user/:userId/quiz}
 		\begin{itemize}
 			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: Utente autenticato pro;
@@ -56,7 +56,6 @@
 \end{lstlisting}
 	\end{itemize}
 	
-	
 	\item \texttt{/:lang/user/:userId/quiz/:quizId}
 	\begin{itemize}
 		\item \textbf{Method}: PUT;
@@ -67,6 +66,21 @@
 {
 "title" : [titolo del questionario]
 "questions" : [Array di JSON contenente gli identificativi delle domande che compongono il questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+	
+	\item \texttt{/:lang/user/quiz/:quizId/test}
+	\begin{itemize}
+		\item \textbf{Method}: POST;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: Restituisce il quiz selezionato dall'utente per effettuare l'esercitazione
+		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [titolo del questionario]
+"author" : [identifica l'autore del questionario]
+"questions" : [Array di JSON contenente le domande che compongono il questionario]
 }
 \end{lstlisting}
 	\end{itemize}
