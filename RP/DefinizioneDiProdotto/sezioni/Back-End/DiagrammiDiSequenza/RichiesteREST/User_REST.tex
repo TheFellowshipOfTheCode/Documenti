@@ -27,8 +27,10 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 
 \paragraph{GET /:lang/user/:userId}
 \begin{itemize}
-\item \textbf{Successo}:
-\\
+\item \textbf{Successo}:\\
+Questo scenario rappresenta il successo di una richiesta di visualizzazione dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
+
 \label{Procedura di visualizzazione dati utente}
 \begin{figure}[ht]
 	\centering
@@ -40,6 +42,8 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 
 \item \textbf{Fallimento}:
 \\
+Quando viene effettuata una richiesta di visualizzazione dei dati dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzzione dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
 \label{Fallimento della procedura di visualizzazione dati utente}
 \begin{figure}[ht]
 	\centering
@@ -52,9 +56,10 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 
 \paragraph{PUT /:lang/user/:userId}
 \begin{itemize}
-\item \textbf{Successo}
+\item \textbf{Successo}:
 \\
-\textbf{Descrizione}:
+Questo scenario rappresenta il successo di una richiesta di modifica dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 \label{Procedura di modifica dati utente}
 \begin{figure}[ht]
 	\centering
@@ -63,9 +68,9 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}
+\item \textbf{Fallimento}:
 \\
-\textbf{Descrizione}:
+Quando viene effettuata una richiesta di modifica dei dati dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di modifica dati utente}
 \begin{figure}[ht]
 	\centering
@@ -80,7 +85,9 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 \begin{itemize}
 \item \textbf{Successo}
 \\
-\textbf{Descrizione}:
+Questo scenario rappresenta il successo di una richiesta di modifica della passwprd dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
+
 \label{Procedura di modifica password}
 \begin{figure}[ht]
 	\centering
@@ -90,7 +97,10 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 \FloatBarrier
 \item \textbf{Fallimento}
 \\
-\textbf{Descrizione}:
+Quando viene effettuata una richiesta di modifica della password dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica della password dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
+
+
 \label{Fallimento della procedura di modifica password}
 \begin{figure}[ht]
 	\centering
@@ -103,9 +113,11 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 
 \paragraph{GET /:lang/user/:userId/statistics}
 \begin{itemize}
-\item \textbf{Successo}
+\item \textbf{Successo}:
 \\
-\textbf{Descrizione}:
+Questo scenario rappresenta il successo di una richiesta di modifica delle statistiche  dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
+
 \label{Procedura di visualizzazione delle statistiche}
 \begin{figure}[ht]
 	\centering
@@ -115,7 +127,8 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 \FloatBarrier
 \item \textbf{Fallimento}
 \\
-\textbf{Descrizione}:
+Quando viene effettuata una richiesta di visualizzazione delle statistiche dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione delle statistiche dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
 \label{Fallimento della procedura di visualizzazione delle statistiche}
 \begin{figure}[ht]
 	\centering
@@ -127,9 +140,10 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 
 \paragraph{GET /:lang/user/:userId/statistics/summary/}
 \begin{itemize}
-\item \textbf{Successo}
+\item \textbf{Successo}:
 \\
-\textbf{Descrizione}:
+Questo scenario rappresenta il successo di una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 \label{Procedura di visualizzazione della cronologia dei questionari svolti}
 \begin{figure}[ht]
 	\centering
@@ -137,9 +151,9 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 	\caption{GET /:lang/user/:userId/statistics/summary}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}
+\item \textbf{Fallimento}:
 \\
-\textbf{Descrizione}:
+Quando viene effettuata una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di visualizzazione della cronologia dei questionari svolti}
 \begin{figure}[ht]
 	\centering
@@ -154,16 +168,19 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 \begin{itemize}
 \item \textbf{Successo}
 \\
-\textbf{Descrizione}:
-\label{Procedura di visualizzazione del riepologo di un particolare questionario svolto}
+Questo scenario rappresenta il successo di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
+\label{Procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSummarySummaryIdSuccess.png}
 	\caption{GET /:lang/user/:userId/statistics/summary/:summaryId}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}
-\label{Fallimento della procedura di visualizzazione del riepologo di un particolare questionario svolto}
+\item \textbf{Fallimento}:
+\\
+Quando viene effettuata una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\label{Fallimento della procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSummarySummaryIdFailure.png}
