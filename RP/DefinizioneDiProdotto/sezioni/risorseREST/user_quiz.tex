@@ -74,7 +74,7 @@
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
-		\item \textbf{Descrizione}: Restituisce il quiz selezionato dall'utente per effettuare l'esercitazione
+		\item \textbf{Descrizione}: Restituisce il quiz selezionato dall'utente per effettuare l'esercitazione;
 		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
@@ -86,7 +86,7 @@
 	\end{itemize}
 	
 	
-	\item \texttt{/:lang/user/quiz/:quizId/summary}
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/summary}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -94,8 +94,6 @@
 		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"_quizId" : [identificativo del questionario svolto]
-"_userId" : [identificativo dell'utente che ha svolto il questionario]
 "givenAnswers" : [Array di JSON contenente le domande del quiz associate alle risposte date dall'utente]
 }
 \end{lstlisting}
