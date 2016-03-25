@@ -8,7 +8,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/DELETE_LangUserUseridSuccess.png}
-	\caption{DELETE /:lang/user/:userId}
+	\caption{Procedura di eliminazione account}
 \end{figure}
 \FloatBarrier
 
@@ -19,7 +19,7 @@ Quando viene effettuata una richiesta di eliminazione account sollevando un erro
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/DELETE_LangUserUseridFailure.png}
-	\caption{DELETE /:lang/user/:userId}
+	\caption{Fallimento della procedura di eliminazione account}
 \end{figure}
 
 \FloatBarrier
@@ -35,7 +35,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdSuccess.png}
-	\caption{GET /:lang/user/:userId}
+	\caption{Procedura di visualizzazione dati utente}
 \end{figure}
 
 \FloatBarrier
@@ -48,7 +48,7 @@ Quando viene effettuata una richiesta di visualizzazione dei dati dell'utente so
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUseridFailure.png}
-	\caption{GET /:lang/user/:userId}
+	\caption{Fallimento della procedura di visualizzazione dati utente}
 \end{figure}
 
 \FloatBarrier
@@ -64,7 +64,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/PUT_LangUserUseridSuccess.png}
-	\caption{PUT /:lang/user/:userId}
+	\caption{Procedura di modifica dati utente}
 \end{figure}
 \FloatBarrier
 
@@ -76,14 +76,14 @@ Quando viene effettuata una richiesta di modifica dei dati dell'utente sollevand
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/PUT_LangUserUseridFailure.png}
 	
-	\caption{PUT /:lang/user/:userId}
+	\caption{Fallimento della procedura di modifica dati utente}
 \end{figure}
 \FloatBarrier
 \end{itemize}
 
 \paragraph{PUT /:lang/user/:userId/privacy}
 \begin{itemize}
-\item \textbf{Successo}
+\item \textbf{Successo}:
 \\
 Questo scenario rappresenta il successo di una richiesta di modifica della passwprd dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
@@ -92,10 +92,10 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/PUT_LangUserUserIdPrivacySuccess.png}
-	\caption{PUT /:lang/user/:userId/privacy}
+	\caption{Procedura di modifica password}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}
+\item \textbf{Fallimento}:
 \\
 Quando viene effettuata una richiesta di modifica della password dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica della password dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
@@ -105,7 +105,7 @@ Quando viene effettuata una richiesta di modifica della password dell'utente sol
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/PUT_LangUserUserIdPrivacyFailure.png}	
-	\caption{PUT /:lang/user/:userId/privacy}
+	\caption{Fallimento della procedura di modifica password}
 \end{figure}
 \FloatBarrier
 \end{itemize}
@@ -122,10 +122,10 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSuccess.png}
-	\caption{GET /:lang/user/:userId/statistics}
+	\caption{Procedura di visualizzazione delle statistiche}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}
+\item \textbf{Fallimento}:
 \\
 Quando viene effettuata una richiesta di visualizzazione delle statistiche dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione delle statistiche dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
@@ -133,7 +133,7 @@ Quando viene effettuata una richiesta di visualizzazione delle statistiche dell'
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsFailure.png}
-	\caption{GET /:lang/user/:userId/statistics}
+	\caption{Fallimento della procedura di visualizzazione delle statistiche}
 \end{figure}
 \FloatBarrier
 \end{itemize}
@@ -148,7 +148,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSummarySuccess.png}
-	\caption{GET /:lang/user/:userId/statistics/summary}
+	\caption{Procedura di visualizzazione della cronologia dei questionari svolti}
 \end{figure}
 \FloatBarrier
 \item \textbf{Fallimento}:
@@ -158,7 +158,7 @@ Quando viene effettuata una richiesta di visualizzazione della cronologia dei qu
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSummaryFailure.png}
-	\caption{GET /:lang/user/:userId/statistics/summary}
+	\caption{Fallimento della procedura di visualizzazione della cronologia dei questionari svolti}
 \end{figure}
 \FloatBarrier
 
@@ -166,7 +166,7 @@ Quando viene effettuata una richiesta di visualizzazione della cronologia dei qu
 
 \paragraph{GET /:lang/user/:userId/statistics/summary/:summaryId}
 \begin{itemize}
-\item \textbf{Successo}
+\item \textbf{Successo}:
 \\
 Questo scenario rappresenta il successo di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
@@ -174,7 +174,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSummarySummaryIdSuccess.png}
-	\caption{GET /:lang/user/:userId/statistics/summary/:summaryId}
+	\caption{Procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \end{figure}
 \FloatBarrier
 \item \textbf{Fallimento}:
@@ -184,7 +184,7 @@ Quando viene effettuata una richiesta di visualizzazione del riepilogo di un par
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET_LangUserUserIdStatisticsSummarySummaryIdFailure.png}
-	\caption{GET /:lang/user/:userId/statistics/summary/summaryId}
+	\caption{Fallimento della procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \end{figure}
 \FloatBarrier
 \end{itemize}

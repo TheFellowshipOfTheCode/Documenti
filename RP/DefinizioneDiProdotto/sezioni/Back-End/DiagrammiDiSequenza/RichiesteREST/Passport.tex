@@ -82,3 +82,30 @@ La maggior parte delle richieste alle risorse rese disponibili dalle \textit{API
 \item \textbf{Fallimento}
 % descrizione diagramma e UML
 \end{itemize}
+
+\paragraph{GET /:lang/loggedin}
+\begin{itemize}
+\item \textbf{Successo}:\\
+Questo scenario rappresenta il successo di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController} che invia \texttt{next()} al router, per indicare il successo dell'operazione .
+
+\label{Procedura di controllo di sessione}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET__lang_loggedin_success.png}
+	\caption{Procedura di controllo di sessione}
+\end{figure}
+\FloatBarrier
+ 
+\item \textbf{Fallimento}:\\
+Questo scenario rappresenta il fallimento di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController}, che in caso di fallimento, invia \texttt{next(err)} al router,  il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+
+\label{Fallimento della procedura di controllo di sessione}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET__lang_loggedin_failure.png}
+	\caption{Fallimento della procedura di controllo di sessione}
+\end{figure}
+\FloatBarrier
+
+\end{itemize}
+
