@@ -139,7 +139,7 @@ Questo scenario rappresenta il fallimento di una richiesta di visualizzazione de
 \paragraph{POST /:lang/user/:userId/quiz/:quizId/summary} % Crea il riepilogo del questionario svolto;
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata la updateSummary() per aggiornare la cronologia dell'utente.
+Questo scenario rappresenta il successo di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario. In questo caso il modulo \texttt{SummaryController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata la updateSummary() per aggiornare la cronologia dell'utente.
 \label{Procedura di creazione di un riepilogo}
 \begin{figure}[ht]
 	\centering
@@ -149,7 +149,7 @@ Questo scenario rappresenta il successo di una richiesta di creazione di un riep
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario. In questo caso il modulo \texttt{SummaryController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di creazione di un riepilogo}
 \begin{figure}[ht]
 	\centering
