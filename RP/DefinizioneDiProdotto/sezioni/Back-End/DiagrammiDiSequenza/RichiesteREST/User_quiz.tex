@@ -1,7 +1,7 @@
 \paragraph{GET /:lang/user/:userId/quiz} % Restituisce i questionari creati dall'utente pro
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di visualizzazione dei questionari creati che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+Questo scenario rappresenta il successo di una richiesta di visualizzazione dei questionari creati che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 \label{Procedura di visualizzazione questionari creati}
 \begin{figure}[ht]
 	\centering
@@ -11,7 +11,7 @@ Questo scenario rappresenta il successo di una richiesta di visualizzazione dei 
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di visualizzazione dei questionari creati che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di visualizzazione dei questionari creati che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di visualizzazione questionari creati}
 \begin{figure}[ht]
 	\centering
@@ -24,7 +24,7 @@ Questo scenario rappresenta il fallimento di una richiesta di visualizzazione de
 \paragraph{POST /:lang/user/:useId/quiz} % Aggiunge un questionario nel sistema, restituisce un messaggio di conferma o di errore
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di creazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+Questo scenario rappresenta il successo di una richiesta di creazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 \label{Procedura di creazione di un questionario}
 \begin{figure}[ht]
 	\centering
@@ -34,7 +34,7 @@ Questo scenario rappresenta il successo di una richiesta di creazione di un ques
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di creazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di creazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di creazione di un questionario}
 \begin{figure}[ht]
 	\centering
@@ -47,7 +47,7 @@ Questo scenario rappresenta il fallimento di una richiesta di creazione di un qu
 \paragraph{POST /:lang/user/:userId/quiz/:quizId/addUser} % Iscrive un utente ad un questionario, restituisce un messaggio di conferma o di errore
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di iscrizione ad un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+Questo scenario rappresenta il successo di una richiesta di iscrizione ad un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 \label{Procedura di iscrizione ad un questionario}
 \begin{figure}[ht]
 	\centering
@@ -57,7 +57,7 @@ Questo scenario rappresenta il successo di una richiesta di iscrizione ad un que
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di iscrizione ad un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di iscrizione ad un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di iscrizione ad un questionario}
 \begin{figure}[ht]
 	\centering
@@ -70,7 +70,7 @@ Questo scenario rappresenta il fallimento di una richiesta di iscrizione ad un q
 \paragraph{POST /:lang/user/:userId/quiz/:quizId/activeUser} % Aggiunge un utente iscritto al questionario nella lista degli utenti che lo hanno eseguito
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di aggiunta alla lista di utenti che hanno compilato un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+Questo scenario rappresenta il successo di una richiesta di aggiunta alla lista di utenti che hanno compilato un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 \label{Procedura di aggiunta alla lista di utenti che hanno compilato un questionario}
 \begin{figure}[ht]
 	\centering
@@ -80,7 +80,7 @@ Questo scenario rappresenta il successo di una richiesta di aggiunta alla lista 
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di aggiunta alla lista di utenti che hanno compilato un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di aggiunta alla lista di utenti che hanno compilato un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di aggiunta alla lista di utenti che hanno compilato un questionario}
 \begin{figure}[ht]
 	\centering
@@ -93,7 +93,7 @@ Questo scenario rappresenta il fallimento di una richiesta di aggiunta alla list
 \paragraph{PUT /:lang/user/:userId/quiz/:quizId} % Modifica di un questionario creato in precedenza, restituisce un messaggio di conferma o di errore
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di modifica di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia l'utente pro che aveva creato il questionario che si vuole modificare. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+Questo scenario rappresenta il successo di una richiesta di modifica di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia l'utente pro che aveva creato il questionario che si vuole modificare; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 \label{Procedura di modifica di un questionario}
 \begin{figure}[ht]
 	\centering
@@ -103,7 +103,7 @@ Questo scenario rappresenta il successo di una richiesta di modifica di un quest
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di modifica di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia l'utente pro che aveva creato il questionario che si vuole modificare. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di modifica di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia l'utente pro che aveva creato il questionario che si vuole modificare; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di modifica di un questionario}
 \begin{figure}[ht]
 	\centering
@@ -116,7 +116,7 @@ Questo scenario rappresenta il fallimento di una richiesta di modifica di un que
 \paragraph{GET /:lang/user/:userId/quiz/:quizId/test} % Restituisce il quiz selezionato dall'utente per effettuare l'esercitazione
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di visualizzazione del questionario da compilare che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che sia iscritto e in seguito abilitato a compilare il questionario. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+Questo scenario rappresenta il successo di una richiesta di visualizzazione del questionario da compilare che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che sia iscritto e in seguito abilitato a compilare il questionario; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 \label{Procedura di visualizzazione del questionario da compilare}
 \begin{figure}[ht]
 	\centering
@@ -126,7 +126,7 @@ Questo scenario rappresenta il successo di una richiesta di visualizzazione del 
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di visualizzazione del questionario da compilare che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che sia iscritto e in seguito abilitato a compilare il questionario. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di visualizzazione del questionario da compilare che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che sia iscritto e in seguito abilitato a compilare il questionario; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di visualizzazione del questionario da compilare}
 \begin{figure}[ht]
 	\centering
@@ -139,7 +139,7 @@ Questo scenario rappresenta il fallimento di una richiesta di visualizzazione de
 \paragraph{POST /:lang/user/:userId/quiz/:quizId/summary} % Crea il riepilogo del questionario svolto;
 \begin{itemize}
 \item \textbf{Successo}:\\
-Questo scenario rappresenta il successo di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario. In questo caso il modulo \texttt{SummaryController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata la updateSummary() per aggiornare la cronologia dell'utente.
+Questo scenario rappresenta il successo di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{SummaryController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata la updateSummary() per aggiornare la cronologia dell'utente.
 \label{Procedura di creazione di un riepilogo}
 \begin{figure}[ht]
 	\centering
@@ -149,7 +149,7 @@ Questo scenario rappresenta il successo di una richiesta di creazione di un riep
 \FloatBarrier
 
 \item \textbf{Fallimento}:\\
-Questo scenario rappresenta il fallimento di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario. In questo caso il modulo \texttt{SummaryController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di creazione di un riepilogo che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e che abbia finito di compilare un questionario; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{SummaryController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di creazione di un riepilogo}
 \begin{figure}[ht]
 	\centering
