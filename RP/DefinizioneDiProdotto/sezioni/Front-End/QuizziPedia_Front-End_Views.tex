@@ -239,6 +239,7 @@
 	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::QuestionsManagementView}
 \begin{figure} [ht]
 	\centering
@@ -261,98 +262,157 @@
 	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::TrueFalseQuestionsView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_TrueFalseQuestionsView.png}
+	\caption{QuizziPedia::Front-End::Views::TrueFalseQuestionsView}
+\end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi per creare una domanda vero/falso; 
+	\item \textbf{Descrizione}: view contenente le direttive per creare una domanda vero/falso; 
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda vero/falso compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
+		\item \textit{IN} \texttt{TrueFalseQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrueFalseQuestionsView} e il controller \texttt{TrueFalseQuestionsController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\item \textit{IN} \texttt{AnswerChoiceDirective}: directive contenente il componente grafico per le risposte a scelta;  
 		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
-\item \textbf{Attributi}
+\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::MultipleQuestionsView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_MultipleQuestionsView.png}
+	\caption{QuizziPedia::Front-End::Views::MultipleQuestionsView}
+\end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a risposta multipla;
+	\item \textbf{Descrizione}: view contenente le direttive per creare una domanda a risposta multipla;
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a risposta multipla compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
-			\item \textit{IN} \texttt{MultipleQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda
-			a risposta multipla;
+			\item \textit{IN} \texttt{MultipleQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{MultipleQuestionsView} e il controller \texttt{MultipleQuestionsController};
 			\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 			\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
 			\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 			\item \textit{IN} \texttt{AnswerChoiceDirective}: directive contenente il componente grafico per le risposte a scelta;
 			\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 		\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::ConnectionQuestionsView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_ConnectionQuestionsView.png}
+	\caption{QuizziPedia::Front-End::Views::ConnectionQuestionsView}
+\end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a collegamento;
+	\item \textbf{Descrizione}: view contenente i campi e le direttive per creare una domanda a collegamento;
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a collegamento compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
-		\item \textit{IN} \texttt{InputToListController}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+		\item \textit{IN} \texttt{ConnectionQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ConnectionQuestionsView} e il controller \texttt{ConnectionQuestionsController};
+		\item \textit{IN} \texttt{InputToListModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ConnectionQuestionsView} e il controller \texttt{InputToListController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ answersConnection1: Array} \\ Array contenente la prima colonna di parole/frasi da collegare. Ogni oggetto sarà composto dal testo più un campo dati numero che indicherà a quale altra parola/frase va collegata; 
+		\item \texttt{+ answersConnection2: Array} \\ Array contenente la prima colonna di parole/frasi da collegare. Ogni oggetto sarà composto dal testo più un campo dati numero che indicherà a quale altra parola/frase va collegata; 
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::ImagesSortingQuestionsView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_ImagesSortingQuestionsView.png}
+	\caption{QuizziPedia::Front-End::Views::ImagesSortingQuestionsView}
+\end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a ordinamento immagini;
+	\item \textbf{Descrizione}: view contenente i campi e le direttive per creare una domanda a ordinamento immagini;
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento immagini compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
-		\item \textit{IN} \texttt{InputToListController}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+		\item \textit{IN} \texttt{ImageSortingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ImagesSortingQuestionsModelView} e il controller \texttt{ImagesSortingQuestionsController};
+		\item \textit{IN} \texttt{InputToListModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ImageSortingQuestionsView} e il controller \texttt{InputToListController};
 		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ images: Array} \\ Array contenente oggetti con un campo dati immagine e un campo dati numero, che ne indicherà l'ordine corretto;  
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::StringsSortingQuestionsView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_StringsSortingQuestionsView.png}
+	\caption{QuizziPedia::Front-End::Views::StringsSortingQuestionsView}
+\end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a ordinamento stringhe;
+	\item \textbf{Descrizione}: view contenente i campi e le direttive per creare una domanda a ordinamento stringhe;
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento stringhe compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
-			\item \textit{IN} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
-			\item \textit{IN} \texttt{InputToListController}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+			\item \textit{IN} \texttt{StringsSortingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StringsSortingQuestionsView} e il controller \texttt{StringsSortingQuestionsController};
+			\item \textit{IN} \texttt{InputToListModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StringsSortingQuestionsView} e il controller \texttt{InputToListController};
 			\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 			\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 			\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 		\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ strings: Array} \\ Array contenente oggetti con un campo dati stringa e un campo dati numero, che ne indicherà l'ordine corretto;  
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
+
 
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionsView}
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi per creare una domanda a riempimento testo;
+	\item \textbf{Descrizione}: view contenente i campi e le direttive per creare una domanda a riempimento testo;
 	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda a riempimento testo compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di sdirective che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textit{IN} \texttt{FillingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionsView} e il controller \texttt{FillingQuestionsController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\item \textit{IN} \texttt{LangModel}: rappresenta le informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese.
+	\end{itemize}
 \end{itemize}
+
 
 \paragraph{QuizziPedia::Front-End::Views::ClickableAreaQuestionsView}
 \begin{itemize}
@@ -368,6 +428,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
+
 
 \paragraph{QuizziPedia::Front-End::Views::EditorQMLView}
 \begin{itemize}
@@ -402,6 +463,7 @@
 	\item \textbf{Attributi}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::FillingQuestionnaireView}
 \begin{itemize}
 	\item \textbf{Descrizione}: view principale per la compilazione del questionario;
@@ -423,6 +485,7 @@
 	\item \textbf{Attributi}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::QuestionnaireManagementView}
 \begin{itemize}
 	\item \textbf{Descrizione}: view principale per la gestione dei questionari;
@@ -437,6 +500,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
+
 
 \paragraph{QuizziPedia::Front-End::Views::CreateQuestionnaireView}
 \begin{itemize}
@@ -457,6 +521,7 @@
 	\item \textbf{Attributi}
 \end{itemize}
 
+
 \paragraph{QuizziPedia::Front-End::Views::RegistrationManagementView}
 \begin{itemize}
 	\item \textbf{Descrizione}: view per la gestione degli utenti iscritti a un proprio questionario;
@@ -468,6 +533,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}
 \end{itemize}
+
 
 \paragraph{QuizziPedia::Front-End::Views::ResultsQuestionnarieView}
 \begin{itemize}
