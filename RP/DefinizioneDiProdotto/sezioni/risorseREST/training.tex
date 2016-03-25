@@ -3,6 +3,14 @@
 	\item \textbf{Method}: GET;
 	\item \textbf{Livello di Accesso}: Utente;
 	\item \textbf{Descrizione}: restituisce una domanda in base al livello di abilità raggiunto dall'utente;
+	\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+	\begin{lstlisting}[language=json,firstnumber=1]
+	{
+	"topic" : [indica l'argomento in cui si vuoi esercitare l'utente]
+	"keywords" : [indica le keywords per effettuare la ricerca della domanda]
+	"level" : [indica il livello dell'utente inerente all'argomento scelto]
+	}
+	\end{lstlisting}
 	\item \textbf{Response}: la risposta deve contenere i seguenti campi:
 	\begin{lstlisting}[language=json,firstnumber=1]
 	{
@@ -15,7 +23,7 @@
 	\end{lstlisting}
 \end{itemize}
 
-\item \texttt{/:lang/user/training/userstatistics}
+\item \texttt{/:lang/user/:userId/training/userstatistics}
 \begin{itemize}
 	\item \textbf{Method}: PUT;
 	\item \textbf{Livello di Accesso}: Utente autenticato;
@@ -29,7 +37,7 @@
 	\end{lstlisting}	
 \end{itemize}
 
-\item \texttt{/:lang/user/training/questionstatistics}
+\item \texttt{/:lang/user/:userId/training/questionstatistics}
 \begin{itemize}
 	\item \textbf{Method}: PUT;
 	\item \textbf{Livello di Accesso}: Utente autenticato;

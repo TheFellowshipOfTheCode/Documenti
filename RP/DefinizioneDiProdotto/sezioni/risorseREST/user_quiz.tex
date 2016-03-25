@@ -15,7 +15,7 @@
 	\end{itemize}	
 	
 	
-	\item \texttt{/:lang/user/quiz}
+	\item \texttt{/:lang/user/:userId/quiz}
 		\begin{itemize}
 			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: Utente autenticato pro;
@@ -30,7 +30,7 @@
 		\end{itemize}
 		
 		
-	\item \texttt{/:lang/user/quiz/:quizId/addUser}
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/addUser}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato pro;
@@ -43,7 +43,7 @@
 \end{lstlisting}
 	\end{itemize}
 	
-	\item \texttt{/:lang/user/quiz/:quizId/activeUser}
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/activeUser}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -55,7 +55,6 @@
 }
 \end{lstlisting}
 	\end{itemize}
-	
 	
 	\item \texttt{/:lang/user/:userId/quiz/:quizId}
 	\begin{itemize}
@@ -71,8 +70,23 @@
 \end{lstlisting}
 	\end{itemize}
 	
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/test}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: Restituisce il quiz selezionato dall'utente per effettuare l'esercitazione;
+		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [titolo del questionario]
+"author" : [identifica l'autore del questionario]
+"questions" : [Array di JSON contenente le domande che compongono il questionario]
+}
+\end{lstlisting}
+	\end{itemize}
 	
-	\item \texttt{/:lang/user/quiz/:quizId/summary}
+	
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/summary}
 	\begin{itemize}
 		\item \textbf{Method}: POST;
 		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
@@ -80,8 +94,6 @@
 		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
-"_quizId" : [identificativo del questionario svolto]
-"_userId" : [identificativo dell'utente che ha svolto il questionario]
 "givenAnswers" : [Array di JSON contenente le domande del quiz associate alle risposte date dall'utente]
 }
 \end{lstlisting}
