@@ -2,7 +2,7 @@
 \paragraph{DELETE /:lang/user/:userId}
 \begin{itemize}
 \item \textbf{Successo}: \\
-Questo scenario rappresenta il successo di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema.  
+Questo scenario rappresenta il successo di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata la logout() per completare interamente l'operazione.
 \label{Procedura di eliminazione account}
 \begin{figure}[ht]
@@ -13,7 +13,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \FloatBarrier
 
 \item \textbf{Fallimento}: \\
-Quando viene effettuata una richiesta di eliminazione account sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Quando viene effettuata una richiesta di eliminazione account sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema,quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di eliminazione account}
 \begin{figure}[ht]
