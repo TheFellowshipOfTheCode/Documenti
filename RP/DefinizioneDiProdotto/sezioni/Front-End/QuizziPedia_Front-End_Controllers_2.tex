@@ -122,6 +122,8 @@
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 		\item \texttt{-} \texttt{QuizService}: ;
+		\item \texttt{+} \texttt{createQuiz: CreateQuestionnaireModelView} \\
+		Oggetto di tipo \texttt{FillingQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -182,7 +184,9 @@
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz;
+		\item \texttt{QuizService: QuizService}\\ parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz;
+		\item \texttt{+} \texttt{fillQuiz: RegistrationManagementModelView} \\
+		Oggetto di tipo \texttt{RegistrationManagementModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{RegistrationManagemenView} e il controller \texttt{RegistrationManagemenController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -225,6 +229,8 @@
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 		\item \textit{-} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \texttt{+} \texttt{results: ResultQuestionnaireModelView} \\
+		Oggetto di tipo \texttt{ResultQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{ResultsController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -267,6 +273,8 @@
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \textit{IN} \texttt{QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \texttt{+} \texttt{quizManagement: QuestionnaireManagementModelView} \\
+		Oggetto di tipo \texttt{QuestionnaireManagementModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireManagementView} e il controller \texttt{QuestionnaireManagementController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -309,6 +317,8 @@
 		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
 		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};
 		\item \texttt{-} \texttt{QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \texttt{+} \texttt{deatails: QuestionnaireDetailsModelView} \\
+		Oggetto di tipo \texttt{QuestionnaireDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireDetailsView} e il controller \texttt{QuestionnaireDetailsController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -360,6 +370,8 @@
 		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getUserDetails} del service \texttt{UserDetailsService};
 		\item \texttt{-} \texttt{userDetailsService}: parametro permette di ottenere i dati dell'utente;
 		\item \texttt{-} \texttt{UserDetailsService}: parametro che permette di ottenere i dati dell'utente;
+		\item \texttt{+} \texttt{deatails: UserDetailsModelView} \\
+		Oggetto di tipo \texttt{UserDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserDetailsView} e il controller \texttt{UserDetailsController};
 	\end{itemize}	
 	\begin{itemize}
 		\item \textbf{Metodi}:
@@ -449,6 +461,8 @@
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{QuestionService: QuestionService}\\ 
 		Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata.
+		\item \texttt{+} \texttt{key: TopicKeywordsModelView} \\
+		Oggetto di tipo \texttt{TopicKeywordsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la direttiva \texttt{TopicKeywordsDirectiveView} e il controller \texttt{TopicKeywordsController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
