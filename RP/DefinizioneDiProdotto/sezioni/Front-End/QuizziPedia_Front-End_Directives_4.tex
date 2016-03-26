@@ -209,7 +209,13 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item ;
+				\item \texttt{questionText}: identifica il testo della domanda;
+				\item \texttt{url}: identifica l'url di una possibile immagine nel testo della domanda;
+				\item \texttt{Answer}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\begin{itemize}
+					\item \texttt{url}: contiene l'url dell'immagine da ordinare;
+					\item \texttt{position}: contiene se la posizione corretta dell'immagine.
+				\end{itemize}
 			\end{itemize}
 			\item \textbf{Metodi}: 
 			\begin{itemize}
@@ -235,10 +241,16 @@
 				\item \textit{IN} \texttt{TrainingModelView}: ; 
 				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+				\item \textit{IN} \texttt{RightDirectiveModel}: ;
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item ;
+				\item \texttt{questionText}: identifica il testo della domanda;
+			\item \texttt{Answer}: array che contiene coppie di valori. Queste coppie sono formate da:
+			\begin{itemize}
+				\item \texttt{Text}: contiene il testo dell'affermazione;
+				\item \texttt{position}: contiene se la posizione corretta del testo.
+			\end{itemize}
 			\end{itemize}
 			\item \textbf{Metodi}: 
 			\begin{itemize}
