@@ -38,7 +38,7 @@
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup.
 		\end{itemize}
-		\item \texttt{-} \texttt{getNextQuestion(): QuestionItemModel} \\ Metodo che gestisce l'evento del click al pulsante "prossima domanda", fa una richiesta al QuestionController che ritornerà la domanda successiva. Questa domanda andrà salvata nel TrainingModeModel nello \$scope.
+		\item \texttt{-} \texttt{getNextQuestion(): QuestionItemModel} \\ Metodo che gestisce l'evento del click al pulsante "prossima domanda", fa una richiesta al QuestionsController che ritornerà la domanda successiva. Questa domanda andrà salvata nel TrainingModeModel nello \$scope.
 	\end{itemize}
 \end{itemize}
 
@@ -411,13 +411,21 @@
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
-		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionItemModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestion} del service \texttt{QuestionService};
-		\item \texttt{-} \texttt{QuestionService}: ;
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionItemModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestion} del service \texttt{QuestionsService};
+		\item \texttt{-} \texttt{QuestionsService}: permette di ottenere domande esistenti tramite chiamata di metodo specifici;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionsController}: \\ Metodo costruttore della classe
-		\item \texttt{+} \texttt{getQuestion}: \\ Metodo che richiede al back-end una domanda;
+		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootscope: \$rootscope, QuestionService: QuestionService)}: \\ Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionItemModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestion} del service \texttt{QuestionsService}; 
+			\item \texttt{QuestionService: QuestionService} \\ Parametro che permette di ottenere domande esistenti tramite chiamata di metodo specifici;
+		\end{itemize}
+		\item \texttt{+} \texttt{getQuestion(): QuestionItemModel} \\ Metodo che richiede al back-end una domanda;
 	\end{itemize}
 \end{itemize}
 
@@ -439,10 +447,22 @@
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{QuestionService: QuestionService}\\ 
+		Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{-} \texttt{getTopicKeywords(key: String)}: \\ Metodo che ritorna le parole che hanno a che fare con key
+		\item \texttt{+} \texttt{TopicKeywordsController(\$scope: \$scope)} \\Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione; 
+		\end{itemize}
+		\item \texttt{-} \texttt{getTopicKeywords(key: String): String[]}: \\ Metodo che ritorna le parole che hanno a che fare con key
+	\end{itemize}
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{key: String}: parametro che identifica la stringa con la quale cercare le keywords. 
 	\end{itemize}
 \end{itemize}
 
@@ -465,15 +485,41 @@
 		\end{itemize}
 		Questo componente si presta sia per la creazione che per la modifica di un questionario;
 		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{QuestionItemModel}: ;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{QuestionsService: QuestionsService}\\ pParametro che permette di ottenere, tramite il service, le domande richieste;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{QuestionnaireQuestionsManagementController(\$scope: \$scope, \$mdDialog, \$mdDialog, QuestionsService: QuestionService)} \\Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{-} \texttt{QuestionsService: QuestionsService}\\ Parametro che permette di ottenere, tramite il service, le domande richieste;
+		\end{itemize}
+		\item \texttt{-} \texttt{getQuestions(): String[]} \\
+		Metodo che permette di ottenere la lista di tutte le domande.
+		\item \texttt{-} \texttt{getQuestion(questionId: String): QuestionItemModel} \\
+		Metodo che ritorna l'intera domanda selezionata.
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+		\end{itemize}
+		\item \texttt{-} \texttt{addQuestion(questionId: String) : void} \\
+		Metodo che permette di inserire una domanda nel questionario.
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
@@ -521,15 +567,54 @@
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreationAndModifyDirective}:  
-		\item \textit{OUT} \texttt{ExamModalityDirective}:
+		\item \textit{IN} \texttt{ExamModalityDirective}:
+		\item \textit{IN} \texttt{QuestionnaireResultsDirective}:
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{QuizEventController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog)} \\ Metodo costruttore della classe.
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+			\item \texttt{-} \texttt{\$location: \$location} \\
+		    Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+			\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\end{itemize}
+		\item \texttt{+} \texttt{modifyQuestionnaire(quizId: String): void} \\
+		Metodo che gestisce l’evento click sul pulsante di modifica questionario. Effettua il redirect alla pagina di gestione questionari;
+		\begin{itemize}
+			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		\item \texttt{+} \texttt{deleteQuestionnaire(quizId: String): void} \\
+		Metodo che gestisce l’evento click sul pulsante di eliminazione questionario. Effettua il redirect alla pagina di gestione questionari;  
+		\begin{itemize}
+			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		\item \texttt{+} \texttt{subscribeManagement(quizId: String): void} \\
+		Metodo che gestisce l’evento click sul pulsante di gestione iscrizioni. Effettua il redirect alla pagina di gestione iscrizioni;
+		\item \texttt{+} \texttt{examModalityquizId: String(): void} \\
+		\begin{itemize}
+			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		Metodo che gestisce l’evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari;
+		\begin{itemize}
+			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		\item \texttt{+} \texttt{resultsQuestionnaire(quizId: String): void} \\
+		Metodo che gestisce l’evento click sul pulsante di allenamento. Effettua il redirect alla pagina di gestine questionari;
+		\begin{itemize}
+			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}   
 	\end{itemize}
 \end{itemize}
