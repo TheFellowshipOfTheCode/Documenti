@@ -78,7 +78,16 @@ La maggior parte delle richieste alle risorse rese disponibili dalle \textit{API
 \paragraph{POST /:lang/signout}
 \begin{itemize}
 \item \textbf{Successo}
-% descrizione diagramma e UML
+Questo scenario rappresenta l'azione di \textit{logout} da parte di un utente precedentemente autenticato nel sistema. La \textit{logout} dell'utente viene effettuata tramite \textit{Passport\ped{G}}.
+
+\label{Procedura di logout}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/POST__lang_signout_success.png}
+	\caption{POST /:lang/signout}
+\end{figure}
+\FloatBarrier
+
 \item \textbf{Fallimento}
 % descrizione diagramma e UML
 \end{itemize}
