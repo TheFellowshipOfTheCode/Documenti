@@ -416,7 +416,7 @@
 		\item \textit{IN} \texttt{QuestionServices}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
 		\item \textit{IN} \texttt{QuestionItemModel}: ;
 		\item \textit{OUT} \texttt{FillingQuestionnaireController}: ;
-		
+		\item \textit{IN} \texttt{RightDirectiveModel}: ;		
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -428,7 +428,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootscope: \$rootscope, QuestionService: QuestionService)}: \\ Metodo costruttore della classe. \\
+		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootscope: \$rootscope, QuestionService: QuestionService)}: \\ Metodo costruttore della classe. Cicla nell'oggetto QuestionItemModel ricevuto e si interfaccia con la view che andrà a recuperare e stampare la giusta direttiva della tipologia di domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{-} \texttt{\$scope: \$scope} \\

@@ -1,36 +1,11 @@
-\newpage
-
-\subsection{QuizziPedia::Front-End::Templates}
-
-	\label{QuizziPedia::Front-End::Templates}
-
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Package/QuizziPedia_Front-End_Templates.png}
-		\caption{QuizziPedia::Front-End::Templates}
-	\end{figure} \FloatBarrier
-	
-	\subsubsection{Informazioni generali}
-		\begin{itemize}
-			\item \textbf{Descrizione}: package contenente i templates necessari per la creazione dinamica delle viste per le domande;
-			\item \textbf{Padre}: \texttt{Front-End};
-			\item \textbf{Iterazioni con altri componenti}: 
-				\begin{itemize}
-					\item \texttt{Controllers}: package contenente i controllers front-end dell'applicazione;
-					\item \texttt{Views}: package contenente le views front-end dell'applicazione.
-				\end{itemize}
-		\end{itemize}
-
-	\subsubsection{Classi}
-	
-		\paragraph{QuizziPedia::Front-End::Template::ClickableAnswerTemplate}
+	\paragraph{QuizziPedia::Front-End::Directives::ClickableAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::ClickableAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::ClickableAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::ClickableAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::ClickableAnswerTemplate}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -41,6 +16,7 @@
 				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
 				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+				
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -52,14 +28,14 @@
 			\end{itemize}
 		\end{itemize}
 	
-		\paragraph{QuizziPedia::Front-End::Template::EmptySpaceAnswerTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::EmptySpaceAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::EmptySpaceAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::EmptySpaceAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_EmptySpaceAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::EmptyChoiceAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::EmptyChoiceAnswerDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -81,14 +57,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::HeaderTextQuestionTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::HeaderTextQuestionDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::HeaderTextQuestionTemplate}
+		\label{QuizziPedia::Front-End::Directives::HeaderTextQuestionDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_HeaderTextQuestionTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::}
+			\caption{QuizziPedia::Front-End::Directives::HeaderTextQuestionDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -96,8 +72,8 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la visualizzazione del testo della domanda, dell'argomento della domanda e le parole chiave associate ad essa;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
-				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 			\end{itemize}
 			\item \textbf{Attributi}: 
@@ -110,14 +86,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::InfoQuestionnaireTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::InfoQuestionnaireDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::InfoQuestionnaireTemplate}
+		\label{QuizziPedia::Front-End::Directives::InfoQuestionnaireDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_InfoQuestionnaireTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::InfoQuestionnaireTemplate}
+			\caption{QuizziPedia::Front-End::Directives::InfoQuestionnaireDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -132,7 +108,7 @@
 			\end{itemize}
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: view principale per la compilazione del questionario;
 				\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
 			\end{itemize}
 			\item \textbf{Attributi}: 
@@ -145,14 +121,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::LinkingAnswerTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::LinkingAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::LinkingAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::LinkingAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_LinkingAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::LinkingAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::LinkingAnswerDirective}
 		\end{figure} \FloatBarrier		
 		
 		\begin{itemize}
@@ -160,8 +136,8 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda di collegamento;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
-				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 			\end{itemize}
 			\item \textbf{Attributi}: 
@@ -174,14 +150,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::MultipleChoiceAnswerTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::MultipleChoiceAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::MultipleChoiceAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::MultipleChoiceAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_MultipleChoiceAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::MultipleChoiceAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::MultipleChoiceAnswerDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -189,28 +165,37 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda a risposta multipla;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
-				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+				\item \textit{IN} \texttt{RightDirectiveModel}: ;
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item ;
+				\item \texttt{QuestionText}: identifica il testo della domanda;
+				\item \texttt{url}: identifica l'url di una possibile immagine nel testo della domanda;
+				\item \texttt{Answer}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\begin{itemize}
+					\item \texttt{Text}: contiene il testo dell'affermazione;
+					\item \texttt{url}: identifica l'url di una possibile immagine nel testo della domanda;
+					\item \texttt{isItRight}: contiene se la risposta è vero o falso.
+				\end{itemize}
 			\end{itemize}
+			 
 			\item \textbf{Metodi}: 
 			\begin{itemize}
 				\item ;
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::SortImagesAnswerTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::SortImagesAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::SortImagesAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::SortImagesAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_SortImagesAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::SortImagesAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::SortImagesAnswerDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -218,8 +203,8 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda ad ordinamento di immagini;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
-				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 			\end{itemize}
 			\item \textbf{Attributi}: 
@@ -232,14 +217,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::SortTextAnswerTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::SortTextAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::SortTextAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::SortTextAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_SortTextAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::SortTextAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::SortTextAnswerDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -247,8 +232,8 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda ad ordinamento di stringhe;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
-				\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario;
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: ;
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 			\end{itemize}
 			\item \textbf{Attributi}: 
@@ -261,14 +246,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::TrainingSetUpTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::TrainingSetUpDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::TrainingSetUpTemplate}
+		\label{QuizziPedia::Front-End::Directives::TrainingSetUpDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_TrainingSetUpTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::TrainingSetUpTemplate}
+			\caption{QuizziPedia::Front-End::Directives::TrainingSetUpDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -276,7 +261,7 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente di selezionare l'argomento e le parole chiave di un allenamento;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
 				\item \textit{OUT} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
 			\end{itemize}
 			\item \textbf{Attributi}: 
@@ -289,14 +274,14 @@
 			\end{itemize}
 		\end{itemize}
 		
-		\paragraph{QuizziPedia::Front-End::Template::TrueFalseAnswerTemplate}
+		\paragraph{QuizziPedia::Front-End::Directives::TrueFalseAnswerDirective}
 		
-		\label{QuizziPedia::Front-End::Templates::TrueFalseAnswerTemplate}
+		\label{QuizziPedia::Front-End::Directives::TrueFalseAnswerDirective}
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_TrueFalseAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Templates::TrueFalseAnswerTemplate}
+			\caption{QuizziPedia::Front-End::Directives::TrueFalseAnswerDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -304,12 +289,18 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda vero e falso;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; 
+				\item \textit{IN} \texttt{TrainingModelView}: ; 
 				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+				\item \textit{IN} \texttt{RightDirectiveModel}: ;
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item ;
+				\item \texttt{image}: identifica una possibile immagine nella domanda;
+				\item \texttt{Answer}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\begin{itemize}
+					\item \texttt{Text}: contiene il testo dell'affermazione;
+					\item \texttt{isItRight}: contiene se la risposta è vero o falso.
+				\end{itemize}
 			\end{itemize}
 			\item \textbf{Metodi}: 
 			\begin{itemize}
