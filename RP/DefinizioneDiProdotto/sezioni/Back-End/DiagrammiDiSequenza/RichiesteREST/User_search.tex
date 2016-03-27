@@ -1,7 +1,7 @@
 \paragraph{GET /:lang/user/:userId/search/:keyword/users}
 \begin{itemize}
 \item \textbf{Successo}
-Questo scenario rappresenta la ricerca da parte di utente di altri utenti; verrà ritornata la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca. 
+Questo scenario rappresenta il successo di una richiesta che ritorna la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -11,7 +11,7 @@ Questo scenario rappresenta la ricerca da parte di utente di altri utenti; verr�
 \FloatBarrier
 
 \item \textbf{Fallimento}
-Questo scenario rappresenta una ricerca da parte di un utente di altri utenti non andata a buon fine; in questo caso il modulo \texttt{UserManagementController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta che ritorna la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -30,7 +30,7 @@ Questo scenario rappresenta una ricerca da parte di un utente di altri utenti no
 \paragraph{GET /:lang/user/:userId/search/:keyword/quizzes}
 \begin{itemize}
 \item \textbf{Successo}
-Questo scenario rappresenta la ricerca da parte di utente di questionari; verrà ritornata la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca.
+Questo scenario rappresenta il successo di una richiesta che ritorna la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -40,7 +40,7 @@ Questo scenario rappresenta la ricerca da parte di utente di questionari; verrà
 \FloatBarrier
 
 \item \textbf{Fallimento}
-Questo scenario rappresenta una ricerca da parte di un utente di questionari non andata a buon fine; in questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta che ritorna la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(error)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -58,7 +58,7 @@ Questo scenario rappresenta una ricerca da parte di un utente di questionari non
 \paragraph{GET /:lang/user/:userId/search/users/:users}
 \begin{itemize}
 \item \textbf{Successo}
-Questo scenario rappresenta la visualizzazione di un utente tra quelli ritornati come risultato della ricerca; verranno visualizzate le informazioni riguardanti l'utente selezionato.
+Questo scenario rappresenta il successo di una richiesta di visualizzazione di un utente tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -68,7 +68,7 @@ Questo scenario rappresenta la visualizzazione di un utente tra quelli ritornati
 \FloatBarrier
 
 \item \textbf{Fallimento}
-Questo scenario rappresenta la visualizzazione delle informazioni di un utente non andata a buon fine; in questo caso il modulo \texttt{UserManagementController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di visualizzazione di un utente tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -86,7 +86,7 @@ Questo scenario rappresenta la visualizzazione delle informazioni di un utente n
 \paragraph{GET /:lang/user/:userId/search/quizzes/:quizId}
 \begin{itemize}
 \item \textbf{Successo}
-Questo scenario rappresenta la visualizzazione di un questionario tra quelli ritornati come risultato della ricerca.
+Questo scenario rappresenta il successo di una richiesta di visualizzazione di un questionario tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -96,7 +96,7 @@ Questo scenario rappresenta la visualizzazione di un questionario tra quelli rit
 \FloatBarrier
 
 \item \textbf{Fallimento}
-Questo scenario rappresenta la visualizzazione di un questionario non andata a buon fine; in questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+Questo scenario rappresenta il fallimento di una richiesta di visualizzazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(error)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
