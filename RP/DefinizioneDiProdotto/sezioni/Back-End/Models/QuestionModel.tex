@@ -38,14 +38,15 @@
 		Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per le domande e prevede i seguenti attributi:
 		\begin{itemize}
 			\item \texttt{author} di tipo \texttt{ObjectId}, rappresenta il riferimento all'identificativo nel database dell'utente che ha creato la domanda;
-			\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di domanda;
+			\item \texttt{makeWith} di tipo \texttt{String}, rappresenta con quale strumento è stata creata la domanda;
 			\item \texttt{language} di tipo \texttt{String}, rappresenta la lingua in cui è scritta la domanda; 
 			\item \texttt{question} di tipo \texttt{Array}, contiene un oggetto di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
 				\begin{itemize}
 					\item \texttt{questionText} di tipo \texttt{String}, rappresenta il testo della domanda; 
 					\item \texttt{image} di tipo \texttt{String}, rappresenta l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda; 
 					\item \texttt{answers} di tipo \texttt{Array}, contiene un oggetto di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
-					\begin{enumerate}					  
+					\begin{enumerate}	
+						\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di risposta; 				  
 						\item \texttt{text} di tipo \texttt{String}, rappresenta il testo della risposta;
         					\item \texttt{url} di tipo \texttt{String}, rappresenta l'immagine della risposta;
         					\item \texttt{attributesForTForMultiple} di tipo \texttt{Mixed}, contiene i seguenti attributi:
@@ -129,15 +130,6 @@
 	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda;
 	\item \texttt{- addTotal()} \\
 	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda;
-	\item \texttt{+ compareAnswers(option1: JSON, option2: JSON)}
-	Metodo che serve per confrontare le risposte date dagli utenti con le risposte effettive delle domande per sapere se sono corrette, ogni tipologia di domanda tratterà in modo diverso i parametri per confrontare il proprio metodo di risposta; \\
-	\textbf{Parametri:}
-		\begin{itemize}
-			\item \texttt{option1: JSON} \\
-			Rappresenta la prima parte della risposta fornita dall'utente;
-			\item \texttt{option2: JSON} \\
-			Rappresenta la seconda parte della risposta fornita dall'utente.
-		\end{itemize}
 	\item \texttt{+ getQuestions(userID: ObjectId)}\\
 	Metodo che ritorna tutte le domande create da un utente.\\
 	\textbf{Parametri:}
