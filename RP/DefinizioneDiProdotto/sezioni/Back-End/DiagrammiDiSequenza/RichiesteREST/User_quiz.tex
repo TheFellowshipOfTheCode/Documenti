@@ -21,6 +21,31 @@ Questo scenario rappresenta il fallimento di una richiesta di visualizzazione de
 \FloatBarrier
 \end{itemize}
 
+\paragraph{GET /:lang/user/:userId/quiz/:quizId} % Restituisce il questionario creato dall'utente pro
+\begin{itemize}
+\item \textbf{Successo}:\\
+Questo scenario rappresenta il successo di una richiesta di visualizzazione del questionario creato dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato come utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+\label{Procedura di visualizzazione questionario creato}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user_userId_quiz_quizId_success.png}
+	\caption{Procedura di visualizzazione questionari creati}
+\end{figure}
+\FloatBarrier
+
+\item \textbf{Fallimento}:\\
+Questo scenario rappresenta il fallimento di una richiesta di visualizzazione del questionario creato che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\label{Fallimento della procedura di visualizzazione questionario creato}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user_userId_quiz_quizId_failure.png}
+	\caption{Fallimento della procedura di visualizzazione questionari creati}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+
+
 \paragraph{POST /:lang/user/:useId/quiz} % Aggiunge un questionario nel sistema, restituisce un messaggio di conferma o di errore
 \begin{itemize}
 \item \textbf{Successo}:\\
@@ -43,6 +68,33 @@ Questo scenario rappresenta il fallimento di una richiesta di creazione di un qu
 \end{figure}
 \FloatBarrier
 \end{itemize}
+
+\paragraph{PUT /:lang/user/:userId/quiz/:quizId/removeUser} % Rimuove gli utenti iscritti al questionario 
+\begin{itemize}
+\item \textbf{Successo}:\\
+Questo scenario rappresenta il successo di una richiesta di eliminazione di utente iscritto ad un questionario creato dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato come utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+\label{Procedura di rimozione di utente iscritto ad un questionario}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/PUT_lang_user__userId_quiz__quizIdRemoveUserSuccess.png}
+	\caption{Procedura di rimozione di un utente iscritto ad un questionario creato}
+\end{figure}
+\FloatBarrier
+
+\item \textbf{Fallimento}:\\
+Questo scenario rappresenta il fallimento di una richiesta di eliminazione di utente iscritto ad un questionario creato dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema e sia un utente pro; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\label{Fallimento della procedura di rimozione di un utente iscritto ad un questionario creato}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.40]{UML/DiagrammiDiSequenza/Back-end/PUT_LangUserUserIdQuizQuizIdRemoveUserFailure.png}
+	\caption{Fallimento della procedura di visualizzazione questionari creati}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+
+
+
 
 \paragraph{POST /:lang/user/:userId/quiz/:quizId/addUser} % Iscrive un utente ad un questionario, restituisce un messaggio di conferma o di errore
 \begin{itemize}

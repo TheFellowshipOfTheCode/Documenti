@@ -29,6 +29,37 @@
 \end{lstlisting}
 		\end{itemize}
 		
+	\item \texttt{/:lang/user/:userId/quiz/:quizId}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: Visualizza il questionario creato l'utente e le relative informazioni, restituisce un messaggio di conferma o di errore;
+		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"questions" : [array di JSON contenente le domande che formano il questionario]
+"registeredUsers" :[array di JSON contenente gli utenti registrati al questionario]
+"activeUsers" :[array di JSON contenente gli utenti che hanno svolto il questionario]
+"statistics" :[array di JSON contenente le statistiche del questionario]
+}
+\end{lstlisting}
+	\end{itemize}		
+		
+		
+		
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/removeUser}
+	\begin{itemize}
+		\item \textbf{Method}: PUT;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: Elimina un utente iscritto ad un questionario, restituisce un messaggio di conferma o di errore;
+		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente da iscrivere al questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+		
 		
 	\item \texttt{/:lang/user/:userId/quiz/:quizId/addUser}
 	\begin{itemize}
