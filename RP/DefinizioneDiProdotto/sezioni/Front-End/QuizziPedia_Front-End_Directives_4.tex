@@ -20,19 +20,26 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 				\begin{itemize}
-					\item \texttt{questionText: String}: identifica il testo della domanda;
-					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
-					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
-					\begin{itemize}
-						\item \texttt{type: String}: indica la tipologia della risposta;
-						\item \texttt{text: String}: contiene il testo dell'affermazione;
-						\item \texttt{url: String}: rappresenta l'immagine della risposta;
-						\item \texttt{attributesForClickableArea: Mixed}: contiene i seguenti attributi:
+					\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+					\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+					\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
+					\begin{itemize}	
+						\item \texttt{questionText: String}: identifica il testo della domanda;
+						\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
+						\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
 						\begin{itemize}
-							\item \texttt{x: Number}: rappresenta la coordinata x di una area cliccabile;
-							\item \texttt{y: Number}: rappresenta la coordinata y di una area cliccabile.
+							\item \texttt{type: String}: indica la tipologia della risposta;
+							\item \texttt{text: String}: contiene il testo dell'affermazione;
+							\item \texttt{url: String}: rappresenta l'immagine della risposta;
+							\item \texttt{attributesForClickableArea: Mixed}: contiene i seguenti attributi:
+							\begin{enumerate}
+								\item \texttt{x: Number}: rappresenta la coordinata x di una area cliccabile;
+								\item \texttt{y: Number}: rappresenta la coordinata y di una area cliccabile.
+							\end{enumerate}
 						\end{itemize}
 					\end{itemize}
+					\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+				
 				\end{itemize}
 		\end{itemize}
 	
@@ -57,18 +64,24 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \texttt{questionText: String}: identifica il testo della domanda;
-				\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
-				\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \texttt{type: String}: indica la tipologia della risposta;
-					\item \texttt{text: String}: contiene il testo dell'affermazione;
-					\item \texttt{url: String}: rappresenta l'immagine della risposta;
-					\item \texttt{attributesForEmptySpaces: Mixed}: contiene i seguenti attributi:
+					\item \texttt{questionText: String}: identifica il testo della domanda;
+					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
+					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
 					\begin{itemize}
-						\item \texttt{wordNumber: Number}: rappresenta la posizione dello spazio vuoto in cui deve andare inserita la parola.
+						\item \texttt{type: String}: indica la tipologia della risposta;
+						\item \texttt{text: String}: contiene il testo dell'affermazione;
+						\item \texttt{url: String}: rappresenta l'immagine della risposta;
+						\item \texttt{attributesForEmptySpaces: Mixed}: contiene i seguenti attributi:
+						\begin{enumerate}
+							\item \texttt{wordNumber: Number}: rappresenta la posizione dello spazio vuoto in cui deve andare inserita la parola.
+						\end{enumerate}
 					\end{itemize}
 				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
 		
@@ -94,12 +107,18 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \textit{+ header: Object}: oggetto contenente i campi dati da visualizzare nella direttiva, ovvero:
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \textit{Testo della domanda};
-					\item \textit{Argomento della domanda};
-					\item \textit{Keywords della domanda}.
+					\item \textit{+ header: Object}: oggetto contenente i campi dati da visualizzare nella direttiva, ovvero:
+					\begin{itemize}
+						\item \textit{Testo della domanda};
+						\item \textit{Argomento della domanda};
+						\item \textit{Keywords della domanda}.
+					\end{itemize}
 				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
 		
@@ -131,14 +150,20 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \texttt{+ info: Object}: \\ Oggetto contenente tutte le informazioni sul questionario, ovvero:
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \textit{Nome del questionario};
-					\item \textit{Nome dell'autore del questionario};
-					\item \textit{Data di creazione del questionario};
-					\item \textit{Argomento del questionario}.
+					\item \texttt{+ info: Object}: \\ Oggetto contenente tutte le informazioni sul questionario, ovvero:
+					\begin{itemize}
+						\item \textit{Nome del questionario};
+						\item \textit{Nome dell'autore del questionario};
+						\item \textit{Data di creazione del questionario};
+						\item \textit{Argomento del questionario}.
+					\end{itemize}
+					\item \texttt{+ startButton: String}: \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inizio del questionario selezionato, in italiano o in inglese; 
 				\end{itemize}
-				\item \texttt{+ startButton: String}: \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inizio del questionario selezionato, in italiano o in inglese; 
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
 		
@@ -163,6 +188,10 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
+				\begin{itemize}
 					\item \texttt{questionText: String}: identifica il testo della domanda;
 					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
 					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
@@ -171,13 +200,16 @@
 						\item \texttt{text: String}: contiene il testo dell'affermazione;
 						\item \texttt{url: String}: rappresenta l'immagine della risposta;
 						\item \texttt{attributesForLinking: Mixed}: contiene i seguenti attributi:
-						\begin{itemize}
+						\begin{enumerate}
 							\item \texttt{text1: String}: rappresenta il primo elemento testuale che deve essere collegato con il secondo elemento testuale o rappresentato da un’immagine;
 							\item \texttt{text2: String}: rappresenta il secondo elemento testuale che deve essere collegato con il primo elemento testuale o rappresentato da un’immagine;
-							 \item \texttt{url1: String}: rappresenta il primo elemento rappresentato da un'immagine che deve essere collegato con il secondo elemento testuale o rappresentato da un’immagine;
-							 \item \texttt{url2: String}: rappresenta il secondo elemento rappresentato da un'immagine che deve essere collegato con il primo elemento testuale o rappresentato da un’immagine.
-						\end{itemize}
+							\item \texttt{url1: String}: rappresenta il primo elemento rappresentato da un'immagine che deve essere collegato con il secondo elemento testuale o rappresentato da un’immagine;
+							\item \texttt{url2: String}: rappresenta il secondo elemento rappresentato da un'immagine che deve essere collegato con il primo elemento testuale o rappresentato da un’immagine.
+						\end{enumerate}
 					\end{itemize}
+				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+					
 			\end{itemize}
 		\end{itemize}
 		
@@ -203,18 +235,25 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \texttt{questionText: String}: identifica il testo della domanda;
-				\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
-				\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \texttt{type: String}: indica la tipologia della risposta;
-					\item \texttt{text: String}: contiene il testo dell'affermazione;
-					\item \texttt{url: String}: rappresenta l'immagine della risposta;
-					\item \texttt{attributesForTForMultiple: Mixed}: contiene i seguenti attributi:
+					\item \texttt{questionText: String}: identifica il testo della domanda;
+					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
+					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
 					\begin{itemize}
-						\item \texttt{isItRight: Boolean}: contiene se la risposta è vera o falsa.
+						\item \texttt{type: String}: indica la tipologia della risposta;
+						\item \texttt{text: String}: contiene il testo dell'affermazione;
+						\item \texttt{url: String}: rappresenta l'immagine della risposta;
+						\item \texttt{attributesForTForMultiple: Mixed}: contiene i seguenti attributi:
+						\begin{enumerate}
+							\item \texttt{isItRight: Boolean}: contiene se la risposta è vera o falsa.
+						\end{enumerate}
 					\end{itemize}
 				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+				
 			\end{itemize}
 			 
 			\item \textbf{Metodi}: 
@@ -244,6 +283,10 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
+				\begin{itemize}
 					\item \texttt{questionText: String}: identifica il testo della domanda;
 					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
 					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
@@ -252,10 +295,12 @@
 						\item \texttt{text: String}: contiene il testo dell'affermazione;
 						\item \texttt{url: String}: rappresenta l'immagine della risposta;
 						\item \texttt{attributesForSorting: Mixed}: contiene i seguenti attributi:
-						\begin{itemize}
+						\begin{enumerate}
 							\item \texttt{position: Boolean}: contiene la giusta posizione del testo o dell'immagine nell'esercizio di ordinamento.
-						\end{itemize}
+						\end{enumerate}
 					\end{itemize}
+				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
 		
@@ -281,18 +326,24 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \texttt{questionText: String}: identifica il testo della domanda;
-				\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
-				\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \texttt{type: String}: indica la tipologia della risposta;
-					\item \texttt{text: String}: contiene il testo dell'affermazione;
-					\item \texttt{url: String}: rappresenta l'immagine della risposta;
-					\item \texttt{attributesForSorting: Mixed}: contiene i seguenti attributi:
+					\item \texttt{questionText: String}: identifica il testo della domanda;
+					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
+					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
 					\begin{itemize}
-						\item \texttt{position: Boolean}: contiene la giusta posizione del testo o dell'immagine nell'esercizio di ordinamento.
+						\item \texttt{type: String}: indica la tipologia della risposta;
+						\item \texttt{text: String}: contiene il testo dell'affermazione;
+						\item \texttt{url: String}: rappresenta l'immagine della risposta;
+						\item \texttt{attributesForSorting: Mixed}: contiene i seguenti attributi:
+						\begin{enumerate}
+							\item \texttt{position: Boolean}: contiene la giusta posizione del testo o dell'immagine nell'esercizio di ordinamento.
+						\end{enumerate}
 					\end{itemize}
 				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
 		
@@ -316,8 +367,14 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
+				\begin{itemize}
 					\item \textit{+ argomenti: String}: valore ottenuto come risultato dal ciclo effettuato sull'array degli argomenti;
 					\item \textit{+ keywords: String}: valore ottenuto come risultato dal ciclo effettuato sull'array delle keywords.
+				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
 		
@@ -342,17 +399,23 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \texttt{questionText: String}: identifica il testo della domanda;
-				\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
-				\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
+				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \texttt{type: String}: indica la tipologia della risposta;
-					\item \texttt{text: String}: contiene il testo dell'affermazione;
-					\item \texttt{url: String}: rappresenta l'immagine della risposta;
-					\item \texttt{attributesForTForMultiple: Mixed}: contiene i seguenti attributi:
+					\item \texttt{questionText: String}: identifica il testo della domanda;
+					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
+					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
 					\begin{itemize}
-						\item \texttt{isItRight: Boolean}: contiene se la risposta è vera o falsa.
+						\item \texttt{type: String}: indica la tipologia della risposta;
+						\item \texttt{text: String}: contiene il testo dell'affermazione;
+						\item \texttt{url: String}: rappresenta l'immagine della risposta;
+						\item \texttt{attributesForTForMultiple: Mixed}: contiene i seguenti attributi:
+						\begin{enumerate}
+							\item \texttt{isItRight: Boolean}: contiene se la risposta è vera o falsa.
+						\end{enumerate}
 					\end{itemize}
 				\end{itemize}
+				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}																	
