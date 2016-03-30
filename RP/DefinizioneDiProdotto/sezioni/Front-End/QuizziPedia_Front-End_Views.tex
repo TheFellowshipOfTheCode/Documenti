@@ -291,15 +291,8 @@
 	\end{itemize}
 \item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
-		\begin{itemize}
-			\item \texttt{questionText}: attributo di tipo \texttt{String} che contiene il testo della domanda;
-			\item \texttt{image}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda;
-			\item \texttt{isItRight}: attributo di tipo \texttt{Boolean} che indica se la domanda è giusta o sbagliata.			
-		\end{itemize}
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
-		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
@@ -326,17 +319,6 @@
 		\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
-		\begin{itemize}
-			\item \texttt{questionText}: attributo di tipo \texttt{String} che contiene il testo della domanda;
-			\item \texttt{image}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda;
-			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
-			\begin{itemize}
-				\item \texttt{textAnswer}: attributo di tipo \texttt{String} che contiene il testo della risposta;
-				\item \texttt{urlAnswer}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata alla risposta;
-				\item \texttt{isItRight}: attributo di tipo \texttt{Boolean} che indica se la domanda è giusta o sbagliata.
-			\end{itemize}			
-		\end{itemize}
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
 		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
@@ -365,10 +347,19 @@
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+ answersConnection1: Array} \\ Array contenente la prima colonna di parole/frasi da collegare. Ogni oggetto sarà composto dal testo più un campo dati numero che indicherà a quale altra parola/frase va collegata; 
-		\item \texttt{+ answersConnection2: Array} \\ Array contenente la prima colonna di parole/frasi da collegare. Ogni oggetto sarà composto dal testo più un campo dati numero che indicherà a quale altra parola/frase va collegata; 
+		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+		\begin{itemize}
+			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+			\begin{itemize}
+				\item \texttt{text1}: di tipo \texttt{String}, rappresenta il primo elemento testuale che sarà collegato ad un secondo elemento (testuale o immagine);
+				\item \texttt{text2}:  di tipo \texttt{String}, rappresenta il secondo elemento testuale che sarà collegato al primo elemento (testuale o immagine);
+				\item \texttt{url1}: di tipo \texttt{String}, rappresenta il primo elemento immagine che sarà collegato con il secondo elemento (testuale o immagine);
+				\item \texttt{url2}: di tipo \texttt{String}, rappresenta il secondo elemento immagine che sarà collegato con il primo elemento (testuale o immagine).
+			\end{itemize}
+		\end{itemize}			
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
@@ -395,9 +386,17 @@
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+ images: Array} \\ Array contenente oggetti con un campo dati immagine e un campo dati numero, che ne indicherà l'ordine corretto;  
+			\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+			\begin{itemize}
+				\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+				\begin{itemize}
+					\item \texttt{urlSorting}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata alla risposta;
+					\item \texttt{position}: attributo di tipo \texttt{Number} che indica la giusta posizione dell'immagine.
+				\end{itemize}
+			\end{itemize}	  
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
@@ -423,6 +422,14 @@
 		\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
+		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+		\begin{itemize}
+			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+			\begin{itemize}
+				\item \texttt{textSorting}: attributo di tipo \texttt{String} che contiene il testo della risposta;
+				\item \texttt{position}: attributo di tipo \texttt{Number} che indica la giusta posizione del testo.
+			\end{itemize}
+		\end{itemize}	
 		\item \texttt{+ strings: Array} \\ Array contenente oggetti con un campo dati stringa e un campo dati numero, che ne indicherà l'ordine corretto;  
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
@@ -449,9 +456,17 @@
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}:
+	\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+	\begin{itemize}
+		\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+		\begin{itemize}
+			\item \texttt{wordNumber}: attributo di tipo \texttt{Number} che indica la parola nel testo che andrà inserita in fase di compilazione.
+		\end{itemize}
+	\end{itemize}	
 	\begin{itemize}
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
@@ -470,15 +485,24 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{ClickableAreaQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ClickableAreaQuestionsView} e il controller \texttt{ClickableAreaQuestionsController};
-		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
+		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+		\begin{itemize}
+			\item \texttt{url}: attributo di tipo \texttt{String} che contiene l'\textit{URL\peg{G}} associato all'immagine;
+			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+			\begin{itemize}
+				\item \texttt{x}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ascisse all'interno dell'immagine;
+				\item \texttt{y}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ordinate all'interno dell'immagine.
+			\end{itemize}
+		\end{itemize}	
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
@@ -611,7 +635,7 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController};
-		\item \textit{IN} \texttt{KeywordsDirective}: directive contenente i componenti grafici per aggiungere keywords durante la creazione di un questionario;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive contenente i componenti grafici per aggiungere keywords durante la creazione di un questionario;
 		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective}: rappresenta il componente grafico che permette all'utente di:
 		\begin{itemize}
 			\item Effettuare delle ricerche sul database di domande;
@@ -622,6 +646,7 @@
 	\end{itemize}
 		\item \textbf{Attributi}:
 		\begin{itemize}
+			\item \texttt{+ nameQuestionnaire: }
 			\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese; 
 		\end{itemize}
 \end{itemize}
