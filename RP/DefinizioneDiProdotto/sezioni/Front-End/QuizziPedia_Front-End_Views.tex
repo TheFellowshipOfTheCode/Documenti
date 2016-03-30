@@ -291,8 +291,15 @@
 	\end{itemize}
 \item \textbf{Attributi}:
 	\begin{itemize}
+		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+		\begin{itemize}
+			\item \texttt{questionText}: attributo di tipo \texttt{String} che contiene il testo della domanda;
+			\item \texttt{image}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda;
+			\item \texttt{isItRight}: attributo di tipo \texttt{Boolean} che indica se la domanda è giusta o sbagliata.			
+		\end{itemize}
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
@@ -319,8 +326,20 @@
 		\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
+		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+		\begin{itemize}
+			\item \texttt{questionText}: attributo di tipo \texttt{String} che contiene il testo della domanda;
+			\item \texttt{image}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda;
+			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+			\begin{itemize}
+				\item \texttt{textAnswer}: attributo di tipo \texttt{String} che contiene il testo della risposta;
+				\item \texttt{urlAnswer}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata alla risposta;
+				\item \texttt{isItRight}: attributo di tipo \texttt{Boolean} che indica se la domanda è giusta o sbagliata.
+			\end{itemize}			
+		\end{itemize}
 		\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 		\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ buttonLoadImageLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine nel testo della domanda, in italiano o in inglese;
 		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 	\end{itemize}
