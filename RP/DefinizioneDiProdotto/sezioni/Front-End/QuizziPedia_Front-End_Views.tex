@@ -493,7 +493,7 @@
 	\begin{itemize}
 		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
 		\begin{itemize}
-			\item \texttt{url}: attributo di tipo \texttt{String} che contiene l'\textit{URL\peg{G}} associato all'immagine;
+			\item \texttt{url}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} associato all'immagine;
 			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
 			\begin{itemize}
 				\item \texttt{x}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ascisse all'interno dell'immagine;
@@ -635,7 +635,7 @@
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController};
-		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive contenente i componenti grafici per aggiungere keywords durante la creazione di un questionario;
+		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento dell'argomento e delle keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective}: rappresenta il componente grafico che permette all'utente di:
 		\begin{itemize}
 			\item Effettuare delle ricerche sul database di domande;
@@ -646,8 +646,11 @@
 	\end{itemize}
 		\item \textbf{Attributi}:
 		\begin{itemize}
-			\item \texttt{+ nameQuestionnaire: }
-			\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese; 
+			\item \texttt{+ nameQuestionnaire: String}: \\ Attributo che specifica il nome del questionario creato;
+			\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+			\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+			\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
+			\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
 		\end{itemize}
 \end{itemize}
 
@@ -669,7 +672,9 @@
 		\item \textbf{Attributi}:
 		\begin{itemize}
 			\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese; 
-			\item \texttt{+ subscribers: Array} \\ Array contenete un oggetto per ogni utente iscritto al questionario. L'oggetto sarà composto dai campi \texttt{nome} e \texttt{cognome}.
+			\item \texttt{+ subscribers: Array} \\ Array contenete un oggetto per ogni utente iscritto al questionario. L'oggetto sarà composto dai campi \texttt{nome} e \texttt{cognome};
+			\item \texttt{+ enableLangButton} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di abilitazione al questionario per un utente selezionato, in italiano o in inglese;
+			\item \texttt{+ disableLangButton} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di non abilitazione al questionario per un utente selezionato, in italiano o in inglese.
 		\end{itemize}
 \end{itemize}
 
