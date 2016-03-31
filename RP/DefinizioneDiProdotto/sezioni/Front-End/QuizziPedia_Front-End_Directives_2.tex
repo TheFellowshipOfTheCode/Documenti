@@ -30,10 +30,6 @@
 	\begin{itemize}
 		\item ;
 	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item ;
-	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Directives::NewQuestionButtonDirective}
@@ -54,6 +50,7 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
 		\item \textit{IN} \texttt{NewQuestionsButtonsController}: questa classe permette di effettuare il redirect alla pagina di creazione nuova domanda;
+		\item \textit{IN} \texttt{NewQuestionButtonsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{NewQuestionButtonsDirective} e il controller \texttt{NewQuestionsButtonController}; 
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}: 
@@ -78,15 +75,16 @@
 \FloatBarrier
 
 \begin{itemize}
-	\item \textbf{Descrizione}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click su di essa sarà possibile modificare tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
+	\item \textbf{Descrizione}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click sul pulsante di modifica sarà possibile modificare tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare le domande che ha creato;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
+		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create;
+		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione. 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
+		\item \item {+ modifyButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di modifica della domanda, in italiano o in inglese.
 	\end{itemize}
 \end{itemize}
 
@@ -116,11 +114,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
-	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item ;
+		\item {+ questionText: String} \\ Attributo contenente il testo della domanda;
 	\end{itemize}
 \end{itemize}
 
@@ -148,15 +142,14 @@
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
 		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
-		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario; 
+		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
+		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController};
+		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione. 
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
-	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item ;
+		\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic} e \texttt{keywords};
+		\item \texttt{+ compileButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di compilazione del questionario, in italiano o in inglese.
 	\end{itemize}
 \end{itemize}
 
@@ -178,20 +171,17 @@
 		\item Argomento del questionario;
 		\item Parole chiave del questionario;
 		\item Valutazione del questionario.
-	\end{itemize};
+	\end{itemize}
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare la lista di questionari che ha compilato;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
 		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
 		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
+		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController}.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
-	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item ;
+		\texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic}, \texttt{keywords} e \texttt{judgment};
 	\end{itemize}
 \end{itemize}
 
@@ -224,10 +214,6 @@
 	\begin{itemize}
 		\item ;
 	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item ;
-	\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Directives::QuestionnaireResultsDirective}
@@ -248,13 +234,10 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionnaireManagementView}: view principale per la gestione dei questionari; 
 		\item \textit{IN} \texttt{QuizEventController}: questa classe permette di reagire ai comandi dell'utente durante la gestione dei suoi questionari;
+		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
-	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item ;
-	\end{itemize}
+		\item {+ resultsButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di visualizzazione dei questionari, in italiano o in inglese.
+	\end{itemize} 
 \end{itemize}
