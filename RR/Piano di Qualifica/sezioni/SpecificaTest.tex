@@ -12,43 +12,8 @@ Sono stati individuati quattro livelli di testing e sono rispettivamente:
 \item \textbf{Test di validazione [TV]:} con questa tipologia di test si vuole verificare che il lavoro prodotto soddisfi quanto richiesto dal proponente.
 \end{itemize}
 
-\subsection{Test di validazione}
-I test di validazione hanno lo scopo di accertare che tutte le funzionalità richieste dal proponente siano state soddisfatte. Per questo motivo, attraverso delle macro azioni, si andrà a simulare il comportamento generale dell'applicativo e dell'utente che interagisce con esso.
-I test di validazione saranno organizzati nel modo seguente:
-\begin{center}
-\textbf{TV}[\textit{TipoRequisito}][\textit{ImportanzaRequisito}][\textit{IdRequisito}]
-\end{center}
-dove:
-\begin{itemize}
-\item
-\textbf{TipoRequisito} può assumere valori tra:
-	\begin{itemize}
-	\item
-	\textit{F} per i requisiti funzionali;
-	\item
-	\textit{Q} per i requisiti di qualità;
-	\item
-	\textit{V} per i requisiti di vincolo;
-	\item
-	\textit{P} per i requisiti prestazionali.
-	\end{itemize}
-\item 
-\textbf{ImportanzaRequisito} può assumere valori tra:
-	\begin{itemize}
-	\item
-	\textit{D} per i requisiti desiderabili;
-	\item
-	\textit{O} per i requisiti di obbligatori;
-	\item
-	\textit{F} per i requisiti di facoltativi.
-	\end{itemize}
-\item
-\textbf{IdRequisito} assume un valore gerarchico che identifica il singolo requisito.
-\end{itemize}
-\subsection{Test di sistema}
-\subsection{Test di integrazione}
-\subsection{Test di unità}
-
-%
-% INSERIRE TABELLE TEST \input{tabelletest.tex}
-%
+% INSERIMENTO DEI TEST
+\input{sezioni/Test/test_validazione.tex}
+\input{sezioni/Test/test_sistema.tex}
+\input{sezioni/Test/test_integrazione.tex}
+\input{sezioni/Test/test_unita.tex}
