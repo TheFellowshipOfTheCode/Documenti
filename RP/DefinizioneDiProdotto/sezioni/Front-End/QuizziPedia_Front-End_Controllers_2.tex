@@ -262,7 +262,7 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end tutti i questionari creati da un utente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireManagementeModelView}: ;
+		\item \textit{IN} \texttt{QuestionnaireManagementModelView}: ;
 		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
@@ -318,7 +318,7 @@
 		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};
 		\item \texttt{-} \texttt{QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
 		\item \texttt{+} \texttt{deatails: QuestionnaireDetailsModelView} \\
-		Oggetto di tipo \texttt{QuestionnaireDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireDetailsView} e il controller \texttt{QuestionnaireDetailsController};
+		Oggetto di tipo \texttt{QuestionnaireDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
@@ -441,18 +441,18 @@
 	\end{itemize}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Controllers::TopicKeywordsController}
+\paragraph{QuizziPedia::Front-End::Controllers::KeywordsController}
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TopicKeywordsController.png}
-	\caption{QuizziPedia::Front-End::Controllers::TopicKeywordsController}
+	\caption{QuizziPedia::Front-End::Controllers::KeywordsController}
 \end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero delle parole chiave di un questionario;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle parole chiave durante la creazione di un questionario;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TopicKeywordsModelView}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda; 
+		\item \textit{IN} \texttt{KeywordsModelView}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda; 
 		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
 	\end{itemize}
 	\item \textbf{Attributi}:
@@ -461,18 +461,18 @@
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{QuestionService: QuestionService}\\ 
 		Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata.
-		\item \texttt{+} \texttt{key: TopicKeywordsModelView} \\
-		Oggetto di tipo \texttt{TopicKeywordsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la direttiva \texttt{TopicKeywordsDirectiveView} e il controller \texttt{TopicKeywordsController};
+		\item \texttt{+} \texttt{key: KeywordsModelView} \\
+		Oggetto di tipo \texttt{CreateQuestionnaireView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la direttiva \texttt{KeywordsDirective} e il controller \texttt{KeywordsController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{TopicKeywordsController(\$scope: \$scope)} \\Metodo costruttore della classe. \\
+		\item \texttt{+} \texttt{KeywordsController(\$scope: \$scope)} \\Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{-} \texttt{\$scope: \$scope} \\
 			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione; 
 		\end{itemize}
-		\item \texttt{-} \texttt{getTopicKeywords(key: String): String[]}: \\ Metodo che ritorna le parole che hanno a che fare con key
+		\item \texttt{-} \texttt{getKeywords(key: String): String[]}: \\ Metodo che ritorna le parole che hanno a che fare con key
 	\end{itemize}
 	\textbf{Parametri}:
 	\begin{itemize}
