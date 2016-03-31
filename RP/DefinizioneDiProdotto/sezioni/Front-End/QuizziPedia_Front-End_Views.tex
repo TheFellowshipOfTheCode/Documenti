@@ -33,6 +33,7 @@
 	\item \textbf{Utilizzo}: premette all'utente di autenticarsi inserendo username e password;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{LoginController}: questa classe permette di gestire l'autenticazione dell'utente al sistema;
 		\item \textit{IN} \texttt{LoginModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{LoginView} e il controller \texttt{LoginController};
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
@@ -61,6 +62,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di registrarsi al sistema inserendo i campi dati necessari;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
 		\item \textit{IN} \texttt{SignUpModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController};
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
@@ -94,6 +96,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di recuperare la password dimenticata inserendo i campi dati necessari;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+			\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
 			\item \textit{IN} \texttt{PasswordForgotModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{PasswordForgotView} e il controller \texttt{PasswordForgotController};
 			\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
@@ -120,6 +123,7 @@
 	\item \textbf{Utilizzo}: viene utilizzata come view iniziale dell'applicazione;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{HomeController}: questa classe permette di gestire la home page;
 		\item \textit{IN} \texttt{HomeModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{HomeView} e il controller \texttt{HomeController};
 		\item \textit{IN} \texttt{SearchDirective}: directive che permette di effettuare la ricerca di utenti e questionari;
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
@@ -143,6 +147,7 @@
 	\item \textbf{Utilizzo}: viene visualizzata dopo aver effettuato la ricerca di un utente o di un questionario nella barra di ricerca presente nella SearchDirective e permette di selezionare un risultato presente al suo interno; 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 		\item \textit{IN} \texttt{ResultsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController};
 		\item \textit{IN} \texttt{SubscribeResultDirective}: directive che permette di visualizzare e iscriversi ai questionari ricercati;
 		\item \textit{IN} \texttt{UserResultsDirective}: directive che permette di visualizzare la lista degli utenti ricercati dopo aver utilizzato l'apposita funzione di ricerca;
@@ -226,6 +231,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di modificare tutti i campi elencati, tranne l'username, e di rendere persistenti tali modifiche se sono accettate dal sistema;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
 		\item \textit{IN} \texttt{ProfileManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ProfileManagementView} e il controller \texttt{ProfileManagementController};
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
@@ -259,6 +265,7 @@
 	\item \textbf{Utilizzo}: visualizza l'elenco delle domande create permettendo all'utente di crearne una nuova o di modificarne una presente nell'elenco;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize} 
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire le domande create dall'utente e di crearne di nuove;
 		\item \textit{IN} \texttt{QuestionsManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};
 		\item \textit{IN} \texttt{OneQuestionDirective}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click su di essa sarà possibile modificare tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
 		\item \textit{IN} \texttt{NewQuestionButtonDirective}:  rappresenta il componente grafico che permette all'utente di posizionarsi nella view di creazione di una nuova domanda;
@@ -282,6 +289,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda vero/falso compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
 		\item \textit{IN} \texttt{TrueFalseQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrueFalseQuestionsView} e il controller \texttt{TrueFalseQuestionsController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
@@ -310,6 +318,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a risposta multipla compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
+			\item \textit{IN} \texttt{MultipleQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla;
 			\item \textit{IN} \texttt{MultipleQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{MultipleQuestionsView} e il controller \texttt{MultipleQuestionsController};
 			\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 			\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
@@ -339,6 +348,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a collegamento compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
 		\item \textit{IN} \texttt{ConnectionQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ConnectionQuestionsView} e il controller \texttt{ConnectionQuestionsController};
 		\item \textit{IN} \texttt{InputToListModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ConnectionQuestionsView} e il controller \texttt{InputToListController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
@@ -377,6 +387,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento immagini compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
 		\item \textit{IN} \texttt{ImageSortingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ImagesSortingQuestionsModelView} e il controller \texttt{ImagesSortingQuestionsController};
 		\item \textit{IN} \texttt{InputToListModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ImageSortingQuestionsView} e il controller \texttt{InputToListController};
 		\item \textit{IN} \texttt{ImageInTheQuestionDirective}: directive per l'inserimento dell'immagine nella creazione delle domande;
@@ -414,6 +425,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare una domanda a ordinamento stringhe compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
+			\item \textit{IN} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
 			\item \textit{IN} \texttt{StringsSortingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StringsSortingQuestionsView} e il controller \texttt{StringsSortingQuestionsController};
 			\item \textit{IN} \texttt{InputToListModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StringsSortingQuestionsView} e il controller \texttt{InputToListController};
 			\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
@@ -449,6 +461,7 @@
 	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda a riempimento testo compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
 		\item \textit{IN} \texttt{FillingQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionsView} e il controller \texttt{FillingQuestionsController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
@@ -482,6 +495,7 @@
 	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda ad area cliccabile compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 		\item \textit{IN} \texttt{ClickableAreaQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ClickableAreaQuestionsView} e il controller \texttt{ClickableAreaQuestionsController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
@@ -518,6 +532,7 @@
 	\item \textbf{Utilizzo}: permette ad un utente di creare domande personalizzate attraverso la scrittura del codice QML direttamente nell'editor di testo presente nella view;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
 		\item \textit{IN} \texttt{EditorQMLModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{EditorQMLView} e il controller \texttt{EditorQMLController};
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
@@ -541,6 +556,7 @@
 	\item \textbf{Utilizzo}: all'interno di essa verrà caricato inizialmente il template dove si potranno scegliere l'argomento e le parole chiave dell'allenamento; verranno poi caricati i templates di ogni domanda in base alle preferenze scelte; 
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
 		\item \textit{IN} \texttt{TrainingModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrainingView} e il controller \texttt{TrainingController};
 		\item \textit{IN} \texttt{TrainingSetUpTemplate}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene visualizzato	dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
 		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}:rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
@@ -573,6 +589,7 @@
 	\item \textbf{Utilizzo}: all'interno di essa verrà caricato inizialmente il template contenente le informazioni generali relative al questionario; verranno poi caricati i templates di ogni domanda presente nel questionario;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
+		\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
 		\item \textit{IN} \texttt{FillingQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionnaireView} e il controller \texttt{FillingQuestionnaireController};
 		\item \textit{IN} \texttt{InfoQuestionnaireTemplate}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
 		\item \textit{IN} \texttt{HeaderTextQuestionTemplate}:rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
@@ -606,6 +623,7 @@
 	\item \textbf{Utilizzo}: permette di visualizzare tutti i questionari creati, quelli abilitati per la compilazione e quelli non ancora abilitati; contiene inoltre il link per la creazione di un nuovo questionario;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente;
 		\item \textit{IN} \texttt{QuestionnaireManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireManagementView} e il controller \texttt{QuestionnaireManagementController};
 		\item \textit{IN} \texttt{EliminationAndModifyDirective}: direttiva contenente i componenti grafici  che permettono di eliminare un questionario o di modificarne uno esistente;
 		\item \textit{IN} \texttt{ExamModalityDirective}: directive contenete i componenti grafici per attivare la modalità esame su un questionario e gestire le iscrizioni;
@@ -632,6 +650,7 @@
 	\item \textbf{Utilizzo}: permette all'utente di creare un questionario compilando tutti i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{CreateQuestionnaireController}:  questa classe permette di gestire la creazione di un questionario;
 		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController};
 		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento dell'argomento e delle keywords al momento della creazione della domanda;
 		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective}: rappresenta il componente grafico che permette all'utente di:
@@ -664,6 +683,7 @@
 	\item \textbf{Utilizzo}: permette di visualizzare tutti gli utenti iscritti al proprio questionario e abilitarli alla compilazione;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari; 
 		\item \textit{IN} \texttt{RegistratioManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{RegistrationManagementView} e il controller \texttt{RegistrationManagementController}; 
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
@@ -688,7 +708,8 @@
 	\item \textbf{Utilizzo}: permette di visualizzare i risultati di ogni utente conseguiti nella compilazione del questionario;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ResultsQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsQuestionnarieView} e il controller \texttt{ResultsQuestionnarieController}; 
+		\item \textit{IN} \texttt{ResultsController}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente;
+		\item \textit{IN} \texttt{ResultsQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsQuestionnarieView} e il controller \texttt{ResultsController}; 
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}:
