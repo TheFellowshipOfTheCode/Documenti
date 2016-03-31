@@ -36,25 +36,25 @@
 	\item \textbf{Attributi:}
 	\begin{itemize}
 		\item \texttt{-} \texttt{logged: Boolean}: campo dati che indica se l'utente è autenticato;
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
 		\item \texttt{+} \texttt{isLogged(): Boolean} \\ Metodo che restituisce ln valore dell'attributo \textit{logged};
-		\item \texttt{+} \texttt{signin(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+		\item \texttt{+} \texttt{signin(username: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
 			\textbf{Parametri}: 
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
 				\item \texttt{password: String}: parametro che rappresenta la password dell'utente.
 			\end{itemize}
-		\item \texttt{+} \texttt{logout(username: String): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
-		\textbf{parametri}:
+		\item \texttt{+} \texttt{logout(username: String): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String}: parametro che rappresenta l'utente che vuole eseguire il logout.
 		\end{itemize}
 		\item \texttt{+} \texttt{signup(username: String, password: String, email: String, nome: String, cognome: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
-			\textbf{parametri}:
+			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che rappresenta lo username o la email dell'utente;
 				\item \texttt{password: String}: parametro che rappresenta la password dell'utente;
@@ -65,7 +65,7 @@
 		\item \texttt{+} \texttt{getNewPassword(email: String): Void}  \\Metodo che permette il recupero della password. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{email: String}: parametro che rappresenta la mail a cui mandare una mail per resettare la password.
+				\item \texttt{email: String}: parametro che rappresenta la email a cui mandare un messaggio per resettare la password.
 			\end{itemize}
 	\end{itemize}
 \end{itemize}
@@ -75,24 +75,24 @@
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_SearchService.png}
-	\caption{QuizziPedia::Front-End::Services::LangService}
+	\caption{QuizziPedia::Front-End::Services::SearchService}
 \end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero dei dati dal back-end a seguito di una ricerca effettuata da un utente;
-	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end delle informazioni basandosi sulle keyword inserite dall'utente;
+	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end delle informazioni basandosi sulle \textit{keyword\ped{G}} inserite dall'utente;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
-		\item \textit{OUT} \texttt{SearchController}: ;
+		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone. 
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone. 
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
 		\item \texttt{+} \texttt{Search(keyword: String): Promise} \\Metodo che serve per recuperare la lista di utenti e questionari dopo una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
-		\textbf{parametri}:
+		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{keyword: String}: parametro rappresenta la parola da cercare.
 		\end{itemize}
@@ -106,22 +106,22 @@
 	\caption{QuizziPedia::Front-End::Services::LangService}
 \end{figure}\FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione.
-	\item \textbf{Utilizzo}: fornisce delle funzionalità per recuperare la giusta traduzione della pagina.
+	\item \textbf{Descrizione}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
+	\item \textbf{Utilizzo}: fornisce delle funzionalità per recuperare la giusta traduzione delle pagine;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
 		\item \textit{IN} \texttt{AppRun}
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}}.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item \texttt{+} \texttt{getKeywords(lang: String): Object}: \\Metodo che ritorna la lista di tutte le keywords nella lingua richiesta.\\
+		\item \texttt{+} \texttt{getKeywords(lang: String): Object} \\Metodo che ritorna la lista di tutte le keywords nella lingua richiesta.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{lang: String}: parametro che indica la lingua delle keywords da restituire.
+			\item \texttt{lang: String}: parametro che indica la lingua delle \textit{keywords\ped{G}} da restituire.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
@@ -133,7 +133,7 @@
 	\caption{QuizziPedia::Front-End::Services::QuizService}
 \end{figure}\FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca. Permette inoltre di iscriversi ad un questionario e di scaricare l'intera l'ista di domande di un questionario a partire dal suo id univoco;
+	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca. Permette inoltre di iscriversi ad un questionario e di scaricare l'intera lista di domande di un questionario a partire dal suo id univoco;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un quiz in seguito ad una ricerca dell'utente, passando i risultati ai controllers. Ritorna dei riferimenti alle domande del quiz;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
@@ -149,43 +149,47 @@
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
-	\item \textbf{Metodi:} \\
+	\item \textbf{Metodi:} 
+	\begin{itemize}
 	\item \texttt{+} \texttt{Search(quizId: String): Promise} \\Metodo che serve per recuperare i questionari dopo averne selezionato uno dalla lista ottenuta da una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
-	\textbf{parametri}:
+	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{quizId: String}: parametro che rappresenta il questionario da cercare.
 	\end{itemize}
-	\item \texttt{+} \texttt{subscribeQuestionnaire(username: String)}: \\Metodo per iscriversi ad un questionario;
+	\item \texttt{+} \texttt{subscribeQuestionnaire(username: String): Void} \\Metodo per iscriversi ad un questionario;
 	\begin{itemize}
-		\item \texttt{username: String}: parametro che rappresenta l'utente da registrare al questionario;
+		\item \texttt{username: String}: parametro che rappresenta l'utente da registrare al questionario.
 	\end{itemize}
-	\item \texttt{+} \texttt{getQuestionnaireDetails(username: String): Promise}: \\Metodo che serve per ritornare i dettagli di tutti i questionari creati da un utente; Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\ 
+	\item \texttt{+} \texttt{getQuestionnaireDetails(username: String): Promise} \\Metodo che serve per ritornare i dettagli di tutti i questionari creati da un utente; Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore.\\ 
+     \textbf{Parametri}:
 	\begin{itemize}
-		\item \texttt{username: String}: parametro che rappresenta l'utente del quale andranno caricati tutti i questionari;
+		\item \texttt{username: String}: parametro che rappresenta l'utente del quale andranno caricati tutti i questionari.
 	\end{itemize}
-	\item \texttt{getDoneQuestionnaire(username: String): Promise}: \\ Metodo che restituisce tutti i questionari svolti da un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{UserDetailsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\ 
+	\item \texttt{+ getDoneQuestionnaire(username: String): Promise} \\ Metodo che restituisce tutti i questionari svolti da un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{UserDetailsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	\textbf{Parametri}: 
 	\begin{itemize}
-		\item \texttt{username: String}: parametro che rappresenta l'utente del quale andranno caricati tutti i questionari svolti;
+		\item \texttt{username: String}: parametro che rappresenta l'utente del quale andranno caricati tutti i questionari svolti.
 	\end{itemize}
-	\item \texttt{createQuestionnaire(title: String, questions: QuestionnaireItemModel): Promise}: \\ Metodo che permette di creare un nuovo questionario. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
-	\textbf{parametri}:
+	\item \texttt{+ createQuestionnaire(title: String, questions: QuestionnaireItemModel): Promise} \\ Metodo che permette di creare un nuovo questionario. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{title: String}: parametro che rappresenta il titolo del questionario.
-		\item \texttt{questions: QuestionnaireItemModel}: parametro contenente tutte le domande del questionario;
+		\item \texttt{questions: QuestionnaireItemModel}: parametro contenente tutte le domande del questionario.
 	\end{itemize}
-	\item \texttt{+} \texttt{getUserQuestionnaire(username: String): QuestionnaireModel[]}: \\Metodo che ritorna un array di QuestionnaireModel che sono tutti i questionari creati dall'utente in input.
-	\textbf{Paramentri}:
+	\item \texttt{+} \texttt{getUserQuestionnaire(username: String): QuestionnaireModel[]} \\Metodo che ritorna un array di QuestionnaireModel che sono tutti i questionari creati dall'utente in input.\\
+	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{username: String}: parametro che indica l'identificativo dell'utente del quale vogliamo richiedere i questionari.
 	\end{itemize}
-	\item \texttt{+} \texttt{getSubscribedQuestionnaire(username: String): QuestionnaireModel[]}: \\Metodo che ritorna la lista dei questionari a cui l'utente è iscritto.
+	\item \texttt{+} \texttt{getSubscribedQuestionnaire(username: String): QuestionnaireModel[]}: \\Metodo che ritorna la lista dei questionari a cui l'utente è iscritto.\\
 	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{username: String}: parametro che indica l'utente del quale scaricare i quiz a cui risulta iscritto.
 	\end{itemize}
+\end{itemize}
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::StatisticsService}
@@ -197,29 +201,31 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere le statistiche dell'utente;
 	\item \textbf{Utilizzo}: fornisce al controller le statistiche salvate;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente.
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
 		\item \texttt{+} \texttt{getStatistics(username: String): Promise}: \\Metodo che serve per recuperare le statistiche di un utente tramite chiamata al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+	    \textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricate tutte le statistiche;
+			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricate tutte le statistiche.
 		\end{itemize}
 		\item \texttt{+} \texttt{getQuestionnaireStatistics(quizId: String): Promise} \\Metodo che restituisce le statistiche di un questionario.  Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica il questionario del quale verranno caricate le statistiche;
+			\item \texttt{quizId: String}: parametro che indica il questionario del quale verranno caricate le statistiche.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Services::QuestionsServices}
+\paragraph{QuizziPedia::Front-End::Services::QuestionsService}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_QuestionService.png}
@@ -238,7 +244,7 @@
 		\item \textit{IN} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi; 
 		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 		\item \textit{IN} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
-		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
 		\item \textit{IN} \texttt{TopicKeywordsController}: questa classe permette di gestire il recupero delle parole chiave di un questionario;
 		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: questa classe permette di gestire il recupero delle domande per il questionario;
 		\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento.
@@ -246,25 +252,26 @@
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item \texttt{+} \texttt{sendQuestion(type: String, lang: String, text: String, image: String, answer: String[]): Promise}: \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata;\\ 
+		\item \texttt{+} \texttt{sendQuestion(type: String, lang: String, text: String, image: String, answer: String[]): Promise} \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata;\\
 		\textbf{Parametri}: 
 		\begin{itemize}
 			\item \texttt{type: String}: identifica la tipologia della domanda;
 			\item \texttt{lang: String}: identifica la lingua della domanda;
 			\item \texttt{text: String}: identifica il testo della domanda;
-			\item \texttt{image: ?}: identifica un'immagine associata alla domanda;
+			\item \texttt{image: String}: identifica un'immagine associata alla domanda;
 			\item \texttt{answer: String[]}: identifica l'array delle risposte alla domanda.
 		\end{itemize}
-		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise}: \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise} \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricate tutte le domande da lui create;
+			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricate tutte le domande da lui create.
 		\end{itemize}
-		\item \texttt{+} \texttt{getKeywords(key: String): String[]}\\ Metodo che permette di ottenere le keywords a partire da una stringa passata.
+		\item \texttt{+} \texttt{getKeywords(key: String): String[]}\\ Metodo che permette di ottenere le keywords a partire da una stringa passata.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{key: String}: parametro che identifica la stringa con la quale cercare le keywords.
@@ -281,7 +288,7 @@
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere i dati personali degli utenti;
 	\item \textbf{Utilizzo}: utilizzata per ottenere i dati personali di un utente. Permette inoltre di trovare i dati di utenti ricercati tramite l'apposita barra di ricerca;
-	\item \textbf{Relazione con altre classi:}
+	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 		\item \textit{OUT} \texttt{UserDetailsController}: questa classe permette di gestire i dati di un utente;
@@ -289,18 +296,20 @@
 	\end{itemize}
 	\item \textbf{Attributi:}
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo HTTP;
-		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\item \texttt{-} \texttt{\$http: \$http}: campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q}: campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
 		\item \texttt{+} \texttt{getUserDetails(username: String): Promise} \\ Metodo che serve per ottenere i dettagli di un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricati tutti i dati personali;
+			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricati tutti i dati personali.
 		\end{itemize}
 		\item \texttt{+} \texttt{confirmSaveUser(user: UserDetailsModel): Promise} \\Metodo che serve per inviare al back-end una richiesta di salvataggio persistente dei dati. Viene invocato da Confirm in SearchController. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. \\
+		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{user: UserDetailModel}: parametro che indica l'oggetto contenente tutti i dati dell'utente che dovranno essere salvati dal back-end;
+			\item \texttt{user: UserDetailModel}: parametro che indica l'oggetto contenente tutti i dati dell'utente che dovranno essere salvati dal back-end.
 		\end{itemize}
 	
 	\end{itemize}
