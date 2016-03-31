@@ -28,11 +28,15 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \texttt{+ loginButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di creazione di una nuova domanda, in italiano o in inglese;
-		\item \texttt{+ signUpButton: String};
-		\item \texttt{+ profileButton};
-		\item \texttt{+ questionsButton};
-		\item \texttt{+ questionnaireButton}.
+		\item \texttt{+ loginButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link all'autenticazione, in italiano o in inglese;
+		\item \texttt{+ signUpButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla registrazione, in italiano o in inglese;
+		\item \texttt{+ profileButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link al profilo utente, in italiano o in inglese;
+		\item \texttt{+ questionsButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla gestione delle domande, in italiano o in inglese;
+		\item \texttt{+ questionnaireButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla gestione dei questionari, in italiano o in inglese;
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 	\end{itemize}
 \end{itemize}
 
@@ -60,10 +64,10 @@
 	\item \textbf{Attributi}: 
 	\begin{itemize}
 		\item \item {+ newQuestionButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di creazione di una nuova domanda, in italiano o in inglese;
-		\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
-		\item \texttt{+ restrict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
-		\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
-		\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 	\end{itemize}
 \end{itemize}
 
@@ -153,7 +157,11 @@
 	\item \textbf{Attributi}: 
 	\begin{itemize}
 		\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic} e \texttt{keywords};
-		\item \texttt{+ compileButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di compilazione del questionario, in italiano o in inglese.
+		\item \texttt{+ compileButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di compilazione del questionario, in italiano o in inglese;
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 	\end{itemize}
 \end{itemize}
 
@@ -186,6 +194,10 @@
 	\item \textbf{Attributi}: 
 	\begin{itemize}
 		\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic}, \texttt{keywords} e \texttt{judgment};
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope}\\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String}\\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 	\end{itemize}
 \end{itemize}
 
@@ -216,7 +228,10 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 	\end{itemize}
 \end{itemize}
 
@@ -242,6 +257,10 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item {+ resultsButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di visualizzazione dei questionari, in italiano o in inglese.
+		\item {+ resultsButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di visualizzazione dei questionari, in italiano o in inglese;
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 	\end{itemize} 
 \end{itemize}
