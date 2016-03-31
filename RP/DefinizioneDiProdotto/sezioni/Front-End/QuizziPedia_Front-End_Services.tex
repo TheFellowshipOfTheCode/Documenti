@@ -1,28 +1,28 @@
 \newpage
 \subsection{QuizziPedia::Front-End::Services}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Front-End_Services.png}
+	\includegraphics[scale=0.60]{UML/Package/QuizziPedia_Front-End_Services.png}
 	\caption{QuizziPedia::Front-End::Services}
-\end{figure}
+\end{figure} \FloatBarrier
 \subsubsection{Informazioni generali}
 \begin{itemize}
 	\item \textbf{Descrizione}: package che contiene le classi individuate che permettono la comunicazione del lato front-end con il lato back-end;
 	\item \textbf{Padre:} \texttt{Front-End};
 	\item \textbf{Interazione con altri componenti:}
 	\begin{itemize}
-		\item \texttt{Models} - package che contiene le classi model individuate;
-		\item \texttt{Controllers} - package che contiene le classi controller individuate.
+		\item \texttt{Models}: package che contiene le classi model individuate;
+		\item \texttt{Controllers}: package che contiene le classi controller individuate.
 	\end{itemize} 
 \end{itemize}
 \subsubsection{Classi}
 
 \paragraph{QuizziPedia::Front-End::Services::AuthService}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ AuthService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_AuthService.png}
 	\caption{QuizziPedia::Front-End::Services::AuthService}
-\end{figure}
+\end{figure} \FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la registrazione e l'autenticazione di un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità di registrazione e autenticazione ai controllers. Controlla che i dati inseriti dall'utente siano presenti nel \textit{Database\ped{G}} in caso di autenticazione. Presenta anche le funzionalità per la gestione del reset della password;
@@ -72,11 +72,11 @@
 
 
 \paragraph{QuizziPedia::Front-End::Services::SearchService}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ SearchService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_SearchService.png}
 	\caption{QuizziPedia::Front-End::Services::LangService}
-\end{figure}
+\end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire il recupero dei dati dal back-end a seguito di una ricerca effettuata da un utente;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end delle informazioni basandosi sulle keyword inserite dall'utente;
@@ -100,11 +100,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::LangService}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ LangService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_LangService.png}
 	\caption{QuizziPedia::Front-End::Services::LangService}
-\end{figure}
+\end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione.
 	\item \textbf{Utilizzo}: fornisce delle funzionalità per recuperare la giusta traduzione della pagina.
@@ -118,7 +118,7 @@
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item \texttt{+} \texttt{getKeywords(): Object}: \\Metodo che ritorna la lista di tutte le keywords nella lingua richiesta.\\
+		\item \texttt{+} \texttt{getKeywords(lang: String): Object}: \\Metodo che ritorna la lista di tutte le keywords nella lingua richiesta.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{lang: String}: parametro che indica la lingua delle keywords da restituire.
@@ -127,11 +127,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::QuizService}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ QuizService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_QuizService.png}
 	\caption{QuizziPedia::Front-End::Services::QuizService}
-\end{figure}
+\end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca. Permette inoltre di iscriversi ad un questionario e di scaricare l'intera l'ista di domande di un questionario a partire dal suo id univoco;
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un quiz in seguito ad una ricerca dell'utente, passando i risultati ai controllers. Ritorna dei riferimenti alle domande del quiz;
@@ -189,11 +189,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::StatisticsService}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ StatisticsService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_StatisticsService.png}
 	\caption{QuizziPedia::Front-End::Services::StatisticsService}
-\end{figure}
+\end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere le statistiche dell'utente;
 	\item \textbf{Utilizzo}: fornisce al controller le statistiche salvate;
@@ -220,11 +220,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::QuestionsServices}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_ QuestionService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_QuestionService.png}
 	\caption{QuizziPedia::Front-End::Services::QuestionService}
-\end{figure}
+\end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
 	\item \textbf{Utilizzo}: utilizzata per richiedere domande presenti nel database. Offre inoltre delle funzionalità per inserire nuove domande;
@@ -251,7 +251,7 @@
 	\end{itemize}
 	\item \textbf{Metodi:}
 	\begin{itemize}
-		\item \texttt{+} \texttt{sendQuestion(type: String, lang: String, text: String, image: ?, answer: String[]): Promise}: \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata;\\ 
+		\item \texttt{+} \texttt{sendQuestion(type: String, lang: String, text: String, image: String, answer: String[]): Promise}: \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata;\\ 
 		\textbf{Parametri}: 
 		\begin{itemize}
 			\item \texttt{type: String}: identifica la tipologia della domanda;
@@ -264,7 +264,7 @@
 		\begin{itemize}
 			\item \texttt{username: String}: parametro che indica l'utente del quale andranno caricate tutte le domande da lui create;
 		\end{itemize}
-		\item \texttt{+} \texttt{getTopicKeywords(key: String): String[]}\\ Metodo che permette di ottenere le keywords a partire da una stringa passata.
+		\item \texttt{+} \texttt{getKeywords(key: String): String[]}\\ Metodo che permette di ottenere le keywords a partire da una stringa passata.
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{key: String}: parametro che identifica la stringa con la quale cercare le keywords.
@@ -273,11 +273,11 @@
 \end{itemize}
 
 \paragraph{QuizziPedia::Front-End::Services::UserDetailsService}
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_UserDetailsService.png}
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_UserDetailsService.png}
 	\caption{QuizziPedia::Front-End::Services::UserDetailsService}
-\end{figure}
+\end{figure}\FloatBarrier
 \begin{itemize}
 	\item \textbf{Descrizione}: questa classe permette di ottenere i dati personali degli utenti;
 	\item \textbf{Utilizzo}: utilizzata per ottenere i dati personali di un utente. Permette inoltre di trovare i dati di utenti ricercati tramite l'apposita barra di ricerca;
