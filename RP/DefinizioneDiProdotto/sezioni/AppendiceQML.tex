@@ -1,10 +1,44 @@
 \newpage
 \section{QML - Quiz Markup Language}
 Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter creare domande da proporre negli allenamenti e nei questionari. Per rendere più semplice l'aggiunta di una domanda sono stati realizzati degli \textit{wizzard} per alcune tipologie di domande, ma questo limita alla creazione di tipologie di domande specifiche. La soluzione adottata è la realizzazione di un nuovo linguaggio di \textit{markup\ped{G}} che permette la definizione di domande non ordinarie, denominato \textit{QML} acronimo di \textit{Quiz Markup Language}. \\
-Per la realizzazione di \textbf{QML} abbiamo adottato il \textit{ANTLR\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
+Per la realizzazione di \textbf{QML} abbiamo adottato il \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
 
 \subsection{Definizione della grammatica}
+Il QML utilizza le parentesi quadrate per descrivere il significato dei contenuti. All'interno di esse possono essere scritte delle parole chiavi definite a priori. All'esterno delle parentesi il QML accetta qualunque stringa, e la utilizzerà come semplice testo. La grammatica del \textbf{QML} permetterà l'inserimento di commenti con i classici simboli come nei classici linguaggi di programmazione.
 \subsubsection{Lexer - analizzatore lessicale}
+Il \textit{lexer\ped{G}} sviluppato impacchetta il flusso di caratteri in gruppi che, elaborati dal \textit{parser\ped{G}}, acquisiscono significato generando i \textit{token\ped{G}}. Il \textit{lexer} si occupa anche di rimuovere i commenti per non appesantire il lavoro del \textit{parser}.
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+var lexer = new lexer;
+}
+\end{lstlisting}
+Dopo aver creato il lexer aggiungiamo le regole con il metodo \texttt{addRule()} fornito da \textit{ANTLR}. Il primo argomento del metodo deve essere una \textit{espressione regolare}, il secondo una funzione da invocare nel caso il testo sia conforme alle regole date dal primo parametro
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+lexer.addRule(/[a-zA-Z]*/i , function(lexeme){
+		return "HEX";
+	});
+}
+\end{lstlisting}
+Dopo la definizione delle regole è necessario impostare la proprietà di ingresso del \textit{lexer} a qualsiasi stringa che si vuole creare il token, chiamando il metodo \texttt{lex()}. Impostando il metodo \texttt{reject} a \texttt{true} nell'oggetto \texttt{this}, il lexer può decidere di attribuire alla stringa una regola successiva.
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+lexer.addRule(/\n/, function () {
+row++;
+col = 1;
+}, []);
+
+lexer.addRule(/./, function () {
+this.reject = true;
+col++;
+}, []);
+
+lexer.input = "Hello World!";
+
+lexer.lex();
+}
+\end{lstlisting}
+
 \subsubsection{Parser - analizzatore sintattico}
 \subsection{generazione del JSON}
 \subsection{gestione degli errori}
