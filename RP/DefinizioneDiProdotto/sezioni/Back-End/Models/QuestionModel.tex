@@ -42,11 +42,12 @@
 			\item \texttt{language} di tipo \texttt{String}, rappresenta la lingua in cui è scritta la domanda; 
 			\item \texttt{question} di tipo \texttt{Array}, contiene un oggetto di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
 				\begin{itemize}
+					\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di domanda; 
 					\item \texttt{questionText} di tipo \texttt{String}, rappresenta il testo della domanda; 
 					\item \texttt{image} di tipo \texttt{String}, rappresenta l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda; 
 					\item \texttt{answers} di tipo \texttt{Array}, contiene un oggetto di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
 					\begin{enumerate}	
-						\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di risposta; 				  
+										  
 						\item \texttt{text} di tipo \texttt{String}, rappresenta il testo della risposta;
         					\item \texttt{url} di tipo \texttt{String}, rappresenta l'immagine della risposta;
         					\item \texttt{attributesForTForMultiple} di tipo \texttt{Mixed}, contiene i seguenti attributi:

@@ -1,6 +1,6 @@
 \item \texttt{/:lang/user/training/question}
 \begin{itemize}
-	\item \textbf{Method}: GET;
+	\item \textbf{Method}: POST;
 	\item \textbf{Livello di Accesso}: Utente;
 	\item \textbf{Descrizione}: restituisce una domanda in base al livello di abilità raggiunto dall'utente;
 	\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
@@ -15,10 +15,9 @@
 	\begin{lstlisting}[language=json,firstnumber=1]
 	{
 	"_questionId" : [identificativo della domanda]
-	"type" : [indica la tipologia della domanda]
-	"questionText" : [indica il testo della domanda]
-	"option1" : [indica un array di opzioni di risposta]
-	"option2" : [indica un array di opzioni di risposta]
+	"makeWith" : [identifica lo strumento utilizzato per creare la domanda]
+	"language" : [identifica la lingua della domanda]
+	"question" : [identifica l'array di JSON contentente gli attributi che formano una domanda]
 	}
 	\end{lstlisting}
 \end{itemize}
