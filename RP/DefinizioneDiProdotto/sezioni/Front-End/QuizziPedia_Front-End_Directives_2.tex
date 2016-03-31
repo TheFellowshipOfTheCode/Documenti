@@ -12,7 +12,7 @@
 	\item \textbf{Descrizione}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
 	\item \textbf{Utilizzo}: viene utilizzato per realizzare il menù, presente in ogni pagina dell'applicazione, che permette all'utente di selezionare un'opzione in base al contesto in cui si trova:
 		\begin{itemize}
-			\item Login;
+			\item Autenticazione;
 			\item Registrazione;
 			\item Ricerca;
 			\item Visualizzare il proprio profilo utente;
@@ -28,7 +28,11 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
+		\item \texttt{+ loginButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di creazione di una nuova domanda, in italiano o in inglese;
+		\item \texttt{+ signUpButton: String};
+		\item \texttt{+ profileButton};
+		\item \texttt{+ questionsButton};
+		\item \texttt{+ questionnaireButton}.
 	\end{itemize}
 \end{itemize}
 
@@ -181,7 +185,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic}, \texttt{keywords} e \texttt{judgment};
+		\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic}, \texttt{keywords} e \texttt{judgment};
 	\end{itemize}
 \end{itemize}
 
