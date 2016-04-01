@@ -201,45 +201,6 @@
 	\end{itemize}
 \end{itemize}
 
-\paragraph{QuizziPedia::Front-End::Directives::QuestionsManagementQuestionnaireDirective}
-
-\label{QuizziPedia::Front-End::Directives::QuestionsManagementQuestionnaireDirective}
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_QuestionsManagementQuestionnaireDirective.png}
-	\caption{QuizziPedia::Front-End::Directives::QuestionsManagementQuestionnaireDirective}
-\end{figure} 
-\FloatBarrier
-
-\begin{itemize}
-	\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di:
-		\begin{itemize}
-			\item Effettuare delle ricerche sul database di domande;
-			\item Selezionare le domande da inserire nel questionario;
-			\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
-		\end{itemize}
-		Questo componente si presta sia per la creazione che per la modifica di un questionario;
-	\item \textbf{Utilizzo}: viene utilizzato per gestire le domande di un questionario. Esso permette di ricercare, inserire e togliere domande dalla lista di domande che andranno a comporre il questionario;
-	\item \textbf{Relazioni con altre classi}: 
-	\begin{itemize}
-		\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario;
-		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: questa classe permette di gestire il recupero delle domande per il questionario;
-		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementModelView}:  classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireQuestionsManagementView} e il controller \texttt{QuestionnaireQuestionsManagementController};
-	\end{itemize}
-	\item \textbf{Attributi}: 
-	\begin{itemize}
-		\item \texttt{+ question: String} \\ Attributo che conterrà la stringa per la ricerca della domanda;
-		\item \texttt{+ questions: Array} \\ Array contenente le domande trovate durante la ricerca;
-		\item \texttt{+ pushButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inserimento delle domande selezionate, in italiano o in inglese;
-		\item \texttt{+ deleteButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di eliminazione delle domande dal questionario, in italiano o in inglese;
-		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
-		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
-		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
-		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
-	\end{itemize}
-\end{itemize}
-
 \paragraph{QuizziPedia::Front-End::Directives::QuestionnaireResultsDirective}
 
 \label{QuizziPedia::Front-End::Directives::QuestionnaireResultsDirective}
