@@ -225,9 +225,14 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario;
 		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementController}: questa classe permette di gestire il recupero delle domande per il questionario;
+		\item \textit{IN} \texttt{QuestionnaireQuestionsManagementModelView}:  classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireQuestionsManagementView} e il controller \texttt{QuestionnaireQuestionsManagementController};
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
+		\item \texttt{+ question: String} \\ Attributo che conterrà la stringa per la ricerca della domanda;
+		\item \texttt{+ questions: Array} \\ Array contenente le domande trovate durante la ricerca;
+		\item \texttt{+ pushButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inserimento delle domande selezionate, in italiano o in inglese;
+		\item \texttt{+ deleteButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di eliminazione delle domande dal questionario, in italiano o in inglese;
 		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
 		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
 		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
