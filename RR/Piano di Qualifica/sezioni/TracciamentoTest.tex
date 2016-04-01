@@ -1,3 +1,48 @@
 \section{Tracciamento dei test}
+\subsection{Tracciamento Test di Integrazione-Componenti}
+\normalsize
+\begin{longtable}[ht]{|>{\centering}m{3cm}|m{9cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Componente}\\
+\hline
+\endhead
+\hyperlink{TI1}{TI1} & {\texttt{Quizzipedia::Front-End}}\\ \hline
+\hyperlink{TI2}{TI2} & {\texttt{Quizzipedia::Front-End::Controllers}}\\ \hline
+\hyperlink{TI3}{TI3} & {\texttt{Quizzipedia::Front-End::Services}}\\ \hline
+\hyperlink{TI4}{TI4} & {\texttt{Quizzipedia::Front-End::Model}}\\ \hline
+\hyperlink{TI5}{TI5} & {\texttt{Quizzipedia::Front-End::Directives}}\\ \hline
+\hyperlink{TI6}{TI6} & {\texttt{Quizzipedia::Front-End::Views}}\\ \hline
+\hyperlink{TI7}{TI7} & {\texttt{Quizzipedia::Back-End}}\\ \hline
+\hyperlink{TI8}{TI8} & {\texttt{Quizzipedia::Back-End::App}}\\ \hline
+\hyperlink{TI9}{TI9} & {\texttt{Quizzipedia::Back-End::Config}}\\ \hline
+\hyperlink{TI10}{TI10} & {\texttt{Quizzipedia::Back-End::App::Routers}}\\ \hline
+\hyperlink{TI11}{TI11} & {\texttt{Quizzipedia::Back-End::App::Controller}}\\ \hline
+\hyperlink{TI12}{TI12} & {\texttt{Quizzipedia::Back-End::App::Model}}\\ \hline
+\caption[Tracciamento Test di Integrazione-Componenti]{Tracciamento Test di Integrazione-Componenti}
+\label{tabella:ts-requi}
+\end{longtable}
+\FloatBarrier
 
-INSERIRE LE TABELLE DI TRACCIAMENTO
+\subsection{Tracciamento Componenti-Test di Integrazione}
+\normalsize
+\begin{longtable}[ht]{|>{\centering}m{9cm}|m{3cm}<{\centering}|}
+\hline 
+\textbf{Componente} & \textbf{Test}\\
+\hline
+\endhead
+{\texttt{Quizzipedia::Back-End}} & \hyperlink{TI7}{TI7}\\ \hline
+{\texttt{Quizzipedia::Back-End::App}} & \hyperlink{TI8}{TI8}\\ \hline
+{\texttt{Quizzipedia::Back-End::App::Controller}} & \hyperlink{TI11}{TI11}\\ \hline
+{\texttt{Quizzipedia::Back-End::App::Model}} & \hyperlink{TI12}{TI12}\\ \hline
+{\texttt{Quizzipedia::Back-End::App::Routers}} & \hyperlink{TI10}{TI10}\\ \hline
+{\texttt{Quizzipedia::Back-End::Config}} & \hyperlink{TI9}{TI9}\\ \hline
+{\texttt{Quizzipedia::Front-End}} & \hyperlink{TI1}{TI1}\\ \hline
+{\texttt{Quizzipedia::Front-End::Controllers}} & \hyperlink{TI2}{TI2}\\ \hline
+{\texttt{Quizzipedia::Front-End::Directives}} & \hyperlink{TI5}{TI5}\\ \hline
+{\texttt{Quizzipedia::Front-End::Model}} & \hyperlink{TI4}{TI4}\\ \hline
+{\texttt{Quizzipedia::Front-End::Services}} & \hyperlink{TI3}{TI3}\\ \hline
+{\texttt{Quizzipedia::Front-End::Views}} & \hyperlink{TI6}{TI6}\\ \hline
+\caption[Tracciamento Componenti-Test di Integrazione]{Tracciamento Componenti-Test di Integrazione}
+\label{tabella:pkg-ti}
+\end{longtable}
+\FloatBarrier
