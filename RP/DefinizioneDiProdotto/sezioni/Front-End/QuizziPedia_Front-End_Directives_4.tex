@@ -390,23 +390,23 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
-				\item \texttt{+ controller: String}: stringa contenente il nome del controller della direttiva;
-				\item \texttt{+ restrict: String}: stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
-				\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene:
+				\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene:
 				\begin{itemize}
-					\item \texttt{questionText: String}: identifica il testo della domanda;
-					\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
-					\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
+					\item \texttt{+ questionText: String} \\ Identifica il testo della domanda;
+					\item \texttt{+ image: String} \\ Identifica l'url di una possibile immagine nella domanda;
+					\item \texttt{+ answers: Array} \\ Array che contiene coppie di valori. Queste coppie sono formate da:
 					\begin{itemize}
-						\item \texttt{type: String}: indica la tipologia della risposta;
-						\item \texttt{text: String}: contiene il testo dell'affermazione;
-						\item \texttt{url: String}: rappresenta l'immagine della risposta;
-						\item \texttt{attributesForTForMultiple: Mixed}: contiene i seguenti attributi:
+						\item \texttt{+ type: String} \\ Indica la tipologia della risposta;
+						\item \texttt{+ text: String} \\ Contiene il testo dell'affermazione;
+						\item \texttt{+ url: String} \\ Rappresenta l'immagine della risposta;
+						\item \texttt{+ attributesForTForMultiple: Mixed} \\ Contiene i seguenti attributi:
 						\begin{enumerate}
-							\item \texttt{isItRight: Boolean}: contiene se la risposta è vera o falsa.
+							\item \texttt{+ isItRight: Boolean} \\ Contiene se la risposta è vera o falsa.
 						\end{enumerate}
 					\end{itemize}
 				\end{itemize}
-				\item \texttt{+ templateUrl: String}: stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+				\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}																	
