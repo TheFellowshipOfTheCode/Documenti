@@ -9,16 +9,33 @@
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ClickableAreaQuestionsView} e il controller \texttt{ClickableAreaQuestionsController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: ; 
-		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: ;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi e le direttive per creare una domanda ad area cliccabile; 
+		\item \textit{IN} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item
+			\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+			\begin{itemize}
+				\item \texttt{url}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} associato all'immagine;
+				\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+				\begin{itemize}
+					\item \texttt{x}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ascisse all'interno dell'immagine;
+					\item \texttt{y}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ordinate all'interno dell'immagine.
+				\end{itemize}
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+			\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+			Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
+			\item \texttt{+} \texttt{choseThatPoint(x:Integer, y: Integer): void}\\
+			Metodo che gestisce l’evento click su un punto dell'immagine. Una volta selezionato esso verrà inserito nell'array di punti; \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{x: Integer} \\
+				Parametro contenente la coordinata x del punto;
+				\item \texttt{y: Integer} \\ 
+				Parametro contenente la coordinata y del punto;
+			\end{itemize}
 	\end{itemize}
 \end{itemize}
 

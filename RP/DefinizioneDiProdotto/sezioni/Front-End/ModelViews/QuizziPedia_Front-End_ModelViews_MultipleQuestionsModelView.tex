@@ -9,16 +9,30 @@
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{MultipleQuestionsView} e il controller \texttt{MultipleQuestionsController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{MultipleQuestionsView}: ; 
-		\item \textit{IN} \texttt{MultipleQuestionsController}: ;
+		\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente le direttive per creare una domanda a risposta multipla; 
+		\item \textit{IN} \texttt{MultipleQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item
+		\item {+ image: String} \\ Attributo contenete l'\textit{URL\ped{G}} dell'immagine caricata dall'utente;
+		\item {+ questionText: String} \\ Attributo contenente il testo della domanda;
+		\item \texttt{questionText: String} \\ Identifica il testo della domanda;
+		\item \texttt{image: String} \\ Identifica l'url di una possibile immagine nella domanda;
+		\item \texttt{answers: Array}\\ Array che contiene coppie di valori. Queste coppie sono formate da:
+		\begin{itemize}
+			\item \texttt{type: String} \\ Indica la tipologia della risposta;
+			\item \texttt{text: String} \\ Contiene il testo dell'affermazione;
+			\item \texttt{url: String} \\ Rappresenta l'immagine della risposta;
+			\item \texttt{attributesForTForMultiple: Mixed} \\ Contiene i seguenti attributi:
+			\begin{enumerate}
+				\item \texttt{isItRight: Boolean} \\ Contiene se la risposta è vera o falsa.
+			\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
 	\end{itemize}
 \end{itemize}
 

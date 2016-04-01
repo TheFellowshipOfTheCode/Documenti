@@ -9,16 +9,26 @@
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ConnectionQuestionsView} e il controller \texttt{ConnectionQuestionsController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{ConnectionQuestionsView}: ; 
-		\item \textit{IN} \texttt{ConnectionQuestionsController}: ;
+		\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi e le direttive per creare una domanda a collegamento; 
+		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item
+		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
+		\begin{itemize}
+			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+			\begin{enumerate}
+				\item \texttt{text1}: di tipo \texttt{String}, rappresenta il primo elemento testuale che sarà collegato ad un secondo elemento (testuale o immagine);
+				\item \texttt{text2}:  di tipo \texttt{String}, rappresenta il secondo elemento testuale che sarà collegato al primo elemento (testuale o immagine);
+				\item \texttt{url1}: di tipo \texttt{String}, rappresenta il primo elemento immagine che sarà collegato con il secondo elemento (testuale o immagine);
+				\item \texttt{url2}: di tipo \texttt{String}, rappresenta il secondo elemento immagine che sarà collegato con il primo elemento (testuale o immagine).
+			\end{enumerate}
+		\end{itemize}		
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item 
+		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando;  
 	\end{itemize}
 \end{itemize}
 
