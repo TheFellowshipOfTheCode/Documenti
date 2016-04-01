@@ -4,43 +4,395 @@ Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter 
 Per la realizzazione di \textbf{QML} abbiamo adottato il \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
 
 \subsection{Definizione della grammatica}
-Il QML utilizza le parentesi quadrate per descrivere il significato dei contenuti. All'interno di esse possono essere scritte delle parole chiavi definite a priori. All'esterno delle parentesi il QML accetta qualunque stringa, e la utilizzerà come semplice testo. La grammatica del \textbf{QML} permetterà l'inserimento di commenti con i classici simboli come nei classici linguaggi di programmazione.
-\subsubsection{Lexer - analizzatore lessicale}
-Il \textit{lexer\ped{G}} sviluppato impacchetta il flusso di caratteri in gruppi che, elaborati dal \textit{parser\ped{G}}, acquisiscono significato generando i \textit{token\ped{G}}. Il \textit{lexer} si occupa anche di rimuovere i commenti per non appesantire il lavoro del \textit{parser}.
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-var lexer = new lexer;
-}
-\end{lstlisting}
-Dopo aver creato il lexer aggiungiamo le regole con il metodo \texttt{addRule()} fornito da \textit{ANTLR}. Il primo argomento del metodo deve essere una \textit{espressione regolare}, il secondo una funzione da invocare nel caso il testo sia conforme alle regole date dal primo parametro
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-lexer.addRule(/[a-zA-Z]*/i , function(lexeme){
-		return "HEX";
-	});
-}
-\end{lstlisting}
-Dopo la definizione delle regole è necessario impostare la proprietà di ingresso del \textit{lexer} a qualsiasi stringa che si vuole creare il token, chiamando il metodo \texttt{lex()}. Impostando il metodo \texttt{reject} a \texttt{true} nell'oggetto \texttt{this}, il lexer può decidere di attribuire alla stringa una regola successiva.
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-lexer.addRule(/\n/, function () {
-row++;
-col = 1;
-}, []);
+Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML} è stato deciso di mantenere la sintassi \textit{JSON}, con l'aggiunta delle sole parole chiave necessarie per mantenere coerente la grammatica con lo scopo del \textbf{QML}. Alla grammatica è stata data possibilità di inserire commenti che saranno rimossi prima della creazione del \textit{JSON}.
 
-lexer.addRule(/./, function () {
-this.reject = true;
-col++;
-}, []);
-
-lexer.input = "Hello World!";
-
-lexer.lex();
+\subsubsection{sintassi domanda Vero/Falso}
+\begin{lstlisting}[language=json,firstnumber=1]
+{	
+"type": "veroFalso",
+"image": "/img/veroFalso/example.png", //immagine possibile nel testo della domanda vero e falso
+"answer":
+	[{
+	"text": "In Italia la guida e' a destra",
+	"isItRight": true
+	}],
+"keywords":
+	[{
+	"keyword_1" : "guida",
+	"keyword_2" : "legge",
+	"keyword_3" : "italia"
+	}] 
 }
 \end{lstlisting}
 
-\subsubsection{Parser - analizzatore sintattico}
+\subsubsection{sintassi domanda a Risposta Multipla}
+\begin{lstlisting}[language=json,firstnumber=1]
+{	
+"type": "rispostaMultipla",
+"questionText": "Quali di questi numeri e' pari?",
+"url": "/img/rispostaMultipla/D0_3.png", //immagine possibile nel testo della domanda risposta multipla
+"answer":
+	[{
+	"text": "1",
+	"url": "/img/rispostaMultipla/D0_1.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	 },{
+	"text": "2",
+	"url": "/img/rispostaMultipla/D0_2.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": true
+	 },{
+	"text": "7",
+	"url": "/img/rispostaMultipla/D0_3.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	 },{
+	"text": "9",
+	"url": "/img/rispostaMultipla/D0_4.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	 }],
+"keywords":
+	[{
+	"keyword_1" : "numeri",
+	"keyword_2" : "matematica",
+	"keyword_3" : "scuola"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{sintassi domanda a Ordinamento di Stringhe}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "ordinamentoStringhe",
+"questionText": "Ordina questi numeri in modo decrescente.",
+"answer":
+	[{
+	"text": "1",
+	"position": 4
+	},{
+	"text": "2",
+	"position": 3
+	},{
+	"text": "7",
+	"position": 2
+	},{
+	"text": "9",
+	"position": 1
+	}],
+"keywords":
+	[{
+	"keyword_1" : "ordinamento",
+	"keyword_2" : "numeri",
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{sintassi domanda a Ordinamento Immagini}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "ordinamentoImmagini",
+"questionText": "Ordina queste immagini in modo da ottenere la parola "CIAO".",
+"url": "/img/ordinamentoImmagini/D0_1.png", //immagine possibile nel testo della domanda ad ordianamento di immagini
+"answer":
+	[{
+	"url": "/img/domandeOrdinamentoImmagini/I.png", //url dell'immagine
+	"position": 2
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/A.png",
+	"position": 3
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/O.png",
+	"position": 4
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/C.png",
+	"position": 1
+	}],
+"keywords":
+	[{
+	"keyword_1" : "parole",
+	"keyword_2" : "grammatica"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{sintassi domanda a Collegamento di Elementi}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "collegamento",
+"questionText": "Collega queste coppie di nemici classici.",
+"answer":
+	[{
+	"text_1_A": "cane",
+	"text_1_B": "gatto"
+	},{
+	"url_2_A": "/img/collegamento/uncino.png",
+	"text_2_B": "peter pan"
+	},{
+	"url_3_A": "/img/collegamento/D0_1.png",
+	"url_3_B": "/img/collegamento/D0_5.png"
+	}],
+"keywords":
+	[{
+	"keyword_1" : "nemici"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{sintassi domanda ad Area Cliccabile}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "areaCliccabile",
+"questionText": "Clicca quale tra le seguenti scelte e' il bicipide.",
+"image": "/img/areaCliccabile/D0_1.png", //sfondo dell'area cliccabile
+"resolution": { "x":400, "y":500 },
+"answer":
+	[{
+	"x": "200",
+	"y": "50",
+	"text": "testo facoltativo di arricchimento"
+	},{
+	"x": "300",
+	"y": "120",
+	"text": "testo facoltativo di arricchimento"
+	},{
+	"x": "200",
+	"y": "200",
+	"text": "testo facoltativo di arricchimento"
+	}],
+"keywords":
+	[{
+	"keyword_1" : "corpo umano",
+	"keyword_2" : "medicina",
+	"keyword_3" : "scienze" ,
+	"keyword_4" : "muscoli"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{sintassi domanda a Riempimento spazi vuoti}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "spaziVuoti",
+"questionText": "Giulio Cesare era un console romano.",
+"answer":
+	[{
+	"parolaNumero": 2 //sta ad indicare quale parola e' da oscurare. In questo caso la numero 2
+	},{
+	"parolaNumero": 5
+	}],
+"keywords":
+	[{
+	"keyword_1" : "storia",
+	}] 
+}
+\end{lstlisting}
+
 \subsection{generazione del JSON}
-\subsection{gestione degli errori}
-\subsubsection{errori di tipo lessicale}
-\subsubsection{errori di tipo sintattico}
+Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON} contente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON} diverso, questo accada sia per la generazione tramite \textit{wizzard\ped{G}} sia tramite \textit{QML}.
+
+\subsubsection{JSON domanda Vero/Falso}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"makeWith" : "QML" || "wizzard" ,
+"lang" : [:lang], // impostata la lingua in uso
+"question" :
+	[{
+	"type": "veroFalso",
+	"image": "/img/veroFalso/example.png", //immagine possibile nel testo della domanda vero e falso
+	"answer":
+		[{
+		"text": "In Italia la guida e' a destra",
+		"isItRight": true
+		}]
+	}],
+"keywords" : 
+	[{
+	"keyword_1" : "guida",
+	"keyword_2" : "legge",
+	"keyword_3" : "italia"
+	}],
+"statistiche" : 
+	[{
+	"level" : 500,
+	"totalAnswers" : 0,
+	"correctAnswer" : 0
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Risposta Multipla}
+\begin{lstlisting}[language=json,firstnumber=1]
+{	
+"makeWith" : "QML" || "wizzard" ,
+"type": "rispostaMultipla",
+"questionText": "Quali di questi numeri e' pari?",
+"url": "/img/rispostaMultipla/D0_3.png", //immagine possibile nel testo della domanda risposta multipla
+"answer":
+	[{
+	"text": "1",
+	"url": "/img/rispostaMultipla/D0_1.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	},{
+	"text": "2",
+	"url": "/img/rispostaMultipla/D0_2.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": true
+	},{
+	"text": "7",
+	"url": "/img/rispostaMultipla/D0_3.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	},{
+	"text": "9",
+	"url": "/img/rispostaMultipla/D0_4.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	}],
+"keywords":
+	[{
+	"keyword_1" : "numeri",
+	"keyword_2" : "matematica",
+	"keyword_3" : "scuola"
+	}],
+"statistiche":
+	[{
+	"level" : 500,
+	"totalAnswers" : 0,
+	"correctAnswers" : 0
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Ordinamento di Stringhe}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"makeWith" : "QML" || "wizzard" ,
+"type": "ordinamentoStringhe",
+"questionText": "Ordina questi numeri in modo decrescente.",
+"answer":
+	[{
+	"text": "1",
+	"position": 4
+	},{
+	"text": "2",
+	"position": 3
+	},{
+	"text": "7",
+	"position": 2
+	},{
+	"text": "9",
+	"position": 1
+	}],
+"keywords":
+	[{
+	"keyword_1" : "ordinamento",
+	"keyword_2" : "numeri",
+	}],
+"statistiche":
+	[{
+	"level" : 500,
+	"totalAnswers" : 0,
+	"correctAnswers" : 0
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Ordinamento Immagini}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"makeWith" : "QML" || "wizzard" ,
+"type": "ordinamentoImmagini",
+"questionText": "Ordina queste immagini in modo da ottenere la parola "CIAO".",
+"url": "/img/ordinamentoImmagini/D0_1.png", //immagine possibile nel testo della domanda ad ordianamento di immagini
+"answer":
+	[{
+	"url": "/img/domandeOrdinamentoImmagini/I.png", //url dell'immagine
+	"position": 2
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/A.png",
+	"position": 3
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/O.png",
+	"position": 4
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/C.png",
+	"position": 1
+	}],
+"keywords":
+	[{
+	"keyword_1" : "parole",
+	"keyword_2" : "grammatica"
+	}],
+"statistiche":
+	[{
+	"total" : 500,
+	"totalAnswers" : 0,
+	"correctAnswers" : 0
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Collegamento di Elementi}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"makeWith" : "QML" || "wizzard" ,
+"type": "collegamento",
+"questionText": "Collega queste coppie di nemici classici.",
+"answer":
+	[{
+	"text_1_A": "cane",
+	"text_1_B": "gatto"
+	},{
+	"url_2_A": "/img/collegamento/uncino.png",
+	"text_2_B": "peter pan"
+	},{
+	"url_3_A": "/img/collegamento/D0_1.png",
+	"url_3_B": "/img/collegamento/D0_5.png"
+	}],
+"keywords":
+	[{
+	"keyword_1" : "nemici"
+	}],
+"statistiche":
+	[{
+	"level" : 500,
+	"totalAnswers" : 0,
+	"correctAnswers" : 0
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda ad Area Cliccabile}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"makeWith" : "QML" || "wizzard" ,
+"type": "areaCliccabile",
+"questionText": "Clicca quale tra le seguenti scelte e' il bicipide.",
+"image": "/img/areaCliccabile/D0_1.png", //sfondo dell'area cliccabile
+"resolution": { "x":400, "y":500 },
+"answer":
+	[{
+	"x": "200",
+	"y": "50",
+	"text": "testo facoltativo di arricchimento"
+	},{
+	"x": "300",
+	"y": "120",
+	"text": "testo facoltativo di arricchimento"
+	},{
+	"x": "200",
+	"y": "200",
+	"text": "testo facoltativo di arricchimento"
+	}],
+"keywords":
+	[{
+	"keyword_1" : "corpo umano",
+	"keyword_2" : "medicina",
+	"keyword_3" : "scienze" ,
+	"keyword_4" : "muscoli"
+	}],
+"statistiche":
+	[{
+	"level" : 500,
+	"totalAnswers" : 0,
+	"correctAnswers" : 0
+	}]
+}
+\end{lstlisting}
+
+
