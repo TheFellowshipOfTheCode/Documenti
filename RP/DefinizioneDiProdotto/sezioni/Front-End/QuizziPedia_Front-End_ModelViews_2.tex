@@ -62,8 +62,8 @@
 		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionnaireView} e il controller \texttt{FillingQuestionnaireController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario. Conterrà i vari templates di ogni domanda appartenente al questionario; 
-			\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
+			\item \textit{OUT} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario. Conterrà i vari templates di ogni domanda appartenente al questionario; 
+			\item \textit{OUT} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
@@ -105,12 +105,17 @@
 		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario; 
-			\item \textit{IN} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
+			\item \textit{OUT} \texttt{CreateQuestionnaireView}: view per la creazione del questionario; 
+			\item \textit{OUT} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item ;
+			\item \texttt{+ nameQuestionnaire: String}: \\ Attributo che specifica il nome del questionario creato;
+			\item \texttt{+ topics: Array} \\ Array contenente le stringhe dei nomi degli argomenti;
+			\item \texttt{+ keyword: String} \\ Attributo contenente la keyword associata alla domanda/questionario;
+			\item \texttt{+ question: String} \\ Attributo che conterrà la stringa per la ricerca della domanda;
+			\item \texttt{+ questions: Array} \\ Array contenente le domande trovate durante la ricerca;
+			\item \texttt{+ questionsChosen: Array} \\ Array contenente le domande inserite nel questionario;
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
@@ -160,11 +165,15 @@
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item ;
+			\item \texttt{+ subscribers: Array} \\ Array contenete un oggetto per ogni utente iscritto al questionario. L'oggetto sarà composto dai campi \texttt{nome} e \texttt{cognome};
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-			\item ;
+			\item \texttt{subscribeQuestionnaire(username: String): void} \\ Metodo che permette l'iscrizione ad un questionario. Richiama la funzionalità del QuizService. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{username: String}: parametro che indica l'utente da iscrivere al questionario.
+			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 	
