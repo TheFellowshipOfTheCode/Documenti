@@ -137,6 +137,8 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere i dati di un quiz in seguito ad una ricerca dell'utente, passando i risultati ai controllers. Ritorna dei riferimenti alle domande del quiz;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionnaireModel}: rappresenta un questionario. Contiene tutte le informazioni necessarie alla
+		presentazione del contenuto del questionario; 
 		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 		\item \textit{OUT} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 		\item \textit{OUT} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
@@ -236,6 +238,8 @@
 	\item \textbf{Utilizzo}: utilizzata per richiedere domande presenti nel database. Offre inoltre delle funzionalità per inserire nuove domande;
 	\item \textbf{Relazione con altre classi:}
 	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionItemModel}: rappresenta una domanda. Contiene tutte le informazioni necessarie alla
+		presentazione del contenuto della domanda; 
 		\item \textit{IN} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
 		\item \textit{IN} \texttt{MultiplyQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla; 
 		\item \textit{IN} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
@@ -290,6 +294,8 @@
 	\item \textbf{Utilizzo}: utilizzata per ottenere i dati personali di un utente. Permette inoltre di trovare i dati di utenti ricercati tramite l'apposita barra di ricerca;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
+		\item \textit{IN} \texttt{UserDetailsModel}: rappresenta un utente. Contiene tutte le informazioni necessarie alla
+		presentazione del contenuto di un utente sia nella visualizzazione che nella gestione di un profilo; 
 		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
 		\item \textit{OUT} \texttt{UserDetailsController}: questa classe permette di gestire i dati di un utente;
 		\item \textit{OUT} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente. 
