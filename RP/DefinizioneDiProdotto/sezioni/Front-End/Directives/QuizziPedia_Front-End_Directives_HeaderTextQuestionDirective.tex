@@ -1,0 +1,36 @@
+		\paragraph{QuizziPedia::Front-End::Directives::HeaderTextQuestionDirective}
+		
+		\label{QuizziPedia::Front-End::Directives::HeaderTextQuestionDirective}
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_HeaderTextQuestionTemplate.png}
+			\caption{QuizziPedia::Front-End::Directives::HeaderTextQuestionDirective}
+		\end{figure} \FloatBarrier
+		
+		\begin{itemize}
+			\item \textbf{Descrizione}: rappresenta il componente grafico che presenta all'utente l'argomento e le parole chiave. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la visualizzazione dell'argomento della domanda e le parole chiave associate ad essa;
+			\item \textbf{Relazioni con altre classi}: 
+			\begin{itemize}
+				\item \textit{IN} \texttt{TrainingModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrainingView} e il controller \texttt{TrainingController}; 
+				\item \textit{IN} \texttt{FillingQuestionnaireModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionnaireView} e il controller \texttt{FillingQuestionnaireController};
+				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+				\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
+			\end{itemize}
+			\item \textbf{Attributi}: 
+			\begin{itemize}
+				\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene:
+				\begin{itemize}
+					\item \textit{+ header: Object} \\ Oggetto contenente i campi dati da visualizzare nella direttiva, ovvero:
+					\begin{itemize}
+						\item \texttt{topic};
+						\item \texttt{keywords}.
+					\end{itemize}
+				\end{itemize}
+				\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+			\end{itemize}
+		\end{itemize}
+	

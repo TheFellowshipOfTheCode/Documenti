@@ -1,0 +1,29 @@
+\paragraph{QuizziPedia::Front-End::Directives::UserResultsDirective}
+
+\label{QuizziPedia::Front-End::Directives::UserResultsDirective}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_UserResultsDirective.png}
+	\caption{QuizziPedia::Front-End::Directives::UserResultsDirective}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: directive che permette di visualizzare la lista degli utenti ricercati dopo aver utilizzato l'apposita funzione di ricerca;
+	\item \textbf{Utilizzo}: permette di visualizzare la lista degli utenti, in particolare conterrà:
+	\begin{itemize}
+		\item Username dell'utente;
+		\item Pulsante per poter essere reindirizzati alla pagina di visualizzazione del profilo dell'utente selezionato.
+	\end{itemize}
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{ResultsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController};
+		\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari;
+		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ username: String} \\ Attributo che conterrà l'username dell'utente ricercato;
+		\item \texttt{+ prifileButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di visualizzazione del profilo utente, in italiano o in inglese;
+	\end{itemize}
+\end{itemize}

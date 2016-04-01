@@ -1,0 +1,22 @@
+\paragraph{QuizziPedia::Front-End::Directives::ImageInTheQuestionDirective}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_ImageInTheQuestionDirective.png}
+	\caption{QuizziPedia::Front-End::Views:ImageInTheQuestionDirective}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: directive contenente i componenti grafici per l'inserimento dell'immagine nella creazione delle domande;
+	\item \textbf{Utilizzo}: permette di per inserire un'immagine in una domanda;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{MultipleQuestionsView}:  view contenente i campi per creare una domanda vero/falso; 
+		\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi per creare una domanda a ordinamento immagini;
+		\item \textit{IN} \texttt{ClickableAreaQuestionsView}:  view contenente i campi per creare una domanda ad area cliccabile.
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item {+ image: String} \\ Attributo contenete l'\textit{URL\ped{G}} dell'immagine caricata dall'utente;
+		\item {+ loadButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di caricamento dell'immagine, in italiano o in inglese. 
+	\end{itemize}
+\end{itemize}

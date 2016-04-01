@@ -1,0 +1,43 @@
+\paragraph{QuizziPedia::Front-End::Services::UserDetailsService}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.60]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_UserDetailsService.png}
+	\caption{QuizziPedia::Front-End::Services::UserDetailsService}
+\end{figure}\FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe permette di ottenere i dati personali degli utenti;
+	\item \textbf{Utilizzo}: utilizzata per ottenere i dati personali di un utente. Permette inoltre di trovare i dati di utenti ricercati tramite l'apposita barra di ricerca;
+	\item \textbf{Relazione con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{UserDetailsModel}: rappresenta un utente. Contiene tutte le informazioni necessarie alla
+		presentazione del contenuto di un utente sia nella visualizzazione che nella gestione di un profilo; 
+		\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+		\item \textit{OUT} \texttt{UserDetailsController}: questa classe permette di gestire i dati di un utente;
+		\item \textit{OUT} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente. 
+	\end{itemize}
+	\item \textbf{Attributi:}
+	\begin{itemize}
+		\item \texttt{-} \texttt{\$http: \$http} \\ Campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+		\item \texttt{-} \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+	\end{itemize}
+	\item \textbf{Metodi:}
+	\begin{itemize}
+		\item \texttt{+} \texttt{UserDetailsService(\$http: \$http, \$q: \$q)} \\ Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$http: \$http} \\ Campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
+			\item \texttt{-} \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
+		\end{itemize}
+		\item \texttt{+} \texttt{getUserDetails(username: String): Promise} \\ Metodo che serve per ottenere i dettagli di un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{username: String} \\ Parametro che indica l'utente del quale andranno caricati tutti i dati personali.
+		\end{itemize}
+		\item \texttt{+} \texttt{confirmSaveUser(user: UserDetailsModel): Promise} \\Metodo che serve per inviare al back-end una richiesta di salvataggio persistente dei dati. Viene invocato da Confirm in SearchController. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{user: UserDetailModel} \\ Parametro che indica l'oggetto contenente tutti i dati dell'utente che dovranno essere salvati dal back-end.
+		\end{itemize}
+	
+	\end{itemize}
+\end{itemize}

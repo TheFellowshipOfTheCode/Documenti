@@ -1,0 +1,41 @@
+
+		\paragraph{QuizziPedia::Front-End::Directives::TrueFalseAnswerDirective}
+		
+		\label{QuizziPedia::Front-End::Directives::TrueFalseAnswerDirective}
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_TrueFalseAnswerTemplate.png}
+			\caption{QuizziPedia::Front-End::Directives::TrueFalseAnswerDirective}
+		\end{figure} \FloatBarrier
+		
+		\begin{itemize}
+			\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene visualizzato dinamicamente all'interno delle views TrainingView e FillingQuestionnaireView mediante il controller QuestionsController;
+			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda vero e falso;
+			\item \textbf{Relazioni con altre classi}: 
+			\begin{itemize}
+				\item \textit{IN} \texttt{TrainingModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrainingView} e il controller \texttt{TrainingController}; 
+				\item \textit{IN} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
+			\end{itemize}
+			\item \textbf{Attributi}: 
+			\begin{itemize}
+				\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+				\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene:
+				\begin{itemize}
+					\item \texttt{+ questionText: String} \\ Identifica il testo della domanda;
+					\item \texttt{+ image: String} \\ Identifica l'url di una possibile immagine nella domanda;
+					\item \texttt{+ answers: Array} \\ Array che contiene coppie di valori. Queste coppie sono formate da:
+					\begin{itemize}
+						\item \texttt{+ type: String} \\ Indica la tipologia della risposta;
+						\item \texttt{+ text: String} \\ Contiene il testo dell'affermazione;
+						\item \texttt{+ url: String} \\ Rappresenta l'immagine della risposta;
+						\item \texttt{+ attributesForTForMultiple: Mixed} \\ Contiene i seguenti attributi:
+						\begin{enumerate}
+							\item \texttt{+ isItRight: Boolean} \\ Contiene se la risposta è vera o falsa.
+						\end{enumerate}
+					\end{itemize}
+				\end{itemize}
+				\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+			\end{itemize}
+		\end{itemize}																	
