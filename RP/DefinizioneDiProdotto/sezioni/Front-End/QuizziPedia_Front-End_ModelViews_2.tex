@@ -67,19 +67,25 @@
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item ;
+			\item \texttt{+ title: String}\\
+			Questo attributo rappresenta il titolo del questionario;
+			\item \texttt{+ author: ObjectId}\\
+			Questo attributo rappresenta l'autore del questionario;
+	
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-			\item \texttt{+} \texttt{getQuestionnaire(quizId: String): QuestionnaireModel}: \\ Metodo che permette di ottenere l'intero questionario; \\
+			\item \texttt{+} \texttt{loadNextQuestion(question: QuestionItemModel): void}: \\ Metodo che invoca l'evento per visualizzare la domanda successiva del quiz tramite QuestionController; \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{quizId: String}: parametro che indica l'id del quiz che vogliamo ricevere dal back-end.
+				\item \texttt{question: QuestionItemModel} \\
+				Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
 			\end{itemize}
-			\item \texttt{+} \texttt{getNextQuestion(questionId: String): QuestionItemModel}: \\ Metodo che ritorna la domanda successiva del quiz tramite chiamata a QuestionController; \\
+			\item \texttt{+} \texttt{loadPreviousQuestion(question: QuestionItemModel): void}: \\ Metodo che invoca l'evento per visualizzare la domanda precedente del quiz tramite QuestionController; \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{questionId: String}: parametro che indica l'id della domanda che vogliamo ricevere dal back-end.
+				\item \texttt{question: QuestionItemModel} \\
+				Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
