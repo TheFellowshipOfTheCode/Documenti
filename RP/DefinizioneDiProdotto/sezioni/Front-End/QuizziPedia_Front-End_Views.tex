@@ -647,19 +647,18 @@
 	\caption{QuizziPedia::Front-End::Views:CreateQuestionnaireView}
 \end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view per la creazione del questionario;
+	\item \textbf{Descrizione}: view per la creazione del questionario. In questo componente viene permesso anche all'utente di:
+	\begin{itemize}
+		\item Effettuare delle ricerche sul database di domande;
+		\item Selezionare le domande da inserire nel questionario;
+		\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
+	\end{itemize}
 	\item \textbf{Utilizzo}: permette all'utente di creare un questionario compilando tutti i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreateQuestionnaireController}:  questa classe permette di gestire la creazione di un questionario;
 		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController};
 		\item \textit{IN} \texttt{KeywordsDirective}: directive che permette di gestire l'inserimento dell'argomento e delle keywords al momento della creazione della domanda;
-		\item \textit{IN} \texttt{QuestionsManagementQuestionnaireDirective}: rappresenta il componente grafico che permette all'utente di:
-		\begin{itemize}
-			\item Effettuare delle ricerche sul database di domande;
-			\item Selezionare le domande da inserire nel questionario;
-			\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
-		\end{itemize}
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 		\item \textbf{Attributi}:
@@ -669,6 +668,10 @@
 			\item \texttt{+ buttonConfirmLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
 			\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
 			\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
+			\item \texttt{+ question: String} \\ Attributo che conterrà la stringa per la ricerca della domanda;
+			\item \texttt{+ questions: Array} \\ Array contenente le domande trovate durante la ricerca;
+			\item \texttt{+ pushButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inserimento delle domande selezionate, in italiano o in inglese;
+			\item \texttt{+ deleteButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di eliminazione delle domande dal questionario, in italiano o in inglese;
 		\end{itemize}
 \end{itemize}
 
