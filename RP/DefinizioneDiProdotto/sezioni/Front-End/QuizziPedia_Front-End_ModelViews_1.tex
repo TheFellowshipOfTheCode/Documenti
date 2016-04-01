@@ -42,20 +42,23 @@
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: ;
-		\item \textbf{Utilizzo}: ;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{View}: ; 
-			\item \textit{IN} \texttt{Controller}: ;
+			\item \textit{IN} \texttt{SignUpView}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login; 
+			\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item ;
+			\item \texttt{+ user: Object} \\ Campo dati contenente i seguenti attributi: \texttt{name}, \texttt{surname}, \texttt{username}, \texttt{email}, \texttt{password} e \texttt{passwordCheck}.
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-			\item ;
+			\item \texttt{+} \texttt{signUp(): void} \\
+			Metodo che richiama il metodo \texttt{signUp} del service \texttt{AuthService} passandogli un oggetto di tipo \texttt{SignUpModelView}. Nel caso di buona riuscita dell'operazione viene mostrato un messaggio di successo. Con l'azione di click sul bottone presentato dal messaggio di successo è possibile effettuare il redirect alla pagina di login dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
+			\item \texttt{+} \texttt{logIn(): void} \\
+			Metodo che gestisce l’evento click sul pulsante di login. Effettua il redirect alla pagina di login;
 		\end{itemize}
 	\end{itemize}
 	
@@ -70,12 +73,12 @@
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: ;
-		\item \textbf{Utilizzo}: ;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{PasswordForgotView} e il controller \texttt{PasswordForgotController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{PasswordForgotView} e il controller \texttt{PasswordForgotController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{View}: ; 
-			\item \textit{IN} \texttt{Controller}: ;
+			\item \textit{IN} \texttt{PasswordForgotView}: view contenente le form necessarie per il recupero della password dimenti- cata; 
+			\item \textit{IN} \texttt{PasswordForgotController}: questa classe permette di gestire il ripristino della password dimenticata;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
@@ -98,12 +101,12 @@
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: ;
-		\item \textbf{Utilizzo}: ;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{HomeView} e il controller \texttt{HomeController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{HomeView} e il controller \texttt{HomeController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{View}: ; 
-			\item \textit{IN} \texttt{Controller}: ;
+			\item \textit{IN} \texttt{HomeView}: view contenente la direttiva per barra di ricerca degli utenti e questionari e il bottone che porterà l’utente nella modalità allenamento; 
+			\item \textit{IN} \texttt{HomeController}: questa classe permette di gestire la home page;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
@@ -122,16 +125,16 @@
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
-		\caption{QuizziPedia::Front-End::ModelViews::HomeModelView}
+		\caption{QuizziPedia::Front-End::ModelViews::ResultsModelView}
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: ;
-		\item \textbf{Utilizzo}: ;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{ResultsController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{ResultsController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{View}: ; 
-			\item \textit{IN} \texttt{Controller}: ;
+			\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari trovati; 
+			\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all’interno dell’applicazione;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
@@ -150,16 +153,16 @@
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
-		\caption{QuizziPedia::Front-End::ModelViews::HomeModelView}
+		\caption{QuizziPedia::Front-End::ModelViews::SearchQuestionnaire}
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: ;
-		\item \textbf{Utilizzo}: ;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{View}: ; 
-			\item \textit{IN} \texttt{Controller}: ;
+			\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i que- stionari trovati; 
+			\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all’interno dell’applicazione;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
@@ -171,23 +174,23 @@
 		\end{itemize}
 	\end{itemize}
 	
-	\paragraph{QuizziPedia::Front-End::ModelViews::SearchModelModelView}
+	\paragraph{QuizziPedia::Front-End::ModelViews::SearchModelView}
 	
-	\label{QuizziPedia::Front-End::ModelViews::SearchUserModelView}
+	\label{QuizziPedia::Front-End::ModelViews::SearchModelView}
 	
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
-		\caption{QuizziPedia::Front-End::ModelViews::HomeModelView}
+		\caption{QuizziPedia::Front-End::ModelViews::SearchModelView}
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: ;
-		\item \textbf{Utilizzo}: ;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{View}: ; 
-			\item \textit{IN} \texttt{Controller}: ;
+			\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i que- stionari trovati; 
+			\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all’interno dell’applicazione;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
@@ -198,3 +201,122 @@
 			\item ;
 		\end{itemize}
 	\end{itemize}	
+
+
+	\paragraph{QuizziPedia::Front-End::ModelViews::ProfileManagementModelView}
+	
+	\label{QuizziPedia::Front-End::ModelViews::ProfileManagementModelView}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\caption{QuizziPedia::Front-End::ModelViews::ProfileManagementModelView}
+	\end{figure} \FloatBarrier
+	
+	\begin{itemize}
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ProfileManagementView} e il controller \texttt{ProfileManagementController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ProfileManagementView} e il controller \texttt{ProfileManagementController} rendendo disponibili variabili e metodi;
+		\item \textbf{Relazioni con altre classi}: 
+		\begin{itemize}
+			\item \textit{IN} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema; 
+			\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
+		\end{itemize}
+		\item \textbf{Attributi}: 
+		\begin{itemize}
+			\item ;
+		\end{itemize}
+		\item \textbf{Metodi}: 
+		\begin{itemize}
+			\item ;
+		\end{itemize}
+	\end{itemize}	
+
+\paragraph{QuizziPedia::Front-End::ModelViews::QuestionsManagementModelView}
+
+\label{QuizziPedia::Front-End::ModelViews::QuestionsManagementModelView}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+	\caption{QuizziPedia::Front-End::ModelViews::QuestionsManagementModelView}
+\end{figure} \FloatBarrier
+
+\begin{itemize}
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};
+	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController} rendendo disponibili variabili e metodi;
+	\item \textbf{Relazioni con altre classi}: 
+	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l’elenco delle domande create; 
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire le domande create dall’utente e di crearne di nuove;
+	\end{itemize}
+	\item \textbf{Attributi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+	\item \textbf{Metodi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+\end{itemize}	
+
+\paragraph{QuizziPedia::Front-End::ModelViews::StatisticsModelView}
+
+\label{QuizziPedia::Front-End::ModelViews::StatisticsModelView}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+	\caption{QuizziPedia::Front-End::ModelViews::StatisticsModelView}
+\end{figure} \FloatBarrier
+
+\begin{itemize}
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StatisticsView} e il controller \texttt{StatisticsController};
+	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{StatisticsView} e il controller \texttt{StatisticsController} rendendo disponibili variabili e metodi;
+	\item \textbf{Relazioni con altre classi}: 
+	\begin{itemize}
+		\item \textit{IN} \texttt{StatisticsView}: view che visualizza le statistiche di un utente; 
+		\item \textit{IN} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente;
+	\end{itemize}
+	\item \textbf{Attributi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+	\item \textbf{Metodi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+\end{itemize}	
+
+\paragraph{QuizziPedia::Front-End::ModelViews::MenuBarModelView}
+
+\label{QuizziPedia::Front-End::ModelViews::MenuBarModelView}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+	\caption{QuizziPedia::Front-End::ModelViews::MenuBarModelView}
+\end{figure} \FloatBarrier
+
+\begin{itemize}
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{Index} e il controller \texttt{MenuBarController};
+	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{Index} e il controller \texttt{MenuBarController} rendendo disponibili variabili e metodi;
+	\item \textbf{Relazioni con altre classi}: 
+	\begin{itemize}
+		\item \textit{IN} \texttt{Index}: pagina alla base di tutte le view dell'applicazione; 
+		\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
+	\end{itemize}
+	\item \textbf{Attributi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+	\item \textbf{Metodi}: 
+	\begin{itemize}
+		\item ;
+	\end{itemize}
+\end{itemize}
+
+
+
+%ModelView di tutte le tipologie di DOMANDE
+
+
