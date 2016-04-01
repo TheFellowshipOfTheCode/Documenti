@@ -1,0 +1,52 @@
+\paragraph{QuizziPedia::Front-End::Controllers::QuestionnaireDetailsController}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionnaireDetailsController.png}
+	\caption{QuizziPedia::Front-End::Controllers::QuestionnaireDetailsController}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe permette di gestire i dettagli di un questionario; 
+	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end i dettagli di un questionario creato da un utente al fine di poterli visualizzare nel suo profilo;
+	\item \textbf{Relazione con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: ;
+		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textit{} \texttt{QuestionnaireModel}: ;
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};
+		\item \texttt{-} \texttt{QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \texttt{+} \texttt{deatails: QuestionnaireDetailsModelView} \\
+		Oggetto di tipo \texttt{QuestionnaireDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController};
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootscope: \$rootscope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\ Metodo costruttore della classe;
+		\textbf{Parametri}: 
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+			Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};	
+			\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+			Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{-} \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz;
+		\end{itemize}
+		
+		\item \texttt{-} \texttt{getQuestionnaireDetails(username: String)}: \\ Metodo che richiede al service i dettagli dei questionari eseguiti dall'utente.
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{username: String}: username dell'utente del quale caricare i questionari.
+		\end{itemize}
+		\item \texttt{-} \texttt{getSubscribedQuestionnaire(username: String)}: \\Metodo che ritorna i questionari a cui l'utente è iscritto.
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{username: String}: identificativo dell'utente del quale scaricare i questionari a cui è iscritto.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
