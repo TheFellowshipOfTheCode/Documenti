@@ -1,0 +1,25 @@
+\paragraph{QuizziPedia::Front-End::ModelViews::QuestionnaireManagementModelView}
+	
+	\label{QuizziPedia::Front-End::ModelViews::QuestionnaireManagementModelView}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\caption{QuizziPedia::Front-End::ModelViews::QuestionnaireManagementModelView}
+	\end{figure} \FloatBarrier
+	
+	\begin{itemize}
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireManagementView} e il controller \texttt{QuestionnaireManagementController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireManagementView} e il controller \texttt{QuestionnaireManagementController} rendendo disponibili variabili e metodi;
+		\item \textbf{Relazioni con altre classi}: 
+		\begin{itemize}
+			\item \textit{IN} \texttt{QuestionnaireManagementView}: view principale per la gestione dei questionari; 
+			\item \textit{IN} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente;
+		\end{itemize}
+		\item \textbf{Attributi}: 
+		\begin{itemize}
+			\item \texttt{+ questionnaireList: Array} \\ Array contenente la lista dei questionari creati; ogni questionario sarà rappresentato come un oggetto;
+		\end{itemize}
+	\end{itemize}
+	
+	

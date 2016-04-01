@@ -1,0 +1,37 @@
+\paragraph{QuizziPedia::Front-End::ModelViews::SignUpModelView}
+	
+	\label{QuizziPedia::Front-End::ModelViews::SignUpModelView}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\caption{QuizziPedia::Front-End::ModelViews::SignUpModelView}
+	\end{figure} \FloatBarrier
+	
+	\begin{itemize}
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController} rendendo disponibili variabili e metodi;
+		\item \textbf{Relazioni con altre classi}: 
+		\begin{itemize}
+			\item \textit{IN} \texttt{SignUpView}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login; 
+			\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
+		\end{itemize}
+		\item \textbf{Attributi}: 
+		\begin{itemize}
+			\item \texttt{+ name} \\ Campo dati contenente il nome;
+			\item \texttt{+ surname} \\ Campo dati contenente il cognome;
+			\item \texttt{+ username} \\ Campo dati contenente lo username;
+			\item \texttt{+ email} \\ Campo dati contenente la email;
+			\item \texttt{+ password} \\ Campo dati contenente la password;
+			\item \texttt{+ passwordCheck} \\ Campo dati contenente la variabile di conferma password.
+		\end{itemize}
+		\item \textbf{Metodi}: 
+		\begin{itemize}
+			\item \texttt{+} \texttt{signUp(): void} \\
+			Metodo che richiama il metodo \texttt{signUp} del service \texttt{AuthService} passandogli un oggetto di tipo \texttt{SignUpModelView}. Nel caso di buona riuscita dell'operazione viene mostrato un messaggio di successo. Con l'azione di click sul bottone presentato dal messaggio di successo è possibile effettuare il redirect alla pagina di login dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
+			\item \texttt{+} \texttt{logIn(): void} \\
+			Metodo che gestisce l’evento click sul pulsante di login. Effettua il redirect alla pagina di login;
+		\end{itemize}
+	\end{itemize}
+	
+	
