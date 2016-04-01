@@ -1,0 +1,32 @@
+\paragraph{QuizziPedia::Front-End::Models::MenuBarModel}
+		
+		\label{QuizziPedia::Front-End::Models::MenuBarModel}
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Models_MenuBarModel.png}
+			\caption{QuizziPedia::Front-End::Models::MenuBarModel}
+		\end{figure} \FloatBarrier
+		
+		\begin{itemize}
+			\item \textbf{Descrizione}: questa classe racchiude i dati necessari per la creazione dinamica della barra menù posizionata in modo fisso su ogni pagina;
+			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati necessari per la creazione dinamica della barra menù posizionata in modo fisso su ogni pagina;
+			\item \textbf{Relazioni con altre classi}: 
+			\begin{itemize}
+				\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
+			\end{itemize}
+			\item \textbf{Attributi}: 
+			\begin{itemize}
+				\item \texttt{- arrayOfDirectives: Array[String]}\\
+				Questo attributo contiene l'\texttt{array} di direttive possibili per la creazione dinamica della barra menù posizionata in modo fisso su ogni pagina;
+			\end{itemize}
+			\item \textbf{Metodi}: 
+			\begin{itemize}
+				\item \texttt{+ getDirective(path: String): Array[String]} \\
+				Metodo \textit{getter\ped{G}} che restituisce un \texttt{array} di \texttt{String} contenente le giuste direttive per quella pagina;
+				
+			\end{itemize}
+		\end{itemize}		
+		
+		
+		
