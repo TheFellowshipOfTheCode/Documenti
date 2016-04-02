@@ -35,14 +35,14 @@
 			\item \texttt{QuestionService: QuestionService} \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
 		\end{itemize}
-		\item \texttt{+} \texttt{getQuestionsByUser(username: String)} \\ 
+		\item \texttt{+} \texttt{getQuestionsByUser(username: String) : Array[QuestionItemMode]} \\ 
 		Metodo che acquisisce le domande create dall'utente attraverso il \texttt{QuestionService};\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String} \\
 			Parametro di tipo \texttt{String} contenente l'username dell'utente;
 		\end{itemize}
-		\item \texttt{+} \texttt{editQuestion(idQuestion: String)} \\ 
+		\item \texttt{+} \texttt{editQuestion(idQuestion: String) : Void} \\ 
 		Metodo che gestisce l’evento click sul pulsante per modificare la domanda. Effettua il redirect alla pagina di modifica della domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
