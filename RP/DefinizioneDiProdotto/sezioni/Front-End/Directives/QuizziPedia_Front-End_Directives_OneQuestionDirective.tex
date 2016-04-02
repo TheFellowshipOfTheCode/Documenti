@@ -10,7 +10,7 @@
 \FloatBarrier
 
 \begin{itemize}
-	\item \textbf{Descrizione}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click sul pulsante di modifica sarà possibile modificare tale domanda. All'interno di QuestionsManagementsView verranno stampati a video tanti componenti quanti presenti nello \$scope isolato ad esso associato;
+	\item \textbf{Descrizione}: rappresenta il componente grafico che visualizza all'utente l'anteprima della domanda che ha creato. Eseguendo l'azione di click sul pulsante di modifica sarà possibile modificare tale domanda. All'interno di \texttt{QuestionsManagementsView} verranno stampati a video tanti componenti quanti presenti nello \texttt{\$scope} isolato ad esso associato;
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare le domande che ha creato;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
@@ -19,6 +19,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \item {+ modifyButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di modifica della domanda, in italiano o in inglese.
+		\item \texttt{+ data: Object} \\ Oggetto contenete le informazioni da mostrare nell'anteprima della domanda;
+		\item \texttt{+ modifyButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di modifica della domanda, in italiano o in inglese.
 	\end{itemize}
 \end{itemize}

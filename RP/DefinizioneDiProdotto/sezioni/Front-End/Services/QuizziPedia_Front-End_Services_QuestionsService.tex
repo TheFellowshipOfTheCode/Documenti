@@ -47,7 +47,7 @@
 			\item \texttt{image: String} \\ Identifica un'immagine associata alla domanda;
 			\item \texttt{answer: String[]} \\ Identifica l'array delle risposte alla domanda.
 		\end{itemize}
-		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise} \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise} \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String} \\ Parametro che indica l'utente del quale andranno caricate tutte le domande da lui create.
@@ -56,6 +56,12 @@
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{key: String} \\ Parametro che identifica la stringa con la quale cercare le keywords.
-		\end{itemize} 
+		\end{itemize}
+		\item \texttt{+} \texttt{getQuestion(idQuestion: String): Promise} \\ Metodo che ritorna la domanda associata all'id passato come parametro. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \item \texttt{idQuestion: String} \\ Parametro che indica l'id della domanda da recuperare e restituire.
+		\end{itemize}
+		\item \texttt{+} \texttt{getNextQuestion(): Promise} \\ Metodo che ritorna la domanda successiva nella modalità allenamento. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.
 	\end{itemize}
 \end{itemize}

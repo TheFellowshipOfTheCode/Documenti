@@ -9,16 +9,16 @@
 \end{figure} \FloatBarrier
 
 \begin{itemize}
-	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
 		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l’elenco delle domande create; 
-		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire le domande create dall’utente e di crearne di nuove;
+		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire le domande create dall’utente e di crearne di nuove.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
+		\item \texttt{+ data: Object} \\ Oggetto contenete le informazioni da mostrare nell'anteprima della domanda;
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
