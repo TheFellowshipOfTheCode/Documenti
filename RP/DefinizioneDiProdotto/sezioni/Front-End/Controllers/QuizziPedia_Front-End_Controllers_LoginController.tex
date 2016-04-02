@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::LoginController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_LoginController.png}
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_LoginController.png}
 	\caption{QuizziPedia::Front-End::Controllers::LoginController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -19,9 +19,9 @@
 		\item \texttt{-} \texttt{\$location: \$location} \\
 		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
-		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 		\item \texttt{-} \texttt{AuthService: AuthService} \\
-		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn()} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
 		\item \texttt{+} \texttt{user: LoginModelView} \\
 		Oggetto di tipo \texttt{LoginModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{LoginView} e il controller \texttt{LoginController};
 	\end{itemize}
@@ -36,12 +36,12 @@
 				\item \texttt{\$location: \$location} \\
 				Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 				\item \texttt{\$mdDialog: \$mdDialog} \\
-				Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+				Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 				\item \texttt{AuthService: AuthService} \\
-				Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
+				Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn()} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{email} e \texttt{password};
 			\end{itemize}
 		\item \texttt{+} \texttt{logIn(): void} \\
-		Metodo che richiama il metodo \texttt{Login} del service \texttt{AuthService} passandogli \texttt{username} e \texttt{password}. Nel caso di buona riuscita dell'operazione viene effettuato il redirect alla homepage dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
+		Metodo che richiama il metodo \texttt{Login} del service \texttt{AuthService} passandogli \texttt{email} e \texttt{password}. Nel caso di buona riuscita dell'operazione viene effettuato il redirect alla homepage dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
 		\item \texttt{+} \texttt{signUp(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di registrazione. Effettua il redirect alla pagina di registrazione;
 		\item \texttt{+} \texttt{recoveryPassword(): void} \\
