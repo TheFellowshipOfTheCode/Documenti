@@ -38,14 +38,10 @@
 			\item \texttt{-} \texttt{\$http: \$http} \\ Campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
 			\item \texttt{-} \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 		\end{itemize}
-		\item \texttt{+} \texttt{sendQuestion(type: String, lang: String, text: String, image: String, answer: String[]): Promise} \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata;\\
+		\item \texttt{+} \texttt{sendQuestion(question: QuestionItemModel): Promise} \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata; In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al controller un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
 		\textbf{Parametri}: 
 		\begin{itemize}
-			\item \texttt{type: String} \\ Identifica la tipologia della domanda;
-			\item \texttt{lang: String} \\ Identifica la lingua della domanda;
-			\item \texttt{text: String} \\ Identifica il testo della domanda;
-			\item \texttt{image: String} \\ Identifica un'immagine associata alla domanda;
-			\item \texttt{answer: String[]} \\ Identifica l'array delle risposte alla domanda.
+			\item \texttt{question: QuestionItemModel} \\ Identifica tutti i dettagli di una domanda.
 		\end{itemize}
 		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise} \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
 		\textbf{Parametri}:

@@ -9,11 +9,13 @@
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrueFalseQuestionsView} e il controller \texttt{TrueFalseQuestionsController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente le direttive per creare una domanda vero/falso; 
 		\item \textit{IN} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
+		\item \textit{OUT} \texttt{TrueFalseQuestionsView}: view contenente le direttive per creare una domanda vero/falso.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
+	  \item \texttt{question: Object} \\ Oggetto contenete i dati della domanda, ovvero:
+	  \begin{itemize}
 		\item \texttt{questionText: String}: identifica il testo della domanda;
 		\item \texttt{image: String}: identifica l'url di una possibile immagine nella domanda;
 		\item \texttt{answers: Array}: array che contiene coppie di valori. Queste coppie sono formate da:
@@ -26,6 +28,7 @@
 				\item \texttt{isItRight: Boolean}: contiene se la risposta è vera o falsa.
 			\end{enumerate}
 		\end{itemize}
+	\end{itemize}
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}

@@ -9,7 +9,6 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per inserire una nuova domanda vero/falso nel database e per modificarne una esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrueFalseQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrueFalseQuestionsView} e il controller \texttt{TrueFalseQuestionsController};
 		\item \textit{IN} \texttt{QuestionService}: questa classe permette di:
 			\begin{itemize}
 				\item Ottenere una domanda attraverso il metodo dedicato;
@@ -17,6 +16,7 @@
 				\item Caricare una nuova domanda.
 			\end{itemize}
 		\item \textit{IN} \texttt{QuestionItemModel}: questa classe rappresenta il modello di una domanda;
+		\item \textit{OUT} \texttt{TrueFalseQuestionsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrueFalseQuestionsView} e il controller \texttt{TrueFalseQuestionsController}.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
