@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::SearchController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_SearchController.png}
+	\includegraphics[scale=0.4]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_SearchController.png}
 	\caption{QuizziPedia::Front-End::Controllers::SearchController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -21,16 +21,18 @@
 		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{-} \texttt{\$routeParams: \$routeParams} \\
+		Campo dati contente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi e recuperare i parametri passati; 
 		\item \texttt{-} \texttt{SearchService: SearchService} \\
 		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alla ricerca. Viene utilizzato il metodo \texttt{search} di \$texttt{SearchService} a cui viene passato come parametro la stringa di ricerca;
 		\item \texttt{-} \texttt{QuizService: QuizService} \\
 		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate ai questionari. Viene utilizzato il metodo \texttt{subscribeQuestionnaire} di \$texttt{QuizService} per iscrivere un utente ad un questionario;
-		\item \texttt{+} \texttt{result: SearchModelView} \\
-		Oggetto di tipo \texttt{SearchModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultView} e il controller \texttt{SearchController};
+		\item \texttt{+} \texttt{result: ResultsModelView} \\
+		Oggetto di tipo \texttt{ResultsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultView} e il controller \texttt{SearchController};
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{SearchController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog, SearchService: SearchService)} \\
+		\item \texttt{+} \texttt{SearchController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog, \$routeParams: \$routeParams, SearchService: SearchService, QuizService: QuizService)} \\
 		Metodo costruttore della classe. Viene eseguita la ricerca per poter poi popolare il campo dati \texttt{result}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -40,8 +42,12 @@
 			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{-} \texttt{\$routeParams: \$routeParams} \\
+			Parametro contente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi e recuperare i parametri passati;
 			\item \texttt{SearchService: SearchService} \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alla ricerca. Viene utilizzato il metodo \texttt{search} di \$texttt{SearchService} a cui viene passato come parametro la stringa di ricerca;
+			\item \texttt{QuizService: QuizService} \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate ai questionari. Viene utilizzato il metodo \texttt{subscribeQuestionnaire} di \$texttt{QuizService} per iscrivere un utente ad un questionario;
 		\end{itemize} 
 		\item \texttt{-} \texttt{getSearch(stringSearch: String): SearchModelView} \\
 		Metodo che esegue la ricerca utilizzando un metodo fornito dalla classe SearchService. \\
@@ -50,12 +56,12 @@
 			\item \texttt{stringSearch: String} \\
 			Parametro contenente la stringa della quale effettuare la ricerca;
 		\end{itemize} 
-		\item \texttt{+} \texttt{goToUser(idUser: String): void} \\
+		\item \texttt{+} \texttt{goToUser(username: String): void} \\
 		Metodo che gestisce l’evento click sul bottone per visualizzare il profilo dell'utente selezionato. Effettua il redirect alla pagina dell'utente.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{idUser: String} \\
-			Parametro contenente l'id dell'utente di cui si vuole visualizzare il profilo;
+			\item \texttt{username: String} \\
+			Parametro contenente l'username dell'utente di cui si vuole visualizzare il profilo;
 		\end{itemize} 
 		\item \texttt{+} \texttt{registrationToQuiz(idQuiz: String): void} \\
 		Metodo che gestisce l’evento click sul pulsante di registrazione al questionario.\\
