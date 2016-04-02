@@ -4,7 +4,7 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_SignUpModelView.png}
 		\caption{QuizziPedia::Front-End::ModelViews::SignUpModelView}
 	\end{figure} \FloatBarrier
 	
@@ -13,17 +13,12 @@
 		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{SignUpView} e il controller \texttt{SignUpController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{SignUpView}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login; 
-			\item \textit{IN} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
+			\item \textit{OUT} \texttt{SignUpView}: view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login; 
+			\item \textit{OUT} \texttt{SignUpController}: questa classe permette di gestire la registrazione di un utente al sistema;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item \texttt{+ name} \\ Campo dati contenente il nome;
-			\item \texttt{+ surname} \\ Campo dati contenente il cognome;
-			\item \texttt{+ username} \\ Campo dati contenente lo username;
-			\item \texttt{+ email} \\ Campo dati contenente la email;
-			\item \texttt{+ password} \\ Campo dati contenente la password;
-			\item \texttt{+ passwordCheck} \\ Campo dati contenente la variabile di conferma password.
+			\item \texttt{+ user: Object} \\ Campo dati contenente i seguenti attributi: \texttt{name: String}, \texttt{surname: String}, \texttt{username: String}, \texttt{email: String}, \texttt{password: String} e \texttt{passwordCheck: String};
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
