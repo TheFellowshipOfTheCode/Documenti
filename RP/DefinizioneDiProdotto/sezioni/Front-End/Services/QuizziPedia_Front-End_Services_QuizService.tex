@@ -39,8 +39,9 @@
 	\begin{itemize}
 		\item \texttt{quizId: String} \\ Parametro che rappresenta il questionario da cercare.
 	\end{itemize}
-	\item \texttt{+} \texttt{subscribeQuestionnaire(username: String): Void} \\Metodo per iscriversi ad un questionario;
+	\item \texttt{+} \texttt{subscribeQuestionnaire(quizId: String, username: String): Void} \\Metodo per iscriversi ad un questionario;
 	\begin{itemize}
+		\item \texttt{quizId: String} \\ Parametro che rappresenta il questionario in cui iscrivere l'utente;
 		\item \texttt{username: String} \\ Parametro che rappresenta l'utente da registrare al questionario.
 	\end{itemize}
 	\item \texttt{+} \texttt{getQuestionnaireDetails(username: String): Promise} \\Metodo che serve per ritornare i dettagli di tutti i questionari creati da un utente; Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{StatisticsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\ 
