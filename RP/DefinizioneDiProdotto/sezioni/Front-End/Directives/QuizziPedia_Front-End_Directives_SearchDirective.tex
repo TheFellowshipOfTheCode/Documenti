@@ -10,22 +10,21 @@
 
 \begin{itemize}
 	\item \textbf{Descrizione}: directive che permette di effettuare la ricerca di utenti e questionari;
-	\item \textbf{Utilizzo}: permette all'utente di effettuare ricerche, è strutturata da:
+	\item \textbf{Utilizzo}: permette all'utente di effettuare ricerche, è formata da:
 	\begin{itemize}
 		\item Barra di ricerca;
 		\item Pulsante per effettuare la ricerca;
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-			\item \textit{IN} \texttt{HomeView}: view contenente la barra di ricerca per gli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
-		\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
-		\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+			\item \textit{OUT} \texttt{HomeView}: view contenente la barra di ricerca per gli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
+		\item \textit{OUT} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
 		\item \textit{IN} \texttt{ResultsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView}, la directive \texttt{SearchDirective} e il controller \texttt{ResultsController};
 		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{+ string: String} \\ Attributo che contiene l'informazione cercata;
+		\item \texttt{+ userOrQuestionnaire: String} \\ Attributo che contiene l'informazione cercata;
 		\item \texttt{+ searchButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di ricerca, in italiano o in inglese;
 		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
 		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;

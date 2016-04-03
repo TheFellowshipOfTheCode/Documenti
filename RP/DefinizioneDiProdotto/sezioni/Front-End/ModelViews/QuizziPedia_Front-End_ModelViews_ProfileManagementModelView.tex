@@ -4,7 +4,7 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_ProfileManagementModelView.png}
 		\caption{QuizziPedia::Front-End::ModelViews::ProfileManagementModelView}
 	\end{figure} \FloatBarrier
 	
@@ -13,22 +13,18 @@
 		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ProfileManagementView} e il controller \texttt{ProfileManagementController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema; 
-			\item \textit{IN} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
+			\item \textit{OUT} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema; 
+			\item \textit{OUT} \texttt{ProfileManagementController}: questa classe permette di gestire il profilo personale di un utente;
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-				\item \texttt{+ name} \\ Campo dati che conterrà il nome dell'utente;
-				\item \texttt{+ surname} \\ Campo dati che conterrà il cognome dell'utente;
-				\item \texttt{+ email} \\ Campo dati che conterrà l'email dell'utente;
-				\item \texttt{+ image} \\ Campo dati che conterrà l'immagine del profilo dell'utente;
-				\item \texttt{+ password} \\ Campo dati che conterrà la password dell'utente;
-				\item \texttt{+ passwordCheck} \\ Campo dati che conterrà la password di conferma dell'utente.
+			\item \texttt{+ user: Object} \\ Campo dati contenente i seguenti attributi: \texttt{name: String}, \texttt{surname: String}, \texttt{email: String}, \texttt{image: String}, \texttt{password: String} e \texttt{passwordCheck: String};
+			\item \texttt{+ imageObject: Object} \\ Oggetto contenente i seguenti attributi: \texttt{+ imageUrl: String}, \texttt{+ image: Object};
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
 			\item \texttt{+} \texttt{confirm(): void} \\
-			Metodo che gestisce l’evento click sul pulsante di conferma modifica. Aggiorna, in caso di modifiche, l'oggetto locale \texttt{UserDetailsModel}. Inoltre, utilizzando il metodo dell'\texttt{UserDetailsService}, aggiorna anche nel server i dati dell'utente.
+			Metodo che gestisce l’evento click sul pulsante di conferma modifica. Aggiorna, in caso di modifiche accettate da sistema, l'oggetto locale \texttt{UserDetailsModel}. Inoltre, utilizzando il metodo dell'\texttt{UserDetailsService}, aggiorna anche nel server i dati dell'utente.
 		\end{itemize}
 	\end{itemize}	
 
