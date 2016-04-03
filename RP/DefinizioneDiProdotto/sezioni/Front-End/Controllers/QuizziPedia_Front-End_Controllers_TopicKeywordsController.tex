@@ -9,12 +9,12 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle parole chiave durante la creazione di un questionario;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TopicKeywordsModelView}: ; 
-		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
+		\item \textit{IN} \texttt{TopicKeywordsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{KeywordsController}; 
+		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere domande esistenti e salvare nuove domande.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{scope: Scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{QuestionService: QuestionService}\\ 
 		Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata.
@@ -23,10 +23,10 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{TopicKeywordsController(\$scope: \$scope)} \\Metodo costruttore della classe. \\
+		\item \texttt{+} \texttt{TopicKeywordsController(scope: Scope)} \\Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			\item \texttt{-} \texttt{scope: Scope} \\
 			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione; 
 		\end{itemize}
 		\item \texttt{+} \texttt{getKeywords(key: String): String[]}: \\ Metodo che ritorna le parole chiave data una una stringa di ricerca. 

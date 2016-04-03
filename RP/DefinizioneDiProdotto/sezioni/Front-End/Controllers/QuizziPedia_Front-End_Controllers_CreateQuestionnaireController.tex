@@ -15,7 +15,7 @@
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
-		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		\item \texttt{-} \texttt{scope: Scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
 		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestiontionnaire} e la lista dei questionari ottenuta dalla chiamata \texttt{getQuestionnairePreview};
@@ -43,22 +43,22 @@
 			\begin{itemize}
 				\item 
 			\end{itemize}
-		\item \texttt{+} \texttt{modifyQuestionnaire(quizId: QuestionnaireModel)}: \\ Metodo che serve per modificare un questionario; \\
+		\item \texttt{+} \texttt{modifyQuestionnaire(quizId: QuestionnaireModel): Void} \\ Metodo che serve per modificare un questionario; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{quiz: QuestionnaireModel}: parametro che rappresenta l'oggetto questionario;
 			\end{itemize}
-		\item \texttt{+} \texttt{getQuestionnaire(quizId: String)}: \\Metodo che serve per ottenere un questionario tramite l'id in modo da poterlo modificare; \\
+		\item \texttt{+} \texttt{getQuestionnaire(quizId: String): QuestionnaireModel} \\Metodo che serve per ottenere un questionario tramite l'id in modo da poterlo modificare; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{quizId: String}: parametro che rappresenta l'id del questionario da richiedere.
 			\end{itemize}
-		\item \texttt{+} \texttt{getQuestionnairePreview(username: String)}: \\ Metodo che serve per ottenere la lista di tutti i questionari di un utente; \\
+		\item \texttt{+} \texttt{getQuestionnairePreview(username: String): QuestionnaireModel[]} \\ Metodo che serve per ottenere la lista di tutti i questionari di un utente; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che indica l'utente del quale vogliamo caricare tutti i questionari.
 			\end{itemize}
-		\item \texttt{+} \texttt{deleteQuestionnaire(quizId: String): void}: \\Metodo che elimina un questionario.
+		\item \texttt{+} \texttt{deleteQuestionnaire(quizId: String): Void} \\Metodo che elimina un questionario.
 		\textbf{Parametri}:
 		\texttt{quizId: String}: identificativo del questionario da eliminare.
 	\end{itemize}
