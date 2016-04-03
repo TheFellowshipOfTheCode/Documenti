@@ -9,11 +9,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare le domande che siano in accordo con il livello dell'utente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{TrainingModelView}: ;
-		\item \textit{IN} \texttt{TrainingModeModel}: ;
-		\item \textit{IN} \texttt{TrainingSetUpTemplate}: rappresenta il componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;
-		\item \textit{IN} \texttt{QuestionController}: ;
-		\item \textit{IN} \texttt{QuestionItemMode}: ;
+		\item \textit{IN} \texttt{TrainingModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{TrainingView} e il controller \texttt{TrainingController};
+		\item \textit{IN} \texttt{TrainingModeModel}: rappresenta un allenamento. Contiene tutte le informazioni necessarie alla	presentazione del contenuto di un allenamento;
+		\item \textit{IN} \texttt{QuestionController}: questa classe permette di gestire il recupero delle domande per far si che possano essere visualizzate nella modalità allenamento e nella compilazione dei questionari;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -28,7 +26,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{TrainingController(\$scope: \$scope, \$rootscope: \$rootscope, \$mdDialog: \$mdDialog)} \\ Metodo costruttore della classe; \\
+		\item \texttt{+} \texttt{TrainingController(\$scope: \$scope, \$rootscope: \$rootscope, \$mdDialog: \$mdDialog, TrainingModeModel: TrainingModeModel)} \\ Metodo costruttore della classe; \\
 		\textbf{Parametri:}
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
@@ -36,9 +34,36 @@
 			\item \texttt{\$rootscope: \$rootscope}\\
 			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per aggiornare in \$rootScope l'oggetto che rappresenta l'utente autenticato all'interno dell'applicazione;
 			\item \texttt{\$mdDialog: \$mdDialog} \\
-			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup.
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{TrainingModeModel: TrainingModeModel} \\ Rappresenta un allenamento. Contiene tutte le informazioni necessarie alla presentazione del contenuto di un allenamento;
 		\end{itemize}
-		\item \texttt{-} \texttt{getNextQuestion(): QuestionItemModel} \\ Metodo che gestisce l'evento del click al pulsante "prossima domanda", fa una richiesta al QuestionsController che ritornerà la domanda successiva. Questa domanda andrà salvata nel TrainingModeModel nello \$scope.
+		\item \texttt{+} \texttt{addQuestion(question: QuestionItemModel): void} \\
+		Metodo che gestisce l'evento per inserire una domanda nella cronologia delle domande. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{question: QuestionItemModel} \\
+			Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel};
+		\end{itemize}
+		\item \texttt{+} \texttt{loadNewQuestionBy(topic: String, keywords: Array[String], level: Number): void} \\
+		Metodo che emette l'evento per scaricare una nuova domanda in base ai parametri passati. Fa una richiesta al \texttt{QuestionsController} che andrà a scaricare la domanda e ad inserirla in \texttt{TrainingModeModel} nello \texttt{\$scope} mediante il metodo \texttt{addQuestion}; \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{topic: String} \\
+			Parametro contenente l'argomento della domanda;
+			\item \texttt{keywords: Array[String]} \\
+			Parametro contenente un\texttt{array} di stringhe che rappresenta le keywords scelte per l'allenamento;
+			\item \texttt{level: Number} \\
+			Parametro contenente il livello dell'utente.
+		\end{itemize}
+		\item \texttt{+} \texttt{addResult(questionNumber: Number, result: Boolean): void} \\
+		Metodo che gestisce l'evento per inserire il risultato di una domanda. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{questionNumber: Number} \\
+			Parametro contenente il numero della domanda risposta;
+			\item \texttt{result: Boolean} \\
+			Parametro contenente il risultato della domanda risposta.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 

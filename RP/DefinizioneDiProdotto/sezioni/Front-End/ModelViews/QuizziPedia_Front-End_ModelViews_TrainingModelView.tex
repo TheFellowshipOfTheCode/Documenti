@@ -18,10 +18,13 @@
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item \textit{+ topic: String} \\
-			Attributo contenente l'argomento scelto dall'utente per l'allenamento;
-			\item \textit{+ keywords: Array[String]}\\
-			Attributo contenente l'\texttt{array} di keywords scelte dall'utente per l'allenamento;
+			\item \texttt{+ training: Object} \\ Oggetto contenente al suo interno i seguenti campi:
+			\begin{itemize}
+				\item \texttt{+ argument: String} \\ Attributo contenente l'argomento scelto dall'utente per l'allenamento;
+				\item \texttt{+ keywords: Array[String]} \\ Attributo contenente l'\texttt{array} di keywords scelte dall'utente per l'allenamento;
+				\item \texttt{+ questionNumber: String} \\ Attributo che rappresenta il numero progressivo della domanda attuale;
+				\item \texttt{+ numberOfQuestions: String} \\ Attributo che rappresenta il numero di domande scelte.
+			\end{itemize}
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
@@ -41,8 +44,16 @@
 				\item \texttt{keywords: Array[String]} \\
 				Parametro contenente un\texttt{array} di stringhe che rappresenta le keywords scelte per l'allenamento;
 				\item \texttt{level: Number} \\
-				Parametro contenente il livello dell'utente;
+				Parametro contenente il livello dell'utente.
 			\end{itemize}
+			\item \texttt{+} \texttt{addResult(questionNumber: Number, result: Boolean): void} \\
+			Metodo che gestisce l'evento per inserire il risultato di una domanda nella cronologia delle domande. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionNumber: Number} \\
+				Parametro contenente il numero della domanda risposta;
+				\item \texttt{result: Boolean} \\
+				Parametro contenente il risultato della domanda risposta.
 		\end{itemize}
 	\end{itemize}
 	
