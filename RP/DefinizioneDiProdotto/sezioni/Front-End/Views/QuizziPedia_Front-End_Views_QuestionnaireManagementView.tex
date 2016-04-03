@@ -9,7 +9,6 @@
 	\item \textbf{Utilizzo}: permette di visualizzare tutti i questionari creati, quelli abilitati per la compilazione e quelli non ancora abilitati; contiene inoltre il link per la creazione di un nuovo questionario;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireManagementController}: questa classe permette di gestire tutti i questionari creati da un utente;
 		\item \textit{IN} \texttt{QuestionnaireManagementModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionnaireManagementView} e il controller \texttt{QuestionnaireManagementController};
 		\item \textit{IN} \texttt{EliminationAndModifyDirective}: direttiva contenente i componenti grafici  che permettono di eliminare un questionario o di modificarne uno esistente;
 		\item \textit{IN} \texttt{ExamModalityDirective}: directive contenete i componenti grafici per attivare la modalità esame su un questionario e gestire le iscrizioni;
@@ -18,8 +17,8 @@
 	\end{itemize}
 		\item \textbf{Attributi}:
 		\begin{itemize}
-			\item \texttt{+ titleLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
 			\item \texttt{+ questionnaireList: Array} \\ Array contenente la lista dei questionari creati; ogni questionario sarà rappresentato come un oggetto;
-			\item \texttt{+ buttonNewQuestionnaireLang: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di creazione di un nuovo questionario, in italiano o in inglese.
+			\item \texttt{+ titleLangQuestionnaireManagement: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+			\item \texttt{+ buttonNewQuestionnaireLangQuestionnaireManagement: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di creazione di un nuovo questionario, in italiano o in inglese.
 		\end{itemize}
 \end{itemize}

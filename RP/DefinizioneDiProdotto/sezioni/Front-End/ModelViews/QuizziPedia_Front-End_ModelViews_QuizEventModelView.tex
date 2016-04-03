@@ -4,7 +4,7 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_QuizEventModelView.png}
 	\caption{QuizziPedia::Front-End::ModelViews::QuizEventModelView}
 \end{figure} \FloatBarrier
 
@@ -32,11 +32,12 @@
 		\end{itemize}
 		\item \texttt{+} \texttt{subscribeManagement(quizId: String): void} \\
 		Metodo che gestisce l’evento click sul pulsante di gestione iscrizioni. Effettua il redirect alla pagina di gestione iscrizioni;
-		\item \texttt{+} \texttt{examModalityquizId: String(): void} \\
+		\textbf{parametri}:
 		\begin{itemize}
 			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
 		\end{itemize}
-		Metodo che gestisce l’evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari;
+		\item \texttt{+} \texttt{examModalityquizId: String(): void} \\Metodo che gestisce l’evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari;
+		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
 		\end{itemize}

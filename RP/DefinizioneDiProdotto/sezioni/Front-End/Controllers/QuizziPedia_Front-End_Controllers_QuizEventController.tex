@@ -9,9 +9,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per reagire ai comandi dell'utente, effettua redirect alle pagine richieste, come la visualizzazione delle statistiche di un questionario e iniziare un questionario in modalità esame.
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{CreationAndModifyDirective}:  
-		\item \textit{IN} \texttt{ExamModalityDirective}:
-		\item \textit{IN} \texttt{QuestionnaireResultsDirective}:
+		\item \textit{IN} \texttt{EliminationAndModifyDirective}: componente grafico contenente i bottoni per eliminare o modificare un questionario;  
+		\item \textit{IN} \texttt{ExamModalityDirective}: directive contenete i componenti grafici per attivare la modalità esame su un questionario e gestire le iscrizioni;
+		\item \textit{IN} \texttt{QuestionnaireResultsDirective}: rappresenta il componente grafico che permette all'utente autenticato pro di vedere i risultati di chi ha compilato il questionario. Tale componente è contenuto nella lista dei questionari abilitati alla compilazione. \'E possibile accedere alla lista dei risultati azionando l'evento ad esso collegato;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -46,11 +46,12 @@
 		\end{itemize}
 		\item \texttt{+} \texttt{subscribeManagement(quizId: String): void} \\
 		Metodo che gestisce l’evento click sul pulsante di gestione iscrizioni. Effettua il redirect alla pagina di gestione iscrizioni;
-		\item \texttt{+} \texttt{examModalityquizId: String(): void} \\
+		\textbf{parametri}:
 		\begin{itemize}
 			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
 		\end{itemize}
-		Metodo che gestisce l’evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari;
+		\item \texttt{+} \texttt{examModalityquizId: String(): void} \\Metodo che gestisce l’evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari;
+		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
 		\end{itemize}

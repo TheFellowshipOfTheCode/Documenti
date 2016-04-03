@@ -4,7 +4,7 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_QuestionnaireManagementModelView.png}
 		\caption{QuizziPedia::Front-End::ModelViews::QuestionnaireManagementModelView}
 	\end{figure} \FloatBarrier
 	
@@ -20,6 +20,14 @@
 		\begin{itemize}
 			\item \texttt{+ questionnaireList: Array} \\ Array contenente la lista dei questionari creati; ogni questionario sarà rappresentato come un oggetto;
 		\end{itemize}
+		\item \textbf{Metodi}:
+		\begin{itemize}
+				\item \texttt{+} \texttt{getUserQuestionnaire(username: String) QuestionnaireModel[]}: \\Metodo che ritorna tutti i questionari creati da un utente in un array di QuestionnaireModel.
+				\textbf{Parametri}:
+				\begin{itemize}
+					\item \texttt{username: String}: parametro che indica l'identificativo dell'utente del quale vogliamo scaricare tutti i questionari.
+				\end{itemize}
+		\end{itemize} 
 	\end{itemize}
 	
 	
