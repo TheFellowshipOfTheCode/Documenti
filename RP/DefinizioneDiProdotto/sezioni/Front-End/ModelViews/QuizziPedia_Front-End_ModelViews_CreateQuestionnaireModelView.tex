@@ -4,8 +4,8 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
-		\caption{QuizziPedia::Front-End::ModelViews::PasswordForgotModelView}
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_CreateQuestionnaireModelView.png}
+		\caption{QuizziPedia::Front-End::ModelViews::CreateQuestionnaireModelView}
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
@@ -21,21 +21,22 @@
 			\item \texttt{+ nameQuestionnaire: String}: \\ Attributo che specifica il nome del questionario creato;
 			\item \texttt{+ question: String} \\ Attributo che conterrà la stringa per la ricerca della domanda;
 			\item \texttt{+ questions: Array} \\ Array contenente le domande trovate durante la ricerca;
-			\item \texttt{+ questionsChosen: Array} \\ Array contenente le domande inserite nel questionario;
+			\item \texttt{+ questionsChosen: Array} \\ Array contenente le domande inserite nel questionario.
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-			\item \texttt{+} \texttt{createQuestionnaire(title: String, quiz: QuestionnaireModel)}: \\Metodo che permette di inserire un questionario nel database tramite richiesta al service; \\
+			\item \texttt{+} \texttt{createQuestionnaire(title: String, quiz: QuestionnaireModel) : Void}: \\Metodo che permette di inserire un questionario nel database tramite richiesta al service; \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item 
+				\item \texttt{title: String} \\ Parametro che indica il nome del questionario;
+				\item \texttt{quiz: QuestionnaireModel} \\ Parametro che racchiude tutti i dati di un questionario.
 			\end{itemize}
-			\item \texttt{+} \texttt{modifyQuestionnaire(quizId: QuestionnaireModel)}: \\ Metodo che serve per modificare un questionario; \\
+			\item \texttt{+} \texttt{modifyQuestionnaire(quizId: QuestionnaireModel): void}: \\ Metodo che serve per modificare un questionario; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{quiz: QuestionnaireModel}: parametro che rappresenta l'oggetto questionario;
 			\end{itemize}
-			\item \texttt{+} \texttt{getQuestionnaire(quizId: String)}: \\Metodo che serve per ottenere un questionario tramite l'id in modo da poterlo modificare; \\
+			\item \texttt{+} \texttt{getQuestionnaire(quizId: String): QuestionnaireModel}: \\Metodo che serve per ottenere un questionario tramite l'id in modo da poterlo modificare; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{quizId: String}: parametro che rappresenta l'id del questionario da richiedere.
