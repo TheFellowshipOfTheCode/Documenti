@@ -9,17 +9,11 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per il recupero delle domande esistenti nel database al fine di poterle visualizzare nella modalità allenamento e nella compilazione dei questionari;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{HeaderTextQuestionDirective}: rappresenta il componente grafico che presenta all'utente il testo della domanda, l'argomento e le parole chiave. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{TrueFalseAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{MultipleChoiceAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda a risposta multipla. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{LinkingAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda di collegamento. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{SortImagesAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{SortTextAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di stringhe. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{EmptySpaceAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController; 
-		\item \textit{IN} \texttt{ClickableAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene gestito dinamicamente all'interno della view TrainingView attraverso il controller TrainingController;  
+		\item \textit{IN} \texttt{QuestionsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le directive che compongono dinamicamente la vista della domanda e il controller \texttt{QuestionsController};
 		\item \textit{IN} \texttt{QuestionServices}: questa classe permette di ottenere domande esistenti e salvare nuove domande;
 		\item \textit{IN} \texttt{QuestionItemModel}: rappresenta una domanda. Contiene tutte le informazioni necessarie alla presentazione del contenuto della domanda;
 		\item \textit{OUT} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la compilazione del questionario;
+		\item \textit{OUT} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -31,7 +25,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootscope: \$rootscope, QuestionService: QuestionService)}: \\ Metodo costruttore della classe. Cicla nell'oggetto QuestionItemModel ricevuto e si interfaccia con la view che andrà a recuperare e stampare la giusta direttiva della tipologia di domanda. \\
+		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootscope: \$rootscope, QuestionService: QuestionService)}: \\ Metodo costruttore della classe. Interagendo con l'oggetto \texttt{QuestionItemModel} ricevuto si interfaccia con la view andando a visualizzare la giusta directive della tipologia di domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{-} \texttt{\$scope: \$scope} \\
