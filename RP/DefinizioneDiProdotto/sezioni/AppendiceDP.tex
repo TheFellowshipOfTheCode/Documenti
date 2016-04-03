@@ -61,15 +61,15 @@ Nello specifico di \textit{AngularJS\ped{G}} \texttt{Injector} funziona da \text
 		\item Si vuole passare una richiesta ad uno dei molti oggetti, senza esplicitare il ricevente;
 		\item L'insieme di oggetti che gestirà una richiesta deve essere definito dinamicamente.
 	\end{itemize}
-\textbf{Utilizzo}	Express una \textit{Chain-of-responsability} per la gestione dei middleware e del routing. Nell'architettura viene utilizzato all'interno del package \textit{Back-End\ped{G}}::App. Ogni \textit{ConcreteHandler} eredita da \textit{MiddlewareHandler}, che corrisponde all'interfaccia astratta \textit{Handler} del design pattern. Con Express i middleware corrispondono ai \textit{ConcreteHandler}. L'implementaizone di questi risulta sotto alcuni aspetti differente da una normale implementazione del pattern:
+\textbf{Utilizzo}	Express usa \textit{Chain-of-responsability} per la gestione dei middleware e del routing. Nell'architettura viene utilizzato all'interno del package \textit{Back-End\ped{G}}::App. Ogni \textit{ConcreteHandler} eredita da \textit{MiddlewareHandler}, che corrisponde all'interfaccia astratta \textit{Handler} del design pattern. Con Express i middleware corrispondono ai \textit{ConcreteHandler}. L'implementazione di questi risulta sotto alcuni aspetti differente da una normale implementazione del pattern:
 	\begin{enumerate}
-		\item I middleware di express possono essere delle classi che implementano il metodo \textit{handle} oppure delle funzioni secondo lo stile funzionale delle \textit{librerie\ped{G}} e dei moduli di Node.js. Nella nostra architettura abbiamo utilizzato principalmente la seconda verisone;
+		\item I middleware di express possono essere delle classi che implementano il metodo \textit{handle} oppure delle funzioni secondo lo stile funzionale delle \textit{librerie\ped{G}} e dei moduli di Node.js. Nella nostra architettura abbiamo utilizzato principalmente la seconda versione;
 		\item Nel \textit{design pattern\ped{G}} è previsto che l'oggetto \textit{ConcreteHandler} abbia un riferimento (successor) al \textit{ConcreteHandler} successivo. Express, anzichè un riferimento, passa al metodo che esegue il middleware una \textit{callback\ped{G}}. Il middleware che esegue la \textit{callback\ped{G}} passa il controllo all'oggetto del \textit{server\ped{G}} di Express, il quale passerà a sua volta il controllo al successivo middleware.
 	\end{enumerate}
 Express divide i middleware in due tipologie:
 	\begin{enumerate}
 		\item \textit{Middleware standard} con 3 parametri formali;
-		\item \textit{Middleware per la gesitone delgi errori} con 4 parametri formali, ovvero i 3 del middleware standard più un parametro per gli errori.
+		\item \textit{Middleware per la gestione degli errori} con 4 parametri formali, ovvero i 3 del middleware standard più un parametro per gli errori.
 	\end{enumerate}
 Ogni middleware può passare il controllo ai middleware standard successivo, oppure ad un middleware per la gestione degli errori, passandogli l'errore relativo. Ogni middleware di Express deve essere invocato con i parametri elencati \textbf{nel seguente ordine:}
 	\begin{enumerate}
@@ -92,36 +92,6 @@ Ogni middleware può passare il controllo ai middleware standard successivo, opp
 \textbf{Svantaggi}	È necessario porre attenzione a come si configura la catena. Infatti, in caso di configurazione inappropriata, sussiste il rischio che la richiesta passi per diversi putni della catena senza essere mai realizzata, oppure che la richiesta non venga realizzata perché non esiste un \textit{ConcreteHandler} che la possa risolvere.
 
 
-\subsubsection{Iterator}
-\textbf{Scopo}	Il design pattern \textit{iterator\ped{G}} risolve diversi problemi connessi all'accesso e alla navigazione attraverso gli elementi di una struttura dati contenitrice, senza esporre i dettagli dell'implementazione e della struttura interna del contenitore
-\\\\
-\textbf{Motivazione}	Un'alternativa semplice e preferibile all'uso di indici (come accade ad esempio per gli array) consiste nell'aggiungere operazioni all'interfaccia del contenitore. Questa soluzione ha il grosso vantaggio che, se l'interfaccia è ben definita, consente di annullare la dipendenza da dettagli interni del contenitore, ma ciò presenta alcuni inconvenienti:
-	\begin{itemize}
-		\item \textit{Sovraccarico del'interfaccia del contenitore:} le operazioni aggiunte sovraccaricano l'interfaccia preesistente della classe contenitore;
-		\item \textit{Mancanza di punti di accesso multipli:} le operazioni sono centralizzate nella classe contenitore. Questo non consente di effettuare contemporaneamente più visite indipendenti dagli elementi dello stesso contenitore;
-		\item \textit{Supporto carente per metodi di navigazione specializzati:} quando i contenitori possiedono una struttura complessa, non di rado vi sono diversi e ugualmente utili modi di attraversarne l'insieme degli elementi contenuti. Un'interfaccia centralizzata si adatta male a questa situazione, perché richiede l'aggiunta di più operazioni specializzate, esacerbando il problema del sovraccarico.
-	\end{itemize}
-\textbf{Applicabilità}	Il design pattern \textit{iterator\ped{G}}, quindi, supera le soluzioni che si possono ottenere con la pura programmazione ad oggetti mediante codice più complesso.
-\\
-\textbf{Struttura}	Il pattern \textit{iterator\ped{G}} definisce due gerarchie di classi: una per i contenitori e una per gli iteratori\ped{G}. Le classi contenitore possono essere specializzate per tipo di elemento contenuto o per tipo di struttura in cui gli elementi sono organizzati. Le classi di iteratori\ped{G} sono specializzati per tipo di contenitore (iteratore\ped{G} concreto) e per tipo di navigazione attraverso la sequenza di elementi (iteratori\ped{G} specializzati).
-\\
-\label{Struttura logica del pattern Iterator}
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.45]{UML/strutturaPattern/Iterator.png}
-	\caption{Struttura logica del pattern Iterator}
-\end{figure}
-\\
-\textbf{Collaborazioni}	Il design pattern \textit{iterator\ped{G}} richiede la collaborazioni di alcuni elementi:
-	\begin{itemize}
-		\item \textbf{Iterator:} definisce un'interfaccia per attraversare l'insieme degli elementi di un contenitore e accedere ai singoli elementi;
-		\item \textbf{ConcreteIterator:} implementa l'interfaccia \textit{iterator\ped{G}} tenendo traccia della posizione corrente nel contenitore e calcolando qual'è l'elemento successivo nella sequenza di attraversamento;
-		\item \textbf{Aggregate:} definisce un'interfaccia per creare un oggetto \textit{iterator\ped{G}}.
-		\item \textbf{ConcreteAggregate:} implementa l'interfaccia di creazione dell'\textit{iterator} e ritorna un'istanza appropriata di \texttt{ConcreteIterator}.
-	\end{itemize}
-\textbf{Svantaggi}	L'utilizzo del design pattern \textit{iterator\ped{G}} rende più complesso il codice e di conseguenza meno leggibile.
-
-
 \subsubsection{Observer}
 \textbf{Scopo}	Definisce una dipendenza “1..n” fra oggetti, riflettendo la modifica di un oggetto sui dipendenti.
 \\\\
@@ -134,13 +104,3 @@ Ogni middleware può passare il controllo ai middleware standard successivo, opp
 	\end{itemize}
 
 \textbf{Utilizzo}
-
-\subsection{Architetturali}
-\subsubsection{MVC}
-\textbf{Scopo}
-\textbf{Motivazione}
-\textbf{Applicabilità}
-\textbf{Utilizzo}
-\textbf{Struttura}
-\textbf{Collaborazioni}
-\textbf{Svantaggi}
