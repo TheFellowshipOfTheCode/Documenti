@@ -4,7 +4,7 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+	\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_StatisticsModelView.png}
 	\caption{QuizziPedia::Front-End::ModelViews::StatisticsModelView}
 \end{figure} \FloatBarrier
 
@@ -13,23 +13,12 @@
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{StatisticsController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView}: view contenente le direttive dei dati personali dell'utente, delle sue statistiche relative ai questionari e agli allenamenti effettuati e dei questionari a cui è iscritto; 
-		\item \textit{IN} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente;
+		\item \textit{OUT} \texttt{UserView}: view contenente le direttive dei dati personali dell'utente, delle sue statistiche relative ai questionari e agli allenamenti effettuati e dei questionari a cui è iscritto; 
+		\item \textit{OUT} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \texttt{+ userStatistic: Object} \\ Oggetto contenente le statistiche di un utente;
-	\end{itemize}
-	\item \textbf{Metodi}: 
-	\begin{itemize}
-		\item \texttt{+} \texttt{getStatistics(username: String)} \\ 
-		Metodo che permette di ottenere le statistiche si un utente grazie all'utilizzo di \texttt{StatisticsService}; \\
-		\textbf{Parametri}: 
-		Metodo costruttore della classe. \\
-		\begin{itemize}
-			\item \texttt{username: String} \\
-			Parametro contenente la stringa username utilizzata per poter recuperare le giuste statistiche attraverso lo \texttt{StatisticsService}; 
-		\end{itemize}
+		\item \texttt{+ userStatistic: Object} \\ Oggetto contenente le statistiche di un utente.
 	\end{itemize}
 \end{itemize}	
 

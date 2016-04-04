@@ -19,30 +19,32 @@
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
 		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};
-		\item \texttt{-} \texttt{QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \texttt{+} \texttt{deatails: QuestionnaireDetailsModelView} \\
-		Oggetto di tipo \texttt{QuestionnaireDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController};
+		\item \texttt{-} \texttt{QuizService: QuizService} \\ Questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \texttt{\$mdDialog: \$mdDialog} \\
+		Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+		\item \texttt{+} \texttt{details: QuestionnaireDetailsModelView} \\
+		Oggetto di tipo \texttt{QuestionnaireDetailsModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController}.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootscope: \$rootscope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\ Metodo costruttore della classe;
+		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\ Metodo costruttore della classe;
 		\textbf{Parametri}: 
 		\begin{itemize}
-			\item \texttt{-} \texttt{\$scope: \$scope} \\
-			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
-			\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
-			Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};	
-			\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
-			Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-			\item \texttt{-} \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz;
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione;
+			\item \texttt{\$rootScope: \$rootScope} \\
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i controller e a tutte le view l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del service \texttt{QuizService};	
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
+			\item \texttt{QuizService: QuizService}\\ Parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz.
 		\end{itemize}
 		
-		\item \texttt{-} \texttt{getQuestionnaireDetails(username: String)}: \\ Metodo che richiede al service i dettagli dei questionari eseguiti dall'utente.
+		\item \texttt{-} \texttt{getQuestionnaireDetails(username: String): Object} \\ Metodo che richiede al service i dettagli dei questionari eseguiti dall'utente.
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String}: username dell'utente del quale caricare i questionari.
 		\end{itemize}
-		\item \texttt{-} \texttt{getSubscribedQuestionnaire(username: String)}: \\Metodo che ritorna i questionari a cui l'utente è iscritto.
+		\item \texttt{-} \texttt{getSubscribedQuestionnaire(username: String): Object} \\Metodo che ritorna i questionari a cui l'utente è iscritto.
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String}: identificativo dell'utente del quale scaricare i questionari a cui è iscritto.

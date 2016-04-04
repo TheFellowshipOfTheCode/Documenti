@@ -4,7 +4,7 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
+		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_QuestionnaireDetailsModelView.png}
 		\caption{QuizziPedia::Front-End::ModelViews::QuestionnaireDetailsModelView}
 	\end{figure} \FloatBarrier
 	
@@ -13,13 +13,27 @@
 		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{IN} \texttt{UserView}: view contenente le direttive dei dati personali dell'utente, delle sue statistiche relative ai questionari e agli allenamenti effettuati e dei questionari a cui è iscritto; 
-			\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
+			\item \textit{OUT} \texttt{QuestionnaireDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare;
+			\item \textit{OUT} \texttt{QuestionnaireDetailsDoneDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che ha già compilato e di conseguenza vederne le valutazioni;
+			\item \textit{OUT} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario.
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic} e \texttt{keywords};\\
-			\item \texttt{+ questionnaireDetailsDone: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic}, \texttt{keywords} e \texttt{judgment};
+			\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati:
+			\begin{itemize}
+				\item \texttt{name: String}\\ Nome del questionario;
+				\item \texttt{author: String}\\ Autore del questionario;
+				\item \texttt{topic: String}\\ Argomento del questionario;
+				\item \texttt{keywords: Array[String]}\\ Parole chiave del questionario.
+			\end{itemize}
+			\item \texttt{+ questionnaireDetailsDone: Object} \\ Oggetto contenente i seguenti campi dati:
+			\begin{itemize}
+				\item \texttt{name: String}\\ Nome del questionario;
+				\item \texttt{author: String}\\ Autore del questionario;
+				\item \texttt{topic: String}\\ Argomento del questionario;
+				\item \texttt{keywords: Array[String]}\\ Parole chiave del questionario;
+				\item \texttt{judgement: Number} \\ Campo che indica il risultato del questionario.
+			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 	
