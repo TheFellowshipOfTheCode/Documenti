@@ -1,0 +1,43 @@
+%Generazione delle variabili che andranno a sostituire quelle del template 'HomePage.tex'
+\newcommand{\documento}{\PdQ}
+\newcommand{\nomedocumentofisico}{PianoDiQualifica\_v1\_0\_0.pdf}
+\newcommand{\redazione}{\MP\\ & \MV}
+\newcommand{\verifica}{\SM}
+\newcommand{\approvazione}{\GR}
+\newcommand{\uso}{Esterno}
+\newcommand{\datacreazione}{12 Dicembre 2015}
+\newcommand{\datamodifica}{20 Gennaio 2016}
+\newcommand{\stato}{Approvato}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+\input{sezioni/diario.tex}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{../../Template/diario.tex}
+\input{../../Template/index.tex}
+\newpage
+%\listoffigures
+%\newpage
+\listoftables
+\newpage
+%sezioni documento
+
+\input{sezioni/Introduzione.tex}
+\input{sezioni/QualitaProcesso.tex}
+\input{sezioni/QualitaProdotto.tex}
+\input{sezioni/SpecificaTest.tex}
+\input{sezioni/TracciamentoTest.tex}
+\appendix
+\input{sezioni/ResocontoAttivitaVerifica.tex}
+\end{document}
