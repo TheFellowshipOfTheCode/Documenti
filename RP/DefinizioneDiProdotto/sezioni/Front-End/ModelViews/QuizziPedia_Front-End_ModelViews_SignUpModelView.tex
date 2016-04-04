@@ -22,7 +22,7 @@
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-			\item \texttt{+} \texttt{signUp(): void} \\
+			\item \texttt{+} \texttt{signUp(user: Object): void} \\
 			Metodo che richiama il metodo \texttt{signUp} del service \texttt{AuthService} passandogli un oggetto di tipo \texttt{SignUpModelView}. Nel caso di buona riuscita dell'operazione viene mostrato un messaggio di successo. Con l'azione di click sul bottone presentato dal messaggio di successo è possibile effettuare il redirect alla pagina di login dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
 			\item \texttt{+} \texttt{logIn(): void} \\
 			Metodo che gestisce l’evento click sul pulsante di login. Effettua il redirect alla pagina di login;

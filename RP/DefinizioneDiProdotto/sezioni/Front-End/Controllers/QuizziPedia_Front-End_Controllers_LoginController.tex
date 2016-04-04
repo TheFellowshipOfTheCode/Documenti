@@ -40,8 +40,8 @@
 				\item \texttt{AuthService: AuthService} \\
 				Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all’autenticazione. Viene utilizzato il metodo \texttt{logIn()} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{email} e \texttt{password};
 			\end{itemize}
-		\item \texttt{+} \texttt{logIn(): void} \\
-		Metodo che richiama il metodo \texttt{Login} del service \texttt{AuthService} passandogli \texttt{email} e \texttt{password}. Nel caso di buona riuscita dell'operazione viene effettuato il redirect alla homepage dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
+		\item \texttt{+} \texttt{logIn(email: String, password: String): void} \\
+		Metodo che richiama il metodo \texttt{signin} del service \texttt{AuthService} passandogli \texttt{email} e \texttt{password}. Nel caso di buona riuscita dell'operazione viene effettuato il redirect alla homepage dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
 		\item \texttt{+} \texttt{signUp(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di registrazione. Effettua il redirect alla pagina di registrazione;
 		\item \texttt{+} \texttt{recoveryPassword(): void} \\
