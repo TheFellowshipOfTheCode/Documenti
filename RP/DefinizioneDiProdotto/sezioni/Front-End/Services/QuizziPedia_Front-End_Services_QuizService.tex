@@ -85,5 +85,10 @@
 	\begin{itemize}
 		\item \texttt{quiId: String} \\ Id del questionario del quale recuperare i risultati.
 	\end{itemize}
+	\item \texttt{+ getQuiz(quizId: String, username: String): Promise} \\ Metodo che ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, cioè se l'utente è registrato, verrà restituito al chiamante il questionario. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{quiId: String} \\ Id del questionario del quale recuperare i risultati.
+	\end{itemize}
 \end{itemize}
 \end{itemize}

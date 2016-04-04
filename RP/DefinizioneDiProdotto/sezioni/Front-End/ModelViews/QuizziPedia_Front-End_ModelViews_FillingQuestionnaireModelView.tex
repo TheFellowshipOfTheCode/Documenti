@@ -5,7 +5,7 @@
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.5,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_ClickableAnswerTemplate.png}
-		\caption{QuizziPedia::Front-End::ModelViews::SignUpModelView}
+		\caption{QuizziPedia::Front-End::ModelViews::FillingQuestionnaireModelView}
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
@@ -18,11 +18,14 @@
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item \texttt{+ title: String}\\
-			Questo attributo rappresenta il titolo del questionario;
-			\item \texttt{+ author: ObjectId}\\
-			Questo attributo rappresenta l'autore del questionario;
-	
+			\item \texttt{+ quiz: Object} \\ Oggetto contenente al suo interno i seguenti campi:
+			\begin{itemize}
+				\item \texttt{+ title: String} \\ Attributo che rappresenta il titolo del questionario;
+				\item \texttt{+ argument: String} \\ Attributo che rappresenta l'argomento del questionario;
+				\item \texttt{+ keywords: Array[String]} \\ \texttt{array} di stringhe che contiene le parole chiave del questionario;
+				\item \texttt{+ questionNumber: String} \\ Attributo che rappresenta il numero progressivo della domanda attuale;
+				\item \texttt{+ numberOfQuestions: String} \\ Attributo che rappresenta il numero di domande.
+			\end{itemize}	
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}

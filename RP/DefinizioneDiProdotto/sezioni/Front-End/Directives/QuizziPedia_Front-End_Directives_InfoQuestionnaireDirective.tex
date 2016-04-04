@@ -26,19 +26,18 @@
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
+				\item \texttt{+ info: Object} \\ Oggetto contenente tutte le informazioni sul questionario, ovvero:
+				\begin{itemize}
+					\item \texttt{name: String} \\ Nome del questionario;
+					\item \texttt{author: String} \\ Autore del questionario;
+					\item \texttt{date: Date} \\ Data di compilazione;
+					\item \texttt{topic: String} \\ Argomento della domanda;
+					\item \texttt{keywords: Array[String]} \\ Parole chiave della domanda.
+				\end{itemize}
+				\item \texttt{+ startButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inizio del questionario selezionato, in italiano o in inglese; 
 				\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
 				\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
-				\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene:
-				\begin{itemize}
-					\item \texttt{+ info: Object} \\ Oggetto contenente tutte le informazioni sul questionario, ovvero:
-					\begin{itemize}
-						\item \texttt{name};
-						\item \texttt{author};
-						\item \texttt{date};
-						\item \texttt{topic}.
-					\end{itemize}
-					\item \texttt{+ startButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inizio del questionario selezionato, in italiano o in inglese; 
-				\end{itemize}
+				\item \texttt{+ scope: Scope} \\Oggetto \texttt{\$scope} interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
 				\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
 			\end{itemize}
 		\end{itemize}
