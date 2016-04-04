@@ -1,0 +1,88 @@
+%Generazione delle variabili che andranno a sostituire quelle del template 'HomePage.tex'
+\newcommand{\documento}{\G}
+\newcommand{\nomedocumentofisico}{Glossario\_v1\_0\_0.pdf}
+\newcommand{\redazione}{\SM}
+\newcommand{\verifica}{\MV}
+\newcommand{\approvazione}{\GN}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV \\ & \RC \\ & \proponente}
+\newcommand{\datacreazione}{12 Dicembre 2015}
+\newcommand{\datamodifica}{20 Gennaio 2016}
+\newcommand{\stato}{Approvato}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+
+
+\input{sezioni/diario.tex}
+%Serve per vedere i paragraph nell'indice
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{../../Template/diario.tex}
+\input{../../Template/index.tex}
+
+\newpage
+\input{sezioni/A.tex}
+\newpage
+\input{sezioni/B.tex}
+\newpage
+\input{sezioni/C.tex}
+\newpage
+\input{sezioni/D.tex}
+\newpage
+\input{sezioni/E.tex}
+\newpage
+\input{sezioni/F.tex}
+\newpage
+\input{sezioni/G.tex}
+\newpage
+\input{sezioni/H.tex}
+\newpage
+\input{sezioni/I.tex}
+\newpage
+\input{sezioni/J.tex}
+\newpage
+\input{sezioni/K.tex}
+\newpage
+\input{sezioni/L.tex}
+\newpage
+\input{sezioni/M.tex}
+\newpage
+\input{sezioni/N.tex}
+\newpage
+\input{sezioni/O.tex}
+\newpage
+\input{sezioni/P.tex}
+\newpage
+\input{sezioni/Q.tex}
+\newpage
+\input{sezioni/R.tex}
+\newpage
+\input{sezioni/S.tex}
+\newpage
+\input{sezioni/T.tex}
+\newpage
+\input{sezioni/U.tex}
+\newpage
+\input{sezioni/V.tex}
+\newpage
+\input{sezioni/W.tex}
+\newpage
+\input{sezioni/X.tex}
+\newpage
+\input{sezioni/Y.tex}
+\newpage
+\input{sezioni/Z.tex}
+
+\end{document}
