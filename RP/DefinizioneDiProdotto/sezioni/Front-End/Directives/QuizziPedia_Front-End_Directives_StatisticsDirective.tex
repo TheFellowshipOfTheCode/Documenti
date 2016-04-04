@@ -13,11 +13,10 @@
 	\item \textbf{Utilizzo}: viene utilizzata per mostrare le statistiche nella pagina della visualizzazione del profilo e nella pagina di un utente ricercato;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
-		\item \textit{IN} \texttt{OtherUserView}: view contenente i dati personali e le statistiche di un utente ricercato;
+		\item \textit{OUT} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textit{OUT} \texttt{OtherUserView}: view contenente i dati personali e le statistiche di un utente ricercato;
 		\item \textit{IN} \texttt{StatisticsController}: questa classe permette di le statistiche di un utente;
-		\item \textit{IN} \texttt{StatisticsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{StatisticsDirective} e il controller \texttt{StatisticsController};
-		\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella view. 
+		\item \textit{IN} \texttt{StatisticsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{StatisticsDirective} e il controller \texttt{StatisticsController}.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}

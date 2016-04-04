@@ -20,13 +20,20 @@
 	\item \textbf{Utilizzo}: viene utilizzato per permettere all'utente di visualizzare la lista di questionari che ha compilato;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textit{OUT} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
 		\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire i dettagli di un questionario;
-		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: classe di tipo modelview la cui istanzazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController}.
+		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController}.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \texttt{+ questionnaireDetailsDone: Object} \\ Oggetto contenente i seguenti campi dati: \texttt{name}, \texttt{author}, \texttt{topic}, \texttt{keywords} e \texttt{judgment};
+		\item \texttt{+ questionnaireDetailsDone: Object} \\ Oggetto contenente i seguenti campi dati:
+		\begin{itemize}
+			\item \texttt{name: String}\\ Nome del questionario;
+			\item \texttt{author: String}\\ Autore del questionario;
+			\item \texttt{topic: String}\\ Argomento del questionario;
+			\item \texttt{keywords: Array[String]}\\ Parole chiave del questionario;
+			\item \texttt{judgement: Number} \\ Campo che indica il risultato del questionario.
+		\end{itemize}
 		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
 		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
 		\item \texttt{+ scope: Scope}\\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
