@@ -1,13 +1,45 @@
 	
 	\paragraph{QuizziPedia::Front-End::Index}
+	\begin{figure} [ht]
+		\centering
+		\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_Index.png}
+		\caption{QuizziPedia::Front-End::Views::Index}
+	\end{figure} \FloatBarrier
 	\begin{itemize}
 		\item \textbf{Descrizione}: view generale dell'applicazione;
 		\item \textbf{Utilizzo}: contiene gli elementi che saranno presenti in ogni pagina dell'applicazione;
 		\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
+			\item \textit{IN} \texttt{AppRun}: classe che verifica se l'utente sia autenticato e che abbia le giuste autorizzazioni per la pagina in cui si trova;
 			\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
-			\item \textit{IN} \texttt{ErrorsDirective}: directive che mostra l'eventuale errore dopo un'azione;
 			\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;
+			\item \textit{IN} \texttt{ClickableAreaQuestionsView}: view contenente i campi e le direttive per creare una domanda ad area cliccabile;
+			\item \textit{IN} \texttt{ConnectionQuestionsView}: view contenente i campi e le direttive per creare una domanda a collegamento;
+			\item \textit{IN} \texttt{CreateQuestionnaireView}: view per la creazione del questionario. In questo componente viene permesso anche all'utente di:
+			\begin{itemize}
+				\item Effettuare delle ricerche sul database di domande;
+				\item Selezionare le domande da inserire nel questionario;
+				\item Mostrare le domande già inserite e permettere all'utente di eliminarle da tale lista.
+			\end{itemize}
+			\item \textit{IN} \texttt{EditorQMLView}: view contenente l'editor QML per la creazione di domande personalizzate;
+			\item \textit{IN} \texttt{FillingQuestionnaireView}: view principale per la compilazione del questionario; conterrà i vari templates di ogni domanda appartenente al questionario;
+			\item \textit{IN} \texttt{FilligQuestionsView}: view contenente i campi e le direttive per creare una domanda a riempimento testo;
+			\item \textit{IN} \texttt{HomeView}: view contenente la direttiva per barra di ricerca degli utenti e questionari e il bottone che porterà l'utente nella modalità allenamento;
+			\item \textit{IN} \texttt{ImagesSortingQuestionsView}: view contenente i campi e le direttive per creare una domanda a ordinamento immagini;
+			\item \textit{IN} \texttt{LoginView}: view contenente le form necessarie per effettuare il login. Contiene inoltre un link alla pagina di registrazione e uno alla pagina per il recupero della password;
+			\item \textit{IN} \texttt{MultipleQuestionsView}: view contenente le direttive per creare una domanda a risposta multipla;
+			\item \textit{IN} \texttt{OtherUserView}: view contenente le direttive dei dati personali e delle statistiche di un utente ricercato;
+			\item \textit{IN} \texttt{PasswordForgotView}: view contenente le form necessarie per il recupero della password dimenticata; 
+			\item \textit{IN} \texttt{ProfileManagementView}: view contenente i dati personali che un utente può modificare dopo essersi registrato al sistema;
+			\item \textit{IN} \texttt{QuestionnaireManagementView}:  view principale per la gestione dei questionari;
+			\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l'elenco delle domande create; 
+			\item \textit{IN} \texttt{RegistrationManagementView}: view che permette di visualizzare gli utenti iscritti ad un questionario;
+			\item \textit{IN} \texttt{ResultsQuestionnaireView}: view contenente i risultati conseguiti dagli utenti che hanno compilato il proprio questionario;
+			\item \textit{IN} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata. Vengono visualizzati sia gli utenti che i questionari trovati;
+			\item \textit{IN} \texttt{SignUp}:  view contenente le form dedicate alla registrazione utente. Contiene inoltre un link alla pagina di login;
+			\item \textit{IN} \texttt{StringSortingQuestionsView}:  view contenente i campi e le direttive per creare una domanda a ordinamento stringhe; 
+			\item \textit{IN} \texttt{TrainingView}: view principale della modalità allenamento; conterrà i vari templates di ogni domanda dell'allenamento;
+			\item \textit{IN} \texttt{TrueFalseQuestionsView}: view contenente le direttive per creare una domanda vero/falso;
+			\item \textit{IN} \texttt{UserView}:  view contenente le direttive dei dati personali dell'utente, delle sue statistiche relative ai questionari e agli allenamenti effettuati e dei questionari a cui è iscritto;
 		\end{itemize}
-		\item \textbf{Attributi}
 	\end{itemize}
