@@ -16,18 +16,20 @@
 	\begin{itemize}
 		\item \texttt{-} \texttt{scope: Scope} \\
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}\\ 
-		Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata.
+		\item \texttt{-} \texttt{QuestionsService: QuestionsService}\\ 
+		Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata;
 		\item \texttt{+} \texttt{key: TopicKeywordsModelView} \\
-		Oggetto di tipo \texttt{CreateQuestionnaireView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la direttiva \texttt{TopicKeywordsDirective} e il controller \texttt{TopicKeywordsController};
+		Oggetto di tipo \texttt{CreateQuestionnaireView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la direttiva \texttt{TopicKeywordsDirective} e il controller \texttt{TopicKeywordsController}.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{TopicKeywordsController(scope: Scope)} \\Metodo costruttore della classe. \\
+		\item \texttt{+} \texttt{TopicKeywordsController(\$scope: \$scope, QuestionsService: QuestionsService)} \\Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{-} \texttt{scope: Scope} \\
 			Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il viewmodel e il model dell’applicazione; 
+			\item \texttt{-} \texttt{QuestionsService: QuestionsService}\\ 
+			Permette, tra le altre cose, di ottenere le parole chiave a partire da una stringa passata.
 		\end{itemize}
 		\item \texttt{+} \texttt{getKeywords(key: String): String[]}: \\ Metodo che ritorna le parole chiave data una una stringa di ricerca. 
 	\textbf{Parametri}:

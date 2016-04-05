@@ -49,6 +49,21 @@
 			\item \texttt{+} \texttt{deleteQuestionnaire(quizId: String): void}: \\Metodo che elimina un questionario.
 			\textbf{Parametri}:
 			\texttt{quizId: String}: identificativo del questionario da eliminare.
+			
+			\item \texttt{-} \texttt{getQuestions(): String[]} \\
+			Metodo che permette di ottenere la lista di tutte le domande.
+			\item \texttt{-} \texttt{getQuestion(questionId: String): QuestionItemModel} \\
+			Metodo che ritorna l'intera domanda selezionata.
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+			\end{itemize}
+			\item \texttt{-} \texttt{addQuestion(questionId: String) : void} \\
+			Metodo che permette di inserire una domanda nel questionario.
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 	

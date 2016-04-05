@@ -11,7 +11,8 @@
 	\begin{itemize}
 		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: Oggetto di tipo \texttt{CreateQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{CreateQuestionnaireView} e il controller \texttt{CreateQuestionnaireController}; 
 		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{IN} \texttt{QuestionnaireModel}: model relativo ai questionari.
+		\item \textit{IN} \texttt{QuestionnaireModel}: model relativo ai questionari;
+		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere le domande dal back-end.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -61,6 +62,21 @@
 		\item \texttt{+} \texttt{deleteQuestionnaire(quizId: String): Void} \\Metodo che elimina un questionario.
 		\textbf{Parametri}:
 		\texttt{quizId: String}: identificativo del questionario da eliminare.
+		
+		\item \texttt{+} \texttt{getQuestions(): String[]} \\
+		Metodo che permette di ottenere la lista di tutte le domande.
+		\item \texttt{+} \texttt{getQuestion(questionId: String): QuestionItemModel} \\
+		Metodo che ritorna l'intera domanda selezionata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+		\end{itemize}
+		\item \texttt{+} \texttt{addQuestion(questionId: String) : void} \\
+		Metodo che permette di inserire una domanda nel questionario.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 

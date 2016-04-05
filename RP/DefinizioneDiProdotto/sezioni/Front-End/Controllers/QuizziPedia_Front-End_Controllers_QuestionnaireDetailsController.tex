@@ -9,9 +9,9 @@
 	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare dal back-end i dettagli di un questionario creato da un utente al fine di poterli visualizzare nel suo profilo;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: ;
+		\item \textit{IN} \texttt{QuestionnaireDetailsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{UserView} e il controller \texttt{QuestionnaireDetailsController};
 		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{} \texttt{QuestionnaireModel}: ;
+		\item \textit{IN} \texttt{QuestionnaireModel}: rappresenta un questionario. Contiene tutte le informazioni necessarie alla presentazione del contenuto del questionario.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -27,7 +27,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\ Metodo costruttore della classe;
+		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\ Metodo costruttore della classe; \\
 		\textbf{Parametri}: 
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
@@ -39,12 +39,12 @@
 			\item \texttt{QuizService: QuizService}\\ Parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz.
 		\end{itemize}
 		
-		\item \texttt{-} \texttt{getQuestionnaireDetails(username: String): Object} \\ Metodo che richiede al service i dettagli dei questionari eseguiti dall'utente.
+		\item \texttt{-} \texttt{getQuestionnaireDetails(username: String): Object} \\ Metodo che richiede al service i dettagli dei questionari eseguiti dall'utente. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String}: username dell'utente del quale caricare i questionari.
 		\end{itemize}
-		\item \texttt{-} \texttt{getSubscribedQuestionnaire(username: String): Object} \\Metodo che ritorna i questionari a cui l'utente è iscritto.
+		\item \texttt{-} \texttt{getSubscribedQuestionnaire(username: String): Object} \\Metodo che ritorna i questionari a cui l'utente è iscritto. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String}: identificativo dell'utente del quale scaricare i questionari a cui è iscritto.
