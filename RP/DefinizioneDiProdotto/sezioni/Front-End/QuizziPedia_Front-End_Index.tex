@@ -1,0 +1,13 @@
+	
+	\paragraph{QuizziPedia::Front-End::Index}
+	\begin{itemize}
+		\item \textbf{Descrizione}: view generale dell'applicazione;
+		\item \textbf{Utilizzo}: contiene gli elementi che saranno presenti in ogni pagina dell'applicazione;
+		\item \textbf{Relazioni con altre classi}:
+		\begin{itemize}
+			\item \textit{IN} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata;
+			\item \textit{IN} \texttt{ErrorsDirective}: directive che mostra l'eventuale errore dopo un'azione;
+			\item \textit{IN} \texttt{FooterDirective}: directive che mostra il footer dell'applicazione che sarà presente in ogni pagina;
+		\end{itemize}
+		\item \textbf{Attributi}
+	\end{itemize}
