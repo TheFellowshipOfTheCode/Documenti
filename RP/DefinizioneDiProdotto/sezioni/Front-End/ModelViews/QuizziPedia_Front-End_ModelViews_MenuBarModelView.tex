@@ -13,12 +13,18 @@
 	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{Index} e il controller \texttt{MenuBarController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{Index}: pagina alla base di tutte le view dell'applicazione; 
-		\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
+		\item \textit{OUT} \texttt{LoginBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di login;
+		\item \textit{OUT} \texttt{SignUpBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di registrazione;
+		\item \textit{OUT} \texttt{UserBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di visualizzazione del profilo utente personale;
+		\item \textit{OUT} \texttt{ProfileManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione del profilo;
+		\item \textit{OUT} \texttt{QuestionsManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione delle domande;
+		\item \textit{OUT} \texttt{LogoutBarDirective}: directive contenente il componente che permette di effettuare il logout;
+		\item \textit{OUT} \texttt{QuestionnaireManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione dei questionari;
+		\item \textit{OUT} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item ;
+		\item \texttt{+ username: String} \\ Attributo che conterrà l'username dell'utente.
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
@@ -35,7 +41,14 @@
 		\item \texttt{+} \texttt{goToQuestionsManagementPage(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di gestione delle domande. Effettua il redirect alla pagina di gestione delle domande; 
 		\item \texttt{+} \texttt{goToQuizManagementPage(): void} \\
-		Metodo che gestisce l’evento click sul pulsante di gestione dei questionari. Effettua il redirect alla pagina di gestione dei questionari; 
+		Metodo che gestisce l’evento click sul pulsante di gestione dei questionari. Effettua il redirect alla pagina di gestione dei questionari;
+		\item \texttt{+ \$on('\$routeChangeStart': String, callback: function): void} \\
+		Metodo che cattura i cambiamenti dell'url e che richiede al \texttt{MenuBarModel} le giuste direttive da inserire in \texttt{MenuBarDirective}. \\
+		\textbf{Parametri};
+		\begin{itemize}
+			\item \texttt{'\$routeChangeStart': String}	\\ Servizio offerto da \textit{Angular.js\ped{G}} per catturare gli eventi sulla barra degli URL;
+			\item \texttt{callback: function}	\\ Funzione di callback per gestire i cambiamenti della barra degli indirizzi.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 

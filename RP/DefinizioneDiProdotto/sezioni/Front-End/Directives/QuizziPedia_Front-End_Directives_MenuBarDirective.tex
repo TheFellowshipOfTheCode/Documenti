@@ -21,18 +21,20 @@
 		\end{itemize}
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{Index}: view generale dell'applicazione;
+		\item \textit{OUT} \texttt{Index}: view generale dell'applicazione;
+		\item \textit{IN} \texttt{MenuBarModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{Index} e il controller \texttt{MenuBarController};
 		\item \textit{IN} \texttt{SearchDirective}: directive che permette di effettuare la ricerca di utenti e questionari;
-		\item \textit{IN} \texttt{LogoutController}: questa classe permette di gestire la pagina di logout;
-		\item \textit{IN} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina;
+		\item \textit{IN} \texttt{LoginBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di login;
+		\item \textit{IN} \texttt{SignUpBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di registrazione;
+		\item \textit{IN} \texttt{UserBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di visualizzazione del profilo utente personale;
+		\item \textit{IN} \texttt{ProfileManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione del profilo;
+		\item \textit{IN} \texttt{QuestionsManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione delle domande;
+		\item \textit{IN} \texttt{LogoutBarDirective}: directive contenente il componente che permette di effettuare il logout;
+		\item \textit{IN} \texttt{QuestionnaireManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione dei questionari;
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \texttt{+ loginButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link all'autenticazione, in italiano o in inglese;
-		\item \texttt{+ signUpButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla registrazione, in italiano o in inglese;
-		\item \texttt{+ profileButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link al profilo utente, in italiano o in inglese;
-		\item \texttt{+ questionsButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla gestione delle domande, in italiano o in inglese;
-		\item \texttt{+ questionnaireButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla gestione dei questionari, in italiano o in inglese;
+		\item \texttt{+ quizzipediaTitle: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il titolo e la descrizione dell'applicazione;
 		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
 		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
 		\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
