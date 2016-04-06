@@ -1,21 +1,21 @@
 %Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
 \newcommand{\documento}{\PdP}
-\newcommand{\nomedocumentofisico}{PianoDiProgetto\_v2\_0\_0.pdf}
-\newcommand{\redazione}{\GN\\ & \GR}
-\newcommand{\verifica}{\SM\\ & \MP\\ & \MV}
-\newcommand{\approvazione}{\GR}
+\newcommand{\nomedocumentofisico}{PianoDiProgetto\_v4\_0\_0.pdf}
+\newcommand{\redazione}{\GR\\ & \GN\\ & \SM\\ & \MV\\ & \FB\\ & \AF}
+\newcommand{\verifica}{\GR\\ & \MP\\ & \MV}
+\newcommand{\approvazione}{\FB}
 \newcommand{\uso}{Esterno}
 \newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
 \newcommand{\datacreazione}{12 Dicembre 2015}
-\newcommand{\datamodifica}{20 Gennaio 2016}
+\newcommand{\datamodifica}{10 Aprile 2016}
 \newcommand{\stato}{Approvato}
+\newcommand{\versione}{4}
 
 \def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
 \def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
 
 %Layout del documento 
 \input{../../Template/layout.tex}
-\input{sezioni/diario.tex}
 
 
 %Comandi generali
@@ -29,7 +29,7 @@
 %Registro delle modifiche e indice 
 %si usa la numerazione romana per gli indici e la tabella delle modifiche
 \pagenumbering{Roman}
-\input{../../Template/diario.tex}
+\input{sezioni/diario.tex}
 \input{../../Template/index.tex}
 \newpage
 \listoffigures
