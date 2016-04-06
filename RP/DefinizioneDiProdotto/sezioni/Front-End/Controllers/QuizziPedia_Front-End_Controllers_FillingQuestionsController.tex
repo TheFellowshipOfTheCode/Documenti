@@ -24,16 +24,20 @@
 		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il controller e la view. Contiene gli oggetti che definiscono il model dell’applicazione;
 		\item \texttt{-} \texttt{QuestionItemModel: QuestionItemModel} \\
 		Campo dati che si riferisce alla classe che rappresenta il modello della classe;
+		\item \texttt{- \$timeout: \$timeout} \\
+		Attributo contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
+		Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
+		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
-		\item \texttt{-} \texttt{QuestionService: QuestionService}: ;
-		\item \texttt{\$routeParams: \$routeParams} \\
-		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
+		\item \texttt{-} \texttt{QuestionService: QuestionService}: Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \texttt{- \$routeParams: \$routeParams} \\ Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{FillingQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService)} \\ 
+		\item \texttt{+} \texttt{FillingQuestionsController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, \$timeout: \$timeout, QuestionService: QuestionService, \$routeParams: \$routeParams)} \\ 
 		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la view vuota così da poter creare una nuova domanda; \\
+		Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular.js\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url.
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
@@ -44,8 +48,6 @@
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a popup;
 			\item \texttt{QuestionService: QuestionService}: \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
-			\item \texttt{Upload: Upload} \\
-			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
 			\item \texttt{\$timeout: \$timeout} \\
 			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular.js\ped{G}}. 
 			Il valore di ritorno di una chiamata alla funzione di \texttt{\$timeout} è una promise, la quale sarà risolta quando avverrà il ritardo e la funzione di timeout eseguita; 
