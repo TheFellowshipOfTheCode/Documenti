@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::ClickableAreaQuestionsController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ClickableAreaQuestionsController.png}
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ClickableAreaQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ClickableAreaQuestionsController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -59,11 +59,11 @@
 		\end{itemize}
 		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
 		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
-		\item \texttt{+} \texttt{choseThatPoint(x:Integer, y: Integer): void}\\
+		\item \texttt{+} \texttt{choseThatPoint(x: Number, y: Number): void}\\
 		Metodo che gestisce l’evento click su un punto dell'immagine. Una volta selezionato esso verrà inserito nell'array di punti; \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{x: Integer} \\
+			\item \texttt{x: Number} \\
 			Parametro contenente la coordinata x del punto;
 			\item \texttt{y: Integer} \\ 
 			Parametro contenente la coordinata y del punto;
