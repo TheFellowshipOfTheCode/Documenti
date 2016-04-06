@@ -7,18 +7,16 @@
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che modella gli argomenti all'interno delle domande.
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati relativi agli argomenti delle domande. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: classe che modella gli argomenti all'interno delle domande.
+	\item \textbf{Utilizzo}:	viene utilizzata per rappresentare i dati relativi agli argomenti delle domande. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textbf{IN \texttt{TopicController}} \\
 			Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande;
 			\item \textbf{OUT \texttt{QuestionModel}} \\
 			Questa classe rappresenta i dati delle domande create dai vari utenti.
 		\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
 		\begin{itemize}
 			\item \textbf{- topicSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per gli argomenti e prevede i seguenti attributi:
@@ -29,7 +27,7 @@
 					\item \texttt{question} di tipo \texttt{Array}, contiene gli \texttt{ObjectId} delle domande sull'argomento.
 				\end{itemize}
 		\end{itemize}
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 			\item \texttt{+ updateCorrect() : void} \\
 			Metodo che consente di tenere aggiornato il numero di risposte esatte date a domande sull'argomento;

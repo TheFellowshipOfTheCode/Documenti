@@ -7,11 +7,9 @@
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che modella la creazione e la gestione dei dati utente;
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
-	\item \textbf{Relazioni con altre classi} 
+	\item \textbf{Descrizione}: classe che modella la creazione e la gestione dei dati utente;
+	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati degli account dei vari utenti dell'applicazione. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item IN \textbf {AuthenticationController} \\
 			Classe che si occupa della registrazione e dell'autenticazione dell'utente nel sistema. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}} . Risulta essere il componente che eventualmente esegue la richiesta del client attraverso \textit{Passport\ped{G}};
@@ -29,7 +27,7 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 			\item IN \textbf{UserProModel} \\
 			Questa classe rappresenta i dati riguardanti l'utente pro.
 		\end{itemize}
-	\item \textbf{Attributi} 
+	\item \textbf{Attributi}: 
 		\begin{itemize}
 			\item \textbf{- \texttt{userSchema}: \texttt{Schema}} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} dell'utente QuizziPedia. Lo schema prevede i seguenti attributi:
@@ -65,7 +63,7 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 					\texttt{quizSummaries} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{ObjectId}, che rappresentano i riferimenti agli identificativi nel database dei questionari svolti dall'utente.		
 			\end{itemize}	
 		\end{itemize}	
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 		\item
 		- \texttt{hashPassword(password: String): String} \\

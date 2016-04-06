@@ -7,16 +7,14 @@
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione.
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per racchiudere tutte le informazioni riguardanti l'errore.
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: classe che rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione.
+	\item \textbf{Utilizzo}:	viene utilizzata per racchiudere tutte le informazioni riguardanti l'errore.
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textbf{IN \texttt{ErrorHandler}} \\
 			Classe \textit{middleware\ped{G}} per la gestione degli errori. Ritorna al \textit{client\ped{G}} un oggetto di tipo \texttt{Response} con stato \textit{HTTP\ped{G}} 500 e descrizione dell'errore in formato \textit{JSON\ped{G}}. È un componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsability\ped{G}}.
 		\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
 		\begin{itemize}
 			\item \textbf{- errorSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per gli errori e prevede i seguenti attributi:
@@ -26,7 +24,7 @@
 					\item \texttt{errorTitle	} di tipo \texttt{String}, rappresenta il titolo del messaggio d'errore.
 				\end{itemize}
 		\end{itemize}
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 			\item \texttt{+ getCode() : Number} \\
 			Metodo che consente di ottenere il codice dell'errore;

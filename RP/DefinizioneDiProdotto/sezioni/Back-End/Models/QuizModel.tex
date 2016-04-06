@@ -10,18 +10,16 @@
 
 
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che modella i questionari all'interno dell'applicazione.
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati relativi ai questionari all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: classe che modella i questionari all'interno dell'applicazione.
+	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati relativi ai questionari all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textbf{OUT} \texttt{QuestionModel}\\
 			Classe che rappresenta le operazioni relative alle domande;
 			\item \textbf{OUT} \texttt{UserModel}\\
 			Classe che rappresenta le operazioni relative agli utenti.
 		\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
 		\begin{itemize}
 			\item \textbf{- quizSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} dei quiz di \progetto. Lo schema prevede i seguenti attributi:
@@ -34,7 +32,7 @@
 					\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta il numero totale di risposte corrette date dagli utenti alle domande del questionario.	
 				\end{itemize}
 		\end{itemize}
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 		
 			\item \texttt{+ createQuiz(info: JSON, callback: function(JSON), errback: function(QuizziPediaError)): void}\\

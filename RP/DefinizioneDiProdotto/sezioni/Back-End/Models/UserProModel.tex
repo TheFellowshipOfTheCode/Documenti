@@ -7,11 +7,9 @@
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che modella i dati dell'utente pro;
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati dell'utente pro. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza;
-	\item \textbf{Relazioni con altre classi} 
+	\item \textbf{Descrizione}: classe che modella i dati dell'utente pro;
+	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati dell'utente pro. Si interfaccia alla libreria Mongoose per la creazione dello schema e dei relativi metodi statici o di istanza;
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item IN \textbf {UserManagementController} \\
 			Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica dei dati dell'utente.
@@ -21,7 +19,7 @@ Rappresenta il ConcreteHandler nel design pattern Chain of responsibility. Utili
 			\item OUT \textbf{UserModel} \\
 			Questa classe rappresenta i dati riguardanti i vari utenti registrati al sistema;
 		\end{itemize}
-	\item \textbf{Attributi} 
+	\item \textbf{Attributi}:
 		\begin{itemize}
 			\item \textbf{- \texttt{UserProSchema}: \texttt{Schema}} \\
 			Questo campo dati rappresenta lo schema Mongoose dell'utente pro QuizziPedia. Lo schema prevede i seguenti attributi:
@@ -30,7 +28,7 @@ Rappresenta il ConcreteHandler nel design pattern Chain of responsibility. Utili
 					\texttt{userID} di tipo \texttt{ObjectId}, rappresenta il riferimento all'identificativo nel database contenente i dati dei vari utenti registrati.
 			\end{itemize}		
 		\end{itemize}	
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 		\item
 		+ \texttt{\underline{addUserPro}(userId : ObjectId, callback: function(JSON), errback: \\function(QuizzipediaError))} \\	

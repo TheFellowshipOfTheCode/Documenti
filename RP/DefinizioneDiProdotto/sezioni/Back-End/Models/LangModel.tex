@@ -7,16 +7,14 @@
 \end{figure}
 \FloatBarrier
 	\begin{itemize}
-		\item \textbf{Descrizione} \\
-		Classe che modella le informazioni riguardanti la lingua dell'applicazione;
-		\item \textbf{Utilizzo} \\
-		Viene utilizzata per scambiare memorizzare le traduzioni delle variabili che andranno visualizzate nella \textit{view\ped{G}}.
-		\item \textbf{Relazioni con altre classi} \\
+		\item \textbf{Descrizione}: classe che modella le informazioni riguardanti la lingua dell'applicazione;
+		\item \textbf{Utilizzo}: viene utilizzata per scambiare memorizzare le traduzioni delle variabili che andranno visualizzate nella \textit{view\ped{G}}.
+		\item \textbf{Relazioni con altre classi}:
 			\begin{itemize}
 				\item OUT LangController \\
 				Classe che gestisce la logica applicativa riguardante la traduzione delle variabili;
 			\end{itemize}
-		\item \textbf{Attributi} \\
+		\item \textbf{Attributi}:
 			\begin{itemize}
 				\item \texttt{LangSchema : Schema} \\
 				Questo campo rappresenta lo schema \textit{mongoose\ped{G}} per le variabili della lingua e prevede i seguenti attributi:
@@ -26,7 +24,7 @@
 						\item \texttt{ita} di tipo \texttt{Array}, contiene oggetti con coppie di tipo \texttt{String} che associano i nomi delle variabili alla loro traduzione in italiano;
 					\end{itemize}
 			\end{itemize}
-		\item \textbf{Metodi}
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \texttt{+ getVarlist(lang: String, callback: function(JSON), \\ errback: function(QuizziPediaError))} \\
 				Metodo che permette di ritornare la traduzione delle variabili; \\

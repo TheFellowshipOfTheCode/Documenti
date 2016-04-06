@@ -10,11 +10,9 @@
 
 
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che modella i riepiloghi all'interno dell'applicazione.
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per rappresentare i dati relativi ai riepiloghi all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}: classe che modella i riepiloghi all'interno dell'applicazione.
+	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati relativi ai riepiloghi all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textbf{OUT} \texttt{QuizModel}\\
 			Classe che modella i questionari;
@@ -25,7 +23,7 @@
 			\item \textbf{IN} \texttt{SummaryController}\\
 			Classe che gestisce le operazioni relative ai riepiloghi.
 		\end{itemize}
-	\item \textbf{Attributi}
+	\item \textbf{Attributi}:
 		\begin{itemize}
 			\item \textbf{- summarySchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} dei riepiloghi di \progetto. Lo schema prevede i seguenti attributi:
@@ -36,7 +34,7 @@
 					\item \texttt{mark} di tipo \texttt{Number}, rappresenta il voto conseguito nel quiz.
 				\end{itemize}
 		\end{itemize}
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 			\item \texttt{+ createSummary(quiz: JSON)}\\
 			Crea un riepilogo.\\
