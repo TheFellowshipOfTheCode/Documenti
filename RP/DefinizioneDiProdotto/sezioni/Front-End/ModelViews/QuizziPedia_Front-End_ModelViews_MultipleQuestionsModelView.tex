@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::ModelViews::MultipleQuestionsModelView}
 \begin{figure} [ht]
 	\centering
-	%\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_MultipleQuestionsModelView.png}
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_MultipleQuestionsModelView.png}
 	\caption{QuizziPedia::Front-End::ModelViews::MultipleQuestionsModelView}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -16,9 +16,7 @@
 	\begin{itemize}
 		\item {+ image: String} \\ Attributo contenete l'\textit{URL\ped{G}} dell'immagine caricata dall'utente;
 		\item {+ questionText: String} \\ Attributo contenente il testo della domanda;
-		\item \texttt{questionText: String} \\ Identifica il testo della domanda;
-		\item \texttt{image: String} \\ Identifica l'url di una possibile immagine nella domanda;
-		\item \texttt{answers: Array}\\ Array che contiene coppie di valori. Queste coppie sono formate da:
+		\item \texttt{+ answers: Array}\\ Array che contiene coppie di valori. Queste coppie sono formate da:
 		\begin{itemize}
 			\item \texttt{type: String} \\ Indica la tipologia della risposta;
 			\item \texttt{text: String} \\ Contiene il testo dell'affermazione;
