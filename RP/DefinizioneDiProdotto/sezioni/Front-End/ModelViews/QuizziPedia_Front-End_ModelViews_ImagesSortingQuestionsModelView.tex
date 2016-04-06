@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::ModelViews::ImagesSortingQuestionsModelView}
 \begin{figure} [ht]
 	\centering
-	%\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_ImagesSortingQuestionsModelView.png}
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_ImagesSortingQuestionsModelView.png}
 	\caption{QuizziPedia::Front-End::ModelViews::ImagesSortingQuestionsModelView}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -16,10 +16,10 @@
 	\begin{itemize}
 		\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
 		\begin{itemize}
-			\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+			\item \texttt{answer: Array}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
 			\begin{enumerate}
-				\item \texttt{urlSorting}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata alla risposta;
-				\item \texttt{position}: attributo di tipo \texttt{Number} che indica la giusta posizione dell'immagine.
+				\item \texttt{urlSorting: String}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} dell'immagine associata alla risposta;
+				\item \texttt{position: String}: attributo di tipo \texttt{Number} che indica la giusta posizione dell'immagine.
 			\end{enumerate}
 		\end{itemize}
 		\item \texttt{+ keyword: String} \\ Attributo contenente la keyword associata alla domanda/questionario;	  

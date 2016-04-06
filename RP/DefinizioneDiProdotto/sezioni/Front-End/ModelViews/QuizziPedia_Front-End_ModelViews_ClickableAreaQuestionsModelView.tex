@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::ModelViews::ClickableAreaQuestionsModelView}
 \begin{figure} [ht]
 	\centering
-	%\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_ClickableAreaQuestionsModelView.png}
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_ClickableAreaQuestionsModelView.png}
 	\caption{QuizziPedia::Front-End::ModelViews::ClickableAreaQuestionsModelView}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -16,24 +16,24 @@
 	\begin{itemize}
 			\item \texttt{+ question: Object} \\ Oggetto contenente gli attributi per la creazione della domanda:
 			\begin{itemize}
-				\item \texttt{url}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} associato all'immagine;
-				\item \texttt{answer}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
+				\item \texttt{url: String}: attributo di tipo \texttt{String} che contiene l'\textit{URL\ped{G}} associato all'immagine;
+				\item \texttt{answer: Array}: array contenente oggetti che rappresentano le risposte. Ogni oggetto risposta contiene:
 				\begin{itemize}
-					\item \texttt{x}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ascisse all'interno dell'immagine;
-					\item \texttt{y}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ordinate all'interno dell'immagine.
+					\item \texttt{x: Number}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ascisse all'interno dell'immagine;
+					\item \texttt{y: Number}: attributo di tipo \texttt{Number} che rappresenta la posizione della risposta nell'asse delle ordinate all'interno dell'immagine.
 				\end{itemize}
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
 			\item \texttt{+} \texttt{submitQuestion(): void}\\ 
 			Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; 
-			\item \texttt{+} \texttt{choseThatPoint(x:Integer, y: Integer): void}\\
+			\item \texttt{+} \texttt{choseThatPoint(x: Number, y: Number): void}\\
 			Metodo che gestisce l’evento click su un punto dell'immagine. Una volta selezionato esso verrà inserito nell'array di punti; \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{x: Integer} \\
+				\item \texttt{x: Number} \\
 				Parametro contenente la coordinata x del punto;
-				\item \texttt{y: Integer} \\ 
+				\item \texttt{y: Number} \\ 
 				Parametro contenente la coordinata y del punto;
 			\end{itemize}
 	\end{itemize}
