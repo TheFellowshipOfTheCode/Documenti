@@ -7,18 +7,18 @@
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande.
-	\item \textbf{Utilizzo} \\
-	Viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{G}} legate agli argomenti delle domande.
-	\item \textbf{Relazioni con altre classi}
+	\item \textbf{Descrizione}:
+	classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande.
+	\item \textbf{Utilizzo}:
+	viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{G}} legate agli argomenti delle domande.
+	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
-			\item \textbf{IN \texttt{QuestionRouter}} \\
-			Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
-			\item \textbf{OUT \texttt{TopicModel}} \\
-			Classe che modella gli argomenti delle domande.
+			\item \textbf{IN \texttt{QuestionRouter}}:
+			classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
+			\item \textbf{OUT \texttt{TopicModel}}: 
+			classe che modella gli argomenti delle domande.
 		\end{itemize}
-	\item \textbf{Metodi}
+	\item \textbf{Metodi}:
 		\begin{itemize}
 			\item \texttt{+ updateTopic(req : Request, res : Response, next : function(QuizziPediaError))} \\
 			Aggiorna il numero di risposte esatte e totali date a domande sull'argomento da parte degli utenti. \\

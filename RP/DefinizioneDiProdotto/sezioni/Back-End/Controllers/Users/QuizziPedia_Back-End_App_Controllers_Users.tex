@@ -9,10 +9,10 @@
 \FloatBarrier
 \begin{itemize}
 	\item 
-	\textbf{Descrizione}:\\
-	\textit{Package\ped{G}} contenente i controllers relativi alla gestione dell'autenticazione e dei dati dell'utente;
+	\textbf{Descrizione}:
+	\textit{package\ped{G}} contenente i controllers relativi alla gestione dell'autenticazione e dei dati dell'utente;
 	\item
-	\textbf{Padre}:\\
+	\textbf{Padre}:
 	\texttt{Controllers}
 \end{itemize}	
 \subsubsection{Classi}
@@ -26,11 +26,11 @@
 \FloatBarrier
 \begin{itemize}
 	\item 
-	\textbf{Descrizione}:\\
-	Classe che si occupa della registrazione e dell'autenticazione dell'utente nel sistema. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}. Risulta essere il componente che eventualmente esegue la richiesta del client attraverso \textit{Passport\ped{G}};
+	\textbf{Descrizione}:
+	classe che si occupa della registrazione e dell'autenticazione dell'utente nel sistema. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}. Risulta essere il componente che eventualmente esegue la richiesta del client attraverso \textit{Passport\ped{G}};
 	\item
-	\textbf{Utilizzo}:\\
-	Viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{G}} legate alla registrazione e all'autenticazione dell'utente;
+	\textbf{Utilizzo}:
+	viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{G}} legate alla registrazione e all'autenticazione dell'utente;
 	\item
 	\textbf{Relazioni con altre classi}:
 	\begin{itemize}
@@ -101,11 +101,11 @@
 \FloatBarrier
 \begin{itemize}
 	\item 
-	\textbf{Descrizione}:\\
-	Classe \textit{middleware\ped{G}} che, utilizzando \textit{Passport\ped{G}}, si occupa di controllare la consistenza dell'oggetto session durante la sessione associata all'utente autenticato. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}};
+	\textbf{Descrizione}:
+	classe \textit{middleware\ped{G}} che, utilizzando \textit{Passport\ped{G}}, si occupa di controllare la consistenza dell'oggetto session durante la sessione associata all'utente autenticato. È un componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}};
 	\item
-	\textbf{Utilizzo}:\\
-	Componente \textit{middleware\ped{G}} della catena, esegue controlli sullo stato della sessione relativa all'utente. Se l'utente non possiede i permessi adeguati o la sessione è scaduta restituisce un messaggio d'errore, altrimenti passa il controllo al prossimo ConcreteHandler che gestirà il normale flusso d'esecuzione del programma;
+	\textbf{Utilizzo}:
+	componente \textit{middleware\ped{G}} della catena, esegue controlli sullo stato della sessione relativa all'utente. Se l'utente non possiede i permessi adeguati o la sessione è scaduta restituisce un messaggio d'errore, altrimenti passa il controllo al prossimo ConcreteHandler che gestirà il normale flusso d'esecuzione del programma;
 	\item
 	\textbf{Relazioni con altre classi}:
 	\begin{itemize}
