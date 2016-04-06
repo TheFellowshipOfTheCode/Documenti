@@ -1,0 +1,251 @@
+\newpage
+\subsection{Caso d'uso UC12: Risposta ad una domanda}
+\label{UC12}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12.png}
+	\caption{UC12: Risposta ad una domanda}
+\end{figure}
+\FloatBarrier
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può rispondere alla domanda che viene visualizzata in modo diverso in base alla tipologia corrispondente;
+\item \textbf{Precondizione}: il sistema visualizza la domanda e le possibili risposte;
+\item \textbf{Postcondizione}: l'attore ha selezionato una o più risposte;
+\item \textbf{Scenario principale}: si verifica uno dei seguenti scenari:
+\begin{enumerate}
+	\item L'attore può rispondere ad una domanda vero/falso (UC12.1);
+	\item L'attore può rispondere ad una domanda con risposte multiple (UC12.2);
+	\item L'attore può compilare un esercizio riempiendo gli spazi vuoti (UC12.3);
+	\item L'attore associa le voci della colonna di sinistra con quelle della colonna di destra (UC12.4);
+	\item L'attore può ordinare le immagini secondo il criterio richiesto dalla domanda (UC12.5);
+	\item L'attore può ordinare le stringhe secondo il criterio richiesto dalla domanda (UC12.6);
+	\item L'attore può rispondere alla domanda selezionando un'area cliccabile (UC12.7). 
+\end{enumerate}
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.1: Risposta ad una domanda vero/falso}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una risposta alla domanda vero/falso;
+\item \textbf{Precondizione}: il sistema visualizza la domanda vero/falso;
+\item \textbf{Postcondizione}: l'attore ha risposto alla domanda vero/falso;
+\item \textbf{Scenario principale}: l'attore seleziona una risposta alla domanda vero/falso.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.2: Risposta ad una domanda a risposta multipla}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una o più risposte alla domanda a risposta multipla;
+\item \textbf{Precondizione}: il sistema visualizza la domanda a risposta multipla;
+\item \textbf{Postcondizione}: l'attore ha risposto alla domanda a risposta multipla;
+\item \textbf{Scenario principale}: l'attore seleziona una o più risposte alla domanda a risposta multipla.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.3: Compilazione esercizio a riempimento di spazi vuoti}
+\label{UC12.3}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_3.png}
+	\caption{UC12.3: Compilazione esercizio a riempimento di spazi vuoti}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può compilare l'esercizio riempiendone gli spazi vuoti;
+\item \textbf{Precondizione}: il sistema visualizza l'esercizio di riempimento degli spazi vuoti;
+\item \textbf{Postcondizione}: l'attore ha compilato l'esercizio riempiendone gli spazi vuoti;
+\item \textbf{Scenario principale}: l'attore può riempire uno spazio vuoto dopo averlo selezionato (UC12.3.1).
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.3.1: Riempimento di uno spazio vuoto selezionato}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può riempire o modificare lo spazio selezionato;
+\item \textbf{Precondizione}: il sistema evidenzia lo spazio selezionato dall'attore;
+\item \textbf{Postcondizione}: l'attore ha riempito lo spazio selezionato;
+\item \textbf{Scenario principale}: l'attore riempie o modifica lo spazio selezionato. 
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.4: Risposta ad una domanda di collegamento}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_4.png}
+	\caption{UC12.4: Risposta ad una domanda di collegamento}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può collegare le voci della colonna di sinistra con le voci della colonna di destra;
+\item \textbf{Precondizione}: il sistema visualizza la domanda di collegamento;
+\item \textbf{Postcondizione}: l'attore ha collegato le voci della colonna di sinistra con le voci della colonna di destra;
+\item \textbf{Scenario principale}: l'attore può collegare le voci della colonna di sinistra con le voci della colonna di destra (UC12.4.1).
+\end{itemize}
+
+\newpage
+\subsubsection{Caso d'uso UC12.4.1: Collegamento delle voci}
+\label{UC12.4.1}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_4_1.png}
+	\caption{UC12.4.1: Collegamento delle voci}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una voce della colonna di sinistra/destra e successivamente selezionare una voce della colonna di destra/sinistra per associarle;
+\item \textbf{Precondizione}: il sistema visualizza la domanda di collegamento;
+\item \textbf{Postcondizione}: l'attore ha associato due voci;
+\item \textbf{Scenario principale}:
+\begin{enumerate}
+\item L'attore può selezionare una voce della colonna di sinistra (UC12.4.1.1);
+\item L'attore può selezionare una voce della colonna di destra (UC12.4.1.2).
+\end{enumerate}
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.4.1.1: Selezione di una voce della colonna di sinistra}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una voce della colonna di sinistra;
+\item \textbf{Precondizione}: il sistema visualizza la domanda di collegamento;
+\item \textbf{Postcondizione}: l'attore ha selezionato una voce della colonna di sinistra;
+\item \textbf{Scenario principale}: l'attore seleziona una voce della colonna di sinistra. 
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.4.1.2: Selezione di una voce della colonna di destra}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una voce della colonna di destra;
+\item \textbf{Precondizione}: il sistema visualizza la domanda di collegamento;
+\item \textbf{Postcondizione}: l'attore ha selezionato una voce della colonna di destra;
+\item \textbf{Scenario principale}: l'attore seleziona una voce della colonna di destra. 
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.5: Ordinamento di immagini}
+\label{UC12.5}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_5.png}
+	\caption{UC12.5: Ordinamento di immagini}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può ordinare le immagini secondo il criterio richiesto nella domanda inserendole negli appositi spazi;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di immagini;
+\item \textbf{Postcondizione}: l'attore ha inserito le immagini nella lista ordinata;
+\item \textbf{Scenario principale}: l'attore può ordinare le immagini secondo il criterio richiesto nella domanda inserendole negli appositi spazi (UC12.5.1).
+\end{itemize}
+
+\newpage
+\subsubsection{Caso d'uso UC12.5.1: Inserimento di un'immagine in uno spazio}
+\label{UC12.5.1}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_5_1.png}
+	\caption{UC12.5.1: Inserimento di un'immagine in uno spazio}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare un'immagine per inserirla in uno spazio vuoto;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di immagini;
+\item \textbf{Postcondizione}: l'attore ha inserito l'immagine nello spazio selezionato;
+\item \textbf{Scenario principale}: 
+\begin{enumerate}
+\item L'attore può selezionare un'immagine (UC12.5.1.1);
+\item L'attore può selezionare uno spazio vuoto per inserire l'immagine selezionata (UC12.5.1.2).
+\end{enumerate}
+\item \textbf{Scenari alternativi}: se l'attore, dopo aver selezionato un'immagine, seleziona uno spazio che è già occupato da un'altra immagine, queste due si scambieranno di posto.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.5.1.1: Selezione di un'immagine}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare un'immagine;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di immagini;
+\item \textbf{Postcondizione}: l'attore ha selezionato un'immagine;
+\item \textbf{Scenario principale}: l'attore seleziona un'immagine.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.5.1.2: Selezione di uno spazio vuoto}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare uno spazio vuoto;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di immagini;
+\item \textbf{Postcondizione}: l'attore ha selezionato uno spazio vuoto;
+\item \textbf{Scenario principale}: l'attore seleziona uno spazio vuoto.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.6: Ordinamento di stringhe}
+\label{UC12.6}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_6.png}
+	\caption{UC12.6: Ordinamento di stringhe}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può ordinare le stringhe secondo il criterio richiesto nella domanda inserendole negli appositi spazi;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di stringhe;
+\item \textbf{Postcondizione}: l'attore ha inserito le stringhe nella lista ordinata;
+\item \textbf{Scenario principale}: l'attore può ordinare le stringhe secondo il criterio richiesto nella domanda inserendole negli appositi spazi (UC12.6.1).
+\end{itemize}
+
+\newpage
+\subsubsection{Caso d'uso UC12.6.1: Inserimento di una stringa in uno spazio}
+\label{UC12.6.1}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_6_1.png}
+	\caption{UC12.6.1: Inserimento di una stringa in uno spazio}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una stringa per inserirla in uno spazio vuoto o scambiarla con un'altra se lo spazio è già occupato;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di stringhe;
+\item \textbf{Postcondizione}: l'attore ha inserito la stringa nello spazio selezionato;
+\item \textbf{Scenario principale}: 
+\begin{enumerate}
+\item L'attore può selezionare una stringa (UC12.6.1.1);
+\item L'attore può selezionare uno spazio vuoto per inserire la stringa selezionata (UC12.6.1.2).
+\end{enumerate}
+\item \textbf{Scenari alternativi}: se l'attore, dopo aver selezionato una stringa, seleziona uno spazio che è già occupato da un'altra stringa, queste due si scambieranno di posto.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.6.1.1: Selezione di una stringa}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una stringa;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di stringhe;
+\item \textbf{Postcondizione}: l'attore ha selezionato una stringa;
+\item \textbf{Scenario principale}: l'attore seleziona una stringa.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.6.1.2: Selezione di uno spazio vuoto}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare uno spazio vuoto;
+\item \textbf{Precondizione}: il sistema visualizza la domanda ad ordinamento di stringhe;
+\item \textbf{Postcondizione}: l'attore ha selezionato uno spazio vuoto;
+\item \textbf{Scenario principale}: l'attore seleziona uno spazio vuoto.
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.7: Risposta ad una domanda con area cliccabile nell'immagine}
+\label{UC12.7}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{UML/UC12_7.png}
+	\caption{UC12.7: Risposta ad una domanda con area cliccabile nell'immagine}
+\end{figure}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare una o più aree cliccabili;
+\item \textbf{Precondizione}: il sistema visualizza la domanda con area cliccabile nell'immagine;
+\item \textbf{Postcondizione}: l'attore ha risposto alla domanda con area cliccabile;
+\item \textbf{Scenario principale}: l'attore può selezionare un area cliccabile (UC12.7.1).
+\end{itemize}
+
+\subsubsection{Caso d'uso UC12.7.1: Selezione di un'area cliccabile}
+\begin{itemize}
+\item \textbf{Attori}: utente non autenticato, utente autenticato, utente autenticato pro;
+\item \textbf{Descrizione}: l'attore può selezionare un'area cliccabile;
+\item \textbf{Precondizione}: il sistema visualizza la domanda con area cliccabile nell'immagine;
+\item \textbf{Postcondizione}: l'attore ha selezionato un'area cliccabile;
+\item \textbf{Scenario principale}: l'attore seleziona un'area cliccabile.
+\end{itemize}
