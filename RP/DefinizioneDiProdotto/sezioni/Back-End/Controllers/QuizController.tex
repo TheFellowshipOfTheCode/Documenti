@@ -2,16 +2,16 @@
 \label{QuizziPedia::Back-End::App::Controllers::QuizController}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Controllers_quizController.png}
+	\includegraphics[scale=0.8]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Controllers_quizController.png}
 	\caption{QuizziPedia::Back-End::App::Models::Controllers::TopicController}
 \end{figure}
 \FloatBarrier
 
 \begin{itemize}
 	\item \textbf{Descrizione}:
-	classe che gestisce la logica applicativa riguardante la visualizzazione e la gestione dei questionari.
+	classe che gestisce la logica applicativa riguardante la visualizzazione e la gestione dei questionari.;
 	\item \textbf{Utilizzo}:
-	viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{G}} legate alla gestione dei questionari.
+	viene utilizzata per implementare le funzionalità necessarie a gestire le richieste \textit{REST\ped{G}} legate alla gestione dei questionari;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
 			\item \textbf{IN \texttt{QuizRouter}}:
@@ -21,7 +21,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+ createQuiz(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ createQuiz(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Crea un questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -33,7 +33,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 	
-	\item \texttt{+ editQuiz(req: Request, res: Response, next: function(QuizziPediaError))}\\
+	\item \texttt{+ editQuiz(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Modifica un questionario secondo i dati inseriti dall'utente.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -45,7 +45,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 		
-		\item \texttt{+ addUser(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ addUser(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Iscrive un utente al questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -56,7 +56,7 @@
 			\item \texttt{next: function(QuizziPediaError)}\\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
-		\item \texttt{+ removeUser(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ removeUser(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Disiscrive un utente al questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -68,7 +68,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 		
-		\item \texttt{+ addActiveUser(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ addActiveUser(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Aggiorna la lista di utenti che hanno svolto il questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -80,7 +80,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 		
-		\item \texttt{+ updateStatistic(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ updateStatistic(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Aggiorna le statistiche del questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -92,7 +92,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 		
-		\item \texttt{+ searchQuiz(req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ searchQuiz(req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 		Ricerca un questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -104,7 +104,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 		\end{itemize}
 		
-		\item \texttt{+ getPersonalQuizzes((req: Request, res: Response, next: function(QuizziPediaError))}\\
+		\item \texttt{+ getPersonalQuizzes((req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 			Mostra i questionari creati da un utente.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -116,7 +116,7 @@
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 			\end{itemize}
 			
-			\item \texttt{+ getQuiz((req: Request, res: Response, next: function(QuizziPediaError))}\\
+			\item \texttt{+ getQuiz((req: Request, res: Response, \\next: function(QuizziPediaError)): void}\\
 			Mostra il questionario da compilare.\\
 			\textbf{Parametri}:
 			\begin{itemize}

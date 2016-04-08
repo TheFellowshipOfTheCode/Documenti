@@ -2,13 +2,13 @@
 \label{QuizziPedia::Back-End::App::Models::ErrorModel}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_errorModel.png}
+	\includegraphics[scale=0.8]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_errorModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::ErrorModel}
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: classe che rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione.
-	\item \textbf{Utilizzo}:	viene utilizzata per racchiudere tutte le informazioni riguardanti l'errore.
+	\item \textbf{Descrizione}: classe che rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione;
+	\item \textbf{Utilizzo}: viene utilizzata per racchiudere tutte le informazioni riguardanti l'errore;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textbf{IN \texttt{ErrorHandler}} \\
@@ -19,9 +19,9 @@
 			\item \textbf{- errorSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per gli errori e prevede i seguenti attributi:
 				\begin{itemize}
-					\item \texttt{errorCode} di tipo \texttt{Number}, rappresenta il codice dell'errore;
-					\item \texttt{errorMessage} di tipo \texttt{String}, rappresenta la descrizione dell'errore; 
-					\item \texttt{errorTitle	} di tipo \texttt{String}, rappresenta il titolo del messaggio d'errore.
+					\item \texttt{errorCode: Number}\\ Rappresenta il codice dell'errore;
+					\item \texttt{errorMessage: String}\\ Rappresenta la descrizione dell'errore; 
+					\item \texttt{errorTitle	: String}\\ Rappresenta il titolo del messaggio d'errore.
 				\end{itemize}
 		\end{itemize}
 	\item \textbf{Metodi}:

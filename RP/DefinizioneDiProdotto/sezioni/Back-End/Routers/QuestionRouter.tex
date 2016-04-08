@@ -1,27 +1,20 @@
 \paragraph{QuizziPedia::Back-End::App::Routers::QuestionRouter}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App_Routers_questionRouter.png}
+	\includegraphics[scale=0.8]{UML/Package/QuizziPedia_Back-End_App_Routers_questionRouter.png}
 	\caption{QuizziPedia::Back-End::App::Routers::QuestionRouter}
 \end{figure}
 \FloatBarrier
 	\begin{itemize}
-		\item \textbf{Descrizione} \\
-		Classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
-		\item \textbf{Utilizzo} \\
-		Viene utilizzata per chiamare il controller che si occupa di gestire le \textit{API\ped{G}} relative alle domande;
-		\item \textbf{Relazioni con altre classi} \\
+		\item \textbf{Descrizione}: classe che gestisce le richieste relative alle operazioni riguardanti le domande. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
+		\item \textbf{Utilizzo}: viene utilizzata per chiamare il controller che si occupa di gestire le \textit{API\ped{G}} relative alle domande;
+		\item \textbf{Relazioni con altre classi}: \\
 		\begin{itemize}
-			\item \textbf{IN} \texttt{Server}\\
-			Classe che avvia il \textit{server\ped{G}}. Nello specifico apre una connessione al database tramite \textit{Mongoose\ped{G}}, invoca il \textit{middleware\ped{G}} \textit{Express\ped{G}} passando un riferimento al database \textit{MongoDB\ped{G}} come parametro in modo che possa configurarsi con esso, invoca il \textit{middleware\ped{G}} \textit{Passport\ped{G}} ed infine si mette in ascolto su una determinata porta. È il componente \textit{client\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}. Utilizza i moduli \textit{Mongoose\ped{G}}, \textit{Express\ped{G}} e \textit{Passport\ped{G}};
-			\item \textbf{OUT} \texttt{ErrorsHandler}\\
-			Classe \textit{middleware\ped{G}} per la gestione degli errori. Ritorna al \textit{client\ped{G}} un oggetto di tipo \texttt{Response} con stato HTTP 500 e descrizione dell'errore in formato JSON. È un componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
-			\item \textbf{OUT} \texttt{NotFoundHandler}\\
-			Classe che si occupa della gestione dell’errore di pagina non trovata. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
-			\item \textbf{OUT} \texttt{QuestionController}\\
-			Classe che raggruppa i vari \textit{controllers} responsabili delle operazioni riguardanti le domande attraverso \texttt{require};
-			\item \textbf{OUT} \texttt{TopicController} \\
-			Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande. È un componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}.
+			\item \textbf{IN} \texttt{Server}: classe che avvia il \textit{server\ped{G}}. Nello specifico apre una connessione al database tramite \textit{Mongoose\ped{G}}, invoca il \textit{middleware\ped{G}} \textit{Express\ped{G}} passando un riferimento al database \textit{MongoDB\ped{G}} come parametro in modo che possa configurarsi con esso, invoca il \textit{middleware\ped{G}} \textit{Passport\ped{G}} ed infine si mette in ascolto su una determinata porta. È il componente \textit{client\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}. Utilizza i moduli \textit{Mongoose\ped{G}}, \textit{Express\ped{G}} e \textit{Passport\ped{G}};
+			\item \textbf{OUT} \texttt{ErrorsHandler}: classe \textit{middleware\ped{G}} per la gestione degli errori. Ritorna al \textit{client\ped{G}} un oggetto di tipo \texttt{Response} con stato HTTP 500 e descrizione dell'errore in formato JSON. È un componente \\\textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
+			\item \textbf{OUT} \texttt{NotFoundHandler}: classe che si occupa della gestione dell’errore di pagina non trovata. Componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}};
+			\item \textbf{OUT} \texttt{QuestionController}: classe che raggruppa i vari \textit{controllers} responsabili delle operazioni riguardanti le domande attraverso \texttt{require};
+			\item \textbf{OUT} \texttt{TopicController}: classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica degli argomenti delle domande. È un componente \textit{ConcreteHandler\ped{G}} del \textit{design pattern\ped{G}} \textit{Chain of responsibility\ped{G}}.
 		\end{itemize}
 		\item \textbf{Metodi} \\
 		\begin{itemize}
@@ -30,7 +23,7 @@
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{app: Server}\\
-				Rappresenta l’istanza del \textit{server\ped{G}} su cui configurare i \textit{route\ped{G}} che mappano i \textit{controllers} specifici.
+				Rappresenta l’istanza del \textit{server\ped{G}} su cui configurare i \textit{route\ped{G}} che mappano i \textit{controllers\ped{G}} specifici.
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}

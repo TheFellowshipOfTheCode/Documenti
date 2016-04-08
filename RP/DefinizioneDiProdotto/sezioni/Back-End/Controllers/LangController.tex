@@ -2,7 +2,7 @@
 \label{QuizziPedia::Back-End::App::Controllers::UserController}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Controllers_langController.png}
+	\includegraphics[scale=0.8]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Controllers_langController.png}
 	\caption{QuizziPedia::Back-End::App::Controllers::LangController}
 \end{figure}
 \FloatBarrier
@@ -18,7 +18,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}
 		\begin{itemize}
-			\item \texttt{+ getVarlist(req: Request, res: Response,\\ next: function(QuizziPediaError))} \\
+			\item \texttt{+ getVarlist(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
 			\textbf{Parametri}:
 				\begin{itemize}
 					\item \texttt{req: Request} \\
@@ -26,7 +26,7 @@
 					\item \texttt{res: Response} \\
 					Rappresenta la risposta che il server fornirà al termine  dell'esecuzione del metodo;
 					\item \texttt{next: function(QuizziPediaError)} \\
-					Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \textit{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste;
+					Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \textit{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 				\end{itemize}
 		\end{itemize}
 \end{itemize}

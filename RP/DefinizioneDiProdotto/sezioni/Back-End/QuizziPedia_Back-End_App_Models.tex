@@ -3,14 +3,18 @@
 \label{QuizziPedia::Back-End::App::Models}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Package/QuizziPedia_Back-End_App_Models.png}
+	\includegraphics[scale=0.5]{UML/Package/QuizziPedia_Back-End_App_Models.png}
 	\caption{QuizziPedia::Back-End::App::Models}
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione} \\
-	\textit{Package\ped{G}} contenente le classi che definiscono il \textit{model} dell'applicazione. Queste classi sono definite come classi schema di \textit{Mongoose\ped{G}}, il quale permette di utilizzare \textit{MongoDB\ped{G}} tramite oggetti;
-	\item \textbf{Padre} \texttt{App}
+	\item \textbf{Descrizione}: \textit{package\ped{G}} contenente le classi che definiscono il \textit{model} dell'applicazione. Queste classi sono definite come classi schema di \textit{Mongoose\ped{G}}, il quale permette di utilizzare \textit{MongoDB\ped{G}} tramite oggetti;
+	\item \textbf{Padre} \texttt{App};
+	\item \textbf{Interazioni con altri componenti}:
+	\begin{itemize}
+		\item \texttt{Controllers}:
+		\textit{package\ped{G}} che contiene i controllers di \textit{Express\ped{G}}, definisce la logica dell'applicazione.
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{Classi}

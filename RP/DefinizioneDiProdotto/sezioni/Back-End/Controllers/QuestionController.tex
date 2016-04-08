@@ -2,7 +2,7 @@
 \label{QuizziPedia::Back-End::App::Controllers::QuestionController}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Controllers_questionController.png}
+	\includegraphics[scale=0.8]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Controllers_questionController.png}
 	\caption{QuizziPedia::Back-End::App::Models::Controllers::QuestionController}
 \end{figure}
 \FloatBarrier
@@ -20,7 +20,7 @@
 			\end{itemize}
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item \texttt{+ createQuestion(req: Request, res: Response,\\ next: function(QuizziPediaError))} \\
+				\item \texttt{+ createQuestion(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
 				Crea e aggiunge una nuova domanda nel sistema. \\
 				\textbf{Parametri:}
 				\begin{itemize}
@@ -32,7 +32,7 @@
 					Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 				\end{itemize}
 				
-				\item \texttt{+ editQuestion(req: Request, res: Response,\\ next: function(QuizziPediaError))} \\
+				\item \texttt{+ editQuestion(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
 				Modifica una domanda già esistente nel sistema. \\
 				\textbf{Parametri:}
 					\begin{itemize}
@@ -44,7 +44,7 @@
 						Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 					\end{itemize}
 					
-				\item \texttt{+ updateStatistic(req: Request, res: Response,\\ next: function(QuizziPediaError))} \\
+				\item \texttt{+ updateStatistic(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
 				Aggiorna le statistiche sulla difficoltà della domanda, aggiornando anche i campi relativi al numero di risposte totali date alla domanda e al numero di risposte corrette ad ogni risposta da parte di un utente. \\
 				\textbf{Parametri:}
 					\begin{itemize}
@@ -56,7 +56,7 @@
 						Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \texttt{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
 					\end{itemize}
 					
-					\item \texttt{+ getQuestions(req: Request, res: Response,\\ next: function(QuizziPediaError))}\\
+					\item \texttt{+ getQuestions(req: Request, res: Response,\\ next: function(QuizziPediaError)): void}\\
 					Ritorna tutte le domande create da un utente.\\
 					\textbf{Parametri:}
 					\begin{itemize}

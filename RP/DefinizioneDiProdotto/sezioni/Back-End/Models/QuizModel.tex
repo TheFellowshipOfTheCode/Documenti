@@ -2,7 +2,7 @@
 \label{QuizziPedia::Back-End::App::Models::QuizModel}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_quizModel.png}
+	\includegraphics[scale=0.65]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_quizModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::QuizModel}
 \end{figure}
 \FloatBarrier
@@ -10,8 +10,8 @@
 
 
 \begin{itemize}
-	\item \textbf{Descrizione}: classe che modella i questionari all'interno dell'applicazione.
-	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati relativi ai questionari all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza.
+	\item \textbf{Descrizione}: classe che modella i questionari all'interno dell'applicazione;
+	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati relativi ai questionari all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 			\item \textbf{OUT} \texttt{QuestionModel}\\
@@ -24,18 +24,18 @@
 			\item \textbf{- quizSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} dei quiz di \progetto. Lo schema prevede i seguenti attributi:
 				\begin{itemize}
-					\item \texttt{title} di tipo \texttt{String}, rappresenta il titolo del questionario;
-					\item \texttt{author} di tipo \texttt{ObjectId}, rappresenta il riferimento all'identificativo nel database dell'utente che ha creato il questionario;
-					\item \texttt{questions} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database delle domande appartenenti al questionario;
-					\item \texttt{registeredUsers} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database degli utenti iscritti al quiz;
-					\item \texttt{activeUsers} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database degli utenti che partecipano effettivamente al questionario;
-					\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta il numero totale di risposte corrette date dagli utenti alle domande del questionario.	
+					\item \texttt{title: String}\\ Rappresenta il titolo del questionario;
+					\item \texttt{author: ObjectId}\\ Rappresenta il riferimento all'identificativo nel database dell'utente che ha creato il questionario;
+					\item \texttt{questions: Array<ObjectId>}\\ Array che contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database delle domande appartenenti al questionario;
+					\item \texttt{registeredUsers: Array}\\ Array che contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database degli utenti iscritti al quiz;
+					\item \texttt{activeUsers: Array}\\ Array che contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database degli utenti che partecipano effettivamente al questionario;
+					\item \texttt{correctAnswers: Number}\\ Rappresenta il numero totale di risposte corrette date dagli utenti alle domande del questionario.	
 				\end{itemize}
 		\end{itemize}
 	\item \textbf{Metodi}:
 		\begin{itemize}
 		
-			\item \texttt{+ createQuiz(info: JSON, callback: function(JSON), errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ createQuiz(info: JSON, callback: function(JSON), \\errback: function(QuizziPediaError)): void}\\
 			Crea un questionario con i dati che vengono passati.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -64,7 +64,7 @@
 			\end{itemize}
 			
 			\item \texttt{+ setTitle(title: String, errback: function(QuizziPediaError)): void}\\ 		
-			Dà un titolo al questionario.\\
+			Da un titolo al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{title: String}\\
@@ -92,7 +92,7 @@
 			\item \texttt{+ addCorrect(): void}\\
 			Incrementa il numero di risposte corrette date alle domande del questionario.		
 			
-			\item \texttt{+ removeUser(userID: ObjectId, errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ removeUser(userID: ObjectId, \\errback: function(QuizziPediaError)): void}\\
 			Rimuovere un utente dalla lista degli iscritti al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -102,7 +102,7 @@
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ searchQuiz(searchword: String, callback: function(JSON), errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ searchQuiz(searchword: String, callback: function(JSON), \\errback: function(QuizziPediaError)): void}\\
 			Ricerca un questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -126,7 +126,7 @@
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ getQuiz(callback: function(JSON), errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ getQuiz(callback: function(JSON), \\errback: function(QuizziPediaError)): void}\\
 			Ritorna il questionario da compilare.\\
 			\textbf{Parametri}:
 			\begin{itemize}

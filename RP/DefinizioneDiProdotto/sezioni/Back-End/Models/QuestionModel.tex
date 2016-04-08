@@ -2,13 +2,13 @@
 \label{QuizziPedia::Back-End::App::Models::QuestionModel}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_questionModel.png}
+	\includegraphics[scale=0.65]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_questionModel.png}
 	\caption{QuizziPedia::Back-End::App::Models::QuestionModel}
 \end{figure}
 \FloatBarrier
 	\begin{itemize}
 		\item \textbf{Descrizione}: classe che modella i dati relativi alle domande all'interno dell'applicazione;	
-		\item \textbf{Utilizzo}: viene utilizzata per rappresentare le domande. Si interfaccia alla libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
+		\item \textbf{Utilizzo}: viene utilizzata per rappresentare le domande. Si interfaccia alla libreria \\\textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
 		\item \textbf{Relazione con altra classi}:
 			\begin{itemize}
 			\item \textbf{IN \texttt{UserModel}} \\
@@ -24,9 +24,9 @@
 			\item \textbf{OUT \texttt{UserModel}} \\
 			Classe che modella la creazione e la gestione dei dati utente;
 			\item \textbf{IN \texttt{QuizModel}} \\
-			Classe che modella i questionari all'interno dell'applicazione.
+			Classe che modella i questionari all'interno dell'applicazione;
 			\item \textbf{OUT \texttt{SummaryModel}} \\
-			Classe che modella i riepiloghi all'interno dell'applicazione.
+			Classe che modella i riepiloghi all'interno dell'applicazione;
 			\item \textbf{IN \texttt{TopicModel}} \\
 			Classe che modella gli argomenti all'interno delle domande.
 			\end{itemize}
@@ -35,56 +35,56 @@
 		\item \texttt{questionSchema: Schema} \\
 		Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per le domande e prevede i seguenti attributi:
 		\begin{itemize}
-			\item \texttt{author} di tipo \texttt{ObjectId}, rappresenta il riferimento all'identificativo nel database dell'utente che ha creato la domanda;
-			\item \texttt{makeWith} di tipo \texttt{String}, rappresenta con quale strumento è stata creata la domanda;
-			\item \texttt{language} di tipo \texttt{String}, rappresenta la lingua in cui è scritta la domanda; 
-			\item \texttt{question} di tipo \texttt{Array}, contiene un oggetto di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
+			\item \texttt{author: ObjectId}\\ Rappresenta il riferimento all'identificativo nel database dell'utente che ha creato la domanda;
+			\item \texttt{makeWith: String}\\ Rappresenta con quale strumento è stata creata la domanda;
+			\item \texttt{language: String}\\ Rappresenta la lingua in cui è scritta la domanda; 
+			\item \texttt{question: Array<Object>}\\ Array che contiene oggetti di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
 				\begin{itemize}
-					\item \texttt{type} di tipo \texttt{String}, rappresenta la tipologia di domanda; 
-					\item \texttt{questionText} di tipo \texttt{String}, rappresenta il testo della domanda; 
-					\item \texttt{image} di tipo \texttt{String}, rappresenta l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda; 
-					\item \texttt{answers} di tipo \texttt{Array}, contiene un oggetto di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
+					\item \texttt{type: String}\\ Rappresenta la tipologia di domanda; 
+					\item \texttt{questionText: String}\\ Rappresenta il testo della domanda; 
+					\item \texttt{image: String}\\ Rappresenta l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda; 
+					\item \texttt{answers: Array<Object>}\\ Contiene oggetti di tipo \texttt{JSON}. L'oggetto \texttt{JSON} è rappresentato dai seguenti campi:
 					\begin{enumerate}	
 										  
-						\item \texttt{text} di tipo \texttt{String}, rappresenta il testo della risposta;
-        					\item \texttt{url} di tipo \texttt{String}, rappresenta l'immagine della risposta;
-        					\item \texttt{attributesForTForMultiple} di tipo \texttt{Mixed}, contiene i seguenti attributi:
+						\item \texttt{text: String}\\ Rappresenta il testo della risposta;
+        					\item \texttt{url: String}\\ Rappresenta l'immagine della risposta;
+        					\item \texttt{attributesForTForMultiple: Mixed}\\ Contiene i seguenti attributi:
         					\begin{enumerate}
-        						\item \texttt{isItRight} di tipo \texttt{Boolean}, rappresenta se una risposta è giusta o sbagliata.
+        						\item \texttt{isItRight: Boolean}\\ Rappresenta se una risposta è giusta o sbagliata.
 						\end{enumerate}      
-						\item \texttt{attributesForSorting} di tipo \texttt{Mixed}, contiene i seguenti attributi:
+						\item \texttt{attributesForSorting: Mixed}\\ Contiene i seguenti attributi:
         					\begin{enumerate}
-        						\item \texttt{position} di tipo \texttt{Number}, rappresenta quale è la giusta posizione di un testo o immagine all'interno di un esercizio di ordinamento.
+        						\item \texttt{position: Number}\\ Rappresenta quale è la giusta posizione di un testo o immagine all'interno di un esercizio di ordinamento.
 						\end{enumerate}  
-							\item \texttt{attributesForLinking} di tipo \texttt{Mixed}, contiene i seguenti attributi:
+							\item \texttt{attributesForLinking: Mixed}\\ Contiene i seguenti attributi:
         					\begin{enumerate}
-        						\item \texttt{text1} di tipo \texttt{String}, rappresenta il primo elemento testuale che deve essere collegato con il secondo elemento testuale o rappresentato da un'immagine.
-        						\item \texttt{text2} di tipo \texttt{String}, rappresenta il secondo elemento testuale che deve essere collegato con il primo elemento testuale o rappresentato da un'immagine.
-        						\item \texttt{url1} di tipo \texttt{String}, rappresenta il primo elemento rappresentato da un'immagine che deve essere collegato con il secondo elemento testuale o rappresentato da un'immagine.
-        						\item \texttt{url2} di tipo \texttt{String}, rappresenta il secondo elemento rappresentato da un'immagine che deve essere collegato con il primo elemento testuale o rappresentato da un immagine.
+        						\item \texttt{text1: String}\\ Rappresenta il primo elemento testuale che deve essere collegato con il secondo elemento testuale o rappresentato da un'immagine;
+        						\item \texttt{text2: String}\\ Rappresenta il secondo elemento testuale che deve essere collegato con il primo elemento testuale o rappresentato da un'immagine;
+        						\item \texttt{url1: String}\\ Rappresenta il primo elemento rappresentato da un'immagine che deve essere collegato con il secondo elemento testuale o rappresentato da un'immagine;
+        						\item \texttt{url2: String}\\ Rappresenta il secondo elemento rappresentato da un'immagine che deve essere collegato con il primo elemento testuale o rappresentato da un immagine.
 						\end{enumerate}  
-							\item \texttt{attributesForClickableArea} di tipo \texttt{Mixed}, contiene i seguenti attributi:
+							\item \texttt{attributesForClickableArea: Mixed}\\ Contiene i seguenti attributi:
         					\begin{enumerate}
-        						\item \texttt{x} di tipo \texttt{Number}, rappresenta la coordinata x di una area cliccabile.  
-        						\item \texttt{y} di tipo \texttt{Number}, rappresenta la coordinata y di una area cliccabile.  
+        						\item \texttt{x: Number}\\ Rappresenta la coordinata x di una area cliccabile;
+        						\item \texttt{y: Number}\\ Rappresenta la coordinata y di una area cliccabile.  
 						\end{enumerate}    
-							\item \texttt{attributesForEmptySpaces} di tipo \texttt{Mixed}, contiene i seguenti attributi:
+							\item \texttt{attributesForEmptySpaces: Mixed}\\ Contiene i seguenti attributi:
         					\begin{enumerate}
-        						\item \texttt{wordNumber} di tipo \texttt{Number}, rappresenta la posizione dello spazio vuoto in cui deve andare inserita la parola.  
+        						\item \texttt{wordNumber: Number}\\ Rappresenta la posizione dello spazio vuoto in cui deve andare inserita la parola.  
 						\end{enumerate}        						  						
 					\end{enumerate}
 				\end{itemize}			
-					\item \texttt{keywords} di tipo \texttt{Array}, contiene oggetti di tipo \texttt{String} che rappresentano le parole chiave utili per ricercare una domanda;	 
-			\item \texttt{level} di tipo \texttt{Number}, rappresenta la difficoltà della domanda;
-			\item \texttt{totalAnswers} di tipo \texttt{Number}, rappresenta le risposte totali che tutti gli utenti hanno dato alla domanda;
-			\item \texttt{correctAnswers} di tipo \texttt{Number}, rappresenta quante risposte corrette hanno dato gli utenti che hanno risposto alla domanda.
+					\item \texttt{keywords: Array<String>}\\ Contiene oggetti di tipo \texttt{String} che rappresentano le parole chiave utili per ricercare una domanda;	 
+			\item \texttt{level: Number}\\ Rappresenta la difficoltà della domanda;
+			\item \texttt{totalAnswers: Number}\\ Rappresenta le risposte totali che tutti gli utenti hanno dato alla domanda;
+			\item \texttt{correctAnswers: Number}\\ Rappresenta quante risposte corrette hanno dato gli utenti che hanno risposto alla domanda.
 		
 		\end{itemize}
 	\end{itemize}
 \item \textbf{Metodi}:
 	\begin{itemize}
-	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError))} \\
-	Metodo che permette la creazione di una nuova domanda; \\
+	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError)): void} \\
+	Metodo che permette la creazione di una nuova domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{question: JSON} \\
@@ -94,8 +94,8 @@
 			\item \texttt{errback: function(QuizziPediaError)} \\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 		\end{itemize}   
-	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError))} \\
-	Metodo che permette di modificare una domanda già esistente; \\
+	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError)): void} \\
+	Metodo che permette di modificare una domanda già esistente. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{question : JSON} \\
@@ -105,19 +105,19 @@
 			\item \texttt{errback: function(QuizziPediaError)} \\
 			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 		\end{itemize}
-	\item \texttt{+ addKeyword(keyword: String, callback: function(JSON),\\ errback: function(QuizziPediaError))} \\
-	Metodo che permette di aggiungere delle parole chiave ad una specifica domanda; \\
+	\item \texttt{+ addKeyword(keyword: String, callback: function(JSON),\\ errback: function(QuizziPediaError)): void} \\
+	Metodo che permette di aggiungere delle parole chiave ad una specifica domanda. \\
 		\textbf{Parametri}:
 			 \begin{itemize}
 			 	\item \texttt{keyword: String} \\
-			 	Rappresenta la parola chiave da inserire
+			 	Rappresenta la parola chiave da inserire;
 			 	\item \texttt{callback: function(JSON)} \\
 			 	Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso si verifichino errori durante l'esecuzione;
 			 	\item \texttt{errback: function(QuizziPediaError)} \\
 			 	Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 			 \end{itemize}
-	\item \texttt{+ updateLevel(userLevel: Number, isCorrected: boolean)} \\
-	Metodo che permette di aggiornare il livello di difficoltà della domanda, questo metodo è chiamato ogni qualvolta un utente risponde ad una domanda durante un allenamento;
+	\item \texttt{+ updateLevel(userLevel: Number, isCorrected: boolean): void} \\
+	Metodo che permette di aggiornare il livello di difficoltà della domanda, questo metodo è chiamato ogni qualvolta un utente risponde ad una domanda durante un allenamento.\\
 		\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{userLevel: Number} \\
@@ -125,11 +125,11 @@
 				\item \texttt{isCorrected: boolean} \\
 				Indica se l'utente che ha risposto alla domanda ha risposto correttamente.
 			\end{itemize}  
-	\item \texttt{- addCorrect()} \\
+	\item \texttt{- addCorrect(): void} \\
 	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda;
-	\item \texttt{- addTotal()} \\
+	\item \texttt{- addTotal(): void} \\
 	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda;
-	\item \texttt{+ getQuestions(userID: ObjectId)}\\
+	\item \texttt{+ getQuestions(userID: ObjectId): Array<QuestionModel>}\\
 	Metodo che ritorna tutte le domande create da un utente.\\
 	\textbf{Parametri:}
 	\begin{itemize}
