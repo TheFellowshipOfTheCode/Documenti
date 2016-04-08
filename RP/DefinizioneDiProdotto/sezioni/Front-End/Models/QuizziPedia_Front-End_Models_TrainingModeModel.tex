@@ -22,16 +22,16 @@
 				\item \texttt{- keywords: Array[String]}\\
 				Questo attributo rappresenta l'\texttt{array} contenente le parole chiave per l'allenamento;
 				\item \texttt{- numberOfQuestions: Number}\\
-				Questo attributo rappresenta il numero di domande che l'utente si è prefissato di rispondere per l'allenamento. Se \texttt{-1} allora non esite un numero di domande impostate, perciò l'allenamento non terminerà fino alla chiusura manuale dell'attività;
+				Questo attributo rappresenta il numero di domande che l'utente si è prefissato di rispondere per l'allenamento. Se \texttt{-1} allora non esiste un numero di domande impostate, perciò l'allenamento non terminerà fino alla chiusura manuale dell'attività;
 				\item \texttt{- questions: Array[QuestionItemModel]}\\
 				Questo attributo contiene l'\texttt{array} di \texttt{QuestionItemModel} che rappresenta le domande dell'allenamento fino a quel momento visualizzate, compresa quella visualizzata;
 				\item \texttt{- rightAnswer: Number}\\
-				Questo attributo rappresenta il numero di domande corrette date;
+				Questo attributo rappresenta il numero di domande corrette date.
 			\end{itemize}
 			\item \textbf{Metodi}: 
 			\begin{itemize}
 				\item \texttt{+ setArgument(argument: String): void} \\
-				Metodo \textit{setter\ped{G}} per il campo dati \texttt{argument}\\
+				Metodo \textit{setter\ped{G}} per il campo dati \texttt{argument}.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item {argument: String}\\
@@ -39,7 +39,7 @@
 				\end{itemize}
 				
 				\item \texttt{+ setNumberOfQuestions(numberOfQuestions: Number): void} \\
-				Metodo \textit{setter\ped{G}} per il campo dati \texttt{numberOfQuestions}\\
+				Metodo \textit{setter\ped{G}} per il campo dati \texttt{numberOfQuestions}.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item {author: ObjectId}\\
@@ -61,11 +61,11 @@
 				\end{itemize}
 				
 				\item \texttt{+ removeQuestion(idQuestion: ObjectId): void} \\
-				Metodo per poter eliminare una domanda dal'allenamento.\\
+				Metodo per poter eliminare una domanda dall'allenamento.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item {idQuestion: ObjectId}\\
-					Questo parametro rappresenta l'id della domanda che si vuole rimuove dal'allenamento.
+					Questo parametro rappresenta l'id della domanda che si vuole rimuove dall'allenamento.
 				\end{itemize}
 				
 				\item \texttt{+ addKeyword(keyword: String): void} \\
@@ -85,7 +85,7 @@
 				\end{itemize}
 				
 				\item \texttt{+ getResult(): Object} \\
-				Metodo \textit{getter\ped{G}} che restituisce risultato fino a quel momento dell'allenamento, ritornando un oggetto contenente il numero di domande giuste e totali;
+				Metodo \textit{getter\ped{G}} che restituisce risultato fino a quel momento dell'allenamento, ritornando un oggetto contenente il numero di domande giuste e totali.
 				
 			\end{itemize}
 		\end{itemize}
