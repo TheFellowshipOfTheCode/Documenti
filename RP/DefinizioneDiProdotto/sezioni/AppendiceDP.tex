@@ -14,7 +14,26 @@
 		\item Si vuole stratificare un sistema: è possibile definire una classe \textit{Facade\ped{G}} come punto d'ingresso per ogni livello di sottosistema. In questo modo, se vi sono dipendenze fra sottosistemi, essi possono comunicare fra loro attraverso la propria \textit{Facade\ped{G}}.
 	\end{itemize}
 	
-\item \textbf{Utilizzo}: nella parte Font-end dell'applicazione il design pattern \textit{Facade\ped{G}} viene espresso dalla classe \texttt{AppRouter} che gestisce i routes dell'applicazione e viene utilizzata per associare un \textit{URL\ped{G}} alle varie view dell'applicazione. Essa utilizza il servizio \texttt{\$routeProvider} per associare ad ogni route un controller e una view e \texttt{\$locationProvider} per configurare come i paths dell'applicazione vengono salvati. Questa funzione viene utilizzata come parametro nel metodo \texttt{config} di Angular. Il metoto \texttt{config} permette di impostare l'esecuzione di una funzione al caricamento del modulo principale di Angular.
+\item \textbf{Utilizzo}:
+	\begin{itemize}
+		\item  Nella parte Font-end dell'applicazione il \textit{design pattern\ped{G} Facade\ped{G}} viene espresso dalla classe \texttt{AppRouter} che gestisce i routes dell'applicazione e viene utilizzata per associare un \textit{URL\ped{G}} alle varie view dell'applicazione. Essa utilizza il servizio \texttt{\$routeProvider} per associare ad ogni route un controller e una view e \texttt{\$locationProvider} per configurare come i paths dell'applicazione vengono salvati. Questa funzione viene utilizzata come parametro nel metodo \texttt{config} di Angular. Il metoto \texttt{config} permette di impostare l'esecuzione di una funzione al caricamento del modulo principale di Angular;
+		\item Nella parte Back-End dell'applicazione il \textit{design pattern\ped{G} Facade\ped{G}} viene utilizzato per semplificare l'interfaccia con cui la risorsa \textit{REST\ped{G}} interagisce con i metodi delle classi \textit{controllers\ped{G}}.
+		Senza l'utilizzo del \textit{design pattern\ped{G}} la gestione di ogni risorsa \textit{REST\ped{G}} verrebbe soddisfatta in modo più complesso, come si può notare nel seguente diagramma che rappresenta una sezione back-end senza l'utilizzo si \textit{Facade\ped{G}}:
+		\label{Parte di QuizziPedia::Back-End senza utilizzo di Facade}
+		\begin{figure} [ht]
+			\centering
+			\includegraphics[scale=0.50]{UML/strutturaPattern/FacadeNoUtilizzo.png}
+			\caption{Parte di QuizziPedia::Back-End senza utilizzo di Facade}
+		\end{figure}\FloatBarrier
+		L'introduzione delle classi \textit{Facade\ped{G}} permette una miglior gestione delle risorse \textit{REST\ped{G}}, permettendo di diminuire le dipendenze tra classi e risorse.
+		\label{Parte di QuizziPedia::Back-End con l' utilizzo di Facade}
+		\begin{figure} [ht]
+			\centering
+			\includegraphics[scale=0.50]{UML/strutturaPattern/FacadeUtilizzo.png}
+			\caption{Parte di QuizziPedia::Back-End con l'utilizzo di Facade}
+		\end{figure}\FloatBarrier	 
+	\end{itemize}
+
 \end{itemize}
 
 \subsection{Creazionali}
@@ -65,34 +84,34 @@ L’injection delle dipendenze può essere fatta in due modi:
 		\item Si vuole passare una richiesta ad uno dei molti oggetti, senza esplicitare il ricevente;
 		\item L'insieme di oggetti che gestirà una richiesta deve essere definito dinamicamente.
 	\end{itemize}
-\item \textbf{Utilizzo}: express usa \textit{Chain-of-responsability} per la gestione dei middleware e del routing. Nell'architettura viene utilizzato all'interno del package \textit{Back-End\ped{G}}::App. Ogni \textit{ConcreteHandler} eredita da \textit{MiddlewareHandler}, che corrisponde all'interfaccia astratta \textit{Handler} del design pattern. Con Express i middleware corrispondono ai \textit{ConcreteHandler}. L'implementazione di questi risulta sotto alcuni aspetti differente da una normale implementazione del pattern:
+\item \textbf{Utilizzo}: \textit{express\ped{G}} usa \textit{Chain-of-responsability} per la gestione dei \textit{middleware\ped{G}} e del routing. Nell'architettura viene utilizzato all'interno del package \texttt{Back-End::App}. Ogni \textit{ConcreteHandler} eredita da \textit{MiddlewareHandler}, che corrisponde all'interfaccia astratta \textit{Handler} del \textit{design pattern\ped{G}}. Con \textit{Express\ped{G}} i \textit{middleware\ped{G}} corrispondono ai \textit{ConcreteHandler}. L'implementazione di questi risulta sotto alcuni aspetti differente da una normale implementazione del pattern:
 	\begin{enumerate}
-		\item I middleware di express possono essere delle classi che implementano il metodo \textit{handle} oppure delle funzioni secondo lo stile funzionale delle \textit{librerie\ped{G}} e dei moduli di Node.js. Nella nostra architettura abbiamo utilizzato principalmente la seconda versione;
-		\item Nel \textit{design pattern\ped{G}} è previsto che l'oggetto \textit{ConcreteHandler} abbia un riferimento (successor) al \textit{ConcreteHandler} successivo. Express, anzichè un riferimento, passa al metodo che esegue il middleware una \textit{callback\ped{G}}. Il middleware che esegue la \textit{callback\ped{G}} passa il controllo all'oggetto del \textit{server\ped{G}} di Express, il quale passerà a sua volta il controllo al successivo middleware.
+		\item I \textit{middleware\ped{G}} di \textit{express\ped{G}} possono essere delle classi che implementano il metodo \textit{handle} oppure delle funzioni secondo lo stile funzionale delle \textit{librerie\ped{G}} e dei moduli di \textit{Node.js\ped{G}}. Nella nostra architettura abbiamo utilizzato principalmente la seconda versione;
+		\item Nel \textit{design pattern\ped{G}} è previsto che l'oggetto \textit{ConcreteHandler} abbia un riferimento (successor) al \textit{ConcreteHandler} successivo. \textit{Express\ped{G}}, anziché un riferimento, passa al metodo che esegue il \textit{middleware\ped{G}} una \textit{callback\ped{G}}. Il \textit{middleware\ped{G}} che esegue la \textit{callback\ped{G}} passa il controllo all'oggetto del \textit{server\ped{G}} di \textit{Express\ped{G}}, il quale passerà a sua volta il controllo al successivo \textit{middleware\ped{G}}.
 	\end{enumerate}
-Express divide i middleware in due tipologie:
+\textit{Express\ped{G}} divide i \textit{middleware\ped{G}} in due tipologie:
 	\begin{enumerate}
 		\item \textit{Middleware standard} con 3 parametri formali;
 		\item \textit{Middleware per la gestione degli errori} con 4 parametri formali, ovvero i 3 del middleware standard più un parametro per gli errori.
 	\end{enumerate}
-Ogni middleware può passare il controllo ai middleware standard successivo, oppure ad un middleware per la gestione degli errori, passandogli l'errore relativo. Ogni middleware di Express deve essere invocato con i parametri elencati \textbf{nel seguente ordine:}
+Ogni \textit{middleware\ped{G}} può passare il controllo al \textit{middleware\ped{G}} standard successivo, oppure ad un \textit{middleware\ped{G}} per la gestione degli errori, passandogli l'errore relativo. Ogni \textit{middleware\ped{G}} di \textit{Express\ped{G}} deve essere invocato con i parametri elencati \textbf{nel seguente ordine:}
 	\begin{enumerate}
 		\item L'eventuale errore da gestire, in caso si tratti di un middleware per la gestione degli errori;
 		\item L'oggetto contenente la richiesta da risolvere;
 		\item L'oggetto che conterrà la risposta;
 		\item La \textit{callback\ped{G}} da utilizzare per passare il controllo al successivo middleware.
 	\end{enumerate}
-
 \item \textbf{Struttura}:
 \label{Struttura logica del pattern Chain-of-responsability}
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.50]{UML/strutturaPattern/Chain-of-responsability.png}
 	\caption{Struttura logica del pattern Chain-of-responsability}
-\end{figure}
+\end{figure}\FloatBarrier
 
 \item \textbf{Collaborazioni}: quando un \textit{client\ped{G}} effettua una richiesta, questa viene propagata lungo la catena finché un \textit{ConcreteHandler} non si assume la responsabilità di gestirla;
-\item \textbf{Svantaggi}: è necessario porre attenzione a come si configura la catena. Infatti, in caso di configurazione inappropriata, sussiste il rischio che la richiesta passi per diversi putni della catena senza essere mai realizzata, oppure che la richiesta non venga realizzata perché non esiste un \textit{ConcreteHandler} che la possa risolvere.
+
+\item \textbf{Svantaggi}: è necessario porre attenzione a come si configura la catena. Infatti, in caso di configurazione inappropriata, sussiste il rischio che la richiesta passi per diversi punti della catena senza essere mai realizzata, oppure che la richiesta non venga realizzata perché non esiste un \textit{ConcreteHandler} che la possa risolvere.
 \end{itemize}
 
 \subsubsection{Observer}
@@ -108,5 +127,11 @@ Ogni middleware può passare il controllo ai middleware standard successivo, opp
 		\item Si vuole notificare degli oggetti dell'avvenimento di un determinato evento senza sapere il loro tipo.
 	\end{itemize}
 
-\item \textbf{Utilizzo}:
+\item \textbf{Utilizzo}: Nella parte Back-End dell'applicazione si necessita di modificare le statistiche di una domanda e di un utente per ogni domanda risposta. Il \textit{design pattern\ped{G} Observer\ped{G}} è stato utilizzato per gestire l'aggiornamento dei livelli di difficoltà e di abilità, come illustrato nel seguente diagramma:
+\label{Utilizzo di Observer per l'aggionramento delle statistiche}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.50]{UML/strutturaPattern/ObserverUtilizzo.png}
+	\caption{Utilizzo di Observer per l'aggiornamento delle statistiche}
+\end{figure}\FloatBarrier
 \end{itemize}
