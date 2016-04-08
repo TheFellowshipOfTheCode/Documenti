@@ -17,16 +17,16 @@
 	\end{itemize}
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{OUT} \texttt{UserView}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
-		\item \textit{OUT} \texttt{OtherUserView}: view contenente i dati personali e le statistiche di un utente ricercato;
-		\item \textit{IN} \texttt{UserDetailsController}: questa classe permette di gestire i dati di un utente da mostrare nella pagina di un profilo;
-		\item \textit{IN} \texttt{UserDetailsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{UserDetailsDirective} e il controller \texttt{UserDetailsController};
+		\item \textbf{OUT \texttt{UserView}}: view contenente i dati personali dell'utente, le sue statistiche relative ai questionari e agli allenamenti effettuati e i questionari a cui è iscritto;
+		\item \textbf{OUT \texttt{OtherUserView}}: view contenente i dati personali e le statistiche di un utente ricercato;
+		\item \textbf{IN \texttt{UserDetailsController}}: questa classe permette di gestire i dati di un utente da mostrare nella pagina di un profilo;
+		\item \textbf{IN \texttt{UserDetailsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{UserDetailsDirective} e il controller \texttt{UserDetailsController}.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
 		\item \texttt{+ userDetails: Object} \\ Oggetto contenente i seguenti campi dati:
 		\begin{itemize}
-			\item \texttt{username: String}.
+			\item \texttt{username: String}
 		\end{itemize}
 		\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
 		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
