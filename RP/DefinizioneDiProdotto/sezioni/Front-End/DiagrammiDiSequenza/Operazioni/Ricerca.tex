@@ -6,11 +6,11 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.275,keepaspectratio]{UML/DiagrammiDiSequenza/Front-end/Search.png}
+	\includegraphics[scale=0.260,keepaspectratio]{UML/DiagrammiDiSequenza/Front-end/Search.png}
 	\caption{Ricerca}
 \end{figure} \FloatBarrier
 
-L'utente, dopo aver effettuato una ricerca, viene indirizzato alla pagina di ricerca. Una volta posizionato in questa pagina, \textit{Angular.js} provvederà a costruire la classe \texttt{SearchController}. Durante la creazione di tale classe viene eseguita la ricerca mediante \texttt{SearchService}. Questo \texttt{service} restituisce una promessa, se questa verrà rispettata verrà popolato l'attributo \texttt{result} altrimenti verrà restituito un oggetto di tipo \texttt{ErrorInfoModel} e mostrato a video mediante \texttt{\$mdDialog}.
+L'utente, dopo aver effettuato una ricerca, viene indirizzato alla pagina di ricerca. Una volta posizionato in questa pagina, \textit{Angular\ped{G}} provvederà a costruire la classe \texttt{SearchController}. Durante la creazione di tale classe viene eseguita la ricerca mediante \texttt{SearchService}. Questo \texttt{service} restituisce una promessa, se questa verrà rispettata verrà popolato l'attributo \texttt{result} altrimenti verrà restituito un oggetto di tipo \texttt{ErrorInfoModel} e mostrato a video mediante \texttt{\$mdDialog}.
 
 \subparagraph{Iscrizione ad un questionario}
 
