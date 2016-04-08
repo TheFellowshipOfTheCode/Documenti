@@ -14,17 +14,20 @@
 		\item Si vuole stratificare un sistema: è possibile definire una classe \textit{Facade\ped{G}} come punto d'ingresso per ogni livello di sottosistema. In questo modo, se vi sono dipendenze fra sottosistemi, essi possono comunicare fra loro attraverso la propria \textit{Facade\ped{G}}.
 	\end{itemize}
 	
-\item \textbf{Utilizzo}:
+\item \textbf{Utilizzo}: nella parte Font-end dell'applicazione il design pattern \textit{Facade\ped{G}} viene espresso dalla classe \texttt{AppRouter} che gestisce i routes dell'applicazione e viene utilizzata per associare un \textit{URL\ped{G}} alle varie view dell'applicazione. Essa utilizza il servizio \texttt{\$routeProvider} per associare ad ogni route un controller e una view e \texttt{\$locationProvider} per configurare come i paths dell'applicazione vengono salvati. Questa funzione viene utilizzata come parametro nel metodo \texttt{config} di Angular. Il metoto \texttt{config} permette di impostare l'esecuzione di una funzione al caricamento del modulo principale di Angular.
 \end{itemize}
 
 \subsection{Creazionali}
 \subsubsection{Dependecy Injection}
 \begin{itemize}
+
 \item \textbf{Scopo}: semplificare lo sviluppo e rendere più testabile un software di grandi dimensioni. Il pattern \textit{Dependency Injection\ped{G}} separa il codice della componente dal codice che si occupa di risolvere le dipendenze con altre componenti;
+
 \item \textbf{Motivazione}: lasciare al componente il compito di risolvere le proprie dipendenze, creando gli oggetti necessari al suo funzionamento, aumenta l'accoppiamento tra le componenti e rende più difficoltoso progettare i test di unità; con questo pattern invece è possibile esprimere le dipendenze in modo dichiarativo e utilizzare un oggetto \textit{contenitore} per risolverle dinamicamente a \textit{runtime\ped{G}}. In questo modo è possibile scegliere anche quale componente iniettare in base allo stato del programma;
-\item \textbf{Applicabilità}	Questo pattern viene utilizzato dalla maggior parte dei \textit{framework\ped{G}} moderni. In particolare, \textit{AngularJS\ped{G}} offre il servizio
+
+\item \textbf{Applicabilità}: questo pattern viene utilizzato dalla maggior parte dei \textit{framework\ped{G}} moderni. In particolare, \textit{AngularJS\ped{G}} offre il servizio
 \texttt{injector} che permette di invocare delle funzioni iniettando al loro interno degli oggetti;
-\item \textbf{Utilizzo}:
+
 \item \textbf{Struttura}: i componenti coinvolti nel \textit{Dependency Injection} sono:
 	\begin{itemize}
 		\item Un \textit{client\ped{G}} che viene creato e riceve le dipendenze;
@@ -32,13 +35,22 @@
 		\item Un \textit{servizio} che deve essere iniettato al \textit{client\ped{G}}.
 	\end{itemize}
 Nello specifico di \textit{AngularJS\ped{G}} \texttt{Injector} funziona da \textit{contenitore} che si occupa di risolvere le dipendenze. I \textit{client\ped{G}} sono rappresentati dalle funzioni che costruiscono i componenti dell'applicazione, tipicamente \textit{controller\ped{G}} o \textit{service\ped{G}}. Il \textit{servizio} è un oggetto \textit{service} che può essere definito dall'utente oppure uno di quelli resi disponibili da \textit{AngularJS\ped{G}};
+
 \label{Struttura logica del pattern Dependency Injection}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.70]{UML/strutturaPattern/DependencyInjection.png}
 	\caption{Struttura logica del pattern Dependency Injection}
 \end{figure}
-\item \textbf{Collaborazioni}:
+
+L’injection delle dipendenze può essere fatta in due modi:
+\begin{itemize}
+	\item \textbf{Constructor Injection}: le dipendenze vengono dichiarate come parametri del costruttore che il container andrà a valorizzare quando crea l’oggetto. In questo modo l’oggetto costruito è subito utilizzabile e non è mai in uno stato inconsistente. Tuttavia si rende necessario avere dei costruttori con un elevato numero di parametri, che potrebbero rendere i costruttori difficili da comprendere. AngularJS usa questo tipo di dependency injection;
+	\item \textbf{Setter Injection}: le dipendenze vengono dichiarate come metodi setter del componente. Questa soluzione è meno ambigua, funziona bene con le gerarchie di classi e non soffre del telescoping dei costruttori. Non è però possibile avere oggetti immutabili. È possibile che la componente rimanga in uno stato inconsistente, in quanto deve essere costruita per passi.
+\end{itemize}
+
+\item \textbf{Utilizzo}: il design pattern \textit{Dependency Injection\ped{G}} è parte integrante di Angular e viene utilizzato nel Front-end ogni volta che una funzione ha bisogno di richiamare una funzionalità esterna. Ad esempio ad ogni controller che abbisogna di una funzionalità appartenente ad un service viene passato un oggetto riferimento a tale service (vedi ClickableAreaQuestionsController, ConnectionQuestionsController, CreateQuestionnaireController...). In questo modo, attraverso tale oggetto, il controller può richiamare direttamente le funzioni del service desiderate. Sempre nei controller, viene dichiarata la dipendenza all'oggetto di sistema \texttt{\$scope} passandolo come parametro al costruttore del controller, così da poter accedere direttamente a tutte le informazioni contenute in esso;
+
 \item \textbf{Svantaggi}: eventuali errori legati alla risoluzione delle dipendenze o alla loro implementazione vengono rilevati solamente a \textit{runtime\ped{G}}.
 \end{itemize}
 
@@ -73,7 +85,7 @@ Ogni middleware può passare il controllo ai middleware standard successivo, opp
 
 \item \textbf{Struttura}:
 \label{Struttura logica del pattern Chain-of-responsability}
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.50]{UML/strutturaPattern/Chain-of-responsability.png}
 	\caption{Struttura logica del pattern Chain-of-responsability}
@@ -85,8 +97,11 @@ Ogni middleware può passare il controllo ai middleware standard successivo, opp
 
 \subsubsection{Observer}
 \begin{itemize}
+
 \item \textbf{Scopo}: definisce una dipendenza “1..n” fra oggetti, riflettendo la modifica di un oggetto sui dipendenti;
+
 \item \textbf{Motivazione}: in alcuni casi è necessario tenere sincronizzati vari oggetti e, nel caso un oggetto venga modificato, avere la possibilità di riflettere il cambiamento sugli oggetti dipendenti. \\ Il pattern \textit{Observer\ped{G}} permette di implementare ciò definendo due tipologie di oggetti: i \textit{subject}, che rappresentano gli oggetti osservati, e gli \textit{observer\ped{G}} che rappresentano gli oggetti che osservano lo stato del \texttt{subject}. Con questo pattern è possibile quindi realizzare un sistema \textit{publish-subscribe}, nel quale i vari \textit{subject} si registrano per essere notificati dalle modifiche subite dal \textit{subject};
+
 \item \textbf{Applicabilità}: il pattern \textit{observer\ped{G}} viene usato nei seguenti casi:
 	\begin{itemize}
 		\item Si vuole che il cambiamento dello stato di un oggetto provochi l'aggiornamento di altri oggetti;
