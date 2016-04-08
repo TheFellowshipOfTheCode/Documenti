@@ -10,7 +10,7 @@
 	\caption{Ricerca}
 \end{figure} \FloatBarrier
 
-L'utente, dopo aver effettuato una ricerca, viene indirizzato alla pagina di ricerca. Una volta posizionato in questa pagina, \textit{Angular\ped{G}} provvederà a costruire la classe \texttt{SearchController}. Durante la creazione di tale classe viene eseguita la ricerca mediante \texttt{SearchService}. Questo \texttt{service} restituisce una promessa, se questa verrà rispettata verrà popolato l'attributo \texttt{result} altrimenti verrà restituito un oggetto di tipo \texttt{ErrorInfoModel} e mostrato a video mediante \texttt{\$mdDialog}.
+L'utente, dopo aver effettuato una ricerca, viene indirizzato alla pagina di ricerca. Una volta posizionato in questa pagina, \textit{Angular\ped{G}} provvederà a costruire la classe \texttt{SearchController}. Durante la creazione di tale classe viene eseguita la ricerca mediante \texttt{SearchService}. Questo \texttt{service\ped{G}} restituisce una promessa, se questa verrà rispettata verrà popolato l'attributo \texttt{result} altrimenti verrà restituito un oggetto di tipo \texttt{ErrorInfoModel} e mostrato a video mediante \texttt{\$mdDialog}.
 
 \subparagraph{Iscrizione ad un questionario}
 
@@ -22,7 +22,7 @@ L'utente, dopo aver effettuato una ricerca, viene indirizzato alla pagina di ric
 	\caption{Iscrizione ad un questionario}
 \end{figure} \FloatBarrier
 
-L'utente, posizionato dentro la pagina di ricerca, potrà iscriversi ad un questionario azionando l'evento associato al bottone di iscrizione al questionario. Attraverso \texttt{SearchController} viene eseguita l'iscrizione mediante \texttt{QuizService}. Questo \texttt{service} restituisce una promessa, se accadrà un errore verrà restituito un oggetto di tipo \texttt{ErrorInfoModel} e mostrato a video mediante \texttt{\$mdDialog}.
+L'utente, posizionato dentro la pagina di ricerca, potrà iscriversi ad un questionario azionando l'evento associato al bottone di iscrizione al questionario. Attraverso \texttt{SearchController} viene eseguita l'iscrizione mediante \texttt{QuizService}. Questo \texttt{service\ped{G}} restituisce una promessa, se accadrà un errore verrà restituito un oggetto di tipo \texttt{ErrorInfoModel} e mostrato a video mediante \texttt{\$mdDialog}.
 
 
 \subparagraph{Redirect alla pagina di un utente}
@@ -35,4 +35,4 @@ L'utente, posizionato dentro la pagina di ricerca, potrà iscriversi ad un quest
 	\caption{Redirect alla pagina di un utente}
 \end{figure} \FloatBarrier
 
-L'utente, posizionato dentro la pagina di ricerca, potrà decidere di visualizzare la pagina del profilo di altro utente azionando l'evento \texttt{ng-click} associato al bottone posizionato all'interno della directive \texttt{UserDetailDirective}.
+L'utente, posizionato dentro la pagina di ricerca, potrà decidere di visualizzare la pagina del profilo di altro utente azionando l'evento \texttt{ng-click} associato al bottone posizionato all'interno della \texttt{directive\ped{G}} \texttt{UserDetailDirective}.
