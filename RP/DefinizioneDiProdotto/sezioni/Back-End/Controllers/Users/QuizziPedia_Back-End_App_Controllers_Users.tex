@@ -3,17 +3,17 @@
 \label{QuizziPedia::Back-End::App::Controllers::Users}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.]{UML/Package/QuizziPedia_Back-End_App_Controllers_Users.png}
+	\includegraphics[scale=0.65]{UML/Package/QuizziPedia_Back-End_App_Controllers_Users.png}
 	\caption{QuizziPedia::Back-End::App::Controllers::Users}
 \end{figure}
 \FloatBarrier
 \begin{itemize}
 	\item 
 	\textbf{Descrizione}:
-	\textit{package\ped{G}} contenente i controllers relativi alla gestione dell'autenticazione e dei dati dell'utente;
+	\textit{package\ped{G}} contenente i \textit{controllers\ped{G}}  relativi alla gestione dell'autenticazione e dei dati dell'utente;
 	\item
 	\textbf{Padre}:
-	\texttt{Controllers}:
+	\texttt{Controllers};
 \end{itemize}	
 \subsubsection{Classi}
 \paragraph[QuizziPedia::Back-End::App::Controllers::Users\\::AuthenticationController]{QuizziPedia::Back-End::App::Controllers::Users::AuthenticationController}
@@ -36,7 +36,7 @@
 	\begin{itemize}
 		\item
 		\textbf{IN \texttt{UserController}} \\
-		Classe che raggruppa attraverso require i vari controllers responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
+		Classe che raggruppa attraverso require i vari \textit{controllers\ped{G}}  responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
 		\item
 		\textbf{OUT \texttt{Session}} \\
 		Classe che gestisce la sessione utente dell'applicazione. Non sono stati modellati attributi e metodi di questa classe in quanto viene inizializzata da \textit{Express\ped{G}} ed utilizzata da \textit{Passport\ped{G}} attraverso funzionalità interne ai due \textit{middleware\ped{G}};
@@ -91,7 +91,7 @@
 		 \end{itemize} 	 		
 	\end{itemize}	
 \end{itemize}	
-\paragraph{QuizziPedia::Back-End::App::Controllers::Users::SessionController}
+\paragraph[QuizziPedia::Back-End::App::Controllers::Users\\::SessionController]{QuizziPedia::Back-End::App::Controllers::Users::SessionController}
 \label{QuizziPedia::Back-End::App::Controllers::Users::SessionController}
 \begin{figure}[ht]
 	\centering
@@ -111,12 +111,12 @@
 	\begin{itemize}
 		\item
 		\textbf{IN \texttt{UserController}} \\
-		Classe che raggruppa attraverso require i vari controllers responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
+		Classe che raggruppa attraverso require i vari \textit{controllers\ped{G}}  responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
 		\item
 		\textbf{OUT \texttt{Session}} \\
 		Classe che gestisce la sessione utente dell'applicazione. Non sono stati modellati attributi e metodi di questa classe in quanto viene inizializzata da \textit{Express\ped{G}} ed utilizzata da \textit{Passport\ped{G}} attraverso funzionalità interne ai due \textit{middleware\ped{G}};
 		\item
-		OUT \texttt{UserModel} \\
+		\textbf{OUT \texttt{UserModel}} \\
 		Classe che modella la creazione e la gestione dei dati utente.
 	\end{itemize}
 	\item
@@ -149,18 +149,16 @@
 \FloatBarrier
 \begin{itemize}
 	\item 
-	\textbf{Descrizione}:\\
-	Classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica dei dati dell'utente.
+	\textbf{Descrizione}: classe che gestisce la logica applicativa riguardante la visualizzazione e la modifica dei dati dell'utente.
 Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibility\ped{G}}. Utilizza \textit{Passport\ped{G}};
 	\item
-	\textbf{Utilizzo}:\\
-	Viene utilizzata per gestire le richieste \textit{REST\ped{G}} legate agli utenti;
+	\textbf{Utilizzo}: viene utilizzata per gestire le richieste \textit{REST\ped{G}} legate agli utenti;
 	\item
 	\textbf{Relazioni con altre classi}:
 	\begin{itemize}
 		\item
 		\textbf{IN \texttt{UserController}} \\
-		Classe che raggruppa attraverso require i vari controllers responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
+		Classe che raggruppa attraverso require i vari \textit{controllers\ped{G}}  responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
 		\item
 		\textbf{OUT \texttt{UserModel}} \\
 		Classe che modella la creazione e la gestione dei dati utente.
@@ -245,7 +243,7 @@ Rappresenta il ConcreteHandler nel design pattern \textit{Chain of responsibilit
 		 \end{itemize}
 		  \item
 		 \texttt{+ getInfo(req: Request, res: Response, \\next: function(QuzziPediaError)): void} \\
-		Metodo usato dal \textit{middleware\ped{G}} per ottenere le informazioni dell'utente; \\
+		Metodo usato dal \textit{middleware\ped{G}} per ottenere le informazioni dell'utente. \\
 		\textbf{Parametri}:
 		 \begin{itemize}
 		  \item

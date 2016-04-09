@@ -21,7 +21,7 @@
 		\end{itemize}
 	\item \textbf{Attributi}:
 		\begin{itemize}
-			\item \textbf{- quizSchema: Schema} \\
+			\item \texttt{- quizSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} dei quiz di \progetto. Lo schema prevede i seguenti attributi:
 				\begin{itemize}
 					\item \texttt{title: String}\\ Rappresenta il titolo del questionario;
@@ -90,7 +90,7 @@
 			\end{itemize}
 			
 			\item \texttt{+ addCorrect(): void}\\
-			Incrementa il numero di risposte corrette date alle domande del questionario.		
+			Incrementa il numero di risposte corrette date alle domande del questionario;		
 			
 			\item \texttt{+ removeUser(userID: ObjectId, \\errback: function(QuizziPediaError)): void}\\
 			Rimuovere un utente dalla lista degli iscritti al questionario.\\

@@ -7,7 +7,7 @@
 \end{figure}
 \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: classe che modella gli argomenti all'interno delle domande,
+	\item \textbf{Descrizione}: classe che modella gli argomenti all'interno delle domande;
 	\item \textbf{Utilizzo}:	viene utilizzata per rappresentare i dati relativi agli argomenti delle domande. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
 	\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
@@ -18,10 +18,10 @@
 		\end{itemize}
 	\item \textbf{Attributi}:
 		\begin{itemize}
-			\item \textbf{- topicSchema: Schema} \\
+			\item \texttt{- topicSchema: Schema} \\
 			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} per gli argomenti e prevede i seguenti attributi:
 				\begin{itemize}
-					\item \texttt{name: String}, rappresenta il nome dell'argomento;
+					\item \texttt{name: String}\\ Rappresenta il nome dell'argomento;
 					\item \texttt{correctAnswers: Number}\\ Rappresenta il numero totale di domande alle quali gli utenti hanno risposto correttamente durante un allenamento sull'argomento; 
 					\item \texttt{totalAnswers: Number}\\ Rappresenta il numero totale di domande alle quali gli utenti hanno risposto durante un allenamento sull'argomento;
 					\item \texttt{question: Array}\\ Array che ontiene gli \texttt{ObjectId} delle domande sull'argomento.

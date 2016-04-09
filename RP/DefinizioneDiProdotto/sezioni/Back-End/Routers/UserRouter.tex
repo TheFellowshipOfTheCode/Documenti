@@ -7,9 +7,9 @@
 \end{figure}
 \FloatBarrier
 	\begin{itemize}
-		\item \textbf{Descrizione}: classe che gestisce le richieste relative alla registrazione, alla gestione della sessione e alla cronologia dei questionari svolti di un utente;
-Componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza il modulo \textit{Passport\ped{G}}.
-		\item \textbf{Utilizzo}: viene utilizzata per chiamare il controller che si occupa di gestire le \textit{API\ped{G}} relative alla registrazione, alla gestione della sessione e alla cronologia dei questionari di un utente;
+		\item \textbf{Descrizione}: classe che gestisce le richieste relative alla registrazione, alla gestione della sessione e alla cronologia dei questionari svolti di un utente.
+Componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza il modulo \textit{Passport\ped{G}};
+		\item \textbf{Utilizzo}: viene utilizzata per chiamare il \textit{controller\ped{G}} che si occupa di gestire le \textit{API\ped{G}} relative alla registrazione, alla gestione della sessione e alla cronologia dei questionari di un utente;
 		\item \textbf{Relazioni con altre classi}:
 		\begin{itemize}
 		\item 
@@ -20,11 +20,11 @@ componente ConcreteHandler del design pattern \textit{Chain of responsibility\pe
 		\item 
 			\textbf{OUT \texttt{NotFoundHandler}}: classe che si occupa della gestione dell’errore di pagina non trovata. Componente ConcreteHandler del design pattern \textit{Chain of responsibility\ped{G}};
 		\item 
-			\textbf{OUT \texttt{UserController}}: classe che raggruppa attraverso require i vari controllers responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
+			\textbf{OUT \texttt{UserController}}: classe che raggruppa attraverso require i vari \textit{controllers\ped{G}}  responsabili delle operazioni legate alla gestione degli utenti. Si è scelto di predisporre questo raggruppamento per facilitare l'introduzione di nuove funzionalità legate alla gestione degli utenti;
 		\item 
 		\textbf{	OUT \texttt{SummaryController}}: classe che gestisce la cronologia dei questionari svolti dall'utente.
 	\end{itemize}
-		\item \textbf{Metodi} 
+		\item \textbf{Metodi}:
 		\begin{itemize}
 		\item 
 		\texttt{+ UserRouter(app: Server)} \\
@@ -33,7 +33,7 @@ componente ConcreteHandler del design pattern \textit{Chain of responsibility\pe
 			\begin{itemize}
 				\item 
 				\texttt{app: Server} \\
-				Rappresenta l’istanza del server su cui configurare i \textit{route\ped{G}} che mappano i controllers specifici.
+				Rappresenta l’istanza del server su cui configurare i \textit{route\ped{G}} che mappano i \textit{controllers\ped{G}}  specifici.
 			\end{itemize}
 		\end{itemize}
 \end{itemize}		
