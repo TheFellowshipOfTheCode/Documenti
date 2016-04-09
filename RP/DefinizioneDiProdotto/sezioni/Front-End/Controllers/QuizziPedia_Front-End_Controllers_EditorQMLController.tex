@@ -36,7 +36,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{EditorQMLController(\$scope: \$scope, QuestionItemModel: QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService, \$routeParams:\\ \$routeParams, ParserQML: ParserQML)} \\ 
+		\item \texttt{+} \texttt{EditorQMLController(\$scope: \$scope, QuestionItemModel: \\QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: \\QuestionService, \$routeParams: \$routeParams, ParserQML: ParserQML)} \\ 
 		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare in formato QML. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la \textit{view\ped{G}} vuota così da poter creare una nuova domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}

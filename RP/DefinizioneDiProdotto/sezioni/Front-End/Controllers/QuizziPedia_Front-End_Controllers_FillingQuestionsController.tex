@@ -35,7 +35,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{FillingQuestionsController(\$scope: \$scope, QuestionItemModel: \\QuestionItemModel, \$mdDialog: \$mdDialog, \$timeout: \$timeout, QuestionService: QuestionService, \$routeParams: \$routeParams)} \\ 
+		\item \texttt{+} \texttt{FillingQuestionsController(\$scope: \$scope, QuestionItemModel: \\QuestionItemModel, \$mdDialog: \$mdDialog, \$timeout: \$timeout,\\ QuestionService: QuestionService, \$routeParams: \$routeParams)} \\ 
 		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la \textit{view\ped{G}} vuota così da poter creare una nuova domanda; \\
 		Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url.\\
 		\textbf{Parametri}:
