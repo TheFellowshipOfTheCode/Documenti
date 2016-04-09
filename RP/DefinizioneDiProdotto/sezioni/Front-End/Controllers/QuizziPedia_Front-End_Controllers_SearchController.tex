@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::SearchController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.5]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_SearchController.png}
+	\includegraphics[scale=0.4]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_SearchController.png}
 	\caption{QuizziPedia::Front-End::Controllers::SearchController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -32,7 +32,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{SearchController(\$scope: \$scope, \$location: \$location, \$mdDialog: \$mdDialog, \$routeParams: \$routeParams, SearchService: SearchService, QuizService: QuizService)} \\
+		\item \texttt{+} \texttt{SearchController(\$scope: \$scope, \$location: \$location, \$mdDialog:\\ \$mdDialog, \$routeParams: \$routeParams, SearchService: SearchService,\\ QuizService: QuizService)} \\
 		Metodo costruttore della classe. Viene eseguita la ricerca per poter poi popolare il campo dati \texttt{result}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -45,9 +45,9 @@
 			\item \texttt{\$routeParams: \$routeParams} \\
 			Parametro contente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi e recuperare i parametri passati;
 			\item \texttt{SearchService: SearchService} \\
-			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alla ricerca. Viene utilizzato il metodo \texttt{search} di \texttt{SearchService} a cui viene passato come parametro la stringa di ricerca;
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alla ricerca. Viene utilizzato il metodo \texttt{search} di \texttt{SearchServ-\\ice} a cui viene passato come parametro la stringa di ricerca;
 			\item \texttt{QuizService: QuizService} \\
-			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate ai questionari. Viene utilizzato il metodo \texttt{subscribeQuestionnaire} di \texttt{QuizService} per iscrivere un utente ad un questionario.
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate ai questionari. Viene utilizzato il metodo \texttt{subscribeQuestio-\\nnaire} di \texttt{QuizService} per iscrivere un utente ad un questionario.
 		\end{itemize} 
 		\item \texttt{-} \texttt{getSearch(stringSearch: String): SearchModelView} \\
 		Metodo che esegue la ricerca utilizzando un metodo fornito dalla classe \texttt{SearchService}. \\

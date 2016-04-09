@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::TrueFalseQuestionsController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.35]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TrueFalseQuestionsController.png}
+	\includegraphics[scale=0.3]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TrueFalseQuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::TrueFalseQuestionsController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -38,7 +38,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{TrueFalseQuestionsController(\$scope: \$scope, QuestionItemModel: Quest-\\ionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionService,\\ Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
+		\item \texttt{+} \texttt{TrueFalseQuestionsController(\$scope: \$scope, QuestionItemModel: Que-\\stionItemModel, \$mdDialog: \$mdDialog, QuestionService: QuestionServi-\\ce, Upload: Upload, \$timeout: \$timeout, \$routeParams: \$routeParams)} \\ 
 		Metodo costruttore della classe. Se in \$routeParams sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare. In caso contrario verrà mostrato un errore attraverso \$mdDialog indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \$routeParams verrà caricata la \textit{view\ped{G}} vuota così da poter creare una nuova domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -47,13 +47,13 @@
 			\item \texttt{QuestionItemModel: QuestionItemModel} \\ 
 			Parametro che si riferisce alla classe che rappresenta il modello della domanda;
 			\item \texttt{\$mdDialog: \$mdDialog} \\
-			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angul-\\ar\ped{G}} che permette di creare delle componenti a pop-up;
 			\item \texttt{QuestionService: QuestionService}: \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
 			\item \texttt{Upload: Upload} \\
 			Parametro contenente un riferimento alla libreria \textit{ng-file-upload\ped{G}} necessaria per il caricamento della foto profilo dell'utente;
 			\item \texttt{\$timeout: \$timeout} \\
-			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angular\ped{G}}. 
+			Parametro contenente il riferimento all'oggetto globale \$timeout creato da \textit{Angul-\\ar\ped{G}}. 
 			Il valore di ritorno di una chiamata alla funzione di \$timeout è una \textit{promise\ped{G}}, la quale sarà risolta quando avverrà il ritardo e la funzione di \$timeout sarà eseguita;
 			\item \texttt{\$routeParams: \$routeParams} \\
 			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'URL.

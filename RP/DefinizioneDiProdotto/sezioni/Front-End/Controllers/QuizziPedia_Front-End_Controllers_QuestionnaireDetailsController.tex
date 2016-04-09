@@ -1,7 +1,7 @@
 \paragraph[QuizziPedia::Front-End::Controllers\\::QuestionnaireDetailsController]{QuizziPedia::Front-End::Controllers::QuestionnaireDetailsController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.6]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionnaireDetailsController.png}
+	\includegraphics[scale=0.5]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionnaireDetailsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionnaireDetailsController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -27,13 +27,13 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuizService: QuizService)} \\ Metodo costruttore della classe. \\
+		\item \texttt{+} \texttt{QuestionnaireDetailsController(\$scope: \$scope, \$rootScope: \$rootSc-\\ope, \$mdDialog: \$mdDialog, QuizService: QuizService)} \\ Metodo costruttore della classe. \\
 		\textbf{Parametri}: 
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
 			Parametro contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{viewmodel\ped{G}} e il \textit{model\ped{G}} dell'applicazione;
 			\item \texttt{\$rootScope: \$rootScope} \\
-			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del \textit{service\ped{G}} \texttt{QuizService};	
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Ang-\\ular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestionnaireDetails} del \textit{service\ped{G}} \texttt{QuizService};	
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 			\item \texttt{QuizService: QuizService}\\ Parametro che permette di ottenere, tramite il \textit{service\ped{G}}, la lista di tutte le domande presenti nel quiz.

@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::ProfileManagementController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.6]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ProfileManagementController.png}
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ProfileManagementController.png}
 	\caption{QuizziPedia::Front-End::Controllers::ProfileManagementController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -18,7 +18,7 @@
 		\item \texttt{-} \texttt{\$scope: \$scope} \\
 		Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{model\ped{G}} dell'applicazione;
 		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
-		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel};
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Ang-\\ular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel};
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;		
 		\item \texttt{-} \texttt{UserDetailsService: UserDetailsService}: \\
@@ -33,14 +33,14 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{ProfileManagementController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, UserDetailsService: UserDetailsService)} \\
+		\item \texttt{+} \texttt{ProfileManagementController(\$scope: \$scope, \$rootScope: \$rootScope,\\ \$mdDialog: \$mdDialog, UserDetailsService: UserDetailsService)} \\
 		Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
 			Parametro contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{viewmodel\ped{G}} e il \textit{model\ped{G}} dell'applicazione;
 			\item \texttt{\$rootScope: \$rootScope} \\
-			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per aggiornare in \$rootScope l'oggetto che rappresenta l'utente autenticato all'interno dell'applicazione;
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Ang-\\ular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per aggiornare in \$rootScope l'oggetto che rappresenta l'utente autenticato all'interno dell'applicazione;
 			\item \texttt{\$location: \$location} \\
 			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 			\item \texttt{\$mdDialog: \$mdDialog} \\

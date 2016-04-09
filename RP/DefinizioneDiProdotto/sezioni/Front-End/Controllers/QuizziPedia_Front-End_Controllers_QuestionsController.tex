@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::QuestionsController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.6]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionsController.png}
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_QuestionsController.png}
 	\caption{QuizziPedia::Front-End::Controllers::QuestionsController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -29,18 +29,18 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuestionService: QuestionService)} \\ Metodo costruttore della classe. Interagendo con l'oggetto \texttt{QuestionItemModel} ricevuto si interfaccia con la \textit{view\ped{G}} andando a visualizzare la giusta \textit{directive\ped{G}} della tipologia di domanda. \\
+		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDia-\\log: \$mdDialog, QuestionService: QuestionService)} \\ Metodo costruttore della classe. Interagendo con l'oggetto \texttt{QuestionItemModel} ricevuto si interfaccia con la \textit{view\ped{G}} andando a visualizzare la giusta \textit{directive\ped{G}} della tipologia di domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
 			Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{viewmodel\ped{G}} e il \textit{model\ped{G}} dell'applicazione;
 			\item \texttt{\$rootScope: \$rootScope} \\
-			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{QuestionItemModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestion} del \textit{service\ped{G}} \texttt{QuestionsService}; 
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Ang-\\ular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{QuestionItemModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestion} del \textit{service\ped{G}} \texttt{QuestionsServ-\\ice}; 
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 			\item \texttt{QuestionService: QuestionService} \\ Parametro che permette di ottenere domande esistenti tramite chiamata di metodo specifici;
 		\end{itemize}
-		\item {-} \texttt{getQuestionBy(topic: String, keywords: Array<String>, level: Number): QuestionItemModel} \\ Metodo che richiede al back-end una domanda. \\
+		\item {-} \texttt{getQuestionBy(topic: String, keywords: Array<String>, level: Number\\): QuestionItemModel} \\ Metodo che richiede al back-end una domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{topic: String} \\
@@ -50,7 +50,7 @@
 			\item \texttt{level: Number} \\
 			Parametro contenente il livello dell'utente.
 		\end{itemize}
-		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, answerGiven: Array<String>): void} \\
+		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, answerGiven: \\Array<String>): void} \\
 		Metodo che gestisce l'evento di selezione delle risposte. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -82,7 +82,7 @@
 			\item \texttt{index: Number} \\
 			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
 		\end{itemize}
-		\item \texttt{+} \texttt{loadNewQuestionBy(topic: String, keywords: Array<String>, level: Number): void} \\
+		\item \texttt{+} \texttt{loadNewQuestionBy(topic: String, keywords: Array<String>, level:\\ Number): void} \\
 		Metodo che gestisce l'evento per scaricare una nuova domanda in base ai parametri passati. Evoca l'evento per inserire la domanda in \texttt{TrainingModelView}. \\
 		\textbf{Parametri}:
 		\begin{itemize}

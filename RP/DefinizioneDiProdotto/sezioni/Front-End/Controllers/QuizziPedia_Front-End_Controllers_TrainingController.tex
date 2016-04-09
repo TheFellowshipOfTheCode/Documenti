@@ -1,7 +1,7 @@
 \paragraph{QuizziPedia::Front-End::Controllers::TrainingController}
 \begin{figure} [ht]
 	\centering
-	\includegraphics[scale=0.6]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TrainingController.png}
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_TrainingController.png}
 	\caption{QuizziPedia::Front-End::Controllers::TrainingController}
 \end{figure} \FloatBarrier
 \begin{itemize}
@@ -32,7 +32,7 @@
 			\item \texttt{\$scope: \$scope} \\
 			Parametro contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{viewmodel\ped{G}} e il \textit{model\ped{G}} dell'applicazione;
 			\item \texttt{\$rootscope: \$rootscope}\\
-			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per aggiornare in \$rootScope l'oggetto che rappresenta l'utente autenticato all'interno dell'applicazione;
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Ang-\\ular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per aggiornare in \$rootScope l'oggetto che rappresenta l'utente autenticato all'interno dell'applicazione;
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 			\item \texttt{TrainingModeModel: TrainingModeModel} \\ Rappresenta un allenamento. Contiene tutte le informazioni necessarie alla presentazione del contenuto di un allenamento.
@@ -44,7 +44,7 @@
 			\item \texttt{question: QuestionItemModel} \\
 			Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
 		\end{itemize}
-		\item \texttt{+} \texttt{loadNewQuestionBy(topic: String, keywords: Array<String>, level: Number): void} \\
+		\item \texttt{+} \texttt{loadNewQuestionBy(topic: String, keywords: Array<String>, level:\\ Number): void} \\
 		Metodo che emette l'evento per scaricare una nuova domanda in base ai parametri passati. Fa una richiesta al \texttt{QuestionsController} che andrà a scaricare la domanda e ad inserirla in \texttt{TrainingModeModel} nello \$scope mediante il metodo \texttt{addQuestion}; \\
 		\textbf{Parametri}:
 		\begin{itemize}
