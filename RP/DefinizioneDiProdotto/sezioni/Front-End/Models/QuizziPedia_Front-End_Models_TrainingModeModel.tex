@@ -13,17 +13,17 @@
 			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di un allenamento;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{OUT} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
+				\item \textbf{OUT} \texttt{TrainingController}: questa classe permette di gestire la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello;
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
 				\item \texttt{- argument: String}\\
 				Questo attributo rappresenta l'argomento dell'allenamento;
-				\item \texttt{- keywords: Array[String]}\\
+				\item \texttt{- keywords: Array<String>}\\
 				Questo attributo rappresenta l'\texttt{array} contenente le parole chiave per l'allenamento;
 				\item \texttt{- numberOfQuestions: Number}\\
 				Questo attributo rappresenta il numero di domande che l'utente si è prefissato di rispondere per l'allenamento. Se \texttt{-1} allora non esiste un numero di domande impostate, perciò l'allenamento non terminerà fino alla chiusura manuale dell'attività;
-				\item \texttt{- questions: Array[QuestionItemModel]}\\
+				\item \texttt{- questions: Array<QuestionItemModel>}\\
 				Questo attributo contiene l'\texttt{array} di \texttt{QuestionItemModel} che rappresenta le domande dell'allenamento fino a quel momento visualizzate, compresa quella visualizzata;
 				\item \texttt{- rightAnswer: Number}\\
 				Questo attributo rappresenta il numero di domande corrette date.
@@ -69,7 +69,7 @@
 				\end{itemize}
 				
 				\item \texttt{+ addKeyword(keyword: String): void} \\
-				Metodo per aggiungere una parola chiave all'\texttt{array} di parole chiavi.\\
+				Metodo per aggiungere una parola chiave all'array di parole chiavi.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item {keyword: String}\\
@@ -77,7 +77,7 @@
 				\end{itemize}
 				
 				\item \texttt{+ removeKeyword(keyword: String): void} \\
-				Metodo per poter eliminare una parola chiave dall'\texttt{array} di parole chiavi.\\
+				Metodo per poter eliminare una parola chiave dall'array di parole chiavi.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item {keyword: String}\\

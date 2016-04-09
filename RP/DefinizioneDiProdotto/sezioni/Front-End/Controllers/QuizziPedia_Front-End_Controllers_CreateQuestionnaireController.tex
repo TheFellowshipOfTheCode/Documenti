@@ -9,10 +9,10 @@
 	\item \textbf{Utilizzo}: fornisce tutte le funzionalità per la creazione di un nuovo questionario e per la modifica di uno esistente;
 	\item \textbf{Relazione con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{CreateQuestionnaireModelView}: oggetto di tipo \texttt{CreateQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{CreateQuestionnaireView} e il \textit{controller\ped{G}} \texttt{CreateQuestionnaireController}; 
-		\item \textit{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
-		\item \textit{IN} \texttt{QuestionnaireModel}: \textit{model\ped{G}} relativo ai questionari;
-		\item \textit{IN} \texttt{QuestionsService}: questa classe permette di ottenere le domande dal back-end.
+		\item \textbf{IN} \texttt{CreateQuestionnaireModelView}: oggetto di tipo \texttt{CreateQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{CreateQuestionnaireView} e il \textit{controller\ped{G}} \\ \texttt{CreateQuestionnaireController}; 
+		\item \textbf{IN} \texttt{QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \textbf{IN} \texttt{QuestionnaireModel}: \textit{model\ped{G}} relativo ai questionari;
+		\item \textbf{IN} \texttt{QuestionsService}: questa classe permette di ottenere le domande dal back-end.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}
@@ -57,7 +57,7 @@
 			\begin{itemize}
 				\item \texttt{quizId: String}: parametro che rappresenta l'id del questionario da richiedere.
 			\end{itemize}
-		\item \texttt{+} \texttt{getQuestionnairePreview(username: String): QuestionnaireModel[]} \\ Metodo che serve per ottenere la lista di tutti i questionari di un utente. \\
+		\item \texttt{+} \texttt{getQuestionnairePreview(username: String): QuestionnaireModel<>} \\ Metodo che serve per ottenere la lista di tutti i questionari di un utente. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{username: String}: parametro che indica l'utente del quale vogliamo caricare tutti i questionari.
@@ -68,7 +68,7 @@
 			\item
 			\texttt{quizId: String}: identificativo del questionario da eliminare.
 		\end{itemize}
-		\item \texttt{+} \texttt{getQuestions(): String[]} \\
+		\item \texttt{+} \texttt{getQuestions(): String<>} \\
 		Metodo che permette di ottenere la lista di tutte le domande;
 		\item \texttt{+} \texttt{getQuestion(questionId: String): QuestionItemModel} \\
 		Metodo che ritorna l'intera domanda selezionata.\\

@@ -13,16 +13,16 @@
 			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di una domanda;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{OUT} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
-				\item \textit{OUT} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
-				\item \textit{OUT} \texttt{MultipleQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla; 
-				\item \textit{OUT} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
-				\item \textit{OUT} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
-				\item \textit{OUT} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
-				\item \textit{OUT} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi; 
-				\item \textit{OUT} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
-				\item \textit{OUT} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
-				\item \textit{OUT} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento e nei questionari;
+				\item \textbf{OUT} \texttt{QuestionsManagementController}: questa classe permette di gestire e di ottenere le domande create dall'utente;
+				\item \textbf{OUT} \texttt{TrueFalseQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda vero/falso;
+				\item \textbf{OUT} \texttt{MultipleQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a risposta multipla; 
+				\item \textbf{OUT} \texttt{ConnectionQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a collegamento;
+				\item \textbf{OUT} \texttt{ImagesSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento immagini;
+				\item \textbf{OUT} \texttt{StringsSortingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a ordinamento di stringhe;
+				\item \textbf{OUT} \texttt{FillingQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi; 
+				\item \textbf{OUT} \texttt{ClickableAreaQuestionsController}: questa classe permette di gestire la creazione e la modifica di una domanda ad area cliccabile;
+				\item \textbf{OUT} \texttt{EditorQMLController}: questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;
+				\item \textbf{OUT} \texttt{QuestionsController}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento e nei questionari;
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -34,7 +34,7 @@
 				Rappresenta con quale strumento è stata creata la domanda;
 				\item \texttt{- language: String}\\
 				Rappresenta la lingua in cui è scritta la domanda; 
-				\item \texttt{- question: Array[JSON]}\\ 
+				\item \texttt{- question: Array<JSON]>}\\ 
 				Contiene un oggetto di tipo \textit{JSON\ped{G}}. L'oggetto \textit{JSON\ped{G}} è rappresentato dai seguenti campi:
 				\begin{itemize}
 					\item \texttt{- type: String}\\
@@ -43,7 +43,7 @@
 					Rappresenta il testo della domanda; 
 					\item \texttt{- image: String}\\
 					Rappresenta l'\textit{URL\ped{G}} dell'immagine associata al testo della domanda; 
-					\item \texttt{- answers: Array[JSON]}\\ 
+					\item \texttt{- answers: Array<JSON>}\\ 
 					Contiene un oggetto di tipo \textit{JSON\ped{G}}. L'oggetto \textit{JSON\ped{G}} è rappresentato dai seguenti campi:
 					\begin{itemize}	 				  
 						\item \texttt{- text: String}\\
@@ -117,11 +117,11 @@
 					Questo parametro rappresenta la lingua della domanda.
 				\end{itemize}
 				
-				\item \texttt{+ setQuestion(question: Array[JSON]): void} \\
+				\item \texttt{+ setQuestion(question: Array<JSON>): void} \\
 				Metodo \textit{setter\ped{G}} per il campo dati \texttt{question}\\
 				\textbf{Parametri}:
 				\begin{itemize}
-					\item {question: Array[JSON]}\\
+					\item {question: Array<JSON>}\\
 					Questo parametro rappresenta l'oggetto \textit{JSON\ped{G}} contenente le parti che compongono la totalità della domanda.
 				\end{itemize}
 				
@@ -142,17 +142,17 @@
 				\item \texttt{+ getLanguage(): String} \\
 				Metodo \textit{getter\ped{G}} per il campo dati \texttt{language};
 
-				\item \texttt{+ getQuestion(): Array[JSON]} \\
+				\item \texttt{+ getQuestion(): Array<JSON>} \\
 				Metodo \textit{getter\ped{G}} per il campo dati \texttt{question};
 				
 				\item \texttt{+ getId(): ObjectId} \\
 				Metodo \textit{getter\ped{G}} per il campo dati \texttt{id};
 				
-				\item \texttt{+ compareAnswers(givenAnswers: Array[JSON]): Array[JSON]} \\
+				\item \texttt{+ compareAnswers(givenAnswers: Array<JSON>): Array<JSON>} \\
 				Metodo che compara le risposte date con quelle corrette. Ritorna un array contenente un valore booleano, che indica se è giusta o meno una domanda, per ogni pezzo di domanda che compone la domanda. \\
 				\textbf{Parametri}:
 				\begin{itemize}
-					\item {givenAnswers: Array[JSON]}\\
+					\item {givenAnswers: Array<JSON>}\\
 					Questo parametro contiene le risposte date dall'utente. 
 				\end{itemize}
 				

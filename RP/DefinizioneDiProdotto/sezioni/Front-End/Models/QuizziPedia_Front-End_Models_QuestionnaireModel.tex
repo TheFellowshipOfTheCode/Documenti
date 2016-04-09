@@ -13,12 +13,12 @@
 			\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati di un questionario;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textit{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
-				\item \textit{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire tutti i questionari creati da un utente; 
-				\item \textit{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
-				\item \textit{IN} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
-				\item \textit{IN} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
-				\item \textit{IN} \texttt{ResultsController}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente.
+				\item \textbf{IN} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione;
+				\item \textbf{IN} \texttt{QuestionnaireDetailsController}: questa classe permette di gestire tutti i questionari creati da un utente; 
+				\item \textbf{IN} \texttt{FillingQuestionnaireController}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
+				\item \textbf{IN} \texttt{CreateQuestionnaireController}: questa classe permette di gestire la creazione di un questionario;
+				\item \textbf{IN} \texttt{RegistrationManagementController}: questa classe permette di gestire le iscrizione degli utenti ai questionari;
+				\item \textbf{IN} \texttt{ResultsController}: questa classe permette di gestire i risultati della ricerca effettuata dall'utente.
 			\end{itemize}
 			\item \textbf{Attributi}: 
 			\begin{itemize}
@@ -26,7 +26,7 @@
 				Questo attributo rappresenta il titolo del questionario;
 				\item \texttt{- author: ObjectId}\\
 				Questo attributo rappresenta l'autore del questionario;
-				\item \texttt{- questions: Array[QuestionItemModel]}\\
+				\item \texttt{- questions: Array<QuestionItemModel>}\\
 				Questo attributo contiene l'array di \texttt{QuestionItemModel} che rappresenta le domande di un questionario.
 			\end{itemize}
 			\item \textbf{Metodi}: 
@@ -52,7 +52,7 @@
 				\item \texttt{+ getAuthor(): ObjectId} \\
 				Metodo \textit{getter\ped{G}} che restituisce il campo dati \texttt{author};
 				
-				\item \texttt{+ getQuestion(): Array[QuestionItemModel]} \\
+				\item \texttt{+ getQuestion(): Array<QuestionItemModel>} \\
 				Metodo \textit{getter\ped{G}} che restituisce il campo dati \texttt{questions};
 				
 				\item \texttt{+ addQuestion(question: QuestionItemModel): ObjectId} \\
