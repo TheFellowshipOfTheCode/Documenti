@@ -395,4 +395,27 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 }
 \end{lstlisting}
 
-
+\subsubsection{JSON domanda a Riempimento spazi vuoti}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"makeWith" : "QML" || "wizzard" ,
+"type": "spaziVuoti",
+"questionText": "Giulio Cesare era un console romano.",
+"answer":
+	[{
+	"parolaNumero": 2 //sta ad indicare quale parola e' da oscurare. In questo caso la numero 2
+	},{
+	"parolaNumero": 5
+	}],
+"keywords":
+	[{
+	"keyword_1" : "storia",
+	}],
+"statistiche":
+	[{
+	"level" : 500,
+	"totalAnswers" : 0,
+	"correctAnswers" : 0
+	}]
+}
+\end{lstlisting}
