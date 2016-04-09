@@ -1,12 +1,12 @@
 \newpage
 \section{QML - Quiz Markup Language}
-Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter creare domande da proporre negli allenamenti e nei questionari. Per rendere più semplice l'aggiunta di una domanda sono stati realizzati degli \textit{wizzard} per alcune tipologie di domande, ma questo limita alla creazione di tipologie di domande specifiche. La soluzione adottata è la realizzazione di un nuovo linguaggio di \textit{markup\ped{G}} che permette la definizione di domande non ordinarie, denominato \textit{QML} acronimo di \textit{Quiz Markup Language}. \\
-Per la realizzazione di \textbf{QML} abbiamo adottato il \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
+Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter creare domande da proporre negli allenamenti e nei questionari. Per rendere più semplice l'aggiunta di una domanda sono stati realizzati degli \textit{wizard\ped{G}} per alcune tipologie di domande, ma questo limita l'utente alla sola creazione di tali tipologie. La soluzione adottata è la realizzazione di un nuovo linguaggio di \textit{markup\ped{G}} che permette la definizione di domande non ordinarie, denominato QML acronimo di Quiz Markup Language.
+Per la realizzazione di QML abbiamo adottato il \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
 
 \subsection{Definizione della grammatica}
-Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML} è stato deciso di mantenere la sintassi \textit{JSON}, con l'aggiunta delle sole parole chiave necessarie per mantenere coerente la grammatica con lo scopo del \textbf{QML}. Alla grammatica è stata data possibilità di inserire commenti che saranno rimossi prima della creazione del \textit{JSON}.
+Per mantenere la semplicità di realizzazione di una domanda tramite QML è stato deciso di mantenere la sintassi \textit{JSON}, con l'aggiunta delle sole parole chiave necessarie per mantenere coerente la grammatica con lo scopo del QML. Alla grammatica è stata data possibilità di inserire commenti che saranno rimossi prima della creazione del \textit{JSON}.
 
-\subsubsection{sintassi domanda Vero/Falso}
+\subsubsection{Sintassi domanda Vero/Falso}
 \begin{lstlisting}[language=json,firstnumber=1]
 {	
 "type": "veroFalso",
@@ -25,7 +25,7 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsubsection{sintassi domanda a Risposta Multipla}
+\subsubsection{Sintassi domanda a Risposta Multipla}
 \begin{lstlisting}[language=json,firstnumber=1]
 {	
 "type": "rispostaMultipla",
@@ -58,7 +58,7 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsubsection{sintassi domanda a Ordinamento di Stringhe}
+\subsubsection{Sintassi domanda a Ordinamento di Stringhe}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "ordinamentoStringhe",
@@ -85,7 +85,7 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsubsection{sintassi domanda a Ordinamento Immagini}
+\subsubsection{Sintassi domanda a Ordinamento Immagini}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "ordinamentoImmagini",
@@ -113,7 +113,7 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsubsection{sintassi domanda a Collegamento di Elementi}
+\subsubsection{Sintassi domanda a Collegamento di Elementi}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "collegamento",
@@ -136,7 +136,7 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsubsection{sintassi domanda ad Area Cliccabile}
+\subsubsection{Sintassi domanda ad Area Cliccabile}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "areaCliccabile",
@@ -167,7 +167,7 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsubsection{sintassi domanda a Riempimento spazi vuoti}
+\subsubsection{Sintassi domanda a Riempimento spazi vuoti}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "spaziVuoti",
@@ -185,8 +185,8 @@ Per mantenere la semplicità di realizzazione di una domanda tramite \textbf{QML
 }
 \end{lstlisting}
 
-\subsection{generazione del JSON}
-Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON} contente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON} diverso, questo accada sia per la generazione tramite \textit{wizzard\ped{G}} sia tramite \textit{QML}.
+\subsection{Generazione del JSON}
+Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON\ped{G}} contente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON\ped{G}} diverso, questo accada sia per la generazione tramite \textit{wizard\ped{G}} sia tramite QML.
 
 \subsubsection{JSON domanda Vero/Falso}
 \begin{lstlisting}[language=json,firstnumber=1]
