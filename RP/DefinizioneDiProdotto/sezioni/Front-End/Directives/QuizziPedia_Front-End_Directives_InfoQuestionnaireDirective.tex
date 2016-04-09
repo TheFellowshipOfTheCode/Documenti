@@ -9,7 +9,7 @@
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene visualizzato dinamicamente all'interno della view FillingQuestionnaireView mediante il controller FillingQuestionsController;
+			\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Viene visualizzato dinamicamente all'interno della view FillingQuestionnaireView mediante il \textit{controller\ped{G}} FillingQuestionsController;
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere. Informazioni come:
 			\begin{itemize}
 				\item Nome del questionario;
@@ -20,7 +20,7 @@
 			\end{itemize}
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textbf{OUT \texttt{FillingQuestionnaireModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionnaireView} e il controller \texttt{FillingQuestionnaireController};
+				\item \textbf{OUT \texttt{FillingQuestionnaireModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionnaireView} e il \textit{controller\ped{G}} \texttt{FillingQuestionnaireController};
 				\item \textbf{IN \texttt{FillingQuestionsController}}: questa classe permette di gestire la creazione e la modifica di una domanda a riempimento di spazi;
 				\item \textbf{IN \texttt{LangModel}}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 			\end{itemize}
@@ -35,7 +35,7 @@
 					\item \texttt{keywords: Array<String>} \\ Parole chiave della domanda.
 				\end{itemize}
 				\item \texttt{+ startButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di inizio del questionario selezionato, in italiano o in inglese; 
-				\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ controller: String} \\ Stringa contenente il nome del \textit{controller\ped{G}} della direttiva;
 				\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
 				\item \texttt{+ scope: Scope} \\Oggetto \texttt{\$scope} interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
 				\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.

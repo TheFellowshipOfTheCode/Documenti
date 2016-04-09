@@ -10,11 +10,11 @@
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
-			\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene visualizzato dinamicamente all'interno delle views \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il controller \texttt{QuestionsController};
+			\item \textbf{Descrizione}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso. Viene visualizzato dinamicamente all'interno delle views \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione della domanda vero e falso;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textbf{IN \texttt{QuestionsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le directive che compongono dinamicamente la vista della domanda e il controller \texttt{QuestionsController};
+				\item \textbf{IN \texttt{QuestionsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le directive che compongono dinamicamente la vista della domanda e il \textit{controller\ped{G}} \texttt{QuestionsController};
 				\item \textbf{OUT \texttt{TrainingView}}: view principale della modalità allenamento. Conterrà i vari templates di ogni domanda dell'allenamento;
 				\item \textbf{OUT \texttt{FillingQuestionnaireView}}: view principale per la compilazione del questionario; conterrà i vari templates di ogni domanda appartenente al questionario;   
 				\item \textbf{IN \texttt{LangModel}}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
@@ -33,7 +33,7 @@
 						\item \texttt{+ isItRight: Boolean} \\ Contiene se la risposta è vera o falsa.
 					\end{enumerate}
 				\end{itemize}
-				\item \texttt{+ controller: String} \\ Stringa contenente il nome del controller della direttiva;
+				\item \texttt{+ controller: String} \\ Stringa contenente il nome del \textit{controller\ped{G}} della direttiva;
 				\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
 				\item \texttt{+ scope : Scope} \\Oggetto \texttt{\$scope} interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
 				\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
