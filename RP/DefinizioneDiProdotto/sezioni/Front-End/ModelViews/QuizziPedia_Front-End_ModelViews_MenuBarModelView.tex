@@ -9,18 +9,18 @@
 \end{figure} \FloatBarrier
 
 \begin{itemize}
-	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{Index} e il controller \texttt{MenuBarController};
-	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{Index} e il controller \texttt{MenuBarController} rendendo disponibili variabili e metodi;
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{Index} e il \textit{controller\ped{G}} \texttt{MenuBarController};
+	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{Index} e il \textit{controller\ped{G}} \texttt{MenuBarController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{OUT} \texttt{LoginBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di login;
-		\item \textit{OUT} \texttt{SignUpBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di registrazione;
-		\item \textit{OUT} \texttt{UserBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di visualizzazione del profilo utente personale;
-		\item \textit{OUT} \texttt{ProfileManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione del profilo;
-		\item \textit{OUT} \texttt{QuestionsManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione delle domande;
-		\item \textit{OUT} \texttt{LogoutBarDirective}: directive contenente il componente che permette di effettuare il logout;
-		\item \textit{OUT} \texttt{QuestionnaireManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione dei questionari;
-		\item \textit{OUT} \texttt{MenuBarController}: questa classe permette di gestire il menù fisso per ogni pagina.
+		\item \textbf{OUT \texttt{LoginBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il redirect alla pagina di login;
+		\item \textbf{OUT \texttt{SignUpBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il redirect alla pagina di registrazione;
+		\item \textbf{OUT \texttt{UserBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il redirect alla pagina di visualizzazione del profilo utente personale;
+		\item \textbf{OUT \texttt{ProfileManagementBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il redirect alla pagina di gestione del profilo;
+		\item \textbf{OUT \texttt{QuestionsManagementBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il redirect alla pagina di gestione delle domande;
+		\item \textbf{OUT \texttt{LogoutBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il logout;
+		\item \textbf{OUT \texttt{QuestionnaireManagementBarDirective}}: \textit{directive\ped{G}} contenente il componente che permette di effettuare il redirect alla pagina di gestione dei questionari;
+		\item \textbf{OUT \texttt{MenuBarController}}: questa classe permette di gestire il menù fisso per ogni pagina.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
@@ -28,26 +28,26 @@
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-		\item \texttt{+} \texttt{logOut(): void} \\
+		\item \texttt{+ logOut(): void} \\
 		Metodo che richiama il metodo \texttt{logOut} del service \texttt{AuthService} passandogli lo \texttt{username}. Prima di effettuare questa operazione viene mostrato a video un messaggio di conferma per il proseguo dell'operazione; 
-		\item \texttt{+} \texttt{logIn(): void} \\
+		\item \texttt{+ logIn(): void} \\
 		Metodo che gestisce l’evento click sul pulsante per effettuare il login. Effettua il redirect alla pagina per effettuare il login; 
-		\item \texttt{+} \texttt{signUp(): void} \\
+		\item \texttt{+ signUp(): void} \\
 		Metodo che gestisce l’evento click sul pulsante per effettuare la registrazione. Effettua il redirect alla pagina per effettuare la registrazione; 
-		\item \texttt{+} \texttt{goToUserPage(): void} \\
+		\item \texttt{+ goToUserPage(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di visualizzazione della pagina utente. Effettua il redirect alla pagina di visualizzazione della pagina utente; 
-		\item \texttt{+} \texttt{goToUserManagemetPage(): void} \\
+		\item \texttt{+ goToUserManagemetPage(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di gestione del profilo utente. Effettua il redirect alla pagina di gestione del profilo utente; 
-		\item \texttt{+} \texttt{goToQuestionsManagementPage(): void} \\
+		\item \texttt{+ goToQuestionsManagementPage(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di gestione delle domande. Effettua il redirect alla pagina di gestione delle domande; 
-		\item \texttt{+} \texttt{goToQuizManagementPage(): void} \\
+		\item \texttt{+ goToQuizManagementPage(): void} \\
 		Metodo che gestisce l’evento click sul pulsante di gestione dei questionari. Effettua il redirect alla pagina di gestione dei questionari;
 		\item \texttt{+ \$on('\$routeChangeStart': String, callback: function): void} \\
 		Metodo che cattura i cambiamenti dell'url e che richiede al \texttt{MenuBarModel} le giuste direttive da inserire in \texttt{MenuBarDirective}. \\
-		\textbf{Parametri};
+		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{'\$routeChangeStart': String}	\\ Servizio offerto da \textit{Angular.js\ped{G}} per catturare gli eventi sulla barra degli URL;
-			\item \texttt{callback: function}	\\ Funzione di callback per gestire i cambiamenti della barra degli indirizzi.
+			\item \texttt{'\$routeChangeStart': String}	\\ Servizio offerto da \textit{Angular\ped{G}} per catturare gli eventi sulla barra degli URL;
+			\item \texttt{callback: function}	\\ Funzione di \textit{callback\ped{G}} per gestire i cambiamenti della barra degli indirizzi.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}

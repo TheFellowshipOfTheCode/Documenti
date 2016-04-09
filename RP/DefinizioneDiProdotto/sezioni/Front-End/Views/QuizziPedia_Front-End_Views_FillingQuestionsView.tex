@@ -5,14 +5,14 @@
 	\caption{QuizziPedia::Front-End::Views::FillingQuestionsView}
 \end{figure} \FloatBarrier
 \begin{itemize}
-	\item \textbf{Descrizione}: view contenente i campi e le direttive per creare una domanda a riempimento testo;
+	\item \textbf{Descrizione}: \textit{view\ped{G}} contenente i campi e le direttive per creare una domanda a riempimento testo;
 	\item \textbf{Utilizzo}:  permette all'utente di creare una domanda a riempimento testo compilando i campi proposti;
 	\item \textbf{Relazioni con altre classi}:
 	\begin{itemize}
-		\item \textit{IN} \texttt{FillingQuestionsModelView}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \texttt{Angular.js}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{FillingQuestionsView} e il controller \texttt{FillingQuestionsController};
-		\item \textit{IN} \texttt{TopicKeywordsDirective}: directive che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
-		\item \textit{IN} \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
-		\item \textit{IN} \texttt{LangModel}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
+		\item \textbf{IN \texttt{FillingQuestionsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{FillingQuestionsView} e il \textit{controller\ped{G}} \texttt{FillingQuestionsController};
+		\item \textbf{IN \texttt{TopicKeywordsDirective}}: \textit{directive\ped{G}} che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textbf{IN \texttt{QuestionTextDirective}}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
+		\item \textbf{IN \texttt{LangModel}}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
 	\end{itemize}
 	\item \textbf{Attributi}:
 	\begin{itemize}

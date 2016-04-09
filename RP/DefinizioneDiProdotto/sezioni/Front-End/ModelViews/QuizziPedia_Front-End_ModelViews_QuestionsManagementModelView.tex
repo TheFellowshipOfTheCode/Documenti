@@ -9,32 +9,32 @@
 \end{figure} \FloatBarrier
 
 \begin{itemize}
-	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController};
-	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{QuestionsManagementView} e il controller \texttt{QuestionsManagementController} rendendo disponibili variabili e metodi;
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{QuestionsManagementView} e il \textit{controller\ped{G}} \texttt{QuestionsManagementController};
+	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{QuestionsManagementView} e il \textit{controller\ped{G}} \texttt{QuestionsManagementController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{IN} \texttt{QuestionsManagementView}: view contenente l’elenco delle domande create; 
-		\item \textit{IN} \texttt{QuestionsManagementController}: questa classe permette di gestire le domande create dall’utente e di crearne di nuove.
+		\item \textbf{IN \texttt{QuestionsManagementView}}: \textit{view\ped{G}} contenente l’elenco delle domande create; 
+		\item \textbf{IN \texttt{QuestionsManagementController}}: questa classe permette di gestire le domande create dall’utente e di crearne di nuove.
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \texttt{+ data: Object} \\ Oggetto contenete le informazioni da mostrare nell'anteprima della domanda;
+		\item \texttt{- data: Object} \\ Oggetto contenete le informazioni da mostrare nell'anteprima della domanda.
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-			\item \texttt{+} \texttt{getQuestionsByUser(username: String) : Array[QuestionItemModel]} \\ 
-			Metodo che acquisisce le domande create dall'utente attraverso il \texttt{QuestionService};\\
+			\item \texttt{+ getQuestionsByUser(username: String) : Array[QuestionItemModel]} \\ 
+			Metodo che acquisisce le domande create dall'utente attraverso il \texttt{QuestionService}.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{username: String} \\
-				Parametro di tipo \texttt{String} contenente l'username dell'utente;
+				Parametro di tipo \texttt{String} contenente l'username dell'utente.
 			\end{itemize}
-			\item \texttt{+} \texttt{editQuestion(idQuestion: String) : Void} \\ 
+			\item \texttt{+ editQuestion(idQuestion: String) : Void} \\ 
 			Metodo che gestisce l’evento click sul pulsante per modificare la domanda. Effettua il redirect alla pagina di modifica della domanda. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{idQuestion: username} \\
-				Parametro di tipo \texttt{String} contenente l'id della domanda da modificare;
+				Parametro di tipo \texttt{String} contenente l'id della domanda da modificare.
 			\end{itemize}
 	\end{itemize}
 \end{itemize}	
