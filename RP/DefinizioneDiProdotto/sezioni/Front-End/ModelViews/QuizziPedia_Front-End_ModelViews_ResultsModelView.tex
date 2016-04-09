@@ -9,24 +9,28 @@
 	\end{figure} \FloatBarrier
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{ResultsController};
-		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la view \texttt{ResultsView} e il controller \texttt{SearchController} rendendo disponibili variabili e metodi;
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{ResultsView} e il \textit{controller\ped{G}} \texttt{ResultsController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}}\\ \texttt{ResultsView} e il \textit{controller\ped{G}} \texttt{SearchController} rendendo disponibili variabili e metodi;
 		\item \textbf{Relazioni con altre classi}: 
 		\begin{itemize}
-			\item \textit{OUT} \texttt{ResultsView}: view contenente i risultati della ricerca effettuata, sia gli utenti che i questionari trovati; 
-			\item \textit{OUT} \texttt{SearchController}: questa classe permette di gestire la ricerca di questionari e utenti all’interno dell’applicazione;
+			\item \textbf{OUT \texttt{ResultsView}}: \textit{view\ped{G}} contenente i risultati della ricerca effettuata, sia gli utenti che i questionari trovati; 
+			\item \textbf{OUT \texttt{SearchController}}: questa classe permette di gestire la ricerca di questionari e utenti all'interno dell'applicazione.
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
 			\item \texttt{+ result: Object} \\ Attributo che contiene i seguenti due campi: 
 			\begin{itemize}
-				\item \texttt{user: Array[Object]}\\ \texttt{array} contenente un oggetto così formato:\\
-				\texttt{+ userDetails: Object} \\ Oggetto contenente i seguenti campi dati:
+				\item \texttt{user: Array[Object]}\\ 
+				\texttt{array} contenente un oggetto così formato:\\
+				\texttt{+ userDetails: Object} \\ 
+				Oggetto contenente i seguenti campi dati:
 				\begin{itemize}
 					\item \texttt{username}.
 				\end{itemize}
-				\item \texttt{quiz: Array[Object]}\\ \texttt{array} contenente un oggetto così formato:\\
-				\item \texttt{+ questionnaireDetails: Object} \\ Oggetto contenente i seguenti campi dati:
+				\item \texttt{quiz: Array[Object]}\\ 
+				\texttt{array} contenente un oggetto così formato:
+				\texttt{+ questionnaireDetails: Object} \\ 
+				Oggetto contenente i seguenti campi dati:
 				\begin{itemize}
 					\item \texttt{name: String};
 					\item \texttt{author: String};
@@ -38,26 +42,26 @@
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-				\item \texttt{+} \texttt{goToUser(username: String): void} \\
+				\item \texttt{+ goToUser(username: String): void} \\
 				Metodo che gestisce l’evento click sul bottone per visualizzare il profilo dell'utente selezionato. Effettua il redirect alla pagina dell'utente.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item \texttt{username: String} \\
-					Parametro contenente l'username dell'utente di cui si vuole visualizzare il profilo;
+					Parametro contenente l'username dell'utente di cui si vuole visualizzare il profilo.
 				\end{itemize} 
-				\item \texttt{+} \texttt{registrationToQuiz(idQuiz: String): void} \\
+				\item \texttt{+ registrationToQuiz(idQuiz: String): void} \\
 				Metodo che gestisce l’evento click sul pulsante di registrazione al questionario.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item \texttt{idQuiz: String} \\
-					Parametro contenente l'id del questionario di cui si vuole effettuare l'iscrizione;
+					Parametro contenente l'id del questionario di cui si vuole effettuare l'iscrizione.
 				\end{itemize} 
-				\item \texttt{+} \texttt{goToResultsPage(stringSearch: String): void} \\
+				\item \texttt{+ goToResultsPage(stringSearch: String): void} \\
 				Metodo che gestisce l’evento click sul pulsante per effettuare una ricerca.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item \texttt{stringSearch: String} \\
-					Parametro contenente la stringa della quale effettuare la ricerca;
+					Parametro contenente la stringa della quale effettuare la ricerca.
 				\end{itemize} 
 		\end{itemize}
 	\end{itemize}

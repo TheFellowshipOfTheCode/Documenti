@@ -9,42 +9,52 @@
 \end{figure} \FloatBarrier
 
 \begin{itemize}
-	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le directive \texttt{EliminationAndModifyDirective}, \texttt{ExamModalityDirective} e \texttt{QuestionnaireResultsDirective} e il controller \texttt{QuizEventController};
-	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra le directive \texttt{EliminationAndModifyDirective}, \texttt{ExamModalityDirective} e \texttt{QuestionnaireResultsDirective} e il controller \texttt{QuizEventController} rendendo disponibili variabili e metodi;
+	\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le \textit{directives\ped{G}}\\ \texttt{EliminationAndModifyDirective}, \texttt{ExamModalityDirective} e \texttt{QuestionnaireResultsDirective} e il \textit{controller\ped{G}} \texttt{QuizEventController};
+	\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra le \textit{directives\ped{G}}\\ \texttt{EliminationAndModifyDirective}, \texttt{ExamModalityDirective} e \texttt{QuestionnaireResultsDirective} e il \textit{controller\ped{G}} \texttt{QuizEventController} rendendo disponibili variabili e metodi;
 	\item \textbf{Relazioni con altre classi}: 
 	\begin{itemize}
-		\item \textit{OUT} \texttt{EliminationAndModifyDirective}: componente grafico contenente i bottoni per eliminare o modificare un questionario;
-		\item \textit{OUT} \texttt{ExamModalityDirective}: directive contenete i componenti grafici per attivare la modalità esame su un questionario e gestire le iscrizioni; 
-		\item \textit{OUT} \texttt{QuestionnaireResultsDirective}: rappresenta il componente grafico che permette all'utente autenticato pro di vedere i risultati di chi ha compilato il questionario. Tale componente è contenuto nella lista dei questionari abilitati alla compilazione. \'E possibile accedere alla lista dei risultati azionando l'evento ad esso collegato; 
-		\item \textit{OUT} \texttt{QuizEventController}: questa classe permette di reagire ai comandi dell'utente durante la gestione dei suoi questionari;
+		\item \textbf{OUT \texttt{EliminationAndModifyDirective}}: componente grafico contenente i bottoni per eliminare o modificare un questionario;
+		\item \textbf{OUT \texttt{ExamModalityDirective}}: \textit{directive\ped{G}} contenente i componenti grafici per attivare la modalità esame su un questionario e gestire le iscrizioni; 
+		\item \textbf{OUT \texttt{QuestionnaireResultsDirective}}: rappresenta il componente grafico che permette all'utente autenticato pro di vedere i risultati di chi ha compilato il questionario. Tale componente è contenuto nella lista dei questionari abilitati alla compilazione. \'E possibile accedere alla lista dei risultati azionando l'evento ad esso collegato; 
+		\item \textbf{OUT \texttt{QuizEventController}}: questa classe permette di reagire ai comandi dell'utente durante la gestione dei suoi questionari.
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-		\item \texttt{+} \texttt{modifyQuestionnaire(quizId: String): void} \\
-		Metodo che gestisce l’evento click sul pulsante di modifica questionario. Effettua il redirect alla pagina di gestione questionari;
-		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
-		\end{itemize}
-		\item \texttt{+} \texttt{deleteQuestionnaire(quizId: String): void} \\
-		Metodo che gestisce l’evento click sul pulsante di eliminazione questionario. Effettua il redirect alla pagina di gestione questionari;  
-		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
-		\end{itemize}
-		\item \texttt{+} \texttt{subscribeManagement(quizId: String): void} \\
-		Metodo che gestisce l’evento click sul pulsante di gestione iscrizioni. Effettua il redirect alla pagina di gestione iscrizioni;
-		\textbf{parametri}:
-		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
-		\end{itemize}
-		\item \texttt{+} \texttt{examModalityquizId: String(): void} \\Metodo che gestisce l’evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari;
+		\item \texttt{+ modifyQuestionnaire(quizId: String): void} \\
+		Metodo che gestisce l'evento click sul pulsante di modifica questionario. Effettua il redirect alla pagina di gestione questionari.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+			\item \texttt{quizId: String}\\ 
+			Parametro che indica l'identificativo univoco di un questionario.
 		\end{itemize}
-		\item \texttt{+} \texttt{resultsQuestionnaire(quizId: String): void} \\
-		Metodo che gestisce l’evento click sul pulsante di allenamento. Effettua il redirect alla pagina di gestine questionari;
+		\item \texttt{+ deleteQuestionnaire(quizId: String): void} \\
+		Metodo che gestisce l'evento click sul pulsante di eliminazione questionario. Effettua il redirect alla pagina di gestione questionari.\\
+		\textbf{Parametri}:  
 		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica l'identificativo univoco di un questionario.
+			\item \texttt{quizId: String}\\
+			Parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		
+		\item \texttt{+ subscribeManagement(quizId: String): void} \\
+		Metodo che gestisce l'evento click sul pulsante di gestione iscrizioni. Effettua il redirect alla pagina di gestione iscrizioni.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{quizId: String}\\
+			Parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		
+		\item \texttt{+ examModalityquizId: String(): void} \\
+		Metodo che gestisce l'evento click sul pulsante di attivazione modalità esame. Effettua il redirect alla pagina di gestione questionari.
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{quizId: String}\\ 
+			Parametro che indica l'identificativo univoco di un questionario.
+		\end{itemize}
+		\item \texttt{+ resultsQuestionnaire(quizId: String): void} \\
+		Metodo che gestisce l'evento click sul pulsante di allenamento. Effettua il redirect alla pagina di gestione questionari.
+		\begin{itemize}
+			\item \texttt{quizId: String}\\
+			Parametro che indica l'identificativo univoco di un questionario.
 		\end{itemize}   
 	\end{itemize}
 \end{itemize}
