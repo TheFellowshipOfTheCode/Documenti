@@ -47,7 +47,7 @@
 
 \paragraph{POST /:lang/signin}
 \begin{itemize}
-\item \textbf{Successo}: la maggior parte delle richieste alle risorse rese disponibili dalle \textit{API\ped{G}} del \textit{server\ped{G}} possono essere effettuate solamente da un \textit{utente autenticato}. Tale scenario rappresenta il successo di una richiesta di \textit{login}, che impone come vincolo per poter essere effettuata, che l'utente abbia un account nel sistema, ma che non sia già autenticato. La \textit{login} dell'utente viene effettuata tramite \textit{Passport\ped{G}}.
+\item \textbf{Successo}: la maggior parte delle richieste alle risorse rese disponibili dalle \textit{API\ped{G}} del \textit{server\ped{G}} possono essere effettuate solamente da un \textit{utente autenticato}. Tale scenario rappresenta il successo di una richiesta di login, che impone come vincolo per poter essere effettuata, che l'utente abbia un account nel sistema, ma che non sia già autenticato. La login dell'utente viene effettuata tramite \textit{Passport\ped{G}}.
 
 \label{Procedura di autenticazione}
 \begin{figure}[ht]
@@ -57,7 +57,7 @@
 \end{figure}
 \FloatBarrier
  
-\item \textbf{Fallimento}: la maggior parte delle richieste alle risorse rese disponibili dalle \textit{API\ped{G}} del \textit{server\ped{G}} possono essere effettuate solamente da un \textit{utente autenticato}. Tale scenario rappresenta il fallimento della richiesta di \textit{login}, che può avvenire nel caso sia stia cercando di autenticare un utente non registrato. In questo caso il modulo \texttt{AuthenticationController} invia \texttt{next(error)} al router, il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: la maggior parte delle richieste alle risorse rese disponibili dalle \textit{API\ped{G}} del \textit{server\ped{G}} possono essere effettuate solamente da un \textit{utente autenticato}. Tale scenario rappresenta il fallimento della richiesta di login, che può avvenire nel caso sia stia cercando di autenticare un utente non registrato. In questo caso il modulo \texttt{AuthenticationController} invia \texttt{next(error)} al router, il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di autenticazione}
 \begin{figure}[ht]
@@ -71,7 +71,7 @@
 
 \paragraph{POST /:lang/signout}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta l'azione di \textit{logout} da parte di un utente precedentemente autenticato nel sistema. La \textit{logout} dell'utente viene effettuata tramite \textit{Passport\ped{G}}.
+\item \textbf{Successo}: questo scenario rappresenta l'azione di logout da parte di un utente precedentemente autenticato nel sistema. La logout dell'utente viene effettuata tramite \textit{Passport\ped{G}}.
 
 \label{Procedura di logout}
 \begin{figure}[ht]
@@ -95,7 +95,7 @@
 \end{figure}
 \FloatBarrier
  
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController} che, in caso di fallimento, invia \texttt{next(err)} al router,  il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController} che, in caso di fallimento, invia \texttt{next(err)} al router, il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di controllo di sessione}
 \begin{figure}[ht]
