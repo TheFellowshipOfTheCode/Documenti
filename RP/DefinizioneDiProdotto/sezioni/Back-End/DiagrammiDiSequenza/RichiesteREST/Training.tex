@@ -1,20 +1,20 @@
 \paragraph{GET /:lang/user/training/question} % richiesta che ritorna la prossima domanda dell'allenamento
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna la prossima domanda nella modalità Allenamento. In questo caso il modulo \texttt{TopicController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna la domanda successiva nella modalità allenamento. In questo caso il modulo \texttt{TopicController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user_training_question_success.png}
-	\caption{Procedura di restituzione della prossima domanda nella modalità Allenamento}
+	\caption{Procedura di restituzione della domanda successiva nella modalità allenamento}
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna la prossima domanda nella modalità Allenamento; in questo caso il modulo \texttt{TopicController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna la domanda successiva nella modalità allenamento; in questo caso il modulo \texttt{TopicController} ritornerà un \texttt{next(err)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/DiagrammiDiSequenza/Back-end/GET__lang_user_training_question_failure.png}
-	\caption{Fallimento della procedura di restituzione della prossima domanda nella modalità Allenamento}
+	\caption{Fallimento della procedura di restituzione della domanda successiva nella modalità allenamento}
 \end{figure}
 \FloatBarrier
 
@@ -23,7 +23,7 @@
 
 \paragraph{PUT /:lang/user/:userId/training/userstatistics} % richiesta che aggiorna le statistiche dell'utente
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta aggiorna le statistiche di un utente dopo che ha risposto ad una domanda che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta aggiorna le statistiche di un utente dopo che ha risposto ad una domanda che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -32,7 +32,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che aggiorna le statistiche di un utente dopo che ha risposto ad una domanda che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che aggiorna le statistiche di un utente dopo che ha risposto ad una domanda che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -44,15 +44,9 @@
 \end{itemize}
 
 
-
-
-
-
-
-
 \paragraph{PUT /:lang/user/:userId/training/questionstatistics} % richiesta che aggiorna le statistiche della domanda
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta aggiorna le statistiche di una domanda a cui è stata data una risposta che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta aggiorna le statistiche di una domanda a cui è stata data una risposta che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -61,7 +55,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che aggiorna le statistiche di una domanda a cui è appena stata data una risposta che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che aggiorna le statistiche di una domanda a cui è appena stata data una risposta che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -71,12 +65,6 @@
 \FloatBarrier
 
 \end{itemize} 
-
-
-
-
-
-
 
 \paragraph{PUT /:lang/user/training/userlevelupdate}
 \begin{itemize}

@@ -85,7 +85,7 @@
 
 \paragraph{GET /:lang/loggedin}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController} che invia \texttt{next()} al router, per indicare il successo dell'operazione .
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController} che invia \texttt{next()} al router, per indicare il successo dell'operazione.
 
 \label{Procedura di controllo di sessione}
 \begin{figure}[ht]
@@ -95,7 +95,7 @@
 \end{figure}
 \FloatBarrier
  
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController}, che in caso di fallimento, invia \texttt{next(err)} al router,  il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di controllo di sessione che non impone alcun vincolo per poter essere effettuata. Il controllo di sessione dell'utente nel sistema viene effettuata tramite il modulo \texttt{SessionController} che, in caso di fallimento, invia \texttt{next(err)} al router,  il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di controllo di sessione}
 \begin{figure}[ht]

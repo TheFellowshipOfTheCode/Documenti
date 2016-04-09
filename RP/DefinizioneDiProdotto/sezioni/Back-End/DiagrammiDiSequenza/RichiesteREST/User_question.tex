@@ -1,7 +1,7 @@
 
 \paragraph{GET /:lang/user/:userId/question}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna tutte le domande create da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna tutte le domande create da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -10,7 +10,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna tutte le domande create da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna tutte le domande create da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -24,7 +24,7 @@
 
 \paragraph{GET /:lang/user/:userId/question/:questionId}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna una domanda creata da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna una domanda creata da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 
 \begin{figure}[ht]
@@ -34,7 +34,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna una domanda creata da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna una domanda creata da un utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -47,7 +47,7 @@
 
 \paragraph{POST /:lang/user/:userId/question}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che inserisce una nuova domanda creata da un utente all'interno del sistema che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che inserisce una nuova domanda creata da un utente all'interno del sistema che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 
 \begin{figure}[ht]
@@ -57,7 +57,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che inserisce una nuova domanda creata da un utente all'interno del sistema che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che inserisce una nuova domanda creata da un utente all'interno del sistema che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuestionController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering

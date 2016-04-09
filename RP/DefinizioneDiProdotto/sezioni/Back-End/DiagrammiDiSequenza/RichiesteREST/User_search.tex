@@ -1,6 +1,6 @@
 \paragraph{GET /:lang/user/:userId/search/:keyword/users}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -9,7 +9,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna la lista degli utenti il cui username contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -22,7 +22,7 @@
 
 \paragraph{GET /:lang/user/:userId/search/:keyword/quizzes}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta che ritorna la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -31,7 +31,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(error)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta che ritorna la lista dei questionari il cui titolo contiene la keyword inserita nella barra di ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(error)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -41,14 +41,9 @@
 \FloatBarrier
 \end{itemize}
 
-
-
-
-
-
 \paragraph{GET /:lang/user/:userId/search/users/:users}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione di un utente tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione di un utente tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -57,7 +52,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di visualizzazione di un utente tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di visualizzazione di un utente tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per indicare il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering
@@ -69,12 +64,9 @@
 \end{itemize}
 
 
-
-
-
 \paragraph{GET /:lang/user/:userId/search/quizzes/:quizId}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione di un questionario tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione di un questionario tra quelli ritornati come risultato della ricerca che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} invia \texttt{next()} per indicare il successo dell'operazione.
 
 \begin{figure}[ht]
 	\centering
@@ -83,7 +75,7 @@
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di visualizzazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(error)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: questo scenario rappresenta il fallimento di una richiesta di visualizzazione di un questionario che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema; quindi prima di tale operazione deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{QuizController} ritornerà un \texttt{next(error)} al router che avrà il compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \begin{figure}[ht]
 	\centering

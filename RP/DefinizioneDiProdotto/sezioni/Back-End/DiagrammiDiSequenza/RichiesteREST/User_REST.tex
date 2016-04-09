@@ -2,7 +2,7 @@
 \paragraph{DELETE /:lang/user/:userId}
 \begin{itemize}
 \item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.
-In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata la logout() per completare interamente l'operazione.
+In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} per indicare il successo dell'operazione e successivamente verrà effettuata l'operazione di logout() per completare interamente l'operazione.
 \label{Procedura di eliminazione account}
 \begin{figure}[ht]
 	\centering
@@ -11,7 +11,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di eliminazione account sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema,quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di eliminazione account sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di eliminazione account che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di eliminazione account}
 \begin{figure}[ht]
@@ -25,7 +25,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \paragraph{GET /:lang/user/:userId}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.  
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 
 \label{Procedura di visualizzazione dati utente}
@@ -37,7 +37,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \FloatBarrier
 
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione dei dati dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzzione dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione dei dati dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di visualizzazione dati utente}
 \begin{figure}[ht]
@@ -51,7 +51,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \paragraph{PUT /:lang/user/:userId}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di modifica dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. 
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di modifica dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. 
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 \label{Procedura di modifica dati utente}
 \begin{figure}[ht]
@@ -61,7 +61,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 \end{figure}
 \FloatBarrier
 
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di modifica dei dati dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di modifica dei dati dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica dei dati dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di modifica dati utente}
 \begin{figure}[ht]
 	\centering
@@ -74,7 +74,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \paragraph{PUT /:lang/user/:userId/privacy}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di modifica della passwprd dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.  
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di modifica della password dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 
 \label{Procedura di modifica password}
@@ -84,7 +84,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 	\caption{Procedura di modifica password}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di modifica della password dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica della password dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di modifica della password dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di modifica della password dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 
 
@@ -100,7 +100,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \paragraph{GET /:lang/user/:userId/statistics}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di modifica delle statistiche  dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.  
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di modifica delle statistiche  dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 
 \label{Procedura di visualizzazione delle statistiche}
@@ -110,7 +110,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 	\caption{Procedura di visualizzazione delle statistiche}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione delle statistiche dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione delle statistiche dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione delle statistiche dell'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione delle statistiche dell'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 
 \label{Fallimento della procedura di visualizzazione delle statistiche}
 \begin{figure}[ht]
@@ -123,7 +123,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \paragraph{GET /:lang/user/:userId/statistics/summary/}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.  
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 \label{Procedura di visualizzazione della cronologia dei questionari svolti}
 \begin{figure}[ht]
@@ -132,7 +132,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 	\caption{Procedura di visualizzazione della cronologia dei questionari svolti}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione della cronologia dei questionari svolti dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di visualizzazione della cronologia dei questionari svolti}
 \begin{figure}[ht]
 	\centering
@@ -145,7 +145,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 
 \paragraph{GET /:lang/user/:userId/statistics/summary/:summaryId}
 \begin{itemize}
-\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}.  
+\item \textbf{Successo}: questo scenario rappresenta il successo di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}.  
 In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()} al router per indicare il successo dell'operazione.
 \label{Procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \begin{figure}[ht]
@@ -154,7 +154,7 @@ In questo caso il modulo \texttt{UserManagementController} invia \texttt{next()}
 	\caption{Procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \end{figure}
 \FloatBarrier
-\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
+\item \textbf{Fallimento}: quando viene effettuata una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente sollevando un errore. Tale scenario rappresenta il fallimento di una richiesta di visualizzazione del riepilogo di un particolare questionario svolto dall'utente che impone, come vincolo per poter essere effettuata, che l'utente sia autenticato al sistema, quindi, prima di tale operazione, deve venire fatta una richiesta di controllo di sessione mediante l'apposita risorsa \textit{REST\ped{G}}. In questo caso il modulo \texttt{UserManagementController} invia \texttt{next(error)} per il fallimento di tale vincolo al router il quale avrà compito di reinstradarlo (indirizzandolo verso \texttt{ErrorHandler}).
 \label{Fallimento della procedura di visualizzazione del riepilogo di un particolare questionario svolto}
 \begin{figure}[ht]
 	\centering
