@@ -1,6 +1,6 @@
 \section{Tracciamento dei test}
-\subsection{Tracciamento Test di Validazione-Requisiti}
 
+\subsection{Tracciamento Test di Validazione-Requisiti}
 \normalsize
 \begin{longtable}[ht]{|>{\centering}m{5cm}|m{5cm}<{\centering}|}
 \hline 
@@ -36,9 +36,8 @@
 \hyperlink{TVFO12}{TVFO12} & RFO12\\ \hline 
 \caption[Tracciamento Test di Validazione-Requisiti]{Tracciamento Test di Validazione-Requisiti}
 \label{tabella:tv-requi}
-
 \end{longtable}
-\FloatBarrier
+\clearpage
 
 \subsection{Tracciamento Requisiti-Test di Validazione}
 \normalsize
@@ -77,7 +76,7 @@ RFO12 & \hyperlink{TVFO12}{TVFO12}\\ \hline
 \caption[Tracciamento Requisiti-Test di Validazione]{Tracciamento Requisiti-Test di Validazione}
 \label{tabella:requi-tv}
 \end{longtable}
-\FloatBarrier
+\clearpage
 
 \subsection{Tracciamento Test di Sistema-Requisiti}
 \normalsize
@@ -154,17 +153,16 @@ RFO12 & \hyperlink{TVFO12}{TVFO12}\\ \hline
 \hyperlink{TSVO14}{TSVO14} & RVO14\\ \hline
 \hyperlink{TSVF15}{TSVF15} & RVF15\\ \hline
 \hyperlink{TSVF16}{TSVF16} & RVF16\\ \hline
-\hyperlink{TSVF18}{TSVF18} & RVF18\\ \hline
-\hyperlink{TSVD20}{TSVD20} & RVD20\\ \hline
-\hyperlink{TSVF23}{TSVF23} & RVF23\\ \hline
-\hyperlink{TSVF24}{TSVF24} & RVF24\\ \hline
-\hyperlink{TSVF25}{TSVF25} & RVF25\\ \hline
-\hyperlink{TSVF26}{TSVF26} & RVF26\\ \hline
+\hyperlink{TSVF17}{TSVF17} & RVF17\\ \hline
+\hyperlink{TSVD18}{TSVD18} & RVD18\\ \hline
+\hyperlink{TSVF19}{TSVF19} & RVF19\\ \hline
+\hyperlink{TSVF20}{TSVF20} & RVF20\\ \hline
+\hyperlink{TSVF21}{TSVF21} & RVF21\\ \hline
+\hyperlink{TSVF22}{TSVF22} & RVF22\\ \hline
 \caption[Tracciamento Test di Sistema-Requisiti]{Tracciamento Test di Sistema-Requisiti}
 \label{tabella:ts-requi}
 \end{longtable}
 \clearpage
-\FloatBarrier
 
 \subsection{Tracciamento Requisiti-Test di Sistema}
 \normalsize
@@ -241,22 +239,20 @@ RVD13 & \hyperlink{TVVD13}{TSVD13}\\ \hline
 RVO14 & \hyperlink{TVVO14}{TSVO14}\\ \hline
 RVF15 & \hyperlink{TVVF15}{TSVF15}\\ \hline
 RVF16 & \hyperlink{TVVF16}{TSVF16}\\ \hline
-RVF18 & \hyperlink{TVVF18}{TSVF18}\\ \hline
-RVD20 & \hyperlink{TVVD20}{TSVD20}\\ \hline
-RVF23 & \hyperlink{TVVF23}{TSVF23}\\ \hline
-RVF24 & \hyperlink{TVVF24}{TSVF24}\\ \hline
-RVF25 & \hyperlink{TVVF25}{TSVF25}\\ \hline
-RVF26 & \hyperlink{TVVF26}{TSVF26}\\ \hline
+RVF17 & \hyperlink{TVVF17}{TSVF17}\\ \hline
+RVD18 & \hyperlink{TVVD18}{TSVD18}\\ \hline
+RVF19 & \hyperlink{TVVF19}{TSVF19}\\ \hline
+RVF20 & \hyperlink{TVVF20}{TSVF20}\\ \hline
+RVF21 & \hyperlink{TVVF21}{TSVF21}\\ \hline
+RVF22 & \hyperlink{TVVF22}{TSVF22}\\ \hline
 \caption[Tracciamento Requisiti-Test di Sistema]{Tracciamento Requisiti-Test di Sistema}
 \label{tabella:requi-tv}
 \end{longtable}
 \clearpage
-\FloatBarrier
-
 
 \subsection{Tracciamento Test di Integrazione-Componenti}
 \normalsize
-\begin{longtable}[ht]{|>{\centering}m{3cm}|m{9cm}<{\centering}|}
+\begin{longtable}[ht]{|>{\centering}m{3cm}|m{10cm}<{\centering}|}
 \hline 
 \textbf{Test} & \textbf{Componente}\\
 \hline
@@ -276,11 +272,11 @@ RVF26 & \hyperlink{TVVF26}{TSVF26}\\ \hline
 \caption[Tracciamento Test di Integrazione-Componenti]{Tracciamento Test di Integrazione-Componenti}
 \label{tabella:ts-requi}
 \end{longtable}
-\FloatBarrier
+\clearpage
 
 \subsection{Tracciamento Componenti-Test di Integrazione}
 \normalsize
-\begin{longtable}[ht]{|>{\centering}m{9cm}|m{3cm}<{\centering}|}
+\begin{longtable}[ht]{|>{\centering}m{10cm}|m{3cm}<{\centering}|}
 \hline 
 \textbf{Componente} & \textbf{Test}\\
 \hline
@@ -300,4 +296,441 @@ RVF26 & \hyperlink{TVVF26}{TSVF26}\\ \hline
 \caption[Tracciamento Componenti-Test di Integrazione]{Tracciamento Componenti-Test di Integrazione}
 \label{tabella:pkg-ti}
 \end{longtable}
-\FloatBarrier
+\clearpage
+
+\subsection{Tracciamento Test di Unità-Metodi}
+\normalsize
+\begin{longtable}{|>{\centering}m{1cm}|m{14cm}<{\centering}|}
+\hline 
+\textbf{Test} & \textbf{Metodi}\\
+\hline
+\endhead
+\hyperlink{TU1}{TU1} & \nogloxy{\texttt{Quizzipedia::Back-End::Server::start()}}\\ \hline
+
+\hyperlink{TU2}{TU2} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak UserRouter::router()}}\\ \hline
+
+\hyperlink{TU3}{TU3} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak QuizRouter::router()}}\\ \hline
+
+\hyperlink{TU4}{TU4} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak QuestionRouter::router()}}\\ \hline
+
+\hyperlink{TU5}{TU5} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak LangRouter::router()}}\\ \hline
+
+\hyperlink{TU6}{TU6} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  NotFoundHandler::handle()}}\\ \hline
+
+\hyperlink{TU7}{TU7} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  ErrorsHandler::handle()}}\\ \hline
+
+\hyperlink{TU8}{TU8} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Errors::QuizziPediaError::QuizziPediaError()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Errors::QuizziPediaError::toJSON()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Errors::QuizziPediaError::toString()}}\\ \hline
+
+\hyperlink{TU9}{TU9} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: AuthenticationController::signin()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: AuthenticationController::signout()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: AuthenticationController::signup()}}\\ \hline
+
+\hyperlink{TU10}{TU10} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::deleteUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getInfo()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateDataUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updatePasswordUser()}}\\ \hline
+
+\hyperlink{TU11}{TU11} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::deleteUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getInfo()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getSummaries()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getSummary()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateDataUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updatePasswordUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateSummary()}}\\ \hline
+
+\hyperlink{TU12}{TU12} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateStatisticsUser()}}\\ \hline
+
+\hyperlink{TU13}{TU13} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getSummaries()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getSummary()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateSummary()}}\\ \hline
+
+\hyperlink{TU14}{TU14} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak TopicController::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak TopicController::updateTopic()}}\\ \hline
+
+\hyperlink{TU15}{TU15} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuestionController::updateStatistic()}}\\ \hline
+
+\hyperlink{TU16}{TU16} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  SummaryController::createSummary()}}\\ \hline
+
+\hyperlink{TU17}{TU17} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::getPersonalQuizzes()}}\\ \hline
+
+\hyperlink{TU18}{TU18} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::addActiveUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::addUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::editQuiz()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::removeUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::updateStatistic()}}\\ \hline
+
+\hyperlink{TU19}{TU19} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuestionController::editQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuestionController::updateStatistic()}}\\ \hline
+
+\hyperlink{TU21}{TU21} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  LangController::getVarList()}}\\ \hline
+
+\hyperlink{TU22}{TU22} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::deleteUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::editPassword()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::editUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::getSummaries()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::getUsers()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::setImg()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::updateStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::updateSummary()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::upLevel()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserProModel::addUserPro()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserProModel::deleteUserPro()}}\\ \hline
+
+\hyperlink{TU23}{TU23} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::hashPassword()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::validPassword()}}\\ \hline
+
+\hyperlink{TU24}{TU24} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::addCorrect()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::addKeyword()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::addTotal()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::createQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::editQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::getQuestions()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::updateLevel()}}\\ \hline
+
+\hyperlink{TU25}{TU25} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addActiveUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addCorrect()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::createQuiz()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::getPersonalQuizzes()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::getQuiz()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::removeQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::removeUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::searchQuiz()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::setTitle()}}\\ \hline
+
+\hyperlink{TU26}{TU26} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::getNextQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::getQuestions()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::updateCorrect()}}\\ & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::updateTotal()}}\\ \hline
+
+\hyperlink{TU28}{TU28} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak LangModel::getVarlist()}}\\ \hline
+
+\hyperlink{TU29}{TU29} & \nogloxy{\texttt{Quizzipedia::Front-End::AppRouter::-\linebreak appRouter()}}\\ \hline
+
+\hyperlink{TU30}{TU30} & \nogloxy{\texttt{Quizzipedia::Front-End::AppRun::-\linebreak AppRun()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::AppRun::-\linebreak getLag()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::AppRun::-\linebreak getUserDetails()}}\\ \hline
+
+\hyperlink{TU31}{TU31} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireDetailsController::getQuestionnaireDetails()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireDetailsController::getSubscribedQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireDetailsController::QuestionnaireDetailsController()}}\\ \hline
+
+\hyperlink{TU32}{TU32} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireManagementController::getUserQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireManagementController::QuestionnaireManagementController()}}\\ \hline
+
+\hyperlink{TU33}{TU33} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak InputToListController::InputToListController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak InputToListController::putDownAnswer()}}\\ \hline
+
+\hyperlink{TU34}{TU34} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::logIn()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::LoginController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::recoveryPassword()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::signUp()}}\\ \hline
+
+\hyperlink{TU35}{TU35} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ClickableAreaQuestionsController::choseThatPoint()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ClickableAreaQuestionsController::ClickableAreaQuestionsController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ClickableAreaQuestionsController::submitQuestion()}}\\ \hline
+
+\hyperlink{TU36}{TU36} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ConnectionQuestionsController::ConnectionQuestionsController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ConnectionQuestionsController::submitQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::addQuestion()}}\\ \hline
+
+\hyperlink{TU37}{TU37} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::\$on()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToQuestionsManagementPage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToQuizManagementPage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToUserManagementPage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToUserPage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::logIn()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::logOut()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::MenuBarController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::signUp()}}\\ \hline
+
+\hyperlink{TU38}{TU38} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MultipleQuestionsController::MultipleQuestionsController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MultipleQuestionsController::submitQuestion()}}\\ \hline
+
+\hyperlink{TU39}{TU39} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak NewQuestionsButtonController::newQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak NewQuestionsButtonController::NewQuestionButtonsController()}}\\ \hline
+
+\hyperlink{TU40}{TU40} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::createQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::CreateQuestionnaireController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::deleteQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestionnairePreview()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestions()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::modifyQuestionnaire()}}\\ \hline
+
+\hyperlink{TU41}{TU41} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak PasswordForgotController::logIn()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak PasswordForgotController::passwordForgot()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak PasswordForgotController::PasswordForgotController()}}\\ \hline
+
+\hyperlink{TU42}{TU42} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::addAnswer()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::answerGiven()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::checkAnswer()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::getQuestionBy()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::linkingMade()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::loadNewQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::loadNewQuestionBy()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::orderChosen()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::QuestionsController()}}\\ \hline
+
+\hyperlink{TU43}{TU43} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ProfileManagementController::confirm()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ProfileManagementController::ProfileManagementController()}}\\ \hline
+
+\hyperlink{TU44}{TU44} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SignUpController::logIn()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SignUpController::signUp()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SignUpController::SignUpController()}}\\ \hline
+
+\hyperlink{TU45}{TU45} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak EditorQMLController::EditorQMLController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak EditorQMLController::submitQuestion()}}\\ \hline
+
+\hyperlink{TU46}{TU46} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsManagementController::editQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsManagementController::getQuestionsByUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsManagementController::QuestionsManagementsController()}}\\ \hline
+
+\hyperlink{TU47}{TU47} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::FillingQuestionnaireController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::getNextQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::getQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::startQuiz()}}\\ \hline
+
+\hyperlink{TU48}{TU48} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::deleteQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::examModalityquizId()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::modifyQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::QuizEventController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::resultsQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::subscribeManagement()}}\\ \hline
+
+\hyperlink{TU49}{TU49} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak RegistrationManagementController::RegistrationmanagementController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak RegistrationManagementController::subscribeQuestionnaire()}}\\ \hline
+
+\hyperlink{TU50}{TU50} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ResultsQuestionnaireController::getQuizResults()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ResultsQuestionnaireController::getUserForThisQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ResultsQuestionnaireController::ResultsQuestionnaireController()}}\\ \hline
+
+\hyperlink{TU51}{TU51} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StatisticsController::getStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StatisticsController::StatisticsController()}}\\ \hline
+
+\hyperlink{TU52}{TU52} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionsController::choseThatWord()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionsController::FillingQuestionsController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionsController::submitQuestion()}}\\ \hline
+
+\hyperlink{TU53}{TU53} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak HomeController::HomeController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak HomeController::trainingMode()}}\\ \hline
+
+\hyperlink{TU54}{TU54} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ImagesSortingQuestionsController::ImageSortingQuestionsController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ImagesSortingQuestionsController::submitQuestion()}}\\ \hline
+
+\hyperlink{TU55}{TU55} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StringsSortingQuestionsController::StringsSortingQuestionsController()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StringsSortingQuestionsController::submitQuestion()}}\\ \hline
+
+\hyperlink{TU56}{TU56} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::getSearch()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::goToResultsPage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::goToUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::registrationToQuiz()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::SearchController()}}\\ \hline
+
+\hyperlink{TU57}{TU57} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TopicKeywordsController::getKeywords()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TopicKeywordsController::TopicKeywordsController()}}\\ \hline
+
+\hyperlink{TU58}{TU58} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::addResult()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::loadNewQuestionBy()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::startTraining()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::TrainingController()}}\\ \hline
+
+\hyperlink{TU59}{TU59} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrueFalseQuestionsController::submitQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrueFalseQuestionsController::TrueFalseQuestionsController()}}\\ \hline
+
+\hyperlink{TU60}{TU60} & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak UserDetailsController::getUserDetails()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak UserDetailsController::UserDetailsController()}}\\ \hline
+
+\hyperlink{TU61}{TU61} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::getAuthor()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::getQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::getTitle()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::removeQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::setAuthor()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::setTitle()}}\\ \hline
+
+\hyperlink{TU62}{TU62} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getEmail()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getId()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getLevelUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getName()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getPrivilege()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getSurname()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getUserImg()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getUsername()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setEmail()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setId()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setLevel()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setName()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setPrivilege()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setSurname()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setUserImg()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setUsername()}}\\ \hline
+
+\hyperlink{TU63}{TU63} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::MenuBarModel::-\linebreak getDirective()}}\\ \hline
+
+\hyperlink{TU64}{TU64} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak ErrorModel()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak getCode()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak getMessage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak getTitle()}}\\ \hline
+
+\hyperlink{TU65}{TU65} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::addPieceOfQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::compareAnswers()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::createQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getAuthor()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getId()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getLanguage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getMadeWith()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setAuthor()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setId()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setLanguage()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setMadeWith()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setQuestion()}}\\ \hline
+
+\hyperlink{TU66}{TU66} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::addKeyword()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::addQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::getArgument()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::getNumeberOfQuestions()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::getResult()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::removeKeyword()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::removeQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::setArgument()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::setNumberOfQuestions()}}\\ \hline
+
+\hyperlink{TU67}{TU67} & \nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak LangModel::getVarlist()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak getLang()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak LangModel()}}\\ \hline
+
+\hyperlink{TU68}{TU68} & \nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak LangModel()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak setNewLang()}}\\ \hline
+
+\hyperlink{TU69}{TU69} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getKeywords()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getNextQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getQuestion()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getUserQuestions()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::QuestionService()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::sendQuestion()}}\\ \hline
+
+\hyperlink{TU70}{TU70} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::AuthService()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::getNewPassword()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::isLogged()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::logout()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::signIn()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::signup()}}\\ \hline
+
+\hyperlink{TU71}{TU71} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak LangService::getKeywords()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak LangService::LangService()}}\\ \hline
+
+\hyperlink{TU72}{TU72} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak SearchService::searchQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak SearchService::SearchService()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak SearchService::searchUsers()}}\\ \hline
+
+\hyperlink{TU73}{TU73} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::approveSubscribeQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::createQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getDoneQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getQuestionnaireDetails()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getQuiz()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getQuizResults()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getSubscribedQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getUserForThisQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getUserQuestionnaire()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::QuizService()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::search()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::subscribeQuestionnaire()}}\\ \hline
+
+\hyperlink{TU74}{TU74} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak StatisticsService::getQuestionnaireStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak StatisticsService::getStatistics()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak StatisticsService::StatisticsService()}}\\ \hline
+
+\hyperlink{TU75}{TU75} & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak UserDetailsService::confirmSaveUser()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak UserDetailsService::getUserDetails()}}\\ & \nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak UserDetailsService::UserDetailsService()}}\\ \hline
+
+\caption[Tracciamento Test di Unità-Metodi]{Tracciamento Test di Unità-Metodi}
+\label{tabella:tu-met}
+\end{longtable}
+\clearpage
+
+\subsection{Tracciamento Metodi-Test di Unità}
+\normalsize
+\begin{longtable}{|>{\centering}m{14cm}|m{1cm}<{\centering}|}
+\hline 
+\textbf{Metodo} & \textbf{Test}\\
+\hline
+\endhead\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  ErrorsHandler::handle()}} & \hyperlink{TU7}{TU7}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  LangController::getVarList()}} & \hyperlink{TU21}{TU21}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  NotFoundHandler::handle()}} & \hyperlink{TU6}{TU6}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuestionController::editQuestion()}} & \hyperlink{TU19}{TU19}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuestionController::updateStatistic()}} & \hyperlink{TU15}{TU15}\\ & \hyperlink{TU19}{TU19}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::addActiveUser()}} & \hyperlink{TU18}{TU18}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::addUser()}} & \hyperlink{TU18}{TU18}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::editQuiz()}} & \hyperlink{TU18}{TU18}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::getPersonalQuizzes()}} & \hyperlink{TU17}{TU17}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::removeUser()}} & \hyperlink{TU18}{TU18}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  QuizController::updateStatistic()}} & \hyperlink{TU18}{TU18}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak  SummaryController::createSummary()}} & \hyperlink{TU16}{TU16}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Errors::QuizziPediaError::QuizziPediaError()}} & \hyperlink{TU8}{TU8}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Errors::QuizziPediaError::toJSON()}} & \hyperlink{TU8}{TU8}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Errors::QuizziPediaError::toString()}} & \hyperlink{TU8}{TU8}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak TopicController::addQuestion()}} & \hyperlink{TU14}{TU14}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak TopicController::updateTopic()}} & \hyperlink{TU14}{TU14}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: AuthenticationController::signin()}} & \hyperlink{TU9}{TU9}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: AuthenticationController::signout()}} & \hyperlink{TU9}{TU9}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: AuthenticationController::signup()}} & \hyperlink{TU9}{TU9}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::deleteUser()}} & \hyperlink{TU10}{TU10}\\ & \hyperlink{TU11}{TU11}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getInfo()}} & \hyperlink{TU10}{TU10}\\ & \hyperlink{TU11}{TU11}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getStatistics()}} & \hyperlink{TU12}{TU12}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getSummaries()}} & \hyperlink{TU11}{TU11}\\ & \hyperlink{TU13}{TU13}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::getSummary()}} & \hyperlink{TU11}{TU11}\\ & \hyperlink{TU13}{TU13}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateDataUser()}} & \hyperlink{TU10}{TU10}\\ & \hyperlink{TU11}{TU11}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updatePasswordUser()}} & \hyperlink{TU10}{TU10}\\ & \hyperlink{TU11}{TU11}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateStatisticsUser()}} & \hyperlink{TU12}{TU12}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Controller::-\linebreak Users:: UserManagementController::updateSummary()}} & \hyperlink{TU11}{TU11}\\ & \hyperlink{TU13}{TU13}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak LangModel::getVarlist()}} & \hyperlink{TU28}{TU28}\\ & \hyperlink{TU67}{TU67}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::addCorrect()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::addKeyword()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::addTotal()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::createQuestion()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::editQuestion()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::getQuestions()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuestionModel::updateLevel()}} & \hyperlink{TU24}{TU24}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addActiveUser()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addCorrect()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addQuestion()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::addUser()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::createQuiz()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::getPersonalQuizzes()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::getQuiz()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::removeQuestion()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::removeUser()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::searchQuiz()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak QuizModel::setTitle()}} & \hyperlink{TU25}{TU25}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::addQuestion()}} & \hyperlink{TU26}{TU26}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::getNextQuestion()}} & \hyperlink{TU26}{TU26}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::getQuestions()}} & \hyperlink{TU26}{TU26}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::updateCorrect()}} & \hyperlink{TU26}{TU26}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak TopicModel::updateTotal()}} & \hyperlink{TU26}{TU26}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::deleteUser()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::editPassword()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::editUser()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::getSummaries()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::getUsers()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::hashPassword()}} & \hyperlink{TU23}{TU23}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::setImg()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::updateStatistics()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::updateSummary()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::upLevel()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserModel::validPassword()}} & \hyperlink{TU23}{TU23}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserProModel::addUserPro()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Model::-\linebreak UserProModel::deleteUserPro()}} & \hyperlink{TU22}{TU22}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak LangRouter::router()}} & \hyperlink{TU5}{TU5}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak QuestionRouter::router()}} & \hyperlink{TU4}{TU4}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak QuizRouter::router()}} & \hyperlink{TU3}{TU3}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::App::Routers::-\linebreak UserRouter::router()}} & \hyperlink{TU2}{TU2}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Back-End::Server::start()}} & \hyperlink{TU1}{TU1}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::AppRouter::-\linebreak appRouter()}} & \hyperlink{TU29}{TU29}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::AppRun::-\linebreak AppRun()}} & \hyperlink{TU30}{TU30}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::AppRun::-\linebreak getLag()}} & \hyperlink{TU30}{TU30}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::AppRun::-\linebreak getUserDetails()}} & \hyperlink{TU30}{TU30}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ClickableAreaQuestionsController::choseThatPoint()}} & \hyperlink{TU35}{TU35}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ClickableAreaQuestionsController::ClickableAreaQuestionsController()}} & \hyperlink{TU35}{TU35}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ClickableAreaQuestionsController::submitQuestion()}} & \hyperlink{TU35}{TU35}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ConnectionQuestionsController::ConnectionQuestionsController()}} & \hyperlink{TU36}{TU36}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ConnectionQuestionsController::submitQuestion()}} & \hyperlink{TU36}{TU36}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::addQuestion()}} & \hyperlink{TU36}{TU36}\\ & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::createQuestionnaire()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::CreateQuestionnaireController()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::deleteQuestionnaire()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestion()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestionnaire()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestionnairePreview()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::getQuestions()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak CreateQuestionnaireController::modifyQuestionnaire()}} & \hyperlink{TU40}{TU40}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak EditorQMLController::EditorQMLController()}} & \hyperlink{TU45}{TU45}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak EditorQMLController::submitQuestion()}} & \hyperlink{TU45}{TU45}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::FillingQuestionnaireController()}} & \hyperlink{TU47}{TU47}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::getNextQuestion()}} & \hyperlink{TU47}{TU47}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::getQuestionnaire()}} & \hyperlink{TU47}{TU47}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionnaireController::startQuiz()}} & \hyperlink{TU47}{TU47}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionsController::choseThatWord()}} & \hyperlink{TU52}{TU52}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionsController::FillingQuestionsController()}} & \hyperlink{TU52}{TU52}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak FillingQuestionsController::submitQuestion()}} & \hyperlink{TU52}{TU52}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak HomeController::HomeController()}} & \hyperlink{TU53}{TU53}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak HomeController::trainingMode()}} & \hyperlink{TU53}{TU53}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ImagesSortingQuestionsController::ImageSortingQuestionsController()}} & \hyperlink{TU54}{TU54}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ImagesSortingQuestionsController::submitQuestion()}} & \hyperlink{TU54}{TU54}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak InputToListController::InputToListController()}} & \hyperlink{TU33}{TU33}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak InputToListController::putDownAnswer()}} & \hyperlink{TU33}{TU33}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::logIn()}} & \hyperlink{TU34}{TU34}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::LoginController()}} & \hyperlink{TU34}{TU34}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::recoveryPassword()}} & \hyperlink{TU34}{TU34}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak LoginController::signUp()}} & \hyperlink{TU34}{TU34}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::\$on()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToQuestionsManagementPage()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToQuizManagementPage()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToUserManagementPage()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::goToUserPage()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::logIn()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::logOut()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::MenuBarController()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MenuBarController::signUp()}} & \hyperlink{TU37}{TU37}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MultipleQuestionsController::MultipleQuestionsController()}} & \hyperlink{TU38}{TU38}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak MultipleQuestionsController::submitQuestion()}} & \hyperlink{TU38}{TU38}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak NewQuestionsButtonController::newQuestion()}} & \hyperlink{TU39}{TU39}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak NewQuestionsButtonController::NewQuestionButtonsController()}} & \hyperlink{TU39}{TU39}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak PasswordForgotController::logIn()}} & \hyperlink{TU41}{TU41}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak PasswordForgotController::passwordForgot()}} & \hyperlink{TU41}{TU41}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak PasswordForgotController::PasswordForgotController()}} & \hyperlink{TU41}{TU41}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ProfileManagementController::confirm()}} & \hyperlink{TU43}{TU43}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ProfileManagementController::ProfileManagementController()}} & \hyperlink{TU43}{TU43}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireDetailsController::getQuestionnaireDetails()}} & \hyperlink{TU31}{TU31}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireDetailsController::getSubscribedQuestionnaire()}} & \hyperlink{TU31}{TU31}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireDetailsController::QuestionnaireDetailsController()}} & \hyperlink{TU31}{TU31}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireManagementController::getUserQuestionnaire()}} & \hyperlink{TU32}{TU32}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionnaireManagementController::QuestionnaireManagementController()}} & \hyperlink{TU32}{TU32}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::addAnswer()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::answerGiven()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::checkAnswer()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::getQuestionBy()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::linkingMade()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::loadNewQuestion()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::loadNewQuestionBy()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::orderChosen()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsController::QuestionsController()}} & \hyperlink{TU42}{TU42}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsManagementController::editQuestion()}} & \hyperlink{TU46}{TU46}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsManagementController::getQuestionsByUser()}} & \hyperlink{TU46}{TU46}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuestionsManagementController::QuestionsManagementsController()}} & \hyperlink{TU46}{TU46}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::deleteQuestionnaire()}} & \hyperlink{TU48}{TU48}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::examModalityquizId()}} & \hyperlink{TU48}{TU48}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::modifyQuestionnaire()}} & \hyperlink{TU48}{TU48}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::QuizEventController()}} & \hyperlink{TU48}{TU48}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::resultsQuestionnaire()}} & \hyperlink{TU48}{TU48}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak QuizEventController::subscribeManagement()}} & \hyperlink{TU48}{TU48}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak RegistrationManagementController::RegistrationmanagementController()}} & \hyperlink{TU49}{TU49}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak RegistrationManagementController::subscribeQuestionnaire()}} & \hyperlink{TU49}{TU49}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ResultsQuestionnaireController::getQuizResults()}} & \hyperlink{TU50}{TU50}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ResultsQuestionnaireController::getUserForThisQuestionnaire()}} & \hyperlink{TU50}{TU50}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak ResultsQuestionnaireController::ResultsQuestionnaireController()}} & \hyperlink{TU50}{TU50}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::getSearch()}} & \hyperlink{TU56}{TU56}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::goToResultsPage()}} & \hyperlink{TU56}{TU56}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::goToUser()}} & \hyperlink{TU56}{TU56}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::registrationToQuiz()}} & \hyperlink{TU56}{TU56}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SearchController::SearchController()}} & \hyperlink{TU56}{TU56}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SignUpController::logIn()}} & \hyperlink{TU44}{TU44}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SignUpController::signUp()}} & \hyperlink{TU44}{TU44}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak SignUpController::SignUpController()}} & \hyperlink{TU44}{TU44}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StatisticsController::getStatistics()}} & \hyperlink{TU51}{TU51}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StatisticsController::StatisticsController()}} & \hyperlink{TU51}{TU51}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StringsSortingQuestionsController::StringsSortingQuestionsController()}} & \hyperlink{TU55}{TU55}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak StringsSortingQuestionsController::submitQuestion()}} & \hyperlink{TU55}{TU55}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TopicKeywordsController::getKeywords()}} & \hyperlink{TU57}{TU57}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TopicKeywordsController::TopicKeywordsController()}} & \hyperlink{TU57}{TU57}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::addQuestion()}} & \hyperlink{TU58}{TU58}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::addResult()}} & \hyperlink{TU58}{TU58}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::loadNewQuestionBy()}} & \hyperlink{TU58}{TU58}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::startTraining()}} & \hyperlink{TU58}{TU58}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrainingController::TrainingController()}} & \hyperlink{TU58}{TU58}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrueFalseQuestionsController::submitQuestion()}} & \hyperlink{TU59}{TU59}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak TrueFalseQuestionsController::TrueFalseQuestionsController()}} & \hyperlink{TU59}{TU59}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak UserDetailsController::getUserDetails()}} & \hyperlink{TU60}{TU60}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Controllers::-\linebreak UserDetailsController::UserDetailsController()}} & \hyperlink{TU60}{TU60}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak ErrorModel()}} & \hyperlink{TU64}{TU64}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak getCode()}} & \hyperlink{TU64}{TU64}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak getMessage()}} & \hyperlink{TU64}{TU64}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::ErrorInfoModel::-\linebreak getTitle()}} & \hyperlink{TU64}{TU64}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak getLang()}} & \hyperlink{TU67}{TU67}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak LangModel()}} & \hyperlink{TU67}{TU67}\\ & \hyperlink{TU68}{TU68}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::LangModel::-\linebreak setNewLang()}} & \hyperlink{TU68}{TU68}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::MenuBarModel::-\linebreak getDirective()}} & \hyperlink{TU63}{TU63}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::addPieceOfQuestion()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::compareAnswers()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::createQuestion()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getAuthor()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getId()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getLanguage()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getMadeWith()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::getQuestion()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setAuthor()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setId()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setLanguage()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setMadeWith()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionItemModel::setQuestion()}} & \hyperlink{TU65}{TU65}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::addQuestion()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::getAuthor()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::getQuestion()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::getTitle()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::removeQuestion()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::setAuthor()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak QuestionnaireModel::setTitle()}} & \hyperlink{TU61}{TU61}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::addKeyword()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::addQuestion()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::getArgument()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::getNumeberOfQuestions()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::getResult()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::removeKeyword()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::removeQuestion()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::setArgument()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::-\linebreak TrainingModeModel::setNumberOfQuestions()}} & \hyperlink{TU66}{TU66}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getEmail()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getId()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getLevelUser()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getName()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getPrivilege()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getStatistics()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getSurname()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getUserImg()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak getUsername()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setEmail()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setId()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setLevel()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setName()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setPrivilege()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setStatistics()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setSurname()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setUserImg()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Model::UserDetailsModel::-\linebreak setUsername()}} & \hyperlink{TU62}{TU62}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::AuthService()}} & \hyperlink{TU70}{TU70}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::getNewPassword()}} & \hyperlink{TU70}{TU70}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::isLogged()}} & \hyperlink{TU70}{TU70}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::logout()}} & \hyperlink{TU70}{TU70}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::signIn()}} & \hyperlink{TU70}{TU70}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak AuthService::signup()}} & \hyperlink{TU70}{TU70}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak LangService::getKeywords()}} & \hyperlink{TU71}{TU71}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak LangService::LangService()}} & \hyperlink{TU71}{TU71}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getKeywords()}} & \hyperlink{TU69}{TU69}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getNextQuestion()}} & \hyperlink{TU69}{TU69}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getQuestion()}} & \hyperlink{TU69}{TU69}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::getUserQuestions()}} & \hyperlink{TU69}{TU69}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::QuestionService()}} & \hyperlink{TU69}{TU69}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuestionsService::sendQuestion()}} & \hyperlink{TU69}{TU69}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::approveSubscribeQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::createQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getDoneQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getQuestionnaireDetails()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getQuiz()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getQuizResults()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getSubscribedQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getUserForThisQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::getUserQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::QuizService()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::search()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak QuizService::subscribeQuestionnaire()}} & \hyperlink{TU73}{TU73}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak SearchService::searchQuestionnaire()}} & \hyperlink{TU72}{TU72}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak SearchService::SearchService()}} & \hyperlink{TU72}{TU72}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak SearchService::searchUsers()}} & \hyperlink{TU72}{TU72}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak StatisticsService::getQuestionnaireStatistics()}} & \hyperlink{TU74}{TU74}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak StatisticsService::getStatistics()}} & \hyperlink{TU74}{TU74}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak StatisticsService::StatisticsService()}} & \hyperlink{TU74}{TU74}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak UserDetailsService::confirmSaveUser()}} & \hyperlink{TU75}{TU75}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak UserDetailsService::getUserDetails()}} & \hyperlink{TU75}{TU75}\\ \hline
+\nogloxy{\texttt{Quizzipedia::Front-End::Services::-\linebreak UserDetailsService::UserDetailsService()}} & \hyperlink{TU75}{TU75}\\ \hline
+
+\caption[Tracciamento Metodi-Test di Unità]{Tracciamento Metodi-Test di Unità}
+\label{tabella:met-tu}
+\end{longtable}
+\clearpage

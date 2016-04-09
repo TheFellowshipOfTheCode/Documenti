@@ -2,9 +2,179 @@
 Con questa tipologia di test si vuole verificare il corretto funzionamento delle unità individuate durante la definizione dell'architettura ad alto livello.
 I test di unità saranno descritti nel modo seguente:
 \begin{center}
-\textbf{TU}[IdTest]
+\textbf{TU}[\textit{IdTest}]
 \end{center}
 dove:
 \begin{itemize}
-\item IdTest rappresenta il codice identificativo crescente dell'unità considerata.
+\item \textbf{IdTest} rappresenta il codice identificativo crescente dell'unità considerata.
 \end{itemize}
+
+% TABELLA
+\normalsize
+\begin{longtable}{|c|>{}m{10cm}|c|}
+\hline 
+\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+\hline
+\endhead
+\hypertarget{TU1}{TU1} & Verificare che l’istanza del server venga creata correttamente e che si metta in ascolto su localhost:3333 o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU2}{TU2} & Verificare che, ricevendo delle richieste conformi alle API definite, l’oggetto passi il controllo al
+concreteHandler corretto o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU3}{TU3} & Verificare che, ricevendo delle richieste conformi
+alle API definite, l’oggetto passi il controllo al
+concreteHandler corretto o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU4}{TU4} & Verificare che, ricevendo delle richieste conformi
+alle API definite, l’oggetto passi il controllo al
+concreteHandler corretto o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU5}{TU5} & Verificare che, ricevendo delle richieste conformi
+
+alle API definite, l’oggetto passi il controllo al
+
+concreteHandler corretto o che, in caso di
+
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU6}{TU6} & Verificare che, in base ai parametri forniti in input, il
+JSON ritornato contenga il messaggio d’errore corretto o che, in caso di errore, la risposta riporti lo
+stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU7}{TU7} & Verificare che, in base ai parametri forniti in input, il
+JSON ritornato contenga il messaggio d’errore corretto o che, in caso di errore, la risposta riporti lo
+stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU8}{TU8} & Verificare che il messaggio d’errore venga costruito
+in modo coerente rispetto ai dati passati al costruttore
+e che i metodi disponibili restituiscano l’informazione nel formato desiderato o che, in caso di errore, la
+risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU9}{TU9} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, mantenendo
+aggiornate le informazioni riguardanti registrazione
+ed autenticazione dell’utente o che, in caso di errore,
+la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU10}{TU10} & Verificare che, in base ai parametri forniti in input,
+il metodo effettui le operazioni richieste, verificando
+che l’utente che esegue la richiesta sia effettivamente
+un utente autenticato e mantenendo aggiornate le
+informazioni riguardanti l’utente
+o che, in caso di errore, la risposta riporti lo stato
+anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU11}{TU11} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, mantenendo
+aggiornati i dati dell'utente o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU12}{TU12} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, mantenendo
+aggiornati le statistiche relative all'utente o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU13}{TU13} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, mantenendo
+aggiornata la cronologia dei questionari svolti o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU14}{TU14} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornati la gestione dei topic o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU15}{TU15} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le statistiche delle domande uscite o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU16}{TU16} & Verificare che, in base ai parametri forniti in input,
+il metodo crei il riepilogo del questionario svolto dall'utente, restituisca il relativo JSON o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU17}{TU17} & Verificare che, in base ai parametri forniti in input,
+il metodo effettui le operazioni richieste, verificando
+che il questionario creato dall'utente sia effettivamente creato 
+o che, in caso di errore, la risposta riporti lo stato
+anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU18}{TU18} & Verificare che, in base ai parametri forniti in input, i
+
+metodi effettuino le operazioni richieste, mantenendo
+
+aggiornate le informazioni riguardanti i questionari creati dall'utente
+ o che, in caso di errore,
+la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU19}{TU19} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, mantenendo
+aggiornate le informazioni riguardanti le domande create dall’utente o che, in caso di errore,
+la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU20}{TU20} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, verificando che una domanda creata dall’utente sia effettivamente creata o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU21}{TU21} & Verificare che, in base ai parametri forniti in input, i
+
+metodi effettuino le operazioni richieste, verificando
+che le informazioni ottenute per effettuare una traduzione siano corrette o che, in caso di errore,
+la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU22}{TU22} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, mantenendo
+aggiornate le informazioni dell'utente in modo corretto,
+creando un nuovo utente, aggiornandone il contenuto
+e restituendone le informazioni nel relativo JSON
+o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU23}{TU23} & Verificare che, in base ai parametri forniti in input, i
+metodi effettuino le operazioni richieste, verificando la password inserita in fase di autenticazione
+e restituendone un  messaggio di conferma
+o che, in caso di errore, la risposta riporti lo stato
+anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU24}{TU24} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni di una domanda in modo corretto, creando una nuova domanda, aggiornandone il contenuto e restituendone le informazioni nel relativo JSON o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU25}{TU25} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni di un quiz in modo corretto, creando un nuovo quiz, aggiornandone il contenuto e restituendone le informazioni nel relativo JSON o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU26}{TU26} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni dell'argomento in modo corretto, e restituendone le informazioni nel relativo JSON o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU27}{TU27} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni di un questionario svolto in modo corretto, creando il riepilogo di un questionario svolto e restituendone le informazioni nel relativo JSON o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU28}{TU28} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni delle traduzioni in modo corretto, restituendone le informazioni nel relativo JSON o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU29}{TU29} & Verificare che il metodo effettui le operazioni richieste, costruendo l’oggetto corrispondente e, per mezzo
+di \$routeProvider, associando ad ogni route un controller ed una view o che, in caso di errore, la
+risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU30}{TU30} & Verificare che il metodo effettui le operazioni richieste, costruendo l’oggetto corrispondente, il quale funge da gestore per gli eventi globali o che, in caso di
+errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU31}{TU31} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo i dettagli di un questionario richiamando i metodi del relativo Service. Nello specifico restituendo i dettagli dei questionari creati da un utente e i questionari a cui un utente è iscritto o che, nel caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU32}{TU32} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo tutti i questionari creati da un utente richiamando i metodi del relativo Service. Nello specifico restituendo tutti i questionari creati da un utente o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato.  & \textit{Non Implementato}\\ \hline
+\hypertarget{TU33}{TU33} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le risposte inserite dall'utente, salvando la domanda inserita dall'utente per poi visualizzarla nella pagina. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU34}{TU34} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo l'autenticazione al sistema, in particolare la richiesta di autenticazione, la richiesta di registrazione e la possibilità di recuperare la password dimenticata. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU35}{TU35} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di una domanda ad area cliccabile; in specifico venga controllata la costruzione della relativa domanda e gli eventi che generano la creazione/modifica della domanda  o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU36}{TU36} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di una domanda a collegamento; in specifico venga controllata la costruzione della relativa domanda e gli eventi che generano la creazione/modifica della domanda o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU37}{TU37} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il menù fisso per ogni pagina; in particolare deve gestire il logout dal sistema, il login dal sistema, la registrazione al sistema, la possibilità di effettuare il redirect alla pagina di visualizzazione utente, di gestione profilo utente, di gestione delle domande, di gestione dei questionari e infine gestire la visualizzazione dei giusti collegamenti della barra per ogni pagina. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU38}{TU38} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la creazione e modifica di domande a risposta multipla, in particolare deve gestire la chiamata al service per l'invio della nuova domanda. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU39}{TU39} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il redirect alla pagina di creazione di una nuova domanda. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU40}{TU40} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione di un nuovo questionario e la modifica di uno esistente; in specifico venga controllata la costruzione del questionario, le operazioni che permettano la conferma creazione/modifica/eliminazione del questionario o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU41}{TU41} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il recupero della password dimenticata, in particolare la comunicazione col service per l'invio della mail e la gestione dell'evento redirect alla pagina di login. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU42}{TU42} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il recupero delle domande per far si che possano essere visualizzate nella modalità allenamento e nella compilazione di questionari, richiamando i metodi del relativo Service. Nello specifico gestendo tutti gli eventi che hanno a che fare con la selezione e la visualizzazione di una nuova domanda o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU43}{TU43} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il profilo personale dell'utente, in particolare l'invio delle nuove informazioni al service tramite l'apposito metodo. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU44}{TU44} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la registrazione di un utente al sistema; in particolare deve richiamare il metodo signup del service AuthService passandogli un oggetto
+di tipo SignUpModelView; nel caso di buona riuscita deve essere mostrato un messaggio di successo e gestito il redirect alla pagina di login mentre nel caso contrario deve essere mostrato un messaggio di errore. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU45}{TU45} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di domande create tramite editor QML; in specifico venga controllata la costruzione della domanda e le operazioni che permettano la conferma creazione/modifica della domanda o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU46}{TU46} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo tutte le domande create da un utente e creandone di nuove richiamando i metodi del relativo Service. Nello specifico recuperando tutte le domande create da un utente e gestendo l'evento click sul pulsante di modifica di una domanda o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU47}{TU47} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la compilazione del questionario; in specifico venga controllata la visualizzazione del questionario e le operazioni che permettano di rispondere alle varie domanda o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU48}{TU48} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, reagendo ai comandi dell'utente durante la gestione dei suoi questionari richiamando i metodi del relativo Service. Nello specifico gestendo l'evento click di modifica/eliminazione/gestione iscrizioni/attivazione modalità esame/allenamento di un questionario o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU49}{TU49} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le iscrizioni degli utenti ai questionari richiamando i metodi del relativo Service. Nello specifico permettendo di iscriversi ad un questionario o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU50}{TU50} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la visualizzazione dei risultati di un singolo questionario richiamando i metodi del relativo Service. Nello specifico restituendo il risultato di un questionario, restituendo tutti gli utenti che hanno eseguito un questionario ed il loro risultato o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU51}{TU51} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le statistiche di un utente; in particolare deve ottenere tali statistiche attraverso il StatisticsService, passandogli l'username dell'utente ricercato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU52}{TU52} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di una domanda a riempimento di spazi; in specifico venga controllata la costruzione della domanda e le operazioni che permettano la creazione/modifica della domanda o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU53}{TU53} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo la visualizzazione della homepage; in specifico venga controllata che siano presenti all'interno della home tutte le features previste o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU54}{TU54} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di una domanda a ordinamento immagini; in specifico venga controllata la costruzione della domanda e le operazioni che permettano la creazione/modifica della domanda o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU55}{TU55} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di una domanda a ordinamento di stringhe; in particolare deve gestire l'evento click sul pulsante di conferma sulla domanda, raccogliendo i dati di questa dal modelview e mandandoli al server attraverso il QuestionService; dovrà gestire infine il giusto redirect alla pagina di gestione delle domande oppure al questionario che si stava creando; & \textit{Non Implementato}\\ \hline
+\hypertarget{TU56}{TU56} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la ricerca di questionari e utenti all'interno dell'applicazione richiamando i metodi del relativo Service. Nello specifico gestendo l'evento click sui bottoni per visualizzare l'utente selezionato, per registrarsi ad un questionario, per effettuare una ricerca  o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU57}{TU57} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il recupero delle parole chiave di un questionario; in particolare data una stringa di ricerca deve restituire la parole chiave associata ad essa. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU58}{TU58} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste,  gestendo la modalità allenamento sottoponendo all'utente le giuste domande adatte al suo livello; in particolare deve gestire l'evento per inserire una domanda nella cronologia delle domande, gestire l'evento per scaricare una nuova domanda in base ai parametri
+passati facendo una richiesta al QuestionsController che andrà a scaricare la domanda e ad inserirla in TrainingModeModel nello \$scope mediante il metodo addQuestion, gestire l'evento per inserire il risultato di una domanda e gestire l'evento per iniziare l'allenamento.  & \textit{Non Implementato}\\ \hline
+\hypertarget{TU59}{TU59} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire la creazione e la modifica di una domanda vero e falso; in specifico venga controllata la costruzione della domanda e le operazioni che permettano la creazione/modifica della domanda o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU60}{TU60} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo i dati di un utente da mostrare nella pagina di un profilo; in particolare deve i dati con una chiamata a UserDetailsService, passandogli l'username dell'utente ricercato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU61}{TU61} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo i dati di un questionario; in particolare i metodi devono permettere di settare il titolo del questionario, settare l'autore del questionario, ottenere il titolo del questionario, ottenere l'autore del questionario, ottenere la lista di tutte le domande del questionario, aggiungere una domanda al questionario e infine rimuovere una domanda dal questionario. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU62}{TU62} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, memorizzando i dati relativi ad un utente e gestendoli richiamando i relativi Controller. Nello specifico gestendo l'autenticazione dell'utente al sistema, la ricerca di questionari e utenti all'interno dell'applicazione, i dati e le statistiche riguardanti un utente o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU63}{TU63} & Verificare che i metodi getter effettuino le operazioni
+richieste, restituendo i dati necessari per la creazione dinamica della barra
+menù posizionata in modo fisso su ogni pagina; o che, in caso di errore, la risposta riporti lo
+stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU64}{TU64} & Verificare che, in base ai parametri forniti in input,
+i metodi effettuino le operazioni richieste, costruendo l’oggetto contenente le informazioni sull'errore,
+ritornando correttamente il titolo, il messaggio ed il
+codice dell’errore o che, in caso di errore, la risposta
+riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU65}{TU65} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo i dati di una domanda; in particolare i metodi devono permettere di settare l'autore, settare il metodo con il quale è stata creata, settare la lingua, settare tutte le parti della domanda, settare l'id della domanda con quello ottenuto automaticamente, ottenere l'autore, ottenere il metodo con il quale è stata creata, ottenere la lingua, ottenere l'oggetto domanda, ottenere l'id della domanda, comparare le risposte date con quelle corrette, aggiungere un pezzo nuovo di domanda e creare una domanda. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU66}{TU66} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, memorizzando i dati di un alenamento e gestendoli richiamando il relativo Controller. Nello specifico settando/recuperando argomento, numero di domande dell'allenamento, inserendo/rimuovendo una domanda, aggiungendo/rimuovendo una parola chiave, recuperando il riepilogo dell'allenamento o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU67}{TU67} & Verificare che, in base ai parametri forniti in input,
+i metodi effettuino le operazioni richieste, costruendo l’oggetto contenente riguardanti la giusta traduzione dell’applicazione, ritornando correttamente la lingua, la lista di keywords o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU68}{TU68} & Verificare che, in base ai parametri forniti in input,
+i metodi effettuino le operazioni richieste, costruendo l’oggetto contenente riguardanti la giusta traduzione dell’applicazione, impostando correttamente la nuova lingua inserita o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU69}{TU69} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le domande, ossia il loro recupero e salvataggio; in particolare i metodi devono permettere di inviare una richiesta di salvataggio di una domanda, ottenere tutte le domande di un utente, ottenere le keywords a partire da una stringa in input, ritornare una singola domanda avendo come input l'id e infine ottenere la domanda successiva per la modalità allenamento. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU70}{TU70} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la registrazione e l'autenticazione di un utente fornendone le funzionalità ai Controller. Nello specifico permettendo di controllare se un utente è già autenticato, di effettuare il login, il logout, la registrazione e il recupero della password o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU71}{TU71} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la lingua in cui un utente ha deciso di utilizzare un'applicazione e fornendo le funzionalità per recuperare la giusta traduzione delle pagine. Nello specifico recuperando la lista di tutte le keywords nella lingua richiesta o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU72}{TU72} & Verificare che, in base ai parametri forniti in input, utilizzando il service SearchService, i metodi richiedano in maniera corretta le informazioni inerenti alla ricerca degli utenti e dei questionari, che i dati vengano restituiti nella maniera attesa o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU73}{TU73} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo tutto ciò che riguarda i questionari; in particolare i metodi devono permettere di cercare un questionario, iscrivere un utente ad un questionario, ottenere tutti i dettagli di un questionario, ottenere tutti i questionari eseguiti da un utente, creare un nuovo questionario, ottenere tutti i questionari creati da un utente, ottenere tutti i questionari a cui un utente è iscritto, approvare l'iscrizione di un utente ad un questionario, ottenere tutti gli utenti che hanno eseguito un particolare questionario, ottenere i risultati di un questionario e infine ottenere i risultati di un singolo utente ad un questionario. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU74}{TU74} & Verificare che, in base ai parametri forniti in input, utilizzando il service StatisticsService, i metodi richiedano in maniera corretta le informazioni inerenti alle statistiche degli utenti e dei questionari, che i dati vengano restituiti nella maniera attesa o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\hypertarget{TU75}{TU75} & Verificare che, in base ai parametri forniti in input, utilizzando il service UserDetailsService, i metodi richiedano in maniera corretta l'ottenimento  e il salvataggio dei dati dell'utente, che i dati vengano restituiti nella maniera attesa o che, in caso di errore, la risposta riporti lo stato
+anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+\caption[Test di Unità]{Test di Unità}
+\label{tabella:test3}
+\end{longtable}
+\clearpage
