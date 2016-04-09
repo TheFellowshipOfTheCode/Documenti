@@ -1,4 +1,6 @@
 \paragraph{QuizziPedia::Front-End::Services::AuthService}
+
+\label{QuizziPedia::Front-End::Services::AuthService}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Services_AuthService.png}
@@ -17,7 +19,7 @@
 	\begin{itemize}
 		\item \texttt{-} \texttt{logged: Boolean} \\ Campo dati che indica se l'utente è autenticato;
 		\item \texttt{-} \texttt{\$http: \$http} \\ Campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
-		\item \texttt{-} \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{AngularJS\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone;
+		\item \texttt{-} \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone;
 		\item \texttt{-} \texttt{\$cookie: \$cookie} \\ Campo dati che consente di salvare il valore di logged ed evitare che venga richiesta l'autenticazione ad ogni ricaricamento della pagina.
 	\end{itemize}
 	\item \textbf{Metodi}:
@@ -26,8 +28,8 @@
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{logged: Boolean} \\ Parametro che indica se l'utente è loggato o no;
-			\item \texttt{\$http: \$http} \\ Parametro contenente un riferimento al servizio \$http creato da \textit{AngularJS\ped{G}} per facilitare la comunicazione mediante protocollo \textit{HTTP\ped{G}};
-			\item \texttt{\$q: \$q} \\ Parametro contenente un riferimento al servizio \$q creato da \textit{AngularJS\ped{G}} per facilitare la gestione di funzione asincrone mediante l’utilizzo delle \textit{Promise\ped{G}};
+			\item \texttt{\$http: \$http} \\ Parametro contenente un riferimento al servizio \$http creato da \textit{Angular\ped{G}} per facilitare la comunicazione mediante protocollo \textit{HTTP\ped{G}};
+			\item \texttt{\$q: \$q} \\ Parametro contenente un riferimento al servizio \$q creato da \textit{Angular\ped{G}} per facilitare la gestione di funzione asincrone mediante l’utilizzo delle \textit{Promise\ped{G}};
 			\item \texttt{\$cookie: \$cookie} \\ Parametro che consente di salvare il valore di logged ed evitare che venga richiesta l'autenticazione ad ogni ricaricamento della pagina.
 		\end{itemize}
 		\item \texttt{+} \texttt{isLogged(): Boolean} \\ Metodo che restituisce il valore dell'attributo \textit{logged} salvato all'interno del cookie che permette di evitare di eseguire l'autenticazione ad ogni caricamento della pagina;

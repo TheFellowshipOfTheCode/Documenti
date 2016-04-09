@@ -5,7 +5,7 @@
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Templates_EmptySpaceAnswerTemplate.png}
-			\caption{QuizziPedia::Front-End::Directives::EmptyChoiceAnswerDirective}
+			\caption{QuizziPedia::Front-End::Directives::EmptySpaceAnswerDirective}
 		\end{figure} \FloatBarrier
 		
 		\begin{itemize}
@@ -13,7 +13,7 @@
 			\item \textbf{Utilizzo}: viene utilizzato per consentire all'utente la compilazione dell'esercizio a riempimento di spazi vuoti;
 			\item \textbf{Relazioni con altre classi}: 
 			\begin{itemize}
-				\item \textbf{IN \texttt{QuestionsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le directive che compongono dinamicamente la vista della domanda e il controller \texttt{QuestionsController};
+				\item \textbf{IN \texttt{QuestionsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le directive che compongono dinamicamente la vista della domanda e il controller \texttt{QuestionsController};
 				\item \textbf{OUT \texttt{TrainingView}}: view principale della modalità allenamento. Conterrà i vari templates di ogni domanda dell'allenamento;
 				\item \textbf{OUT \texttt{FillingQuestionnaireView}}: view principale per la compilazione del questionario; conterrà i vari templates di ogni domanda appartenente al questionario;   
 				\item \textbf{IN \texttt{LangModel}}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
