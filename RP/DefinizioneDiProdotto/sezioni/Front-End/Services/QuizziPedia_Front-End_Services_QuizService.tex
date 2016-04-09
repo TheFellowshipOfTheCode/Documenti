@@ -51,12 +51,12 @@
 	\begin{itemize}
 		\item \texttt{username: String} \\ Parametro che rappresenta l'utente del quale andranno caricati tutti i questionari.
 	\end{itemize}
-	\item \texttt{+ getDoneQuestionnaire(username: String): Promise} \\ Metodo che restituisce tutti i questionari svolti da un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{UserDetailsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
+	\item \texttt{+ getDoneQuestionnaire(username: String): Promise} \\ Metodo che restituisce tutti i questionari svolti da un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \\ \texttt{UserDetailsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore; \\
 	\textbf{Parametri}: 
 	\begin{itemize}
 		\item \texttt{username: String} \\ Parametro che rappresenta l'utente del quale andranno caricati tutti i questionari svolti.
 	\end{itemize}
-	\item \texttt{+ createQuestionnaire(title: String, questions: QuestionnaireItemModel): Promise} \\ Metodo che permette di creare un nuovo questionario. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+	\item \texttt{+ createQuestionnaire(title: String, questions: QuestionnaireItemModel): Promise} \\ Metodo che permette di creare un nuovo questionario. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \\ \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
 	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{title: String} \\ Parametro che rappresenta il titolo del questionario.
