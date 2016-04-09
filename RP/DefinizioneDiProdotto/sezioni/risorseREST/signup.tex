@@ -1,8 +1,8 @@
 	\item \texttt{/:lang}
 		\begin{itemize}
-			\item \textbf{Method}: GET
+			\item \textbf{Method}: GET;
 			\item \textbf{Livello di Accesso}: Utente;
-			\item \textbf{Descrizione}: restituisce le keywords inerenti alla lingua impostata
+			\item \textbf{Descrizione}: restituisce le keywords inerenti alla lingua impostata;
 			\item \textbf{Response}: la risposta deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
@@ -14,9 +14,9 @@
 	
 	\item \texttt{/:lang/signup}
 		\begin{itemize}
-			\item \textbf{Method}: POST
+			\item \textbf{Method}: POST;
 			\item \textbf{Livello di Accesso}: Utente;
-			\item \textbf{Descrizione}: crea un nuovo account. Un username univoco inserito dall'utente lo identifica, pertanto non ci saranno più utenti con lo stesso username. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore.
+			\item \textbf{Descrizione}: crea un nuovo account. Un username univoco inserito dall'utente lo identifica, pertanto non ci saranno più utenti con lo stesso username. Restituisce un messaggio di conferma se viene effettuato correttamente, altrimenti un errore;
 			\item \textbf{Request}: lo scambio dei dati dell'utente avviene attraverso una form che deve avere i seguenti campi:
 \begin{lstlisting}[language=json,firstnumber=1]
 {
