@@ -32,7 +32,7 @@ Nel caso si verifichi un errore riguardo le richieste ricevute dal client, il se
 		\item \texttt{400}: il server non può gestire la richiesta in seguito ad una generica richiesta errata. Il contenuto del messaggio d'errore varia in base alla tipologia di richiesta ricevuta;
 		\item \texttt{401}: Accesso non autorizzato;
 		\item \texttt{404}: Pagina non trovata.
-	\end{itemize}S
+	\end{itemize}
 \paragraph{Errori specifici di \progetto}
 Questi errori rappresentano situazioni specifiche del sistema \progetto, sono quindi stati definiti dei codici personalizzati per questa tipologia di errori basandosi sull'idea dei codici d'errore \textit{HTTP\ped{G}} standard. I codici dei messaggi d'errore sono stati assegnati secondo diverse categorie, in modo da poter individuare facilmente quale componente dell'applicazione ha causato l'errore. Ad ogni categoria è stato assegnato successivamente un intervallo di codici possibili, evitando di utilizzare gli intervalli \texttt{4xx} e \texttt{5xx} per non creare ambiguità con i codici d'errore standard descritti nella sezione precedente.
 Le categorie di errori definite sono le seguenti:
