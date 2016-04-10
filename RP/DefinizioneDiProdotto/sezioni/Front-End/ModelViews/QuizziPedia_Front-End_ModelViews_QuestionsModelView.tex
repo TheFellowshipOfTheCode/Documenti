@@ -4,7 +4,7 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.8,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_QuestionsModelView.png}
+	\includegraphics[scale=0.75,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_QuestionsModelView.png}
 	\caption{QuizziPedia::Front-End::ModelViews::QuestionsModelView}
 \end{figure} \FloatBarrier
 
@@ -16,7 +16,7 @@
 		\item \textbf{OUT \texttt{QuestionsController}}: questa classe permette di gestire il recupero delle domande per poterle stampare nella modalità allenamento;
 		\item \textbf{OUT \texttt{ClickableAnswerDirective}}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
 		\item \textbf{OUT \texttt{EmptySpaceAnswerDirective}}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
-		\item \textbf{OUT \texttt{HeaderTextQuestionDirective}}: rappresenta il componente grafico che presenta all'utente l'argomento, le parole chiave e il numero di domande complessive. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
+		\item \textbf{OUT \texttt{HeaderTextQuestionDirective}}: rappresenta il componente grafico che presenta all'utente l'argomento, le parole chiave e il numero di domande complessive. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \\\texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
 		\item \textbf{OUT \texttt{LinkingAnswerDirective}}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda di collegamento. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
 		\item \textbf{OUT \texttt{MultipleChoiceAnswerDirective}}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda a risposta multipla. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
 		\item \textbf{OUT \texttt{SortImagesAnswerDirective}}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini. Viene visualizzato dinamicamente all'interno delle \textit{views\ped{G}} \texttt{TrainingView} e \texttt{FillingQuestionnaireView} mediante il \textit{controller\ped{G}} \texttt{QuestionsController};
@@ -39,7 +39,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, answerGiven: Array[String]): void} \\
+		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, \\answerGiven: Array[String]): void} \\
 		Metodo che gestisce l'evento di selezione delle risposte. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -71,7 +71,7 @@
 			\item \texttt{index: Number} \\
 			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
 		\end{itemize}
-		\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array[String], level: Number): void} \\
+		\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array[String], \\level: Number): void} \\
 		Metodo che gestisce l'evento per scaricare una nuova domanda in base ai parametri passati. Evoca l'evento per inserire la domanda in \texttt{TrainingModelView}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
