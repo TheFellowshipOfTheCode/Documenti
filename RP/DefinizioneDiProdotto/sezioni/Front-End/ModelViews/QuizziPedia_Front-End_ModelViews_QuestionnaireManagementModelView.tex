@@ -18,11 +18,11 @@
 		\end{itemize}
 		\item \textbf{Attributi}: 
 		\begin{itemize}
-			\item \texttt{- questionnaireList: Array} \\ \texttt{array} contenente la lista dei questionari creati; ogni questionario sarà rappresentato come un oggetto.
+			\item \texttt{- questionnaireList: Array<QuestionnaireModel>} \\ \texttt{array} contenente la lista dei questionari creati; ogni questionario sarà rappresentato come un oggetto.
 		\end{itemize}
 		\item \textbf{Metodi}:
 		\begin{itemize}
-				\item \texttt{+ getUserQuestionnaire(username: String) QuestionnaireModel[]}: \\Metodo che ritorna tutti i questionari creati da un utente in un array di QuestionnaireModel.
+				\item \texttt{+ getUserQuestionnaire(username: String): Array<QuestionnaireModel>} \\Metodo che ritorna tutti i questionari creati da un utente in un array di QuestionnaireModel.
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item \texttt{username: String}\\ 

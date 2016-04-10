@@ -43,7 +43,7 @@
 				\item \texttt{quizId: String}\\
 				Parametro che rappresenta l'id del questionario da richiedere.
 			\end{itemize}
-			\item \texttt{+ getQuestionnairePreview(username: String) : QuestionnaireModel[]} \\ Metodo che serve per ottenere la lista di tutti i questionari di un utente. \\
+			\item \texttt{+ getQuestionnairePreview(username: String): Array<QuestionnaireModel>} \\ Metodo che serve per ottenere la lista di tutti i questionari di un utente. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{username: String}\\
@@ -57,7 +57,7 @@
 				Identificativo del questionario da eliminare.
 			\end{itemize}
 			
-			\item \texttt{- getQuestions(): String[]} \\
+			\item \texttt{- getQuestions(): Array<String>} \\
 			Metodo che permette di ottenere la lista di tutte le domande.
 			
 			\item \texttt{- getQuestion(questionId: String): QuestionItemModel} \\

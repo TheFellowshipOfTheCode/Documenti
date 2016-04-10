@@ -21,7 +21,7 @@
 			\item \texttt{+ training: Object} \\ Oggetto contenente al suo interno i seguenti campi:
 			\begin{itemize}
 				\item \texttt{+ argument: String} \\ Attributo contenente l'argomento scelto dall'utente per l'allenamento;
-				\item \texttt{+ keywords: Array[String]} \\ Attributo contenente l'\texttt{array} di keywords scelte dall'utente per l'allenamento;
+				\item \texttt{+ keywords: Array<String>} \\ Attributo contenente l'\texttt{array} di keywords scelte dall'utente per l'allenamento;
 				\item \texttt{+ questionNumber: String} \\ Attributo che rappresenta il numero progressivo della domanda attuale;
 				\item \texttt{+ numberOfQuestions: String} \\ Attributo che rappresenta il numero di domande scelte.
 			\end{itemize}
@@ -35,13 +35,13 @@
 				\item \texttt{question: QuestionItemModel} \\
 				Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
 			\end{itemize}
-			\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array[String], \\level: Number): void} \\
+			\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array<String>, \\level: Number): void} \\
 			Metodo che emette l'evento per scaricare una nuova domanda in base ai parametri passati. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{topic: String} \\
 				Parametro contenente l'argomento della domanda;
-				\item \texttt{keywords: Array[String]} \\
+				\item \texttt{keywords: Array<String>} \\
 				Parametro contenente un\texttt{array} di stringhe che rappresenta le keywords scelte per l'allenamento;
 				\item \texttt{level: Number} \\
 				Parametro contenente il livello dell'utente.
@@ -63,7 +63,7 @@
 				Parametro contenente il numero di domande per l'allenamento;
 				\item \texttt{topic: String} \\
 				Parametro contenente l'agomento dell'allenamento;
-				\item \texttt{keywords: Array[String]} \\
+				\item \texttt{keywords: Array<String>} \\
 				Parametro contenente \texttt{array} di parole chiave.
 			\end{itemize}
 		\end{itemize}

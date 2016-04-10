@@ -26,20 +26,20 @@
 	\end{itemize}
 	\item \textbf{Attributi}: 
 	\begin{itemize}
-		\item \texttt{+ piecesOfQuestion: Array[Object]} \\
+		\item \texttt{+ piecesOfQuestion: Array<Object>} \\
 		Questo attributo è un \texttt{array} di \texttt{Object} contenente la domanda da visualizzare dinamicamente attraverso le direttive all'interno le direttive di allenamento e di compilazione dei questionari;
-		\item \texttt{+ objAnswer: Array[Object]} \\
+		\item \texttt{+ objAnswer: Array<Object>} \\
 		Questo attributo è un \texttt{array} di \texttt{Object} contenente le risposte date fino a quel momento dall'utente in una domanda. L'\texttt{Object} è così formato: \\
 		\begin{itemize}
 			\item \texttt{+ typeQuestion: String} \\
 			Questo attributo rappresenta il tipo della domanda;
-			\item \texttt{+ answerGiven: Array[String]} \\
+			\item \texttt{+ answerGiven: Array<String>} \\
 			Questo attributo rappresenta le riposte scelte dall'utente fino a quel momento. Può essere creato con una funzione di \textit{callback\ped{G}}.
 		\end{itemize}
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, \\answerGiven: Array[String]): void} \\
+		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, \\answerGiven: Array<String>): void} \\
 		Metodo che gestisce l'evento di selezione delle risposte. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -47,37 +47,37 @@
 			Parametro contenente l'indice della risposta di cui si vuole tenere traccia. Rappresenta anche l'indice dell'\texttt{array objAnswer} in cui verrà inserito l'oggetto delle risposte date;
 			\item \texttt{typeQuestion: String} \\
 			Parametro contenente una stringa la quale indica la tipologia della domanda;
-			\item \texttt{answerGiven: Array[String]} \\
+			\item \texttt{answerGiven: Array<String>} \\
 			Parametro contenente l'\texttt{array} di risposte date dall'utente aggiornato all'ultima iterazione.
 		\end{itemize};
-		\item \texttt{+ answerGiven(index: Number): Array[String]} \\
+		\item \texttt{+ answerGiven(index: Number): Array<String>} \\
 		Metodo di supporto che ritorna un \texttt{array} di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande vero/falso, risposta multipla e ad area cliccabile.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{index: Number} \\
 			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
 		\end{itemize}
-		\item \texttt{+ orderChosen(index: Number): Array[String]} \\
+		\item \texttt{+ orderChosen(index: Number): Array<String>} \\
 		Metodo di supporto che ritorna un \texttt{array} di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande ad ordinamento e di riempimento di spazi.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{index: Number} \\
 			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
 		\end{itemize}
-		\item \texttt{+ linkingMade(index: Number): Array[String]} \\
+		\item \texttt{+ linkingMade(index: Number): Array<String>} \\
 		Metodo di supporto che ritorna un \texttt{array} di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande a collegamento.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{index: Number} \\
 			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
 		\end{itemize}
-		\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array[String], \\level: Number): void} \\
+		\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array<String>, \\level: Number): void} \\
 		Metodo che gestisce l'evento per scaricare una nuova domanda in base ai parametri passati. Evoca l'evento per inserire la domanda in \texttt{TrainingModelView}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{topic: String} \\
 			Parametro contenente l'argomento della domanda;
-			\item \texttt{keywords: Array[String]} \\
+			\item \texttt{keywords: Array<String>} \\
 			Parametro contenente un\texttt{array} di stringhe che rappresenta le keywords scelte per l'allenamento;
 			\item \texttt{level: Number} \\
 			Parametro contenente il livello dell'utente.

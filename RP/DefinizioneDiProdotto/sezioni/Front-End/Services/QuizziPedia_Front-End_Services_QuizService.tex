@@ -62,12 +62,12 @@
 		\item \texttt{title: String} \\ Parametro che rappresenta il titolo del questionario.
 		\item \texttt{questions: QuestionnaireItemModel} \\ Parametro contenente tutte le domande del questionario.
 	\end{itemize}
-	\item \texttt{+} \texttt{getUserQuestionnaire(username: String): QuestionnaireModel[]} \\Metodo che ritorna un array di QuestionnaireModel che sono tutti i questionari creati dall'utente in input;\\
+	\item \texttt{+} \texttt{getUserQuestionnaire(username: String): Array<QuestionnaireModel>} \\Metodo che ritorna un array di QuestionnaireModel che sono tutti i questionari creati dall'utente in input;\\
 	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{username: String} \\ Parametro che indica l'identificativo dell'utente del quale vogliamo richiedere i questionari.
 	\end{itemize}
-	\item \texttt{+} \texttt{getSubscribedQuestionnaire(username: String): QuestionnaireModel[]}: \\Metodo che ritorna la lista dei questionari a cui l'utente è iscritto;\\
+	\item \texttt{+} \texttt{getSubscribedQuestionnaire(username: String): Array<QuestionnaireModel>}: \\Metodo che ritorna la lista dei questionari a cui l'utente è iscritto;\\
 	\textbf{Parametri}:
 	\begin{itemize}
 		\item \texttt{username: String} \\ Parametro che indica l'utente del quale scaricare i quiz a cui risulta iscritto.
