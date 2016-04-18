@@ -8,11 +8,6 @@ Documenti del progetto di Ingegneria del Software proposto dall'azienda Zucchett
 
 ## Documenti
 
-### Revisione dei requisiti
-  + [Documenti](https://goo.gl/cr0sWM)
-  + [Presentazione](https://goo.gl/wgn8BP)
-  + [Valutazione](http://www.math.unipd.it/~tullio/IS-1/2015/Progetto/RR/TheFellowshipOfTheCode.pdf)
-
 ### Revisione di progettazione
   + [Documenti](https://goo.gl/s2fpVe)
   + [Presentazione](https://goo.gl/he4oWb)
