@@ -10,7 +10,7 @@
 *.out
 *.toc
 *.swp
-
+*.pdf
 *.texnicle
 
 ## Intermediate documents:
