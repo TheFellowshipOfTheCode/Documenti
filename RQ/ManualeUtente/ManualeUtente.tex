@@ -1,0 +1,52 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{Manuale Utente}
+\newcommand{\nomedocumentofisico}{ManualeUtente\_v1\_0\_0.pdf}
+\newcommand{\redazione}{\GR\\ & \GN\\ & \SM\\ & \MV\\ & \FB\\ & \AF}
+\newcommand{\verifica}{\GR\\ & \MP\\ & \MV}
+\newcommand{\approvazione}{\FB}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+\newcommand{\datacreazione}{07 Maggio 2016}
+\newcommand{\datamodifica}{07 Maggio 2016}
+\newcommand{\stato}{In redazione}
+\newcommand{\versione}{1}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+%Layout del documento 
+\input{../../Template/layout.tex}
+
+
+%Comandi generali
+\input{../../Template/comandi.tex}
+
+\begin{document}
+	
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{sezioni/diario.tex}
+\input{../../Template/index.tex}
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+%sezioni documento
+\input{sezioni/Introduzione.tex} 
+\input{sezioni/QuizziPedia.tex}
+\input{sezioni/RequisitiDiSistema.tex}
+\input{sezioni/Registrazione.tex}
+\input{sezioni/GestioneProfilo.tex}
+\input{sezioni/Allenamento.tex}
+\input{sezioni/questionario.tex}
+\input{sezioni/wizardQML.tex}
+\input{sezioni/FAQ.tex}
+\appendix
+%\input{sezioni/Organigramma.tex}
+
+\end{document}
