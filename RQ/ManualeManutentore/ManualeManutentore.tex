@@ -1,0 +1,48 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{Manuale del Manutentore}
+\newcommand{\nomedocumentofisico}{ManualeManutentore\_v1\_0\_0.pdf}
+\newcommand{\redazione}{\SM}
+\newcommand{\verifica}{\GN\\ & \MV}
+\newcommand{\approvazione}{\MP}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+\newcommand{\datacreazione}{09 Maggio 2016}
+\newcommand{\datamodifica}{09 Maggio 2016}
+\newcommand{\stato}{In redazione}
+\newcommand{\versione}{1}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+%Layout del documento 
+\input{../../Template/layout.tex}
+
+
+%Comandi generali
+\input{../../Template/comandi.tex}
+
+\begin{document}
+	
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{sezioni/diario.tex}
+\input{../../Template/index.tex}
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+%sezioni documento
+\input{sezioni/Introduzione.tex}
+\input{sezioni/RequisitiDiSistema.tex}
+\input{sezioni/Installazione.tex}
+\input{sezioni/Librerie.tex}
+\input{sezioni/Glossario.tex}
+\appendix
+%\input{sezioni/Organigramma.tex}
+
+\end{document}
