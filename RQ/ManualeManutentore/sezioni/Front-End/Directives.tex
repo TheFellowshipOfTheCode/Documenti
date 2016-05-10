@@ -2,13 +2,13 @@
 
 \subsection{QuizziPedia::Front-End::Directives}
 
-\subsubsection{Informazioni generali}
 \label{QuizziPedia::Front-End::Directives}
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.40]{UML/Package/QuizziPedia_Front-End_Directives.png}
 	\caption{QuizziPedia::Front-End::Directives}
 \end{figure}
+
 \begin{itemize}
 	\item \textbf{Descrizione}: package contenente le \textit{directives\ped{G}};
 	\item \textbf{Padre}: \texttt{Front-End};
@@ -29,7 +29,7 @@
 		\item \texttt{QuestionTextDirective}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
 		\item \texttt{QuestionnaireDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che può compilare;
 		\item \texttt{QuestionnaireDoneDetailsDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la lista di questionari che ha già compilato e di conseguenza vederne le valutazioni;
-		\item \texttt{}: rappresenta il componente grafico che permette all'utente autenticato pro di vedere i risultati di chi ha compilato il questionario. Tale componente è contenuto nella lista dei questionari abilitati alla compilazione. É possibile accedere alla lista dei risultati azionando l'evento ad esso collegato;
+		\item \texttt{QuestionnaireResultsDirective}: rappresenta il componente grafico che permette all'utente autenticato pro di vedere i risultati di chi ha compilato il questionario. Tale componente è contenuto nella lista dei questionari abilitati alla compilazione. É possibile accedere alla lista dei risultati azionando l'evento ad esso collegato;
 		\item \texttt{QuestionnaireResultsDirective}: rappresenta il componente grafico che permette all'utente autenticato pro di vedere i risultati di chi ha compilato il questionario. Tale componente è contenuto nella lista dei questionari abilitati alla compilazione. É possibile accedere alla lista dei risultati azionando l'evento ad esso collegato;
 		\item \texttt{SearchDirective}: classe che permette di effettuare la ricerca di utenti e questionari;
 		\item \texttt{StatisticsDirective}: classe che permette di visualizzare le statistiche di un utente;
@@ -39,19 +39,20 @@
 		\item \texttt{UserResultsDirective}: classe che permette di visualizzare la lista degli utenti ricercati dopo aver utilizzato l'apposita funzione di ricerca;
 		\item \texttt{ClickableAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad area cliccabile nell'immagine;
 		\item \texttt{EmptySpaceAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare l'esercizio a riempimento di spazi vuoti;
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:
-		\item \texttt{}:	
+		\item \texttt{HeaderTextQuestionDirective}: rappresenta componente grafico che presenta all'utente l'argomento e le parole chiave della domanda che ha a schermo;
+		\item \texttt{InfoQuestionnaireDirective}: rappresenta il componente grafico che permette all'utente di visualizzare le informazioni principali del questionario che si sta per svolgere;
+		\item \texttt{LinkingAnswerDirective}: rappresenta componente grafico che permette all'utente di visualizzare la domanda di collegamento;
+		\item \texttt{MultipleChoiceAnswerDirective}: rappresenta componente grafico che permette all'utente di visualizzare la domanda a risposta multipla;
+		\item \texttt{SortImagesAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di immagini;
+		\item \texttt{SortTextAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda ad ordinamento di stringhe;
+		\item \texttt{TrainingSetUpDirective}: rappresenta componente grafico che permette all'utente di selezionare l'argomento e le parole chiave per iniziare un allenamento con queste caratteristiche;
+		\item \texttt{TrueFalseAnswerDirective}: rappresenta il componente grafico che permette all'utente di visualizzare la domanda vero e falso;
+		\item \texttt{LoginBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di login;
+		\item \texttt{SignUpBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di registrazione;
+		\item \texttt{UserBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di visualizzazione profilo;
+		\item \texttt{ProfileManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione del profilo;
+		\item \texttt{QuestionsManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione delle domande;
+		\item \texttt{LogoutBarDirective}: directive contenente il componente che permette di effettuare il logout dal sistema;
+		\item \texttt{QuestionnaireManagementBarDirective}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione dei questionari.
 	\end{itemize}
 \end{itemize}

@@ -3,7 +3,7 @@
 \label{QuizziPedia::Back-End}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.7]{UML/Package/QuizziPedia_Back-End.png}
+	\includegraphics[scale=0.55]{UML/Package/QuizziPedia_Back-End.png}
 	\caption{QuizziPedia::Back-End}
 \end{figure}
 \FloatBarrier
@@ -17,7 +17,14 @@
 		\item \texttt{Config}:
 		\textit{package\ped{G}} contenente le componenti di configurazione del \textit{server\ped{G}}.
 	\end{itemize}
+	\item \textbf{Classi Contenute}:
+	\begin{itemize}
+		\item \texttt{Server}: classe che avvia il server. Nello specifico apre una connessione al database tramite \textit{Mongoose\ped{G}}, invoca il \textit{middleware\ped{G}} \textit{Express\ped{G}} passando un riferimento al database \textit{MongoDB\ped{G}} come parametro in modo che possa configurarsi con esso, invoca il \textit{middleware\ped{G}} \textit{Passport\ped{G}} ed infine si mette in ascolto su una determinata porta. E' il componente client del design pattern \textit{Chain of responsibility\ped{G}}. Utilizza i moduli \textit{Mongoose\ped{G}}, \textit{Express\ped{G}}, \textit{Passport\ped{G}};
+	\end{itemize}
 \end{itemize}
+
+\input{sezioni/Back-End/Config.tex}
+\input{sezioni/Back-End/App.tex}
 
 
 	
