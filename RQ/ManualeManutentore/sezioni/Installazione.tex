@@ -1,7 +1,42 @@
 \newpage
 \section{Installazione e utilizzo}
 \subsection{Installazione}
-Per l'utilizzo del software è necessaria l'installazione della piattaforma \textit{Node.js\ped{G}}, del Node package manager \textit{npm\ped{G}} e del il sistema software di controllo di versione distribuito \textit{Git\ped{G}}. Successivamente da terminale eseguire il comando:\\
+Per l'utilizzo del software è necessaria l'installazione della piattaforma \textit{Node.js\ped{G}}, del Node \textit{package\ped{G}} manager \textit{npm\ped{G}}, di \textit{MongoDB\ped{G}} (in alternativa si può usare un servizio come MongoLab) e del il sistema software di controllo di versione distribuito \textit{Git\ped{G}}. 
+Inoltre nell'ambiente di lavoro in cui verrà eseguito QuizziPedia dovrà essere installato Python 2.7 per il corretto funzionamento dei test. Per impostare l'ambiente di lavoro è necessario eseguire il comando da terminale:\\
+\\
+\centerline{\texttt{npm install -g node-gyp}}\\
+\\
+e installare, dipendentemente dal sistema operativo in uso, i seguenti pacchetti:
+\begin{itemize}
+	\item \textbf{UNIX}
+	\begin{itemize}
+		\item Python (v2.7 raccomandata, v3.x.x non è supportata);
+		\item \texttt{make};
+		\item Un compilatore C/C++, come GCC.
+	\end{itemize}
+	\item \textbf{Mac OS X}
+	\begin{itemize}
+		\item Python (v2.7 raccomandata, v3.x.x non è supportata);
+		\item Xcode: è necessario installare il Command Line Tools tramite Xcode. Lo si può trovare nel menu Xcode -> Preferences -> Downloads;
+		\item Questo passo installerà gcc e il relativo pacchetto di programmi contiene il \texttt{make}.
+	\end{itemize}
+	\item \textbf{Windows 10}
+	\begin{itemize}
+		\item Python (v2.7.10 raccomandato, v3.x.x non è supportata): assicurarsi che la variabile d'ambiente PYTHON abbia il valore: \verb|\path\to\python.exe|;
+		\item Installare l'ultima versione di \textit{npm\ped{G}};
+		\item Installare Visual Studio Community 2015 Edition;
+		\item Impostare la variabile d'ambiente \verb|GYP_MSVS_VERSION=2015|;
+		\item Avviare il prompt dei comandi come Amministratore ed eseguire il comando: \texttt{npm install};
+		\item Per i sistemi a 64-bit è necessario anche Windows 7 64-bit SDK;
+		\item Potrebbe essere necessario eseguire uno dei seguenti comandi se WindowsSDKDir lamenta di non essere impostato:
+	\end{itemize}
+\end{itemize}
+	\begin{center}
+		\verb|call "C:\Program Files\Microsoft SDKs\Windows\v7.1\bin\Setenv.cmd"/Release/x86|\\
+		\verb|call "C:\Program Files\Microsoft SDKs\Windows\v7.1\bin\Setenv.cmd"/Release/x64|\\
+	\end{center}
+La guida originale è visibile sul link presentato all'interno della sezione Riferimenti -> Informativi.
+Successivamente da terminale eseguire il comando:\\
 \\
 \centerline{\texttt{npm install -g bower}}\\
 \\
