@@ -1,0 +1,24 @@
+\subsection{QuizziPedia::Back-End::App::Routers}
+\subsubsection{Informazioni generali}
+\label{QuizziPedia::Back-End::App::Routers}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{UML/Package/QuizziPedia_Back-End_App_Routers.png}
+	\caption{QuizziPedia::Back-End::App::Routers}
+\end{figure}
+\FloatBarrier
+	\begin{itemize}
+		\item \textbf{Descrizione}: 
+		\textit{package\ped{G}} contenente i router della componente back-end dell'applicazione. Contiene i file di configurazione relativi al routing delle richieste del \textit{client\ped{G}}, ossia i \textit{routers} di \textit{Express\ped{G}};
+		\item \textbf{Padre}: \texttt{App};
+		\item \textbf{Interazioni con altri componenti}:
+			\begin{itemize}
+				\item \texttt{Controllers}: \textit{package\ped{G}} che contiene i \textit{Controllers} di \textit{Express\ped{G}}, definisce la logica dell'applicazione.
+			\end{itemize}
+	\end{itemize}
+\subsubsection{Classi}
+
+\input{sezioni/Back-End/Routers/UserRouter.tex}
+\input{sezioni/Back-End/Routers/QuestionRouter.tex}
+\input{sezioni/Back-End/Routers/QuizRouter.tex}
+\input{sezioni/Back-End/Routers/LangRouter.tex}

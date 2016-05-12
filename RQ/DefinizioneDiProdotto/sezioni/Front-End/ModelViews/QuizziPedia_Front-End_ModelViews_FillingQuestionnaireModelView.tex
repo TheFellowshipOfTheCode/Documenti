@@ -1,0 +1,51 @@
+	\paragraph[QuizziPedia::Front-End::ModelViews\\::FillingQuestionnaireModelView]{QuizziPedia::Front-End::ModelViews::FillingQuestionnaireModelView}
+	
+	\label{QuizziPedia::Front-End::ModelViews::FillingQuestionnaireModelView}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.8,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_ModelView_FillingQuestionnaireModelView.png}
+		\caption{QuizziPedia::Front-End::ModelViews::FillingQuestionnaireModelView}
+	\end{figure} \FloatBarrier
+	
+	\begin{itemize}
+		\item \textbf{Descrizione}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{FillingQuestionnaireView} e il \textit{controller\ped{G}} \texttt{FillingQuestionnaireController};
+		\item \textbf{Utilizzo}: viene utilizzata per effettuare il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}}\\ \texttt{FillingQuestionnaireView} e il \textit{controller\ped{G}} \texttt{FillingQuestionnaireController} rendendo disponibili variabili e metodi;
+		\item \textbf{Relazioni con altre classi}: 
+		\begin{itemize}
+			\item \textbf{OUT \texttt{FillingQuestionnaireView}}: \textit{view\ped{G}} principale per la compilazione del questionario. Conterrà i vari templates di ogni domanda appartenente al questionario; 
+			\item \textbf{OUT \texttt{FillingQuestionnaireController}}: questa classe permette di gestire la compilazione del questionario.
+		\end{itemize}
+		\item \textbf{Attributi}: 
+		\begin{itemize}
+			\item \texttt{+ quiz: Object} \\ Oggetto contenente al suo interno i seguenti campi:
+			\begin{itemize}
+				\item \texttt{+ title: String} \\ Attributo che rappresenta il titolo del questionario;
+				\item \texttt{+ argument: String} \\ Attributo che rappresenta l'argomento del questionario;
+				\item \texttt{+ keywords: Array<String>} \\ \texttt{array} di stringhe che contiene le parole chiave del questionario;
+				\item \texttt{+ questionNumber: String} \\ Attributo che rappresenta il numero progressivo della domanda attuale;
+				\item \texttt{+ numberOfQuestions: String} \\ Attributo che rappresenta il numero di domande.
+			\end{itemize}	
+		\end{itemize}
+		\item \textbf{Metodi}: 
+		\begin{itemize}
+			\item \texttt{+ loadNextQuestion(question: QuestionItemModel): void}\\
+			Metodo che invoca l'evento per visualizzare la domanda successiva del quiz tramite \texttt{QuestionController}. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{question: QuestionItemModel} \\
+				Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
+			\end{itemize}
+			\item \texttt{+ loadPreviousQuestion(question: QuestionItemModel): void} \\
+			Metodo che invoca l'evento per visualizzare la domanda precedente del quiz tramite \texttt{QuestionController}. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{question: QuestionItemModel} \\
+				Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
+			\end{itemize}
+			\item \texttt{+ startQuiz(): void} \\
+			Metodo che gestisce l'evento per iniziare il questionario. 
+		\end{itemize}
+	\end{itemize}
+	
+	

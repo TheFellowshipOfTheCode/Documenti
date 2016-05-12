@@ -1,0 +1,57 @@
+\item \texttt{/:lang/user/:userId/question}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: restituisce le domande create dall'utente;
+		\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"listQuestion" : [ 
+"question_id": [identifica l'identificativo della domanda]
+"makeWith" : [identifica lo strumento utilizzato per creare la domanda]
+"language" : [identifica la lingua della domanda]
+"question" : [identifica l'array di JSON contentente gli attributi che formano una domanda]
+"keywords" :[identifica le keywords inerenti alla domanda]
+"totalAnswer" : [identifica il numero totale di risposte date alla domanda]
+"correctAnswer" : [identifica il numero di risposte corrette date alla domanda]
+]
+}
+\end{lstlisting}
+	\end{itemize}	
+
+\item \texttt{/:lang/user/:userId/question/:questionId}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: restituisce la domanda creata dall'utente;
+		\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"listQuestion" : [ 
+"makeWith" : [identifica tipologia domanda]
+"language" : [identifica la lingua della domanda]
+"question" : [identifica l'array di JSON contentente gli attributi che formano una domanda]
+"totalAnswer" : [identifica il numero totale di risposte date alla domanda]
+"correctAnswer" : [identifica il numero di risposte corrette date alla domanda]
+]
+}
+\end{lstlisting}
+	\end{itemize}	
+	
+	
+	\item \texttt{/:lang/user/:userId/question}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+			\item \textbf{Descrizione}: aggiunge una domanda nel sistema, restituisce un messaggio di conferma o di errore;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"listQuestion" : [ 
+"makeWith" : [identifica tipologia domanda]
+"language" : [identifica la lingua della domanda]
+"question" : [identifica l'array di JSON contentente gli attributi che formano una domanda]
+]
+}
+\end{lstlisting}
+		\end{itemize}

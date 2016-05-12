@@ -1,0 +1,33 @@
+\paragraph{QuizziPedia::Front-End::Controllers::InputToListController}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_InputToListController.png}
+	\caption{QuizziPedia::Front-End::Controllers::InputToListController}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe permette di gestire l'inserimento di una lista di risposte durante la creazione di una domanda;
+	\item \textbf{Utilizzo}: fornisce le funzionalità per confermare porzioni di domanda durante la creazione;
+	\item \textbf{Relazione con altre classi}:
+	\begin{itemize}
+		\item \textbf{OUT} \texttt{MultipleQuestionsModelView}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{MultipleQuestionsView} e il \textit{controller\ped{G}} \texttt{MultipleQuestionsController};
+		\item \textbf{OUT} \texttt{ConnectionQuestionsModelView}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{ConnectionQuestionView} e il \textit{controller\ped{G}} \texttt{ConnectionQuestionController};
+		\item \textbf{OUT} \texttt{StringsSortingQuestionsModelView}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{StringsSortingQuestionView} e il \textit{controller\ped{G}} \\ \texttt{StringsSortingQuestionController}; 
+		\item \textbf{OUT} \texttt{ImagesSortingQuestionsModelView}: permette all'utente di creare una domanda a ordinamento immagini compilando i campi proposticlasse di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular.js\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{ImagesSortingQuestionView} e il \textit{controller\ped{G}} \\ \texttt{ImagesSortingQuestionController};
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		Campo dati contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{model\ped{G}} dell’applicazione.
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{InputToListController(\$scope: \$scope)} \\Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all’oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{model\ped{G}} dell'applicazione. 
+		\end{itemize}
+		\item \texttt{-} \texttt{putDownAnswer(): void} \\Metodo che reagisce all'evento di aggiunta nuova risposta e la salva in modo che venga caricata e visualizzata nella pagina.
+	\end{itemize}
+\end{itemize}
+

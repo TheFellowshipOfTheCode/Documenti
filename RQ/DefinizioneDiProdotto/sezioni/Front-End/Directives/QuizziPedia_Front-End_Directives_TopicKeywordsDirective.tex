@@ -1,0 +1,40 @@
+\paragraph{QuizziPedia::Front-End::Directives::TopicKeywordsDirective}
+
+\label{QuizziPedia::Front-End::Directives::TopicKeywordsDirective}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_TopicKeywordsDirective.png}
+	\caption{QuizziPedia::Front-End::Directives::TopicKeywordsDirective}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: directive che permette di gestire l'inserimento dell'argomento e delle keywords al momento della creazione della domanda;
+	\item \textbf{Utilizzo}: permette l'inserimento di keywords al momento di creazione della domanda, in particolare sarà formata da:
+	\begin{itemize}
+		\item Un menù a tendina per selezionare l'argomento della domanda;
+		\item Un campo di testo in cui inserire le keywords.
+	\end{itemize}
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN \texttt{TopicKeywordsModelView}}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la directive \texttt{TopicKeywordsDirective} e il controller \texttt{TopicKeywordsController};
+		\item \textbf{IN \texttt{CreateQuestionnaireView}}: \textit{view\ped{G}} per la creazione del questionario; 
+		\item \textbf{IN \texttt{TrueFalseQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda vero/falso; 
+		\item \textbf{IN \texttt{MultipleQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda a risposta multipla;
+		\item \textbf{IN \texttt{ConnectionQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda a collegamento;
+		\item \textbf{IN \texttt{ImagesSortingQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda a ordinamento immagini;
+		\item \textbf{IN \texttt{StringsSortingQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda a ordinamento stringhe;
+		\item \textbf{IN \texttt{FillingQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda a riempimento testo;
+		\item \textbf{IN \texttt{ClickableAreaQuestionsView}}: \textit{view\ped{G}} contenente i campi per creare una domanda ad area cliccabile;
+		\item \textbf{IN \texttt{EditorQMLView}}: \textit{view\ped{G}} contenente l'editor QML per la creazione di domande personalizzate;
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ topics: Array<String>} \\ Array contenente le stringhe dei nomi degli argomenti;
+		\item \texttt{+ keyword: String} \\ Attributo contenente la keyword associata alla domanda/questionario;
+		\item \texttt{+ controller: String} \\ Stringa contenente il nome del \textit{controller\ped{G}} della direttiva;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope} \\ Oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+	\end{itemize}
+\end{itemize}

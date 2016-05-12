@@ -1,0 +1,21 @@
+\paragraph[QuizziPedia::Front-End::Directives\\::QuestionsManagementBarDirective]{QuizziPedia::Front-End::Directives::QuestionsManagementBarDirective}
+
+\label{QuizziPedia::Front-End::Directives::QuestionsManagementBarDirective}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_QuestionsManagementBarDirective.png}
+	\caption{QuizziPedia::Front-End::Directives:QuestionsManagementBarDirective}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: directive contenente il componente che permette di effettuare il redirect alla pagina di gestione delle domande;
+	\item \textbf{Utilizzo}: permette di effettuare il redirect alla pagina di gestione delle domande;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textit{IN} \texttt{MenuBarModelView}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{Index} e il \textit{controller\ped{G}} \texttt{MenuBarController};
+		\item \textit{OUT} \texttt{MenuBarDirective}: rappresenta il menù, presente in ogni pagina dell'applicazione, generato in base agli oggetti passati nello \$scope isolato. Fornisce un pulsante per ogni oggetto ricevuto come parametro, ogni pulsante viene rappresentato con un’icona e con un testo. Al click di un pulsante viene invocata la funzione ad esso associata.  
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ questionsButton: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di link alla gestione delle domande, in italiano o in inglese.
+	\end{itemize}
+\end{itemize}

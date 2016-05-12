@@ -1,0 +1,25 @@
+\paragraph{QuizziPedia::Front-End::Views::TrueFalseQuestionsView}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_Views_TrueFalseQuestionsView.png}
+	\caption{QuizziPedia::Front-End::Views::TrueFalseQuestionsView}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: \textit{view\ped{G}} contenente le direttive per creare una domanda vero/falso; 
+	\item \textbf{Utilizzo}: permette all'utente di creare una domanda vero/falso compilando i campi proposti;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN \texttt{TrueFalseQuestionsModelView}}: classe di tipo modelview la cui istanziazione è contenuta all'interno della variabile di ambiente \texttt{\$scope} di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{TrueFalseQuestionsView} e il \textit{controller\ped{G}} \texttt{TrueFalseQuestionsController};
+		\item \textbf{IN \texttt{TopicKeywordsDirective}}: \textit{directive\ped{G}} che permette di gestire l'inserimento di keywords al momento della creazione della domanda;
+		\item \textbf{IN \texttt{ImageInTheQuestionDirective}}: \textit{directive\ped{G}} per l'inserimento dell'immagine nella creazione delle domande;
+		\item \textbf{IN \texttt{QuestionTextDirective}}: rappresenta il componente grafico che permette all'utente di scrivere o modificare il testo di una domanda;
+		\item \textbf{IN \texttt{LangModel}}: rappresenta il modello delle informazioni per la giusta traduzione dell'applicazione.
+	\end{itemize}
+\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{+ titleLangTrueFalse: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione del titolo della pagina, in italiano o in inglese;
+		\item \texttt{+ buttonConfirmLangTrueFalse: String} \\ Attributo che viene utilizzato per visualizzare la giusta traduzione della \textit{label\ped{G}} per il bottone di conferma, in italiano o in inglese;
+		\item \texttt{+ successCreation: String} \\ Attributo che visualizza un messaggio di conferma avvenuta creazione della domanda;
+		\item \texttt{+ errorCreation: String} \\ Attributo che visualizza un messaggio d'errore per la creazione della domanda.
+	\end{itemize}
+\end{itemize}

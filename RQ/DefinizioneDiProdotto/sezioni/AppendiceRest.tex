@@ -1,0 +1,120 @@
+\newpage
+\section{Interfaccia REST}
+Per utilizzare il Web come piattaforma di elaborazione, l'interfaccia per il \textit{Back-End\ped{G}} del progetto \progetto è realizzata in stile \textit{RESTful\ped{G}}.
+L'interfaccia \textit{REST\ped{G}} propone una visione del Web incentrata sul concetto di risorsa, per questo motivo è stato preferito a \textit{SOAP\ped{G}} che espone un insieme di metodi richiamabili da remoto da parte di un \textit{client\ped{G}}. Inoltre \textit{SOAP\ped{G}} sfrutta il protocollo \textit{HTTP\ped{G}} come semplice protocollo di trasporto; REST\ped{G} lo usa come  protocollo di livello applicativo, per questo ne utilizza appieno le potenzialità.
+I dati scambiati mediante l'interfaccia \textit{REST\ped{G}} sono rappresentati in formato \textit{JSON\ped{G}}, che si integra facilmente con le tecnologie ed il linguaggio utilizzati per sviluppare \progetto.
+Se lo scambio di dati avviene correttamente il \textit{server\ped{G}} può fornire in risposta un messaggio di conferma:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"status" : "ok"
+}
+\end{lstlisting}
+\subsection{Errori}
+In caso di errori il \textit{server\ped{G}} risponde con un messaggio d'errore in formato \textit{JSON\ped{G}}, definito secondo lo schema:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"code" : [codice dell'errore],
+"title" : [titolo dell'errore],
+"message" : [descrizione testuale dell'errore]
+}
+\end{lstlisting}
+\subsubsection{Errori generici}
+Gli errori generici cono gestiti dalla classe \texttt{ErrorHandler} ad eccezione dell'errore \texttt{404} che viene gestito da \texttt{NotFoundHandler}. In questo modo si ottiene una gestione degli errori più flessibile e modulare, in quanto è possibile inserire in coda allo stack di chiamate di ogni ruote la classe \texttt{NotFoundHandler}, riducendo così la complessità della classe \texttt{ErrorHandler}.
+
+\paragraph{Errori lato server}
+Nel caso si verifichi un errore lato server, questo risponde con un codice \textit{HTTP\ped{G}} del tipo \texttt{5xx}. Di seguito vengono specificati gli errori che possono essere sollevati:
+	\begin{itemize}
+		\item \texttt{500 Errore sconosciuto}: il messaggio descrive un errore generico del server che avviene quando si verifica una condizione non gestibile e quindi non identificabile con un errore specifico.
+	\end{itemize}
+\paragraph{Errori nelle richieste da parte del client}
+Nel caso si verifichi un errore riguardo le richieste ricevute dal client, il server risponde con un codice \textit{HTTP\ped{G}} del tipo \texttt{4xx}. Di seguito vengono specificati gli errori che possono essere sollevati:
+	\begin{itemize}
+		\item \texttt{400}: il server non può gestire la richiesta in seguito ad una generica richiesta errata. Il contenuto del messaggio d'errore varia in base alla tipologia di richiesta ricevuta;
+		\item \texttt{401}: Accesso non autorizzato;
+		\item \texttt{404}: Pagina non trovata.
+	\end{itemize}
+\paragraph{Errori specifici di \progetto}
+Questi errori rappresentano situazioni specifiche del sistema \progetto, sono quindi stati definiti dei codici personalizzati per questa tipologia di errori basandosi sull'idea dei codici d'errore \textit{HTTP\ped{G}} standard. I codici dei messaggi d'errore sono stati assegnati secondo diverse categorie, in modo da poter individuare facilmente quale componente dell'applicazione ha causato l'errore. Ad ogni categoria è stato assegnato successivamente un intervallo di codici possibili, evitando di utilizzare gli intervalli \texttt{4xx} e \texttt{5xx} per non creare ambiguità con i codici d'errore standard descritti nella sezione precedente.
+Le categorie di errori definite sono le seguenti:
+\begin{itemize}
+	\item \texttt{1xx}: errori di autenticazione, registrazione, modifica su utente e del middleware \texttt{userById};
+		\begin{itemize}
+			\item \texttt{101}: credenziali non valide;
+			\item \texttt{102}: password assente;
+			\item \texttt{103}: password troppo corta;
+			\item \texttt{104}: password uguale all'attuale;
+			\item \texttt{105}: password e conferma password non coincidono;
+			\item \texttt{111}: campo obbligatorio vuoto;
+			\item \texttt{112}: username non disponibile;
+			\item \texttt{113}: username non valido;
+			\item \texttt{114}: indirizzo mail non valido;
+			\item \texttt{121}: formato immagine non valido;
+			\item \texttt{122}: immagine di dimensione troppo grande;
+			\item \texttt{123}: errore nel caricamento dell'immagine;
+		\end{itemize}
+	\item \texttt{2xx}: errori del middleware \texttt{questionById};
+	\item \texttt{3xx}: errori del middleware \texttt{topicById};
+	\item \texttt{6xx}: errori del middleware \texttt{quizById};
+	\item \texttt{7xx}: errori del middleware \texttt{summaryById};
+	\item \texttt{8xx}: errori del controller \texttt{QuestionController};
+	\item \texttt{9xx}: errori del controller \texttt{TopicController};
+	\item \texttt{10xx}: errori del controller \texttt{QuizController};
+	\item \texttt{11xx}: errori del controller \texttt{SummaryController};
+	\item \texttt{12xx}: errori degli oggetti \texttt{QuestionModel}:
+	\item \texttt{13xx}: errori degli oggetti \texttt{TopicModel};
+	\item \texttt{14xx}: errori degli oggetti \texttt{QuizModel};
+	\item \texttt{15xx}: errori degli oggetti \texttt{SummaryModel};
+\end{itemize}
+Gli errori specifici di \progetto vengono gestiti dalla classe \texttt{QuizziPediaError} e sono di seguito elencati sotto forma di:
+\begin{center}
+	\texttt{Codice Titolo}: messaggio d'errore
+\end{center}
+\begin{itemize}
+	\item \texttt{100 Utente non trovato:} l'identificativo utente fornito non è un identificativo valido;
+	\item \texttt{101 Credenziali non valide:} è necessario fornire un username ed una password valide;
+	\item \texttt{102 Password assente:} è necessario inserire una password;
+	\item \texttt{103 Password troppo corta:} è necessario inserire una password di almeno 6 caratteri;
+	\item \texttt{104 Password uguale all'attuale:} è necessario inserire una password diversa della precedente;
+	\item \texttt{105 Le password non coincidono:} è necessario che 'password' e 'conferma password' siano identiche;
+	\item \texttt{111 Campo obbligatorio vuoto:} è necessario riempire tutti i campi obbligatori;
+	\item \texttt{112 Username non disponibile:} l 'username è già stato utilizzato, prego inserire un nuovo username;
+	\item \texttt{113 Username non valido:} l'username non è valido;
+	\item \texttt{114 Indirizzo mail non valido: } è necessario fornire un indirizzo e-mail valido;
+	\item \texttt{121 Formato immagine non valido: } Il formato dell'immagine non è valido;
+	\item \texttt{122 Immagine di dimensione troppo grande: } La dimensione massima per l'immagine è di 20MB;
+	\item \texttt{123 Caricamento immagine fallito}: errore sconosciuto nel caricamento dell'immagine;
+	\item \texttt{200 Domanda non valida:} l'identificativo della domanda fornita non è un identificativo valido;
+	\item \texttt{300 Argomento non valido:} l'identificativo dell'argomento fornito non è un identificativo valido;
+	\item \texttt{600 Questionario non valido:}  l'identificativo del questionario fornito non è un identificativo valido;
+	\item \texttt{700 Sommario non valido:} l'identificativo del questionario fornito non è un identificativo valido;
+	\item \texttt{800 Dati non validi:} i dati relativi al contenuto della domanda non sono  validi o sono formattati in modo errato;
+	\item \texttt{900 Dati non validi:} i dati relativi al contenuto dell'argomento non sono validi;
+	\item \texttt{1000 Dati non validi:} i dati relativi al contenuto del questionario non validi;
+	\item \texttt{1100 Dati non validi:} i dati relativi al contenuto del  sommario non validi o sono formattati in modo errato;
+	\item \texttt{1200 Dati non validi:} i dati per la modifica di una domanda non sono definiti;
+	\item \texttt{1300 Dati non validi:} i dati per la gestione dell' argomento non sono definiti;
+	\item \texttt{1400 dati non validi:} i dati per la gestione del questionario non sono definiti;
+	\item \texttt{1500 Dati non validi:} i dati per la gestione del sommario non sono validi;
+\end{itemize}
+
+\subsection{Risorse REST}
+In seguito vengono riportate le risorse \textit{REST\ped{G}} fornite, associate al tipo di metodo \textit{HTTP\ped{G}} che è possibile richiedere su di esse e ai permessi necessari per effettuare la richiesta. In particolare, i permessi sono:
+\begin{itemize}
+	\item \textbf{Utente}: la risorsa può essere acceduta da qualsiasi tipo di utente;
+	\item \textbf{Utente autenticato}: la risorsa può essere acceduta solo dagli utenti che hanno effettuato il login;
+	\item \textbf{Utente autenticato pro}: la risorsa può essere acceduta solo dagli utenti pro.
+\end{itemize}
+Inoltre per ogni risorsa sono stati specificati i formati per lo scambio dei dati in JSON\ped{G}:
+\begin{itemize}
+	\item \textbf{Request}: rappresenta l'oggetto \textit{JSON\ped{G}} che dovrà essere passato alla risorsa \textit{REST\ped{G}};
+	\item \textbf{Response}: rappresenta l'oggetto \textit{JSON\ped{G}} che fornirà in risposta la risorsa \textit{REST\ped{G}};
+	\input{sezioni/risorseREST/signup.tex}
+	\input{sezioni/risorseREST/signin.tex}
+	\input{sezioni/risorseREST/signout.tex}
+	\input{sezioni/risorseREST/recovery.tex}
+	\input{sezioni/risorseREST/user_search.tex}
+	\input{sezioni/risorseREST/user_rest.tex}
+	\input{sezioni/risorseREST/user_question.tex}
+	\input{sezioni/risorseREST/user_quiz.tex}
+	\input{sezioni/risorseREST/training.tex}
+\end{itemize}

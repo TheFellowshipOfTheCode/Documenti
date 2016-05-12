@@ -1,0 +1,38 @@
+\subsection{QuizziPedia::Back-End::App::Controllers}
+\subsubsection{Informazioni generali}
+\label{QuizziPedia::Back-End::App::Controllers}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{UML/Package/QuizziPedia_Back-End_App_Controllers.png}
+	\caption{QuizziPedia::Back-End::App::Controllers}
+\end{figure}
+\FloatBarrier
+	\begin{itemize}
+		\item \textbf{Descrizione}:
+		\textit{package\ped{G}} contenente i \textit{controllers} di \textit{Express\ped{G}}, definisce la logica dell'applicazione;
+		\item \textbf{Padre}: \texttt{App};
+		\item \textbf{Interazioni con altri componenti}:
+			\begin{itemize}
+				\item \texttt{Routers}:
+				\textit{package\ped{G}} contenente i router della componente back-end dell'applicazione. Contiene i file di configurazione relativi al routing delle richieste del \textit{client\ped{G}}, ossia i \textit{routers} di \textit{Express\ped{G}};
+				\item \texttt{Views}:
+				\textit{package\ped{G}} contenente le \textit{\textit{views\ped{G}}} della componente back-end dell'applicazione.
+			\end{itemize}
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item \texttt{Errors}:
+				\textit{package\ped{G}} contenente i \textit{controllers} per la gestione degli errori specifici.
+			\end{itemize}
+	\end{itemize}
+\subsubsection{Classi}
+\input{sezioni/Back-End/Controllers/ErrorHandler.tex}
+\input{sezioni/Back-End/Controllers/TopicController.tex}
+\input{sezioni/Back-End/Controllers/SummaryController.tex}
+\input{sezioni/Back-End/Controllers/QuizController.tex}
+\input{sezioni/Back-End/Controllers/QuestionController.tex}
+\input{sezioni/Back-End/Controllers/UserController.tex}
+\input{sezioni/Back-End/Controllers/LangController.tex}
+\input{sezioni/Back-End/Controllers/NotFoundHandler.tex}
+
+
+

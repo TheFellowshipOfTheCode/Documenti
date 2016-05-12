@@ -1,0 +1,7 @@
+\subsection{Back-End}
+Nei diagrammi di sequenza viene illustrata l'interazione tra il \textit{server\ped{G}} ed i vari \textit{middleware\ped{G}}, alcuni vengono forniti direttamente da \textit{express\ped{G}} mentre altri sono stati definiti dai \textit{progettisti}. Un \textit{middleware\ped{G}} può terminare la propria esecuzione in tre modi diversi:
+\begin{enumerate}
+	\item Terminata la propria esecuzione normalmente, eseguendo la richiesta passata dal \textit{middleware\ped{G}} precedente, e quindi terminata la catena;
+	\item Esegue una \textit{callback\ped{G}} passatagli come parametro, in questo modo passa il controllo ai successivi \textit{middleware\ped{G}};
+	\item Se si verifica un errore allora esegue la \textit{callback\ped{G}} passando come parametro l'errore verificatosi. In questo modo la \textit{callback\ped{G}} passerà il controllo al prossimo \textit{middleware\ped{G}} della catena che è in grado di gestire l'errore.
+\end{enumerate}
