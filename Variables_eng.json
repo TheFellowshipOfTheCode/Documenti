@@ -1,0 +1,10 @@
+{
+  "_id": {
+    "$oid": "57238703c80eb66928eb3ed1"
+  },
+  "lang": "en",
+  "variables": {
+    "logIn": "Login",
+    "signUp": "Signup"
+  }
+}

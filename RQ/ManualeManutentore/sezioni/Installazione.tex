@@ -1,12 +1,12 @@
 \newpage
-\section{Installazione e utilizzo}
-\subsection{Installazione}
-Per l'utilizzo del software è necessaria l'installazione della piattaforma \textit{Node.js\ped{G}}, del Node \textit{package\ped{G}} manager \textit{npm\ped{G}}, di \textit{MongoDB\ped{G}} (in alternativa si può usare un servizio come MongoLab) e del il sistema software di controllo di versione distribuito \textit{Git\ped{G}}. 
-Inoltre nell'ambiente di lavoro in cui verrà eseguito QuizziPedia dovrà essere installato Python 2.7 per il corretto funzionamento dei test. Per impostare l'ambiente di lavoro è necessario eseguire il comando da terminale:\\
+\section{Configurazione e modalità di utilizzo}
+\subsection{Configurazione dell'ambiente di lavoro}
+Per l'utilizzo del software è necessaria l'installazione della piattaforma \textit{Node.js\ped{G}}, del Node \textit{package\ped{G}} manager \textit{npm\ped{G}} e del sistema software di controllo di versione distribuito \textit{Git\ped{G}}. 
+Inoltre nell'ambiente di lavoro in cui verrà eseguito QuizziPedia dovrà essere installato Python 2.7 per il corretto funzionamento dei test, eseguendo il comando da terminale:\\
 \\
 \centerline{\texttt{npm install -g node-gyp}}\\
 \\
-e installare, dipendentemente dal sistema operativo in uso, i seguenti pacchetti:
+e installando, dipendentemente dal sistema operativo in uso, i seguenti pacchetti:
 \begin{itemize}
 	\item \textbf{UNIX}
 	\begin{itemize}
@@ -35,20 +35,27 @@ e installare, dipendentemente dal sistema operativo in uso, i seguenti pacchetti
 		\verb|call "C:\Program Files\Microsoft SDKs\Windows\v7.1\bin\Setenv.cmd"/Release/x86|\\
 		\verb|call "C:\Program Files\Microsoft SDKs\Windows\v7.1\bin\Setenv.cmd"/Release/x64|\\
 	\end{center}
-La guida originale è visibile sul link presentato all'interno della sezione Riferimenti -> Informativi.
-Successivamente da terminale eseguire il comando:\\
-\\
-\centerline{\texttt{npm install -g bower}}\\
-\\
-all'interno della cartella QuizziPedia. Infine eseguire sempre da terminale, dentro alla cartella QuizziPedia, i comandi:\\
+La guida originale per l'installazione del pacchetto node-gyp è visibile sul link presentato all'interno della sezione Riferimenti -> Informativi.\\
+A questo punto è possibile scaricare il software presente nel seguente link: \url{https://github.com/TheFellowshipOfTheCode/QuizziPedia}.\\
+
+\subsection{Configurazione del database}
+Affinché l'applicazione funzioni correttamente è necessaria la configurazione del database. Per lo sviluppo del progetto è stata utilizzata la piattaforma mLab (\url{https://mlab.com}), che offre la possibilità di creare database Mongo. Dopo aver effettuato l'iscrizione e l'autenticazione al servizio, è necessaria la creazione di un database e di un utente che vi può accedere. Il nome del database deve essere \texttt{quizzipedia} e le collection che devono essere inserite al suo interno sono:
+\begin{itemize}
+	\item \texttt{questions}
+	\item \texttt{quizzes}
+	\item \texttt{topics}
+	\item \texttt{users}
+	\item \texttt{Variables}
+\end{itemize}
+ La collection \texttt{Variables} contiene tutte keywords per la traduzione di tutte le parole chiave presenti nel software. Per la traduzione in italiano scaricare il file JSON presente all'indirizzo: \url{}, mentre per quello in inglese all'indirizzo: \url{}.
+\subsection{Avvio dell'applicazione}
+Da terminale eseguire i seguenti comandi all'interno della cartella QuizziPedia:\\
 \\
 \centerline{\texttt{npm install}}\\
 \\
-e
-\\
 \centerline{\texttt{npm start}}\\
 \\
-A questo punto il software è avviabile sulla porta \textit{localhost\ped{G}} indicata dal terminale.
+A questo punto il software è avviabile attraverso un \textit{browser\ped{G}} sulla porta \textit{localhost\ped{G}} indicata dal terminale.
 
 \subsection{Modalità di utilizzo}
 Vi sono tre modalità di utilizzo del software, ognuna delle quali ha differenti privilegi:
