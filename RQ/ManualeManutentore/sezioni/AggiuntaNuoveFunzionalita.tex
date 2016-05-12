@@ -1,0 +1,44 @@
+\section{Aggiunta di nuove funzionalità}
+Il software QuizziPedia è stato progettato e sviluppato seguendo il principio di estendibilità del codice. Pertanto è possibile aggiungere nuove classi, sia nella parte Front-End che Back-End, per lo sviluppo di nuove funzionalità.
+
+\subsection{Front-End}
+
+\subsubsection{Inserimento nuova view}
+Per inserire una nuova view è necessario creare un file .html all'interno della cartella View del path: QuizziPedia/Front-End/View. Se si decide di utilizzare la stessa metodologia dell'intero progetto per la visualizzazione della giusta traduzione delle parole chiave è indispensabile che il controller associato alla view sia \texttt{AppController} e che le keywords che saranno visualizzate a video siano del tipo: \texttt{$listOfKey.nomevariabile$}. Infine è necessario aggiornare il file \texttt{AppRouter} inserendo il codice:
+
+\begin{lstlisting}[language=Java,firstnumber=1]
+.when('/:lang/nuovaview', {
+templateUrl: '/Views/NuovaView.html',
+controller:"NuovaViewController",
+css: [
+{
+href: 'css/auth-main.css'
+},
+{
+href: 'css/auth-medium.css',
+media: 'handheld, screen and (max-width:960px), only screen and (max-device-width:960px)'
+},
+{
+href: 'css/auth-small.css',
+media: 'handheld, screen and (max-width:480px), only screen and (max-device-width:480px)'
+}
+]
+})
+\end{lstlisting}
+
+\subsubsection{Inserimento nuova directive}
+
+\subsubsection{Inserimento nuovo controller}  
+Per inserire un nuovo controller è necessario creare un file .js all'interno della cartella Controller del path: QuizziPedia/Front-End/Controller. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Controllers:
+\begin{lstlisting}[language=Java,firstnumber=1]
+	<script src="Controllers/NuovoController.js"></script>
+\end{lstlisting}
+
+\subsubsection{Inserimento nuovo service}
+
+\subsubsection{Inserimento nuovo model}
+
+\subsection{Back-End}
+
+nuovo controller dentro Controller -> creare un router e associarlo al controller: var QuizController = require('../Controller/QuizController.js');
+nuovo model dentro a Model -> associare il model appena creato al relativo controller
