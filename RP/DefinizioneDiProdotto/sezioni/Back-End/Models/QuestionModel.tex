@@ -73,7 +73,7 @@
 	\end{itemize}
 \item \textbf{Metodi}:
 	\begin{itemize}
-	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError)): void} \\
+	\item \texttt{+ createQuestion(question: JSON, callback: function(JSON)): void} \\
 	Metodo che permette la creazione di una nuova domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -81,10 +81,8 @@
 			Rappresenta le informazioni che andranno a comporre la domanda da creare;
 			\item \texttt{callback: function(JSON)} \\
 			Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
-			\item \texttt{errback: function(QuizziPediaError)} \\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 		\end{itemize}   
-	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON),\\ errback: function(QuizziPediaError)): void} \\
+	\item \texttt{+ editQuestion(question: JSON, callback: function(JSON)): void} \\
 	Metodo che permette di modificare una domanda già esistente. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -92,8 +90,6 @@
 			Rappresenta le nuove informazioni che andranno a modificare le informazioni precedenti di una specifica domanda;
 			\item \texttt{callback: function(JSON)} \\
 			Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso non si verifichino errori durante l'esecuzione;
-			\item \texttt{errback: function(QuizziPediaError)} \\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 		\end{itemize}
 	\item \texttt{+ getQuestions(author:ObjectId, callback: function(JSON)): void} \\
 	Metodo che permette di ottenere una lista domanda già esistente in relazione ad un autore predefinito. \\
@@ -128,7 +124,7 @@
 			Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso non si verifichino errori durante l'esecuzione;
 		\end{itemize}	
 		
-	\item \texttt{+ addKeyword(keyword: String, callback: function(JSON),\\ errback: function(QuizziPediaError)): void} \\
+	\item \texttt{+ addKeyword(keyword: String, callback: function(JSON)): void} \\
 	Metodo che permette di aggiungere delle parole chiave ad una specifica domanda. \\
 		\textbf{Parametri}:
 			 \begin{itemize}
@@ -136,8 +132,6 @@
 			 	Rappresenta la parola chiave da inserire;
 			 	\item \texttt{callback: function(JSON)} \\
 			 	Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso si verifichino errori durante l'esecuzione;
-			 	\item \texttt{errback: function(QuizziPediaError)} \\
-			 	Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
 			 \end{itemize}
 	\item \texttt{+ updateLevel(userLevel: Number, isCorrected: boolean): void} \\
 	Metodo che permette di aggiornare il livello di difficoltà della domanda, questo metodo è chiamato ogni qualvolta un utente risponde ad una domanda durante un allenamento.\\
@@ -148,16 +142,23 @@
 				\item \texttt{isCorrected: boolean} \\
 				Indica se l'utente che ha risposto alla domanda ha risposto correttamente.
 			\end{itemize}  
-	\item \texttt{- addCorrect(): void} \\
+	\item \texttt{- addCorrect(questionId: ObjectId[], callback: function(JSON)): void} \\
 	Metodo che permette di incrementare il contatore di risposte corrette di una determinata domanda;
-	\item \texttt{- addTotal(): void} \\
+		\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionId: ObjectId[]} \\
+					Rappresenta un'array di riferimenti delle domande passate;
+				\item \texttt{callback: function(JSON)} \\
+					Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso si verifichino errori durante l'esecuzione;
+			\end{itemize}
+	\item \texttt{- addTotal(questionId: ObjectId[], callback: function(JSON)): void} \\
 	Metodo che permette di incrementare il contatore delle risposte date di una determinata domanda;
-	\item \texttt{+ getQuestions(userID: ObjectId): Array<QuestionModel>}\\
-	Metodo che ritorna tutte le domande create da un utente.\\
-	\textbf{Parametri:}
-	\begin{itemize}
-		\item \texttt{userID: ObjectId}\\
-		Rappresenta l'identificativo dell'utente del quale si vogliono ritornare le domande.
-	\end{itemize}
+		\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{questionId: ObjectId[]} \\
+				Rappresenta un'array di riferimenti delle domande passate;
+				\item \texttt{callback: function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione del metodo in caso si verifichino errori durante l'esecuzione;
+			\end{itemize}
 	\end{itemize}
 \end{itemize}
