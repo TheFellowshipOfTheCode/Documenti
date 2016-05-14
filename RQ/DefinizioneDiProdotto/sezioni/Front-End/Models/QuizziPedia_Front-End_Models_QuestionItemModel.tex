@@ -125,12 +125,12 @@
 					Questo parametro rappresenta l'oggetto \textit{JSON\ped{G}} contenente le parti che compongono la totalità della domanda.
 				\end{itemize}
 				
-				\item \texttt{+ setId(id: ObjectId): void} \\
-				Metodo \textit{setter\ped{G}} per il campo dati \texttt{id}\\
+				\item \texttt{+ setKeywords(keyword: Array<String>): void} \\
+				Metodo \textit{setter\ped{G}} per le keywords della domanda.\\
 				\textbf{Parametri}:
 				\begin{itemize}
-					\item {id: ObjectId}\\
-					Questo parametro rappresenta l'id della domanda.
+					\item {keyword: Array<String>}\\
+					Questo parametro contiene le keywords della domanda. 
 				\end{itemize}
 				
 				\item \texttt{+ getAuthor(): String} \\
@@ -147,6 +147,9 @@
 				
 				\item \texttt{+ getId(): ObjectId} \\
 				Metodo \textit{getter\ped{G}} per il campo dati \texttt{id};
+				
+				\item \texttt{+ getKeywords(): Array<String>} \\
+				Metodo \textit{getter\ped{G}} che restituisce il campo dati \texttt{keywords};
 				
 				\item \texttt{+ compareAnswers(givenAnswers: Array<JSON>): Array<JSON>} \\
 				Metodo che compara le risposte date con quelle corrette. Ritorna un array contenente un valore booleano, che indica se è giusta o meno una domanda, per ogni pezzo di domanda che compone la domanda. \\

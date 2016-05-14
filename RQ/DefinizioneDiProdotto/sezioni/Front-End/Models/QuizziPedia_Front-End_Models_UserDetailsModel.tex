@@ -120,20 +120,20 @@
 					Questo parametro contiene il livello dell'utente.
 				\end{itemize}
 				
-				\item \texttt{+ setId(id: Object): void} \\
-				Metodo \textit{setter\ped{G}} per il campo dati \texttt{id}.\\
-				\textbf{Parametri}:
-				\begin{itemize}
-					\item {id: ObjectId}\\
-					Questo parametro contiene l'id dell'utente.
-				\end{itemize}
-				
 				\item \texttt{+ setPrivilege(privilege: Number): void} \\
 				Metodo \textit{setter\ped{G}} per il campo dati \texttt{privilege}.\\
 				\textbf{Parametri}:
 				\begin{itemize}
 					\item {privilege: Number}\\
 					Questo parametro rappresenta la tipologia di utente.
+				\end{itemize}
+				
+				\item \texttt{+ setLevelByTopic(topic: String): void} \\
+				Metodo \textit{setter\ped{G}} per settare il livello ad un particolare topic.\\
+				\textbf{Parametri}:
+				\begin{itemize}
+					\item {topic: String}\\
+					Questo parametro rappresenta il topic.
 				\end{itemize}
 				
 				\item \texttt{+ getName(): String} \\
@@ -162,6 +162,15 @@
 				
 				\item \texttt{+ getUserImg(): String} \\
 				Metodo \textit{getter\ped{G}} che restituisce il campo dati \texttt{userImg};
+				
+				\item \texttt{+ getLevelByTopic(topic: String): void} \\
+				Metodo \textit{getter\ped{G}} per ottenere il livello ad un particolare topic.\\
+				\textbf{Parametri}:
+				\begin{itemize}
+					\item {topic: String}\\
+					Questo parametro rappresenta il topic.
+				\end{itemize}
+				
 				
 			\end{itemize}
 		\end{itemize}	
