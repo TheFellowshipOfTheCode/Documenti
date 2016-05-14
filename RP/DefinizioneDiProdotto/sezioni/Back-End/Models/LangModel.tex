@@ -41,10 +41,12 @@
 						\item \texttt{callback: function(JSON)} \\
 						Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
 					\end{itemize}	
-				\item \texttt{+ getSlang(callback: function(JSON)): void} \\
+				\item \texttt{+ getSlang(llanguage:String,callback: function(JSON)): void} \\
 				Metodo che permette di ritornare un array di variabili che serviranno per la traduzione \\
 					\textbf{Parametri}:
 					\begin{itemize}
+							\item \texttt{language: String} \\
+							Rappresenta l'informazione che indica il set di traduzione da ritornare;
 							\item \texttt{callback: function(JSON)} \\
 							Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
 					\end{itemize}	
