@@ -22,12 +22,14 @@
 		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 		\item \texttt{-} \texttt{AuthService: AuthService} \\
 		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all'autenticazione. Viene utilizzato il metodo \texttt{logIn()} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{username} e \texttt{password};
-		\item \texttt{+} \texttt{user: LoginModelView} \\
-		Oggetto di tipo \texttt{LoginModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{LoginView} e il \textit{controller\ped{G}} \texttt{LoginController};
+		\item \texttt{+} \texttt{userLogged: UserDetailsModelView} \\
+		Oggetto di tipo \texttt{UserDetailsModelView}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra le \textit{views\ped{G}} e i \textit{controllers\ped{G}} che necessitano di utilizzare l'utente autenticato. Rappresenta nello \$rootScope un oggetto di tipo \texttt{UserDetailsModel}; \\
+		\item \texttt{+} \texttt{UserDetailsModel: UserDetailsModel} \\
+		Campo dati contenente un riferimento alla classe che rappresenta un utente. Contiene tutte le informazioni necessarie alla presentazione del contenuto di un utente sia nella visualizzazione che nella gestione di un profilo.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{LoginController(\$scope: \$scope, \$rootScope: \$rootScope, \$location:\\ \$location, \$mdDialog: \$mdDialog, AuthService: AuthService)} \\
+		\item \texttt{+} \texttt{LoginController(\$scope: \$scope, \$rootScope: \$rootScope, \$location:\\ \$location, \$mdDialog: \$mdDialog, AuthService: AuthService, ErrorInfoModel: ErrorInfoModel, UserDetailsModel: UserDetailsModel)} \\
 		Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 			\begin{itemize}
@@ -39,12 +41,15 @@
 				Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 				\item \texttt{AuthService: AuthService} \\
 				Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all'autenticazione. Viene utilizzato il metodo \texttt{logIn()} di \$texttt{AuthService} a cui vengono passati i parametri \texttt{email} e \texttt{password};
+				\item \texttt{ErrorInfoModel: ErrorInfoModel}: rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione;
+				\item \texttt{UserDetailsModel: UserDetailsModel} \\
+				Parametro contenente un riferimento alla classe che rappresenta un utente. Contiene tutte le informazioni necessarie alla presentazione del contenuto di un utente sia nella visualizzazione che nella gestione di un profilo.
 			\end{itemize}
 		\item \texttt{+} \texttt{logIn(email: String, password: String): void} \\
 		Metodo che richiama il metodo \texttt{signin} del service \texttt{AuthService} passandogli \texttt{email} e \texttt{password}. Nel caso di buona riuscita dell'operazione viene effettuato il redirect alla homepage dell'applicazione. Nel caso in cui invece avvenga un errore, viene mostrato a video il messaggio di errore;
 		\item \texttt{+} \texttt{signUp(): void} \\
 		Metodo che gestisce l'evento click sul pulsante di registrazione. Effettua il redirect alla pagina di registrazione;
-		\item \texttt{+} \texttt{recoveryPassword(): void} \\
+		\item \texttt{+} \texttt{goToPasswordForgotPage(): void} \\
 		Metodo che gestisce l'evento click sul pulsante di recupero password. Effettua il redirect alla pagina per il recupero della password; 
 	\end{itemize}
 \end{itemize}
