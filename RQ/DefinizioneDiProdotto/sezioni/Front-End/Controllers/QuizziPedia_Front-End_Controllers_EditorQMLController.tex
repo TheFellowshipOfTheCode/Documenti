@@ -32,11 +32,15 @@
 		\item \texttt{-} \texttt{\$routeParams: \$routeParams} \\
 		Campo dati contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 		\item \texttt{-} \texttt{ParserQML: ParserQML} \\
-		Campo dati che si riferisce alla classe che rappresenta il parser QML. Essa fa diventale un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa.
+		Campo dati che si riferisce alla classe che rappresenta il parser QML. Essa fa diventare un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa;
+		\item \texttt{-} \texttt{\$location: \$location} \\
+		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa; 
+		\item \texttt{-} \texttt{\$rootScope: \$rootScope} \\
+		Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{EditorQMLController(\$scope: \$scope, QuestionItemModel: \\QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: \\QuestionService, \$routeParams: \$routeParams, ParserQML: ParserQML)} \\ 
+		\item \texttt{+} \texttt{EditorQMLController(\$scope: \$scope, QuestionItemModel: \\QuestionItemModel, \$mdDialog: \$mdDialog, QuestionService: \\QuestionService, \$routeParams: \$routeParams, ParserQML: ParserQML, \$location: \$location, \$routeParams: \$routeParams, \$rootScope: \$rootScope)} \\ 
 		Metodo costruttore della classe. Se in \texttt{\$routeParams} sarà presente il codice univoco che rappresenta una domanda e di questa il creatore è l'utente autenticato, allora verrà scaricato attraverso il \texttt{QuestionService} il contenuto della domanda così da poterlo modificare in formato QML. In caso contrario verrà mostrato un errore attraverso \texttt{\$mdDialog} indicando che i privilegi per tale operazione sono negati. Nel caso in cui non ci sarà tale parametro in \texttt{\$routeParams} verrà caricata la \textit{view\ped{G}} vuota così da poter creare una nuova domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -51,10 +55,16 @@
 			\item \texttt{\$routeParams: \$routeParams} \\
 			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url; 
 			\item \texttt{ParserQML: ParserQML} \\
-			Parametro contenente un riferimento alla classe che rappresenta il parser QML. Essa fa diventale un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa.
+			Parametro contenente un riferimento alla classe che rappresenta il parser QML. Essa fa diventale un oggetto di tipo \texttt{QuestionItemModel} in linguaggio QML e viceversa;
+			\item \texttt{\$location: \$location} \\
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa; 
+			\item \texttt{\$rootScope: \$rootScope} \\
+			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}.
 		\end{itemize}
 		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
-		Metodo che gestisce l'evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal \textit{modelview\ped{G}}, li converte attraverso il parser QML, e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando.
+		Metodo che gestisce l'evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal \textit{modelview\ped{G}}, li converte attraverso il parser QML, e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando;
+		\item \texttt{+} \texttt{goToWizard(): void}\\ 
+		Metodo per essere reindirizzati alla pagina di creazione delle domande mediante procedure guidata.
 	\end{itemize}
 \end{itemize}
 
