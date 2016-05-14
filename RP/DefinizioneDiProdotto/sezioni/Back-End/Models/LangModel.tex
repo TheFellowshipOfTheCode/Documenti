@@ -25,7 +25,7 @@
 			\end{itemize}
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item \texttt{+ getVarlist(lang: String, callback: function(JSON), \\ errback: function(QuizziPediaError)): void} \\
+				\item \texttt{+ getVarlist(lang: String, callback: function(JSON)): void} \\
 				Metodo che permette di ritornare la traduzione delle variabili. \\
 				\textbf{Parametri}:
 					\begin{itemize}
@@ -33,9 +33,21 @@
 						Rappresenta l'informazione che indica il set di traduzione da ritornare;
 						\item \texttt{callback: function(JSON)} \\
 						Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
-						\item \texttt{errback: function(QuizziPediaError)} \\
-						Rappresenta la \textit{callback\ped{G}} che verrà eseguito al termine dell'elaborazione nel caso si verifichino errori durante l'esecuzione del metodo.
 					\end{itemize}
+				\item \texttt{+ getLang(callback: function(JSON)): void} \\
+				Metodo che permette di ritornare un array di variabili che serviranno per la traduzione \\
+					\textbf{Parametri}:
+					\begin{itemize}
+						\item \texttt{callback: function(JSON)} \\
+						Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
+					\end{itemize}	
+				\item \texttt{+ getSlang(callback: function(JSON)): void} \\
+				Metodo che permette di ritornare un array di variabili che serviranno per la traduzione \\
+					\textbf{Parametri}:
+					\begin{itemize}
+							\item \texttt{callback: function(JSON)} \\
+							Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione nel caso non si verifichino errori durante l'esecuzione;
+					\end{itemize}	
 			\end{itemize}
 	\end{itemize}
 	
