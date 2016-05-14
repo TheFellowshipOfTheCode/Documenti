@@ -1,0 +1,161 @@
+\newpage
+\section{Qualità di prodotto}
+Per garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha individuato dallo standard \textit{ISO/IEC 9126\ped{G}} le qualità che ritiene più importanti nell'arco del ciclo di vita del prodotto e le ha istanziate individuando obiettivi e metriche coerenti con i livelli di qualità perseguiti.
+
+\subsection{Funzionalità (6.1)}
+Rappresenta la capacità del prodotto di fornire tutte le funzioni che sono state individuate attraverso l'\textit{\AdR}
+\subsubsection{Obiettivi di qualità}
+Il \textit{team\ped{G}} si impegnerà affinché:
+\begin{itemize}
+\item \textbf{Adeguatezza (6.1.1)}: le funzionalità fornite siano conformi rispetto le aspettative;
+\item \textbf{Accuratezza (6.1.2)}: il prodotto fornisca i risultati attesi, con il livello di dettaglio richiesto;
+\item \textbf{Sicurezza (6.1.4)}: il prodotto protegga le informazioni e i dati da accessi e modifiche non autorizzati.
+\end{itemize}
+\subsubsection{Metriche}
+\paragraph{Completezza dell'implementazione funzionale}
+Indica la percentuale di requisiti funzionali coperti dall'implementazione.
+\begin{itemize}
+\item \textbf{Misurazione}: $C=(1-\frac{N_{FM}}{N_{FI}}) \cdot 100$, dove $N_{FM}$ è il numero di funzionalità mancanti nell'implementazione e $N_{FI}$ è il numero di funzionalità individuate nell'attività di analisi;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $100$.
+\end{itemize}
+\paragraph{Accuratezza rispetto alle attese}
+Indica la percentuale di risultati concordi alle attese.
+\begin{itemize}
+\item \textbf{Misurazione}: $A=(1-\frac{N_{RD}}{N_{TE}}) \cdot 100$, dove $N_{RD}$ è il numero di test che producono risultati discordanti rispetto alle attese e $N_{TE}$ è il numero di test-case eseguiti;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $90 - 100$.
+\end{itemize}
+\paragraph{Controllo degli accessi}
+Indica la percentuale di operazioni illegali non bloccate.
+\begin{itemize}
+\item \textbf{Misurazione}: $I=\frac{N_{IE}}{N_{II}} \cdot 100$, dove $N_{IE}$ è il numero di operazioni illegali effettuabili dai test e $N_{II}$ è il numero di operazioni illegali individuate;
+\item \textbf{Range-ottimale}: $0$;
+\item \textbf{Range-accettazione}: $0 - 10$.
+\end{itemize}
+
+
+\subsection{Affidabilità (6.2)}
+Rappresenta la capacità del prodotto software di svolgere correttamente le sue funzioni durante il suo utilizzo, anche nel caso in cui si presentino situazioni anomale.
+\subsubsection{Obiettivi di qualità}
+L'esecuzione del prodotto dovrà presentare le seguenti caratteristiche:
+\begin{itemize}
+\item \textbf{Maturità (6.2.1)}: evitare che si verifichino malfunzionamenti, operazioni illegali e restituzione di risultati errati (failure) in seguito a fault;
+\item \textbf{Tolleranza agli errori (6.2.2)}: nel caso in cui si presentino degli errori, dovuti a guasti o ad un uso scorretto dell'applicativo, questi devono essere gestiti in modo da mantenere alto il livello di prestazione.
+\end{itemize}
+\subsubsection{Metriche}
+\paragraph{Densità di failure}
+Indica la percentuale di operazioni di testing che si sono concluse in failure.
+\begin{itemize}
+\item \textbf{Misurazione}: $F=\frac{N_{FR}}{N_{TE}} \cdot 100$, dove $N_{FR}$ è il numero di failure rilevati durante l'attività di testing e $N_{TE}$ è il numero di test-case eseguiti;
+\item \textbf{Range-ottimale}: $0$;
+\item \textbf{Range-accettazione}: $0 - 10$.
+\end{itemize}
+\paragraph{Blocco di operazioni non corrette}
+Indica la percentuale di funzionalità in grado di gestire correttamente i fault che potrebbero verificarsi.
+\begin{itemize}
+\item \textbf{Misurazione}: $B=\frac{N_{FE}}{N_{ON}} \cdot 100$, dove $N_{FE}$ è il numero di failure evitati durante i test effettuati e $N_{ON}$ è il numero di test-case eseguiti che prevedono l'esecuzione di operazioni non corrette, causa di possibili failure;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $80 - 100$.
+\end{itemize}
+
+\subsection{Usabilità (6.3)}
+Rappresenta la capacità del prodotto di essere facilmente comprensibile e attraente in ogni sua parte per qualsiasi utente che lo andrà ad utilizzare.
+\subsubsection{Obiettivi di qualità}
+Il prodotto dovrà puntare ai seguenti obiettivi di usabilità:
+\begin{itemize}
+\item \textbf{Comprensibilità (6.3.1)}: l'utente deve essere in grado di riconoscerne le funzionalità offerte dal software e deve comprenderne le modalità di utilizzo per riuscire a raggiungere i risultati attesi;
+\item \textbf{Apprendibilità (6.3.2)}: deve essere data la possibilità all'utente di imparare ad utilizzare l'applicazione senza troppo impegno;
+\item \textbf{Operabilità (6.3.3)}: le funzionalità presenti devono essere coerenti con le aspettative dell'utente;
+\item \textbf{Attrattiva (6.3.4)}: il software deve essere piacevole per chi ne fa uso.
+\end{itemize}
+\subsubsection{Metriche}
+\paragraph{Comprensibilità delle funzioni offerte}
+Indica la percentuale di operazioni comprese in modo immediato dall'utente, senza la consultazione del manuale.
+\begin{itemize}
+\item \textbf{Misurazione}: $C=\frac{N_{FC}}{N_{FO}} \cdot 100$, dove $N_{FC}$ è il numero di funzionalità comprese in modo immediato dall'utente durante l'attività di testing del prodotto e $N_{FO}$ è il numero di funzionalità offerte dal sistema;
+\item \textbf{Range-ottimale}: $90 - 100$;
+\item \textbf{Range-accettazione}: $80 - 100$.
+\end{itemize}
+\paragraph{Facilità di apprendimento delle funzionalità}
+Indica il tempo medio impiegato dall'utente nell'imparare ad usare correttamente una data funzionalità.
+\begin{itemize}
+\item \textbf{Misurazione}: indicatore numerico, espresso in minuti  che tiene traccia del tempo medio impiegato dall'utente nell'apprendere il corretto utilizzo di una funzionalità offerta dal sistema;
+\item \textbf{Range-ottimale}: $0 - 15$;
+\item \textbf{Range-accettazione}: $0 - 30$.
+\end{itemize}
+\paragraph{Consistenza operazionale in uso}
+Indica la percentuale di messaggi e funzionalità offerte all'utente che rispettano le sue aspettative riguardo al comportamento del software.
+\begin{itemize}
+\item \textbf{Misurazione}: $C=(1-\frac{N_{MFI}}{N_{MFO}}) \cdot 100$, dove $N_{MFI}$ è il numero di messaggi e funzionalità che non rispettano le aspettative dell'utente e $N_{MFO}$ è il numero di messaggi e funzionalità offerti dal sistema;
+\item \textbf{Range-ottimale}: $90 - 100$;
+\item \textbf{Range-accettazione}: $80 - 100$.
+\end{itemize}
+
+\subsection{Efficienza (6.4)}
+\label{efficienza}
+Rappresenta la capacità di eseguire le funzionalità offerte dal software nel minor tempo possibile utilizzando al tempo stesso il minor numero di risorse possibili.
+\subsubsection{Obiettivi di qualità}
+Il prodotto dovrà essere efficiente, in particolare:
+\begin{itemize}
+\item \textbf{Comportamento rispetto al tempo (6.4.1)}:  per svolgere le sue funzioni il software deve fornire adeguati tempi di risposta ed elaborazione;
+\item \textbf{Utilizzo delle risorse (6.4.2)}: il software quando esegue le sue funzionalità deve utilizzare un appropriato numero e tipo di risorse.
+\end{itemize}
+\subsubsection{Metriche}
+\paragraph{Tempo di risposta}
+Indica il periodo temporale medio che intercorre fra la richiesta al software di una determinata funzionalità e la restituzione del risultato all'utente.
+\begin{itemize}
+\item \textbf{Misurazione}: $T_{RISP} = \frac{\sum_{i=1}^{n} T_{i}}{n}$ (con $T_{RISP}$ espresso in \textit{secondi}) dove $T_{i}$ è il tempo intercorso fra la richiesta $i$ di una funzionalità ed il completamento delle operazioni necessarie a restituire un risultato a tale richiesta;
+\item \textbf{Range-ottimale}: $0 - 3$;
+\item \textbf{Range-accettazione}: $0 - 8$.
+\end{itemize}
+
+\subsection{Manutenibilità (6.5)}
+Rappresenta la capacità del prodotto di essere modificato, tramite correzioni, miglioramenti o adattamenti del software a cambiamenti negli ambienti, nei requisiti e nelle specifiche funzionali.
+\subsubsection{Obiettivi di qualità}
+Le operazioni di manutenzione andranno agevolate il più possibile adottando le seguenti caratteristiche:
+\begin{itemize}
+\item \textbf{Analizzabilità (6.5.1)}: il software deve consentire una rapida identificazione delle possibili cause di errori e malfunzionamenti;
+\item \textbf{Modificabilità (6.5.2)}: il prodotto originale deve permettere eventuali cambiamenti in alcune sue parti;
+\item \textbf{Stabilità (6.5.3)}: non devono insorgere effetti indesiderati in seguito a modifiche effettuate sul software;
+\item \textbf{Testabilità (6.5.4)}: il software deve poter essere facilmente testato per validare le modifiche effettuate.
+\end{itemize}
+\subsubsection{Metriche}
+\paragraph{Capacità di analisi di failure}
+Indica la percentuale di failure registrate, delle quali sono state individuate le cause.
+\begin{itemize}
+\item \textbf{Misurazione}: $I=\frac{N_{FI}}{N_{FR}} \cdot 100$, dove $N_{FI}$ è il numero di failure delle quali sono state individuate le cause e $N_{FR}$ è il numero di failure rilevate;
+\item \textbf{Range-ottimale}: $80 - 100$;
+\item \textbf{Range-accettazione}: $60 - 100$.
+\end{itemize}
+\paragraph{Impatto delle modifiche}
+Indica la percentuale di modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema.
+\begin{itemize}
+\item \textbf{Misurazione}: $I=\frac{N_{FRF}}{N_{FR}} \cdot 100$, dove $N_{FRF}$ è il numero di failure risolte con l'introduzione di nuove failure e $N_{FR}$ è il numero di failure risolte;
+\item \textbf{Range-ottimale}: $0 - 10$;
+\item \textbf{Range-accettazione}: $0 - 20$.
+\end{itemize}
+
+\subsection{Portabilità (6.6)}
+Rappresenta la capacità del software di poter essere utilizzato su diversi ambienti.
+\subsubsection{Obiettivi di qualità}
+Sarà agevolata la portabilità del prodotto adottando i seguenti obiettivi:
+\begin{itemize}
+\item \textbf{Adattabilità (6.6.1)}: il prodotto deve adattarsi a tutti quegli ambienti di lavoro nei quali è stato previsto un suo utilizzo, senza dover apportare modifiche allo stesso;
+\item \textbf{Sostituibilità (6.6.4)}: l'applicativo deve poter sostituire un altro software che ha lo stesso scopo e lavora nel medesimo ambiente.
+\end{itemize}
+\subsubsection{Metriche}
+\paragraph{Versioni dei browser supportate}
+Indica la percentuale di versioni di \textit{browser\ped{G}} attualmente supportate, fra quelle individuate dai requisiti.
+\begin{itemize}
+\item \textbf{Misurazione}: $S=\frac{N_{VS}}{N_{VI}} \cdot 100$, dove $N_{VS}$ è il numero di versioni di \textit{browser\ped{G}} supportate dal prodotto e $N_{VI}$ è il numero di versioni di \textit{browser\ped{G}} che devono essere supportate dal prodotto;
+\item \textbf{Range-ottimale}: $100$;
+\item \textbf{Range-accettazione}: $100$.
+\end{itemize}
+\paragraph{Inclusione di funzionalità da altri prodotti}
+Indica la percentuale di funzionalità del software utilizzato in precedenza dall'utente che produce risultati simili a quelli ottenuti dal prodotto in oggetto.
+\begin{itemize}
+\item \textbf{Misurazione}: $I=\frac{N_{FPA}}{N_{FPP}} \cdot 100$, dove $N_{FPA}$ è il numero di funzionalità del software utilizzato in precedenza dall'utente che produce risultati simili a quelli ottenuti dal prodotto in oggetto e $N_{FPP}$ è il numero di funzionalità offerte dal software utilizzato in precedenza dall'utente;
+\item \textbf{Range-ottimale}: $90 - 100$;
+\item \textbf{Range-accettazione}: $80 - 100$.
+\end{itemize}
