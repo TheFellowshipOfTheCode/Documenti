@@ -20,17 +20,21 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{HomeController(\$scope: \$scope, \$location: \$location)} \\
+		\item \texttt{+} \texttt{HomeController(\$scope: \$scope, \$location: \$location, \$routeParams: \$routeParams)} \\
 		Metodo costruttore della classe: \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
 			Parametro contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il viewmodel e il \textit{model\ped{G}} dell'applicazione;
 			\item \texttt{\$location: \$location} \\
-			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa.
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+			\item \texttt{\$routeParams: \$routeParams} \\
+			Parametro contenente il riferimento all'oggetto globale \$routeParams creato da \textit{Angular\ped{G}}. Tale servizio permette di recuperare il set di variabili presenti nell'url.
 		\end{itemize}
 		\item \texttt{+} \texttt{trainingMode(): void} \\
-		Metodo che gestisce l’evento click sul pulsante di allenamento. Effettua il redirect alla pagina di allenamento.
+		Metodo che gestisce l’evento click sul pulsante di allenamento. Effettua il redirect alla pagina di allenamento;
+		\item \texttt{+} \texttt{search(): void} \\
+		Metodo che gestisce l’evento click sul pulsante di ricerca. Effettua il redirect alla pagina di ricerca passando come parametro la stringa digitata.
 	\end{itemize}
 \end{itemize}
 
