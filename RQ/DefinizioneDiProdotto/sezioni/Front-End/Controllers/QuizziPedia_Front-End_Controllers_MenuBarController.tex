@@ -26,11 +26,15 @@
 		\item \texttt{-} \texttt{AuthService: AuthService} \\
 		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all'autenticazione;
 		\item \texttt{-} \texttt{menuBarModel: MenuBarModel}: \\
-		Campo dati contenente un riferimento all'oggetto che contiene le informazioni per la giusta visualizzazione della barra.
+		Campo dati contenente un riferimento all'oggetto che contiene le informazioni per la giusta visualizzazione della barra;
+		\item \rootscopeA;
+		\item \errorinfomodelA;
+		\item \userdetailsmodelA;
+		\item \mdBottomSheetA;
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{MenuBarController(\$scope: \$scope, \$location: \$location, \\ \$mdDialog:  \$mdDialog, AuthService: AuthService, MenuBarModel: MenuBarModel)} \\
+		\item \texttt{+} \texttt{MenuBarController(\$scope: \$scope, \$location: \$location, \\ \$mdDialog:  \$mdDialog, AuthService: AuthService, MenuBarModel: MenuBarModel, ErrorInfoModel, UserDetailsModel, \$mdBottomSheet, \$rootScope: \$rootScope)} \\
 		Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -45,7 +49,11 @@
 			\item \texttt{AuthService: AuthService} \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate all'autenticazione.  Viene utilizzato il metodo \texttt{logOut} di \$texttt{AuthService} a cui viene passato il parametro \texttt{username};
 			\item \texttt{MenuBarModel: MenuBarModel}: \\
-			Parametro contenente un riferimento all'oggetto che contiene le informazioni per la giusta visualizzazione della barra.
+			Parametro contenente un riferimento all'oggetto che contiene le informazioni per la giusta visualizzazione della barra;
+			\item \rootscopeP;
+			\item \errorinfomodelP;
+			\item \userdetailsmodelP;
+			\item \mdBottomSheetP;
 		\end{itemize}
 		\item \texttt{+} \texttt{logOut(): void} \\
 		Metodo che richiama il metodo \texttt{logOut} del service \texttt{AuthService} passandogli lo \texttt{username}. Prima di effettuare questa operazione viene mostrato a video un messaggio di conferma per il proseguo dell'operazione; 
@@ -68,6 +76,18 @@
 			\item \texttt{'\$routeChangeStart': String}	\\ Servizio offerto da \textit{Angular.js\ped{G}} per catturare gli eventi sulla barra degli URL;
 			\item \texttt{callback: function}	\\ Funzione di callback per gestire i cambiamenti della barra degli indirizzi.
 		\end{itemize}
+		\item \texttt{+} \texttt{backToHome(): void} \\
+		Metodo che gestisce l'evento per effettuare il redirect alla pagina principale dell'applicazione; 
+		\item \texttt{+} \texttt{showListBottomSheet(): void} \\
+		Metodo che gestisce l'evento per mostrare il menù a tendina per scegliere con quale lingua cambiare l'intera applicazione; 
+		\item \texttt{+} \texttt{isOpenRight(): void} \\
+		Metodo che gestisce l'evento per aprire e chiudere la barra di menù dell'applicazione principale; 
+		\item \texttt{-} \texttt{debounce(func: Object, wait: Object, context: Object): void} \\
+		Metodo ausiliario che gestisce l'evento per aprire e chiudere la barra di menù dell'applicazione principale; 
+		\item \texttt{-} \texttt{buildDelayedToggler(navID: Object): void} \\
+		Metodo ausiliario che gestisce l'evento per aprire e chiudere la barra di menù dell'applicazione principale; 
+		\item \texttt{-} \texttt{buildToggler(navID: Object): void} \\
+		Metodo ausiliario che gestisce l'evento per aprire e chiudere la barra di menù dell'applicazione principale;
 	\end{itemize}
 	
 \end{itemize}

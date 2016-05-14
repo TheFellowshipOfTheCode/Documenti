@@ -21,11 +21,12 @@
 		\item \texttt{-} \texttt{LangService: LangService} \\
 		Campo dati contenente un riferimento alla classe che permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 		\item \texttt{-} \texttt{\$mdBottomSheet: \$mdBottomSheet}: \\
-		Servizio offerto dalla libreria \texttt{Angular Material} che permette di aprire una tendina a scorrimento sopra la vista principale per mostrare un set di bottoni. Implementa le \texttt{promise}. In \textit{QuizziPedia} serve per poter scegliere la lingua con sui visualizzare l'applicazione.
+		Servizio offerto dalla libreria \texttt{Angular Material} che permette di aprire una tendina a scorrimento sopra la vista principale per mostrare un set di bottoni. Implementa le \texttt{promise}. In \textit{QuizziPedia} serve per poter scegliere la lingua con sui visualizzare l'applicazione;
+		\item \scopeA.
 	\end{itemize}	
 		\item \textbf{Metodi}:
 		\begin{itemize}
-		\item \texttt{+} \texttt{LangController(\$rootScope: \$rootScope, \$location: \$location, LangService: LangService, \$mdBottomSheet: \$mdBottomSheet)} \\ Metodo costruttore della classe.\\
+		\item \texttt{+} \texttt{LangController(\$rootScope: \$rootScope, \$location: \$location, LangService: LangService, \$mdBottomSheet: \$mdBottomSheet, \$scope: \$scope)} \\ Metodo costruttore della classe.\\
 		\textbf{Parametri}: 
 		\begin{itemize}
 			\item \texttt{\$rootScope: \$rootScope} \\
@@ -35,7 +36,8 @@
 			\item \texttt{LangService: LangService} \\
 			Parametro contenente un riferimento alla classe che permette di gestire la lingua nella quale si è scelto di utilizzare l'applicazione;
 			\item \texttt{\$mdBottomSheet: \$mdBottomSheet}: \\
-			Parametro contenente un riferimento al servizio offerto dalla libreria \texttt{Angular Material} che permette di aprire una tendina a scorrimento sopra la vista principale per mostrare un set di bottoni. Implementa le \texttt{promise}. In \textit{QuizziPedia} serve per poter scegliere la lingua con sui visualizzare l'applicazione.
+			Parametro contenente un riferimento al servizio offerto dalla libreria \texttt{Angular Material} che permette di aprire una tendina a scorrimento sopra la vista principale per mostrare un set di bottoni. Implementa le \texttt{promise}. In \textit{QuizziPedia} serve per poter scegliere la lingua con sui visualizzare l'applicazione;
+			\item \scopeP.
 		\end{itemize}
 		\item \texttt{-} \texttt{goToNewLang(lang: String): void} \\ Metodo che permette di cambiare lingua al sistema con una chiamata a \texttt{LangService}.\\
 		\textbf{Parametri}:
