@@ -1,0 +1,27 @@
+\paragraph[QuizziPedia::Front-End::QML::jsonlint]{QuizziPedia::Front-End::QML::jsonlint}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.32]{UML/Classi/Front-End/QuizziPedia_Front-end_QML_jsonlint.png}
+	\caption{QuizziPedia::Front-End::QML::jsonlint}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe implementa il \textit{parser\ped{G}} per il controllo della grammatica del \textit{QML\ped{G}};
+	\item \textbf{Utilizzo}: fornisce le funzionalità per controllare la validità sintattica del codice \textit{QML\ped{G}};
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN} \texttt{EditorQMLview}: \textit{view\ped{G}} contenente l'\textit{editor\ped{G}} \textit{QML\ped{G}} per la creazione di domande personalizzate,
+		permette ad un utente di creare domande personalizzate attraverso la scrittura del codice \textit{QML\ped{G}} direttamente nell'\textit{editor\ped{G}} di testo presente nella \textit{view\ped{G}};
+		\item \textbf{OUT} \texttt{CheckQML} : questa classe contiene i metodi per controllare la validità semantica del codice \textit{QML\ped{G}}.
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{jsonlint(body : String)} \\ 
+		Questo metodo controlla la validità sintattica del codice \textit{QML\ped{G}}, fa uso della classe \texttt{json2} messa a disposizione dalla libreria \textit{JISON\ped{G}}. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{body : String} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+

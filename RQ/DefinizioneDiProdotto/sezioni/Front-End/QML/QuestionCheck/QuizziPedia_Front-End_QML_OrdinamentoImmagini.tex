@@ -1,0 +1,26 @@
+\paragraph[QuizziPedia::Front-End::QML:: \\ QuestionCheck::OrdinamentoImmagini]{QuizziPedia::Front-End::QML::QuestionCheck::OrdinamentoImmagini}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.32]{UML/Classi/Front-End/QuizziPedia_Front-end_QML_QuestionCheck_OrdinamentoImmagini.png}
+	\caption{QuizziPedia::Front-End::QML::QuestionCheck::OrdinamentoImmagini}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe implementa il metodo che permette di controllare la validità semantica del codice \textit{QML\ped{G}} relativo alla tipologia di domanda "OrdinamentoImmagini";
+	\item \textbf{Utilizzo}: usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "OrdinamentoImmagini";
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN} \texttt{CheckQML}: classe che fornisce le funzionalità per controllare la validità semantica del codice \textit{QML\ped{G}}.
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{ordinamentoImmagini(req : JSON, res : JSON)} \\
+		Questo metodo permette di controllare la semantica del codice \textit{QML\ped{G}}, restituisce un JSON con la domanda valida oppure un JSON contenente un messaggio d'errore. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo e sintatticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
