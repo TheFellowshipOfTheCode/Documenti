@@ -28,7 +28,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{CreateQuestionnaireController(\$scope: \$scope, \$rootscope: \$rootscope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\ Metodo costruttore della classe. \\
+		\item \texttt{+} \texttt{CreateQuestionnaireController(\$scope: \$scope, \$rootscope: \$rootscope, \$mdDialog: \$mdDialog, QuizService: QuizService, filterFilter: filterFilter, ErrorInfoModel: ErrorInfoModel)}: \\ Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{-} \texttt{\$scope: \$scope} \\
@@ -37,13 +37,13 @@
 				Campo dati contenente il riferimento all'oggetto globale \$rootScope creato da \textit{Angular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{QuestionnaireModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getQuestiontionnaire} e la lista dei questionari ottenuta dalla chiamata \texttt{getQuestionnairePreview};
 			\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 			Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
-			\item \texttt{-} \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz.
+			\item \texttt{-} \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz;
+			\item \texttt{-} \texttt{ErrorInfoModel: ErrorInfoModel}: rappresenta le informazioni di un errore che si è verificato eseguendo una determinata operazione;
+			\item \texttt{-} \texttt{filterFilter: filterFilter}: servizio offerto da \texttt{Angular} per effettuare dei filtri.
 		\end{itemize}
-		\item \texttt{+} \texttt{createQuestionnaire(title: String, quiz: QuestionnaireModel): void}: \\Metodo che permette di inserire un questionario nel database tramite richiesta al service. \\
+		\item \texttt{+} \texttt{createQuestionnaire(quiz: QuestionnaireModelView): void}: \\Metodo che permette di inserire un questionario nel database tramite richiesta al service. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item 
-				\texttt{title: String}: parametro che rappresenta il titolo del questionario;
 				\item
 				\texttt{quiz: QuestionnaireModel}: parametro che rappresenta l'oggetto questionario.
 			\end{itemize}
@@ -68,19 +68,46 @@
 			\item
 			\texttt{quizId: String}: identificativo del questionario da eliminare.
 		\end{itemize}
-		\item \texttt{+} \texttt{getQuestions(): String<>} \\
-		Metodo che permette di ottenere la lista di tutte le domande;
+		\item \texttt{+} \texttt{showAllQuestions(topic: String, keyword: String): void} \\
+		Metodo che permette di ottenere la lista di tutte le domande ed inserirle nello \$scope nell'oggetto di tipo \texttt{CreateQuestionnaireModelView}.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{topic: String}: parametro che indica l'argomento scelto;
+			\item \texttt{keyword: String}: parametro che indica la parola chiave scelta.
+		\end{itemize}
 		\item \texttt{+} \texttt{getQuestion(questionId: String): QuestionItemModel} \\
 		Metodo che ritorna l'intera domanda selezionata.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
 		\end{itemize}
-		\item \texttt{+} \texttt{addQuestion(questionId: String) : void} \\
+		\item \texttt{+} \texttt{addQuestion(question: String) : void} \\
 		Metodo che permette di inserire una domanda nel questionario.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{questionId: String}: parametro che indica l'identificativo univoco di una domanda.
+			\item \texttt{question: String}: parametro che indica l'identificativo univoco di una domanda.
+		\end{itemize}
+		\item \texttt{+} \texttt{deleteQuestion(question: String) : void} \\
+		Metodo che permette di rimuovere una domanda nel questionario.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{question: String}: parametro che indica l'identificativo univoco di una domanda.
+		\end{itemize}
+		\item \texttt{+} \texttt{createQMLQuestion(question: String) : void} \\
+		Metodo che permette di posizionarsi nella pagina dell'editor QML;\\
+		\item \texttt{+} \texttt{filterByYours(question: String) : QuestionItemModelView} \\
+		Metodo che permette di rimuovere una domanda nel questionario.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{question: String}: parametro che la domanda da filtrare.
+		\end{itemize}
+		\item \texttt{+} \texttt{resetFilters() : void} \\
+		Metodo che permette di resettare i filtri finora settati;\\
+		\item \texttt{+} \texttt{noFilter(filterObj: Array<Boolean>) : QuestionItemModelView} \\
+		Metodo che permette di filtrare un array.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{filterObj: Array<Boolean>}: parametro contenente un array di boolean.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
