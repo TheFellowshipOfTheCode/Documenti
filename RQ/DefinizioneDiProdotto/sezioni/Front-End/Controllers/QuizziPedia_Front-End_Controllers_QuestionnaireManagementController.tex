@@ -19,11 +19,15 @@
 		Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{model\ped{G}} dell'applicazione;
 		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
 		Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
-		\item \texttt{-}	 \texttt{QuizService: QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca.
+		\item \texttt{-}	 \texttt{QuizService: QuizService}: permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca;
+		\item \rootscopeA;
+		\item \routeparamsA;
+		\item \locationA;
+		\item \errorinfomodelA.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionnaireManagementController(\$scope: \$scope, \$mdDialog: \$mdDia-\\log, QuizService: QuizService)} \\Metodo costruttore della classe.\\
+		\item \texttt{+} \texttt{QuestionnaireManagementController(\$scope: \$scope, \$mdDialog: \$mdDia-\\log, QuizService: QuizService, \$rootScope: \$rootScope, \$routeParams: \$routeParams, \$location: \$location, ErrorInfoModel: ErrorInfoModel)} \\Metodo costruttore della classe.\\
 		\textbf{Parametri}: 
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
@@ -31,12 +35,19 @@
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angu-\\lar\ped{G}} che permette di creare delle componenti a pop-up;
 			\item \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il \textit{service\ped{G}}, la lista di tutte le domande presenti nel quiz;
+			\item \rootscopeP;
+			\item \routeparamsP;
+			\item \locationP;
+			\item \errorinfomodelP.
 		\end{itemize}
-		\item \texttt{+} \texttt{getUserQuestionnaire(username: String) Array<QuestionnaireModel>} \\Metodo che ritorna tutti i questionari creati da un utente in un array di \texttt{Questionnair-\\eModel}. \\
+		\item \texttt{+} \texttt{showAllQuizzes(username: String, lang: String): void} \\Metodo che ritorna tutti i questionari creati da un utente in un array di \texttt{Questionnair-\\eModel}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{username: String}: parametro che indica l'username dell'utente del quale vogliamo scaricare tutti i questionari.
+			\item \texttt{username: String}: parametro che indica l'username dell'utente del quale vogliamo scaricare tutti i questionari;
+			\item \texttt{lang: String}: parametro che indica la lingua del sistema. 
 		\end{itemize}
+		\item \texttt{+} \texttt{goToQuiz(): void} \\Metodo che permette di andare alla pagina che gestisce le iscrizioni di un questionario;
+		\item \texttt{+} \texttt{goToCreateQuestionnaire(): void} \\Metodo che permette di andare alla pagina che permette di creare un questionario.		
 	\end{itemize}
 \end{itemize}
 
