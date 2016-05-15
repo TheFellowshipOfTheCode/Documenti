@@ -27,32 +27,69 @@
 		\item \texttt{-} \texttt{QuizService: QuizService}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca. Permette inoltre di iscriversi ad un questionario e di scaricare l'intera lista di domande di un questionario a partire dal suo id univoco;
 		\item \texttt{+} \texttt{fillQuiz: FillingQuestionnaireModelView} \\
 		Oggetto di tipo \texttt{FillingQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{FillingQuestionnaireView} e il \textit{controller\ped{G}} \texttt{FillingQuestionnaireController};
+		\item \locationA;
+		\item \routeparamsA;
+		\item \errorinfomodelA;
+		\item \questionnairemodelA;
+		\item \timeoutA;
+		\item \texttt{-} \texttt{quizIsLoaded: Boolean} \\ Campo dati che indica se il questionario è stato scaricato;
+		\item \texttt{-} \texttt{questionNumberOnQuiz: Number} \\ Campo dati che indica il numero progressivo della domanda mostrata;
+		\item \texttt{-} \texttt{startQuiz: Boolean} \\ Campo dati che indica se il questionario è pronto per essere iniziato;
+		\item \texttt{-} \texttt{noStart: Boolean} \\ Campo dati che indica se il questionario è abilitato alla compilazione;
+		\item \texttt{-} \texttt{started: Boolean} \\ Campo dati che indica se il questionario è stato iniziato;
+		\item \texttt{-} \texttt{quizIsFinished: Boolean} \\ Campo dati che indica se il questionario è finito;
+		\item \texttt{-} \texttt{noAuth: Boolean} \\ Campo dati che indica se l'utente che si posiziona nel questionario ha o meno l'autorizzazione;
+		\item \texttt{-} \texttt{questions: Array<QuestionItemModel>} \\ Campo dati che rappresenta le domande che verranno poste all'utente;
+		\item \texttt{-} \texttt{quiz: QuestionnaireModel} \\ Campo dati che rappresenta il questionario;
+		\item \texttt{-} \texttt{myChartDataDoughnut: Object} \\ Campo dati che rappresenta i dati che verranno mostrati nel grafico finale;
+		\item \texttt{-} \texttt{myChartOptionsDoughnut: Object} \\ Campo dati che rappresenta le opzioni per la rappresentazione del grafico finale.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{FillingQuestionnaireController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuizService: QuizService)} \\Metodo costruttore della classe.\\
+		\item \texttt{+} \texttt{FillingQuestionnaireController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDialog: \$mdDialog, QuizService: QuizService, \$timeout:\$timeout, \$location:\$location, \$routeParams: \$routeParams, ErrorInfoModel: ErrorInfoModel, QuestionnaireModel: QuestionnaireModel)} \\Metodo costruttore della classe.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{-} \texttt{\$scope: \$scope} \\
-			Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il viewmodel e il \textit{model\ped{G}} dell'applicazione;
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il viewmodel e il \textit{model\ped{G}} dell'applicazione;
 			\item \texttt{-} \texttt{\$location: \$location} \\
-			Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
-			\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
-			Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
-			\item \texttt{- QuizService: QuizService}: parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz.
+			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all’URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
+			\item \texttt{\$mdDialog: \$mdDialog} \\
+			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
+			\item \texttt{QuizService: QuizService}:\\ Parametro che permette di ottenere, tramite il service, la lista di tutte le domande presenti nel quiz;
+			\item \locationP;
+			\item \routeparamsP;
+			\item \errorinfomodelP;
+			\item \questionnairemodelP;
+			\item \timeoutP.
 		\end{itemize}
-		\item \texttt{-} \texttt{getQuestionnaire(quizId: String): QuestionnaireModel}: \\ Metodo che permette di ottenere l'intero questionario. \\
+		\item \texttt{-} \texttt{downloadQuiz(): void}: \\ Metodo che ottiene l'intero questionario; \\
+		\item \texttt{+} \texttt{nextQuestion(): void}: \\ Metodo che carica la domanda successiva del quiz tramite chiamata a \texttt{QuestionController}; \\
+		\item \texttt{+} \texttt{startQuizClick(): void} \\
+		Metodo che gestisce l'evento per iniziare il questionario;
+		\item \texttt{+} \texttt{endQuiz(): void} \\
+		Metodo che gestisce l'evento per terminare il questionario in modo anticipato;
+		\item \texttt{+} \texttt{goToHome(): void} \\
+		Metodo che gestisce l'evento per tornare alla pagina principale dell'applicazione;  
+		\item \texttt{+} \texttt{\$on('\$locationChangeStart': String, callback: function): void} \\
+		Metodo che gestisce l'evento per tornare alla pagina principale dell'applicazione.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{quizId: String}: parametro che indica l'id del quiz che vogliamo ricevere dal back-end.
+			  	\item \texttt{-} \texttt{'\$locationChangeStart': String} \\
+			  	Parametro che indica su quale evento rimanere in ascolto;
+			  	\item \texttt{-} \texttt{callback: function} \\
+			  	Parametro che indica una funzione da eseguire.
 		\end{itemize}
-		\item \texttt{+} \texttt{getNextQuestion(questionId: String): QuestionItemModel}: \\ Metodo che ritorna la domanda successiva del quiz tramite chiamata a \texttt{QuestionController}. \\
+		\item \texttt{+} \texttt{\$on('addResult', callback: function): void} \\
+		Metodo che gestisce l'evento per aggiornare i risultati dati alle domande. \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{questionId: String}: parametro che indica l'id della domanda che vogliamo ricevere dal back-end.
+			\item \texttt{-} \texttt{'addResult': String} \\
+			Parametro che indica su quale evento rimanere in ascolto;
+			\item \texttt{-} \texttt{callback: function} \\
+			Parametro che indica una funzione da eseguire.
 		\end{itemize}
-		\item \texttt{+} \texttt{startQuiz(): void} \\
-		Metodo che gestisce l'evento per iniziare il questionario. 
+		\item \texttt{+} \texttt{graphResultAfterFinishedATraining(): void} \\
+		Metodo imposta le variabili per la visualizzazione del grafico finale. 
 	\end{itemize}
 \end{itemize}
 
