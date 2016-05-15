@@ -20,11 +20,15 @@
 		\item \texttt{-} \texttt{\$location: \$location} \\
 		Campo dati contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 		\item \texttt{-} \texttt{QuestionService: QuestionsService}\\
-		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande.
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+		\item \rootscopeA;
+		\item \routeparamsA;
+		\item \errorinfomodelA;
+		\item \mddialogA.
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionsManagementsController(\$scope: \$scope, \$location: \$location, QuestionService: QuestionService)} \\ 
+		\item \texttt{+} \texttt{QuestionsManagementsController(\$scope: \$scope, \$location: \$location, QuestionService: QuestionService, \$rootScope: \$rootScope, \$routeParams: \$routeParams, ErrorInfoModel: ErrorInfoModel, \$mdDialog: \$mdDialog)} \\ 
 		Metodo costruttore della classe. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -33,21 +37,32 @@
 			\item \texttt{\$location: \$location} \\
 			Parametro contenente un riferimento al servizio creato da \textit{Angular\ped{G}} che permette di accedere alla barra degli indirizzi del \textit{browser\ped{G}}, i cambiamenti all'URL nella barra degli indirizzi si riflettono in questo oggetto e viceversa;
 			\item \texttt{QuestionService: QuestionService} \\
-			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande.
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle domande;
+			\item \rootscopeP;
+			\item \routeparamsP;
+			\item \errorinfomodelP;
+			\item \mddialogP. 
 		\end{itemize}
-		\item \texttt{+} \texttt{getQuestionsByUser(username: String) : Array<QuestionItemMode>} \\ 
-		Metodo che acquisisce le domande create dall'utente attraverso il \texttt{QuestionService}.\\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{username: String} \\
-			Parametro contenente l'username dell'utente.
-		\end{itemize}
+		\item \texttt{-} \texttt{loadQuestions() : Array<QuestionItemMode>} \\ 
+		Metodo che acquisisce le domande create dall'utente attraverso il \texttt{QuestionService};\\
 		\item \texttt{+} \texttt{editQuestion(idQuestion: String) : void} \\ 
 		Metodo che gestisce l'evento click sul pulsante per modificare la domanda. Effettua il redirect alla pagina di modifica della domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{idQuestion: String} \\
 			Parametro contenente l'id della domanda da modificare.
+		\end{itemize}
+				
+		\item \texttt{+} \texttt{goToWizardCreation(idQuestion: String) : void} \\ 
+		Metodo che gestisce l'evento click sul pulsante per creare una domanda. Effettua il redirect alla pagina di creazione della domanda con wizard; \\
+		\item \texttt{+} \texttt{goToQMLCreation(idQuestion: String) : void} \\ 
+		Metodo che gestisce l'evento click sul pulsante per creare una domanda. Effettua il redirect alla pagina di creazione della domanda con editor QML;\\
+		\item \texttt{+} \texttt{uploadImage(image: Object) : void} \\ 
+		Metodo che gestisce l'evento caricare un'immagine. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{image: Object} \\
+			Parametro contenente un'immagine.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
