@@ -1,0 +1,399 @@
+\section{Processi di supporto}
+\subsection{Processo di documentazione}
+\subsubsection{Descrizione}
+In questo capitolo verranno trattate tutte le convenzioni adottate dal gruppo
+\textit{TheFellowshipOfTheCode} riguardo la stesura, verifica e approvazione dei
+documenti.
+I documenti sono classificati come:
+\begin{itemize}
+  \item \textit{Interni}: utilizzo interno al \textit{team\ped{G}};
+  \item \textit{Esterni}: distribuzione esterna al committente e/o proponente.
+\end{itemize}
+Questa classificazione è dovuta dal tipo di distribuzione che andrà effettuata di tali documenti.
+I documenti \textit{approvati} dal \textit{\RdP} devono avere un nome strutturato nel seguente modo:
+\begin{itemize}
+  \item La prima lettera del documento deve essere maiuscola;
+  \item Il nome non deve contenere spazi;
+  \item Va indicata la versione del documento nella parte finale del nome, in forma numerica,
+  corrispondente a quanto indicato nel diario delle modifiche.
+  \begin{center}
+  \textit{NomeDelDocumento\_v\_1\_0\_0}
+  \end{center}\
+\end{itemize}
+\subsubsection{Strumenti}
+Per la stesura dell'intera documentazione è stato scelto di utilizzare \textit{\LaTeX\ped{G}}.
+E' stato scelto questo \textit{linguaggio di markup\ped{G}} per avere uno
+standard comune e per evitare possibili conflitti e incompatibilità derivanti
+dall'utilizzo di software differente.
+\subsubsection{Ciclo di vita di un documento}
+ I documenti possono essere in uno dei seguenti stati:
+\begin{itemize}
+  \item Documenti \textit{in lavorazione};
+  \item Documenti \textit{da verificare};
+  \item Documenti \textit{approvati}.
+\end{itemize}
+I documenti \textit{in lavorazione} sono quelli in fase di stesura da parte del
+relativo redattore. Ultimata la loro realizzazione questi documenti vengono
+segnati come \textit{da verificare} e passano quindi in mano al relativo
+\textit{\Ver}. Infine i documenti \textit{verificati} vengono consegnati al \textit{\RdP}
+che avrà il compito di approvarli in via definitiva.
+\subsubsection{Documenti finali}
+\paragraph{\SdF}
+L'intento del suddetto documento è riportare lo studio effettuato dall'intero
+\textit{team\ped{G}} che ha portato all'accettazione dello sviluppo del progetto scelto. Questo
+documento è utilizzato internamente dal \textit{team\ped{G}} e la lista di distribuzione comprende solo i committenti.
+\paragraph{\NdP}
+L'intento del suddetto documento è riportare tutte le convenzioni, strumenti e
+norme che il \textit{team\ped{G}} dovrà adottare durante tutto lo sviluppo del progetto. Questo
+documento è utilizzato internamente al \textit{team\ped{G}} e la lista di distribuzione comprende solo i committenti.
+\paragraph{\PdP}
+L'intento del suddetto documento è descrivere come il \textit{team\ped{G}} gestisce le risorse
+temporali e umane. Tratta inoltre la gestione dei rischi. Questo documento è
+utilizzato anche esternamente e la lista di distribuzione comprende committenti
+e proponenti.
+\paragraph{\PdQ}
+L'intento del suddetto documento è descrivere il modo in cui l'intero \textit{team\ped{G}} punta
+a soddisfare gli obiettivi di qualità. Questo documento è
+utilizzato anche esternamente e la lista di distribuzione comprende committenti
+e proponenti.
+\paragraph{\AdR}
+L'intento di tale documento è dare una visione generale dei requisiti e dei casi
+d'uso del progetto. Esso conterrà quindi la lista di tutti i casi d'uso,
+i diagrammi delle attività di interazione tra utente e sistema sviluppato e
+i servizi offerti dal prodotto finale. Questo documento è
+utilizzato anche esternamente e la lista di distribuzione comprende committenti
+e proponenti.
+\paragraph{\ST}
+L'intento del suddetto documento è dare una visione generale del prodotto e
+delle sue richieste. Più nello specifico verrà mostrata una progettazione ad
+alto livello, basata su diagrammi dei \textit{package\ped{G}} per la descrizione delle
+componenti, diagrammi di sequenza per descrivere gli scenari d'uso e diagrammi
+di attività. Verranno inoltre elencati i software che saranno utilizzati per la realizzazione del progetto.
+\paragraph{\DDP}
+L'intento di tale documento è fornire una progettazione dettagliata del
+prodotto. In esso verranno forniti tutti i dettagli implementativi
+del prodotto, fondamentali in fase di codifica, che comprenderanno diagrammi \textit{UML\ped{G}}
+delle classi e i relativi metodi.
+\paragraph{Glossario}
+L'intento di tale documento è fornire una definizione dettagliata di tutti i
+termini tecnici e acronimi utilizzati nell'intera documentazione. Questo documento è
+utilizzato anche esternamente e la lista di distribuzione comprende committenti
+e proponenti.
+\paragraph{\MU}
+L'intento di tale documento è fornire all'utente una guida dettagliata di tutte
+le funzionalità offerte dal prodotto realizzato.
+\paragraph{Verbali}
+Questo documento ha lo scopo di riassumere in modo formale le discussioni effettuate e le decisioni
+prese durante le riunioni. I verbali, come le riunioni, sono classificati in:
+\textbf{interni} ed \textbf{esterni}. In particolare i verbali esterni, essendo
+documenti ufficiali, devono essere redatti dal \textit{\RdP}. \\
+Ogni verbale dovrà essere denominato nel seguente modo:
+\begin{center}
+  \textit{{Verbale}\_{Numero del verbale}\_{Tipo di verbale}\_{Data del verbale}}
+\end{center}
+dove:
+\begin{itemize}
+  \item \textbf{Numero del verbale}: numero identificativo univoco del verbale;
+  \item \textbf{Tipo di verbale}: identifica se si tratta di un \textit{\VI} oppure \textit{\VE};
+  \item \textbf{Data del verbale:} identifica la data nella quale si è svolta la
+  riunione corrispondente al verbale. Il formato è il seguente :
+  \begin{center}
+  YYYY-MM-DD
+  \end{center}
+
+\end{itemize}
+Nella parte introduttiva del verbale devono essere specificate le seguenti informazioni:
+\begin{itemize}
+  \item \textbf{Data incontro}: data in cui si è svolta la riunione;
+  \item \textbf{Ora inizio incontro}: orario di inizio della riunione;
+  \item \textbf{Ora termine incontro}: orario di terminazione della riunione;
+  \item \textbf{Luogo incontro}: luogo in cui si è svolta la riunione;
+  \item \textbf{Durata}: durata della riunione;
+  \item \textbf{Oggetto}: argomento della riunione;
+  \item \textbf{Segretario}: cognome e nome del membro incaricato a redigere il
+  verbale;
+  \item \textbf{Partecipanti}: cognome e nome di tutti i membri partecipanti
+  alla riunione.
+\end{itemize}
+
+\subsubsection{Struttura del documento}
+\paragraph{Prima pagina}
+
+Ogni documento deve avere nella prima pagina le seguenti informazioni:
+\begin{itemize}
+  \item Nome del gruppo;
+  \item Logo del progetto;
+  \item Nome del progetto;
+  \item Nome del documento;
+  \item Versione del documento;
+  \item Data di creazione del documento;
+  \item Data di ultima modifica del documento;
+  \item Stato del documento;
+  \item Nome e cognome del redattore del documento;
+  \item Nome e cognome del verificatore del documento;
+  \item Nome e cognome del responsabile approvatore del documento;
+  \item Uso del documento;
+  \item Lista di distribuzione del documento;
+  \item Destinatari del documento;
+  \item Email di riferimento;
+  \item Un sommario contenente una breve descrizione del documento.
+\end{itemize}
+\paragraph{Diario delle modifiche}
+La seconda pagina contiene il diario delle modifiche. In questa tabella vengono
+inserite tutte le modifiche effettuate dai vari redattori del documento. Ogni
+riga della tabella deve contenere le seguenti informazioni:
+\begin{itemize}
+  \item \textbf{Versione}: versione del documento dopo la modifica;
+  \item \textbf{Descrizione}: descrizione della modifica apportata;
+  \item \textbf{Autore e Ruolo}: autore della modifica e ruolo che esso ricopre;
+  \item \textbf{Data}: data della modifica apportata.
+\end{itemize}
+
+\paragraph{Indice}
+In ogni documento, dopo il diario delle modifiche, deve essere presente un
+indice di tutte le sezioni. In presenza di tabelle e/o immagini queste devono
+essere indicate con i relativi indici.
+
+\paragraph{Formattazione generale delle pagine}
+La formattazione della pagina, oltre al contenuto, prevede un'intestazione e un
+piè di pagina. \\
+L'intestazione della pagina contiene:
+\begin{itemize}
+  \item Nome del progetto;
+  \item Nome del documento;
+  \item Logo del progetto.
+\end{itemize}
+Il piè di pagina contiene:
+\begin{itemize}
+  \item Il nome del gruppo;
+  \item Email del gruppo;
+  \item Numero della pagina corrente.
+\end{itemize}
+
+\subsubsection{Norme tipografiche}
+Le seguenti norme tipografiche indicano i criteri riguardanti
+l'ortografia e la tipografia di tutti i documenti.
+\paragraph{Stili di testo}
+\begin{itemize}
+  \item \textbf{Grassetto}: il grassetto deve essere utilizzato per evidenziare parole
+  particolarmente importanti, negli elenchi puntati o nelle frasi;
+  \item \textbf{Corsivo}: il corsivo deve essere utilizzato nelle seguenti
+  situazioni:
+  \begin{itemize}
+    \item Ruoli: ogni riferimento a ruoli di progetto va scritto in corsivo;
+    \item Documenti: ogni riferimento a un documento va scritto in corsivo;
+    \item Stati del documento: ogni stato del documento va scritto in corsivo;
+    \item Citazioni: ogni citazione va scritta in corsivo;
+    \item Glossario: ogni parola presente nel glossario, oltre ad avere un pedice, deve
+    essere scritta in corsivo.
+  \end{itemize}
+  \item \textbf{Font codice}: il font per il codice deve essere utilizzato (tramite il comando \textit{\/texttt\{\}}) per indicare qualsiasi parte riguardi porzioni di codice.
+\end{itemize}
+\paragraph{Punteggiatura}
+\begin{itemize}
+  \item \textbf{Punteggiatura}: ogni simbolo di punteggiatura non può seguire un
+  carattere di spazio;
+  \item \textbf{Lettere maiuscole}: le lettere maiuscole vanno utilizzate dopo il punto, il punto interrogativo,
+  il punto esclamativo e all'inizio di ogni elemento di un elenco puntato.
+\end{itemize}
+\paragraph{Composizione del testo}
+\begin{itemize}
+  \item \textbf{Elenchi puntati}: ogni punto dell'elenco deve terminare con il punto e virgola,
+   tranne l'ultimo che deve terminare con il punto. La prima parola deve avere la lettera
+   maiuscola;
+   \item \textbf{Glossario}: il pedice \ped{G} verrà utilizzato in corrispondenza di vocaboli presenti nel \textit{\G}.
+\end{itemize}
+\paragraph{Formati}
+\begin{itemize}
+   \item \textbf{Date}: le date presenti nei documenti devono seguire lo standard \textit{ISO\ped{G} 8601:2004\ped{G}}:
+   \begin{center}
+     YYYY-MM-DD
+   \end{center}
+   dove:
+   \begin{itemize}
+     \item YYYY: rappresenta l'anno;
+     \item MM: rappresenta il mese;
+     \item DD: rappresenta il giorno.
+   \end{itemize}
+   \item \textbf{Ore}: le ore presenti nei documenti devono seguire lo standard \textit{ISOG\ped{G} 8601:2004\ped{G}}
+   con il sistema a 24 ore:
+   \begin{center}
+     hh:mm
+   \end{center}
+   dove:
+   \begin{itemize}
+     \item hh: rappresentano le ore;
+     \item mm: rappresentano i minuti.
+   \end{itemize}
+   \item \textbf{Nome del documento}: per riferirsi al nome del documento si
+   dovrà utilizzare il comando \textit{\LaTeX\ped{G}}   \verb|\documento{Nome del documento}|
+   garantendo in questo modo la corretta sintassi;
+   \item \textbf{Nome del gruppo}: per riferirsi al nome del gruppo si dovrà
+   utilizzare il comando \textit{\LaTeX\ped{G}} \verb|\gruppo| garantendo in questo modo la corretta sintassi;
+   \item \textbf{Nome del progetto}: per riferirsi al nome del progetto si dovrà
+   utilizzare il comando \textit{\LaTeX\ped{G}} \verb|\progetto| garantendo in questo modo la corretta sintassi;
+   \item \textbf{Link sito del gruppo}: per riferirsi al link del sito del gruppo si dovrà
+   utilizzare il comando \textit{\LaTeX\ped{G}} \verb|\gruppoLink| garantendo in questo modo la corretta sintassi;
+   \item \textbf{Email del gruppo}: per riferirsi all'indirizzo email del gruppo si dovrà
+   utilizzare il comando \textit{\LaTeX\ped{G}} \verb|\email| garantendo in questo modo la corretta sintassi;
+   \item \textbf{Nome del proponente}: per riferirsi al nome del proponente, ovvero \proponente, si dovrà
+   utilizzare il comando \textit{\LaTeX\ped{G}}  \verb|\proponente| garantendo in questo modo la corretta
+   sintassi.
+      \end{itemize}
+
+\subsubsection{Composizione email}
+In questo paragrafo verranno descritte le norme da applicare nella
+composizione delle email.
+\paragraph{Destinatario}
+\begin{itemize}
+  \item Interno: l'indirizzo da utilizzare è \textit{\email};
+  \item Esterno: l'indirizzo del destinatario varia a seconda si tratti del
+  Prof. Tullio Vardanega, Prof. Riccardo Cardin o i proponenti del progetto.
+\end{itemize}
+\paragraph{Mittente}
+\begin{itemize}
+  \item Interno: l'indirizzo è di colui che scrive e spedisce la email;
+  \item Esterno: l'indirizzo da utilizzare è \textit{\email} ed è utilizzabile
+  unicamente dal \textit{\RdP}.
+\end{itemize}
+\paragraph{Oggetto}
+L'oggetto della mail deve essere chiaro, preciso e conciso in modo da rendere
+semplice il riconoscimento di una mail tra le altre.
+\paragraph{Corpo}
+Il testo del corpo della mail deve essere chiaro ed esaustivo. All'interno del
+testo verrà utilizzata la sintassi \textit{@Ruolo} per riferirsi ad uno specifico
+ruolo del \textit{team\ped{G}}, mentre verrà utilizzata la sintassi \textit{@Destinatario} per
+riferirsi ad una o più persona del \textit{team\ped{G}}.
+\paragraph{Allegati}
+È permesso, anche se sconsigliato, l'invio di allegati tramite mail. È
+preferibile infatti condividere file all'interno del gruppo tramite strumenti più consoni, come \textit{Google
+Drive\ped{G}}.
+\subsubsection{Componenti grafiche}
+\paragraph{Tabelle}
+Tutte le tabelle presenti all'interno del documento devono avere una didascalia
+ed un indice identificativo univoco per il loro tracciamento all'interno del
+documento stesso.
+\paragraph{Immagini}
+Le immagini inserite nel documento sono nel formato \textit{PNG\ped{G}}. In alternativa,
+giustificando il motivo, possono essere inserite in formato \textit{PDF\ped{G}}.
+\subsubsection{Versionamento}
+Ogni documento prodotto deve essere identificato, oltre che dal nome, dal numero
+di versione nel seguente modo:
+\begin{center}
+  \_vX\_Y\_Z
+\end{center}
+dove:
+
+\begin{itemize}
+  \item \textbf{X}: indica il numero di uscite formali del documento e viene
+  incrementato in seguito all'approvazione finale da parte del \textit{\RdP}.
+  L'incremento dell'indice \textbf{X} comporta l'azzeramento degli indici
+  \textbf{Y} e \textbf{Z};
+  \item \textbf{Y}: indica il numero crescente delle verifiche. L'incremento viene 	eseguito dal \textit{\Ver} e comporta l'azzeramento dell'indice \textbf{Z};
+  \item \textbf{Z}: indica il numero di modifiche minori apportate al documento
+  prima della sua verifica. Viene aumentato in modo incrementale.
+  \end{itemize}
+A ogni modifica del documento anche il nome del file fisico deve essere
+modificato, seguendo il seguente schema:
+\begin{center}
+  nomeDocumento\_vX\_Y\_Z.pdf
+\end{center}
+
+\subsection{Processo di verifica}
+\subsubsection{Descrizione}
+Il processo di verifica ha il compito di controllare che ogni documento prodotto
+rispecchi quanto previsto dai requisiti.
+\subsubsection{Analisi}
+\paragraph{Analisi statica}
+L'analisi statica è una tecnica che permette di trovare eventuali anomalie nella
+documentazione o nel software prodotto. Ci sono due modi con la quale essa viene
+impiegata:
+\begin{itemize}
+  \item \textbf{\textit{Walkthrough\ped{G}}}: questa tecnica di analisi statica consiste nella
+  lettura a largo spettro del documento o del codice, al fine di trovare anomalie,
+  senza avere un'idea precisa degli errori da cercare. Questa tecnica risulta
+  molto utile nella fase iniziale dello sviluppo del prodotto data la scarsa
+  esperienza dei membri del \textit{team\ped{G}}. Questa tecnica è utilizzata dai \textit{Verificatori}
+  che avranno il compito di stilare una lista contenente gli errori rilevati più
+  spesso. Una volta raggiunta la quasi completezza di questa lista, essa dovrà
+  essere allegata a questo documento, in questo modo sarà possibile l'utilizzo
+  della tecnica di \textit{inspection\ped{G}};
+  \item \textbf{\textit{Inspection\ped{G}}}: questa tecnica di analisi statica consiste in una
+  lettura molto più dettagliata e più mirata dei documenti o del codice,
+  utilizzando come supporto fondamentale la lista di controllo contenente gli
+  errori più frequenti. Questa tecnica diventa sempre più efficace dato che la
+  lista verrà sempre ampliata con esperienza nella verifica.
+\end{itemize}
+\paragraph{Analisi dinamica}
+L'analisi dinamica viene applicata solamente al software prodotto, in quanto
+essa consiste nell'esecuzione di test su di esso. Grazie a questi test è
+possibile verificare la correttezza del software.
+\subsubsection{Test}
+\paragraph{Test di unità}
+I test di unità verificano che ogni singola componente del software funzioni
+correttamente. Effettuando questi test di riduce al minimo la presenza di errori
+di tutte le componenti di base. I test di unità sono identificati dalla seguente
+sintassi:
+\begin{center}
+  TU[Codice Test]
+\end{center}
+\paragraph{Test di integrazione}
+I test di integrazione verificano che più unità, validate singolarmente, funzionino
+correttamente una volta assemblate. I test di integrazione sono identificati
+dalla seguente sintassi:
+\begin{center}
+  TI[Codice Test]
+\end{center}
+\paragraph{Test di sistema}
+I test di sistema vengono eseguiti sul prodotto che si ritiene essere giunto ad
+una versione definitiva, serve a verificare che tutti i requisiti siano
+soddisfatti. I test di sistema sono identificati dalla seguente sintassi:
+\begin{center}
+  TS[Codice Requisito]
+\end{center}
+\paragraph{Test di regressione}
+Il test di regressione consiste nel rieseguire tutti i test relativi ad una
+componente del software prodotto che ha subito delle modifiche. I test di
+regressione sono identificati dalla seguente sintassi:
+\begin{center}
+  TR[Codice Test]
+\end{center}
+\paragraph{Test di validazione}
+Il test di validazione coincide con il collaudo del software in presenza del
+\textit{proponente}. In caso di esito positivo si procede col rilascio del
+software. I test di validazione sono identificati dalla seguente sintassi:
+\begin{center}
+  TV[Codice requisito]
+\end{center}
+
+\subsection{Strumenti}
+\subsubsection{Strumenti per l'analisi statica}
+\begin{itemize}
+  \item \textit{\textbf{JSHint\ped{G}}}: è uno strumento che aiuta a rilevare possibili
+  errori nel codice \textit{JavaScript\ped{G}}. Verrà installato come modulo per
+  \textit{Node.js\ped{G}};
+  \item \textit{\textbf{CSSHint\ped{G}}}: è uno strumento che aiuta a rilevare possibili
+  errori nel codice \textit{CSS\ped{G}}. Verrà installato come modulo per
+  \textit{Node.js\ped{G}};
+  \item \textit{\textbf{W3C Markup Validator Service\ped{G}}}: validatore che segnala
+  errori di sintassi nel codice \textit{HTML\ped{G}}. L'indirizzo web di riferimento è
+  il seguente: \url{validator.w3.org/}{validator.w3.org};
+  \item \textit{\textbf{Complexity-report\ped{G}}}: è un'applicazione che verrà installata come modulo per
+  \textit{Node.js\ped{G}} e serve a misurare metriche riguardanti codice \textit{JavaScript\ped{G}}, in particolare:
+  \begin{itemize}
+    \item \textit{Complessità ciclomatica\ped{G}}: misura la complessità delle classi, dei metodi e delle funzioni del programma;
+    \item Rapporto linee di commento su linee di codice: calcola il rapporto tra
+    le righe di codice e le righe di commento scritte;
+    \item Dipendenze: restituisce le dipendenze interne o esterne con altre
+    classi;
+    \item Indice di manutenibilità: calcola un valore che indica quanto il
+    codice risulta manutenibile.
+  \end{itemize}
+\end{itemize}
+\subsubsection{Strumenti per l'analisi dinamica}
+\begin{itemize}
+  \item \textit{\textbf{Google Chrome DevTools\ped{G}}}: gli strumenti offerti da \textit{Google Chrome\ped{G}} agli sviluppatori servono a tenere sotto controllo l'utilizzo
+  di CPU e di memoria da parte degli oggetti e funzioni \textit{JavaScript\ped{G}};
+  \item \textit{\textbf{Karma\ped{G}}}: è uno strumento per eseguire test di unità e sarà utilizzato per eseguire test
+  sugli script realizzati. Verrà installato come modulo per \textit{Node.js\ped{G}}.
+\end{itemize}
