@@ -29,42 +29,82 @@
 		\end{itemize}
 	\item \textbf{Metodi}:
 		\begin{itemize}
-			\item \texttt{+ updateCorrect() : void} \\
-			Metodo che consente di tenere aggiornato il numero di risposte esatte date a domande sull'argomento;
-			\item \texttt{+ updateTotal() : void} \\
-			Metodo che consente di tenere aggiornato il numero totale di risposte date a domande sull'argomento;
+			\item \texttt{+ addCorrect(topic : String, callback : function(JSON)) : void} \\
+			Metodo che consente di tenere aggiornato il numero di risposte esatte date a domande sull'argomento.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{topic : String} \\
+				Rappresenta l'argomento a cui si vuole aggiornare il contatore di risposte corrette
+				\item \texttt{callback : function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;	.
+			\end{itemize}
+			\item \texttt{+ addTotal(topic : String, callback : function(JSON)) : void} \\
+			Metodo che consente di tenere aggiornato il numero totale di risposte date a domande sull'argomento.\\
+			\begin{itemize}
+				\item \texttt{topic : String} \\
+				Rappresenta l'argomento a cui si vuole aggiornare il contatore di risposte totali
+				\item \texttt{callback : function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;	.
+			\end{itemize}
+			
 			\item \texttt{+ addQuestion(questionId : ObjectID) : void} \\
 			Metodo che consente di aggiunge una domanda tra le domande sull'argomento. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-			\item \texttt{questionId : ObjectId} \\
-			Rappresenta l'identificativo della domanda da aggiungere.
+				\item \texttt{questionId : ObjectId} \\
+				Rappresenta l'identificativo della domanda da aggiungere.
 			\end{itemize}
-			\item \texttt{+ getQuestions(language : String, keyword : [String], \\callback : function(JSON), errback : function(QuizziPediaError))} \\
+			
+			\item \texttt{+ getTopic(lang : String,\\callback : function(JSON))} \\
+			Metodo che consente di ottenere tutte i nomi degli argomenti presenti. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{lang : String} \\
+				Rappresenta la lingua in cui sono scritte le domande che si vuole ottenere;
+				\item \texttt{callback : function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
+			\end{itemize}
+			
+			\item \texttt{+ getQuestions(language : String, keyword : String[], callback : function(JSON))} \\
 			Metodo che consente di ottenere le domande sull'argomento attraverso la funzione di \textit{callback\ped{G}} oppure un messaggio di errore. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-			\item \texttt{language : String} \\
-			Rappresenta la lingua in cui sono scritte le domande che si vuole ottenere;
-			\item \texttt{keyword : Array<String>} \\
-			Rappresenta le keyword che possono essere assegnate alle domande che si vuole ottenere;
-			\item \texttt{callback : function(JSON)} \\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
-			\item \texttt{errback : function(QuizziPediaError)} \\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+				\item \texttt{language : String} \\
+				Rappresenta la lingua in cui sono scritte le domande che si vuole ottenere;
+				\item \texttt{keyword : Array<String>} \\
+				Rappresenta le keyword che possono essere assegnate alle domande che si vuole ottenere;
+				\item \texttt{callback : function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
 			\end{itemize}
-			\item \texttt{+ getNextQuestion(language : String, levelUser : Number, \\callback : function(JSON), errback : function(QuizziPediaError)):: void} \\
+			\item \texttt{+ getTopicQuestions(topic : String, keyword : String[],  lang : String, \\callback : function(JSON))} \\
+			Metodo che consente di ottenere le domande relative ad un determinato argomento filtrate per keywords. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{topic : String} \\
+				Rappresenta l'argomento per il quale si vuole ottenere le relative domande;
+				\item \texttt{keyword : Array<String>} \\
+				Rappresenta le keyword che verranno utilizzate per filtrare le domande;
+				\item \texttt{lang : String} \\
+				Rappresenta la lingua in cui sono scritte le domande che si vuole ottenere;
+				\item \texttt{callback : function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
+			\end{itemize}
+			\item \texttt{+ getNextQuestion(topic:String, alreadyAnswered:Boolean, language:String, keywords:String, skillLevel:Number, \\callback : function(JSON)):: void} \\
 			Metodo che consente di ottenere la domanda successiva nella modalità allenamento, in base al livello dell'utente che lo sta svolgendo. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-			\item \texttt{language : String} \\
-			Rappresenta la lingua in cui è scritta la domanda che si vuole ottenere;
-			\item \texttt{levelUser : Number} \\
-			Rappresenta il livello dell'utente che sta svolgendo l'allenamento;
-			\item \texttt{callback : function(JSON)} \\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
-			\item \texttt{errback : function(QuizziPediaError)} \\
-			Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare qualora si verificassero errori durante l'esecuzione del metodo.
+				\item \texttt{topic:String} \\
+				Rappresenta l'argomento  della domanda che si vuole ottenere;	
+				\item \texttt{alreadyAnswered:Boolean} \\
+				Rappresenta se l'utente ha già risposto o meno alla domanda;
+				\item \texttt{keywords:String} \\
+				Rappresenta le keywords scelte dall'utente per le quali si vuole filtrare le domande;
+				\item \texttt{language : String} \\
+				Rappresenta la lingua in cui è scritta la domanda che si vuole ottenere;
+				\item \texttt{skillLevel:Number} \\
+				Rappresenta il livello dell'utente che sta svolgendo l'allenamento;
+				\item \texttt{callback : function(JSON)} \\
+				Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione nel caso in cui non si siano verificati errori;
 			\end{itemize}
 		\end{itemize}
 \end{itemize}
