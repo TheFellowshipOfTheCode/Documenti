@@ -57,22 +57,45 @@
 				Identificativo del questionario da eliminare.
 			\end{itemize}
 			
-			\item \texttt{- getQuestions(): Array<QuestionItemModel>} \\
+			\item \texttt{+ getQuestions(): Array<QuestionItemModel>} \\
 			Metodo che permette di ottenere la lista di tutte le domande.
 			
-			\item \texttt{- getQuestion(questionId: String): QuestionItemModel} \\
+			\item \texttt{+ getQuestion(questionId: String): QuestionItemModel} \\
 			Metodo che ritorna l'intera domanda selezionata. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{questionId: String}\\
 				Parametro che indica l'identificativo univoco di una domanda.
 			\end{itemize}
-			\item \texttt{- addQuestion(questionId: String) : void} \\
+			\item \texttt{+ addQuestion(questionId: String) : void} \\
 			Metodo che permette di inserire una domanda nel questionario. \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{questionId: String}\\
 				Parametro che indica l'identificativo univoco di una domanda.
+			\end{itemize}
+			\item \texttt{+} \texttt{showAllQuestions(topic: String, keyword: String): void} \\
+			Metodo che permette di ottenere la lista di tutte le domande ed inserirle nello \$scope nell'oggetto di tipo \texttt{CreateQuestionnaireModelView}.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{topic: String}\\ Parametro che indica l'argomento scelto;
+				\item \texttt{keyword: String}\\ Parametro che indica la parola chiave scelta.
+			\end{itemize}
+			\item \texttt{+} \texttt{createQMLQuestion(question: String) : void} \\
+			Metodo che permette di posizionarsi nella pagina dell'editor QML;\\
+			\item \texttt{+} \texttt{filterByYours(question: String) : QuestionItemModelView} \\
+			Metodo che permette di rimuovere una domanda nel questionario.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{question: String}\\ Parametro che la domanda da filtrare.
+			\end{itemize}
+			\item \texttt{+} \texttt{resetFilters() : void} \\
+			Metodo che permette di resettare i filtri finora settati;\\
+			\item \texttt{+} \texttt{noFilter(filterObj: Array<Boolean>) : QuestionItemModelView} \\
+			Metodo che permette di filtrare un array.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{filterObj: Array<Boolean>}\\ Parametro contenente un array di boolean.
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}

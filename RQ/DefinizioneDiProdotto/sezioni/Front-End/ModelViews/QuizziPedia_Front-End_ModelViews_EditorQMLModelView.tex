@@ -19,6 +19,8 @@
 	\item \textbf{Metodi}:
 	\begin{itemize}
 		\item \texttt{+} \texttt{submitQuestion(): void}\\ 
-		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview, li converte attraverso il \textit{parser\ped{G}} \textit{QML\ped{G}}, e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando.
+		Metodo che gestisce l’evento click sul pulsante di conferma sulla domanda. Raccoglie i dati dal modelview, li converte attraverso il \textit{parser\ped{G}} \textit{QML\ped{G}}, e li manda al server attraverso \texttt{QuestionService}. Poi verrà effettuato il redirect alla pagina di gestione delle domande oppure al questionario che si stava creando;
+		\item \texttt{+} \texttt{goToWizard(): void}\\ 
+		Metodo per essere reindirizzati alla pagina di creazione delle domande mediante procedure guidata.
 	\end{itemize}
 \end{itemize}

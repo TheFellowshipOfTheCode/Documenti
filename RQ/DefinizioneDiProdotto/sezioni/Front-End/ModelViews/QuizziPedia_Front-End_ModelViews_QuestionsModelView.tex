@@ -39,58 +39,95 @@
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, \\answerGiven: Array<String>): void} \\
-		Metodo che gestisce l'evento di selezione delle risposte. \\
+	\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, answerGiven: \\Array<String>): void} \\
+	Metodo che gestisce l'evento di selezione delle risposte. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{index: Number} \\
+		Parametro contenente l'indice della risposta di cui si vuole tenere traccia. Rappresenta anche l'indice dell'array \texttt{answerGiven} in cui verrà inserito l'oggetto delle risposte date;
+		\item \texttt{typeQuestion: String} \\
+		Parametro contenente una stringa la quale indica la tipologia della domanda;
+		\item \texttt{answerGiven: Array<String>} \\
+		Parametro contenente l'array di risposte date dall'utente aggiornato all'ultima iterazione.
+	\end{itemize}
+	\item \texttt{+} \texttt{save(index: Number): Array<String>} \\
+	Metodo di supporto che ritorna un array di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande vero/falso, risposta multipla e ad area cliccabile.\\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{index: Number} \\
+		Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
+	\end{itemize}
+	\item \texttt{-} \texttt{downloadNextQuestionTraining(nextQuestion: Object): void} \\
+	Metodo che gestisce l'evento per scaricare una nuova domanda in base ai parametri passati. Evoca l'evento per inserire la domanda in \texttt{TrainingModelView}. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{nextQuestion: Object} \\
+		Parametro contenente un oggetto così fatto: \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{index: Number} \\
-			Parametro contenente l'indice della risposta di cui si vuole tenere traccia. Rappresenta anche l'indice dell'\texttt{array objAnswer} in cui verrà inserito l'oggetto delle risposte date;
-			\item \texttt{typeQuestion: String} \\
-			Parametro contenente una stringa la quale indica la tipologia della domanda;
-			\item \texttt{answerGiven: Array<String>} \\
-			Parametro contenente l'\texttt{array} di risposte date dall'utente aggiornato all'ultima iterazione.
-		\end{itemize};
-		\item \texttt{+ answerGiven(index: Number): Array<String>} \\
-		Metodo di supporto che ritorna un \texttt{array} di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande vero/falso, risposta multipla e ad area cliccabile.\\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{index: Number} \\
-			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
-		\end{itemize}
-		\item \texttt{+ orderChosen(index: Number): Array<String>} \\
-		Metodo di supporto che ritorna un \texttt{array} di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande ad ordinamento e di riempimento di spazi.\\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{index: Number} \\
-			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
-		\end{itemize}
-		\item \texttt{+ linkingMade(index: Number): Array<String>} \\
-		Metodo di supporto che ritorna un \texttt{array} di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande a collegamento.\\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{index: Number} \\
-			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
-		\end{itemize}
-		\item \texttt{+ loadNewQuestionBy(topic: String, keywords: Array<String>, \\level: Number): void} \\
-		Metodo che gestisce l'evento per scaricare una nuova domanda in base ai parametri passati. Evoca l'evento per inserire la domanda in \texttt{TrainingModelView}. \\
-		\textbf{Parametri}:
-		\begin{itemize}
+			\item \texttt{language: String} \\
+			Parametro contenente la lingua della domanda;
 			\item \texttt{topic: String} \\
 			Parametro contenente l'argomento della domanda;
 			\item \texttt{keywords: Array<String>} \\
-			Parametro contenente un\texttt{array} di stringhe che rappresenta le keywords scelte per l'allenamento;
+			Parametro contenente un array di stringhe che rappresenta le keywords scelte per l'allenamento;
 			\item \texttt{level: Number} \\
-			Parametro contenente il livello dell'utente.
+			Parametro contenente il livello dell'utente;
+			\item \texttt{alreadyAnswered: Array<String>} \\
+			Parametro contenente un array di stringhe che rappresenta le domande già risposte fino a quel momento dell'allenamento;
 		\end{itemize}
-		\item \texttt{+ loadNewQuestion(question: QuestionItemModel): void} \\
-		Metodo che gestisce l'evento per visualizzare una nuova domanda. \\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{question: QuestionItemModel} \\
-			Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
-		\end{itemize}
-		\item \texttt{+ checkAnswer(): boolean} \\ 
-		Metodo che controlla che le risposte date siano corrette.
+	\end{itemize}
+	\item \texttt{-} \texttt{loadNextQuestionQuiz(question: QuestionItemModel): void} \\
+	Metodo che gestisce l'evento per visualizzare una nuova domanda. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{question: QuestionItemModel} \\
+		Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
+	\end{itemize}
+	\item \texttt{+} \texttt{checkAnswer(): Boolean} \\ 
+	Metodo che controlla che le risposte date siano corrette;
+	\item \texttt{+} \texttt{dragnNDropQuestions(event: Object, ui: Object, index: Number, type: String, obj: Array<String>): void} 
+	Metodo che gestisce l'evento per l'inserimento delle risposte date con una domanda che ha il trascinamento come base di interazione con l'utente. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{(event: Object} \\
+		Parametro necessario per catturare l'evento di trascinamento;
+		\item \texttt{ui: Object} \\
+		Parametro necessario per capire quale oggetto viene trascinato;
+		\item \texttt{index: Number} \\
+		Parametro contenente l'indice della risposta di cui si vuole tenere traccia. Rappresenta anche l'indice dell'array \texttt{answerGiven} in cui verrà inserito l'oggetto delle risposte date;
+		\item \texttt{typeQuestion: String} \\
+		Parametro contenente una stringa la quale indica la tipologia della domanda;
+		\item \texttt{answerGiven: Array<String>} \\
+		Parametro contenente l'array di risposte date dall'utente aggiornato all'ultima iterazione.
+	\end{itemize}
+	\item \texttt{-} \texttt{\$on('loadNewQuestion': String, callback: function): void} \\
+	Metodo che gestisce l'evento per scaricare una nuova domanda. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{'loadNewQuestion': String: String} \\
+		Parametro che indica su quale evento rimanere in ascolto;
+		\item \texttt{-} \texttt{callback: function} \\
+		Parametro che indica una funzione da eseguire.
+	\end{itemize}
+	\item \texttt{+} \texttt{\$on('loadNewQuestionQuiz': String, callback: function): void} \\
+	Metodo che gestisce l'evento per caricare una nuova domanda di un questionario.\\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{'loadNewQuestionQuiz': String} \\
+		Parametro che indica su quale evento rimanere in ascolto;
+		\item \texttt{-} \texttt{callback: function} \\
+		Parametro che indica una funzione da eseguire.
+	\end{itemize}
+	\item \texttt{+} \texttt{\$on('checkAnswerEvent': String, callback: function): void} \\
+	Metodo che gestisce l'evento per lanciare la catena di operazioni per la correzione di una domanda. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{'checkAnswerEvent': String} \\
+		Parametro che indica su quale evento rimanere in ascolto;
+		\item \texttt{-} \texttt{callback: function} \\
+		Parametro che indica una funzione da eseguire.
+	\end{itemize}
 	\end{itemize}
 \end{itemize}
 

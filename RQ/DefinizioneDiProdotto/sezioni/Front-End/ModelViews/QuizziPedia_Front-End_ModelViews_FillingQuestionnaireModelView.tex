@@ -43,8 +43,34 @@
 				\item \texttt{question: QuestionItemModel} \\
 				Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
 			\end{itemize}
-			\item \texttt{+ startQuiz(): void} \\
-			Metodo che gestisce l'evento per iniziare il questionario. 
+			\item \texttt{-} \texttt{downloadQuiz(): void}: \\ Metodo che ottiene l'intero questionario; \\
+			\item \texttt{+} \texttt{nextQuestion(): void}: \\ Metodo che carica la domanda successiva del quiz tramite chiamata a \texttt{QuestionController}; \\
+			\item \texttt{+} \texttt{startQuizClick(): void} \\
+			Metodo che gestisce l'evento per iniziare il questionario;
+			\item \texttt{+} \texttt{endQuiz(): void} \\
+			Metodo che gestisce l'evento per terminare il questionario in modo anticipato;
+			\item \texttt{+} \texttt{goToHome(): void} \\
+			Metodo che gestisce l'evento per tornare alla pagina principale dell'applicazione;  
+			\item \texttt{+} \texttt{\$on('\$locationChangeStart': String, callback: function): void} \\
+			Metodo che gestisce l'evento per tornare alla pagina principale dell'applicazione.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{-} \texttt{'\$locationChangeStart': String} \\
+				Parametro che indica su quale evento rimanere in ascolto;
+				\item \texttt{-} \texttt{callback: function} \\
+				Parametro che indica una funzione da eseguire.
+			\end{itemize}
+			\item \texttt{+} \texttt{\$on('addResult', callback: function): void} \\
+			Metodo che gestisce l'evento per aggiornare i risultati dati alle domande. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{-} \texttt{'addResult': String} \\
+				Parametro che indica su quale evento rimanere in ascolto;
+				\item \texttt{-} \texttt{callback: function} \\
+				Parametro che indica una funzione da eseguire.
+			\end{itemize}
+			\item \texttt{+} \texttt{graphResultAfterFinishedAQuiz(): void} \\
+			Metodo imposta le variabili per la visualizzazione del grafico finale. 
 		\end{itemize}
 	\end{itemize}
 	

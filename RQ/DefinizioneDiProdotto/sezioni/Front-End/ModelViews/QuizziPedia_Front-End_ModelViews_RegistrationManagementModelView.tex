@@ -22,12 +22,19 @@
 		\end{itemize}
 		\item \textbf{Metodi}: 
 		\begin{itemize}
-			\item \texttt{+ subscribeQuestionnaire(username: String): void} \\ Metodo che permette l'iscrizione ad un questionario. Richiama la funzionalità del \texttt{QuizService}. \\
+			\item \texttt{+} \texttt{subscribeQuestionnaire(username: String): void} \\ Metodo che permette l'iscrizione ad un questionario. Richiama la funzionalità del \texttt{QuizService}. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{username: String}\\
-				Parametro che indica l'utente da iscrivere al questionario.
+				\item \texttt{username: String}: parametro che indica l'utente da iscrivere al questionario.
 			\end{itemize}
+			\item \texttt{+} \texttt{numberOfPages(numberOfQuizzes: Number): void} \\ Metodo che permette di calcolare il numero di pagine da mostrare. \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{numberOfQuizzes: Number}: parametro che indica il numero di questionari presenti.
+			\end{itemize}
+			\item \texttt{+} \texttt{goOn(): void} \\ Metodo che permette di andare alla pagina successiva; \\
+			\item \texttt{+} \texttt{goBack(): void} \\ Metodo che permette di andare alla pagina precedente; \\
+			\item \texttt{+} \texttt{rightColor(): void} \\ Metodo che permette di impostare il giusto colore. \\
 		\end{itemize}
 	\end{itemize}
 	

@@ -22,20 +22,25 @@
 	\end{itemize}
 	\item \textbf{Metodi}: 
 	\begin{itemize}
-			\item \texttt{+ getQuestionsByUser(username: String) : Array<QuestionItemModel>} \\ 
-			Metodo che acquisisce le domande create dall'utente attraverso il \texttt{QuestionService}.\\
-			\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{username: String} \\
-				Parametro di tipo \texttt{String} contenente l'username dell'utente.
-			\end{itemize}
-			\item \texttt{+ editQuestion(idQuestion: String) : Void} \\ 
-			Metodo che gestisce l’evento click sul pulsante per modificare la domanda. Effettua il redirect alla pagina di modifica della domanda. \\
-			\textbf{Parametri}:
-			\begin{itemize}
-				\item \texttt{idQuestion: username} \\
-				Parametro di tipo \texttt{String} contenente l'id della domanda da modificare.
-			\end{itemize}
+		\item \texttt{+} \texttt{editQuestion(idQuestion: String) : void} \\ 
+		Metodo che gestisce l'evento click sul pulsante per modificare la domanda. Effettua il redirect alla pagina di modifica della domanda. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{idQuestion: String} \\
+			Parametro contenente l'id della domanda da modificare.
+		\end{itemize}
+		
+		\item \texttt{+} \texttt{goToWizardCreation(idQuestion: String) : void} \\ 
+		Metodo che gestisce l'evento click sul pulsante per creare una domanda. Effettua il redirect alla pagina di creazione della domanda con wizard; \\
+		\item \texttt{+} \texttt{goToQMLCreation(idQuestion: String) : void} \\ 
+		Metodo che gestisce l'evento click sul pulsante per creare una domanda. Effettua il redirect alla pagina di creazione della domanda con editor QML;\\
+		\item \texttt{+} \texttt{uploadImage(image: Object) : void} \\ 
+		Metodo che gestisce l'evento caricare un'immagine. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{image: Object} \\
+			Parametro contenente un'immagine.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}	
 
