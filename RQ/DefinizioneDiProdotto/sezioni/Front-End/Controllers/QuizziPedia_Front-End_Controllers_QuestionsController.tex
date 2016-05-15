@@ -29,7 +29,7 @@
 	\end{itemize}
 	\item \textbf{Metodi}:
 	\begin{itemize}
-		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDia-\\log: \$mdDialog, QuestionService: QuestionService)} \\ Metodo costruttore della classe. Interagendo con l'oggetto \texttt{QuestionItemModel} ricevuto si interfaccia con la \textit{view\ped{G}} andando a visualizzare la giusta \textit{directive\ped{G}} della tipologia di domanda. \\
+		\item \texttt{+} \texttt{QuestionsController(\$scope: \$scope, \$rootScope: \$rootScope, \$mdDia-\\log: \$mdDialog, QuestionService: QuestionService, \$timeout: \$timeout, \$location: \$location, \$routeParams, ErrorInfoModel: ErrorInfoModel, QuestionItemModel: QuestionItemModel, Utils: Utils)} \\ Metodo costruttore della classe. Interagendo con l'oggetto \texttt{QuestionItemModel} ricevuto si interfaccia con la \textit{view\ped{G}} andando a visualizzare la giusta \textit{directive\ped{G}} della tipologia di domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{\$scope: \$scope} \\
@@ -39,16 +39,12 @@
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Parametro contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
 			\item \texttt{QuestionService: QuestionService} \\ Parametro che permette di ottenere domande esistenti tramite chiamata di metodo specifici;
-		\end{itemize}
-		\item {-} \texttt{getQuestionBy(topic: String, keywords: Array<String>, level: Number\\): QuestionItemModel} \\ Metodo che richiede al back-end una domanda. \\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{topic: String} \\
-			Parametro contenente l'argomento della domanda;
-			\item \texttt{keywords: Array<String>} \\
-			Parametro contenente un array di stringhe che rappresenta le keywords scelte per l'allenamento;
-			\item \texttt{level: Number} \\
-			Parametro contenente il livello dell'utente.
+			\item \timeoutP;
+			\item \locationP;
+			\item \routeparamsP;
+			\item \errorinfomodelP;
+			\item \questionitemmodelP;
+			\item \utilsP.
 		\end{itemize}
 		\item \texttt{+} \texttt{addAnswer(index: Number, typeQuestion: String, answerGiven: \\Array<String>): void} \\
 		Metodo che gestisce l'evento di selezione delle risposte. \\
@@ -61,39 +57,34 @@
 			\item \texttt{answerGiven: Array<String>} \\
 			Parametro contenente l'array di risposte date dall'utente aggiornato all'ultima iterazione.
 		\end{itemize}
-		\item \texttt{+} \texttt{answerGiven(index: Number): Array<String>} \\
+		\item \texttt{+} \texttt{save(index: Number): Array<String>} \\
 		Metodo di supporto che ritorna un array di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande vero/falso, risposta multipla e ad area cliccabile.\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{index: Number} \\
 			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
 		\end{itemize}
-		\item \texttt{+} \texttt{orderChosen(index: Number): Array<String>} \\
-		Metodo di supporto che ritorna un array di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande ad ordinamento e di riempimento di spazi.\\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{index: Number} \\
-			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
-		\end{itemize}
-		\item \texttt{+} \texttt{linkingMade(index: Number): Array<String>} \\
-		Metodo di supporto che ritorna un array di stringhe contenente le risposte date. Si occupa di recuperare le risposte date nelle domande a collegamento.\\
-		\textbf{Parametri}:
-		\begin{itemize}
-			\item \texttt{index: Number} \\
-			Parametro contenente l'indice della risposta di cui si vuole raccogliere le risposte date. 
-		\end{itemize}
-		\item \texttt{+} \texttt{loadNewQuestionBy(topic: String, keywords: Array<String>, level:\\ Number): void} \\
+		\item \texttt{-} \texttt{downloadNextQuestionTraining(nextQuestion: Object): void} \\
 		Metodo che gestisce l'evento per scaricare una nuova domanda in base ai parametri passati. Evoca l'evento per inserire la domanda in \texttt{TrainingModelView}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{topic: String} \\
-			Parametro contenente l'argomento della domanda;
-			\item \texttt{keywords: Array<String>} \\
-			Parametro contenente un array di stringhe che rappresenta le keywords scelte per l'allenamento;
-			\item \texttt{level: Number} \\
-			Parametro contenente il livello dell'utente.
+			\item \texttt{nextQuestion: Object} \\
+			Parametro contenente un oggetto così fatto: \\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{language: String} \\
+				Parametro contenente la lingua della domanda;
+				\item \texttt{topic: String} \\
+				Parametro contenente l'argomento della domanda;
+				\item \texttt{keywords: Array<String>} \\
+				Parametro contenente un array di stringhe che rappresenta le keywords scelte per l'allenamento;
+				\item \texttt{level: Number} \\
+				Parametro contenente il livello dell'utente;
+				\item \texttt{alreadyAnswered: Array<String>} \\
+				Parametro contenente un array di stringhe che rappresenta le domande già risposte fino a quel momento dell'allenamento;
+			\end{itemize}
 		\end{itemize}
-		\item \texttt{+} \texttt{loadNewQuestion(question: QuestionItemModel): void} \\
+		\item \texttt{-} \texttt{loadNextQuestionQuiz(question: QuestionItemModel): void} \\
 		Metodo che gestisce l'evento per visualizzare una nuova domanda. \\
 		\textbf{Parametri}:
 		\begin{itemize}
@@ -101,7 +92,49 @@
 			Parametro contenente un riferimento all'oggetto di tipo \texttt{QuestionItemModel}.
 		\end{itemize}
 		\item \texttt{+} \texttt{checkAnswer(): Boolean} \\ 
-		Metodo che controlla che le risposte date siano corrette.
+		Metodo che controlla che le risposte date siano corrette;
+		\item \texttt{+} \texttt{dragnNDropQuestions(event: Object, ui: Object, index: Number, type: String, obj: Array<String>): void} 
+		Metodo che gestisce l'evento per l'inserimento delle risposte date con una domanda che ha il trascinamento come base di interazione con l'utente. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{(event: Object} \\
+			Parametro necessario per catturare l'evento di trascinamento;
+			\item \texttt{ui: Object} \\
+			Parametro necessario per capire quale oggetto viene trascinato;
+			\item \texttt{index: Number} \\
+			Parametro contenente l'indice della risposta di cui si vuole tenere traccia. Rappresenta anche l'indice dell'array \texttt{answerGiven} in cui verrà inserito l'oggetto delle risposte date;
+			\item \texttt{typeQuestion: String} \\
+			Parametro contenente una stringa la quale indica la tipologia della domanda;
+			\item \texttt{answerGiven: Array<String>} \\
+			Parametro contenente l'array di risposte date dall'utente aggiornato all'ultima iterazione.
+		\end{itemize}
+		\item \texttt{-} \texttt{\$on('loadNewQuestion': String, callback: function): void} \\
+		Metodo che gestisce l'evento per aggiornare i risultati dati alle domande. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{'loadNewQuestion': String: String} \\
+			Parametro che indica su quale evento rimanere in ascolto;
+			\item \texttt{-} \texttt{callback: function} \\
+			Parametro che indica una funzione da eseguire.
+		\end{itemize}
+		\item \texttt{+} \texttt{\$on('loadNewQuestionQuiz': String, callback: function): void} \\
+		Metodo che gestisce l'evento per aggiornare i risultati dati alle domande. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{'loadNewQuestionQuiz': String} \\
+			Parametro che indica su quale evento rimanere in ascolto;
+			\item \texttt{-} \texttt{callback: function} \\
+			Parametro che indica una funzione da eseguire.
+		\end{itemize}
+		\item \texttt{+} \texttt{\$on('checkAnswerEvent': String, callback: function): void} \\
+		Metodo che gestisce l'evento per aggiornare i risultati dati alle domande. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{-} \texttt{'checkAnswerEvent': String} \\
+			Parametro che indica su quale evento rimanere in ascolto;
+			\item \texttt{-} \texttt{callback: function} \\
+			Parametro che indica una funzione da eseguire.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
