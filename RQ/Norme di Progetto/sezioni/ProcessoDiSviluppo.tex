@@ -154,6 +154,51 @@ Possibilità di realizzazione di prototipi;
 Semplificazione dell'attività di manutenzione.
 \end{itemize}
 
+%Matteo Gnoato ----------------------------- INIZIATO A MODIFICARE DA QUA ----------------------------------
+
+
+
+
+\paragraph{Task - Specifica tecnica}
+I \textit{Progettisti} devono definire la struttura ad alto livello dell'architettura del sistema e dei singoli componenti, raccogliendo il tutto nella \textit{Specifica Tecnica}. Devono, inoltre, essere definiti i test di integrazione tra le varie componenti, che verranno inseriti in appendice al \textit{Piano di Qualifica}. \\
+I prodotti di questo task saranno:
+\begin{itemize}
+	\item \textbf{Diagrammi UML\ped{G}:}
+	\begin{itemize}
+		\item Diagrammi dei package;
+		\item Diagrammi delle classi;
+		\item Diagrammi di sequenza;
+		\item Diagrammi di attività.
+	\end{itemize}
+	\item \textbf{Design pattern:} i \textit{Progettisti} devono fornire una descrizione dei design pattern\ped{G} adottati nella definizione dell'architettura. Questa descrizione dovrà essere accompagnata da un diagramma UML\ped{G}, che ne esemplifichi il funzionamento, e dalle motivazioni che hanno portato all'adozione di tale pattern;
+	\item \textbf{Tracciamento delle componenti:} ogni componente dovrà essere tracciato ed associato ad almeno un requisito. In tal modo sarà possibile avere la certezza che tutti i requisiti accettati siano soddisfatti e che ogni componente presente nell'architettura soddisfi almeno un requisito. Tale tracciamento dovrà essere effettuato tramite \textit{DocumentsDB}, che si occupa di generare in modo automatico le relative tabelle.
+	\item \textbf{Test d'integrazione:} i \textit{Progettisti} devono definire delle strategie di verifica per poter dimostrare la corretta integrazione tra le varie componenti definite.
+\end{itemize}
+\paragraph{Task - Definizione di prodotto}
+I Progettisti, a partire dalla \textit{Specifica Tecnica}, devono produrre la \textit{Definizione di Prodotto} dove viene descritta la progettazione di dettaglio del sistema.
+Lo scopo di questo documento è quello di definire dettagliatamente ogni singola unità
+di cui è composto il sistema in modo da semplificare l’attività di codifica e allo stesso
+tempo di non fornire alcun grado di libertà al Programmatore.
+Parallelamente alla progettazione di dettaglio dei componenti software dovranno essere
+progettati i relativi test di unità che verranno descritti nel Piano di Qualifica.
+I prodotti di questo task saranno:
+\begin{itemize}
+	\item \textbf{Diagrammi UML\ped{G}:}
+	\begin{itemize}
+		\item Diagrammi dei package;
+		\item Diagrammi delle classi;
+		\item Diagrammi di sequenza.
+	\end{itemize}
+	\item \textbf{Definizione delle classi:} ogni classe precedentemente progettata viene descritta più nel dettaglio, fornendo una descrizione più approfondita dello scopo, delle sue funzionalità e del suo funzionamento. Per ogni classe dovranno essere anche definiti i vari metodi e attributi che la caratterizzano;
+	\item \textbf{Tracciamento delle classi:} ogni classe deve essere tracciata ed associata ad almeno un requisito, in questo modo è possibile avere la certezza che tutti i requisiti accettati siano soddisfatti e che ogni classe presente nell'architettura soddisfi almeno un requisito. Questo tracciamento dev'essere effettuato tramite \textit{DocumentsDB}, che si occupa di generare in modo automatico le tabelle di tracciamento.
+	\item \textbf{Test di unità:} i \textit{Progettisti} devono definire le strategie di verifica delle varie classi in modo che durante l'attività di codifica sia possibile verificare che la classe si comporti in modo corretto.
+\end{itemize}
+
+
+
+
+%Matteo Gnoato ---------------------------------- MODIFICATO FINO A QUA----------------------------------------------
+
 \subsubsection{Codifica}
 
 \paragraph{Descrizione}
