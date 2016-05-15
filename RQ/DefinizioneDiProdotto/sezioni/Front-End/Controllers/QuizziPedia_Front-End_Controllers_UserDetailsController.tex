@@ -34,12 +34,36 @@
 			Parametro contenente il riferimento all'oggetto globale \$rootScope creato da \textit{An-\\gular\ped{G}}. Viene utilizzato per rendere accessibile a tutti i \textit{controller\ped{G}} e a tutte le \textit{view\ped{G}} l'oggetto \texttt{UserDetailsModel}. In questo caso viene utilizzato per inserire in \$rootScope l'oggetto di ritorno della chiamata a \texttt{getUserDetails} del \textit{service\ped{G}} \texttt{UserDetai-\\lsService};
 			\item \texttt{\$mdDialog: \$mdDialog} \\
 			Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angul-\\ar\ped{G}} che permette di creare delle componenti a pop-up;
-			\item \texttt{userDetailsService: userDetailsService}: parametro che permette di ottenere, tramite il \textit{service\ped{G}}, la lista di tutti i dati dell'utente.
+			\item \texttt{userDetailsService: userDetailsService}: parametro che permette di ottenere, tramite il \textit{service\ped{G}}, la lista di tutti i dati dell'utente;
 		\end{itemize}
 		\item \texttt{-} \texttt{getUserDetails(username: String): UserDetailsModel} \\ Metodo che permette di ottenere i dati con una chiamata a \texttt{UserDetailsService}.
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{username: String}: parametro che identifica l'utente del quale saranno scaricati i dati.
+		\end{itemize}
+		\item \texttt{-} \texttt{getStatistics(username: String): Object} \\ 
+		Metodo che permette di ottenere le statistiche di un utente grazie all'utilizzo di \texttt{UserDetailsService}. \\
+		\textbf{Parametri}: 
+		\begin{itemize}
+			\item \texttt{username: String} \\
+			Parametro contenente la stringa username utilizzata per poter recuperare le giuste statistiche attraverso lo \texttt{StatisticsService}.
+		\end{itemize}
+		\item \texttt{-} \texttt{graphResultAfterFinischedTraining(statistics Array<String>): void} \\ 
+		Metodo che permette di gestire il grafico dei risultati al termine di un allenamento. \\
+		\textbf{Parametri}: 
+		\begin{itemize}
+			\item \texttt{statistics : Array<String>} \\
+			Parametro contenente le statistiche dell'utente.
+		\end{itemize}
+		\item \texttt{-} \texttt{loadDoneQuizzes(lang: String): Object} \\ Metodo che richiede al \textit{service\ped{G}} i dettagli dei questionari eseguiti dall'utente. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{lang: String}: lingua necessaria per la richiesta al backend
+		\end{itemize}
+		\item \texttt{-} \texttt{loadAbilitatedQuizzes(lang: String): Object} \\Metodo che ritorna i questionari a cui l'utente è iscritto. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{lang: String}: lingua necessaria per la richiesta al backend.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}

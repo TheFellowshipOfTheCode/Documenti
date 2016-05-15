@@ -49,12 +49,23 @@
 			\item \texttt{QuizService: QuizService} \\
 			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate ai questionari. Viene utilizzato il metodo \texttt{subscribeQuestio-\\nnaire} di \texttt{QuizService} per iscrivere un utente ad un questionario.
 		\end{itemize} 
-		\item \texttt{-} \texttt{getSearch(stringSearch: String): SearchModelView} \\
-		Metodo che esegue la ricerca utilizzando un metodo fornito dalla classe \texttt{SearchService}. \\
+		\item \texttt{-} \texttt{searchUser(stringSearch: String, lang: String): Array<UserDetailsModel>} \\
+		Metodo che esegue la ricerca tra gli utenti tramite un metodo fornito dalla classe \texttt{SearchService}. \\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{stringSearch: String} \\
-			Parametro contenente la stringa sulla quale si deve basare la ricerca.
+			Parametro contenente la stringa sulla quale si deve basare la ricerca;
+			\item \texttt{lang: String} \\
+			Parametro contenente la lingua per la richiesta al backend.
+		\end{itemize} 
+		\item \texttt{-} \texttt{searchQuestionnaire(stringSearch: String): QuestionnaireModel} \\
+		Metodo che esegue la ricerca tra i questionari tramite un metodo fornito dalla classe \texttt{SearchService}. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{stringSearch: String} \\
+			Parametro contenente la stringa sulla quale si deve basare la ricerca;
+			\item \texttt{lang: String} \\
+			Parametro contenente la lingua per la richiesta al backend.
 		\end{itemize} 
 		\item \texttt{+} \texttt{goToUser(username: String): void} \\
 		Metodo che gestisce l'evento click sul bottone per visualizzare il profilo dell'utente selezionato. Effettua il redirect alla pagina dell'utente.\\
