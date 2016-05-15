@@ -29,10 +29,11 @@
 			\item \texttt{\$http: \$http} \\ Campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
 			\item \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 		\end{itemize}
-		\item \texttt{+} \texttt{getUserDetails(username: String): Promise} \\ Metodo che serve per ottenere i dettagli di un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+		\item \texttt{+} \texttt{getUserDetails(username: String, lang: String): Promise} \\ Metodo che serve per ottenere i dettagli di un utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{username: String} \\ Parametro che indica l'utente del quale andranno caricati tutti i dati personali.
+			\item \texttt{username: String} \\ Parametro che indica l'utente del quale andranno caricati tutti i dati personali;
+			\item \texttt{lang: String} \\ Lingua necessaria per la chiamata al backend.
 		\end{itemize}
 		\item \texttt{+} \texttt{confirmSaveUser(user: Object, imageObject: Object): Promise} \\Metodo che serve per inviare al back-end una richiesta di salvataggio persistente dei dati. Viene invocato da \texttt{Confirm} in \texttt{ProfileManagementController}. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{ProfileManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
 		\textbf{Parametri}:

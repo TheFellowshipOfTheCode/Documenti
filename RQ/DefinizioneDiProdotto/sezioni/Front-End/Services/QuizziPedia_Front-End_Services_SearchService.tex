@@ -26,15 +26,17 @@
 			\item \texttt{\$http: \$http} \\ Campo dati contenente un riferimento al servizio \$http creato da \textit{Angular\ped{G}} per facilitare la comunicazione mediante protocollo \textit{HTTP\ped{G}};
 			\item \texttt{\$q: \$q} \\ Campo dati contenente un riferimento al servizio \$q creato da \textit{Angular\ped{G}} per facilitare la gestione di funzione asincrone mediante l’utilizzo delle \textit{Promise\ped{G}}.
 		\end{itemize}
-		\item \texttt{+} \texttt{searchUsers(keyword: String): Promise} \\Metodo che serve per recuperare la lista di utenti dopo una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \\ \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+		\item \texttt{+} \texttt{searchUsers(keyword: String, lang: String): Promise} \\Metodo che serve per recuperare la lista di utenti dopo una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \\ \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{keyword: String} \\ Parametro che rappresenta la parola da cercare.
+			\item \texttt{keyword: String} \\ Parametro che rappresenta la parola da cercare;
+			\item \texttt{lang: String} \\ Lingua necessaria per la chiamata al backend.
 		\end{itemize}
-		\item \texttt{+} \texttt{searchQuestionnaire(keyword: String): Promise} \\Metodo che serve per recuperare la lista dei questionari dopo una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\item \texttt{+} \texttt{searchQuestionnaire(keyword: String, lang: String): Promise} \\Metodo che serve per recuperare la lista dei questionari dopo una ricerca. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SearchController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{keyword: String} \\ Parametro che rappresenta la parola da cercare.
+			\item \texttt{keyword: String} \\ Parametro che rappresenta la parola da cercare;
+			\item \texttt{lang: String} \\ Lingua necessaria per la chiamata al backend.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}

@@ -34,11 +34,12 @@
 		\end{itemize}
 		\item \texttt{+} \texttt{isLogged(): Boolean} \\ Metodo che restituisce il valore dell'attributo \textit{logged} salvato all'interno del cookie che permette di evitare di eseguire l'autenticazione ad ogni caricamento della pagina;
 		 
-		\item \texttt{+} \texttt{signIn(email: String, password: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata; \\
+		\item \texttt{+} \texttt{signIn(email: String, password: String, lang: String): Promise}\\ Metodo che permette di effettuare il login all'applicazione facendo una richiesta di autenticazione al back-end passando i parametri ricevuti. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LoginController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata; \\
 			\textbf{Parametri}: 
 			\begin{itemize}
 				\item \texttt{username: String} \\ Parametro che rappresenta lo username o la email dell'utente;
-				\item \texttt{password: String} \\ Parametro che rappresenta la password dell'utente.
+				\item \texttt{password: String} \\ Parametro che rappresenta la password dell'utente;
+				\item \textit{lang: String} \\ Parametro che rappresenta la lingua da passare per la richiesta.
 			\end{itemize}
 			
 		\item \texttt{+} \texttt{logout(username: String): Promise} \\ Metodo che permette di effettuare il logout dall'applicazione. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{LogoutController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
@@ -47,20 +48,28 @@
 			\item \texttt{username: String} \\ Parametro che rappresenta l'utente che vuole eseguire il logout.
 		\end{itemize}
 		
-		\item \texttt{+} \texttt{signup(username: String, password: String, email: String, \\ nome: String, cognome: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata; \\
+		\item \texttt{+} \texttt{signup(username: String, password: String, email: String, \\ nome: String, cognome: String, lang: String): Promise} \\Metodo che permette di effettuare la registrazione all'applicazione tramite richiesta di creazione nuovo account al back-end. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{SignUpController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata; \\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{username: String} \\ Parametro che rappresenta lo username o la email dell'utente;
 				\item \texttt{password: String} \\ Parametro che rappresenta la password dell'utente;
 				\item \texttt{email: String} \\ Parametro che rappresenta la email dell'utente;
 				\item \texttt{nome: String} \\ Parametro che rappresenta il nome dell'utente;
-				\item \texttt{cognome: String} \\ Parametro che rappresenta il cognome dell'utente.
+				\item \texttt{cognome: String} \\ Parametro che rappresenta il cognome dell'utente;
+				\item \textit{lang: String} \\ Parametro che rappresenta la lingua da passare per la richiesta.
 			\end{itemize}
 			
-		\item \texttt{+} \texttt{getNewPassword(email: String): Void}  \\Metodo che permette il recupero della password. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{PasswordForgotController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata. \\
+		\item \texttt{+} \texttt{getNewPassword(email: String, lang: String): Void}  \\Metodo che permette il recupero della password. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{PasswordForgotController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata. \\
 			\textbf{Parametri}:
 			\begin{itemize}
-				\item \texttt{email: String} \\ Parametro che rappresenta la email a cui mandare un messaggio per resettare la password.
+				\item \texttt{email: String} \\ Parametro che rappresenta la email a cui mandare un messaggio per resettare la password;
+				\item \textit{lang: String} \\ Parametro che rappresenta la lingua da passare per la richiesta.
 			\end{itemize}
+		\item \texttt{+} \texttt{resetCookies(): void} \\ Metodo che permette di resettare il cookies;
+		\item \texttt{+} \texttt{giveMe(lang: String): void} \\ Metodo che permette di settare l'attributo di utente loggato nel cookies. \\
+		\textbf{Parametri}: 
+		\begin{itemize}
+			\item \textit{lang: String} \\ Parametro che rappresenta la lingua da passare per la richiesta.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}

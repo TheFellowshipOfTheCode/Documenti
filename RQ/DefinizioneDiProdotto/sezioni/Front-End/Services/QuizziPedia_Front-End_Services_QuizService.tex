@@ -85,12 +85,23 @@
 	\item \texttt{+ getQuizResults(quizId: String): Object} \\ Metodo che ritorna i risultati di un questionario; \\
 	\textbf{Parametri}:
 	\begin{itemize}
-		\item \texttt{quiId: String} \\ Id del questionario del quale recuperare i risultati.
+		\item \texttt{quizId: String} \\ Id del questionario del quale recuperare i risultati.
 	\end{itemize}
 	\item \texttt{+ getQuiz(quizId: String, username: String): Promise} \\ Metodo che ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{CreateQuestionnaireController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, cioè se l'utente è registrato, verrà restituito al chiamante il questionario. \\
 	\textbf{Parametri}:
 	\begin{itemize}
-		\item \texttt{quiId: String} \\ Id del questionario del quale recuperare i risultati.
+		\item \texttt{quizId: String} \\ Id del questionario del quale recuperare i risultati.
+	\end{itemize}
+	\item \texttt{+ setQuizResult(lang: String, resultOfQuiz: Number): Promise} \\ Metodo che ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionnaireManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, cioè se l'utente è registrato, verrà restituito al chiamante il questionario. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{lang: String} \\ Lingua necessaria per la chiamata al backend;
+		\item \texttt{resultOfQuiz: Number} \\ Risultato del quiz.
+	\end{itemize}
+	\item \texttt{+ getTopic(lang: String): Promise} \\ Metodo che ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionnaireManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, cioè se l'utente è registrato, verrà restituito al chiamante il questionario. \\
+	\textbf{Parametri}:
+	\begin{itemize}
+		\item \texttt{lang: String} \\ Lingua necessaria per la chiamata al backend.
 	\end{itemize}
 \end{itemize}
 \end{itemize}

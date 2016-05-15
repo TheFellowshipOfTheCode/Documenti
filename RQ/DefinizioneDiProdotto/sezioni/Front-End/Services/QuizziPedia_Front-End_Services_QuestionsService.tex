@@ -41,26 +41,52 @@
 			\item \texttt{\$http: \$http} \\ Campo dati che contiene un riferimento al servizio \$http che permette la comunicazione con il protocollo \textit{HTTP\ped{G}};
 			\item \texttt{\$q: \$q} \\ Campo dati che contiene un riferimento a \$q, un servizio offerto da \textit{Angular\ped{G}} per la gestione, tramite \textit{Promise\ped{G}}, di chiamate asincrone.
 		\end{itemize}
-		\item \texttt{+} \texttt{sendQuestion(question: QuestionItemModel): Promise} \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata; In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \textit{controller\ped{G}} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+		\item \texttt{+} \texttt{sendQuestion(question: QuestionItemModel, lang: String): Promise} \\Metodo che serve per mandare una domanda al back-end in modo che venga salvata; In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \textit{controller\ped{G}} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
 		\textbf{Parametri}: 
 		\begin{itemize}
-			\item \texttt{question: QuestionItemModel} \\ Identifica tutti i dettagli di una domanda.
+			\item \texttt{question: QuestionItemModel} \\ Identifica tutti i dettagli di una domanda;
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
 		\end{itemize}
-		\item \texttt{+} \texttt{getUserQuestions(username: String): Promise} \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \\ \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+		\item \texttt{+} \texttt{getUserQuestions(lang: String): Promise} \\Metodo che ritorna tutte le domande create dall'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \\ \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{username: String} \\ Parametro che indica l'utente del quale andranno caricate tutte le domande da lui create.
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
 		\end{itemize}
 		\item \texttt{+} \texttt{getKeywords(key: String): Array<String>}\\ Metodo che permette di ottenere le keywords a partire da una stringa passata;\\
 		\textbf{Parametri}:
 		\begin{itemize}
 			\item \texttt{key: String} \\ Parametro che identifica la stringa con la quale cercare le keywords.
 		\end{itemize}
-		\item \texttt{+} \texttt{getQuestion(idQuestion: String): Promise} \\ Metodo che ritorna la domanda associata all'id passato come parametro. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+		\item \texttt{+} \texttt{getQuestion(idQuestion: String, lang: String): Promise} \\ Metodo che ritorna la domanda associata all'id passato come parametro. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsManagementController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
 		\textbf{Parametri}:
 		\begin{itemize}
-			\item \texttt{idQuestion: String} \\ Parametro che indica l'id della domanda da recuperare e restituire.
+			\item \texttt{idQuestion: String} \\ Parametro che indica l'id della domanda da recuperare e restituire;
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
 		\end{itemize}
-		\item \texttt{+} \texttt{getNextQuestion(): Promise} \\ Metodo che ritorna la domanda successiva nella modalità allenamento. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.
+		\item \texttt{+} \texttt{getNextQuestion(lang: String): Promise} \\ Metodo che ritorna la domanda successiva nella modalità allenamento. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata;\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
+		\end{itemize}
+		\item \texttt{+} \texttt{getTopics(lang: String): Promise} \\ Metodo che ritorna i topic disponibili. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
+		\end{itemize}
+		\item \texttt{+} \texttt{updateStatisticsUser(lang: String): Promise} \\ Metodo che aggiorna le statistiche dell'utente. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
+		\end{itemize}
+		\item \texttt{+} \texttt{updateStatisticsQuestion(lang: String): Promise} \\ Metodo che aggiorna le statistiche della domanda. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{lang: String} \\ Parametro che indica la lingua per la chiamata al back-end.
+		\end{itemize}
+		\item \texttt{+} \texttt{uploadImage(image: File): Promise} \\ Metodo che carica l'immagine della domanda. Il metodo ritorna una \textit{Promise\ped{G}}. In caso la \textit{Promise\ped{G}} venga rifiutata, verrà restituito al \texttt{QuestionsController} un oggetto \texttt{ErrorModelInfo} contenente tutti i dettagli dell'errore. In caso la \textit{Promise\ped{G}} venga accettata, verrà restituito al chiamante del metodo il risultato della chiamata.\\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{image: File} \\ Parametro che contiene l'immagine da caricare.
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
