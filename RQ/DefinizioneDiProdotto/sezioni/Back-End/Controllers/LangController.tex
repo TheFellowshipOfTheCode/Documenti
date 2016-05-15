@@ -19,10 +19,33 @@
 	\item \textbf{Metodi}:
 		\begin{itemize}
 			\item \texttt{+ getVarlist(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
+			Ritorna la lista di variabili con la loro traduzione.
 			\textbf{Parametri}:
 				\begin{itemize}
 					\item \texttt{req: Request} \\
 					Rappresenta la richiesta inviata al server\ped{G}. Contiene la stringa che indica la lingua che si vuole tradurre le variabili;
+					\item \texttt{res: Response} \\
+					Rappresenta la risposta che il server fornirà al termine  dell'esecuzione del metodo;
+					\item \texttt{next: function(QuizziPediaError)} \\
+					Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \textit{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+				\end{itemize}
+				\item \texttt{+ getLang(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
+				Ritorna un array di stringhe contenenti le lingue usate nell'applicazione. 
+			\textbf{Parametri}:
+				\begin{itemize}
+					\item \texttt{req: Request} \\
+					Rappresenta la richiesta inviata al server\ped{G};
+					\item \texttt{res: Response} \\
+					Rappresenta la risposta che il server fornirà al termine  dell'esecuzione del metodo;
+					\item \texttt{next: function(QuizziPediaError)} \\
+					Rappresenta la \textit{callback\ped{G}} che il metodo deve chiamare al termine dell'elaborazione per passare il controllo ai successivi \textit{middleware\ped{G}}. La presenza del parametro facoltativo \textit{QuizziPediaError} attiva la catena di gestione dell'errore in sostituzione della normale catena di gestione delle richieste.
+				\end{itemize}
+				\item \texttt{+ getSlang(req: Request, res: Response,\\ next: function(QuizziPediaError)): void} \\
+				Ritorna un'abbreviazione della lingua usata nell'applicazione.
+			\textbf{Parametri}:
+				\begin{itemize}
+					\item \texttt{req: Request} \\
+					Rappresenta la richiesta inviata al server\ped{G}.
 					\item \texttt{res: Response} \\
 					Rappresenta la risposta che il server fornirà al termine  dell'esecuzione del metodo;
 					\item \texttt{next: function(QuizziPediaError)} \\
