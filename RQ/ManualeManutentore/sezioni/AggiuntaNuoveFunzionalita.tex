@@ -5,12 +5,12 @@ Il software QuizziPedia è stato progettato e sviluppato seguendo il principio d
 \subsection{Front-End}
 
 \subsubsection{Inserimento nuova view}
-Per inserire una nuova \textit{view\ped{G}} è necessario creare un file $nome_view.html$ all'interno della cartella View del path: QuizziPedia/Front-End/View. Se si decide di utilizzare la stessa metodologia dell'intero progetto per la visualizzazione della giusta traduzione delle parole chiave è indispensabile che il controller associato alla view sia \texttt{AppController} e che le keywords che saranno visualizzate a video siano del tipo: \texttt{$listOfKey.nomevariabile$}. Infine è necessario aggiornare il file \texttt{AppRouter} inserendo il codice:
+Per inserire una nuova \textit{view\ped{G}} è necessario creare un file $nomeview.html$ all'interno della cartella Views del path: QuizziPedia/Front-End/Views. Se si decide di utilizzare la stessa metodologia dell'intero progetto per la visualizzazione della giusta traduzione delle parole chiave è indispensabile che il controller associato alla view sia \texttt{AppController} e che le keywords che saranno visualizzate a video siano del tipo: \texttt{$listOfKey.nomevariabile$}. Infine è necessario aggiornare il file \texttt{AppRouter} inserendo il codice:
 
 \begin{lstlisting}[language=Java,firstnumber=1]
 .when('/:lang/nomeview', {
 templateUrl: '/Views/NomeView.html',
-controller:"NuovaController",
+controller:"NuovoController",
 css: [
 {
 href: 'css/auth-main.css'
@@ -28,40 +28,40 @@ media: 'handheld, screen and (max-width:480px), only screen and (max-device-widt
 \end{lstlisting}
 
 \subsubsection{Inserimento nuova directive}
-Per inserire una nuova \textit{directive\ped{G}} custom è necessario creare un file $nome_directive.html$ e $nome_directive.json$ all'interno della cartella Directives del path QuizziPedia/Front-End/Directives. Se si decide di utilizzare la stessa metodologia dell'intero progetto per la visualizzazione della giusta traduzione delle parole chiave è indispensabile che il controller associato alla view sia \texttt{AppController} e che le keywords che saranno visualizzate a video siano del tipo: \texttt{$listOfKey.nomevariabile$}. Infine è necessario inserire all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Directives:
+Per inserire una nuova \textit{directive\ped{G}} custom è necessario creare un file $nomedirective.html$ e $nomedirective.json$ all'interno della cartella Directives del path QuizziPedia/Front-End/Directives. Se si decide di utilizzare la stessa metodologia dell'intero progetto per la visualizzazione della giusta traduzione delle parole chiave è indispensabile che il controller associato alla view sia \texttt{AppController} e che le keywords che saranno visualizzate a video siano del tipo: \texttt{$listOfKey.nomevariabile$}. Infine è necessario inserire all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Directives:
 \begin{lstlisting}[language=Java,firstnumber=1]
-<script src="Directives/NomeDirectives.js"></script>
+<script src="Directives/NomeDirective.js"></script>
 \end{lstlisting}
 
 
 \subsubsection{Inserimento nuovo controller}  
-Per inserire un nuovo \textit{controller\ped{G}} è necessario creare un file $nome_controller.js$ all'interno della cartella Controller del path: QuizziPedia/Front-End/Controller. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Controllers:
+Per inserire un nuovo \textit{controller\ped{G}} è necessario creare un file $nomecontroller.js$ all'interno della cartella Controllers del path: QuizziPedia/Front-End/Controllers. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Controllers:
 \begin{lstlisting}[language=Java,firstnumber=1]
 	<script src="Controllers/NomeController.js"></script>
 \end{lstlisting}
 
 \subsubsection{Inserimento nuovo service}
-Per inserire un nuovo \textit{service\ped{G}} è necessario creare un file $nome_service.js$ all'interno della cartella Services del path QuizziPedia/Front-End/Services. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Services:
+Per inserire un nuovo \textit{service\ped{G}} è necessario creare un file $nomeservice.js$ all'interno della cartella Services del path QuizziPedia/Front-End/Services. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Services:
 \begin{lstlisting}[language=Java,firstnumber=1]
 <script src="Services/NomeService.js"></script>
 \end{lstlisting}
 
 \subsubsection{Inserimento nuovo model}
-Per inserire un nuovo \textit{model\ped{G}} è necessario creare un file $nome_model.js$ all'interno della cartella Models del path QuizziPedia/Front-End/Models. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Models:
+Per inserire un nuovo \textit{model\ped{G}} è necessario creare un file $nomemodel.js$ all'interno della cartella Models del path QuizziPedia/Front-End/Models. Infine si deve aggiungere all'interno del file \texttt{Index}, presente nella cartella QuizziPedia/Front-End, la seguente linea di codice nella sezione Models:
 \begin{lstlisting}[language=Java,firstnumber=1]
-<script src="Models/NomeModels.js"></script>
+<script src="Models/NomeModel.js"></script>
 \end{lstlisting}
 
 
 \subsection{Back-End}
 \subsubsection{Inserimento nuovo controller}
-Per inserire un nuovo \textit{controller\ped{G}} è necessario creare un file $nome_controller.js$ all'interno della cartella Controller del path: QuizziPedia/Back-End/App/Controller. E' necessario poi associarli una nuova classe route creando un nuovo file $nome_router.js$ all'interno della cartella Routes del path: QuizziPedia/Back-End/App/Routes. All'interno di quest'ultimo inserire poi la seguente riga di codice per associarlo al \textit{controller\ped{G}} appena creato:
+Per inserire un nuovo \textit{controller\ped{G}} è necessario creare un file $nomecontroller.js$ all'interno della cartella Controllers del path: QuizziPedia/Back-End/App/Controllers. E' necessario poi associare una nuova classe route creando un nuovo file $nomerouter.js$ all'interno della cartella Routes del path: QuizziPedia/Back-End/App/Routes. All'interno di quest'ultimo inserire poi la seguente riga di codice per associarlo al \textit{controller\ped{G}} appena creato:
 \begin{lstlisting}[language=Java,firstnumber=1]
 var NomeController = require('../Controller/NomeController.js');
 \end{lstlisting}
 
 \subsubsection{Inserimento nuovo model}
-Per inserire un nuovo \textit{model\ped{G}} è necessario creare un file $nome_model.js$ all'interno della cartella Models del path QuizziPedia/Back-End/App/Models. Infine si deve associare il nuovo model al relativo \textit{controller\ped{G}} aggiungendo la seguente riga di codice in quest'ultimo:
+Per inserire un nuovo \textit{model\ped{G}} è necessario creare un file $nomemodel.js$ all'interno della cartella Models del path QuizziPedia/Back-End/App/Models. Infine si deve associare il nuovo model al relativo \textit{controller\ped{G}} aggiungendo la seguente riga di codice in quest'ultimo:
 \begin{lstlisting}[language=Java,firstnumber=1]
 var user = require('../Model/NuovoModel.js');
 \end{lstlisting}

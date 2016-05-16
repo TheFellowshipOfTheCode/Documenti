@@ -193,13 +193,13 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \end{lstlisting}
 
 \subsection{Generazione del JSON}
-Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON\ped{G}} contente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON\ped{G}} diverso, questo accada sia per la generazione tramite \textit{wizard\ped{G}} sia tramite QML.
+Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON\ped{G}} contenente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON\ped{G}} diverso, questo accade sia per la generazione tramite \textit{wizard\ped{G}} sia tramite QML.
 
 \subsubsection{JSON domanda Vero/Falso}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "__userId",
-"makeWith" : "QML" || "wizzard" ,
+"makeWith" : "QML" || "wizard" ,
 "language" : "it || en",
 "question" :
 	[{
@@ -227,7 +227,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {	
 "author" : "_UserId",
-"makeWith" : "QML" || "wizzard" ,
+"makeWith" : "QML" || "wizard" ,
 "language" : "it || en" ,
 "type": "rispostaMultipla",
 "question" [{
@@ -268,7 +268,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId", 
-"makeWith" : "QML" || "wizzard" ,
+"makeWith" : "QML" || "wizard" ,
 "language" : "it || en",
 "question" : [{
 	"type": "ordinamentoStringhe",
@@ -303,7 +303,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId",
-"makeWith" : "QML" || "wizzard" ,
+"makeWith" : "QML" || "wizard" ,
 "language" : "it || en",
 "question" : [{
 	"type": "ordinamentoImmagini",
@@ -339,7 +339,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId",
-"makeWith" : "QML" || "wizzard" ,
+"makeWith" : "QML" || "wizard" ,
 "language" : "it || en",
 "question" : [{
 	"type": "collegamento",
@@ -370,7 +370,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId" ,
-"makeWith" : "QML" || "wizzard" ,
+"makeWith" : "QML" || "wizard" ,
 "language" : "it || en", 
 "question" : [{
 	"type": "areaCliccabile",
@@ -409,7 +409,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId",
-"makeWith" : "QML" || "wizzard",
+"makeWith" : "QML" || "wizard",
 "language" : "it || en",
 "question" : [{
 	"type": "spaziVuoti",
