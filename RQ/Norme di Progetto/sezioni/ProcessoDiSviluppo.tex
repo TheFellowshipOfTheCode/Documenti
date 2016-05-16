@@ -189,6 +189,43 @@ Possibilità di realizzazione di prototipi;
 Semplificazione dell'attività di manutenzione.
 \end{itemize}
 
+\subparagraph{Notazioni per la progettazione di dettaglio}
+\subsubparagraph{Notazioni per il Front-End}
+
+\subsubparagraph{Notazioni derivate da AngularJS}
+\subsubparagraph{Directive}
+Nelle descrizioni degli scope isolati delle directive, la modalità con cui vengono passati i parametri utilizza la seguente notazione:
+\begin{itemize}
+\item 
+@: indica che il parametro passato allo scope è una stringa e i cambiamenti effettuati su di essa dallo scope non sono visibili all'esterno;
+\item
+=: indica che il parametro passato allo scope è un riferimento ad un oggetto;
+\item
+\&: indica che il parametro passato è una funzione, che può avere dei parametri, e che lo scope può essere invocato dalla directive.
+\end{itemize}
+Come nome per l’oggetto scope nella definizione di una directive si è scelto di utilizzare scope al posto di \$scope in quanto rispecchia il nome del campo dati utilizzato nella definizione della directive.
+Nei diagrammi delle classi relative alle directive sono stati esplicitati solamente i campi dati, definiti da AngularJS, necessari all’applicazione.
+
+\subsubparagraph{Controller}
+Le funzioni che un controller definisce nell’oggetto \$scope sono state modellate come metodi pubblici del controller stesso.
+
+\subsubparagraph{Promise e \$q}
+Tutti i metodi dei services che eseguono richieste al server forniscono come valore di ritorno una promessa. Questo è stato modellato indicando come tipo di ritorno la classe Promise, maggiori informazioni riguardo l’interfaccia della classe e le API offerte da \$q possono essere trovate nella pagina: \href{url}{https://docs.angularjs.org/api/ng/service/\$q}
+
+\subsubparagraph{Notazioni per il Back-End}
+\subsubparagraph{Express}
+Nell’architettura definita dai Progettisti si è preferito mantenere la notazione nomeRouter che
+veniva utilizzato nella versione 3 di Express, al posto di nomeRoutes della versione 4 di Express
+perché è stato ritenuto più significativo. La motivazione di questa scelta deriva dal fatto che ogni modulo
+contiene tutte routes logicamente correlate tra loro, è quindi più facile pensare ad un modulo come router
+specifico anziché come un aggregato di routes. Di conseguenza la cartella contenente i vari moduli di
+routes si chiamerà Routers anziché Routes.
+
+\subsubparagraph{MongoDB e Mongoose}
+Come identificativo per la ricerca di oggetti nelle collections di MongoDB vengono usati pa-
+rametri di tipo ObjectId. A livello di implementazione ai metodi con parametri di tipo ObjectId
+verranno passate delle stringhe. La conversione viene effettuata automaticamente da Mongoose.
+
 \subsubsection{Codifica}
 
 \paragraph{Descrizione}
