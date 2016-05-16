@@ -35,74 +35,84 @@
 	\item \textbf{Metodi}:
 		\begin{itemize}
 		
-			\item \texttt{+ createQuiz(info: JSON, callback: function(JSON), \\errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ createQuiz(info: JSON, callback: function(JSON)): void}\\
 			Crea un questionario con i dati che vengono passati.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{info: JSON}\\
 				Rappresenta i dati del questionario che verrà creato;
 				\item \texttt{callback: function(JSON)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
-				\item \texttt{errback: function(QuizziPediaError)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
 			\end{itemize}
 			
-			\item \texttt{+ addQuestion(questionID: ObjectId): void}\\
+			\item \texttt{+ addQuestion(questionID: ObjectId,  callback: function(JSON)): void}\\
 			Aggiunge una domanda al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{questionID: ObjectId}\\
-				Rappresenta l'identificativo della domanda da aggiungere al questionario.
+				Rappresenta l'identificativo della domanda da aggiungere al questionario;
+				\item \texttt{callback: function(JSON)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
 			\end{itemize}
 			
-			\item \texttt{+ removeQuestion(questionID: ObjectId): void}\\
+			\item \texttt{+ removeQuestion(questionID: ObjectId, callback: function(JSON)): void}\\
 			Rimuove una domanda dal questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{questionID: ObjectId}\\
-				Rappresenta l'identificativo della domanda da rimuovere dal questionario.
+				Rappresenta l'identificativo della domanda da rimuovere dal questionario;
+				\item \texttt{callback: function(JSON)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
 			\end{itemize}
 			
-			\item \texttt{+ setTitle(title: String, errback: function(QuizziPediaError)): void}\\ 		
+			\item \texttt{+ setTitle(title: String, callback: function(QuizziPediaError)): void}\\ 		
 			Da un titolo al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{title: String}\\
 				Rappresenta il titolo da dare al questionario;
-				\item \texttt{errback: function(QuizziPediaError)}\\
+				\item \texttt{callback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ addUser(userID: ObjectId): void}\\
+			\item \texttt{+ subscribeUser (quizId:ObjectId,userID: ObjectId, , callback: function(QuizziPediaError)): void}\\
 			Aggiunge un utente dalla lista degli iscritti al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
+				\item \texttt{quizId: ObjectId}\\
+				Rappresenta l'identificativo del questionario a  cui aggiungere l'iscritto.
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da aggiungere al questionario.
+				\item \texttt{callback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ addActiveUser(userID: ObjectId): void}\\
+			\item \texttt{+ addActiveUser(quizId: ObjectId, userID: ObjectId, callback: function(QuizziPediaError)): void}\\
 			Aggiunge un utente dalla lista degli utenti che hanno svolto il questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
+				\item \texttt{quizId: ObjectId}\\
+				Rappresenta l'identificativo del questionario a  cui aggiungere l'iscritto.
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da aggiungere al questionario.
+				\item \texttt{callback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
 			\item \texttt{+ addCorrect(): void}\\
 			Incrementa il numero di risposte corrette date alle domande del questionario;		
 			
-			\item \texttt{+ removeUser(userID: ObjectId, \\errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ removeUser(userID: ObjectId, \\callback: function(QuizziPediaError)): void}\\
 			Rimuovere un utente dalla lista degli iscritti al questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
 				\item \texttt{userID: ObjectId}\\
 				Rappresenta l'identificativo dell'utente da rimuovere dalla lista degli iscritti al questionario;
-				\item \texttt{errback: function(QuizziPediaError)}\\
+				\item \texttt{callback: function(QuizziPediaError)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ searchQuiz(searchword: String, callback: function(JSON), \\errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ searchQuiz(searchword: String, callback: function(JSON)): void}\\
 			Ricerca un questionario.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -110,11 +120,9 @@
 				Rappresenta il titolo o l'autore del questionario da ricercare;
 				\item \texttt{callback: function(JSON)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
-				\item \texttt{errback: function(QuizziPediaError)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ getPersonalQuizzes(userID: ObjectId, callback: function(JSON), errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ getPersonalQuizzes(userID: ObjectId, callback: function(JSON)): void}\\
 			Ritorna i questionari creati da un utente pro.\\
 			\textbf{Parametri}:
 			\begin{itemize}
@@ -122,18 +130,39 @@
 				Rappresenta l'identificativo dell'utente che ha creato i questionari che si vogliono ottenere;
 				\item \texttt{callback: function(JSON)}\\
 				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
-				\item \texttt{errback: function(QuizziPediaError)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
 			\end{itemize}
 			
-			\item \texttt{+ getQuiz(callback: function(JSON), \\errback: function(QuizziPediaError)): void}\\
+			\item \texttt{+ getQuizSubscribe(userID: ObjectId,callback: function(JSON)): void}\\
+				Ritorna i questionari ai quali l'utente si è iscritto.\\
+				\textbf{Parametri}:
+				\begin{itemize}
+					\item \texttt{userID: ObjectId}\\
+					Rappresenta l'identificativo dell'utente al quali si vogliono ritornare i questionari a cui si è iscritto;
+					\item \texttt{callback: function(QuizziPediaError)}\\
+					Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
+				\end{itemize}
+				
+			\item \texttt{+ getQuizSubscribers(quizId: ObjectId,callback: function(JSON)): void}\\
+			Ritorna gli iscritti ad un determinato questionario.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{quizId: ObjectId}\\
+				Rappresenta l'identificativo del quiz al quale si vuole ritornare gli iscritti;
+				\item \texttt{callback: function(QuizziPediaError)}\\
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
+			\end{itemize}
+				
+			
+			\item \texttt{+ getQuiz(quizId:ObjectId,userId:ObjectId,callback: function(JSON)): void}\\
 			Ritorna il questionario da compilare.\\
 			\textbf{Parametri}:
 			\begin{itemize}
+				\item \texttt{quizId: ObjectId}\\
+				Rappresenta l'identificativo del quiz;
+				\item \texttt{userId: ObjectId}\\
+				Rappresenta l'identificativo dell'utente;
 				\item \texttt{callback: function(JSON)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione;
-				\item \texttt{errback: function(QuizziPediaError)}\\
-				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione in caso di errore.
+				Rappresenta la \textit{callback\ped{G}} che verrà eseguita al termine dell'elaborazione.
 			\end{itemize}
 		\end{itemize}
 \end{itemize}
