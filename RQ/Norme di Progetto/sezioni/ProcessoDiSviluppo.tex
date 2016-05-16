@@ -136,30 +136,7 @@ Capacità di poter far fronte a modifiche da effettuare senza che l'intera strut
 Soddisfare i requisiti di qualità fissati dal committente.
 \end{itemize}
 
-\paragraph{Norme progettuali}
-\subparagraph{Tecniche di modularizzazione}
-I progettisti prima di iniziare l'attività di progettazione dovranno definire delle tecniche di modularizzazione affinchè l'architettura software progettata sia di elevata qualità.
-I progettisti devono necessariamente adottare delle tecniche che consentano la scomposizione del sistema in moduli e definire una descrizione precisa della struttura modulare e delle relazioni che esistono tra i singoli moduli. 
-L'attività di modularizzazione consentirà i seguenti vantaggi:
-\begin{itemize}
-\item
-Semplificazione della verifica della correttezza semantica e nella correzione di errori;
-\item
-Riusabilità del software;
-\item
-Leggibilità del codice;
-\item
-Possibilità di realizzazione di prototipi;
-\item
-Semplificazione dell'attività di manutenzione.
-\end{itemize}
-
-%Matteo Gnoato ----------------------------- INIZIATO A MODIFICARE DA QUA ----------------------------------
-
-
-
-
-\paragraph{Task - Specifica tecnica}
+\paragraph{Specifica tecnica}
 I \textit{Progettisti} devono definire la struttura ad alto livello dell'architettura del sistema e dei singoli componenti, raccogliendo il tutto nella \textit{Specifica Tecnica}. Devono, inoltre, essere definiti i test di integrazione tra le varie componenti, che verranno inseriti in appendice al \textit{Piano di Qualifica}. \\
 I prodotti di questo task saranno:
 \begin{itemize}
@@ -174,7 +151,7 @@ I prodotti di questo task saranno:
 	\item \textbf{Tracciamento delle componenti:} ogni componente dovrà essere tracciato ed associato ad almeno un requisito. In tal modo sarà possibile avere la certezza che tutti i requisiti accettati siano soddisfatti e che ogni componente presente nell'architettura soddisfi almeno un requisito. Tale tracciamento dovrà essere effettuato tramite \textit{DocumentsDB}, che si occupa di generare in modo automatico le relative tabelle.
 	\item \textbf{Test d'integrazione:} i \textit{Progettisti} devono definire delle strategie di verifica per poter dimostrare la corretta integrazione tra le varie componenti definite.
 \end{itemize}
-\paragraph{Task - Definizione di prodotto}
+\paragraph{Definizione di prodotto}
 I Progettisti, a partire dalla \textit{Specifica Tecnica}, devono produrre la \textit{Definizione di Prodotto} dove viene descritta la progettazione di dettaglio del sistema.
 Lo scopo di questo documento è quello di definire dettagliatamente ogni singola unità
 di cui è composto il sistema in modo da semplificare l’attività di codifica e allo stesso
@@ -194,10 +171,23 @@ I prodotti di questo task saranno:
 	\item \textbf{Test di unità:} i \textit{Progettisti} devono definire le strategie di verifica delle varie classi in modo che durante l'attività di codifica sia possibile verificare che la classe si comporti in modo corretto.
 \end{itemize}
 
-
-
-
-%Matteo Gnoato ---------------------------------- MODIFICATO FINO A QUA----------------------------------------------
+\paragraph{Norme progettuali}
+\subparagraph{Tecniche di modularizzazione}
+I progettisti prima di iniziare l'attività di progettazione dovranno definire delle tecniche di modularizzazione affinchè l'architettura software progettata sia di elevata qualità.
+I progettisti devono necessariamente adottare delle tecniche che consentano la scomposizione del sistema in moduli e definire una descrizione precisa della struttura modulare e delle relazioni che esistono tra i singoli moduli. 
+L'attività di modularizzazione consentirà i seguenti vantaggi:
+\begin{itemize}
+\item
+Semplificazione della verifica della correttezza semantica e nella correzione di errori;
+\item
+Riusabilità del software;
+\item
+Leggibilità del codice;
+\item
+Possibilità di realizzazione di prototipi;
+\item
+Semplificazione dell'attività di manutenzione.
+\end{itemize}
 
 \subsubsection{Codifica}
 
@@ -307,6 +297,55 @@ Suddividere logicamente il codice sorgente tra diversi file fisici;
 \item
 Suddividere le sezioni complesse ed estese di codice in moduli comprensibili di dimensioni minori.
 \end{itemize}
+
+\subparagraph{Struttura dell'intestazione del file}
+L'intestazione di ogni file deve contenere obbligatoriamenete le seguenti informazioni:
+\begin{itemize}
+\item \textit{Name}: nome del file, con riferimento alla \textit{Definizione di Prodotto};
+\item \textit{Description}: descrizione del file, con riferimento alla \textit{Definizione di Prodotto};
+\item \textit{Creation data}: indica la data di creazione del file;
+\item \textit{Author}: indica l'autore del file;
+\item \textit{License}: indica la licenza del file;
+\item \textit{Update history}: indica la cronologia delle modifiche effettuate al file, è così strutturata:
+\begin{itemize}
+\item \textit{ID}: id univoco della versione corrente del file;
+\item \textit{Update data}: data corrispondente all'ultimo aggiornamento del file;
+\item \textit{Description}: descrizione della modifica effettuata;
+\item \textit{Author}: autore dell'ultima modifica.
+\end{itemize} 
+
+\end{itemize}
+Di seguito è riportato un esempio di commento di una classe da noi prodotta.
+\begin{lstlisting}[language=json,firstnumber=1]
+/**********************************************************************
+ * Name: QuizziPedia::Front-End::Controllers::EditorQMLController;
+ * Description: questa classe permette di gestire l'inserimento delle domande QML
+ *
+ *
+ * Creation data: 03-05-2016;
+ * Author: Alberto Ferrara;
+ * License: MIT.
+ **********************************************************************
+ * Updates history
+ *---------------------------------------------------------------------
+ * ID: EditorQMLController_20160513
+ * Update data: 13-05-2016
+ * Description: Aggiornato il controller alla versiona finale;
+ * Author: Alberto Ferrara.
+ * *-------------------------------------------------------------------
+ * ID: EditorQMLController_20160510
+ * Update data: 10-05-2016
+ * Description: Aggiunti i metodi per le varie operazioni;
+ * Author: Alberto Ferrara.
+ * --------------------------------------------------------------------
+ * ID: EditorQMLController_20160503
+ * Update data: 03-05-2016
+ * Description: Creato il controller;
+ * Author: Alberto Ferrara.
+ *---------------------------------------------------------------------
+ **********************************************************************
+\end{lstlisting}
+
 
 \paragraph{Ricorsione}
 La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. Nel caso l'utilizzo di memoria risulti troppo elevato la ricorsione verrà rimossa.
