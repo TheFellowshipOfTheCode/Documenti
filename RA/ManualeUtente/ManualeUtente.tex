@@ -1,0 +1,57 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{Manuale Utente}
+\newcommand{\nomedocumentofisico}{ManualeUtente\_v1\_0\_0.pdf}
+\newcommand{\redazione}{\SM, \\ & \GN}
+\newcommand{\verifica}{\MV}
+\newcommand{\approvazione}{\GR}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+\newcommand{\datacreazione}{13 Maggio 2016}
+\newcommand{\datamodifica}{15 Maggio 2016}
+\newcommand{\stato}{Approvato}
+\newcommand{\versione}{1}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+%Layout del documento 
+\input{../../Template/layout.tex}
+
+
+%Comandi generali
+\input{../../Template/comandi.tex}
+
+\begin{document}
+	
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{sezioni/diario.tex}
+\newpage
+\input{../../Template/index.tex}
+\newpage
+\listoffigures
+
+\newpage
+%sezioni documento
+\input{sezioni/Introduzione.tex}
+\input{sezioni/RequisitiDiSistema.tex}
+\input{sezioni/Utilizzo.tex}
+\input{sezioni/HomePage.tex}
+\input{sezioni/Registrazione.tex}
+\input{sezioni/Autenticazione.tex}
+\input{sezioni/Allenamento.tex}
+\input{sezioni/VisualizzazioneProfilo.tex}
+\input{sezioni/GestioneQuestionari.tex}
+\input{sezioni/GestioneDomande.tex}
+\input{sezioni/CambiaLingua.tex}
+\input{sezioni/Errori.tex}
+
+\appendix
+\input{sezioni/AppendiceQML.tex}
+\input{sezioni/Glossario.tex}
+
+\end{document}

@@ -1,0 +1,432 @@
+\newpage
+\section{QML - Quiz Markup Language}
+Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter creare domande da proporre negli allenamenti e nei questionari. Per rendere più semplice l'aggiunta di una domanda sono stati realizzati degli \textit{wizard\ped{G}} per alcune tipologie di domande, ma questo limita l'utente alla sola creazione di tali tipologie. La soluzione adottata è la realizzazione di un nuovo linguaggio di \textit{markup\ped{G}} che permette la definizione di domande non ordinarie, denominato QML acronimo di Quiz Markup Language.
+Per la realizzazione di QML abbiamo adottato il \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
+
+\subsection{Definizione della grammatica}
+Per mantenere la semplicità di realizzazione di una domanda tramite QML è stato deciso di mantenere la sintassi \textit{JSON}, con l'aggiunta delle sole parole chiave necessarie per mantenere coerente la grammatica con lo scopo del QML. Alla grammatica è stata data possibilità di inserire commenti che saranno rimossi prima della creazione del \textit{JSON}.
+
+\subsubsection{Sintassi domanda Vero/Falso}
+\begin{lstlisting}[language=json,firstnumber=1]
+{	
+"type": "veroFalso",
+"topic" : "Patente",
+"image": "/img/veroFalso/example.png", //immagine possibile nel testo della domanda vero e falso
+"answers":
+	[{
+	"text": "In Italia la guida e' a destra",
+	"isItRight": true
+	}],
+"keywords":
+	[{
+	"guida",
+	"legge",
+	"italia"
+	}] 
+}
+\end{lstlisting}
+
+\subsubsection{Sintassi domanda a Risposta Multipla}
+\begin{lstlisting}[language=json,firstnumber=1]
+{	
+"type" : "rispostaMultipla",
+"topic" : "Matematica",
+"questionText": "Quali di questi numeri e' pari?",
+"url": "/img/rispostaMultipla/D0_3.png", //immagine possibile nel testo della domanda risposta multipla
+"answers":
+	[{
+	"text": "1",
+	"url": "/img/rispostaMultipla/D0_1.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	 },{
+	"text": "2",
+	"url": "/img/rispostaMultipla/D0_2.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": true
+	 },{
+	"text": "7",
+	"url": "/img/rispostaMultipla/D0_3.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	 },{
+	"text": "9",
+	"url": "/img/rispostaMultipla/D0_4.png", //url dell'immagine, possibile campo facoltativo
+	"isItRight": false
+	 }],
+"keywords":
+	[{
+	"numeri",
+	"matematica",
+	"scuola"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{Sintassi domanda a Ordinamento di Stringhe}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "ordinamentoStringhe",
+"topic" : "Matematica",
+"questionText": "Ordina questi numeri in modo decrescente.",
+"answer":
+	[{
+	"text": "1",
+	"position": 4
+	},{
+	"text": "2",
+	"position": 3
+	},{
+	"text": "7",
+	"position": 2
+	},{
+	"text": "9",
+	"position": 1
+	}],
+"keywords":
+	[{
+	"ordinamento",
+	"numeri",
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{Sintassi domanda a Ordinamento Immagini}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "ordinamentoImmagini",
+"topic" : "Grammatica Italiana",
+"questionText": "Ordina queste immagini in modo da ottenere la parola "CIAO".",
+"url": "/img/ordinamentoImmagini/D0_1.png", //immagine possibile nel testo della domanda ad ordianamento di immagini
+"answer":
+	[{
+	"url": "/img/domandeOrdinamentoImmagini/I.png", //url dell'immagine
+	"position": 2
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/A.png",
+	"position": 3
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/O.png",
+	"position": 4
+	},{
+	"url": "/img/domandeOrdinamentoImmagini/C.png",
+	"position": 1
+	}],
+"keywords":
+	[{
+	"parole",
+	"grammatica"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{Sintassi domanda a Collegamento di Elementi}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "collegamentoElementi",
+"topic" : "Cultura Generale",
+"questionText": "Collega queste coppie di nemici classici.",
+"answer":
+	[{
+	"text_1_A": "cane",
+	"text_1_B": "gatto"
+	},{
+	"url_2_A": "/img/collegamento/uncino.png",
+	"text_2_B": "peter pan"
+	},{
+	"url_3_A": "/img/collegamento/D0_1.png",
+	"url_3_B": "/img/collegamento/D0_5.png"
+	}],
+"keywords":
+	[{
+	"nemici"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{Sintassi domanda ad Area Cliccabile}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "areaCliccabile",
+"topic" : "Medicina",
+"questionText": "Clicca quale tra le seguenti scelte e' il bicipide.",
+"image": "/img/areaCliccabile/D0_1.png", //sfondo dell'area cliccabile
+"resolution": { "x":400, "y":500 },
+"answer":
+	[{
+	"x": "200",
+	"y": "50",
+	"text": "testo facoltativo di arricchimento"
+	},{
+	"x": "300",
+	"y": "120",
+	"text": "testo facoltativo di arricchimento"
+	},{
+	"x": "200",
+	"y": "200",
+	"text": "testo facoltativo di arricchimento"
+	}],
+"keywords":
+	[{
+	"corpo umano",
+	"medicina",
+	"scienze" ,
+	"muscoli"
+	}]
+}
+\end{lstlisting}
+
+\subsubsection{Sintassi domanda a Riempimento spazi vuoti}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"type": "spaziVuoti",
+"topic" : "Storia"
+"questionText": "Giulio Cesare era un console romano.",
+"answer":
+	[{
+	"parolaNumero": 2 //sta ad indicare quale parola e' da oscurare. In questo caso la numero 2
+	},{
+	"parolaNumero": 5
+	}],
+"keywords":
+	[{
+	"storia",
+	}] 
+}
+\end{lstlisting}
+
+\subsection{Generazione del JSON}
+Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON\ped{G}} contenente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON\ped{G}} diverso, questo accade sia per la generazione tramite \textit{wizard\ped{G}} sia tramite QML.
+
+\subsubsection{JSON domanda Vero/Falso}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : "__userId",
+"makeWith" : "QML" || "wizard" ,
+"language" : "it || en",
+"question" :
+	[{
+	"type": "veroFalso",
+	"image": "/img/veroFalso/example.png", //immagine possibile nel testo della domanda vero e falso
+	"answers":
+		[{
+		"text": "In Italia la guida e' a destra",
+		"isItRight": true
+		}]
+	}],
+"keywords" : 
+	[{
+	"guida",
+	"legge",
+	"italia"
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Risposta Multipla}
+\begin{lstlisting}[language=json,firstnumber=1]
+{	
+"author" : "_UserId",
+"makeWith" : "QML" || "wizard" ,
+"language" : "it || en" ,
+"type": "rispostaMultipla",
+"question" [{
+	"questionText": "Quali di questi numeri e' pari?",
+	"url": "/img/rispostaMultipla/D0_3.png", //immagine possibile nel testo della domanda risposta multipla
+	"answers":
+		[{
+		"text": "1",
+		"url": "/img/rispostaMultipla/D0_1.png", //url dell'immagine, possibile campo facoltativo
+		"isItRight": false
+		},{
+		"text": "2",
+		"url": "/img/rispostaMultipla/D0_2.png", //url dell'immagine, possibile campo facoltativo
+		"isItRight": true
+		},{
+		"text": "7",
+		"url": "/img/rispostaMultipla/D0_3.png", //url dell'immagine, possibile campo facoltativo
+		"isItRight": false
+		},{
+		"text": "9",
+		"url": "/img/rispostaMultipla/D0_4.png", //url dell'immagine, possibile campo facoltativo
+		"isItRight": false
+		}]
+}],
+"keywords":
+	[{
+	"numeri",
+	"matematica",
+	"scuola"
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Ordinamento di Stringhe}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : "_UserId", 
+"makeWith" : "QML" || "wizard" ,
+"language" : "it || en",
+"question" : [{
+	"type": "ordinamentoStringhe",
+	"questionText": "Ordina questi numeri in modo decrescente.",
+	"answers":
+		[{
+		"text": "1",
+		"position": 4
+		},{
+		"text": "2",
+		"position": 3
+		},{
+		"text": "7",
+		"position": 2
+		},{
+		"text": "9",
+		"position": 1
+		}]
+}],
+"keywords":
+	[{
+	"ordinamento",
+	"numeri",
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Ordinamento Immagini}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : "_UserId",
+"makeWith" : "QML" || "wizard" ,
+"language" : "it || en",
+"question" : [{
+	"type": "ordinamentoImmagini",
+	"questionText": "Ordina queste immagini in modo da ottenere la parola "CIAO".",
+	"url": "/img/ordinamentoImmagini/D0_1.png", //immagine possibile nel testo della domanda ad ordianamento di immagini
+	"answers":
+		[{
+		"url": "/img/domandeOrdinamentoImmagini/I.png", //url dell'immagine
+		"position": 2
+		},{
+		"url": "/img/domandeOrdinamentoImmagini/A.png",
+		"position": 3
+		},{
+		"url": "/img/domandeOrdinamentoImmagini/O.png",
+		"position": 4
+		},{
+		"url": "/img/domandeOrdinamentoImmagini/C.png",
+		"position": 1
+		}]
+}],
+"keywords":
+	[{
+	"parole",
+	"grammatica"
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Collegamento di Elementi}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : "_UserId",
+"makeWith" : "QML" || "wizard" ,
+"language" : "it || en",
+"question" : [{
+	"type": "collegamento",
+	"questionText": "Collega queste coppie di nemici classici.",
+	"answers":
+		[{
+		"text_1_A": "cane",
+		"text_1_B": "gatto"
+		},{
+		"url_2_A": "/img/collegamento/uncino.png",
+		"text_2_B": "peter pan"
+		},{
+		"url_3_A": "/img/collegamento/D0_1.png",
+		"url_3_B": "/img/collegamento/D0_5.png"
+		}]
+}],
+"keywords":
+	[{
+	"nemici"
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda ad Area Cliccabile}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : "_UserId" ,
+"makeWith" : "QML" || "wizard" ,
+"language" : "it || en", 
+"question" : [{
+	"type": "areaCliccabile",
+	"questionText": "Clicca quale tra le seguenti scelte e' il bicipide.",
+	"image": "/img/areaCliccabile/D0_1.png", //sfondo dell'area cliccabile
+	"resolution": { "x":400, "y":500 },
+	"answers":
+		[{
+		"x": "200",
+		"y": "50",
+		"text": "testo facoltativo di arricchimento"
+		},{
+		"x": "300",
+		"y": "120",
+		"text": "testo facoltativo di arricchimento"
+		},{
+		"x": "200",
+		"y": "200",
+		"text": "testo facoltativo di arricchimento"
+		}]
+}],
+"keywords":
+	[{
+	"corpo umano",
+	"medicina",
+	"scienze" ,
+	"muscoli"
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
+
+\subsubsection{JSON domanda a Riempimento spazi vuoti}
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"author" : "_UserId",
+"makeWith" : "QML" || "wizard",
+"language" : "it || en",
+"question" : [{
+	"type": "spaziVuoti",
+	"questionText": "Giulio Cesare era un console romano.",
+	"answers":
+		[{
+		"parolaNumero": 2 //sta ad indicare quale parola e' da oscurare. In questo caso la numero 2
+		},{
+		"parolaNumero": 5
+		}]
+}],
+"keywords":
+	[{
+	"storia",
+	}],
+"level" : 500,
+"totalAnswers" : 0,
+"correctAnswers" : 0
+}
+\end{lstlisting}
