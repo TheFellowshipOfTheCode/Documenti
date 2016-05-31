@@ -1,0 +1,85 @@
+\newpage
+\section{Configurazione e modalità di utilizzo}
+\subsection{Configurazione dell'ambiente di lavoro}
+Per l'utilizzo del software è necessaria l'installazione della piattaforma \textit{Node.js\ped{G}}, del Node \textit{package\ped{G}} manager \textit{npm\ped{G}} e del sistema software di controllo di versione distribuito \textit{Git\ped{G}}. 
+Inoltre nell'ambiente di lavoro in cui verrà eseguito QuizziPedia dovrà essere installato Python 2.7 per il corretto funzionamento dei test, eseguendo il comando da terminale:\\
+\\
+\centerline{\texttt{npm install -g node-gyp}}\\
+\\
+e installando, dipendentemente dal sistema operativo in uso, i seguenti pacchetti:
+\begin{itemize}
+	\item \textbf{UNIX}
+	\begin{itemize}
+		\item Python (v2.7 raccomandata, v3.x.x non è supportata);
+		\item \texttt{make};
+		\item Un compilatore C/C++, come GCC.
+	\end{itemize}
+	\item \textbf{Mac OS X}
+	\begin{itemize}
+		\item Python (v2.7 raccomandata, v3.x.x non è supportata);
+		\item Xcode: è necessario installare il Command Line Tools tramite Xcode. Lo si può trovare nel menu Xcode -> Preferences -> Downloads;
+		\item Questo passo installerà gcc e il relativo pacchetto di programmi contiene il \texttt{make}.
+	\end{itemize}
+	\item \textbf{Windows 10}
+	\begin{itemize}
+		\item Python (v2.7.10 raccomandato, v3.x.x non è supportata): assicurarsi che la variabile d'ambiente PYTHON abbia il valore: \verb|\path\to\python.exe|;
+		\item Installare l'ultima versione di \textit{npm\ped{G}};
+		\item Installare Visual Studio Community 2015 Edition;
+		\item Impostare la variabile d'ambiente \verb|GYP_MSVS_VERSION=2015|;
+		\item Avviare il prompt dei comandi come Amministratore ed eseguire il comando: \texttt{npm install};
+		\item Per i sistemi a 64-bit è necessario anche Windows 7 64-bit SDK;
+		\item Potrebbe essere necessario eseguire uno dei seguenti comandi se WindowsSDKDir lamenta di non essere impostato:
+	\end{itemize}
+\end{itemize}
+	\begin{center}
+		\verb|call "C:\Program Files\Microsoft SDKs\Windows\v7.1\bin\Setenv.cmd"/Release/x86|\\
+		\verb|call "C:\Program Files\Microsoft SDKs\Windows\v7.1\bin\Setenv.cmd"/Release/x64|\\
+	\end{center}
+La guida originale per l'installazione del pacchetto node-gyp è visibile sul link presentato all'interno della sezione Riferimenti -> Informativi.\\
+A questo punto è possibile scaricare il software presente nel seguente link:\\ 
+\url{https://github.com/TheFellowshipOfTheCode/QuizziPedia}
+
+\subsection{Configurazione del database}
+Affinché l'applicazione funzioni correttamente è necessaria la configurazione del database. Per lo sviluppo del progetto è stata utilizzata la piattaforma mLab (\url{https://mlab.com}), che offre la possibilità di creare database Mongo. Dopo aver effettuato l'iscrizione e l'autenticazione al servizio, è necessaria la creazione di un database e di un utente che vi può accedere. Il nome del database deve essere \texttt{quizzipedia} e le collections che devono essere inserite al suo interno sono:
+\begin{itemize}
+	\item \texttt{questions}
+	\item \texttt{quizzes}
+	\item \texttt{topics}
+	\item \texttt{users}
+	\item \texttt{Variables}
+\end{itemize}
+ La collection \texttt{Variables} contiene le keywords per la traduzione di tutte le parole chiave presenti nel software. Per la traduzione in italiano scaricare il file JSON presente all'indirizzo:\\ 
+ \url{https://github.com/TheFellowshipOfTheCode/Documenti/blob/master/Variables_it.json}\\
+ mentre per quella in inglese all'indirizzo:\\ 
+ \url{https://github.com/TheFellowshipOfTheCode/Documenti/blob/master/Variables_eng.json}.\\ 
+ Per ultimare la configurazione del database configurare il file \texttt{loginToMongoLab} presente nel percorso QuizziPedia/Back-End/Config:
+ \begin{lstlisting}[language=Java,firstnumber=1]
+ var login="nome_utente_database";
+ var password="password_utente_database";
+ var url="url_database_quizzipedia";
+ var database="quizzipedia";
+ 
+ module.exports.login= login;
+ module.exports.password= password;
+ module.exports.url= url;
+ module.exports.database= database;
+ 
+ \end{lstlisting}
+ 
+\subsection{Avvio dell'applicazione}
+Da terminale eseguire i seguenti comandi all'interno della cartella QuizziPedia:\\
+\\
+\centerline{\texttt{npm install}}\\
+\\
+\centerline{\texttt{npm start}}\\
+\\
+A questo punto il software è avviabile attraverso un \textit{browser\ped{G}} sulla porta \textit{localhost\ped{G}} indicata dal terminale.
+
+\subsection{Modalità di utilizzo}
+Vi sono tre modalità di utilizzo del software, ognuna delle quali ha differenti privilegi:
+\begin{itemize}
+	\item \textbf{Utente non autenticato}: non è necessaria l'iscrizione all'applicazione ed è possibile solo effettuare la modalità allenamento e ricercare utenti e questionari;
+	\item \textbf{Utente autenticato}: è necessaria l'iscrizione attraverso l'apposita funzionalità visibile nell'home page, compilandone tutti i campi dati. Una volta effettuata l'autenticazione, è possibile accedere a tutte le funzionalità che l'applicazione offre tranne la creazione di questionari;
+	\item \textbf{Utente autenticato pro}: il software permette di effettuare un upgrade del proprio account all'interno della funzionalità Gestione profilo. Un utente autenticato pro può accedere ad ogni funzionalità dell'applicazione. 
+\end{itemize}
+
