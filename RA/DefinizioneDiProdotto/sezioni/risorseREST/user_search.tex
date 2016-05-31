@@ -1,0 +1,80 @@
+	\item \texttt{/:lang/user/:userId/search/:keyword/users}
+	 \begin{itemize}
+	 	\item \textbf{Method}: GET;
+	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+	 	\item \textbf{Descrizione}: effettua una ricerca di utenti da parte di un utente;
+	 	\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"keyword" : [stringa da ricercare]
+}
+\end{lstlisting} 
+		\item \textbf{Response:} la risposta deve avere un campo \texttt{array} contenente i risultati degli utenti trovati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"userResult" : [
+"_userID" : [identificativi dell'utente trovato]
+"name" : [nome dell'utente trovato]
+"surname" : [cognome dell'utente trovato]
+]
+}
+\end{lstlisting}
+	 \end{itemize}
+
+\item \texttt{/:lang/user/:userId/search/:keyword/quizzes}
+	 \begin{itemize}
+	 	\item \textbf{Method}: GET;
+	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+	 	\item \textbf{Descrizione}: effettua una ricerca di questionari da parte di un utente;
+	 	\item \textbf{Request}: la richiesta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"keyword" : [stringa da ricercare]
+}
+\end{lstlisting} 
+		\item \textbf{Response:} la risposta deve avere un campo \texttt{array} contenente i risultati dei questionari trovati:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"quizResult : [
+"_quizID" : [identificativo del questionario]
+"title" : [titolo del questionario]
+"author" : [username dell'autore del questionario]
+]
+}
+\end{lstlisting}
+	 \end{itemize}	 
+	 
+	\item \texttt{/:lang/user/:userId/search/users/:userId}
+	 \begin{itemize}
+	 	\item \textbf{Method}: GET;
+	 	\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+	 	\item \textbf{Descrizione}: restituisce le informazioni dell'utente precedentemente trovato tramite una ricerca;
+	 	\item \textbf{Response:} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"username" : [username utente da visualizzare]
+"name" : [nome utente da visualizzare]
+"surname" : [cognome utente da visualizzare]
+"email" : [email utente da visualizzare]
+"userImg": [rappresenta l'immagine dell'utente da visualizzare]
+"levelUser" : [livello utente da visualizzare]
+"statistics":[array di JSON, contenente le statische dell'utente di ogni argomento]
+}
+\end{lstlisting}
+	 \end{itemize}
+	 
+	 
+	\item \texttt{/:lang/user/:userId/search/quizzes/:quizId}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso:} Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: restituisce le informazioni del questionario precedentemente trovato tramite una ricerca;
+		\item \textbf{Response:} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [identifica il titolo del questionario]
+"author" : [identifica l'autore del questionario]
+"questions" : [identifica l'Array di JSON con le domande relative al questionario]
+}
+\end{lstlisting}
+	\end{itemize}

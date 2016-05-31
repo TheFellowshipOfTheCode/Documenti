@@ -1,0 +1,43 @@
+\paragraph{QuizziPedia::Front-End::Controllers::StatisticsController}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.8]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_StatisticsController.png}
+	\caption{QuizziPedia::Front-End::Controllers::StatisticsController}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe permette di gestire le statistiche di un utente;
+	\item \textbf{Utilizzo}: fornisce le funzionalità per ottenere le statistiche di un utente per poterle mostrare nella \textit{view\ped{G}};
+	\item \textbf{Relazione con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN \texttt{StatisticsModelView}}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{directive\ped{G}} \texttt{StatisticsDirective} e il \textit{controller\ped{G}} \texttt{StatisticsController}; 
+		\item \textbf{IN \texttt{StatisticsService}}: questa classe permette di ottenere le statistiche dell'utente;
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{model\ped{G}} dell'applicazione;
+		\item \texttt{-} \texttt{StatisticsService: StatisticsService} \\
+		Campo dati contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle statistiche da visualizzare;
+		\item \texttt{+} \texttt{userStatistic: StatisticsModelView} \\ Oggetto di tipo \texttt{StatisticsModelView} contenente le informazioni delle statistiche. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{directive\ped{G}} \texttt{StatisticsDirective} e il \textit{controller\ped{G}} \texttt{StatisticsContro-\\ller}.
+	\end{itemize}	
+	\item \textbf{Metodi}:
+		\begin{itemize}
+		\item \texttt{+} \texttt{StatisticsController(\$scope: \$scope, StatisticsService: Statist-\\icsService)} \\ 
+		Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{\$scope: \$scope} \\
+			Parametro contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{viewmodel\ped{G}} e il \textit{model\ped{G}} dell'applicazione;
+			\item \texttt{StatisticsService: StatisticsService} \\
+			Parametro contenente un riferimento al servizio che si occupa della gestione delle informazioni legate alle statistiche da visualizzare.
+		\end{itemize}
+		\item \texttt{-} \texttt{getStatistics(username: String): Object} \\ 
+		Metodo che permette di ottenere le statistiche di un utente grazie all'utilizzo di \texttt{StatisticsService}. \\
+		\textbf{Parametri}: 
+		\begin{itemize}
+			\item \texttt{username: String} \\
+			Parametro contenente la stringa username utilizzata per poter recuperare le giuste statistiche attraverso lo \texttt{StatisticsService}.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+

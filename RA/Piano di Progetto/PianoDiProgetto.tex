@@ -1,0 +1,50 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{\PdP}
+\newcommand{\nomedocumentofisico}{PianoDiProgetto\_v5\_0\_0.pdf}
+\newcommand{\redazione}{\MP}
+\newcommand{\verifica}{\GN}
+\newcommand{\approvazione}{\GR}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+\newcommand{\datacreazione}{12 Dicembre 2015}
+\newcommand{\datamodifica}{15 Maggio 2016}
+\newcommand{\stato}{Approvato}
+\newcommand{\versione}{5}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+%Layout del documento 
+\input{../../Template/layout.tex}
+
+
+%Comandi generali
+\input{../../Template/comandi.tex}
+
+\begin{document}
+	
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{sezioni/diario.tex}
+\input{../../Template/index.tex}
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+%sezioni documento
+\input{sezioni/Introduzione.tex} 
+\input{sezioni/AnalisiDeiRischi.tex}
+\input{sezioni/Pianificazione.tex}
+\input{sezioni/CalendarioAttivita.tex}
+\input{sezioni/SuddivisioneDelLavoro.tex}
+\input{sezioni/ProspettoEconomico.tex}
+\input{sezioni/Consuntivo.tex}
+\appendix
+\input{sezioni/Organigramma.tex}
+
+\end{document}

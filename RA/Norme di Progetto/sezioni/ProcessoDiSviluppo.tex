@@ -1,0 +1,436 @@
+\section{Processi primari}
+\subsection{Processo di fornitura}
+
+\subsubsection{Studio di Fattibilità}
+Alla pubblicazione dei capitolati d'appalto il \textit{\RdP} dovrà fissare un
+numero di riunioni volte alla discussione e al confronto tra i membri del \textit{team\ped{G}}.
+In seguito, gli \textit{Analisti} dovranno redigere lo \textit{\SdF} in base a quanto
+emerso nelle riunioni.\\
+Lo \textit{\SdF} sarà articolato nei seguenti punti:
+\begin{itemize}
+	\item \textbf{Descrizione:} descrizione generale di ciò che viene richiesto
+	dal capitolato;
+	\item \textbf{Dominio Applicativo:} descrizione dell'ambito di utilizzo del
+	prodotto richiesto;
+	\item \textbf{Dominio Tecnologico:} descrizione delle tecnologie impiegate
+	nello sviluppo del progetto richiesto;
+	\item \textbf{Criticità:} elenco delle possibili problematiche che potrebbero
+	sorgere durante lo sviluppo del prodotto richiesto, individuando quindi punti
+	critici ed eventuali rischi;
+	\item \textbf{Valutazione Finale:} piccolo riassunto finale nel quale verranno
+	spiegate le motivazioni per cui è stato scelto o scartato il suddetto
+	capitolato.
+\end{itemize}
+
+\subsection{Processo di sviluppo}
+\subsubsection{Analisi dei Requisiti}
+Ultimato lo \textit{\SdF} gli \textit{\Anas} dovranno redigere l'\textit{\AdR}
+che dovrà obbligatoriamente essere strutturata nel seguente modo:
+\paragraph{Classificazione dei requisiti}
+Dovrà essere redatto un elenco di requisiti, emersi durante le riunioni interne
+e/o esterne. Questo compito spetta agli \textit{\Anas}. I requisiti dovranno
+essere classificati secondo la seguente codifica:
+\begin{center}
+R[Tipo][Importanza][Codice]
+\end{center}
+\begin{itemize}
+  \item \textbf{Tipo:} può assumere questi valori:
+  \begin{itemize}
+    \item \textbf{F:} indica un requisito funzionale;
+    \item \textbf{Q:} indica un requisito di qualità;
+    \item \textbf{P:} indica un requisito prestazionale;
+    \item \textbf{V:} indica un requisito di vincolo.
+  \end{itemize}
+  \item \textbf{Importanza:} può assumere questi valori:
+  \begin{itemize}
+    \item \textbf{O:} indica un requisito obbligatorio;
+    \item \textbf{D:} indica un requisito desiderabile;
+    \item \textbf{F:} indica un requisito facoltativo.
+  \end{itemize}
+  \item \textbf{Codice:} indica il codice identificativo del requisito, è
+  univoco e deve essere indicato in forma gerarchica.
+\end{itemize}
+Per ogni requisito si dovrà inoltre indicare:
+\begin{itemize}
+  \item \textbf{Descrizione:} una breve descrizione, deve essere meno ambigua possibile;
+  \item \textbf{Fonte:} la fonte può essere una delle seguenti:
+  \begin{itemize}
+    \item \textit{Capitolato:} deriva direttamente dal testo del capitolato;
+    \item \textit{Verbale:} deriva da un incontro verbalizzato;
+    \item \textit{Interno:} deriva da discussioni interne al \textit{team\ped{G}};
+    \item \textit{Casi d'uso:} deriva da uno o più casi d'uso.
+  \end{itemize}
+\end{itemize}
+\paragraph{Classificazione dei casi d'uso}
+I casi d'uso identificati devono essere descritti nel seguente modo:
+\begin{center}
+  UC[Codice padre].[Codice identificativo]
+\end{center}
+dove:
+\begin{itemize}
+  \item\textbf{Codice padre}: indica il codice del caso d'uso padre di quello in
+  esame, se non è identificabile è da omettere;
+  \item\textbf{Codice identificativo}: codice univoco e progressivo del caso d'uso in esame.
+\end{itemize}
+Per ogni caso d'uso devono inoltre essere identificate le seguenti informazioni:
+\begin{itemize}
+  \item\textbf{Nome}: indica il nome del caso d'uso;
+  \item\textbf{Attori}: indica gli attori coinvolti nel caso d'uso;
+  \item\textbf{Descrizione}: chiara, precisa e concisa descrizione del caso
+  d'uso;
+  \item\textbf{Precondizione}: indica la situazione che deve essere vera prima
+  dell'esecuzione del caso d'uso;
+  \item\textbf{Postcondizione}: indica la situazione che deve essere vera dopo
+  l'esecuzione del caso d'uso;
+  \item\textbf{Scenario principale}: descrizione composta dal flusso dei casi d'uso
+  figli;
+  \item\textbf{Scenari alternativi}: descrizione composta dai casi d'uso che non
+  appartengono al flusso principale di esecuzione;
+  \item\textbf{Estensioni}: indica quali sono tutte le estensioni, se presenti;
+  \item\textbf{Inclusioni}: indica quali sono tutte le inclusioni, se presenti;
+  \item\textbf{Generalizzazioni}: indica quali sono tutte le generalizzazioni,
+  se presenti.
+\end{itemize}
+\subsubsection{Progettazione}
+
+\paragraph{Descrizione}
+L'attività di progettazione definisce come deve essere realizzata la struttura dell'architettura software. I requisiti delineati, all'interno del documento \textit{\AdR}, devono essere utili a realizzare la documentazione specifica e a determinare le linee guida da seguire durante l'attività di codifica.
+Tale attività deve essere svolta in maniera ottimale e precisa dai \textit{\Progs}.
+
+\paragraph{Diagrammi}
+La progettazione deve utilizzare le seguenti tipologie di diagrammi \textit{UML\ped{G}}:
+\begin{itemize}
+\item
+\textbf{Diagrammi di classe}: illustrano una collezione di elementi dichiarativi di un modello come classi e tipi, assieme ai loro contenuti e alle loro relazioni;
+\item
+\textbf{Diagrammi dei \textit{package\ped{G}}}: raggruppamenti di classi in una unità di livello più alto;
+\item
+\textbf{Diagrammi di attività}: illustrano il flusso di operazioni relativo ad un'attività; utilizzati soprattutto per descrivere la logica di un algoritmo;
+\item
+\textbf{Diagrammi di sequenza}: descrivono una determinata sequenza di azioni dove tutte le scelte sono già state effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
+\end{itemize}
+
+
+\paragraph{Requisiti per i progettisti}
+
+I \textit{\Progs} sono responsabili delle attività di progettazione. Essi sono tenuti ad avere:
+\begin{itemize}
+\item
+Profonda conoscenza di tutto ciò che riguarda il processo di sviluppo del software;
+\item
+Capacità di saper anticipare i cambiamenti;
+\item
+Notevole inventiva per riuscire a trovare una soluzione progettuale accettabile anche in mancanza di una metodologia che sia sufficientemente espressiva;
+\item
+Capacità di individuare con rapidità e sicurezza le soluzioni più opportune.
+\end{itemize}
+
+\paragraph{Obiettivi della progettazione}
+La fase di progettazione si pone i seguenti obiettivi:
+\begin{itemize}
+\item
+Progettare un software con le caratteristiche di qualità che sono state dettagliate nella fase di analisi e specifica dei requisiti;
+\item
+Capacità di poter far fronte a modifiche da effettuare senza che l'intera struttura del software già costruita debba essere messa nuovamente in discussione ed elaborata;
+\item
+Soddisfare i requisiti di qualità fissati dal committente.
+\end{itemize}
+
+\paragraph{Specifica tecnica}
+I \textit{Progettisti} devono definire la struttura ad alto livello dell'architettura del sistema e dei singoli componenti, raccogliendo il tutto nella \textit{Specifica Tecnica}. Devono, inoltre, essere definiti i test di integrazione tra le varie componenti, che verranno inseriti in appendice al \textit{Piano di Qualifica}. \\
+I prodotti di questo task saranno:
+\begin{itemize}
+	\item \textbf{Diagrammi UML\ped{G}:}
+	\begin{itemize}
+		\item Diagrammi dei package;
+		\item Diagrammi delle classi;
+		\item Diagrammi di sequenza;
+		\item Diagrammi di attività.
+	\end{itemize}
+	\item \textbf{Design pattern:} i \textit{Progettisti} devono fornire una descrizione dei design pattern\ped{G} adottati nella definizione dell'architettura. Questa descrizione dovrà essere accompagnata da un diagramma UML\ped{G}, che ne esemplifichi il funzionamento, e dalle motivazioni che hanno portato all'adozione di tale pattern;
+	\item \textbf{Tracciamento delle componenti:} ogni componente dovrà essere tracciato ed associato ad almeno un requisito. In tal modo sarà possibile avere la certezza che tutti i requisiti accettati siano soddisfatti e che ogni componente presente nell'architettura soddisfi almeno un requisito. Tale tracciamento dovrà essere effettuato tramite \textit{DocumentsDB}, che si occupa di generare in modo automatico le relative tabelle.
+	\item \textbf{Test d'integrazione:} i \textit{Progettisti} devono definire delle strategie di verifica per poter dimostrare la corretta integrazione tra le varie componenti definite.
+\end{itemize}
+\paragraph{Definizione di prodotto}
+I Progettisti, a partire dalla \textit{Specifica Tecnica}, devono produrre la \textit{Definizione di Prodotto} dove viene descritta la progettazione di dettaglio del sistema.
+Lo scopo di questo documento è quello di definire dettagliatamente ogni singola unità
+di cui è composto il sistema in modo da semplificare l’attività di codifica e allo stesso
+tempo di non fornire alcun grado di libertà al Programmatore.
+Parallelamente alla progettazione di dettaglio dei componenti software dovranno essere
+progettati i relativi test di unità che verranno descritti nel Piano di Qualifica.
+I prodotti di questo task saranno:
+\begin{itemize}
+	\item \textbf{Diagrammi UML\ped{G}:}
+	\begin{itemize}
+		\item Diagrammi dei package;
+		\item Diagrammi delle classi;
+		\item Diagrammi di sequenza.
+	\end{itemize}
+	\item \textbf{Definizione delle classi:} ogni classe precedentemente progettata viene descritta più nel dettaglio, fornendo una descrizione più approfondita dello scopo, delle sue funzionalità e del suo funzionamento. Per ogni classe dovranno essere anche definiti i vari metodi e attributi che la caratterizzano;
+	\item \textbf{Tracciamento delle classi:} ogni classe deve essere tracciata ed associata ad almeno un requisito, in questo modo è possibile avere la certezza che tutti i requisiti accettati siano soddisfatti e che ogni classe presente nell'architettura soddisfi almeno un requisito. Questo tracciamento dev'essere effettuato tramite \textit{DocumentsDB}, che si occupa di generare in modo automatico le tabelle di tracciamento.
+	\item \textbf{Test di unità:} i \textit{Progettisti} devono definire le strategie di verifica delle varie classi in modo che durante l'attività di codifica sia possibile verificare che la classe si comporti in modo corretto.
+\end{itemize}
+
+\paragraph{Norme progettuali}
+\subparagraph{Tecniche di modularizzazione}
+I progettisti prima di iniziare l'attività di progettazione dovranno definire delle tecniche di modularizzazione affinchè l'architettura software progettata sia di elevata qualità.
+I progettisti devono necessariamente adottare delle tecniche che consentano la scomposizione del sistema in moduli e definire una descrizione precisa della struttura modulare e delle relazioni che esistono tra i singoli moduli. 
+L'attività di modularizzazione consentirà i seguenti vantaggi:
+\begin{itemize}
+\item
+Semplificazione della verifica della correttezza semantica e nella correzione di errori;
+\item
+Riusabilità del software;
+\item
+Leggibilità del codice;
+\item
+Possibilità di realizzazione di prototipi;
+\item
+Semplificazione dell'attività di manutenzione.
+\end{itemize}
+
+\subparagraph{Notazioni per la progettazione di dettaglio}
+\subsubparagraph{Notazioni per il Front-End}
+
+\subsubparagraph{Notazioni derivate da AngularJS}
+\subsubparagraph{Directive}
+Nelle descrizioni degli scope isolati delle directive, la modalità con cui vengono passati i parametri utilizza la seguente notazione:
+\begin{itemize}
+\item 
+@: indica che il parametro passato allo scope è una stringa e i cambiamenti effettuati su di essa dallo scope non sono visibili all'esterno;
+\item
+=: indica che il parametro passato allo scope è un riferimento ad un oggetto;
+\item
+\&: indica che il parametro passato è una funzione, che può avere dei parametri, e che lo scope può essere invocato dalla directive.
+\end{itemize}
+Come nome per l’oggetto scope nella definizione di una directive si è scelto di utilizzare scope al posto di \$scope in quanto rispecchia il nome del campo dati utilizzato nella definizione della directive.
+Nei diagrammi delle classi relative alle directive sono stati esplicitati solamente i campi dati, definiti da AngularJS, necessari all’applicazione.
+
+\subsubparagraph{Controller}
+Le funzioni che un controller definisce nell’oggetto \$scope sono state modellate come metodi pubblici del controller stesso.
+
+\subsubparagraph{Promise e \$q}
+Tutti i metodi dei services che eseguono richieste al server forniscono come valore di ritorno una promessa. Questo è stato modellato indicando come tipo di ritorno la classe Promise, maggiori informazioni riguardo l’interfaccia della classe e le API offerte da \$q possono essere trovate nella pagina: \href{url}{https://docs.angularjs.org/api/ng/service/\$q}
+
+\subsubparagraph{Notazioni per il Back-End}
+\subsubparagraph{Express}
+Nell’architettura definita dai Progettisti si è preferito mantenere la notazione nomeRouter che
+veniva utilizzato nella versione 3 di Express, al posto di nomeRoutes della versione 4 di Express
+perché è stato ritenuto più significativo. La motivazione di questa scelta deriva dal fatto che ogni modulo
+contiene tutte routes logicamente correlate tra loro, è quindi più facile pensare ad un modulo come router
+specifico anziché come un aggregato di routes. Di conseguenza la cartella contenente i vari moduli di
+routes si chiamerà Routers anziché Routes.
+
+\subsubparagraph{MongoDB e Mongoose}
+Come identificativo per la ricerca di oggetti nelle collections di MongoDB vengono usati pa-
+rametri di tipo ObjectId. A livello di implementazione ai metodi con parametri di tipo ObjectId
+verranno passate delle stringhe. La conversione viene effettuata automaticamente da Mongoose.
+
+\subsubsection{Codifica}
+
+\paragraph{Descrizione}
+L'attività di codifica ha come obiettivo quello di passare dalla descrizione della soluzione in termini di architettura alla descrizione della soluzione in formato eseguibile da un calcolatore. I \textit{\Progrs}, responsabili di questa attività, sono tenuti a seguire le linee guida, delineate nell'attività di progettazione, con lo scopo di produrre in output il software designato.
+
+\paragraph{Standard di Codifica}
+\subparagraph{Descrizione}
+Affinché questa attività sia svolta al meglio, è opportuno che i \textit{\Progrs} rispettino uno standard di codifica.
+Esso rappresenta uno strumento fondamentale per garantire sintonia tra gli sviluppatori e la creazione di un codice sorgente uniforme e valido.
+All'interno dello standard di codifica è necessario definire le modalità di scrittura e gestione del codice sorgente, al fine di facilitare la modifica del sistema software.
+L'utilizzo di tecniche di scrittura del codice affidabili e di regole di programmazione valide per la creazione di codice di alta qualità è di fondamentale importanza per le prestazioni e la qualità del software.
+
+
+\subparagraph{Tecniche di Scrittura}
+La definizione di tecniche di scrittura è importante per avere una maggiore comprensione del codice sorgente.
+Le tecniche di scrittura del codice sono suddivise in tre categorie:
+\begin{itemize}
+\item
+Nomi;
+\item
+Commenti;
+\item
+Formattazione.
+\end{itemize}
+
+\subparagraph{Nomi}
+Lo schema di denominazione rappresenta uno dei supporti più determinanti per la comprensione del flusso logico del software.
+Di seguito sono riportate le tecniche di denominazione raccomandate:
+\begin{itemize}
+\item
+Assegnare ad ogni elemento un nome univoco e consono alla funzione svolta;
+\item
+Evitare nomi poco chiari e suscettibili di interpretazioni soggettive; questo tipo di nome può contribuire a creare ambiguità piuttosto che astrazione;
+\item
+Utilizzare la struttura verbo - nome per la denominazione di routine che consentono di eseguire operazioni specifiche su determinati oggetti;
+\item
+Poiché la maggior parte dei nomi viene creata concatenando più parole, utilizzare una combinazione di caratteri maiuscoli e minuscoli per semplificarne la lettura;
+\item
+Utilizzare un nome significativo anche per le variabili che vengono visualizzate solo in poche righe di codice;
+\item
+Utilizzare nomi di variabili composti da una singola lettera, come i o j, esclusivamente per gli indici a ciclo breve;
+\item
+Ridurre l'utilizzo delle abbreviazioni ma utilizzare quelle create in maniera coerente. È opportuno che a ogni abbreviazione corrisponda un solo significato e che a ciascuna parola abbreviata sia associata una sola abbreviazione. Se, ad esempio, si utilizza min come abbreviazione di minimum, in altri contesti non è possibile utilizzare la stessa abbreviazione per minute;
+\item
+Nella denominazione di funzioni inserire una descrizione del valore restituito;
+\item
+Evitare di utilizzare gli stessi nomi per elementi diversi, ad esempio una routine e una variabile denominate rispettivamente Getname() e iGetname;
+\item
+Nella denominazione degli elementi non utilizzare omonimi per evitare ambiguità durante le revisioni del codice;
+\item
+Per la denominazione degli elementi evitare l'uso di parole ortograficamente errate;
+\item
+È opportuno che nei nomi di file e cartelle sia contenuta una descrizione precisa della relativa funzione.
+\end{itemize}
+
+
+\subparagraph{Commenti}
+All'interno del codice sorgente è di fondamentale importanza l'inserimento di commenti al fine di facilitare la comprensione del flusso logico.
+Di seguito sono suggeriti alcuni metodi di inserimento dei commenti:
+\begin{itemize}
+\item
+Quando si modifica il codice mantenere sempre aggiornati i relativi commenti;
+\item
+All'inizio di ogni routine è utile fornire commenti predefiniti standard in cui siano indicati le limitazioni, i presupposti e lo scopo della routine. Per commento predefinito si intende una breve introduzione in cui siano illustrate le funzionalità della routine;
+\item
+Evitare l'aggiunta di commenti alla fine di una riga di codice; la presenza di commenti a fine riga può rendere più difficoltosa la lettura del codice. Tuttavia questo tipo di commento è valido per l'annotazione di dichiarazioni di variabili. In tal caso è necessario allineare tutti i commenti di fine riga a una tabulazione comune;
+\item
+Evitare commenti confusi come righe intere di asterischi. Utilizzare invece spazi vuoti per separare i commenti dal codice;
+\item
+Evitare di racchiudere blocchi di commenti in cornici grafiche. Si tratta di un espediente interessante ma di difficile gestione;
+\item
+Quando si scrivono commenti, utilizzare frasi di senso compiuto. La funzione dei commenti consiste nel chiarire il significato del codice senza aggiungere alcun tipo di ambiguità;
+\item
+Inserire commenti in fase di scrittura del codice, in quanto ciò potrebbe non essere possibile in un secondo momento. Inoltre, se dovesse presentarsi l'opportunità di rivedere il codice scritto, tenere presente che ciò che può essere evidente al momento della stesura potrebbe non esserlo più in futuro;
+\item
+Evitare commenti superflui o inappropriati, come annotazioni umoristiche;
+\item
+Commentare tutto ciò che non è chiaro nel codice;
+\item
+Per evitare problemi ricorrenti, è opportuno utilizzare sempre i commenti nel caso di codice relativo a correzioni di errori e a potenziali soluzioni;
+\item
+Aggiungere commenti al codice costituito da cicli e diramazioni logiche. Si tratta di aree di fondamentale importanza che facilitano la lettura del codice sorgente;
+\item
+Creare commenti adottando uno stile uniforme e una struttura e una punteggiatura coerenti;
+\item
+Separare i commenti dai delimitatori di commento con spazi vuoti. In questo modo i commenti saranno chiari e facili da individuare.
+\end{itemize}
+
+\subparagraph{Formattazione}
+La formattazione facilita la comprensione dell'organizzazione logica del codice. Per consentire agli sviluppatori la decifrazione del codice sorgente è fondamentale una formattazione logica e coerente.
+
+Di seguito sono suggeriti alcuni metodi di formattazione:
+\begin{itemize}
+\item
+Definire una dimensione standard per i rientri e utilizzarla in maniera coerente. Allineare le sezioni di codice utilizzando il rientro predefinito;
+\item
+Allineare in verticale le parentesi di apertura e chiusura in cui esistono coppie di parentesi allineate. È possibile inoltre utilizzare uno stile trasversale, laddove le parentesi di apertura si trovano alla fine della riga mentre quelle di chiusura all'inizio. Qualunque sia lo stile scelto, utilizzarlo in tutto il codice sorgente;
+\item
+Rientrare le righe di codice secondo la relativa costruzione logica. Se non viene utilizzato il rientro, il codice risulterà di difficile comprensione;
+\item
+Utilizzare spazi prima e dopo la maggior parte degli operatori, se ciò non altera la funzione del codice;
+\item
+Utilizzare spazi vuoti per definire la struttura del codice sorgente. In questo modo sarà possibile creare "paragrafi" di codice, che consentono di semplificare la comprensione della segmentazione logica del software da parte del lettore;
+\item
+Suddividere logicamente il codice sorgente tra diversi file fisici;
+\item
+Suddividere le sezioni complesse ed estese di codice in moduli comprensibili di dimensioni minori.
+\end{itemize}
+
+\subparagraph{Struttura dell'intestazione del file}
+L'intestazione di ogni file deve contenere obbligatoriamenete le seguenti informazioni:
+\begin{itemize}
+\item \textit{Name}: nome del file, con riferimento alla \textit{Definizione di Prodotto};
+\item \textit{Description}: descrizione del file, con riferimento alla \textit{Definizione di Prodotto};
+\item \textit{Creation data}: indica la data di creazione del file;
+\item \textit{Author}: indica l'autore del file;
+\item \textit{License}: indica la licenza del file;
+\item \textit{Update history}: indica la cronologia delle modifiche effettuate al file, è così strutturata:
+\begin{itemize}
+\item \textit{ID}: id univoco della versione corrente del file;
+\item \textit{Update data}: data corrispondente all'ultimo aggiornamento del file;
+\item \textit{Description}: descrizione della modifica effettuata;
+\item \textit{Author}: autore dell'ultima modifica.
+\end{itemize} 
+
+\end{itemize}
+Di seguito è riportato un esempio di commento di una classe da noi prodotta.
+\begin{lstlisting}[language=json,firstnumber=1]
+/**********************************************************************
+ * Name: QuizziPedia::Front-End::Controllers::EditorQMLController;
+ * Description: questa classe permette di gestire l'inserimento delle domande QML
+ *
+ *
+ * Creation data: 03-05-2016;
+ * Author: Alberto Ferrara;
+ * License: MIT.
+ **********************************************************************
+ * Updates history
+ *---------------------------------------------------------------------
+ * ID: EditorQMLController_20160513
+ * Update data: 13-05-2016
+ * Description: Aggiornato il controller alla versiona finale;
+ * Author: Alberto Ferrara.
+ * *-------------------------------------------------------------------
+ * ID: EditorQMLController_20160510
+ * Update data: 10-05-2016
+ * Description: Aggiunti i metodi per le varie operazioni;
+ * Author: Alberto Ferrara.
+ * --------------------------------------------------------------------
+ * ID: EditorQMLController_20160503
+ * Update data: 03-05-2016
+ * Description: Creato il controller;
+ * Author: Alberto Ferrara.
+ *---------------------------------------------------------------------
+ **********************************************************************
+\end{lstlisting}
+
+
+\paragraph{Ricorsione}
+La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. Nel caso l'utilizzo di memoria risulti troppo elevato la ricorsione verrà rimossa.
+
+\subsubsection{Strumenti}
+
+\paragraph{DocumentsDB}
+Il \textit{team\ped{G}} ha creato un applicativo web, \textit{DocumentsDB}, al fine di gestire in maniera veloce, automatizzata
+e sicura tutti i dati e il loro tracciamento. \textit{DocumentsDB} è stato realizzato sulla base di un software esistente, \textit{PragmaDB}, realizzato da
+studenti di anni passati e disponibile online. Esso permette la gestione di casi d'uso, attori, fonti, requisiti e termini del \textit{Glossario}.
+Ogni membro del \textit{team\ped{G}} può accedervi via \textit{browser\ped{G}} previa autenticazione.
+L'applicazione si occupa di mantenere ordinata la gerarchia dei requisiti e dei casi d'uso in modo automatico durante tutto il loro ciclo di vita (creazione, modifica, eliminazione).
+\textbf{DocumentsDB} consente di esportare l'elenco degli attori, delle fonti, del glossario, dei casi d'uso, dei requisiti e delle loro relazioni come codice \textit{\LaTeX\ped{G}}.
+Questo rende il lavoro più ordinato e automatizzato. Questo software verrà utilizzato durante l'intero progetto, principalmente nelle attività di analisi e progettazione.
+
+\paragraph{Tracciabilità}
+La Tracciabilità dei requisiti e dei casi d'uso avviene tramite l'utilizzo del software \textit{DocumentsDB}, il quale dà la possibilità ad ogni membro del \textit{team\ped{G}} di inserire, modificare o eliminare requisiti o casi d'uso.
+Inoltre è utilizzato per tenere traccia dello stato dei requisiti, se quindi sono stati soddisfatti o meno.
+
+\paragraph{TexMaker}
+L'editor scelto dal \textit{team\ped{G}} per sviluppare i documenti in \textit{\LaTeX\ped{G}} è \textit{TexMaker\ped{G}}.
+\textit{TexMaker\ped{G}} è un editor gratuito, moderno e multi-piattaforma per \textit{Linux\ped{G}}, sistemi \textit{Mac OS\ped{G}} e \textit{Microsoft Windows\ped{G}} che integra molti strumenti utili per sviluppare documenti in \textit{\LaTeX\ped{G}}.
+\textit{TexMaker\ped{G}} include il supporto \textit{Unicode\ped{G}}, il controllo ortografico, il completamento automatico, il raggruppamento del codice e un visore incorporato \textit{PDF\ped{G}} con il supporto \textit{SyncTex\ped{G}} e modalità di visualizzazione continua.
+\textit{TexMaker\ped{G}} è uno strumento facile da usare e da configurare. Questo software verrà utilizzato durante l'attività di analisi e progettazione per redigere i documenti necessari.
+
+\paragraph{Astah}
+\textit{Astah\ped{G}} è l'editor scelto dal \textit{team\ped{G}} per la modellazione nel linguaggio \textit{UML\ped{G}}.
+\textit{Astah\ped{G}} è un editor gratuito, scaricabile online sia per \textit{Microsoft Windows\ped{G}}, sia per \textit{Linux\ped{G}} che per \textit{Mac OS\ped{G}}.
+E' un editor abbastanza semplice e user-fiendly. Infatti ad un  primo utilizzo, è facile capire come muoversi nell'ambiente di sviluppo, come aggiungere classi, diagrammi e relazioni.
+Strumento molto utile che l'editor mette a disposizione è quello di poter esportare il diagramma realizzato in un file immagine per una rapida visualizzazione.
+\textit{Astah\ped{G}} supporta la funzionalità per la codifica dei diagrammi delle classi in un linguaggio di programmazione. Dunque, è possibile disegnare un diagramma delle classi, generare il codice e poi sistemare a mano le varie molteplicità delle relazioni. Questo software verrà utilizzato nelle attività di analisi e progettazione per la creazione dei diagrammi \textit{UML\ped{G}} necessari.
+
+
+
+\paragraph{WebStorm}
+L'ambiente di sviluppo integrato (\textit{IDE\ped{G}}) utilizzato è \textit{WebStorm\ped{G}}. Sono stati testati anche altri \textit{IDE\ped{G}}, ma nessuno si è dimostrato all'altezza. Esso presenta le seguenti funzionalità:
+\begin{itemize}
+\item
+Autocompletamento del codice \textit{JavaScript\ped{G}}, \textit{HTML\ped{G}} e \textit{CSS\ped{G}};
+\item
+Autocompletamento per metodi, funzioni e \textit{frameworks\ped{G}} esterni, utili per il progetto;
+\item
+\textit{Debugger\ped{G}} \textit{JavaScript\ped{G}};
+\item
+Consente di effettuare test di unità per \textit{JavaScript\ped{G}} mediante il \textit{framework\ped{G}} \textit{Karma\ped{G}};
+\item
+Compila automaticamente i file \textit{Sass\ped{G}} in \textit{CSS\ped{G}};
+\item
+Tiene traccia dei cambiamenti effettuati sui file, consentendo di visualizzare lo storico delle modifiche locali e ritornare a versioni precedenti in caso di modifiche o perdite accidentali.
+\end{itemize}
+Questo software verrà utilizzato durante l'attività di codifica.

@@ -1,0 +1,99 @@
+\paragraph[QuizziPedia::Front-End::QML:: \\ QuestionCheck::CreateJSON]{QuizziPedia::Front-End::QML::QuestionCheck::CreateJSON}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_QML_QuestionCheck_CreateJSON.png}
+	\caption{QuizziPedia::Front-End::QML::QuestionCheck::CreateJSON}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe assembla il JSON finale a partire da un codice \textit{QML\ped{G}} valido che comporrà una domanda valida all'interno del sistema.
+	\item \textbf{Utilizzo}: usata per creare un JSON valido per inserire la domanda scritta in \textit{QML\ped{G}} nel sistema;
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN} \texttt{CheckQML}: classe che fornisce le funzionalità per controllare la validità semantica del codice \textit{QML\ped{G}}.
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{createJSON(req : JSON, res : JSON, \\ tipologia : String, topic : String)} \\
+		Questo metodo permette di creare un JSON valido per la creazione della domanda a partire da un codice \textit{QML\ped{G}} valido. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONVF(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "VeroFalso".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONrispostaMultipla(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "RispostaMultipla".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONordinamentoStringhe(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "OrdinamentoStringhe".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONcollegamentoElementi(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "CollegamentoElementi".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONareaCliccabile(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "AreaCliccabile".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONriempimentoSpaziVuoti}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "SpaziVuoti".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONordinamentoImmagini(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "OrdinamentoImmagini".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+		\item \textbf{-} \texttt{createJSONcustom(req : JSON, res : JSON)}
+		Questo metodo permette la creazione della parte del JSON specifica per la tipologia di domanda "Custom".
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo, sintatticamente e semanticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+

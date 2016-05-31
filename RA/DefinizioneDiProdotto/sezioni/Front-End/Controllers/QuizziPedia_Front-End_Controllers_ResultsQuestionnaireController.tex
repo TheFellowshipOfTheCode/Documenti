@@ -1,0 +1,48 @@
+\paragraph[QuizziPedia::Front-End::Controllers\\::ResultsQuestionnaireController]{QuizziPedia::Front-End::Controllers::ResultsQuestionnaireController}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.6]{UML/Classi/Front-End/QuizziPedia_Front-end_Controller_ResultsQuestionnaireController.png}
+	\caption{QuizziPedia::Front-End::Controllers::ResultsQuestionnaireController}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe permette di gestire la visualizzazione dei risultati di un singolo questionario;
+	\item \textbf{Utilizzo}: fornisce le funzionalità per recuperare i dati dal back-end e mostrarli all'utente nella \textit{view\ped{G}};
+	\item \textbf{Relazione con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN \texttt{ResultsQuestionnaireModelView}}: classe di tipo \textit{modelview\ped{G}} la cui istanziazione è contenuta all'interno della variabile di ambiente \$scope di \textit{Angular\ped{G}}. All'interno di essa sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{ResultsQuestionnaireView} e il \textit{controller\ped{G}} \texttt{ResultsQuestionnaireController}; 
+		\item \textbf{IN \texttt{QuizService}}: questa classe permette di ottenere i dati di un quiz tramite delle parole chiave inserite dall'utente nella barra di ricerca.
+	\end{itemize}
+	\item \textbf{Attributi}:
+	\begin{itemize}
+		\item \texttt{-} \texttt{\$scope: \$scope} \\
+		Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}, viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{model\ped{G}} dell'applicazione;
+		\item \texttt{-} \texttt{\$mdDialog: \$mdDialog} \\
+		Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angular\ped{G}} che permette di creare delle componenti a pop-up;
+		\item \texttt{-} \texttt{QuizService: QuizService}\\ parametro che permette di ottenere, tramite il \textit{service\ped{G}}, la lista di tutte le domande presenti nel quiz;
+		\item \texttt{+} \texttt{results: ResultQuestionnaireModelView} \\
+		Oggetto di tipo \texttt{ResultQuestionnaireModelView}. All'interno di esso sono presenti le variabili e i metodi necessari per il \textit{Two-Way Data-Binding\ped{G}} tra la \textit{view\ped{G}} \texttt{ResultsView} e il \textit{controller\ped{G}} \texttt{ResultsController}.
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{ResultsQuestionnaireController(\$scope: \$scope, \$mdDialog: \$mdDialog, QuizService: QuizService)}: \\Metodo costruttore della classe. \\
+		\textbf{Parametri}:
+			\begin{itemize}
+					\item \texttt{\$scope: \$scope} \\
+					Campo dati contenente un riferimento all'oggetto \$scope creato da \textit{Angular\ped{G}}. Viene utilizzato come mezzo di comunicazione tra il \textit{controller\ped{G}} e la \textit{view\ped{G}}. Contiene gli oggetti che definiscono il \textit{viewmodel\ped{G}} e il \textit{model\ped{G}} dell'applicazione;
+					\item \texttt{\$mdDialog: \$mdDialog} \\
+					Campo dati contenente un riferimento al servizio della libreria \textit{Material for Angul-\\ar\ped{G}} che permette di creare delle componenti a pop-up;
+					\item \texttt{QuizService: QuizService}: parametro che permette di ottenere, tramite il \textit{service\ped{G}}, la lista di tutte le domande presenti nel quiz. 
+			\end{itemize}
+		\item \texttt{+ getQuizResults(quizId: String): Object} \\ Metodo che ritorna i risultati di un questionario. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{quiId: String} \\ Id del questionario del quale recuperare i risultati.
+		\end{itemize}
+		\item \texttt{+ getUserForThisQuestionnaire(quizId: String): Array<UserDetailsModel>} \\ Metodo che ritorna tutti gli utenti che hanno eseguito il questionario, con il loro risultato. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{quizId: String} \\ Id del questionario del quale recuperare gli utenti.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+

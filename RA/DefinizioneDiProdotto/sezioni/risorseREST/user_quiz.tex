@@ -1,0 +1,131 @@
+\item \texttt{/:lang/user/:userId/quiz}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: restituisce i questionari creati dall'utente pro;
+		\item \textbf{Response}: la risposta deve avere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"listQuiz" : [ 
+"title" : [identifica il titolo del questionario]
+"questions" : [Arrai di JSON contenente le domande relative al questionario]
+]
+}
+\end{lstlisting}
+	\end{itemize}	
+	
+	
+	\item \texttt{/:lang/user/:userId/quiz}
+		\begin{itemize}
+			\item \textbf{Method}: POST;
+			\item \textbf{Livello di Accesso}: Utente autenticato pro;
+			\item \textbf{Descrizione}: aggiunge un questionario nel sistema, restituisce un messaggio di conferma o di errore;
+			\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [titolo del questionario]
+"questions" : [Array di JSON contenente gli identificativi delle domande che compongono il questionario]
+}
+\end{lstlisting}
+		\end{itemize}
+		
+	\item \texttt{/:lang/user/:userId/quiz/:quizId}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: visualizza il questionario creato l'utente e le relative informazioni, restituisce un messaggio di conferma o di errore;
+		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"questions" : [array di JSON contenente le domande che formano il questionario]
+"registeredUsers" :[array di JSON contenente gli utenti registrati al questionario]
+"activeUsers" :[array di JSON contenente gli utenti che hanno svolto il questionario]
+"statistics" :[array di JSON contenente le statistiche del questionario]
+}
+\end{lstlisting}
+	\end{itemize}		
+		
+		
+		
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/removeUser}
+	\begin{itemize}
+		\item \textbf{Method}: PUT;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: elimina un utente iscritto ad un questionario, restituisce un messaggio di conferma o di errore;
+		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente da iscrivere al questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+		
+		
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/addUser}
+	\begin{itemize}
+		\item \textbf{Method}: POST;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: iscrive un utente ad un questionario, restituisce un messaggio di conferma o di errore;
+		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente da iscrivere al questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+	
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/activeUser}
+	\begin{itemize}
+		\item \textbf{Method}: POST;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: aggiunge un utente iscritto al questionario nella lista degli utenti che lo hanno eseguito;
+		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"_userId" : [identificativo dell'utente da iscrivere al questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+	
+	\item \texttt{/:lang/user/:userId/quiz/:quizId}
+	\begin{itemize}
+		\item \textbf{Method}: PUT;
+		\item \textbf{Livello di Accesso}: Utente autenticato pro;
+		\item \textbf{Descrizione}: modifica in questionario creato in precedenza, restituisce un messaggio di conferma o di errore;
+		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [titolo del questionario]
+"questions" : [Array di JSON contenente gli identificativi delle domande che compongono il questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+	
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/test}
+	\begin{itemize}
+		\item \textbf{Method}: GET;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: restituisce il quiz selezionato dall'utente per effettuare l'esercitazione;
+		\item \textbf{Response}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"title" : [titolo del questionario]
+"author" : [identifica l'autore del questionario]
+"questions" : [Array di JSON contenente le domande che compongono il questionario]
+}
+\end{lstlisting}
+	\end{itemize}
+	
+	
+	\item \texttt{/:lang/user/:userId/quiz/:quizId/summary}
+	\begin{itemize}
+		\item \textbf{Method}: POST;
+		\item \textbf{Livello di Accesso}: Utente autenticato/autenticato pro;
+		\item \textbf{Descrizione}: crea il riepilogo del questionario svolto;
+		\item \textbf{Request}: la richiesta deve contenere i seguenti campi:
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"givenAnswers" : [Array di JSON contenente le domande del quiz associate alle risposte date dall'utente]
+}
+\end{lstlisting}
+	\end{itemize}

@@ -1,0 +1,94 @@
+\section{Calcolo delle Statistiche}
+Di seguito sarà illustrato come verranno calcolate le statistiche di utente, di una domanda e di un argomento secondo le risposte (corrette o meno) date ad una singola domanda.
+
+\subsection{Statistiche Utente}
+\subsubsection{Utente autenticato}
+L'utente autenticato possiede due tipologie di livello:
+\begin{itemize}
+	\item \textbf{Experience level}: livello che cresce sempre man mano che un utente risponde alle domande, secondo un sistema a punti: 
+	\begin{itemize}
+		\item +1 punto per ogni risposta errata;
+		\item +2 punti per ogni risposta esatta;
+	\end{itemize}
+	Il livello sarà rappresentato da una barra d'esperienza che deve essere riempita totalmente per poter passare al livello successivo; per riempire la barra è necessario accumulare un ammontare di punti tanto maggiore quanto è alto il livello dell'utente. Il livello iniziale è 1.
+	\item \textbf{Skill level}: livello che varia a seconda della risposta (corretta o errata) data dall'utente ad una domanda di un certo argomento. La variazione sarà calcolata sulla base della differenza tra lo \textit{skill level} attuale dell'utente e il \textit{difficulty level} della domanda a cui si sta rispondendo secondo i valori indicati in tabella.
+	
+% TABELLA
+\begin{center}
+\scalebox{0.88}{
+\begin{tabular}{|c|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|}
+	\hline
+	\multirow{2}{*}{Differenza} & \multicolumn{2}{c|}{$0 \leq \textit{skill level} - \textit{difficulty level} \leq 100$} & \multicolumn{2}{c|}{$0 \leq \textit{difficulty level} - \textit{skill level} \leq 100$} \\ \cline{2-5}
+	& corretta & errata & corretta & errata \\ \hline
+	91 - 100 & +1 & -21 & +21 & -1 \\ \hline
+	81 - 90 & +2 & -20 & +20 & -2 \\ \hline
+	71 - 80 & +3 & -19 & +19 & -3 \\ \hline
+	61 - 70 & +4 & -18 & +18 & -4 \\ \hline
+	51 - 60 & +5 & -17 & +17 & -5 \\ \hline
+	41 - 50 & +6 & -16 & +16 & -6 \\ \hline
+	31 - 40 & +7 & -15 & +15 & -7 \\ \hline
+	21 - 30 & +8 & -14 & +14 & -8 \\ \hline
+	11 - 20 & +8 & -13 & +13 & -9 \\ \hline
+	1 - 10 & +10 & -12 & +12 & -10 \\ \hline
+	& corretta & errata \\ \cline{1-3}
+	0 & +11 & -11 \\ \cline{1-3} 
+\end{tabular}
+}
+\end{center}
+
+Ogni utente autenticato avrà uno \textit{skill level} per ogni argomento presente nel sistema.
+Inizialmente lo \textit{skill level} sarà uguale a 500 e potrà variare all'interno di un intervallo tra 0 e 1000.
+\end{itemize}
+I livelli precedentemente descritti verranno salvati e aggiornati automaticamente dal sistema.
+
+\subsubsection{Utente non autenticato}
+L'utente non autenticato possiederà solamente la tipologia di livello \textit{skill level}, con la differenza che non verrà salvato dal sistema al termine di un allenamento. 
+
+\subsection{Statistiche Domanda}
+La domanda possiederà un \textit{difficulty level} che varia a seconda della risposta (corretta o errata) data dall'utente alla domanda. La variazione sarà calcolata sulla base della differenza tra lo \textit{skill level} dell'utente autenticato e il \textit{difficulty level} attuale della domanda secondo i valori indicati in tabella.
+
+% TABELLA
+\begin{center}
+\scalebox{0.88}{
+\begin{tabular}{|c|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{3cm}|}
+	\hline
+	\multirow{2}{*}{Differenza} & \multicolumn{2}{c|}{$0 \leq \textit{skill level} - \textit{difficulty level} \leq 100$} & \multicolumn{2}{c|}{$0 \leq \textit{difficulty level} - \textit{skill level} \leq 100$} \\ \cline{2-5}
+	& corretta & errata & corretta & errata \\ \hline
+	91 - 100 & -1 & +21 & -21 & +1 \\ \hline
+	81 - 90 & -2 & +20 & -20 & +2 \\ \hline
+	71 - 80 & -3 & +19 & -19 & +3 \\ \hline
+	61 - 70 & -4 & +18 & -18 & +4 \\ \hline
+	51 - 60 & -5 & +17 & -17 & +5 \\ \hline
+	41 - 50 & -6 & +16 & -16 & +6 \\ \hline
+	31 - 40 & -7 & +15 & -15 & +7 \\ \hline
+	21 - 30 & -8 & +14 & -14 & +8 \\ \hline
+	11 - 20 & -8 & +13 & -13 & +9 \\ \hline
+	1 - 10 & -10 & +12 & -12 & +10 \\ \hline
+	& corretta & errata \\ \cline{1-3}
+	0 & -11 & +11 \\ \cline{1-3}  
+\end{tabular}
+}
+\end{center}
+
+Inizialmente il \textit{difficulty level} sarà uguale a 500 e potrà variare all'interno di un intervallo tra 0 e 1000 e soltanto se a rispondere è un utente autenticato.
+
+
+\subsection{Statistiche Argomento}
+La percentuale di risposte corrette ($\%R\ped{C}$) è data dal rapporto tra risposte corrette totali ($R\ped{CT}$) e risposte totali ($R\ped{T}$) date alle domande relative all'argomento.
+\begin{center}
+	$\%R\ped{C} = \frac{R\ped{CT}}{R\ped{T}}\times{100}$
+\end{center}
+
+
+\subsection{Statistiche Questionario}
+Per un questionario vi saranno due statistiche:
+\begin{itemize}
+	\item \textbf{Generale}: la percentuale di risposte corrette ($\%R\ped{C}$) è data dal rapporto tra risposte corrette totali ($R\ped{CT}$) e risposte totali ($R\ped{T}$) date alle domande del questionario.
+	\begin{center}
+	$\%R\ped{C} = \frac{R\ped{CT}}{R\ped{T}}\times{100}$
+	\end{center}
+	\item \textbf{Per utente}: la percentuale di risposte corrette dell'utente ($\%R\ped{CU}$) è data dal rapporto tra risposte corrette totali dell'utente ($R\ped{CTU}$) e risposte totali dell'utente ($R\ped{TU}$) date alle domande del questionario.
+	\begin{center}
+	$\%R\ped{CU} = \frac{R\ped{CTU}}{R\ped{TU}}\times{100}$
+	\end{center}
+\end{itemize}

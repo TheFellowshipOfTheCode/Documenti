@@ -1,0 +1,23 @@
+\paragraph{Gestione questionari}
+
+\subparagraph{Gestione iscrizioni del questionario}
+\label{Recupero risultati del questionario}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25,keepaspectratio]{UML/DiagrammiDiSequenza/Front-end/ResultsManagement.png}
+	\caption{Recupero risultati del questionario}
+\end{figure} \FloatBarrier
+ 
+Al momento del caricamento della pagina viene richiamato il metodo del \texttt{controller\ped{G}} che, a sua volta, richiama il metodo del \texttt{service\ped{G}} per ottenere i risultati complessivi del questionario. Se la promessa ritornata dal \texttt{service\ped{G}} viene accettata allora verranno ricevuti i dati, altrimenti verrà restituito un oggetto contenente l'errore.
+
+
+\paragraph{Recupero utenti del questionario}
+\label{Recupero utenti del questionario}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25,keepaspectratio]{UML/DiagrammiDiSequenza/Front-end/GetUsersForQuestionnaire.png}
+	\caption{Recupero singoli utenti del questionario}
+\end{figure} \FloatBarrier
+
+Al momento del caricamento della pagina viene richiamato il metodo del \texttt{controller\ped{G}} che, a sua volta, richiama il metodo del \texttt{service\ped{G}} per ottenere i singoli utenti del questionario. Se la promessa ritornata dal \texttt{service\ped{G}} viene accettata allora verranno ricevuti i dati, altrimenti verrà restituito un oggetto contenente l'errore.
+

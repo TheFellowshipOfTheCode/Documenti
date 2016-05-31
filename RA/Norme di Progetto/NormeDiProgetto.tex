@@ -1,0 +1,44 @@
+%Generazione delle variabili che andranno a sostituire quelle del template `HomePage.tex`
+\newcommand{\documento}{\NdP}
+\newcommand{\nomedocumentofisico}{NormeDiProgetto\_v4\_0\_0.pdf}
+\newcommand{\redazione}{\FB \\ & \AF \\ & \SM \\ & \MV\\ & \GR \\ & \MP \\ & \GN}
+\newcommand{\verifica}{\MV}
+\newcommand{\approvazione}{\MP}
+\newcommand{\uso}{Interno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \gruppo}
+\newcommand{\datacreazione}{8 Dicembre 2015}
+\newcommand{\datamodifica}{28 Aprile 2016}
+\newcommand{\stato}{Approvato}
+\newcommand{\versione}{4}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+
+%Serve per vedere i paragraph nell'indice
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+\input{sezioni/diario.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+\input{../../Template/index.tex}
+
+
+\input{sezioni/introduzione.tex}
+\input{sezioni/ProcessoDiSviluppo.tex}
+\input{sezioni/ProcessiDiSupporto.tex}
+\input{sezioni/ProcessiOrganizzativi.tex}
+
+
+
+
+
+\end{document}

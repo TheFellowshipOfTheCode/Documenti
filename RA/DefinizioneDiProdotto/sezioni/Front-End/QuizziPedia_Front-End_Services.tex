@@ -1,0 +1,27 @@
+\newpage
+\subsection{QuizziPedia::Front-End::Services}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.60]{UML/Package/QuizziPedia_Front-End_Services.png}
+	\caption{QuizziPedia::Front-End::Services}
+\end{figure} \FloatBarrier
+\subsubsection{Informazioni generali}
+\begin{itemize}
+	\item \textbf{Descrizione}: package che contiene le classi individuate che permettono la comunicazione del lato front-end con il lato back-end;
+	\item \textbf{Padre:} \texttt{Front-End};
+	\item \textbf{Interazione con altri componenti:}
+	\begin{itemize}
+		\item \texttt{Models}: package che contiene le classi \textit{model\ped{G}} individuate;
+		\item \texttt{Controllers}: package che contiene le classi \textit{controller\ped{G}} individuate.
+	\end{itemize} 
+\end{itemize}
+\subsubsection{Classi}
+
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_AuthService.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_LangServices.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_QuestionsService.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_QuizService.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_SearchService.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_StatisticsService.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_UserDetailsService.tex}
+\input{sezioni/Front-End/Services/QuizziPedia_Front-End_Services_Utils.tex}

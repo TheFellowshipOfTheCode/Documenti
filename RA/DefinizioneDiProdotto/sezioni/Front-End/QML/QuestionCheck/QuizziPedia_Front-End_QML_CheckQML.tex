@@ -1,0 +1,38 @@
+\paragraph[QuizziPedia::Front-End::QML:: \\ QuestionCheck::CheckQML]{QuizziPedia::Front-End::QML::QuestionCheck::CheckQML}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.80]{UML/Classi/Front-End/QuizziPedia_Front-end_QML_QuestionCheck_CheckQML.png}
+	\caption{QuizziPedia::Front-End::QML::QuestionCheck::CheckQML}
+\end{figure} \FloatBarrier
+\begin{itemize}
+	\item \textbf{Descrizione}: questa classe implementa il metodo che permette di controllare la validità semantica del codice \textit{QML\ped{G}};
+	\item \textbf{Utilizzo}: fornisce le funzionalità per controllare la validità semantica del codice \textit{QML\ped{G}};
+	\item \textbf{Relazioni con altre classi}:
+	\begin{itemize}
+		\item \textbf{IN} \texttt{EditorQMLcontroller}: classe questa classe permette di gestire la creazione e la modifica di domande create tramite editor QML;		
+		\item \textbf{OUT} \texttt{AreaCliccabile}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "AreaCliccabile";
+		\item \textbf{OUT} \texttt{CollegamentoElementi}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "CollegamentoElementi";
+		\item \textbf{OUT} \texttt{Custom}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "Custom";
+		\item \textbf{OUT} \texttt{OrdinamentoImmagini}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "OrdinamentoImmagini";
+		\item \textbf{OUT} \texttt{OrdinamentoStringhe}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "OrdinamentoStringhe";
+		\item \textbf{OUT} \texttt{SpaziVuoti}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "SpaziVuoti";
+		\item \textbf{OUT} \texttt{RispostaMultipla}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "RispostaMultipla";
+		\item \textbf{OUT} \texttt{VeroFalso}: classe usata per controllare la validità semantica del codice \textit{QML\ped{G}} nello specifico caso di tipologia "VeroFalso";
+		\item \textbf{OUT} \texttt{CreateJSON}: questa classe assembla il JSON finale a partire da un codice \textit{QML\ped{G}} valido che comporrà una domanda valida all'interno del sistema.
+	\end{itemize}
+	\item \textbf{Metodi}:
+	\begin{itemize}
+		\item \texttt{+} \texttt{controlloQML(req : JSON, res : JSON, topics : String)} \\ 
+		Questo metodo controlla la validità sintattica del codice \textit{QML\ped{G}}, fa uso della classe \texttt{json2} messa a disposizione dalla libreria \textit{JISON\ped{G}}. \\
+		\textbf{Parametri}:
+		\begin{itemize}
+			\item \texttt{req : JSON} \\
+			Parametro contenente il codice QML scritto dall'utente nell'editor di testo e sintatticamente valido;
+			\item \texttt{res : JSON} \\
+			Parametro che contiene il JSON specifico per la domanda da creare o un JSON con un messaggio d'errore;
+			\item \texttt{topics : String} \\
+			Parametro che indica l'argomento della domanda da creare, necessario per eseguire i giusti controlli semantici nel corpo del codice \textit{QML\ped{G}}.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+

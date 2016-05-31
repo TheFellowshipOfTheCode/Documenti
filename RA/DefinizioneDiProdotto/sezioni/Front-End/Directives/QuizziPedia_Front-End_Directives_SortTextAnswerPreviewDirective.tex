@@ -1,0 +1,26 @@
+	\paragraph{QuizziPedia::Front-End::Directives\\::SortTextAnswerPreviewDirective}
+		
+		\label{QuizziPedia::Front-End::Directives::SortTextAnswerPreviewDirective}
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.80,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_Directives_SortTextAnswerPreviewDirective.png}
+			\caption{QuizziPedia::Front-End::Directives::SortTextAnswerPreviewDirective}
+		\end{figure} \FloatBarrier
+		
+		\begin{itemize}
+			\item \textbf{Descrizione}: \textit{directive\ped{G}} che permette di visualizzare una parte del testo di una domanda di ordinamento stringhe;
+			\item \textbf{Utilizzo}: viene utilizzata per consentire la visualizzazione di una parte del testo di una domanda di ordinamento stringhe;
+			\item \textbf{Relazioni con altre classi}: 
+			\begin{itemize}
+				\item \textbf{IN \texttt{OneQuestionDirective}}: \textit{directive\ped{G}} che permette all'utente di visualizzare le domande che ha creato;
+				\item \textbf{IN \texttt{EndQuizDirective}}: \textit{directive\ped{G}} che permette all'utente di visualizzare il resoconto al termine della compilazione di un questionario.
+			\end{itemize}
+			\item \textbf{Attributi}:
+			\begin{itemize}
+				\item \texttt{+ data: Object} \\ Oggetto contenente le informazioni da mostrare nell'anteprima della domanda;
+		\item \texttt{+ restrict: String} \\ Stringa che permette di definire le modalità di inserimento della direttiva all'interno della pagina;
+		\item \texttt{+ scope: Scope}: oggetto scope interno della direttiva, contiene le funzionalità per gestire i dati presenti all'interno;
+		\item \texttt{+ templateUrl: String} \\ Stringa contenente il percorso del file \textit{HTML\ped{G}} che contiene la direttive.
+			\end{itemize}
+		\end{itemize}

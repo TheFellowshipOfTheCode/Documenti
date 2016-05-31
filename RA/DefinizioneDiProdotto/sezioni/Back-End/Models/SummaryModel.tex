@@ -1,0 +1,56 @@
+\paragraph{QuizziPedia::Back-End::App::Models::SummaryModel}
+\label{QuizziPedia::Back-End::App::Models::summaryModel}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.8]{UML/Classi/Back-End/QuizziPedia_Back-End_App_Models_summaryModel.png}
+	\caption{QuizziPedia::Back-End::App::Models::summaryModel}
+\end{figure}
+\FloatBarrier
+
+
+
+\begin{itemize}
+	\item \textbf{Descrizione}: classe che modella i riepiloghi all'interno dell'applicazione;
+	\item \textbf{Utilizzo}: viene utilizzata per rappresentare i dati relativi ai riepiloghi all'interno dell'applicazione. Si interfaccia con la libreria \textit{Mongoose\ped{G}} per la creazione dello schema e dei relativi metodi statici o di istanza;
+	\item \textbf{Relazioni con altre classi}:
+		\begin{itemize}
+			\item \textbf{OUT} \texttt{QuizModel}\\
+			Classe che modella i questionari;
+			\item \textbf{OUT} \texttt{QuestionModel}\\
+			Classe che modella le domande;
+			\item \textbf{IN} \texttt{UserModel}\\
+			Classe che modella gli utenti;
+			\item \textbf{IN} \texttt{SummaryController}\\
+			Classe che gestisce le operazioni relative ai riepiloghi.
+		\end{itemize}
+	\item \textbf{Attributi}:
+		\begin{itemize}
+			\item \texttt{- summarySchema: Schema} \\
+			Questo campo dati rappresenta lo schema \textit{Mongoose\ped{G}} dei riepiloghi di \progetto. Lo schema prevede i seguenti attributi:
+				\begin{itemize}
+					\item \texttt{quiz: ObjectId}\\ Rappresenta il riferimento all'identificativo nel database del quiz;
+					\item \texttt{givenAnswers: Array<ObjectId>}\\ Array che contiene oggetti di tipo \texttt{ObjectId} che rappresentano i riferimenti agli identificativi nel database delle domande a cui si è risposto e un \texttt{Array} contenenti oggetti di tipo \texttt{JSON};	
+					\item \texttt{date: Date}\\ Rappresenta la data di creazione del riepilogo;
+					\item \texttt{mark: Number}\\ Rappresenta il voto conseguito nel quiz.
+				\end{itemize}
+		\end{itemize}
+	\item \textbf{Metodi}:
+		\begin{itemize}
+			\item \texttt{+ createSummary(quiz: JSON): void}\\
+			Crea un riepilogo.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{quiz: JSON}\\
+				Rappresenta il quiz dalle cui risposte verrà creato il riepilogo.
+			\end{itemize}
+			\item \texttt{+ findSummary(summaryId:ObjectId, quiz: JSON): void}\\
+			Trova un riepilogo.\\
+			\textbf{Parametri}:
+			\begin{itemize}
+				\item \texttt{summaryId: ObjectId}\\
+				 Rappresenta l'id del riepilogo da andare in cerca.
+				\item \texttt{quiz: JSON}\\
+				Rappresenta il quiz dalle cui risposte verrà creato il riepilogo.
+			\end{itemize}	
+		\end{itemize}
+\end{itemize}

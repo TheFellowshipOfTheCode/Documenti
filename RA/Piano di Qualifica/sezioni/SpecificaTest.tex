@@ -1,0 +1,19 @@
+\section{Specifica dei test}
+Il \textit{team\ped{G}} \gruppo, al fine di implementare del software che sia di qualità, ha strutturato dei test atti a verificare che il software prodotto rispecchi le funzionalità a fronte di risultati attesi.
+Questi test sono il frutto dell'applicazione delle tecniche di verifica dinamica che sono state introdotte nel documento \NdP.
+Tutte le attività di testing prodotte devono poter essere ripetibili e devono essere deterministiche, al fine di poter fornire delle informazioni utili a intraprendere azioni di correzione, nel caso in cui i risultati ottenuti siano diversi da quelli attesi.
+Per avere un tracciamento dei test prodotti e dei risultati ottenuti si è scelto di classificare il tutto producendo dei log che siano di facile consultazione e che possano fornire una precisa indicazione di quelli che sono stati gli output di queste attività di verifica, eventuali errori o eventuali risultati che siano non coerenti con quanto in precedenza fissato.
+\subsection{Tipi di test}
+Sono stati individuati quattro livelli di testing e sono rispettivamente:
+\begin{itemize}
+\item \textbf{Test di unità [TU]:} con questa tipologia di test si cerca di verificare la più piccola parte di lavoro prodotta da un programmatore. Questo si traduce tendenzialmente a verificare i metodi e le funzioni scritte;
+\item \textbf{Test di integrazione [TI]:} con questa tipologia di test si cerca di verificare le componenti di sistema. Più precisamente, l'obiettivo è quello di testare il funzionamento dei vari package prodotti, sia singolarmente che nel loro insieme;
+\item \textbf{Test di sistema [TS]:} con questa tipologia di test si cerca di verificare che il comportamento e il funzionamento dell'architettura siano corretti;
+\item \textbf{Test di validazione [TV]:} con questa tipologia di test si vuole verificare che il lavoro prodotto soddisfi quanto richiesto dal proponente.
+\end{itemize}
+
+% INSERIMENTO DEI TEST
+\input{sezioni/Test/test_validazione.tex}
+\input{sezioni/Test/test_sistema.tex}
+\input{sezioni/Test/test_integrazione.tex}
+\input{sezioni/Test/test_unita.tex}
