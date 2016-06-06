@@ -1,0 +1,41 @@
+\newpage
+\section{Estensione delle funzionalità}
+Per ragioni di tempo e di competenze, alcune funzionalità del software \progetto{} non sono state implementate. In questo capitolo vengono elencati tutti i punti di possibile estensione delle funzionalità e un loro possibile sviluppo.
+\subsection{Autenticazione tramite social network}
+Uno degli obbiettivi principali dell'applicazione \progetto{} è quello della condivisione di domande e questionari. E' stata perciò progettata e sviluppata per essere un software social e conforme alle ultime tendenze grafiche. Per questo, uno dei requisiti desiderabili è permettere all'utente di non perdere tempo durante la fase di registrazione, ma di poterlo fare appoggiandosi alle ultime piattaforme social come Facebook e Twitter. Il \textit{framework\ped{G}} Passport utilizzato del team per le funzionalità di registrazione e autenticazione, permette nativamente di implementare la registrazione tramite i più famosi social network attuali. La guida per implementare queste funzionalità si trova alla pagina \url{http://passportjs.org/docs}. 
+\subsection{Cambio tipologia account}
+Le tipologie di utenza dell'applicazione \progetto{} sono principalmente tre:
+\begin{itemize}
+	\item Utente non autenticato;
+	\item Utente autenticato;
+	\item Utente autenticato pro.
+\end{itemize}
+La tipologia di utente autenticato pro è stata pensata principalmente per i professori universitari e delle scuole medie/superiori che vogliono appoggiarsi alla piattaforma \progetto{} per creare questionari finalizzati alle verifiche e agli esami. Allo stato attuale, l'applicazione permette il passaggio da utente normale a pro semplicemente cliccando l'apposito pulsante presente all'interno della pagina \textit{Gestione profilo}. In base alle esigenze strategiche ed economiche dell'azienda acquirente di \progetto{}, sarà opportuno sviluppare ulteriormente questa funzionalità di cambio tipologia account, ad esempio associando un metodo di pagamento oppure l'immissione di un particolare codice che solo i professori associati a scuole e università possono avere.  
+\subsection{Creazione delle domande tramite wizard}
+La creazione delle domande avviene tramite il linguaggio di markup QML (si veda l'Appendice A). Esso è stato creato per essere semplice e comprensibile ma allo stesso tempo molto potente. Permette infatti di creare non solo domande classiche come vero/falso, a scelta multipla e ordinamento, ma anche di combinare questi generi tra loro e creare così nuove tipologie di domande. Questo ha causato un piccolo aumento della difficoltà del linguaggio che potrebbe risultare poco attraente ad un utente con poca famigliarità dei linguaggi di programmazione. Per ovviare questo problema è opportuno sviluppare una nuova modalità di creazione delle domande tramite wizard guidati. Le tipologie base delle domande sviluppate allo stato attuale sono sei:
+\begin{itemize}
+	\item Vero/Falso;
+	\item Risposta multipla;
+	\item Ordinamento stringhe;
+	\item Ordinamento immagini;
+	\item Riempimento spazi vuoti;
+	\item Collegamento stringhe.
+\end{itemize}
+Lo sviluppo di wizard per la creazione di ogni tipologia di domanda base, aiuterebbe l'utente medio che non ha famigliarità con i linguaggi di markup nell'utilizzo del servizio \progetto.   
+\subsection{Nuove tipologie di domande}
+Il linguaggio QML (si veda l'Appendice A) prevede sei tipologie di domande base:
+\begin{itemize}
+	\item Vero/Falso;
+	\item Risposta multipla;
+	\item Ordinamento stringhe;
+	\item Ordinamento immagini;
+	\item Riempimento spazi vuoti;
+	\item Collegamento stringhe.
+\end{itemize}
+E' possibile estendere il codice per creare nuove tipologie di domande base. Questo prevede l'aggiunta di una nuova classe con il relativo codice QML all'interno del package \texttt{questionCheck} e aggiornare la classe \texttt{CheckQML} con la nuova tipologia di domanda. Infine è necessario aggiornare la classe \texttt{QuestionsController} all'interno del package \texttt{QuizziPedia/Front-End/Controllers} per il recupero della nuova tipologia di domanda e creare una nuova direttiva per la presentazione della stessa all'interno del package \texttt{QuizziPedia/Front-End/Directives}.
+\subsection{Aggiunta nuove lingue}
+Il servizio \progetto{} è stato sviluppato per poter essere tradotto in qualsiasi lingua desiderata. Ogni parola chiave, ovvero non di contenuto inserita dall'utente ma nativa del servizio, è in realtà una variabile che prende il suo valore dalla collection \texttt{Variables} all'interno del database MongoDB. Per inserire una nuova lingua è necessario dunque creare un nuovo documento all'interno di \texttt{Variables}, traducendo tutte le keywords dell'applicazione nella lingua desiderata, con la seguente intestazione:
+\begin{lstlisting}[language=Java,firstnumber=1]
+	"lang": "abbreviazione lingua desiderata",
+	"correctWord": "lingua desiderata",
+\end{lstlisting}
