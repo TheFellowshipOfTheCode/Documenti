@@ -1,0 +1,801 @@
+\subsection{Requisiti Funzionali}
+\normalsize
+\begin{longtable}{|c|>{\centering}m{7cm}|c|}
+\hline
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
+\hline
+\endhead \hypertarget{{RFO1}}{{RFO1}} & L’utente non autenticato può registrarsi & \makecell{Interno\\ UC2 } \\ \hline
+			 \hypertarget{{RFO1.1}}{{RFO1.1}} & L’utente non autenticato può inserire il
+proprio nome & \makecell{Interno\\ UC2 \\UC2.1 } \\ \hline
+			 \hypertarget{{RFO1.2}}{{RFO1.2}} & L’utente non autenticato può inserire il
+proprio cognome & \makecell{Interno\\ UC2 \\UC2.2 } \\ \hline
+			 \hypertarget{{RFO1.3}}{{RFO1.3}} & L’utente non autenticato può inserire il
+proprio nome utente & \makecell{Interno\\ UC2 \\UC2.3 } \\ \hline
+			 \hypertarget{{RFO1.4}}{{RFO1.4}} & L’utente non autenticato può inserire la
+propria email & \makecell{Interno\\ UC2 \\UC2.4 } \\ \hline
+			 \hypertarget{{RFO1.5}}{{RFO1.5}} & L’utente non autenticato può inserire una
+password & \makecell{Interno\\ UC2 \\UC2.5 } \\ \hline
+			 \hypertarget{{RFO1.6}}{{RFO1.6}} & L’utente non autenticato può confermare
+la propria password & \makecell{Interno\\ UC2 \\UC2.6 } \\ \hline
+			 \hypertarget{{RFO1.7}}{{RFO1.7}} & L’utente non autenticato può confermare
+la registrazione & \makecell{Interno\\ UC2 \\UC2.7 } \\ \hline
+			 \hypertarget{{RFO1.8}}{{RFO1.8}} & Il sistema deve mostrare un messaggio
+d’errore di registrazione all’utente non
+registrato se i dati non sono stati immessi
+correttamente o sono assenti & \makecell{Interno\\ UC2 \\UC2.8 } \\ \hline
+			 \hypertarget{{RFO2}}{{RFO2}} & L’utente non autenticato può fare il login
+mediante le credenziali di QuizziPedia & \makecell{Verbale interno\\ UC3 } \\ \hline
+			 \hypertarget{{RFO2.1}}{{RFO2.1}} & L’utente non autenticato può inserire l'username o la mail usata durante la
+fase di registrazione & \makecell{Interno\\ UC3 \\UC3.1 } \\ \hline
+			 \hypertarget{{RFO2.2}}{{RFO2.2}} & L’utente non autenticato può inserire la
+password associata al nome utente o alla
+mail usata durante la fase di registrazione & \makecell{Interno\\ UC3 \\UC3.2 } \\ \hline
+			 \hypertarget{{RFO2.3}}{{RFO2.3}} & L’utente non autenticato può confermare
+il login & \makecell{Interno\\ UC3 \\UC3.3 } \\ \hline
+			 \hypertarget{{RFO2.4}}{{RFO2.4}} & Il sistema deve visualizzare un messaggio
+di errore in caso di inserimento dei dati
+errato o assente & \makecell{Interno\\ UC3 \\UC3.4 } \\ \hline
+			 \hypertarget{{RFO3}}{{RFO3}} & L’utente autenticato e l’utente
+autenticato pro possono effettuare il
+logout & \makecell{Interno\\ UC4 } \\ \hline
+			 \hypertarget{{RFO3.1}}{{RFO3.1}} & Il sistema deve notificare all’utente
+autenticato o all’utente autenticato pro la
+disconnessione dall’area riservata & \makecell{Interno\\ UC4 \\UC4.1 } \\ \hline
+			 \hypertarget{{RFD4}}{{RFD4}} & L’utente autenticato e l’utente
+autenticato pro possono gestire il proprio
+profilo & \makecell{Interno\\ UC5 } \\ \hline
+			 \hypertarget{{RFD4.1}}{{RFD4.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+proprio nome & \makecell{Interno\\ UC5 \\UC5.1 } \\ \hline
+			 \hypertarget{{RFD4.2}}{{RFD4.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+proprio cognome & \makecell{Interno\\ UC5 \\UC5.2 } \\ \hline
+			 \hypertarget{{RFD4.3}}{{RFD4.3}} & L’utente autenticato e l’utente
+autenticato pro possono inserire una
+foto/immagine & \makecell{Interno\\ UC5 \\UC5.3 } \\ \hline
+			 \hypertarget{{RFD4.4}}{{RFD4.4}} & L’utente autenticato e l’utente
+autenticato pro possono modificare la
+propria e-mail & \makecell{Interno\\ UC5 \\UC5.4 } \\ \hline
+			 \hypertarget{{RFD4.5}}{{RFD4.5}} & L’utente autenticato e l’utente
+autenticato pro possono modificare la
+propria password & \makecell{Interno\\ UC5 \\UC5.5 } \\ \hline
+			 \hypertarget{{RFD4.5.1}}{{RFD4.5.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire la vecchia password & \makecell{Interno\\ UC5.5 \\UC5.5.1 } \\ \hline
+			 \hypertarget{{RFD4.5.2}}{{RFD4.5.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire la nuova password & \makecell{Interno\\ UC5.5 \\UC5.5.2 } \\ \hline
+			 \hypertarget{{RFD4.5.3}}{{RFD4.5.3}} & L’utente autenticato e l’utente
+autenticato pro possono inserire nuovamente la nuova password & \makecell{Interno\\ UC5.5 \\UC5.5.3 } \\ \hline
+			 \hypertarget{{RFD4.6}}{{RFD4.6}} & L’utente autenticato e l’utente
+autenticato pro possono confermare le
+modifiche al proprio profilo utente & \makecell{Interno\\ UC5 \\UC5.6 } \\ \hline
+			 \hypertarget{{RFD4.7}}{{RFD4.7}} & Il sistema deve visualizzare un messaggio
+di errore nel caso l’utente autenticato o
+l’utente autenticato pro abbiano effettuato modifiche
+non permesse al proprio profilo utente & \makecell{Interno\\ UC5 \\UC5.7 } \\ \hline
+			 \hypertarget{{RFD4.8}}{{RFD4.8}} & L’utente autenticato e l’utente
+autenticato pro possono cambiare la
+propria tipologia di account & \makecell{Interno\\ UC5 \\UC5.8 } \\ \hline
+			 \hypertarget{{RFD4.8.1}}{{RFD4.8.1}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare la nuova tipologia di account & \makecell{Interno\\ UC5.8 \\UC5.8.1 } \\ \hline
+			 \hypertarget{{RFD4.8.2}}{{RFD4.8.2}} & L’utente autenticato e l’utente autenticato pro possono inviare la richiesta di passaggio alla nuova tipologia di account & \makecell{Interno\\ UC5.8 \\UC5.8.2 } \\ \hline
+			 \hypertarget{{RFD4.9}}{{RFD4.9}} & L’utente autenticato e l’utente autenticato pro possono eliminare il proprio account & \makecell{Interno\\ UC5 \\UC5.9 } \\ \hline
+			 \hypertarget{{RFD4.9.1}}{{RFD4.9.1}} & L’utente autenticato e l’utente
+autenticato pro possono confermare
+l’eliminazione del proprio account & \makecell{Interno\\ UC5.9 \\UC5.9.1 } \\ \hline
+			 \hypertarget{{RFD5}}{{RFD5}} & L’utente autenticato e l’utente
+autenticato pro possono cercare un
+questionario tramite la barra di ricerca & \makecell{Interno\\ UC6 } \\ \hline
+			 \hypertarget{{RFO6}}{{RFO6}} & L’utente autenticato e l’utente
+autenticato pro possono compilare un
+questionario & \makecell{Capitolato\\ UC7 } \\ \hline
+			 \hypertarget{{RFD6.1}}{{RFD6.1}} & L’utente autenticato e l’utente
+autenticato pro a partire da una
+domanda possono scegliere di spostarsi
+alla domanda successiva del questionario & \makecell{Interno\\ UC7 \\UC7.1 } \\ \hline
+			 \hypertarget{{RFD6.2}}{{RFD6.2}} & L’utente autenticato e l’utente
+autenticato pro a partire da una
+domanda possono scegliere di spostarsi
+alla domanda precedente del questionario & \makecell{Interno\\ UC7 \\UC7.2 } \\ \hline
+			 \hypertarget{{RFD6.3}}{{RFD6.3}} & L’utente autenticato e l’utente
+autenticato pro a partire da una
+domanda possono scegliere di spostarsi
+ad una qualsiasi altra domanda presente
+nel questionario & \makecell{Interno\\ UC7 \\UC7.3 } \\ \hline
+			 \hypertarget{{RFD6.4}}{{RFD6.4}} & L’utente autenticato e l’utente
+autenticato pro possono concludere il
+questionario confermando le risposte date
+alle domande che lo compongono & \makecell{Interno\\ UC7 \\UC7.4 } \\ \hline
+			 \hypertarget{{RFO6.5}}{{RFO6.5}} & Il sistema deve valutare le risposte date
+dagli utilizzatori & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO7}}{{RFO7}} & L’utente autenticato e l’utente
+autenticato pro possono gestire le
+domande che hanno creato & \makecell{Capitolato\\ UC8 } \\ \hline
+			 \hypertarget{{RFD7.1}}{{RFD7.1}} & L’utente autenticato e l’utente
+autenticato pro possono creare una
+domanda tramite procedura guidata & \makecell{Interno\\ UC8 \\UC8.1 } \\ \hline
+			 \hypertarget{{RFD7.1.1}}{{RFD7.1.1}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere la
+tipologia di domanda da creare & \makecell{Interno\\ UC8.1 \\UC8.1.1 } \\ \hline
+			 \hypertarget{{RFD7.1.2}}{{RFD7.1.2}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+creare una domanda vero o falso & \makecell{Interno\\ UC8.1 \\UC8.1.2 } \\ \hline
+			 \hypertarget{{RFD7.1.2.1}}{{RFD7.1.2.1}} & L’utente autenticato e l’utente
+autenticato pro possono aggiungere il
+testo della domanda vero o falso & \makecell{Interno\\ UC8.1.2 \\UC8.1.2.1 } \\ \hline
+			 \hypertarget{{RFD7.1.2.2}}{{RFD7.1.2.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine relativa al testo della
+domanda vero o falso & \makecell{Interno\\ UC8.1.2 \\UC8.1.2.2 } \\ \hline
+			 \hypertarget{{RFD7.1.2.3}}{{RFD7.1.2.3}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare la
+risposta corretta & \makecell{Interno\\ UC8.1.2 \\UC8.1.2.3 } \\ \hline
+			 \hypertarget{{RFD7.1.3}}{{RFD7.1.3}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+creare una domanda a risposta multipla & \makecell{Interno\\ UC8.1 \\UC8.1.3 } \\ \hline
+			 \hypertarget{{RFD7.1.3.1}}{{RFD7.1.3.1}} & L’utente autenticato e l’utente
+autenticato pro possono aggiungere il
+testo della domanda a risposta multipla & \makecell{Interno\\ UC8.1.3 \\UC8.1.3.1 } \\ \hline
+			 \hypertarget{{RFD7.1.3.2}}{{RFD7.1.3.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine relativa al testo della
+domanda a risposta multipla & \makecell{Interno\\ UC8.1.3 \\UC8.1.3.2 } \\ \hline
+			 \hypertarget{{RFD7.1.3.3}}{{RFD7.1.3.3}} & L’utente autenticato e l’utente
+autenticato pro possono aggiungere due o
+più opzioni di risposta & \makecell{Interno\\ UC8.1.3 \\UC8.1.3.3 } \\ \hline
+			 \hypertarget{{RFD7.1.3.3.1}}{{RFD7.1.3.3.1}} & L’utente autenticato e l’utente
+autenticato pro possono aggiungere due o
+più opzioni di risposta che includono testo & \makecell{Interno\\ UC8.1.3.3 \\UC8.1.3.3.1 } \\ \hline
+			 \hypertarget{{RFD7.1.3.3.2}}{{RFD7.1.3.3.2}} & L’utente autenticato e l’utente autenticato pro possono aggiungere due o più opzioni di risposta che includono immagini & \makecell{Interno\\ UC8.1.3.3 \\UC8.1.3.3.2 } \\ \hline
+			 \hypertarget{{RFD7.1.3.4}}{{RFD7.1.3.4}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare una o
+più risposte corrette & \makecell{Interno\\ UC8.1.3 \\UC8.1.3.4 } \\ \hline
+			 \hypertarget{{RFD7.1.4}}{{RFD7.1.4}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+creare un esercizio di riempimento degli
+spazi vuoti & \makecell{Interno\\ UC8.1 \\UC8.1.4 } \\ \hline
+			 \hypertarget{{RFD7.1.4.1}}{{RFD7.1.4.1}} & L’utente autenticato e l’utente
+autenticato pro possono scrivere il testo
+dell’esercizio & \makecell{Interno\\ UC8.1.4 \\UC8.1.4.1 } \\ \hline
+			 \hypertarget{{RFD7.1.4.2}}{{RFD7.1.4.2}} & L’utente autenticato e l’utente
+autenticato pro possono indicare le parole
+da oscurare & \makecell{Interno\\ UC8.1.4 \\UC8.1.4.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5}}{{RFD7.1.5}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+creare una domanda di collegamento & \makecell{Interno\\ UC8.1 \\UC8.1.5 } \\ \hline
+			 \hypertarget{{RFD7.1.5.1}}{{RFD7.1.5.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire il testo
+della domanda & \makecell{Interno\\ UC8.1.5 \\UC8.1.5.1 } \\ \hline
+			 \hypertarget{{RFD7.1.5.2}}{{RFD7.1.5.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire una o
+più coppie di elementi & \makecell{Interno\\ UC8.1.5 \\UC8.1.5.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5.2.1}}{{RFD7.1.5.2.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine come primo elemento & \makecell{Interno\\ UC8.1.5.2.1 \\UC8.1.5.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5.2.2}}{{RFD7.1.5.2.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire un testo
+come primo elemento & \makecell{Interno\\ UC8.1.5.2.2 \\UC8.1.5.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5.2.3}}{{RFD7.1.5.2.3}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine come secondo elemento & \makecell{Interno\\ UC8.1.5.2.3 \\UC8.1.5.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5.2.4}}{{RFD7.1.5.2.4}} & L’utente autenticato e l’utente
+autenticato pro possono inserire un testo
+come secondo elemento & \makecell{Interno\\ UC8.1.5.2.4 \\UC8.1.5.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5.3}}{{RFD7.1.5.3}} & L’utente autenticato e l’utente
+autenticato pro possono eliminare una o
+più coppie di elementi & \makecell{Interno\\ UC8.1.5 \\UC8.1.5.3 } \\ \hline
+			 \hypertarget{{RFD7.1.5.3.1}}{{RFD7.1.5.3.1}} & L’utente autenticato e l’utente
+autenticato pro possono confermare
+l’eliminazione di una coppia di elementi & \makecell{Interno\\ UC8.1.5.3 \\UC8.1.5.3.1 } \\ \hline
+			 \hypertarget{{RFD7.1.5.4}}{{RFD7.1.5.4}} & L’utente autenticato e l’utente
+autenticato pro possono modificare una o
+più coppie di elementi & \makecell{Verbale interno\\ UC8.1.5 \\UC8.1.5.4 } \\ \hline
+			 \hypertarget{{RFD7.1.5.4.1}}{{RFD7.1.5.4.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo di un elemento & \makecell{Interno\\ UC8.1.5.4 \\UC8.1.5.4.1 } \\ \hline
+			 \hypertarget{{RFD7.1.5.4.2}}{{RFD7.1.5.4.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’immagine di un elemento & \makecell{Interno\\ UC8.1.5.4 \\UC8.1.5.4.2 } \\ \hline
+			 \hypertarget{{RFD7.1.5.4.3}}{{RFD7.1.5.4.3}} & L’utente autenticato e l’utente
+autenticato pro possono cambiare il testo
+di un elemento di una coppia in
+un’immagine & \makecell{Interno\\ UC8.1.5.4 \\UC8.1.5.4.3 } \\ \hline
+			 \hypertarget{{RFD7.1.5.4.4}}{{RFD7.1.5.4.4}} & L’utente autenticato e l’utente
+autenticato pro possono cambiare
+l’immagine di un elemento di una coppia
+in testo & \makecell{Interno\\ UC8.1.5.4 \\UC8.1.5.4.4 } \\ \hline
+			 \hypertarget{{RFD7.1.6}}{{RFD7.1.6}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+creare una domanda a ordinamento di
+immagini & \makecell{Interno\\ UC8.1 \\UC8.1.6 } \\ \hline
+			 \hypertarget{{RFD7.1.6.1}}{{RFD7.1.6.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire il testo
+della domanda & \makecell{Interno\\ UC8.1.6 \\UC8.1.6.1 } \\ \hline
+			 \hypertarget{{RFD7.1.6.2}}{{RFD7.1.6.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine per il testo della domanda & \makecell{Interno\\ UC8.1.6 \\UC8.1.6.2 } \\ \hline
+			 \hypertarget{{RFD7.1.6.3}}{{RFD7.1.6.3}} & L’utente autenticato e l’utente
+autenticato pro possono inserire immagini
+come risposta & \makecell{Interno\\ UC8.1.6 \\UC8.1.6.3 } \\ \hline
+			 \hypertarget{{RFD7.1.7}}{{RFD7.1.7}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+creare una domanda a ordinamento di
+stringhe & \makecell{Interno\\ UC8.1 \\UC8.1.7 } \\ \hline
+			 \hypertarget{{RFD7.1.7.1}}{{RFD7.1.7.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire il testo
+della domanda a ordinamento di stringhe & \makecell{Verbale interno\\ UC8.1.7 \\UC8.1.7.1 } \\ \hline
+			 \hypertarget{{RFD7.1.7.2}}{{RFD7.1.7.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire stringhe
+di composizione sequenza & \makecell{Interno\\ UC8.1.7 \\UC8.1.7.2 } \\ \hline
+			 \hypertarget{{RFD7.1.7.3}}{{RFD7.1.7.3}} & L’utente autenticato e l’utente
+autenticato pro possono comporre la
+soluzione della sequenza & \makecell{Interno\\ UC8.1.7 \\UC8.1.7.3 } \\ \hline
+			 \hypertarget{{RFD7.1.8}}{{RFD7.1.8}} & L’utente autenticato e l’utente
+autenticato pro possono creare una
+domanda con area cliccabile
+nell’immagine & \makecell{Interno\\ UC8.1 \\UC8.1.8 } \\ \hline
+			 \hypertarget{{RFD7.1.8.1}}{{RFD7.1.8.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire il testo
+della domanda & \makecell{Interno\\ UC8.1.8 \\UC8.1.8.1 } \\ \hline
+			 \hypertarget{{RFD7.1.8.2}}{{RFD7.1.8.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine & \makecell{Interno\\ UC8.1.8 \\UC8.1.8.2 } \\ \hline
+			 \hypertarget{{RFD7.1.8.3}}{{RFD7.1.8.3}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere un
+numero di aree selezionabili & \makecell{Interno\\ UC8.1.8 \\UC8.1.8.3 } \\ \hline
+			 \hypertarget{{RFD7.1.8.4}}{{RFD7.1.8.4}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere le aree
+selezionabili & \makecell{Interno\\ UC8.1.8 \\UC8.1.8.4 } \\ \hline
+			 \hypertarget{{RFD7.1.9}}{{RFD7.1.9}} & L’utente autenticato e l’utente
+autenticato pro possono confermare la
+creazione della domanda & \makecell{Interno\\ UC8.1 \\UC8.1.9 } \\ \hline
+			 \hypertarget{{RFD7.1.10}}{{RFD7.1.10}} & Il sistema deve mostrare un messaggio di
+errore in caso la conferma della creazione
+della domanda non sia andata a buon fine & \makecell{Interno\\ UC8.1 \\UC8.1.10 } \\ \hline
+			 \hypertarget{{RFD7.2}}{{RFD7.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare una
+domanda tramite procedura guidata & \makecell{Interno\\ UC8 \\UC8.2 } \\ \hline
+			 \hypertarget{{RFD7.2.1}}{{RFD7.2.1}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda vero o falso & \makecell{Interno\\ UC8.2 \\UC8.2.1 } \\ \hline
+			 \hypertarget{{RFD7.2.1.1}}{{RFD7.2.1.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda vero o falso & \makecell{Interno\\ UC8.2.1 \\UC8.2.1.1 } \\ \hline
+			 \hypertarget{{RFD7.2.1.2}}{{RFD7.2.1.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’immagine della domanda vero o falso & \makecell{Interno\\ UC8.2.1 \\UC8.2.1.2 } \\ \hline
+			 \hypertarget{{RFD7.2.1.3}}{{RFD7.2.1.3}} & L’utente autenticato e l’utente
+autenticato pro possono modificare la
+risposta corretta della domanda vero o
+falso & \makecell{Interno\\ UC8.2.1 \\UC8.2.1.3 } \\ \hline
+			 \hypertarget{{RFD7.2.2}}{{RFD7.2.2}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda a risposta
+multipla & \makecell{Interno\\ UC8.2 \\UC8.2.2 } \\ \hline
+			 \hypertarget{{RFD7.2.2.1}}{{RFD7.2.2.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda a risposta multipla & \makecell{Interno\\ UC8.2.2 \\UC8.2.2.1 } \\ \hline
+			 \hypertarget{{RFD7.2.2.2}}{{RFD7.2.2.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’immagine della domanda a risposta
+multipla & \makecell{Interno\\ UC8.2.2 \\UC8.2.2.2 } \\ \hline
+			 \hypertarget{{RFD7.2.2.3}}{{RFD7.2.2.3}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’opzione di risposta della domanda a
+risposta multipla & \makecell{Interno\\ UC8.2.2 \\UC8.2.2.3 } \\ \hline
+			 \hypertarget{{RFD7.2.2.3.1}}{{RFD7.2.2.3.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’opzione di risposta che include del testo & \makecell{Interno\\ UC8.2.2.3 \\UC8.2.2.3.1 } \\ \hline
+			 \hypertarget{{RFD7.2.2.3.2}}{{RFD7.2.2.3.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’opzione di risposta che include delle
+immagini & \makecell{Interno\\ UC8.2.2.3 \\UC8.2.2.3.2 } \\ \hline
+			 \hypertarget{{RFD7.2.2.4}}{{RFD7.2.2.4}} & L’utente autenticato e l’utente
+autenticato pro possono modificare la
+risposta corretta o le risposte corrette
+della domanda a risposta multipla & \makecell{Interno\\ UC8.2.2 \\UC8.2.2.4 } \\ \hline
+			 \hypertarget{{RFD7.2.3}}{{RFD7.2.3}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda a riempimento
+di spazi vuoti & \makecell{Interno\\ UC8.2 \\UC8.2.3 } \\ \hline
+			 \hypertarget{{RFD7.2.3.1}}{{RFD7.2.3.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda a riempimento di
+spazi & \makecell{Interno\\ UC8.2.3 \\UC8.2.3.1 } \\ \hline
+			 \hypertarget{{RFD7.2.3.2}}{{RFD7.2.3.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare le
+parole da oscurare della domanda a
+riempimento di spazi & \makecell{Interno\\ UC8.2.3 \\UC8.2.3.2 } \\ \hline
+			 \hypertarget{{RFD7.2.4}}{{RFD7.2.4}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda di collegamento & \makecell{Interno\\ UC8.2 \\UC8.2.4 } \\ \hline
+			 \hypertarget{{RFD7.2.4.1}}{{RFD7.2.4.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda di collegamento & \makecell{Interno\\ UC8.2.4 \\UC8.2.4.1 } \\ \hline
+			 \hypertarget{{RFD7.2.4.2}}{{RFD7.2.4.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire una
+nuova coppia di elementi da collegare & \makecell{Interno\\ UC8.2.4 \\UC8.2.4.2 } \\ \hline
+			 \hypertarget{{RFD7.2.4.2.1}}{{RFD7.2.4.2.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine come primo elemento della
+domanda & \makecell{Interno\\ UC8.2.4.2 \\UC8.2.4.2.1 } \\ \hline
+			 \hypertarget{{RFD7.2.4.2.2}}{{RFD7.2.4.2.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire un testo
+come primo elemento della domanda & \makecell{Interno\\ UC8.2.4.2 \\UC8.2.4.2.2 } \\ \hline
+			 \hypertarget{{RFD7.2.4.2.3}}{{RFD7.2.4.2.3}} & L’utente autenticato e l’utente
+autenticato pro possono inserire
+un’immagine come secondo elemento
+della domanda & \makecell{Interno\\ UC8.2.4.2 \\UC8.2.4.2.3 } \\ \hline
+			 \hypertarget{{RFD7.2.4.2.4}}{{RFD7.2.4.2.4}} & L’utente autenticato e l’utente
+autenticato pro possono inserire un testo
+come secondo elemento della domanda & \makecell{Interno\\ UC8.2.4.2 \\UC8.2.4.2.4 } \\ \hline
+			 \hypertarget{{RFD7.2.4.3}}{{RFD7.2.4.3}} & L’utente autenticato e l’utente
+autenticato pro possono eliminare una
+coppia di elementi da collegare & \makecell{Interno\\ UC8.2.4 \\UC8.2.4.3 } \\ \hline
+			 \hypertarget{{RFD7.2.4.3.1}}{{RFD7.2.4.3.1}} & L’utente autenticato e l’utente
+autenticato pro possono confermare di
+eliminare una coppia di elementi da
+collegare & \makecell{Interno\\ UC8.2.4.3 \\UC8.2.4.3.1 } \\ \hline
+			 \hypertarget{{RFD7.2.4.4}}{{RFD7.2.4.4}} & L’utente autenticato e l’utente
+autenticato pro possono modificare una
+coppia di elementi da collegare & \makecell{Interno\\ UC8.2.4 \\UC8.2.4.4 } \\ \hline
+			 \hypertarget{{RFD7.2.4.4.1}}{{RFD7.2.4.4.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo di un elemento da collegare & \makecell{Interno\\ UC8.2.4.4 \\UC8.2.4.4.1 } \\ \hline
+			 \hypertarget{{RFD7.2.4.4.2}}{{RFD7.2.4.4.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+un’immagine di un elemento da collegare & \makecell{Interno\\ UC8.2.4.4 \\UC8.2.4.4.2 } \\ \hline
+			 \hypertarget{{RFD7.2.4.4.3}}{{RFD7.2.4.4.3}} & L’utente autenticato e l’utente
+autenticato pro possono cambiare il testo
+di un elemento da collegare in
+un’immagine & \makecell{Interno\\ UC8.2.4.4 \\UC8.2.4.4.3 } \\ \hline
+			 \hypertarget{{RFD7.2.4.4.4}}{{RFD7.2.4.4.4}} & L’utente autenticato e l’utente
+autenticato pro possono cambiare
+l’immagine di un elemento da collegare in
+un testo & \makecell{Interno\\ UC8.2.4.4 \\UC8.2.4.4.4 } \\ \hline
+			 \hypertarget{{RFD7.2.5}}{{RFD7.2.5}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda di ordinamento
+immagini & \makecell{Interno\\ UC8.2 \\UC8.2.5 } \\ \hline
+			 \hypertarget{{RFD7.2.5.1}}{{RFD7.2.5.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda a ordinamento di
+immagini & \makecell{Interno\\ UC8.2.5 \\UC8.2.5.1 } \\ \hline
+			 \hypertarget{{RFD7.2.5.2}}{{RFD7.2.5.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’immagine della domanda a ordinamento
+di immagini & \makecell{Interno\\ UC8.2.5 \\UC8.2.5.2 } \\ \hline
+			 \hypertarget{{RFD7.2.5.3}}{{RFD7.2.5.3}} & L’utente autenticato e l’utente
+autenticato pro possono modificare le
+immagini della risposta della domanda a
+ordinamento di immagini & \makecell{Interno\\ UC8.2.5 \\UC8.2.5.3 } \\ \hline
+			 \hypertarget{{RFD7.2.5.4}}{{RFD7.2.5.4}} & L’utente autenticato e l’utente
+autenticato pro possono modificare
+l’ordine delle immagini della risposta
+della domanda a ordinamento di
+immagini & \makecell{Interno\\ UC8.2.5 \\UC8.2.5.4 } \\ \hline
+			 \hypertarget{{RFD7.2.6}}{{RFD7.2.6}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda di ordinamento
+stringhe & \makecell{Interno\\ UC8.2 \\UC8.2.6 } \\ \hline
+			 \hypertarget{{RFD7.2.6.1}}{{RFD7.2.6.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda a ordinamento di
+stringhe & \makecell{Interno\\ UC8.2.6 \\UC8.2.6.1 } \\ \hline
+			 \hypertarget{{RFD7.2.6.2}}{{RFD7.2.6.2}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della risposta e il numero di stringhe
+della domanda a ordinamento di stringhe & \makecell{Interno\\ UC8.2.6 \\UC8.2.6.2 } \\ \hline
+			 \hypertarget{{RFD7.2.6.3}}{{RFD7.2.6.3}} & L’utente autenticato e l’utente
+autenticato pro possono modificare la
+soluzione della domanda a ordinamento
+di stringhe & \makecell{Interno\\ UC8.2.6 \\UC8.2.6.3 } \\ \hline
+			 \hypertarget{{RFD7.2.7}}{{RFD7.2.7}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere di
+modificare una domanda con immagine
+ad aree cliccabili & \makecell{Interno\\ UC8.2 \\UC8.2.7 } \\ \hline
+			 \hypertarget{{RFD7.2.7.1}}{{RFD7.2.7.1}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+testo della domanda ad immagine con
+aree selezionabili & \makecell{Interno\\ UC8.2.7 \\UC8.2.7.1 } \\ \hline
+			 \hypertarget{{RFD7.2.7.2}}{{RFD7.2.7.2}} & L’utente autenticato e l’utente
+autenticato pro possono inserire una
+nuova immagine della domanda ad
+immagine con aree selezionabili & \makecell{Interno\\ UC8.2.7 \\UC8.2.7.2 } \\ \hline
+			 \hypertarget{{RFD7.2.7.3}}{{RFD7.2.7.3}} & L’utente autenticato e l’utente
+autenticato pro possono modificare il
+numero della aree selezionabili
+dell’immagine della domanda ad
+immagine con aree selezionabili & \makecell{Interno\\ UC8.2.7 \\UC8.2.7.3 } \\ \hline
+			 \hypertarget{{RFD7.2.7.4}}{{RFD7.2.7.4}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere nuove
+aree selezionabili dell’immagine della
+domanda ad immagine con aree
+selezionabili & \makecell{Interno\\ UC8.2.7 \\UC8.2.7.4 } \\ \hline
+			 \hypertarget{{RFD7.2.8}}{{RFD7.2.8}} & L’utente autenticato e l’utente
+autenticato pro possono confermare le
+modifiche apportate alla domanda & \makecell{Interno\\ UC8.2 \\UC8.2.8 } \\ \hline
+			 \hypertarget{{RFD7.2.9}}{{RFD7.2.9}} & Il sistema deve mostrare un messaggio di
+errore in caso la conferma delle modifiche
+non sia andata a buon fine & \makecell{Interno\\ UC8.2 \\UC8.2.9 } \\ \hline
+			 \hypertarget{{RFO7.3}}{{RFO7.3}} & L’utente autenticato e l’utente autenticato pro possono scegliere di creare una domanda tramite editor di testo \textit{QML\ped{G}} & \makecell{Capitolato\\ UC8 \\UC8.3 } \\ \hline
+			 \hypertarget{{RFO7.3.1}}{{RFO7.3.1}} & L’utente autenticato e l’utente autenticato pro possono confermare la creazione di una domanda tramite editor di testo \textit{QML\ped{G}} & \makecell{Capitolato\\ UC8.3 \\UC8.3.1 } \\ \hline
+			 \hypertarget{{RFD7.4}}{{RFD7.4}} & L’utente autenticato e l’utente autenticato pro possono scegliere di modificare una domanda tramite editor di testo \textit{QML\ped{G}} & \makecell{Interno\\ UC8 \\UC8.4 } \\ \hline
+			 \hypertarget{{RFD7.4.1}}{{RFD7.4.1}} & L’utente autenticato e l’utente autenticato pro possono confermare la modifica di una domanda tramite editor di testo \textit{QML\ped{G}} & \makecell{Interno\\ UC8.4 \\UC8.4.1 } \\ \hline
+			 \hypertarget{{RFD7.5}}{{RFD7.5}} & L’utente autenticato e l’utente
+autenticato pro possono scegliere un
+argomento da assegnare alla nuova
+domanda & \makecell{Interno\\ UC8 \\UC8.5 } \\ \hline
+			 \hypertarget{{RFD7.6}}{{RFD7.6}} & L’utente autenticato e l’utente
+autenticato pro possono inserire delle
+parole chiave relative alla nuova domanda & \makecell{Interno\\ UC8 \\UC8.6 } \\ \hline
+			 \hypertarget{{RFO7.7}}{{RFO7.7}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare la domanda da modificare & \makecell{Interno\\ UC8 \\UC8.7 } \\ \hline
+			 \hypertarget{{RFO8}}{{RFO8}} & L’utente autenticato pro può gestire i
+questionari che ha creato & \makecell{Verbale 2016-01-11\\ UC9 } \\ \hline
+			 \hypertarget{{RFD8.1}}{{RFD8.1}} & L’utente autenticato pro può visualizzare
+i questionari creati & \makecell{Interno\\ UC9 \\UC9.1 } \\ \hline
+			 \hypertarget{{RFD8.2}}{{RFD8.2}} & L’utente autenticato pro può modificare
+un questionario che ha creato & \makecell{Interno\\ UC9 \\UC9.2 } \\ \hline
+			 \hypertarget{{RFD8.2.1}}{{RFD8.2.1}} & L’utente autenticato pro può modificare il
+nome di un questionario & \makecell{Interno\\ UC9.2 \\UC9.2.1 } \\ \hline
+			 \hypertarget{{RFD8.2.2}}{{RFD8.2.2}} & L’utente autenticato pro può confermare
+le modifiche che ha effettuato nel
+questionario & \makecell{Interno\\ UC9.2 \\UC9.2.2 } \\ \hline
+			 \hypertarget{{RFD8.3}}{{RFD8.3}} & L’utente autenticato pro può eliminare
+un questionario che ha creato & \makecell{Interno\\ UC9 \\UC9.3 } \\ \hline
+			 \hypertarget{{RFD8.3.1}}{{RFD8.3.1}} & L’utente autenticato pro può confermare
+se eliminare un questionario che ha creato & \makecell{Interno\\ UC9.3 \\UC9.3.1 } \\ \hline
+			 \hypertarget{{RFD8.4}}{{RFD8.4}} & L’utente autenticato pro può visualizzare
+i risultati degli esaminandi & \makecell{Verbale 2016-01-11\\ UC9 \\UC9.4 } \\ \hline
+			 \hypertarget{{RFD8.5}}{{RFD8.5}} & L’utente autenticato pro può rendere il
+questionario compilabile da parte degli
+esaminandi & \makecell{Interno\\ UC9 \\UC9.5 } \\ \hline
+			 \hypertarget{{RFO8.6}}{{RFO8.6}} & L’utente autenticato pro può creare un
+nuovo questionario & \makecell{Capitolato\\ UC9 \\UC9.6 } \\ \hline
+			 \hypertarget{{RFO8.6.1}}{{RFO8.6.1}} & L’utente autenticato pro può scegliere
+l’argomento del questionario & \makecell{Capitolato\\ UC9.6 \\UC9.6.1 } \\ \hline
+			 \hypertarget{{RFD8.6.2}}{{RFD8.6.2}} & L’utente autenticato pro può scegliere
+delle parole chiave che identifichino il
+questionario & \makecell{Interno\\ UC9.6 \\UC9.6.2 } \\ \hline
+			 \hypertarget{{RFD8.6.3}}{{RFD8.6.3}} & L’utente autenticato pro può inserire il
+nome del questionario  & \makecell{Interno\\ UC9.6 \\UC9.6.3 } \\ \hline
+			 \hypertarget{{RFO8.6.4}}{{RFO8.6.4}} & L’utente autenticato pro può concludere
+il questionario & \makecell{Interno\\ UC9.6 \\UC9.6.4 } \\ \hline
+			 \hypertarget{{RFD8.6.4.1}}{{RFD8.6.4.1}} & L’utente autenticato pro può consultare il
+resoconto del questionario dopo aver
+deciso di concluderlo & \makecell{Interno\\ UC9.6.4 \\UC9.6.4.1 } \\ \hline
+			 \hypertarget{{RFO8.6.4.2}}{{RFO8.6.4.2}} & L’utente autenticato pro può approvare la
+conclusione del questionario & \makecell{Interno\\ UC9.6.4 \\UC9.6.4.2 } \\ \hline
+			 \hypertarget{{RFO8.7}}{{RFO8.7}} & L’utente autenticato pro può gestire le
+domande di un questionario & \makecell{Interno\\ UC9 \\UC9.7 } \\ \hline
+			 \hypertarget{{RFO8.7.1}}{{RFO8.7.1}} & L’utente autenticato pro può aggiungere
+delle domande all’interno del questionario & \makecell{Interno\\ UC9.7 \\UC9.7.1.1 } \\ \hline
+			 \hypertarget{{RFO8.7.1.1}}{{RFO8.7.1.1}} & L’utente autenticato pro può ricercare
+una domanda all’interno del database di
+domande & \makecell{Interno\\ UC9.7.1 \\UC9.7.1.1 } \\ \hline
+			 \hypertarget{{RFO8.7.1.1.1}}{{RFO8.7.1.1.1}} & L’utente autenticato pro può selezionare
+delle domande da inserire all’interno dei
+questionari & \makecell{Interno\\ UC9.7.1.1 \\UC9.7.1.1.1 } \\ \hline
+			 \hypertarget{{RFO8.7.1.1.2}}{{RFO8.7.1.1.2}} & L’utente autenticato pro può applicare
+dei filtri per effettuare una ricerca delle
+domande dettagliata & \makecell{Interno\\ UC9.7.1.1 \\UC9.7.1.1.2 } \\ \hline
+			 \hypertarget{{RFO8.7.2}}{{RFO8.7.2}} & L’utente autenticato pro può eliminare
+una domanda dal questionario & \makecell{Interno\\ UC9.7 \\UC9.7.2 } \\ \hline
+			 \hypertarget{{RFO8.7.2.1}}{{RFO8.7.2.1}} & L’utente autenticato pro può confermare
+se eliminare una domanda dal
+questionario & \makecell{Interno\\ UC9.7.2 \\UC9.7.2.1 } \\ \hline
+			 \hypertarget{{RFD8.8}}{{RFD8.8}} & L’utente autenticato pro può gestire la
+iscrizione degli esaminandi ai questionari & \makecell{Interno\\ UC9 \\UC9.8 } \\ \hline
+			 \hypertarget{{RFD8.8.1}}{{RFD8.8.1}} & L’utente autenticato pro può selezionare
+il questionario del quale gestire le
+iscrizioni & \makecell{Interno\\ UC9.8 \\UC9.8.1 } \\ \hline
+			 \hypertarget{{RFD8.8.2}}{{RFD8.8.2}} & L’utente autenticato pro può accettare le
+iscrizioni degli esaminandi ai questionari & \makecell{Interno\\ UC9.8 \\UC9.8.2 } \\ \hline
+			 \hypertarget{{RFO9}}{{RFO9}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono esercitarsi nella modalità
+allenamento & \makecell{Verbale 2016-01-11\\ UC10 } \\ \hline
+			 \hypertarget{{RFD9.1}}{{RFD9.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono decidere un argomento per fare
+un allenamento & \makecell{Interno\\ UC10 \\UC10.1 } \\ \hline
+			 \hypertarget{{RFD9.2}}{{RFD9.2}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono decidere delle parole chiave per
+filtrare maggiormente le domande poste
+durante l’allenamento & \makecell{Interno\\ UC10 \\UC10.2 } \\ \hline
+			 \hypertarget{{RFD9.3}}{{RFD9.3}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono scegliere il numero di domande
+che comporranno l’allenamento
+(potenzialmente anche infinite domande) & \makecell{Interno\\ UC10 \\UC10.3 } \\ \hline
+			 \hypertarget{{RFD9.4}}{{RFD9.4}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rispondere alle domande
+proposte iniziando l’allenamento & \makecell{Interno\\ UC10 \\UC10.4 } \\ \hline
+			 \hypertarget{{RFD9.4.1}}{{RFD9.4.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono confermare una risposta durante
+un allenamento & \makecell{Interno\\ UC10.4 \\UC10.4.1 } \\ \hline
+			 \hypertarget{{RFD9.4.2}}{{RFD9.4.2}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rilasciare un Like ad una
+domanda proposta durante un
+allenamento & \makecell{Interno\\ UC10.4 \\UC10.4.2 } \\ \hline
+			 \hypertarget{{RFD9.4.3}}{{RFD9.4.3}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rilasciare commenti ad una
+domanda proposta durante un
+allenamento & \makecell{Interno\\ UC10.4 \\UC10.4.3 \\UC10.4.3.1 \\UC10.4.3.2 } \\ \hline
+			 \hypertarget{{RFD9.4.4}}{{RFD9.4.4}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono segnalare una domanda
+indicando il tipo di segnalazione e
+scrivendo un commento per essa & \makecell{Interno\\ UC10.4 \\UC10.4.4 \\UC10.4.4.1 \\UC10.4.4.2 } \\ \hline
+			 \hypertarget{{RFD9.4.5}}{{RFD9.4.5}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono avanzare alla domanda successiva
+(se presente) durante l’allenamento & \makecell{Interno\\ UC10.4 \\UC10.4.5 } \\ \hline
+			 \hypertarget{{RFD9.4.6}}{{RFD9.4.6}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono decidere di terminare
+l’allenamento in qualunque momento & \makecell{Interno\\ UC10.4 \\UC10.4.6 } \\ \hline
+			 \hypertarget{{RFD9.5}}{{RFD9.5}} & Il sistema sceglie una domanda in base
+all’abilità dell’avversario sull’argomento
+scelto & \makecell{Interno } \\ \hline
+			 \hypertarget{{RFD9.6}}{{RFD9.6}} & Il sistema aggiorna automaticamente i
+dati sull’abilità dell’utente ad ogni
+risposta & \makecell{Interno } \\ \hline
+			 \hypertarget{{RFD9.7}}{{RFD9.7}} & Il sistema aggiorna automaticamente i
+dati sulla difficoltà di una domanda
+quando un utente risponde alla medesima & \makecell{Interno } \\ \hline
+			 \hypertarget{{RFD10}}{{RFD10}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare il
+proprio profilo & \makecell{Interno\\ UC11 } \\ \hline
+			 \hypertarget{{RFD10.1}}{{RFD10.1}} & L’utente autenticato e l’utente
+autenticato pro possono andare alla
+pagina di gestione del profilo mediante
+l’apposito link & \makecell{Interno\\ UC11 \\UC11.1 } \\ \hline
+			 \hypertarget{{RFD10.2}}{{RFD10.2}} & L’utente autenticato e l’utente
+autenticato pro possono andare alla
+pagina di gestione delle domande
+mediante l’apposito link & \makecell{Interno\\ UC11 \\UC11.2 } \\ \hline
+			 \hypertarget{{RFD10.3}}{{RFD10.3}} & L’utente autenticato pro può andare alla
+pagina di gestione dei questionari
+mediante l’apposito link & \makecell{Interno\\ UC11 \\UC11.3 } \\ \hline
+			 \hypertarget{{RFD10.4}}{{RFD10.4}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare la
+cronologia di tutti i questionari che
+hanno svolto & \makecell{Interno\\ UC11 \\UC11.4 } \\ \hline
+			 \hypertarget{{RFD10.4.1}}{{RFD10.4.1}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare e
+visualizzare le statistiche di un
+questionario scelto dalla cronologia & \makecell{Interno\\ UC11.4 \\UC11.4.1 } \\ \hline
+			 \hypertarget{{RFD10.5}}{{RFD10.5}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare la
+lista dei questionari abilitati & \makecell{Interno\\ UC11 \\UC11.5 } \\ \hline
+			 \hypertarget{{RFD10.5.1}}{{RFD10.5.1}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare un
+questionario abilitato & \makecell{Interno\\ UC11.5 \\UC11.5.1 } \\ \hline
+			 \hypertarget{{RFD10.6}}{{RFD10.6}} & L’utente autenticato e l’utente
+autenticato pro possono tornare alla
+home page mediante l’apposito link & \makecell{Interno\\ UC11 \\UC11.6 } \\ \hline
+			 \hypertarget{{RFD10.7}}{{RFD10.7}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare il proprio username & \makecell{Interno\\ UC11 \\UC11.7 } \\ \hline
+			 \hypertarget{{RFD10.8}}{{RFD10.8}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare la propria immagine profilo & \makecell{Interno\\ UC11 \\UC11.9 } \\ \hline
+			 \hypertarget{{RFD10.9}}{{RFD10.9}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare il proprio livello attuale & \makecell{Interno\\ UC11 \\UC11.9 } \\ \hline
+			 \hypertarget{{RFD10.10}}{{RFD10.10}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare il numero di domande risposte in
+modo esatto & \makecell{Interno\\ UC11 \\UC11.10 } \\ \hline
+			 \hypertarget{{RFD10.11}}{{RFD10.11}} & L’utente autenticato e l’utente autenticato pro possono visualizzare il numero di domande risposte in totale & \makecell{Interno\\ UC11 \\UC11.11 } \\ \hline
+			 \hypertarget{{RFO11}}{{RFO11}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rispondere alle domande & \makecell{Capitolato\\ UC12 } \\ \hline
+			 \hypertarget{{RFO11.1}}{{RFO11.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rispondere ad una domanda vero
+o falso & \makecell{Capitolato\\ UC12 \\UC12.1 } \\ \hline
+			 \hypertarget{{RFO11.2}}{{RFO11.2}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rispondere ad una domanda a
+risposta multipla & \makecell{Capitolato\\ UC12 \\UC12.2 } \\ \hline
+			 \hypertarget{{RFO11.3}}{{RFO11.3}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono compilare un esercizio di
+riempimento di uno spazio vuoto & \makecell{Capitolato\\ UC12 \\UC12.3 } \\ \hline
+			 \hypertarget{{RFD11.4}}{{RFD11.4}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rispondere ad una domanda di
+collegamento & \makecell{Capitolato\\ UC12 \\UC12.4 } \\ \hline
+			 \hypertarget{{RFD11.4.1}}{{RFD11.4.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono collegare le voci & \makecell{Capitolato\\ UC12.4 \\UC12.4.1 \\UC12.4.1.1 \\UC12.4.1.2 } \\ \hline
+			 \hypertarget{{RFD11.5}}{{RFD11.5}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono ordinare delle immagini & \makecell{Verbale 2016-01-11\\ UC12 \\UC12.5 } \\ \hline
+			 \hypertarget{{RFD11.5.1}}{{RFD11.5.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono inserire un’immagine in uno
+spazio già occupato oppure no & \makecell{Verbale 2016-01-11\\ UC12.5 \\UC12.5.1 \\UC12.5.1.1 \\UC12.5.1.2 } \\ \hline
+			 \hypertarget{{RFD11.6}}{{RFD11.6}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono ordinare delle stringhe & \makecell{Verbale 2016-01-11\\ UC12 \\UC12.6 } \\ \hline
+			 \hypertarget{{RFD11.6.1}}{{RFD11.6.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono inserire una stringa in uno spazio
+già occupato oppure no & \makecell{Verbale 2016-01-11\\ UC12.6 \\UC12.6.1 \\UC12.6.1.1 \\UC12.6.1.2 } \\ \hline
+			 \hypertarget{{RFD11.7}}{{RFD11.7}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono rispondere ad una domanda con
+area cliccabile & \makecell{Verbale 2016-01-11\\ UC12 \\UC12.7 } \\ \hline
+			 \hypertarget{{RFD11.7.1}}{{RFD11.7.1}} & L’utente non autenticato, l’utente
+autenticato e l’utente autenticato pro
+possono selezionare un’area cliccabile & \makecell{Verbale 2016-01-11\\ UC12.7 \\UC12.7.1 } \\ \hline
+			 \hypertarget{{RFO12}}{{RFO12}} & L’utente autenticato e l’utente
+autenticato pro possono ricercare un
+utente & \makecell{Interno\\ UC13 } \\ \hline
+			 \hypertarget{{RFD12.1}}{{RFD12.1}} & L’utente autenticato e l’utente
+autenticato pro possono inserire nome e
+cognome oppure lo username nella barra
+di ricerca per ricercare un utente & \makecell{Interno\\ UC13 \\UC13.1 } \\ \hline
+			 \hypertarget{{RFD12.2}}{{RFD12.2}} & L’utente autenticato e l’utente
+autenticato pro possono selezionare
+l’utente ricercato & \makecell{Interno\\ UC13 \\UC13.2 } \\ \hline
+			 \hypertarget{{RFD12.3}}{{RFD12.3}} & L’utente autenticato e l’utente
+autenticato pro possono visualizzare il profilo dell'utente ricercato & \makecell{Interno\\ UC13 \\UC13.3 } \\ \hline
+			 \hypertarget{{RFD12.3.1}}{{RFD12.3.1}} & L’utente autenticato e l’utente autenticato pro possono visualizzare l'username dell'utente ricercato & \makecell{Interno\\ UC13.3 \\UC13.3.1 } \\ \hline
+			 \hypertarget{{RFD12.3.2}}{{RFD12.3.2}} & L’utente autenticato e l’utente autenticato pro possono visualizzare l'immagine profilo dell'utente ricercato & \makecell{Interno\\ UC13.3 \\UC13.3.2 } \\ \hline
+			 \hypertarget{{RFD12.3.3}}{{RFD12.3.3}} & L’utente autenticato e l’utente autenticato pro possono visualizzare il livello attuale dell'utente ricercato & \makecell{Interno\\ UC13.3 \\UC13.3.3 } \\ \hline
+			 \hypertarget{{RFD12.3.4}}{{RFD12.3.4}} & L’utente autenticato e l’utente autenticato pro possono visualizzare il numero di domande risposte in modo corretto dall'utente ricercato & \makecell{Interno\\ UC13.3 \\UC13.3.4 } \\ \hline
+			 \hypertarget{{RFD12.3.5}}{{RFD12.3.5}} & L’utente autenticato e l’utente autenticato pro possono visualizzare il numero di domande risposte in totale dall'utente ricercato & \makecell{Interno\\ UC13.3 \\UC13.3.5 } \\ \hline
+			 \hypertarget{{RFD12.3.6}}{{RFD12.3.6}} & Il sistema deve mostrare un messaggio di errore in caso la ricerca degli utenti non sia andata a buon fine & \makecell{Interno\\ UC13 \\UC13.4 } \\ \hline
+			 \hypertarget{{RFF13}}{{RFF13}} & L’utente non autenticato può eseguire il
+login tramite Facebook & \makecell{Interno\\ UC14 } \\ \hline
+			 \hypertarget{{RFF14}}{{RFF14}} & L’utente non autenticato può eseguire il
+login tramite Twitter & \makecell{Interno\\ UC15 } \\ \hline
+			 \hypertarget{{RFF15}}{{RFF15}} & L’utente non autenticato può eseguire il
+login tramite Google+ & \makecell{Interno\\ UC16 } \\ \hline
+			 \hypertarget{{RFF16}}{{RFF16}} & L’utente non autenticato può eseguire il
+login tramite LinkedIn & \makecell{Interno\\ UC17 } \\ \hline
+			 \hypertarget{{RFD17}}{{RFD17}} & Il sistema deve mostrare un messaggio di errore in caso la ricerca dei questionari non sia andata a buon fine & \makecell{Interno\\ UC18 } \\ \hline
+			 \hypertarget{{RFD18}}{{RFD18}} & L’utente autenticato e l’utente
+autenticato pro possono iscriversi ad un
+questionario & \makecell{Interno\\ UC19 } \\ \hline
+			 \hypertarget{{RFD18.1}}{{RFD18.1}} & L’utente autenticato e l’utente
+autenticato pro possono confermare
+l’iscrizione ad un questionario & \makecell{Interno\\ UC19 \\UC19.1 } \\ \hline
+			 \hypertarget{{RFF19}}{{RFF19}} & L'utente non autenticato può recuperare la propria password dimenticata & \makecell{Interno\\ UC20 } \\ \hline
+			 \hypertarget{{RFF19.1}}{{RFF19.1}} & L'utente non autenticato può inserire la propria email per recuperare la password & \makecell{Interno\\ UC20 \\UC20.1 } \\ \hline
+			 \hypertarget{{RFF19.2}}{{RFF19.2}} & L'utente non autenticato può confermare il recupero della password & \makecell{Interno\\ UC20 \\UC20.2 } \\ \hline
+			 \hypertarget{{RFF19.3}}{{RFF19.3}} & Il sistema deve visualizzare un messaggio di errore in caso di indirizzo e-mail non valido oppure sconosciuto & \makecell{Interno\\ UC20 \\UC20.3 } \\ \hline
+			 \hypertarget{{RFO20}}{{RFO20}} & Il sistema deve gestire un sistema per
+proporre dei questionari & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO21}}{{RFO21}} & Il sistema deve proporre all’utilizzatore
+questionari specifici per l’argomento
+scelto & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO22}}{{RFO22}} & Il sistema deve creare dei questionari
+partendo dalle domande archiviate & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23}}{{RFO23}} & Il sistema deve archiviare le domande
+attraverso uno specifico linguaggio
+chiamato \textit{QML\ped{G}} & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23.1}}{{RFO23.1}} & Il sistema attraverso il linguaggio \textit{QML\ped{G}}
+deve gestire domande vero o falso & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23.2}}{{RFO23.2}} & Il sistema attraverso il linguaggio \textit{QML\ped{G}}
+deve gestire domande a risposte a scelta
+multipla & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23.3}}{{RFO23.3}} & Il sistema attraverso il linguaggio \textit{QML\ped{G}} deve gestire esercizi con riempimento di
+spazi vuoti & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23.4}}{{RFO23.4}} & Il sistema attraverso il linguaggio \textit{QML\ped{G}} deve gestire esercizi con delle immagini & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFD23.5}}{{RFD23.5}} & Il sistema attraverso il linguaggio \textit{QML\ped{G}} deve gestire esercizi di ordinamento di
+scelte & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFD23.6}}{{RFD23.6}} & Il sistema attraverso il linguaggio \textit{QML\ped{G}} deve gestire esercizi a corrispondenza di
+scelte & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23.7}}{{RFO23.7}} & Il sistema deve tradurre le domande
+descritte in \textit{QML\ped{G}} in \textit{HTML\ped{G}} & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO23.8}}{{RFO23.8}} & Il sistema deve archiviare le domande
+suddivise per argomento & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO24}}{{RFO24}} & Il sistema deve archiviare i questionari
+creati con le domande & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO25}}{{RFO25}} & Il sistema deve proporre all’utilizzatore
+dei questionari preconfezionati & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO26}}{{RFO26}} & Il sistema deve permettere agli
+utilizzatori di poter creare domande e
+questionari da dispositivi desktop & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO27}}{{RFO27}} & Il sistema deve permettere agli
+utilizzatori di poter rispondere alle
+domande e ai questionari da dispositivi
+desktop, tablet e smartphone & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFD28}}{{RFD28}} & Il sistema deve archiviare i risultati dei
+questionari & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFD29}}{{RFD29}} & Il sistema deve archiviare le statistiche
+delle risposte date ad ogni domanda & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFF30}}{{RFF30}} & Il sistema deve valutare il candidato
+rispetto agli altri candidati che hanno
+svolto lo stesso quiz & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFD31}}{{RFD31}} & Il sistema deve creare questionari
+dinamicamente (modalità allenamento)
+per un argomento scegliendo le domande
+in modo casuale & \makecell{Capitolato\\ UC10 } \\ \hline
+			 \hypertarget{{RFD32}}{{RFD32}} & Il sistema deve creare questionari
+dinamicamente (modalità allenamento)
+scegliendo le domande in base alle
+risposte date dai questionari precedenti & \makecell{Capitolato\\ UC10 } \\ \hline
+			 \hypertarget{{RFD33}}{{RFD33}} & Il sistema deve creare questionari
+dinamicamente (modalità allenamento)
+scegliendo tra le domande più difficili & \makecell{Capitolato\\ UC10 } \\ \hline
+			 \hypertarget{{RFD34}}{{RFD34}} & Il sistema deve creare questionari
+dinamicamente (modalità allenamento)
+scegliendo tra le lacune dei partecipanti & \makecell{Interno\\ UC10 } \\ \hline
+			 \hypertarget{{RFD35}}{{RFD35}} & Il sistema deve permettere agli
+utilizzatori di proporre nuove domande & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFF36}}{{RFF36}} & Il sistema deve permettere agli
+utilizzatori di segnalare positivamente
+una domanda & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFF37}}{{RFF37}} & Il sistema deve permettere agli
+utilizzatori di commentare un domanda & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFF38}}{{RFF38}} & Il sistema deve permettere agli
+utilizzatori di rispondere più volte ad una
+domanda & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFO39}}{{RFO39}} & Il programma deve fornire un’interfaccia
+utente & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RFF40}}{{RFF40}} & Il sistema deve permettere di visualizzare l'intera applicazione in lingue divese & \makecell{Interno } \\ \hline
+			 \hypertarget{{RFD41}}{{RFD41}} & Il sistema deve permettere all'utente di far conoscere chi ha sviluppato il sistema e di far capire che cos'è QuizziPedia & \makecell{Interno } \\ \hline
+			 \hypertarget{{RFO42}}{{RFO42}} & Il sistema deve controllare che l'utente sia loggato & \makecell{Interno } \\ \hline
+			 \hypertarget{{RFO43}}{{RFO43}} & Il sistema deve visualizzare un messaggio di errore in caso di pagine non trovate & \makecell{Interno} \\ \hline
+\caption[Requisiti Funzionali]{Requisiti Funzionali}
+\label{tabella:req0}
+\end{longtable}
+\clearpage
+\subsection{Requisiti di Qualità}
+\normalsize
+\begin{longtable}{|c|>{\centering}m{7cm}|c|}
+\hline
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
+\hline
+\endhead \hypertarget{{RQO1}}{{RQO1}} & Deve essere fornito un manuale utente & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RQO2}}{{RQO2}} & Il manuale utente deve contenere una sezione in cui viene spiegato come installare correttamente l'applicazione & \makecell{Interno } \\ \hline
+			 \hypertarget{{RQO3}}{{RQO3}} & Il manuale utente deve contenere una sezione in cui viene approfonditamente spiegato come utilizzare l'applicazione & \makecell{Interno } \\ \hline
+			 \hypertarget{{RQO4}}{{RQO4}} & Il manuale utente deve includere una sezione contenente un elenco di possibili errori e malfunzionamenti dell'applicazione e le loro possibili cause & \makecell{Interno } \\ \hline
+			 \hypertarget{{RQO5}}{{RQO5}} & Il manuale utente deve contenere una sezione che spiega come segnalare eventuali errori e malfunzionamenti & \makecell{Interno } \\ \hline
+			 \hypertarget{{RQO6}}{{RQO6}} & Deve essere fornito un manuale per gli utenti sviluppatori che intendono estendere l'applicazione & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RQO7}}{{RQO7}} & Il manuale per gli utenti sviluppatori che intendono estendere l'applicazione deve contenere una sezione che spiega come segnalare eventuali errori o malfunzionamenti & \makecell{Interno } \\ \hline
+			 \hypertarget{{RQF8}}{{RQF8}} & La documentazione per l'utente deve essere disponibile in lingua inglese & \makecell{Interno } \\ \hline
+			 \hypertarget{{RQO9}}{{RQO9}} & La documentazione per l'utente deve essere disponibile in lingua italiana & \makecell{Interno} \\ \hline
+\caption[Requisiti di Qualità]{Requisiti di Qualità}
+\label{tabella:req2}
+\end{longtable}
+\clearpage
+\subsection{Requisiti di Vincolo}
+\normalsize
+\begin{longtable}{|c|>{\centering}m{7cm}|c|}
+\hline
+\textbf{Id Requisito} & \textbf{Descrizione} & \textbf{Fonti}\\
+\hline
+\endhead \hypertarget{{RVO1}}{{RVO1}} & L’applicazione deve utilizzare il linguaggio \textit{JavaScript\ped{G}}  & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RVO2}}{{RVO2}} & L’applicazione deve utilizzare il \textit{linguaggio di markup\ped{G}} \textit{HTML5\ped{G}} & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RVO3}}{{RVO3}} & L’applicazione deve utilizzare \textit{fogli di stile\ped{G}} in \textit{CSS\ped{G}} & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RVD4}}{{RVD4}} & L’applicazione deve utilizzare \textit{fogli di stile\ped{G}} in \textit{CSS3\ped{G}} & \makecell{Capitolato } \\ \hline
+			 \hypertarget{{RVO5}}{{RVO5}} & L’applicazione deve funzionare su \textit{Mozilla Firefox\ped{G}} versione 33.0 o superiore & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVO6}}{{RVO6}} & L’applicazione deve funzionare su \textit{Google Chrome\ped{G}} versione 31.0 o superiore & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVO7}}{{RVO7}} & L’applicazione deve funzionare su \textit{Safari\ped{G}} versione 7.1 o superiore & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVO8}}{{RVO8}} & L’applicazione deve funzionare su \textit{Opera\ped{G}} versione 26.0 o superiore & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVD9}}{{RVD9}} & L’applicazione deve funzionare su \textit{Internet Explorer\ped{G}} versione 11 o superiore & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVO10}}{{RVO10}} & L’applicazione deve funzionare su \textit{Microsoft Edge\ped{G}} versione 25  o superiore & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVD11}}{{RVD11}} & L’applicazione deve funzionare su \textit{Android Browser\ped{G}} versione 4.4 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVO12}}{{RVO12}} & L’applicazione deve funzionare su \textit{Safari per iOS 8\ped{G}} o versioni superiori per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVD13}}{{RVD13}} & L’applicazione deve funzionare su \textit{Google Chrome per iOS\ped{G}} versione 39 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVO14}}{{RVO14}} & L’applicazione deve funzionare su \textit{Google Chrome per Android\ped{G}} versione 39 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF15}}{{RVF15}} & L’applicazione deve funzionare su \textit{Mozilla Firefox per Android\ped{G}} versione 33 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF16}}{{RVF16}} & L’applicazione deve funzionare su \textit{Microsoft Edge per Windows 10 mobile\ped{G}} versione 25 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF17}}{{RVF17}} & L’applicazione deve funzionare su \textit{Opera Mini per iOS\ped{G}} versione 12 o superiore per le funzionalità che riguardano la compilazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVD18}}{{RVD18}} & L’applicazione deve funzionare su \textit{Google Chrome per Android\ped{G}} versione 39 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF19}}{{RVF19}} & L’applicazione deve funzionare su \textit{Mozilla Firefox per Android\ped{G}} versione 33 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF20}}{{RVF20}} & L’applicazione deve funzionare su \textit{Microsoft Edge per Windows 10 mobile\ped{G}} versione 25 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF21}}{{RVF21}} & L’applicazione deve funzionare su \textit{Browser Opera per Android\ped{G}} versione 34 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & \makecell{Interno } \\ \hline
+			 \hypertarget{{RVF22}}{{RVF22}} & L’applicazione deve funzionare su \textit{Opera Mini per iOS\ped{G}} versione 12 o superiore per le funzionalità che riguardano la creazione dei questionari e delle domande & \makecell{Interno} \\ \hline
+\caption[Requisiti di Vincolo]{Requisiti di Vincolo}
+\label{tabella:req3}
+\end{longtable}
+\clearpage

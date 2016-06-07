@@ -1,0 +1,49 @@
+%Generazione delle variabili che andranno a sostituire quelle del template 'HomePage.tex'
+\newcommand{\documento}{\AdR}
+\newcommand{\nomedocumentofisico}{AnalisiDeiRequisiti\_v3\_0\_0.pdf}
+\newcommand{\redazione}{\AF\\ & \FB\\ & \GN\\ & \GR\\ & \SM\\ & \MP\\ & \MV}
+\newcommand{\verifica}{\MP\\ & \SM\\ & \MV\\ & \GR}
+\newcommand{\approvazione}{\SM}
+\newcommand{\uso}{Esterno}
+\newcommand{\datacreazione}{19 Dicembre 2015}
+\newcommand{\datamodifica}{12 Giugno 2016}
+\newcommand{\stato}{Approvato}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \ZU}
+\newcommand{\versione}{3}
+
+\def\TABELLE{false}	%abilita - disabilita l'indice delle tabelle
+\def\FIGURE{false} 	%abilita - disabilita l'indice delle figure
+
+\input{../../Template/layout.tex}
+\input{../../Template/comandi.tex}
+
+\input{sezioni/diario.tex}
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+\begin{document}
+
+%inclusione template HomePage
+\input{../../Template/HomePage.tex}
+
+%Registro delle modifiche e indice 
+%si usa la numerazione romana per gli indici e la tabella delle modifiche
+\pagenumbering{Roman}
+%\input{../../Template/diario.tex}
+\input{../../Template/diario_per_piu_pagine.tex}
+\input{../../Template/index.tex}
+
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\input{sezioni/Introduzione.tex}
+\input{sezioni/DescrizioneGenerale.tex}
+\input{sezioni/CasiD'uso.tex}
+\input{sezioni/Requisiti.tex}
+\appendix
+\input{sezioni/Appendice.tex}
+\input{sezioni/tracciamentoRequisitiImplementati.tex}
+
+\end{document}
