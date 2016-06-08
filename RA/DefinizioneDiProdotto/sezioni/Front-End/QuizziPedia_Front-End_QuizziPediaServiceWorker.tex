@@ -4,7 +4,7 @@
 		
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[scale=0.45,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_QuizziPediaServiceWorker.png}
+			\includegraphics[scale=0.65,keepaspectratio]{UML/Classi/Front-End/QuizziPedia_Front-end_QuizziPediaServiceWorker.png}
 			\caption{QuizziPedia::Front-End::QuizziPediaServiceWorker}
 		\end{figure} \FloatBarrier
 		
@@ -13,6 +13,10 @@
 			\item \textbf{Descrizione}: un \textit{ServiceWorker\ped{G}} è uno script in esecuzione in background nel browser che non necessita necessariamente di avere ad esso collegato una pagina web e non necessita nemmeno l'iterazione con l'utente. La funzionalità principale dei \textit{ServiceWorker\ped{G}} è la capacità di intercettare e gestire le richieste di rete, tra cui anche gestire la cache di risposta. 
 			Questo permette allo sviluppatore di gestire l'applicazione, dandone pieno controllo in ogni funzionalità, in modo che essa sia visualizzabile all'utente finale anche offline;
 			\item \textbf{Utilizzo}: viene utilizzato per mostrare all'utente una pagina di errore dell'applicazione in caso in cui la rete non sia disponibile oppure nel caso in cui ci sia un malfunzionamento nel server ed esso non sia raggiungibile. La pagina mostrata non sarà perciò la classica pagina del browser di errore per problemi di rete ma una dell'applicazione in modo che l'esperienza dell'utente non venga diminuita;
+			\item \textbf{Relazioni con altre classi}:
+			\begin{itemize}
+				\item \textbf{OUT} \texttt{ServiceWorkerSetUp}: classe di inizializzazione del \textit{ServiceWorker\ped{G}}.
+			\end{itemize}
 
 			\item \textbf{Metodi}: 
 			\begin{itemize}
