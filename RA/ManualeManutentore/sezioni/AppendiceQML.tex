@@ -1,7 +1,7 @@
 \newpage
 \section{QML - Quiz Markup Language}
-Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter creare domande da proporre negli allenamenti e nei questionari. Per rendere più semplice l'aggiunta di una domanda sono stati realizzati degli \textit{wizard\ped{G}} per alcune tipologie di domande, ma questo limita l'utente alla sola creazione di tali tipologie. La soluzione adottata è la realizzazione di un nuovo linguaggio di \textit{markup\ped{G}} che permette la definizione di domande non ordinarie, denominato QML acronimo di Quiz Markup Language.
-Per la realizzazione di QML abbiamo adottato il \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
+Uno dei punti fondamentali dell'applicazione è permettere agli utenti di poter creare domande da proporre negli allenamenti e nei questionari. E' stato realizzato un nuovo linguaggio di \textit{markup\ped{G}} che permette la definizione di domande non ordinarie denominato QML, acronimo di Quiz Markup Language.
+Per la realizzazione di QML abbiamo adottato il generatore di parser in codice JavaScript \textit{Jison\ped{G}}, uno strumento che ci permette di definire un \textit{lexer\ped{G}} ed un \textit{parser\ped{G}} in grado di costruire e scorrere un albero di analisi al fine di generare un documento \texttt{JSON} a partire da una grammatica definita.
 
 \subsection{Definizione della grammatica}
 Per mantenere la semplicità di realizzazione di una domanda tramite QML è stato deciso di mantenere la sintassi \textit{JSON}, con l'aggiunta delle sole parole chiave necessarie per mantenere coerente la grammatica con lo scopo del QML. Alla grammatica è stata data possibilità di inserire commenti che saranno rimossi prima della creazione del \textit{JSON}.
@@ -10,9 +10,8 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {	
 "type": "veroFalso",
-"topic" : "Patente",
 "image": "/img/veroFalso/example.png", //immagine possibile nel testo della domanda vero e falso
-"answers":
+"answer":
 	[{
 	"text": "In Italia la guida e' a destra",
 	"isItRight": true
@@ -30,10 +29,9 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {	
 "type" : "rispostaMultipla",
-"topic" : "Matematica",
 "questionText": "Quali di questi numeri e' pari?",
 "url": "/img/rispostaMultipla/D0_3.png", //immagine possibile nel testo della domanda risposta multipla
-"answers":
+"answer":
 	[{
 	"text": "1",
 	"url": "/img/rispostaMultipla/D0_1.png", //url dell'immagine, possibile campo facoltativo
@@ -64,7 +62,6 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "ordinamentoStringhe",
-"topic" : "Matematica",
 "questionText": "Ordina questi numeri in modo decrescente.",
 "answer":
 	[{
@@ -92,7 +89,6 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "ordinamentoImmagini",
-"topic" : "Grammatica Italiana",
 "questionText": "Ordina queste immagini in modo da ottenere la parola "CIAO".",
 "url": "/img/ordinamentoImmagini/D0_1.png", //immagine possibile nel testo della domanda ad ordianamento di immagini
 "answer":
@@ -121,7 +117,6 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "collegamentoElementi",
-"topic" : "Cultura Generale",
 "questionText": "Collega queste coppie di nemici classici.",
 "answer":
 	[{
@@ -145,7 +140,6 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "areaCliccabile",
-"topic" : "Medicina",
 "questionText": "Clicca quale tra le seguenti scelte e' il bicipide.",
 "image": "/img/areaCliccabile/D0_1.png", //sfondo dell'area cliccabile
 "resolution": { "x":400, "y":500 },
@@ -177,7 +171,6 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "type": "spaziVuoti",
-"topic" : "Storia"
 "questionText": "Giulio Cesare era un console romano.",
 "answer":
 	[{
@@ -193,13 +186,13 @@ Per mantenere la semplicità di realizzazione di una domanda tramite QML è stat
 \end{lstlisting}
 
 \subsection{Generazione del JSON}
-Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON\ped{G}} contenente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON\ped{G}} diverso, questo accade sia per la generazione tramite \textit{wizard\ped{G}} sia tramite QML.
+Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \textit{JSON\ped{G}} contente la domanda e altre informazioni necessarie per aggiungerla al sistema. Ogni tipologia di domanda crea un tipo di \textit{JSON\ped{G}} diverso, questo accada sia per la generazione tramite \textit{wizard\ped{G}} sia tramite QML.
 
 \subsubsection{JSON domanda Vero/Falso}
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "__userId",
-"makeWith" : "QML" || "wizard" ,
+"makeWith" : "QML" || "wizzard" ,
 "language" : "it || en",
 "question" :
 	[{
@@ -227,7 +220,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {	
 "author" : "_UserId",
-"makeWith" : "QML" || "wizard" ,
+"makeWith" : "QML" || "wizzard" ,
 "language" : "it || en" ,
 "type": "rispostaMultipla",
 "question" [{
@@ -268,7 +261,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId", 
-"makeWith" : "QML" || "wizard" ,
+"makeWith" : "QML" || "wizzard" ,
 "language" : "it || en",
 "question" : [{
 	"type": "ordinamentoStringhe",
@@ -303,7 +296,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId",
-"makeWith" : "QML" || "wizard" ,
+"makeWith" : "QML" || "wizzard" ,
 "language" : "it || en",
 "question" : [{
 	"type": "ordinamentoImmagini",
@@ -339,7 +332,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId",
-"makeWith" : "QML" || "wizard" ,
+"makeWith" : "QML" || "wizzard" ,
 "language" : "it || en",
 "question" : [{
 	"type": "collegamento",
@@ -370,7 +363,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId" ,
-"makeWith" : "QML" || "wizard" ,
+"makeWith" : "QML" || "wizzard" ,
 "language" : "it || en", 
 "question" : [{
 	"type": "areaCliccabile",
@@ -409,7 +402,7 @@ Se il \textit{parser\ped{G}} non trova errori o ambiguità viene creato un \text
 \begin{lstlisting}[language=json,firstnumber=1]
 {
 "author" : "_UserId",
-"makeWith" : "QML" || "wizard",
+"makeWith" : "QML" || "wizzard",
 "language" : "it || en",
 "question" : [{
 	"type": "spaziVuoti",
