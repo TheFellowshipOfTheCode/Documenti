@@ -13,10 +13,10 @@
 
 ## Documenti
 
-### Revisione dei requisiti
-  + [Documenti](https://goo.gl/cr0sWM) (27/30)
-  + [Presentazione](https://goo.gl/wgn8BP) (28/30)
-  + [Valutazione](http://www.math.unipd.it/~tullio/IS-1/2015/Progetto/RR/TheFellowshipOfTheCode.pdf)
+### Revisione di accettazione
+  + --
+  + --
+  + --
 
 - - -
 
