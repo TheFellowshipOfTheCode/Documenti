@@ -14,9 +14,9 @@
 ## Documenti
 
 ### Revisione di accettazione
-  + --
-  + --
-  + --
+  + [Documenti](https://goo.gl/TqNI7w) (30.33/30)
+  + [Collaudo](https://goo.gl/pj0AOl ) (29.75/30)
+  + [Valutazione](https://goo.gl/KciVPE)  
 
 - - -
 
