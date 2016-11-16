@@ -44,7 +44,7 @@ Il gruppo [TheFellowshipOfTheCode](http://thefellowshipofthecode.github.io/) è 
 * [Franco Berton]()
 * [Matteo Gnoato]()
 * [Mattia Varotto]()
-* [Marco Prelaz]()
+* [Marco Prelaz](http://marcomak91.github.io/)
 
 - - -
 
